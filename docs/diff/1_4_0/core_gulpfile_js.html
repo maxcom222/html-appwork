@@ -1,0 +1,1590 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+.TextSegElementKeyword { font-weight: bold; }
+.TextSegElementIdentifier { }
+.TextSegElementString { color: #3A7726; }
+.TextSegElementComment { color: #786A41; }
+.TextSegElementOperator { }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/aspnet-core-starter/AspnetCoreStarter/Gulpfile.js &nbsp;
+<br/>
+Right file: appwork-v1_4_0/aspnet-core-starter/AspnetCoreStarter/Gulpfile.js &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionAll">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">/// &lt;binding ProjectOpened='watch' /&gt;</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">path</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'path'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">path</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'path'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// -------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// Config</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">env</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'gulp-environment'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">process</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">env</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">NODE_ENV</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">env</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">current</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">name</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">conf</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(()</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">const f<span class="TextSegSigDiff">s</span> = require('<span class="TextSegSigDiff">fs</span>')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span>const <span class="TextSegSigDiff">_con</span>f = require('<span class="TextSegSigDiff">./build-config</span>')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'deepmerge'</span><span class="TextSegSigDiff">).</span><span class="TextSegSigDiff">all</span><span class="TextSegSigDiff">([{},</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">_conf</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">base</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">||</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{},</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">_conf</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">process</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">env</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">NODE_ENV</span><span class="TextSegSigDiff">]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">||</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{}])</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">})()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">conf</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">buildPath</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">path</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">resolve</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">__dirname</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">conf</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">buildPath</span><span class="TextSegSigDiff">).</span><span class="TextSegSigDiff">replace</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">/\\/g</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'/'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// -------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// Modules</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">const { src, dest, <span class="TextSegSigDiff">watch</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span>parallel, series } = require('gulp')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">const { src, dest, parallel, series<span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">watch</span> } = require('gulp')</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">webpack</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'webpack'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">sass</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'gulp-sass'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">sass</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'gulp-sass'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">autoprefixer</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'gulp-autoprefixer'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">autoprefixer</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'gulp-autoprefixer'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">sourcemaps</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'gulp-sourcemaps'</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">cleanCSS</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'gulp-clean-css'</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">rename</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'gulp-rename'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">rename</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'gulp-rename'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">uglify</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'gulp-uglify'</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">babel</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'gulp-babel'</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">plumber</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'gulp-plumber'</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">notify</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'gulp-notify'</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">gulpIf</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'gulp-if'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">gulpIf</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'gulp-if'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">sourcemaps</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'gulp-sourcemaps'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">del</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'del'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">colors</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'ansi-colors'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">log</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'fancy-log'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">global</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">isProduction</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">colors</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">enabled</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'color-support'</span><span class="TextSegSigDiff">).</span><span class="TextSegSigDiff">hasBasic</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// Utilities</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// Utilities</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemInsigMod">function normalize<span class="TextSegInsigDiff"> </span>(p) {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod">function normalize(p) {</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">p</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">replace</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">/\\/g</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">'/'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">p</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">replace</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">/\\/g</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">'/'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">function root<span class="TextSegInsigDiff"> </span>(<span class="TextSegSigDiff">...</span>p<span class="TextSegSigDiff">aths</span>) {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">function root(p) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">result</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[].</span><span class="TextSegSigDiff">concat</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">paths</span><span class="TextSegSigDiff">).</span><span class="TextSegSigDiff">map</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">p</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>return p.startsWith('!') ?</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp; return p.startsWith('!') ?</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span>normalize(`!${path.join(__dirname, p.slice(1))}`) :</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; normalize(`!${path.join(__dirname, <span class="TextSegSigDiff">'wwwroot'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span>p.slice(1))}`) :</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span>normalize(path.join(__dirname, p))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; normalize(path.join(__dirname, <span class="TextSegSigDiff">'wwwroot'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span>p))</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span>}<span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">}</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">result</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">len</span>g<span class="TextSegSigDiff">th</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">===</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">1</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">?</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">re</span><span class="TextSegSigDiff">sult</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">0</span><span class="TextSegSigDiff">]</span> <span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">result</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">f</span><span class="TextSegSigDiff">u</span><span class="TextSegSigDiff">nc</span><span class="TextSegSigDiff">tio</span><span class="TextSegSigDiff">n</span><span class="TextSegInsigDiff"> </span>g<span class="TextSegSigDiff">etS</span><span class="TextSegSigDiff">rc</span><span class="TextSegSigDiff">(...</span><span class="TextSegSigDiff">src</span><span class="TextSegSigDiff">)</span> <span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">src</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">map</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">p</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">p</span><span class="TextSegSigDiff">)).</span><span class="TextSegSigDiff">concat</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">conf</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">exclude</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">map</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">d</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">`</span><span class="TextSegSigDiff">!</span><span class="TextSegSigDiff">$</span><span class="TextSegSigDiff">{</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">d</span><span class="TextSegSigDiff">)}</span><span class="TextSegInsigDiff">/**/</span><span class="TextSegSigDiff">*</span><span class="TextSegSigDiff">`</span><span class="TextSegSigDiff">))</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// Clean build directory</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// Build SASS</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">cleanTask</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">function</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">()</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">del</span><span class="TextSegSigDiff">([</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">`</span><span class="TextSegSigDiff">$</span><span class="TextSegSigDiff">{</span><span class="TextSegSigDiff">conf</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">buildPath</span><span class="TextSegSigDiff">}</span><span class="TextSegInsigDiff">/**/</span><span class="TextSegSigDiff">*.</span><span class="TextSegSigDiff">dist</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">js</span><span class="TextSegSigDiff">`</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">fun</span><span class="TextSegSigDiff">ction</span><span class="TextSegInsigDiff"> </span>build<span class="TextSegSigDiff">Sa</span><span class="TextSegSigDiff">s</span>s<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(...</span><span class="TextSegSigDiff">path</span>s<span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">`</span><span class="TextSegSigDiff">$</span><span class="TextSegSigDiff">{</span><span class="TextSegSigDiff">c</span><span class="TextSegSigDiff">onf</span><span class="TextSegSigDiff">.</span>build<span class="TextSegSigDiff">Path</span><span class="TextSegSigDiff">}</span><span class="TextSegInsigDiff">/**/</span><span class="TextSegSigDiff">*.</span><span class="TextSegSigDiff">dist</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">c</span>ss<span class="TextSegSigDiff">`</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">sr</span>c<span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span>.<span class="TextSegSigDiff">..</span><span class="TextSegSigDiff">p</span>aths<span class="TextSegSigDiff">),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff"> </span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">`</span><span class="TextSegSigDiff">!</span><span class="TextSegSigDiff">$</span><span class="TextSegSigDiff">{</span>c<span class="TextSegSigDiff">onf</span>.<span class="TextSegSigDiff">buildP</span>ath<span class="TextSegSigDiff">}/</span><span class="TextSegSigDiff">vendor</span><span class="TextSegSigDiff">/</span><span class="TextSegSigDiff">font</span>s<span class="TextSegInsigDiff">/*.dist.css`</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp; ], {</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; force: true</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp; })</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">base</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'wwwroot'</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">const cleanSourcemapsTask = function () {</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; return del([`${conf.buildPath}/**/</span><span class="TextSegSigDiff">*.</span><span class="TextSegSigDiff">map</span><span class="TextSegSigDiff">`</span><span class="TextSegSigDiff">],</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">force</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">true</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">})</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">})</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">plumber</span><span class="TextSegSigDiff">({</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">errorHandler</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">function</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">err</span><span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">notify</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">onError</span><span class="TextSegSigDiff">({</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">title</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;Gulp error in &quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">err</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">plugin</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">message</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">err</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">toString</span><span class="TextSegSigDiff">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">})(</span><span class="TextSegSigDiff">err</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span>}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">cleanAllTask</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">parallel</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">cleanTask</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">cleanSourcemapsTask</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// -------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// Build css</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildCssTask</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">function</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">()</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">src</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">getSrc</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'**/*.scss'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'!**/_*.scss'</span><span class="TextSegSigDiff">),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">base</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'.'</span><span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">})</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp; .pipe(sourcemaps.init())</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>.pipe(<span class="TextSegSigDiff">gulpIf</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">conf</span><span class="TextSegSigDiff">.</span>sourcemaps<span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">sourcemaps</span>.init(<span class="TextSegSigDiff">)</span>))</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">pipe</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">sass</span><span class="TextSegElementOperator">({</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">pipe</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">sass</span><span class="TextSegElementOperator">({</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; outputStyle: 'nested'</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; outputStyle: <span class="TextSegSigDiff">conf</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">minify</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">?</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'compressed'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span>'nested'</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}).</span><span class="TextSegElementIdentifier">on</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'error'</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">sass</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">logError</span><span class="TextSegElementOperator">))</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}).</span><span class="TextSegElementIdentifier">on</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'error'</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">sass</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">logError</span><span class="TextSegElementOperator">))</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; .pipe(sourcemaps.write())</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>.pipe(<span class="TextSegSigDiff">gulpIf</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">conf</span><span class="TextSegSigDiff">.</span>sourcemaps<span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">sourcemaps</span>.write(<span class="TextSegSigDiff">)</span>))</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; .pipe(sourcemaps.init({<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">loadMaps</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">true</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">}))</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>.pipe(<span class="TextSegSigDiff">gulpIf</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">conf</span><span class="TextSegSigDiff">.</span>sourcemap<span class="TextSegSigDiff">s</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span>s<span class="TextSegSigDiff">ourcemaps</span>.init({</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">loadMaps</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">true</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">})))</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">pipe</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">autoprefixer</span><span class="TextSegElementOperator">({</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">pipe</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">autoprefixer</span><span class="TextSegElementOperator">({</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegSigDiff">b</span>rowsers: [</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegSigDiff">overrideB</span>rowsers<span class="TextSegSigDiff">list</span>: [</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'&gt;= 1%'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'&gt;= 1%'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'last 2 versions'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'last 2 versions'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'not dead'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'not dead'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Chrome &gt;= 45'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Chrome &gt;= 45'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Firefox &gt;= 38'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Firefox &gt;= 38'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Edge &gt;= 12'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Edge &gt;= 12'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Explorer &gt;= 10'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Explorer &gt;= 10'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'iOS &gt;= 9'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'iOS &gt;= 9'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Safari &gt;= 9'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Safari &gt;= 9'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Android &gt;= 4.4'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Android &gt;= 4.4'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Opera &gt;= 30'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">'Opera &gt;= 30'</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">]</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">]</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}))</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; .pipe(<span class="TextSegSigDiff">source</span><span class="TextSegSigDiff">m</span><span class="TextSegSigDiff">aps</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">wri</span><span class="TextSegSigDiff">te</span><span class="TextSegSigDiff">(</span>))</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>.pipe(<span class="TextSegSigDiff">r</span><span class="TextSegSigDiff">ename</span><span class="TextSegSigDiff">({</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">extname</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'.d</span><span class="TextSegSigDiff">ist.css'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">}</span>))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">gulpIf</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">conf</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">sourcemaps</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">sourcemaps</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">write</span><span class="TextSegSigDiff">()))</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">dest</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'wwwroot'</span><span class="TextSegSigDiff">)))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; .pipe(<span class="TextSegSigDiff">gulpIf</span>(<span class="TextSegSigDiff">glo</span><span class="TextSegSigDiff">bal</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">isProduction</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">cle</span><span class="TextSegSigDiff">anCSS</span><span class="TextSegSigDiff">()</span>))</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>.pipe(<span class="TextSegSigDiff">dest</span>(<span class="TextSegSigDiff">c</span><span class="TextSegSigDiff">onf</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">b</span><span class="TextSegSigDiff">u</span><span class="TextSegSigDiff">i</span><span class="TextSegSigDiff">ldPath</span>))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">gulpIf</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">global</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">isProduction</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">rename</span><span class="TextSegSigDiff">({</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">extname</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'.min.css'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">})))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">gulpIf</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">global</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">isProduction</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">dest</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'wwwroot'</span><span class="TextSegSigDiff">))))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemInsigMod">// <span class="TextSegInsigDiff">Task</span>s</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod">// <span class="TextSegInsigDiff">Build j</span>s</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">const buildJsTask = function () {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">const buildJsTask = function (<span class="TextSegSigDiff">cb</span>) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">ret</span><span class="TextSegSigDiff">ur</span><span class="TextSegSigDiff">n</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">src</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span>(</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">setTimeout</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">fun</span><span class="TextSegSigDiff">ction</span><span class="TextSegInsigDiff"> </span>(<span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">'www</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">/**/*</span><span class="TextSegSigDiff">.js</span>',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">webpack</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'./webpack.config</span>'<span class="TextSegSigDiff">),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">err</span>,<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">stats</span><span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'!wwwroot/**/*.es5.js'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'!wwwroot/**/*.min.js'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'!wwwroot/vendor/**/*.js'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; )<span class="TextSegSigDiff">,</span> {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span><span class="TextSegSigDiff">if</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">err</span>) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">b</span><span class="TextSegSigDiff">as</span><span class="TextSegSigDiff">e</span><span class="TextSegSigDiff">:</span> <span class="TextSegSigDiff">ro</span><span class="TextSegSigDiff">ot</span>(<span class="TextSegSigDiff">'wwwroot'</span>)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span><span class="TextSegSigDiff">log</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">colors</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">gray</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'Webpack error:'</span><span class="TextSegSigDiff">),</span> <span class="TextSegSigDiff">colors</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">red</span>(<span class="TextSegSigDiff">er</span><span class="TextSegSigDiff">r</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">stack</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">||</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">err</span><span class="TextSegSigDiff">)</span>)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">}</span>)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; </span><span class="TextSegSigDiff">if</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">err</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">details</span><span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">log</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">colors</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">gray</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'Webpack error details:'</span><span class="TextSegSigDiff">),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">err</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">details</span>)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">plumber</span><span class="TextSegSigDiff">({</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">errorHandler</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">function</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">err</span><span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">notify</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">onError</span><span class="TextSegSigDiff">({</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">title</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;Gulp error in &quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">err</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">plugin</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">message</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">err</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">toString</span><span class="TextSegSigDiff">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegSigDiff">})(</span><span class="TextSegSigDiff">e</span><span class="TextSegSigDiff">rr</span>)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">cb</span><span class="TextSegSigDiff">(</span>)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;&nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span>}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">info</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">stats</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">toJson</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">sourcemaps</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">init</span><span class="TextSegSigDiff">())</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span>(<span class="TextSegSigDiff">b</span><span class="TextSegSigDiff">abel</span>({</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">if</span><span class="TextSegInsigDiff"> </span>(<span class="TextSegSigDiff">stats</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">hasErrors</span>(<span class="TextSegSigDiff">))</span><span class="TextSegInsigDiff"> </span>{</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegSigDiff">p</span><span class="TextSegSigDiff">r</span>es<span class="TextSegSigDiff">e</span><span class="TextSegSigDiff">ts</span><span class="TextSegSigDiff">:</span> <span class="TextSegSigDiff">[</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">info</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">errors</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">forEach</span><span class="TextSegSigDiff">(</span>e<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">log</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">color</span>s<span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">gray</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'Webpack compilation error:'</span><span class="TextSegSigDiff">),</span> <span class="TextSegSigDiff">colors</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">red</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">e</span><span class="TextSegSigDiff">)))</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">'@babel/preset-env'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">targets</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">browsers</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'&gt;= 1%'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'last 2 versions'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'not dead'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'Chrome &gt;= 45'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'Firefox &gt;= 38'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'Edge &gt;= 12'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'Explorer &gt;= 10'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'iOS &gt;= 9'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'Safari &gt;= 9'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'Android &gt;= 4.4'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'Opera &gt;= 30'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">]</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span>}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}]</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">]</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">rename</span><span class="TextSegSigDiff">({</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">extname</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'.es5.js'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">sourcemaps</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">write</span><span class="TextSegSigDiff">())</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">if</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">stats</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">hasWarnings</span><span class="TextSegSigDiff">())</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">dest</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'wwwroot'</span><span class="TextSegSigDiff">)))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">info</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">warnings</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">forEach</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">w</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">log</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">colors</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">gray</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'Webpack compilation warning:'</span><span class="TextSegSigDiff">),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">colors</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">yellow</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">w</span><span class="TextSegSigDiff">)))</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">gulpIf</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">global</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">isProduction</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">uglify</span><span class="TextSegSigDiff">()))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">gulpIf</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">global</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">isProduction</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">rename</span><span class="TextSegSigDiff">({</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">extname</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'.min.js'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">})))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">gulpIf</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">global</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">isProduction</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">dest</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'wwwroot'</span><span class="TextSegSigDiff">))))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemInsigMod">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span>}</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildSassTask</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">function</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">()</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; </span><span class="TextSegInsigDiff"> </span><span class="TextSegInsigDiff"> </span><span class="TextSegInsigDiff"> </span><span class="TextSegInsigDiff">//</span><span class="TextSegInsigDiff"> Print log</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildS</span><span class="TextSegSigDiff">a</span><span class="TextSegSigDiff">ss</span>(</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp;&nbsp; </span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">log</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">stats</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">toString</span>(<span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">'wwwro</span><span class="TextSegSigDiff">ot/**/*.s</span><span class="TextSegSigDiff">c</span><span class="TextSegSigDiff">ss'</span>,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span><span class="TextSegSigDiff">color</span><span class="TextSegSigDiff">s</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">colors</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">enabled</span>,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">'!wwwroot/**/_*.sc</span><span class="TextSegSigDiff">ss'</span>,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span><span class="TextSegSigDiff">ha</span><span class="TextSegSigDiff">sh</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false</span>,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">'!wwwroot/vendor/**/*.sc</span><span class="TextSegSigDiff">ss'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span><span class="TextSegSigDiff">timing</span><span class="TextSegSigDiff">s</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; </span><span class="TextSegSigDiff">chunks</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">chunkModules</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">modules</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildVendorSassTask</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">function</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">()</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">re</span><span class="TextSegSigDiff">turn</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildSass</span><span class="TextSegSigDiff">(</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; </span><span class="TextSegSigDiff">children</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">t</span><span class="TextSegSigDiff">r</span><span class="TextSegSigDiff">ue</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">'www</span><span class="TextSegSigDiff">r</span><span class="TextSegSigDiff">oo</span><span class="TextSegSigDiff">t/vendor/css/**/*.scss'</span>,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span><span class="TextSegSigDiff">version</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">true</span>,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">'!wwwroot/vendor/c</span><span class="TextSegSigDiff">ss/**/_*.scss'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span><span class="TextSegSigDiff">cach</span><span class="TextSegSigDiff">e</span><span class="TextSegSigDiff">d</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">cachedAssets</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">reasons</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">source</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">errorDetails</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; )</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span><span class="TextSegSigDiff">})</span>)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">cb</span><span class="TextSegSigDiff">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildVendorLibsTask</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">function</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">()</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildSass</span><span class="TextSegSigDiff">(</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'wwwroot/vendor/libs/**/*.scss'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'!wwwroot/vendor/libs/**/_*.scss'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; )</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span>)</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">},</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">1</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// Watch</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// Watch</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">watchTask</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">function</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">watchTask</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">function</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">watch</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'wwwroot/**/*.scss'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'!wwwroot/vendor/**/*.scss'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'wwwroot/vendor/css/_custom-variables/*.scss'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'wwwroot/vendor/css/_appwork/_variables*.scss'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildSassTask</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; watch(<span class="TextSegSigDiff">root</span>('<span class="TextSegSigDiff">wwwroot/vendor/css/</span>**/*.scss'), build<span class="TextSegSigDiff">VendorSa</span>ssTask)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; watch(<span class="TextSegSigDiff">getSrc</span>('**/*.scss'), build<span class="TextSegSigDiff">C</span>ssTask)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">watch</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'wwwroot/vendor/libs/**/*.scss'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'wwwroot/vendor/css/_custom-variables/*.scss'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'wwwroot/vendor/css/_appwork/_variables*.scss'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildVendorLibsTask</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">watch</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'wwwroot/**/*.js'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'!wwwroot/**/*.es5.js'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'!wwwroot/**/*.min.js'</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'!wwwroot/vendor/**/*.js'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildJsTask</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">watch</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">getSrc</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'**/*.js'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'!**/*.dist.js'</span><span class="TextSegSigDiff">),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildJsTask</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// -------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// Custom vendors</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// You can copy custom assets from the node_modules directory to wwwroot directory</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// by adding a vendor file path into the &quot;CUSTOM_VENDORS&quot; object:</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// const CUSTOM_VENDORS = {</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">//&nbsp;&nbsp; ...</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">//&nbsp;&nbsp; 'Path to source file': 'Path to dest file'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">// }</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">CUSTOM_VENDORS</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">'node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js'</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'wwwroot/vendor/libs/validate/validate.unobtrusive.js'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">buildVendorCopyTask</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">parallel</span><span class="TextSegSigDiff">(</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">Object</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">keys</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">CUSTOM_VENDORS</span><span class="TextSegSigDiff">).</span><span class="TextSegSigDiff">reduce</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">function</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">tasks</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">vendorSrc</span><span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">if</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(!</span><span class="TextSegSigDiff">fs</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">existsSync</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">vendorSrc</span><span class="TextSegSigDiff">)))</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">console</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">warn</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">`</span><span class="TextSegSigDiff">Vendor</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">source</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">not</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">found</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;${root(vendorSrc)}&quot;</span><span class="TextSegSigDiff">`</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">return</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">vendorDest</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">path</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">dirname</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">CUSTOM_VENDORS</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">vendorSrc</span><span class="TextSegSigDiff">])</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">vendorName</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">path</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">basename</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">CUSTOM_VENDORS</span><span class="TextSegSigDiff">[</span><span class="TextSegSigDiff">vendorSrc</span><span class="TextSegSigDiff">])</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">functionName</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">`</span><span class="TextSegSigDiff">buildVendorCopy$</span><span class="TextSegSigDiff">{</span><span class="TextSegSigDiff">vendorName</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">replace</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">/^./g, m =&gt; m.toUpperCase()).replace(/\.(.)/g</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">m</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$1</span><span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$1</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">toUpperCase</span><span class="TextSegSigDiff">())}</span><span class="TextSegSigDiff">Task</span><span class="TextSegSigDiff">`</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">taskFunction</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">function</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">()</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">src</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">vendorSrc</span><span class="TextSegSigDiff">))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">rename</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">vendorName</span><span class="TextSegSigDiff">))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">pipe</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">dest</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">root</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">vendorDest</span><span class="TextSegSigDiff">)))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">Object</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">defineProperty</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">taskFunction</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'name'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">value</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">functionName</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">})</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tasks</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">concat</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">taskFunction</span><span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> &nbsp;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">},</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[])</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// Build</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// Build</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">const buildTask = <span class="TextSegSigDiff">parallel</span><span class="TextSegSigDiff">(</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">const buildTask<span class="TextSegSigDiff">s</span> = <span class="TextSegSigDiff">[</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; build<span class="TextSegSigDiff">Sa</span>ssTask,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; build<span class="TextSegSigDiff">C</span>ssTask,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; buildJsTask<span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; buildJsTask</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">buildVendorSassTask</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">buildVendorLibsTask</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">buildVendorCopyTask</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">]</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">const <span class="TextSegSigDiff">productionB</span>uildTask = <span class="TextSegSigDiff">s</span><span class="TextSegSigDiff">er</span><span class="TextSegSigDiff">ies</span><span class="TextSegSigDiff">(</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">const <span class="TextSegSigDiff">b</span>uildTask = <span class="TextSegSigDiff">conf</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">cleanBuild</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">?</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">function</span><span class="TextSegInsigDiff"> </span>se<span class="TextSegSigDiff">tProdu</span><span class="TextSegSigDiff">ctionMod</span><span class="TextSegSigDiff">e</span><span class="TextSegInsigDiff"> </span>(<span class="TextSegSigDiff">c</span>b)<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; se<span class="TextSegSigDiff">ries</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">cleanAllTask</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">parallel</span>(b<span class="TextSegSigDiff">uildTasks</span><span class="TextSegSigDiff">)</span>)<span class="TextSegSigDiff">:</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">g</span><span class="TextSegSigDiff">lobal</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">isProdu</span><span class="TextSegSigDiff">ction</span> <span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegSigDiff">ue</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">series</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">cle</span><span class="TextSegSigDiff">anS</span><span class="TextSegSigDiff">o</span><span class="TextSegSigDiff">urcemapsTask</span><span class="TextSegSigDiff">,</span> <span class="TextSegSigDiff">pa</span><span class="TextSegSigDiff">rallel</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">buildTasks</span><span class="TextSegSigDiff">))</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">console</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">warn</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'&gt;&gt;&gt; Running Gulp in production mode.'</span><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">cb</span><span class="TextSegSigDiff">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">},</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">buildTask</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// -------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// Exports</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// Exports</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">module</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">exports</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">module</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">exports</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">default</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">buildTask</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">default</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">buildTask</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">clean</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">cleanAllTask</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">'build:all'</span>: buildTask,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">build</span>: buildTask,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">'build:all:prod'</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">productionBuildTask</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementString">'build:js'</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">buildJsTask</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementString">'build:js'</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">buildJsTask</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; 'build:<span class="TextSegSigDiff">sa</span>ss': build<span class="TextSegSigDiff">Sa</span>ssTask,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; 'build:<span class="TextSegSigDiff">c</span>ss': build<span class="TextSegSigDiff">C</span>ssTask,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">'build:vendor:sass'</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildVendorSassTask</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">'build:vendor:libs'</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildVendorLibsTask</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">'build:vendor:copy'</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">buildVendorCopyTask</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">watch</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">watchTask</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">watch</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">watchTask</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

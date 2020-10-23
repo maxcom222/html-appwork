@@ -1,0 +1,1039 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_1_0/aspnet-mvc-starter/AspnetMvcStarter/ApplicationInsights.config &nbsp;
+<br/>
+Right file: appwork-v1_2_0/aspnet-mvc-starter/AspnetMvcStarter/ApplicationInsights.config &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame">&lt;ApplicationInsights xmlns=&quot;http://schemas.microsoft.com/ApplicationInsights/2013/Settings&quot;&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame">&lt;ApplicationInsights xmlns=&quot;http://schemas.microsoft.com/ApplicationInsights/2013/Settings&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;TelemetryInitializers&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;TelemetryInitializers&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.DependencyCollector.HttpDependenciesParsingTelemetryInitializer, Microsoft.AI.DependencyCollector&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.DependencyCollector.HttpDependenciesParsingTelemetryInitializer, Microsoft.AI.DependencyCollector&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.AzureRoleEnvironmentTelemetryInitializer, Microsoft.AI.WindowsServer&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.AzureRoleEnvironmentTelemetryInitializer, Microsoft.AI.WindowsServer&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.AzureWebAppRoleEnvironmentTelemetryInitializer, Microsoft.AI.WindowsServer&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.AzureWebAppRoleEnvironmentTelemetryInitializer, Microsoft.AI.WindowsServer&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.BuildInfoConfigComponentVersionTelemetryInitializer, Microsoft.AI.WindowsServer&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.BuildInfoConfigComponentVersionTelemetryInitializer, Microsoft.AI.WindowsServer&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.WebTestTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.WebTestTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.SyntheticUserAgentTelemetryInitializer, Microsoft.AI.Web&quot;&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.SyntheticUserAgentTelemetryInitializer, Microsoft.AI.Web&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;!-- Extended list of bots:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;!-- Extended list of bots:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; search|spider|crawl|Bot|Monitor|BrowserMob|BingPreview|PagePeeker|WebThumb|URL2PNG|ZooShot|GomezA|Google SketchUp|Read Later|KTXN|KHTE|Keynote|Pingdom|AlwaysOn|zao|borg|oegp|silk|Xenu|zeal|NING|htdig|lycos|slurp|teoma|voila|yahoo|Sogou|CiBra|Nutch|Java|JNLP|Daumoa|Genieo|ichiro|larbin|pompos|Scrapy|snappy|speedy|vortex|favicon|indexer|Riddler|scooter|scraper|scrubby|WhatWeb|WinHTTP|voyager|archiver|Icarus6j|mogimogi|Netvibes|altavista|charlotte|findlinks|Retreiver|TLSProber|WordPress|wsr-agent|http client|Python-urllib|AppEngine-Google|semanticdiscovery|facebookexternalhit|web/snippet|Google-HTTP-Java-Client--&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; search|spider|crawl|Bot|Monitor|BrowserMob|BingPreview|PagePeeker|WebThumb|URL2PNG|ZooShot|GomezA|Google SketchUp|Read Later|KTXN|KHTE|Keynote|Pingdom|AlwaysOn|zao|borg|oegp|silk|Xenu|zeal|NING|htdig|lycos|slurp|teoma|voila|yahoo|Sogou|CiBra|Nutch|Java|JNLP|Daumoa|Genieo|ichiro|larbin|pompos|Scrapy|snappy|speedy|vortex|favicon|indexer|Riddler|scooter|scraper|scrubby|WhatWeb|WinHTTP|voyager|archiver|Icarus6j|mogimogi|Netvibes|altavista|charlotte|findlinks|Retreiver|TLSProber|WordPress|wsr-agent|http client|Python-urllib|AppEngine-Google|semanticdiscovery|facebookexternalhit|web/snippet|Google-HTTP-Java-Client--&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Filters&gt;search|spider|crawl|Bot|Monitor|AlwaysOn&lt;/Filters&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Filters&gt;search|spider|crawl|Bot|Monitor|AlwaysOn&lt;/Filters&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;/Add&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;/Add&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.ClientIpHeaderTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.ClientIpHeaderTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.OperationNameTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.OperationNameTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.OperationCorrelationTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.OperationCorrelationTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.UserTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.UserTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.AuthenticatedUserIdTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.AuthenticatedUserIdTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.AccountIdTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.AccountIdTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.SessionTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.SessionTelemetryInitializer, Microsoft.AI.Web&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;/TelemetryInitializers&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;/TelemetryInitializers&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;TelemetryModules&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;TelemetryModules&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.DependencyCollector.DependencyTrackingTelemetryModule, Microsoft.AI.DependencyCollector&quot;<span class="TextSegSigDiff">/</span>&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.DependencyCollector.DependencyTrackingTelemetryModule, Microsoft.AI.DependencyCollector&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;ExcludeComponentCorrelationHttpHeadersOnDomains&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;!--</span><span class="TextSegInsigDiff">&nbsp;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">Requests</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">following</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">hostnames</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">will</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">not</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">modified</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">by</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">adding</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">correlation</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">headers.</span><span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">Add</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">entries</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">here</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">exclude</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">additional</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">hostnames.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">NOTE:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">this</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">configuration</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">will</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">lost</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">upon</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">NuGet</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">upgrade.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">--&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;core.windows.net&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;core.chinacloudapi.cn&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;core.cloudapi.de&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;core.usgovcloudapi.net&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;localhost&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;127.0.0.1&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;/ExcludeComponentCorrelationHttpHeadersOnDomains&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;IncludeDiagnosticSourceActivities&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;Microsoft.Azure.EventHubs&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;Microsoft.Azure.ServiceBus&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;/IncludeDiagnosticSourceActivities&gt;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.PerformanceCollectorModule, Microsoft.AI.PerfCounterCollector&quot;&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.PerformanceCollectorModule, Microsoft.AI.PerfCounterCollector&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;!--</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;!--</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; Use the following syntax here to collect additional performance counters:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; Use the following syntax here to collect additional performance counters:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &lt;Counters&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &lt;Counters&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;Add PerformanceCounter=&quot;\Process(??APP_WIN32_PROC??)\Handle Count&quot; ReportAs=&quot;Process handle count&quot; /&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;Add PerformanceCounter=&quot;\Process(??APP_WIN32_PROC??)\Handle Count&quot; ReportAs=&quot;Process handle count&quot; /&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ...</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ...</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &lt;/Counters&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &lt;/Counters&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; PerformanceCounter must be either \CategoryName(InstanceName)\CounterName or \CategoryName\CounterName</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; PerformanceCounter must be either \CategoryName(InstanceName)\CounterName or \CategoryName\CounterName</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; NOTE: performance counters configuration will be lost upon NuGet upgrade.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; NOTE: performance counters configuration will be lost upon NuGet upgrade.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; The following placeholders are supported as InstanceName:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; The following placeholders are supported as InstanceName:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ??APP_WIN32_PROC?? - instance name of the application process&nbsp; for Win32 counters.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ??APP_WIN32_PROC?? - instance name of the application process&nbsp; for Win32 counters.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ??APP_W3SVC_PROC?? - instance name of the application IIS worker process for IIS/ASP.NET counters.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ??APP_W3SVC_PROC?? - instance name of the application IIS worker process for IIS/ASP.NET counters.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ??APP_CLR_PROC?? - instance name of the application CLR process for .NET counters.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ??APP_CLR_PROC?? - instance name of the application CLR process for .NET counters.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;/Add&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;/Add&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.QuickPulse.QuickPulseTelemetryModule, Microsoft.AI.PerfCounterCollector&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.QuickPulse.QuickPulseTelemetryModule, Microsoft.AI.PerfCounterCollector&quot;/&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Type=&quot;Microsoft.ApplicationInsights.WindowsServer.AppServicesHeartbeatTelemetryModule,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Microsoft.AI.WindowsServer&quot;/&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Type=&quot;Microsoft.ApplicationInsights.WindowsServer.AzureInstanceMetadataTelemetryModule,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Microsoft.AI.WindowsServer&quot;&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;!--</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">Remove</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">individual</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">fields</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">collected</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">here</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">by</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">adding</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">them</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">ApplicationInsighs.HeartbeatProvider</span><span class="TextSegInsigDiff">&nbsp;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">66</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">with</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">following</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">syntax:</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">67</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">68</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Type=&quot;Microsoft.ApplicationInsights.Extensibility.Implementation.Tracing.DiagnosticsTelemetryModule,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Microsoft.ApplicationInsights&quot;&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">69</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;ExcludedHeartbeatProperties&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">70</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;osType&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">71</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;location&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">72</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;name&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">73</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;offer&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">74</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;platformFaultDomain&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">75</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;platformUpdateDomain&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">76</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;publisher&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">77</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;sku&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">78</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;version&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">79</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;vmId&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">80</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;vmSize&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">81</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;subscriptionId&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">82</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;resourceGroupName&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">83</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;placementGroupId&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">84</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;tags&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">85</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;vmScaleSetName&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">86</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;/ExcludedHeartbeatProperties&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">87</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">88</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">89</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">NOTE:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">exclusions</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">will</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">lost</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">upon</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">upgrade.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">90</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">--&gt;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">91</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.DeveloperModeWithDebuggerAttachedTelemetryModule, Microsoft.AI.WindowsServer&quot;/&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">92</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.DeveloperModeWithDebuggerAttachedTelemetryModule, Microsoft.AI.WindowsServer&quot;/&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.UnhandledExceptionTelemetryModule, Microsoft.AI.WindowsServer&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">93</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.UnhandledExceptionTelemetryModule, Microsoft.AI.WindowsServer&quot;/&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.UnobservedExceptionTelemetryModule, Microsoft.AI.WindowsServer&quot;<span class="TextSegSigDiff">/</span>&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">94</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.UnobservedExceptionTelemetryModule, Microsoft.AI.WindowsServer&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">95</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;!--&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">96</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Type=&quot;Microsoft.ApplicationInsights.WindowsServer.FirstChanceExceptionStatisticsTelemetryModule,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Microsoft.AI.WindowsServer&quot;&gt;--&gt;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">97</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.RequestTrackingTelemetryModule, Microsoft.AI.Web&quot;&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">98</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.RequestTrackingTelemetryModule, Microsoft.AI.Web&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Handlers&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">99</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Handlers&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;!--&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">100</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;!--&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Add entries here to filter out additional handlers:&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">101</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Add entries here to filter out additional handlers:&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">102</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; NOTE: handler configuration will be lost upon NuGet upgrade.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">103</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; NOTE: handler configuration will be lost upon NuGet upgrade.</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">104</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; --&gt;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add&gt;System.Web.Handlers.TransferRequestHandler&lt;/Add&gt;</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;Microsoft.VisualStudio.Web.PageInspector.Runtime.Tracing.RequestDataHttpHandler&lt;/Add&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">105</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;Microsoft.VisualStudio.Web.PageInspector.Runtime.Tracing.RequestDataHttpHandler&lt;/Add&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.StaticFileHandler&lt;/Add&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">106</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.StaticFileHandler&lt;/Add&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.Handlers.AssemblyResourceLoader&lt;/Add&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">107</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.Handlers.AssemblyResourceLoader&lt;/Add&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.Optimization.BundleHandler&lt;/Add&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">108</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.Optimization.BundleHandler&lt;/Add&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.Script.Services.ScriptHandlerFactory&lt;/Add&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">109</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.Script.Services.ScriptHandlerFactory&lt;/Add&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.Handlers.TraceHandler&lt;/Add&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">110</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.Handlers.TraceHandler&lt;/Add&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.Services.Discovery.DiscoveryRequestHandler&lt;/Add&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">111</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.Services.Discovery.DiscoveryRequestHandler&lt;/Add&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.HttpDebugHandler&lt;/Add&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">112</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add&gt;System.Web.HttpDebugHandler&lt;/Add&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;/Handlers&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">113</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;/Handlers&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;/Add&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">114</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;/Add&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.ExceptionTrackingTelemetryModule, Microsoft.AI.Web&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">115</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Web.ExceptionTrackingTelemetryModule, Microsoft.AI.Web&quot;/&gt;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemNum AlignRight">116</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Type=&quot;Microsoft.ApplicationInsights.Web.AspNetDiagnosticTelemetryModule,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Microsoft.AI.Web&quot;/&gt;</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">66</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;/TelemetryModules&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">117</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;/TelemetryModules&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">118</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;ApplicationIdProvider</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Type=&quot;Microsoft.ApplicationInsights.Extensibility.Implementation.ApplicationId.ApplicationInsightsApplicationIdProvider,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Microsoft.ApplicationInsights&quot;/&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">119</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;TelemetrySinks&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">120</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Name=&quot;default&quot;&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">67</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;TelemetryProcessors&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">121</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>&lt;TelemetryProcessors&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">68</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.QuickPulse.QuickPulseTelemetryProcessor, Microsoft.AI.PerfCounterCollector&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">122</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>&lt;Add Type=&quot;Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.QuickPulse.QuickPulseTelemetryProcessor, Microsoft.AI.PerfCounterCollector&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">123</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Type=&quot;Microsoft.ApplicationInsights.Extensibility.AutocollectedMetricsExtractor,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Microsoft.ApplicationInsights&quot;/&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">69</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.AdaptiveSamplingTelemetryProcessor, Microsoft.AI.ServerTelemetryChannel&quot;&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">124</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>&lt;Add Type=&quot;Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.AdaptiveSamplingTelemetryProcessor, Microsoft.AI.ServerTelemetryChannel&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">70</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;MaxTelemetryItemsPerSecond&gt;5&lt;/MaxTelemetryItemsPerSecond&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">125</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>&lt;MaxTelemetryItemsPerSecond&gt;5&lt;/MaxTelemetryItemsPerSecond&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">126</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;ExcludedTypes&gt;Event&lt;/ExcludedTypes&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">71</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &lt;/Add&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">127</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>&lt;/Add&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">128</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Add</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Type=&quot;Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.AdaptiveSamplingTelemetryProcessor,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Microsoft.AI.ServerTelemetryChannel&quot;&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">129</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;MaxTelemetryItemsPerSecond&gt;5&lt;/MaxTelemetryItemsPerSecond&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">130</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;IncludedTypes&gt;Event&lt;/IncludedTypes&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">131</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">72</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;/TelemetryProcessors&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">132</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>&lt;/TelemetryProcessors&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">73</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;TelemetryChannel Type=&quot;Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.ServerTelemetryChannel, Microsoft.AI.ServerTelemetryChannel&quot;/&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">133</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>&lt;TelemetryChannel Type=&quot;Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.ServerTelemetryChannel, Microsoft.AI.ServerTelemetryChannel&quot;/&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">134</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;/Add&gt;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">135</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;/TelemetrySinks&gt;</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">74</td>
+<td class="TextItemSame">&lt;!--&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">136</td>
+<td class="TextItemSame">&lt;!--&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">75</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; Learn more about Application Insights configuration with ApplicationInsights.config here:&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">137</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; Learn more about Application Insights configuration with ApplicationInsights.config here:&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">76</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; http://go.microsoft.com/fwlink/?LinkID=513840</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">138</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; http://go.microsoft.com/fwlink/?LinkID=513840</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">77</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">139</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">78</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; Note: If not present, please add &lt;InstrumentationKey&gt;Your Key&lt;/InstrumentationKey&gt; to the top of this file.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">140</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; Note: If not present, please add &lt;InstrumentationKey&gt;Your Key&lt;/InstrumentationKey&gt; to the top of this file.</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">79</td>
+<td class="TextItemSame">&nbsp; --&gt;&lt;/ApplicationInsights&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">141</td>
+<td class="TextItemSame">&nbsp; --&gt;&lt;/ApplicationInsights&gt;</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

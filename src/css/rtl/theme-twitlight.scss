@@ -1,0 +1,64 @@
+$rtl-support: true;
+
+@import "../_appwork/include";
+@import "../_theme/common";
+@import "../_theme/libs";
+@import "../_theme/uikit";
+
+$primary-color: #4c84ff;
+$body-bg: #f5f5f5;
+
+body {
+  background: $body-bg;
+}
+
+.bg-body {
+  background: $body-bg !important;
+}
+
+@include appwork-common-theme($primary-color);
+@include appwork-libs-theme($primary-color);
+@include appwork-uikit-theme($primary-color);
+
+// Navbar
+
+@include appwork-navbar-variant('.bg-navbar-theme', #343c44);
+
+// Sidenav
+
+@include appwork-sidenav-variant('.bg-sidenav-theme', #3f4853, $color: #96a1a9);
+
+.bg-sidenav-theme {
+  .sidenav-item.active > .sidenav-link:not(.sidenav-toggle) {
+    background: rgba(255, 255, 255, .05) !important;
+  }
+}
+
+.bg-sidenav-theme.sidenav-vertical,
+.bg-sidenav-theme .sidenav-vertical {
+  .sidenav-item.active > .sidenav-link:not(.sidenav-toggle)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-left: 4px solid $primary-color;
+  }
+
+  .layout-collapsed &:not(:hover),
+  &.sidenav-collapsed:not(:hover) {
+    .sidenav-item .sidenav-item.active > .sidenav-link:not(.sidenav-toggle)::after {
+      display: none;
+    }
+  }
+}
+
+[dir=rtl] .bg-sidenav-theme.sidenav-vertical .sidenav-item.active > .sidenav-link:not(.sidenav-toggle)::after,
+[dir=rtl] .bg-sidenav-theme .sidenav-vertical .sidenav-item.active > .sidenav-link:not(.sidenav-toggle)::after {
+  right: 0;
+  left: auto;
+}
+
+// Footer
+
+@include appwork-footer-variant('.bg-footer-theme', #fff, $color: $text-muted, $active-color: $body-color);

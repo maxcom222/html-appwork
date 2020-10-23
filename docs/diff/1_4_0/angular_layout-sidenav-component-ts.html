@@ -1,0 +1,345 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/angular-starter/src/app/layout/layout-sidenav/layout-sidenav.component.ts &nbsp;
+<br/>
+Right file: appwork-v1_4_0/angular-starter/src/app/layout/layout-sidenav/layout-sidenav.component.ts &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionAll">
+<td class="TextItemSigMod">import { Component, Input, <span class="TextSegSigDiff">ChangeDetectionStrategy,</span><span class="TextSegInsigDiff"> </span>AfterViewInit, HostBinding } from '@angular/core';</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">import { Component, Input, AfterViewInit, HostBinding } from '@angular/core';</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">import { Router } from '@angular/router';</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">import { Router } from '@angular/router';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import { AppService } from '../../app.service';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import { AppService } from '../../app.service';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import { LayoutService } from '../layout.service';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import { LayoutService } from '../layout.service';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">@Component({</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">@Component({</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; selector: 'app-layout-sidenav',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; selector: 'app-layout-sidenav',</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; templateUrl: './layout-sidenav.component.html',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; templateUrl: './layout-sidenav.component.html',</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; styles: [':host { display: block; }']<span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; styles: [':host { display: block; }']</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">changeDetection:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">ChangeDetectionStrategy.OnPush</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">})</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">})</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">export class LayoutSidenavComponent implements AfterViewInit {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">export class LayoutSidenavComponent implements AfterViewInit {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; @Input() orientation = 'vertical';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; @Input() orientation = 'vertical';</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; @HostBinding('class.layout-sidenav') <span class="TextSegSigDiff">private</span><span class="TextSegInsigDiff"> </span>hostClassVertical = false;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; @HostBinding('class.layout-sidenav') hostClassVertical = false;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; @HostBinding('class.layout-sidenav-horizontal') <span class="TextSegSigDiff">private</span><span class="TextSegInsigDiff"> </span>hostClassHorizontal = false;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; @HostBinding('class.layout-sidenav-horizontal') hostClassHorizontal = false;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp; @HostBinding('class.flex-grow-0') <span class="TextSegSigDiff">private</span><span class="TextSegInsigDiff"> </span>hostClassFlex = false;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; @HostBinding('class.flex-grow-0') hostClassFlex = false;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; constructor(private router: Router, private appService: AppService, private layoutService: LayoutService) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; constructor(private router: Router, private appService: AppService, private layoutService: LayoutService) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; // Set host classes</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; // Set host classes</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; this.hostClassVertical = this.orientation !== 'horizontal';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; this.hostClassVertical = this.orientation !== 'horizontal';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; this.hostClassHorizontal = !this.hostClassVertical;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; this.hostClassHorizontal = !this.hostClassVertical;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; this.hostClassFlex = this.hostClassHorizontal;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; this.hostClassFlex = this.hostClassHorizontal;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; ngAfterViewInit() {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; ngAfterViewInit() {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; // Safari bugfix</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; // Safari bugfix</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; this.layoutService._redrawLayoutSidenav();</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; this.layoutService._redrawLayoutSidenav();</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; getClasses() {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; getClasses() {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; let bg = this.appService.layoutSidenavBg;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; let bg = this.appService.layoutSidenavBg;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; if (this.orientation === 'horizontal' &amp;&amp; (bg.indexOf(' sidenav-dark') !== -1 || bg.indexOf(' sidenav-light') !== -1)) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; if (this.orientation === 'horizontal' &amp;&amp; (bg.indexOf(' sidenav-dark') !== -1 || bg.indexOf(' sidenav-light') !== -1)) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; bg = bg</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; bg = bg</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; .replace(' sidenav-dark', '')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; .replace(' sidenav-dark', '')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; .replace(' sidenav-light', '')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; .replace(' sidenav-light', '')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; .replace('-darker', '')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; .replace('-darker', '')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; .replace('-dark', '');</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; .replace('-dark', '');</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return `${this.orientation === 'horizontal' ? 'container-p-x ' : ''} bg-${bg}`;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return `${this.orientation === 'horizontal' ? 'container-p-x ' : ''} bg-${bg}`;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; isActive(url) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; isActive(url) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return this.router.isActive(url, true);</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return this.router.isActive(url, true);</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; isMenuActive(url) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; isMenuActive(url) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return this.router.isActive(url, false);</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return this.router.isActive(url, false);</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; isMenuOpen(url) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; isMenuOpen(url) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return this.router.isActive(url, false) &amp;&amp; this.orientation !== 'horizontal';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return this.router.isActive(url, false) &amp;&amp; this.orientation !== 'horizontal';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; toggleSidenav() {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; toggleSidenav() {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; this.layoutService.toggleCollapsed();</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; this.layoutService.toggleCollapsed();</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

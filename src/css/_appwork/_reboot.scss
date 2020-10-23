@@ -1,0 +1,16 @@
+// Reboot
+//
+
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
+
+@include rtl-only {
+  dd {
+    margin-right: 0;
+  }
+  caption {
+    text-align: right;
+  }
+}

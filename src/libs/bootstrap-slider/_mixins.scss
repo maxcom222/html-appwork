@@ -1,0 +1,32 @@
+@mixin bs-slider-variant($background) {
+  .slider-selection,
+  .slider-reversed .slider-track-high,
+  &.slider-reversed .slider-track-high {
+    background: $background;
+  }
+}
+
+@mixin material-bs-slider-variant($background) {
+  .slider-handle {
+    box-shadow: none !important;
+  }
+
+  .slider-handle,
+  .slider-selection,
+  .slider-reversed .slider-track-high,
+  &.slider-reversed .slider-track-high {
+    background: $background;
+  }
+}
+
+@mixin bs-slider-theme($background) {
+  .slider-primary {
+    @include bs-slider-variant($background);
+  }
+}
+
+@mixin material-bs-slider-theme($background) {
+  .slider-primary {
+    @include material-bs-slider-variant($background);
+  }
+}

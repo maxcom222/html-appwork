@@ -1,0 +1,216 @@
+@import '../_custom-variables/pages';
+
+$chat-wrapper-min-height: 400px !default;
+$chat-sidebox-width: 16rem !default;
+$chat-sidebox-border-width: 1px !default;
+$chat-contacts-padding-y: .625rem !default;
+
+// Make wrapper full page height
+.chat-wrapper {
+  position: relative;
+  display: flex;
+  flex: 1 1 100%;
+  min-height: $chat-wrapper-min-height;
+  width: 100%;
+}
+
+.chat-sidebox {
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-basis: $chat-sidebox-width;
+  flex-direction: column;
+  flex-grow: 0;
+  width: $chat-sidebox-width;
+  transition: .2s all;
+  transform: translateX(-101%);
+
+  [dir=rtl] & {
+    right: 0;
+    left: auto;
+    transform: translateX(101%);
+  }
+}
+
+.chat-sidebox-open .chat-sidebox {
+  transform: none !important;
+}
+
+.chat-search {
+  border-radius: 10rem;
+}
+
+.chat-contacts .list-group-item {
+  z-index: auto !important;
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: $chat-contacts-padding-y;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+
+  &.active {
+    font-weight: bold;
+  }
+
+  &:not(.active) {
+    opacity: .7;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  &.online {
+    opacity: 1;
+  }
+
+  .chat-status {
+    font-weight: normal !important;
+  }
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-message-left,
+.chat-message-right {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.chat-message-left {
+  margin-right: auto;
+
+  [dir=rtl] & {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.chat-message-right {
+  flex-direction: row-reverse;
+  margin-left: auto;
+
+  [dir=rtl] & {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+.chat-scroll {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.default-style {
+  @import "../_appwork/include";
+
+  .chat-sidebox {
+    background: $white;
+    box-shadow: 0 0 0 $chat-sidebox-border-width $card-inner-border-color;
+  }
+
+  .chat-contacts .list-group-item {
+    padding-right: $card-spacer-x;
+    padding-left: $card-spacer-x;
+
+    &:not(.active) {
+      color: $body-color;
+    }
+
+    .chat-status {
+      color: map-get($theme-colors, danger);
+    }
+
+    .chat-status .badge {
+      background: map-get($theme-colors, danger);
+    }
+
+    &.online .chat-status {
+      color: map-get($theme-colors, success);
+    }
+
+    &.online .chat-status .badge {
+      background: map-get($theme-colors, success);
+    }
+
+    &.active .chat-status {
+      color: $white;
+    }
+
+    &.active .chat-status .badge {
+      background: $white;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .chat-sidebox {
+      position: relative !important;
+      transform: none !important;
+    }
+  }
+}
+
+.material-style {
+  @import "../_appwork/include-material";
+
+  .chat-sidebox {
+    background: $white;
+    box-shadow: 0 0 0 $chat-sidebox-border-width $card-inner-border-color;
+  }
+
+  .chat-contacts .list-group-item {
+    padding-right: $card-spacer-x;
+    padding-left: $card-spacer-x;
+
+    &:not(.active) {
+      color: $body-color;
+    }
+
+    .chat-status {
+      color: map-get($theme-colors, danger);
+    }
+
+    .chat-status .badge {
+      background: map-get($theme-colors, danger);
+    }
+
+    &.online .chat-status {
+      color: map-get($theme-colors, success);
+    }
+
+    &.online .chat-status .badge {
+      background: map-get($theme-colors, success);
+    }
+
+    &.active .chat-status {
+      color: $white;
+    }
+
+    &.active .chat-status .badge {
+      background: $white;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .chat-sidebox {
+      position: relative !important;
+      transform: none !important;
+    }
+  }
+}

@@ -1,0 +1,173 @@
+// Forms
+//
+
+@if $material-style {
+  .form-control {
+    $material-input-disabled-color: null !default;
+    $material-input-disabled-border-color: null !default;
+
+    border-bottom-width: 1px;
+    border-radius: 0 !important;
+
+    &:disabled {
+      border-bottom: 1px dotted $material-input-disabled-border-color !important;
+      color: $material-input-disabled-color !important;
+    }
+  }
+
+  :not(.input-group) > .form-control {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// *******************************************************************************
+// * Sizing
+
+select.form-control[size="0"]:not([multiple]) {
+  height: $input-height;
+}
+
+select.form-control-sm[size="0"]:not([multiple]) {
+  height: $input-height-sm;
+}
+
+select.form-control-lg[size="0"]:not([multiple]) {
+  height: $input-height-lg;
+}
+
+@if $material-style {
+  @include appwork-material-form-control-size('', $input-btn-padding-y);
+  @include appwork-material-form-control-size('sm', $input-btn-padding-y-sm);
+  @include appwork-material-form-control-size('lg', $input-btn-padding-y-lg);
+}
+
+// *******************************************************************************
+// * Inverted
+
+.form-control-inverted {
+  border-color: $input-inverted-border-color;
+
+  @include plain-hover-focus {
+    background-color: $input-inverted-bg;
+    color: $input-inverted-color;
+  }
+
+  &::placeholder {
+    color: $input-inverted-placeholder-color;
+  }
+
+  &:disabled {
+    background-color: $input-inverted-disabled-bg !important;
+    color: $input-inverted-disabled-color !important;
+
+    @if $material-style != true {
+      border-color: $input-inverted-disabled-bg !important;
+    } @else {
+      $material-input-inverted-disabled-border-color: null !default;
+
+      border-color: $material-input-inverted-disabled-border-color !important;
+    }
+  }
+
+  option {
+    color: $body-color !important;
+  }
+}
+
+// *******************************************************************************
+// * Labels
+
+.form-label,
+.col-form-label {
+  @if not $material-style {
+    margin-bottom: calc(#{$input-padding-y} - #{$input-border-width * 2});
+  } @else {
+    margin-bottom: 0;
+  }
+  font-weight: $label-font-weight;
+  font-size: $label-font-size;
+  padding-bottom: 0;
+}
+
+.form-label-sm,
+.col-form-label-sm {
+  font-size: $font-size-sm;
+}
+
+.form-label-lg,
+.col-form-label-lg {
+  font-size: $font-size-lg;
+}
+
+// *******************************************************************************
+// * Checkboxes and radios
+
+.form-check {
+  min-height: $font-size-base * $line-height-base;
+  margin-bottom: $label-margin-bottom;
+
+  @include rtl-style {
+    padding-right: $form-check-input-gutter;
+    padding-left: 0;
+  }
+}
+
+@include rtl-only {
+  .form-check-input {
+    margin-right: -$form-check-input-gutter;
+    margin-left: 0;
+  }
+
+  .form-check-inline {
+    margin-right: 0;
+    margin-left: $form-check-inline-margin-x;
+    padding-right: 0;
+  }
+
+  .form-check-inline .form-check-input {
+    margin-right: 0;
+    margin-left: $form-check-inline-input-margin-x;
+  }
+}
+
+// *******************************************************************************
+// * Validation states
+
+@each $state, $data in $form-validation-states {
+  @if $material-style {
+    @include appwork-material-form-validation-state($state, map-get($data, color), map-get($data, icon), map-get($data, icon-rtl));
+  } @else {
+    @include appwork-form-validation-state($state, map-get($data, color), map-get($data, icon), map-get($data, icon-rtl));
+  }
+}
+
+// *******************************************************************************
+// * Inline forms
+
+.form-inline .custom-control {
+  width: 100%;
+}
+
+@include media-breakpoint-up(sm) {
+  @include rtl-only {
+    .form-inline .form-check {
+      padding-right: 0;
+    }
+
+    .form-inline .form-check-input {
+      margin-right: 0;
+      margin-left: $form-check-input-margin-x;
+    }
+  }
+
+  .form-inline .custom-control,
+  .form-inline .custom-select,
+  .form-inline .form-control-plaintext {
+    width: auto;
+  }
+
+  .form-inline .form-text {
+    margin-top: 0;
+  }
+}

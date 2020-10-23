@@ -1,0 +1,333 @@
+$timeline-track-color: #e7e7e7;
+$timeline-track-width: .125rem;
+$timeline-spacing: 3.75rem;
+$timeline-bottom-spacing: 1.25rem;
+$timeline-stacked-spacing: 3.125rem;
+$timeline-branch-top-spacing: 1.5625rem;
+$timeline-branch-spacing: .625rem;
+$timeline-info-width: 6.25rem;
+$timeline-info-spacing: 1.875rem;
+$timeline-info-breakpoint: 576px;
+$timeline-centered-breakpoint: 768px;
+
+.ui-play-icon {
+  margin-right: -.25em;
+}
+
+[dir=rtl] .ui-play-icon {
+  margin-right: 0;
+  margin-left: -.25em;
+}
+
+// Timeline
+//
+
+.ui-timeline {
+  position: relative;
+  padding-left: $timeline-spacing;
+
+  // Clearfix
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.ui-timeline-track-bg {
+  background: $timeline-track-color;
+}
+
+// Track
+//
+
+.ui-timeline::before,
+.ui-timeline-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  background: $timeline-track-color;
+}
+
+.ui-timeline::before {
+  top: 0;
+  left: $timeline-branch-spacing;
+  width: $timeline-track-width;
+}
+
+.ui-timeline-item::after {
+  top: $timeline-branch-top-spacing;
+  left: -1 * ($timeline-spacing - $timeline-branch-spacing);
+  width: $timeline-spacing - ($timeline-branch-spacing * 2);
+  height: $timeline-track-width;
+}
+
+// Elements
+//
+
+.ui-timeline-item,
+.ui-timeline-separator {
+  position: relative;
+  margin-bottom: $timeline-bottom-spacing;
+}
+
+.ui-timeline-separator {
+  clear: both;
+  margin-left: -$timeline-spacing;
+}
+
+.ui-timeline-badge {
+  position: absolute;
+  top: $timeline-branch-top-spacing;
+  left: -1 * ($timeline-spacing - $timeline-branch-spacing);
+  display: block;
+  transform: translate(-50%, -50%);
+}
+
+// Info
+//
+
+.ui-timeline-info {
+  position: absolute;
+  top: $timeline-branch-top-spacing;
+  left: -1 * ($timeline-spacing + $timeline-info-width - $timeline-branch-spacing);
+  padding-right: $timeline-info-spacing;
+  width: $timeline-info-width;
+  transform: translate(0, -50%);
+  display: none;
+
+  .ui-timeline:not(.ui-timeline-with-info) &,
+  .ui-timeline-horizontal:not(.ui-timeline-with-info) & {
+    display: none;
+  }
+}
+
+@media (min-width: $timeline-info-breakpoint) {
+  .ui-timeline-with-info {
+    padding-left: $timeline-spacing + $timeline-info-width - $timeline-branch-spacing;
+
+    .ui-timeline-info {
+      display: block;
+    }
+
+    &::before {
+      left: $timeline-info-width;
+    }
+
+    .ui-timeline-separator {
+      margin-left: -1 * ($timeline-spacing - $timeline-branch-spacing);
+
+      > * {
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+// Centered timeline
+//
+
+@media (min-width: $timeline-centered-breakpoint) {
+  .ui-timeline-center {
+    padding-left: 0;
+
+    &:before {
+      left: 50%;
+      margin-left: -$timeline-track-width / 2;
+    }
+
+    .ui-timeline-item {
+      float: right;
+      clear: both;
+      width: calc(50% - #{$timeline-spacing});
+
+      &::after {
+        left: -1 * $timeline-spacing;
+        width: $timeline-spacing - $timeline-branch-spacing;
+      }
+
+      .ui-timeline-badge {
+        left: -1 * ($timeline-spacing + ($timeline-track-width / 2));
+      }
+
+      .ui-timeline-info {
+        left: -1 * ($timeline-spacing + $timeline-info-width);
+      }
+    }
+
+    .ui-timeline-item-left {
+      float: left;
+      padding-left: 0;
+
+      &::after {
+        right: -1 * $timeline-spacing;
+        left: auto;
+      }
+
+      .ui-timeline-badge {
+        right: -1 * ($timeline-spacing + ($timeline-track-width / 2));
+        left: auto;
+        transform: translate(50%, -50%);
+      }
+
+      .ui-timeline-info {
+        right: -1 * ($timeline-spacing + $timeline-info-width);
+        left: auto;
+        padding-right: 0;
+        padding-left: $timeline-info-spacing;
+      }
+    }
+
+    .ui-timeline-separator {
+      margin-right: 0;
+      margin-left: 0;
+      text-align: center;
+
+      > * {
+        transform: none;
+      }
+    }
+
+    &.ui-timeline-stacked:not(.ui-timeline-with-info) {
+      .ui-timeline-item {
+        clear: right;
+      }
+
+      .ui-timeline-item-left {
+        clear: left;
+      }
+
+      .ui-timeline-item:not(.ui-timeline-item-left) + .ui-timeline-item-left,
+      .ui-timeline-item-left + .ui-timeline-item:not(.ui-timeline-item-left) {
+        margin-top: $timeline-stacked-spacing;
+      }
+    }
+  }
+}
+
+// Rtl
+[dir=rtl] {
+  .ui-timeline {
+    padding-right: $timeline-spacing;
+    padding-left: 0;
+  }
+
+  .ui-timeline::before {
+    right: $timeline-branch-spacing;
+    left: auto;
+  }
+
+  .ui-timeline-item::after {
+    right: -1 * ($timeline-spacing - $timeline-branch-spacing);
+    left: auto;
+  }
+
+  .ui-timeline-separator {
+    margin-right: -$timeline-spacing;
+    margin-left: 0;
+  }
+
+  .ui-timeline-badge {
+    right: -1 * ($timeline-spacing - $timeline-branch-spacing);
+    left: auto;
+    transform: translate(50%, -50%);
+  }
+
+  .ui-timeline-info {
+    right: -1 * ($timeline-spacing + $timeline-info-width - $timeline-branch-spacing);
+    left: auto;
+    padding-right: 0;
+    padding-left: $timeline-info-spacing;
+  }
+
+  @media (min-width: $timeline-info-breakpoint) {
+    .ui-timeline-with-info {
+      padding-right: $timeline-spacing+$timeline-info-width - $timeline-branch-spacing;
+
+      &::before {
+        right: $timeline-info-width;
+        left: auto;
+      }
+
+      .ui-timeline-separator {
+        margin-right: -1 * ($timeline-spacing - $timeline-branch-spacing);
+
+        > * {
+          transform: translateX(50%);
+        }
+      }
+    }
+  }
+
+  @media (min-width: $timeline-centered-breakpoint) {
+    .ui-timeline-center {
+      padding-right: 0;
+
+      &:before {
+        right: 50%;
+        margin-right: -$timeline-track-width / 2;
+        margin-left: 0;
+      }
+
+      .ui-timeline-item {
+        float: left;
+
+        &::after {
+          right: -1 * $timeline-spacing;
+        }
+
+        .ui-timeline-badge {
+          right: -1 * ($timeline-spacing + ($timeline-track-width / 2));
+          left: auto;
+        }
+
+        .ui-timeline-info {
+          right: -1 * ($timeline-spacing + $timeline-info-width);
+          left: auto;
+        }
+      }
+
+      .ui-timeline-item-left {
+        float: right;
+        padding-right: 0;
+
+        &::after {
+          right: auto;
+          left: -1 * $timeline-spacing;
+        }
+
+        .ui-timeline-badge {
+          right: auto;
+          left: -1 * ($timeline-spacing + ($timeline-track-width / 2));
+          transform: translate(-50%, -50%);
+        }
+
+        .ui-timeline-info {
+          right: auto;
+          left: -1 * ($timeline-spacing + $timeline-info-width);
+          padding-right: $timeline-info-spacing;
+          padding-left: 0;
+        }
+      }
+
+      .ui-timeline-separator {
+        margin-right: 0;
+
+        > * {
+          transform: none;
+        }
+      }
+
+      &.ui-timeline-stacked:not(.ui-timeline-with-info) {
+        .ui-timeline-item {
+          clear: left;
+        }
+
+        .ui-timeline-item-left {
+          clear: right;
+        }
+      }
+    }
+  }
+}

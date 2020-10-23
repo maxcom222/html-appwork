@@ -1,0 +1,2485 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/laravel-vue-starter/resources/assets/src/style.scss &nbsp;
+<br/>
+Right file: appwork-v1_4_0/laravel-vue-starter/resources/assets/src/style.scss &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSigMod">@import <span class="TextSegSigDiff">'~</span><span class="TextSegSigDiff">node_modu</span>les/<span class="TextSegSigDiff">b</span><span class="TextSegSigDiff">ootstrap-vue/src/i</span><span class="TextSegSigDiff">ndex.scss'</span>;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">@import <span class="TextSegSigDiff">&quot;~@/ven</span><span class="TextSegSigDiff">d</span><span class="TextSegSigDiff">or/sty</span>les/<span class="TextSegSigDiff">_appwo</span><span class="TextSegSigDiff">rk/f</span><span class="TextSegSigDiff">un</span><span class="TextSegSigDiff">ction</span><span class="TextSegSigDiff">s&quot;</span>;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">$b-table-sort-icon:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;data:image/svg+xml;charset=utf8,%3Csvg</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">xmlns='http://www.w3.org/2000/svg'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">viewBox='0</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">17</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">23'%3E%3Cg</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">stroke='none'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">stroke-width='1'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">fill='none'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">fill-rule='evenodd'%3E%3Cpath</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">fill='_TOP_COLOR_'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">d='M14.8284271,12.3431458</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L16.9497475,14.4644661</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L10.6212525,20.7931458</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L10.6568542,20.8284271</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L8.53553391,22.9497475</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L8.50025253,22.9141458</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L8.46446609,22.9497475</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L6.34314575,20.8284271</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L6.37825253,20.7921458</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L0.0502525317,14.4644661</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L2.17157288,12.3431458</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L8.49925253,18.6711458</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L14.8284271,12.3431458</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Z'%3E%3C/path%3E%3Cpath</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">fill='_BOTTOM_COLOR_'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">d='M14.7781746,4.08562073e-14</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L16.8994949,2.12132034</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L10.571,8.45</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L10.6066017,8.48528137</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L8.48528137,10.6066017</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L8.45,10.571</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L8.41421356,10.6066017</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L6.29289322,8.48528137</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L6.328,8.449</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L-4.4408921e-16,2.12132034</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L2.12132034,1.46549439e-14</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L8.449,6.328</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">L14.7781746,4.08562073e-14</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Z'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">transform='translate(8.449747,5.303301)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">scale(1,-1)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">translate(-8.449747,-5.303301)'%3E%3C/path%3E%3C/g%3E%3C/svg%3E&quot;;</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Base</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Base</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">//</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">//</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.dropdown-item,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.dropdown-item,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.page-link,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.page-link,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.nav {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.nav {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; outline: 0;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; outline: 0;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Page transition</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Page transition</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">//</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">//</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.router-transitions {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.router-transitions {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; opacity: 1;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; opacity: 1;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; transition: opacity .2s;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; transition: opacity .2s;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; body.app-loading &amp; {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; body.app-loading &amp; {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; opacity: .75;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; opacity: .75;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">// <span class="TextSegSigDiff">T</span><span class="TextSegSigDiff">abl</span><span class="TextSegSigDiff">es</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">// <span class="TextSegSigDiff">Checkbox/radio</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">size</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">//</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">//</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">@mixin</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox-radio-size($name,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$is-material,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$font-size,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$line-height,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$gutter,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$indicator-size,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$bg-size,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$border-radius)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.custom-checkbox.b-custom-control-#{$name},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.input-group-#{$name}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.custom-checkbox,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.custom-radio.b-custom-control-#{$name},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.input-group-#{$name}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.custom-radio</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">font-size:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$font-size;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">line-height:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$line-height;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$gutter</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$indicator-size;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th.sorting,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.custom-control-label::before</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">top:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">($font-size</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">*</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$line-height</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">-</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$indicator-size)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">/</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">width:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">round(rem-to-px($indicator-size));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">height:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">round(rem-to-px($indicator-size));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">@if</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$is-material</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tfoot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th</span>.<span class="TextSegSigDiff">s</span><span class="TextSegSigDiff">o</span><span class="TextSegSigDiff">r</span><span class="TextSegSigDiff">ting</span> {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff"> </span><span class="TextSegInsigDiff"> </span><span class="TextSegInsigDiff"> </span><span class="TextSegInsigDiff"> </span><span class="TextSegInsigDiff"> </span><span class="TextSegInsigDiff"> </span>.<span class="TextSegSigDiff">custom-control-label::after</span> {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">top:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">px-to-rem(floor(rem-to-px(((($line-height</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">*</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$font-size)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">-</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$indicator-size)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">/</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2))));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">pa</span><span class="TextSegSigDiff">dd</span>in<span class="TextSegSigDiff">g-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2r</span><span class="TextSegSigDiff">em</span>;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; </span><span class="TextSegSigDiff">width:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$</span>in<span class="TextSegSigDiff">d</span><span class="TextSegSigDiff">icato</span><span class="TextSegSigDiff">r-size</span>;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">height:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$indicator-size;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.custom-checkbox.b-custom-control-#{$name},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.input-group-#{$name}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.custom-checkbox</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.custom-control-label::before</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">border-radius:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$border-radius;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.custom-radio.b-custom-control-#{$name},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.input-group-#{$name}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.custom-radio</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.custom-control-input:checked~.custom-control-label::before</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">@if</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$name=='lg'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">background-size:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">11px;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">@else</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">background-size:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">8px;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">@mixin</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox-radio-size-rtl($name,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$gutter,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$indicator-size)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">[dir=rtl]</span><span class="TextSegInsigDiff"> </span>.<span class="TextSegSigDiff">b</span><span class="TextSegSigDiff">-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">t</span>he<span class="TextSegSigDiff">ad</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th.</span><span class="TextSegSigDiff">s</span><span class="TextSegSigDiff">o</span><span class="TextSegSigDiff">rti</span><span class="TextSegSigDiff">ng</span>,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;</span><span class="TextSegInsigDiff"> </span>.<span class="TextSegSigDiff">custom-c</span>he<span class="TextSegSigDiff">ckbox</span><span class="TextSegSigDiff">.b-custom-control-#{$name}</span>,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">[d</span><span class="TextSegSigDiff">i</span><span class="TextSegSigDiff">r=rtl]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.b-t</span><span class="TextSegSigDiff">able</span> <span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span>t<span class="TextSegSigDiff">foot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th.s</span><span class="TextSegSigDiff">orting</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.input-group</span><span class="TextSegSigDiff">-#{$nam</span><span class="TextSegSigDiff">e}</span> <span class="TextSegSigDiff">.cus</span>t<span class="TextSegSigDiff">om-c</span><span class="TextSegSigDiff">heckbox,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.custom-radio.b-custom-control-#{$name},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.input-group-#{$name}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.custom-radio</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; padding-left: <span class="TextSegSigDiff">2rem</span>;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>padding-left: <span class="TextSegSigDiff">0</span>;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$gutter</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$indicator-size;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">&amp;:before</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">auto;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">sorting</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">icon</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.75em;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">@function</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url($top-arrow,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$bottom-arrow:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$top-arrow)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$result:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">str-replace($b-table-sort-icon,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'_TOP_COLOR_',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$top-arrow);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">url(&quot;#{str-replace(str-replace($result,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'_BOTTOM_COLOR_',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$bottom-arrow),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'#',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'%23')}&quot;);</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp; </span>}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">}</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Card</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">table</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&amp;:after</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">@mixin</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-card-table($parent,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$cell-padding,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$sort-icon-bg-width,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$card-spacer)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Card</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">table</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#{$parent}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.table.b-table.card-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort],</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#{$parent}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.table.b-table.card-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tfoot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">auto;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Right</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">icon</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.25em;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;:not(.b-table-sort-icon-left):last-child</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$card-spacer;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">background-position:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">right</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$card-spacer}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">/</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">center;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">icon</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;.b-table-sort-icon-left:first-child</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">background-position:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$card-spacer</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">center;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$card-spacer</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$cell-padding}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#{$sort-icon-bg-width});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span>}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Card</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[RTL]</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&amp;[dir=rtl]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#{$parent}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.table.b-table.card-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort],</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&amp;[dir=rtl]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#{$parent}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.table.b-table.card-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tfoot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th:focus</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Right</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">icon</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">outline:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;:not(.b-table-sort-icon-left)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;:last-child</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$card-spacer;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">background-position:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$card-spacer}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">/</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">center;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">text-decoration:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">underline;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;:first-child</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$card-spacer;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span>}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th.sorting::before,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">icon</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th.sorting::after</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;.b-table-sort-icon-left,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;.b-table-sort-icon-left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$cell-padding;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">background-position:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">right</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$cell-padding</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">center;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$cell-padding</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">*</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#{$sort-icon-bg-width});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">bottom:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">auto</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">!important;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;:first-child</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$card-spacer</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$cell-padding}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#{$sort-icon-bg-width});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$cell-padding;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">p</span><span class="TextSegSigDiff">a</span><span class="TextSegSigDiff">dding-bo</span><span class="TextSegSigDiff">ttom</span>: <span class="TextSegSigDiff">0</span> <span class="TextSegSigDiff">!im</span><span class="TextSegSigDiff">po</span><span class="TextSegSigDiff">rta</span>nt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span><span class="TextSegSigDiff">background</span><span class="TextSegSigDiff">-position</span>: <span class="TextSegSigDiff">right</span> <span class="TextSegSigDiff">$card-spacer</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">ce</span>nt<span class="TextSegSigDiff">er</span>;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">top:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">50%;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff"> </span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">transform:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">translateY(-50%);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;:last-child</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$card-spacer;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Styles</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">.default-style<span class="TextSegSigDiff">[dir=rtl]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.b-table</span> {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">.default-style {</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; @import &quot;~@/vendor/styles/_appwork/include&quot;;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; @import &quot;~@/vendor/styles/_appwork/include&quot;;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-not-sorted:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url($text-lighter);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-ascending:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url($text-lighter,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$body-color);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-descending:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url($body-color,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$text-lighter);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-dark-not-sorted:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url(rgba(255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.3));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-dark-ascending:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url(rgba(255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.3),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#ffffff);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-dark-descending:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url(#ffffff,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">rgba(255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.3));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th.sorting,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Bootstrap-vue</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">styles</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/variables&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/utilities&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/dropdown/index&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/form-file/index&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/modal/index&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/table/index&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/toast/toaster-transition&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/toast/toaster&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tfoot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th.sorting</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Custom</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox/radio</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">sizing</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$table-cell-padding;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox-radio-size('lg',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$font-size-lg,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$line-height-lg,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-gutter-lg,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-indicator-size-lg,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-indicator-bg-size-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-checkbox-indicator-border-radius-lg);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox-radio-size('sm',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">false,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$font-size-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$line-height-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-gutter-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-indicator-size-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-indicator-bg-size-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-checkbox-indicator-border-radius-sm);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&amp;[dir=rtl]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox-radio-size-rtl('lg',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-custom-control-gutter-lg,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-custom-control-indicator-size-lg);</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox-radio-size-rtl('sm',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-custom-control-gutter-sm,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-custom-control-indicator-size-sm);</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Custom</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">file</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&amp;.card-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th.sorting:first-child,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&amp;[dir=rtl]</span><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.b-custom-control-lg.b-form-file</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.custom-file-label::after,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.input-group-lg</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.b-form-file</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.custom-file-label::after</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">border-radius($b-custom-file-border-radius-lg</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-custom-file-border-radius-lg);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&amp;.card-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tfoot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th.sorting:first-child</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.b-custom-control-sm.b-form-file</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.custom-file-label::after,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.input-group-sm</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.b-form-file</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.custom-file-label::after</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">border-radius($b-custom-file-border-radius-sm</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-custom-file-border-radius-sm);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$card-spacer-x;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Tooltip</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">and</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">popover</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.tooltip.b-tooltip,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.popover.b-popover</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">display:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">block;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">opacity:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$tooltip-opacity;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;.fade:not(.show)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">opacity:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;.show</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">opacity:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$tooltip-opacity;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Toast</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.b-toast</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;:not(:last-child)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">margin-bottom:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$toast-padding-x;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemInsigMod">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span>}</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.toast</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Override</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">default</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">boostrap</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">v4.x</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">opacity</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">of</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Needed</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">for</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">re-usable</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">fade</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">transition</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">opacity:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">1;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">.material-style[dir=rtl]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;.fade:not(.show)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">opacity:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~@/vendor/styles/_appwork/include-material&quot;;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">.toast-body</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">display:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">block;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Needed</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">when</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">we</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">use</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">a</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">link</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">as</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">body</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">element</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">within</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">card</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th.sorting,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">icon</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort].b-table-sort-icon-left,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tfoot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort].b-table-sort-icon-left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">background-position:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$table-cell-padding</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">center;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$table-cell-padding</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">*</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#{$b-table-sort-icon-bg-width});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tfoot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">th.sorting</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&amp;[dir=rtl]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Right</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">icon</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort]:not(.b-table-sort-icon-left),</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tfoot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort]:not(.b-table-sort-icon-left)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;&nbsp;&nbsp; padding-right: $table-cell-padding;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span>padding-right: $table-cell-padding;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$table-cell-padding}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#{$b-table-sort-icon-bg-width});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">background-position:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$table-cell-padding}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">/</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">center;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemInsigMod">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>}</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">icon</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">&amp;</span><span class="TextSegSigDiff">.card</span>-table &gt; thead &gt; tr &gt; <span class="TextSegSigDiff">th.</span>sort<span class="TextSegSigDiff">i</span><span class="TextSegSigDiff">ng:</span><span class="TextSegSigDiff">first-child</span>,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.table.b</span>-table &gt; thead &gt; tr &gt; <span class="TextSegSigDiff">[aria-sort].b-table-</span>sort<span class="TextSegSigDiff">-icon-lef</span><span class="TextSegSigDiff">t</span>,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">&amp;</span><span class="TextSegSigDiff">.card</span>-table &gt; tfoot &gt; tr &gt; <span class="TextSegSigDiff">th.</span>sort<span class="TextSegSigDiff">i</span><span class="TextSegSigDiff">ng:</span><span class="TextSegSigDiff">first-child</span> {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.table.b</span>-table &gt; tfoot &gt; tr &gt; <span class="TextSegSigDiff">[aria-sort].b-table-</span>sort<span class="TextSegSigDiff">-icon-lef</span><span class="TextSegSigDiff">t</span> {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; <span class="TextSegSigDiff">p</span><span class="TextSegSigDiff">a</span><span class="TextSegSigDiff">dd</span><span class="TextSegSigDiff">i</span><span class="TextSegSigDiff">ng-</span>right<span class="TextSegSigDiff">:</span> $<span class="TextSegSigDiff">card-s</span>pacer<span class="TextSegSigDiff">-x</span>;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">background-position:</span><span class="TextSegInsigDiff"> </span>right $<span class="TextSegSigDiff">table-cell-</span>pa<span class="TextSegSigDiff">dding</span><span class="TextSegInsigDiff"> </span>c<span class="TextSegSigDiff">ent</span>er;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$table-cell-padding;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$table-cell-padding</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">*</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#{$b-table-sort-icon-bg-width});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>}</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemInsigMod">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp; </span>}</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-card-table('',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$table-cell-padding,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-width,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$card-spacer-x);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-card-table('.card-condenced',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$table-cell-padding,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-width,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$card-spacer-x-sm);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Cards</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">//</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp; </span>//</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Card</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">image</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">.default-style</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~@/vendor/styles/_appwork/include&quot;;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; .card-img-left {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; .card-img-left {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @include border-left-radius(if($border-radius != 0px, calc(#{$border-radius} - 1px), 0));</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @include border-left-radius(if($border-radius != 0px, calc(#{$border-radius} - 1px), 0));</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; .card-img-right {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; .card-img-right {</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemInsigMod">&nbsp;&nbsp;&nbsp; @include border-right-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp;&nbsp; @include border-right-radius(if($border-radius !=<span class="TextSegInsigDiff"> </span>0px, calc(#{$border-radius} - 1px), 0));</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &amp;[dir=rtl] {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &amp;[dir=rtl] {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .card-img-left {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .card-img-left {</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-left-radius(0);</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-left-radius(0);</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp;&nbsp; @include border-right-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp;&nbsp; @include border-right-radius(if($border-radius !=<span class="TextSegInsigDiff"> </span>0px, calc(#{$border-radius} - 1px), 0));</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .card-img-right {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .card-img-right {</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-right-radius(0);</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-right-radius(0);</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp;&nbsp; @include border-left-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp;&nbsp; @include border-left-radius(if($border-radius !=<span class="TextSegInsigDiff"> </span>0px, calc(#{$border-radius} - 1px), 0));</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.material-style {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.material-style {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; @import &quot;~@/vendor/styles/_appwork/include-material&quot;;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; @import &quot;~@/vendor/styles/_appwork/include-material&quot;;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-not-sorted:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url($text-lighter);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-ascending:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url($text-lighter,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$body-color);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-descending:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url($body-color,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$text-lighter);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-dark-not-sorted:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url(rgba(255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.3));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-dark-ascending:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url(rgba(255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.3),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#ffffff);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-dark-descending:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-table-sort-icon-url(#ffffff,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">rgba(255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">255,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.3));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Bootstrap-vue</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">styles</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/variables&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/utilities&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/dropdown/index&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/form-file/index&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/modal/index&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/table/index&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/toast/toaster-transition&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~node_modules/bootstrap-vue/src/components/toast/toaster&quot;;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Custom</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox/radio</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">sizing</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox-radio-size('lg',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">true,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$font-size-lg,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$line-height-lg,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-gutter-lg,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-indicator-size-lg,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-indicator-bg-size-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-checkbox-indicator-border-radius-lg);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox-radio-size('sm',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">true,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$font-size-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$line-height-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-gutter-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-indicator-size-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-control-indicator-bg-size-sm,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">$b-custom-checkbox-indicator-border-radius-sm);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&amp;[dir=rtl]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox-radio-size-rtl('lg',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-custom-control-gutter-lg,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-custom-control-indicator-size-lg);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">checkbox-radio-size-rtl('sm',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-custom-control-gutter-sm,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-custom-control-indicator-size-sm);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Custom</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">file</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.custom-file.b-form-file</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">.custom-file-label</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;::after</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Tooltip</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">and</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">popover</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.tooltip.b-tooltip,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.popover.b-popover</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">display:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">block;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">opacity:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$tooltip-opacity;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;.fade:not(.show)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">opacity:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;.show</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">opacity:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$tooltip-opacity;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Toast</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.b-toast</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;:not(:last-child)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">margin-bottom:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$toast-padding-x;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.toast</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Override</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">default</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">boostrap</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">v4.x</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">opacity</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">of</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Needed</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">for</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">re-usable</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">fade</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">transition</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">opacity:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">1;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&amp;.fade:not(.show)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">opacity:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">0;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">.toast-body</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">display:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">block;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Needed</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">when</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">we</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">use</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">a</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">link</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">as</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">body</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">element</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">within</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">card</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">icon</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort].b-table-sort-icon-left,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tfoot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort].b-table-sort-icon-left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">background-position:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$table-cell-padding</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">center;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$table-cell-padding</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">*</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#{$b-table-sort-icon-bg-width});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&amp;[dir=rtl]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Right</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">icon</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort]:not(.b-table-sort-icon-left),</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tfoot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort]:not(.b-table-sort-icon-left)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$table-cell-padding;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$table-cell-padding}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#{$b-table-sort-icon-bg-width});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">background-position:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$table-cell-padding}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">/</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">center;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">icon</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">thead</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort].b-table-sort-icon-left,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">.table.b-table</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tfoot</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tr</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[aria-sort].b-table-sort-icon-left</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">background-position:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">right</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$table-cell-padding</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">center;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-left:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$table-cell-padding;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">padding-right:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">calc(#{$table-cell-padding</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">*</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">#{$b-table-sort-icon-bg-width});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-card-table('',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$table-cell-padding,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-width,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$card-spacer-x);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@include</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">b-card-table('.card-condenced',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$table-cell-padding,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$b-table-sort-icon-bg-width,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$card-spacer-x-sm);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Card</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">image</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; .card-img-left {</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; .card-img-left {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @include border-left-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @include border-left-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; .card-img-right {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; .card-img-right {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @include border-right-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @include border-right-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &amp;[dir=rtl] {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &amp;[dir=rtl] {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .card-img-left {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .card-img-left {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-left-radius(0);</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-left-radius(0);</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-right-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-right-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .card-img-right {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .card-img-right {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-right-radius(0);</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-right-radius(0);</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-left-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; @include border-left-radius(if($border-radius !=0px, calc(#{$border-radius} - 1px), 0));</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Dropdowns</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">.default-style</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~@/vendor/styles/_appwork/include&quot;;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.b-dropdown-form,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.b-dropdown-text</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">padding:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$dropdown-item-padding-y</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$dropdown-item-padding-x;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">.material-style</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">@import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~@/vendor/styles/_appwork/include-material&quot;;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.b-dropdown-form,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">.b-dropdown-text</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">padding:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$dropdown-item-padding-y</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$dropdown-item-padding-x;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

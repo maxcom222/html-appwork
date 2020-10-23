@@ -1,0 +1,365 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/laravel-vue-starter/.gitignore &nbsp;
+<br/>
+Right file: appwork-v1_4_0/laravel-vue-starter/.gitignore &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame"># Laravel</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"># Laravel</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/public/hot</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/public/hot</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/public/storage</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/public/storage</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/storage/*.key</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/storage/*.key</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/vendor</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/vendor</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.env</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.env</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/nbproject</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/nbproject</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">Homestead.json</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">Homestead.json</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">Homestead.yaml</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">Homestead.yaml</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">.phpunit.result.cache</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.phpunit.result.cache</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">.env.backup</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Vagrant</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Vagrant</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/.vagrant</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/.vagrant</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Dependencies</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Dependencies</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/node_modules</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/node_modules</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># IDEs and editors</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># IDEs and editors</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.idea</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.idea</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.vscode</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.vscode</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.vs</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.vs</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.project</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.project</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.classpath</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.classpath</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.c9/</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.c9/</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">*.launch</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">*.launch</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.settings/</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.settings/</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">*.sublime-workspace</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">*.sublime-workspace</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">*.suo</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">*.suo</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">*.ntvs*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">*.ntvs*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">*.njsproj</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">*.njsproj</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">*.sln</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">*.sln</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Logs</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Logs</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">!logs</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">!logs</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">*.log</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">*.log</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">npm-debug.log*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">npm-debug.log*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">yarn-debug.log*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">yarn-debug.log*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">yarn-error.log*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">yarn-error.log*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Misc</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Misc</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.npm</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.npm</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.eslintcache</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.eslintcache</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.yarn-integrity</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.yarn-integrity</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># System Files</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># System Files</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.DS_Store</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.DS_Store</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.AppleDouble</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.AppleDouble</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">.LSOverride</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">.LSOverride</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Thumbnails</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Thumbnails</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">._*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">._*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">Thumbs.db</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">Thumbs.db</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">ehthumbs.db</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">ehthumbs.db</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">ehthumbs_vista.db</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">ehthumbs_vista.db</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Dump file</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Dump file</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">*.stackdump</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">*.stackdump</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Folder config file</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Folder config file</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">[Dd]esktop.ini</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">[Dd]esktop.ini</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Windows shortcuts</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Windows shortcuts</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">*.lnk</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">*.lnk</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

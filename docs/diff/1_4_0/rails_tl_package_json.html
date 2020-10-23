@@ -1,0 +1,605 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/rails-starter/package.json &nbsp;
+<br/>
+Right file: appwork-v1_4_0/rails-turbolinks-starter/package.json &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionAll">
+<td class="TextItemSame">{</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">{</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; &quot;name&quot;: &quot;appwork-rails-starter&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; &quot;name&quot;: &quot;appwork-rails-<span class="TextSegSigDiff">turbolinks-</span>starter&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp; &quot;version&quot;: &quot;1.<span class="TextSegSigDiff">3.1</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &quot;version&quot;: &quot;1.<span class="TextSegSigDiff">4.0</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; &quot;private&quot;: true,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; &quot;private&quot;: true,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &quot;dependencies&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;dependencies&quot;: {</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@rails/actioncable&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^6.0.0-alpha&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@rails/activestorage&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^6.0.0-alpha&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@rails/ujs&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^6.0.0-alpha&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@rails/webpacker&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^4.0.7&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;glob&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^7.1.4&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;html-loader&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~0.5.5&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;node-sass&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^4.12.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;rename-webpack-plugin&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^2.0.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;resolve-url-loader&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^3.1.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;turbolinks&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^5.2.0&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;webpack-fix-style-only-entries&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^0.4.0&quot;,</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@claviska/jquery-minicolors&quot;: &quot;~2.3.2&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@claviska/jquery-minicolors&quot;: &quot;~2.3.2&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@flowjs/flow.js&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~2.13.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@fullcalendar/bootstrap&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.3.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@fullcalendar/core&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.3.1&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@fullcalendar/daygrid&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.3.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@fullcalendar/interaction&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.3.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@fullcalendar/list&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.3.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@fullcalendar/timegrid&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.3.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@fullcalendar/timeline&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.3.0&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;add&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^2.0.6&quot;,</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;animate.css&quot;: &quot;~3.7.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;animate.css&quot;: &quot;~3.7.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;autosize&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.0.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;block-ui&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~2.70.1&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;blueimp-gallery&quot;: &quot;~2.3<span class="TextSegSigDiff">3</span>.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;blueimp-gallery&quot;: &quot;~2.3<span class="TextSegSigDiff">5</span>.0&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;bootbox&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~5.3.2&quot;,</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap&quot;: &quot;~4.3.1&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap&quot;: &quot;~4.3.1&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;bootstrap-datepicker&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~1.9.0&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;bootstrap-daterangepicker&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~3.0.2&quot;,</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-duallistbox&quot;: &quot;~3.0.6&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-duallistbox&quot;: &quot;~3.0.6&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-markdown&quot;: &quot;~2.10.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-markdown&quot;: &quot;~2.10.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;bootstrap-material-datetimepicker&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~2.7.3&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;bootstrap-maxlength&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~1.6.0&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;bootstrap-mu<span class="TextSegSigDiff">ltiselect</span>&quot;: &quot;~0<span class="TextSegSigDiff">.9</span>.1<span class="TextSegSigDiff">3-1</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;bootstrap-m<span class="TextSegSigDiff">en</span>u&quot;: &quot;~<span class="TextSegSigDiff">1.</span>0.1<span class="TextSegSigDiff">4</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-select&quot;: &quot;~1.13.1&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-select&quot;: &quot;~1.13.1&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-slider&quot;: &quot;~10.6.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-slider&quot;: &quot;~10.6.1&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;bootstrap-table&quot;: &quot;~1.14<span class="TextSegSigDiff">.2</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;bootstrap-table&quot;: &quot;~1.1<span class="TextSegSigDiff">5.</span>4&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;bootstrap-tagsinput&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~0.7.1&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;c3&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~0.7.9&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;chart.js&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~2.8.0&quot;,</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;chartist&quot;: &quot;~0.11.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;chartist&quot;: &quot;~0.11.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;clipboard&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~2.0.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;core-js&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;3.3.3&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;cropper&quot;: &quot;~4.<span class="TextSegSigDiff">0</span>.0<span class="TextSegSigDiff">-beta</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;cropper&quot;: &quot;~4.<span class="TextSegSigDiff">1</span>.0&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;datatables.net&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~1.10.16&quot;,</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;datatables.net-bs4&quot;: &quot;~1.10.16&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;datatables.net-bs4&quot;: &quot;~1.10.16&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;dragula&quot;: &quot;~3.7.2&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;dragula&quot;: &quot;~3.7.2&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;dropzone&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~5.5.1&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;flatpickr&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.6.2&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;flot&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~3.2.10&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;gmaps&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~0.4.24&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;jquery&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~3.3.1&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;jquery-knob&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~1.2.11&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;jquery-mapael&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~2.2.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;jquery-sparkline&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~2.4.0&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;jquery-validation&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~1.19.0&quot;,</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;jquery.growl&quot;: &quot;~1.3.5&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;jquery.growl&quot;: &quot;~1.3.5&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;jstree&quot;: &quot;~3.3.5&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;jstree&quot;: &quot;~3.3.5&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ladda&quot;: &quot;~2.0.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ladda&quot;: &quot;~2.0.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;markdown&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~0.5.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;masonry-layout&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.2.1&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;moment&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~2.24.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;morris.js&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~0.5.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;nestable&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~0.2.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;node-waves&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~0.7.6&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;nouislider&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~14.0.2&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;numeral&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~2.0.6&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;pace-js&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~1.0.2&quot;,</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;perfect-scrollbar&quot;: &quot;~1.4.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;perfect-scrollbar&quot;: &quot;~1.4.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;photoswipe&quot;: &quot;~4.1.2&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;photoswipe&quot;: &quot;~4.1.2&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;plyr&quot;: &quot;~2.0.18&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;plyr&quot;: &quot;~2.0.18&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;popper.js&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~1.16.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;pwstrength-bootstrap&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~3.0.1&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;quill&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~1.3.6&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;raphael&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~2.3.0&quot;,</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;select2&quot;: &quot;~4.0.6-rc.1&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;select2&quot;: &quot;~4.0.6-rc.1&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;shepherd.js&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~5.0.1&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;smartwizard&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~v4.3.1&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;sortablejs&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~1.10.0&quot;,</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;spinkit&quot;: &quot;~1.2.5&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;spinkit&quot;: &quot;~1.2.5&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;sweetalert2&quot;: &quot;~8.<span class="TextSegSigDiff">7</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;sweetalert2&quot;: &quot;~8.<span class="TextSegSigDiff">18</span>.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;swiper&quot;: &quot;~<span class="TextSegSigDiff">4.5</span>.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;swiper&quot;: &quot;~<span class="TextSegSigDiff">5.1</span>.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;tableexport.jquery.plugin&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~1.10.8&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;text-mask-addons&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~3.8.0&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;timepicker&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~1.11.12&quot;,</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;toastr&quot;: &quot;~2.1.4&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;toastr&quot;: &quot;~2.1.4&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;typeahead.js&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~0.11.1&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;vanilla-text-mask&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~5.1.1&quot;,</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vegas&quot;: &quot;~2.4.0&quot;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vegas&quot;: &quot;~2.4.0&quot;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; }</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; }<span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&quot;devDependencies&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;webpack-dev-server&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^3.8.2&quot;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&quot;browserslist&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;&gt;=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">1%&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;last</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">versions&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;not</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">dead&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;Chrome</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">45&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;Firefox</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">38&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;Edge</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">12&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;Explorer</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">10&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;iOS</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">9&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;Safari</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">9&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;Android</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">4.4&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;Opera</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&gt;=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">30&quot;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">]</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">}</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

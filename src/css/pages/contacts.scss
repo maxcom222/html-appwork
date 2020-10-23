@@ -1,0 +1,95 @@
+@import '../_custom-variables/pages';
+
+$contact-col-breakpoint: md !default;
+$contact-col-width: 33.33333% !default;
+$contact-img-size-col-width: 33.33333% !default;
+$contact-img-size-col-view: 6.25rem !default;
+$contact-img-size-row-view: 4rem !default;
+
+.contacts-dropdown {
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+
+  [dir=rtl] & {
+    right: auto;
+    left: .75rem;
+  }
+}
+
+.contacts-col-view {
+  .contact-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact-content-img {
+    margin-bottom: 1.25rem;
+    width: $contact-img-size-col-view;
+    height: $contact-img-size-col-view;
+  }
+
+  .contact-content-name,
+  .contact-content-user {
+    display: block;
+  }
+}
+
+.contacts-row-view {
+  .contacts-col > .card > .card-body {
+    padding: 1rem;
+  }
+
+  .contact-content-img {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: .125rem 1.25rem 0 .25rem;
+    width: $contact-img-size-row-view;
+    height: $contact-img-size-row-view;
+
+    [dir=rtl] & {
+      margin: .125rem .25rem 0 1.25rem;
+    }
+  }
+
+  .contact-content {
+    display: flex;
+    width: 100%;
+  }
+
+  .contact-content-about {
+    flex-grow: 1;
+
+     > hr {
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+    }
+  }
+
+  .contact-content-name,
+  .contact-content-user {
+    display: inline-block;
+  }
+}
+
+.default-style {
+  @import "../_appwork/include";
+
+  @include media-breakpoint-up($contact-col-breakpoint) {
+    .contacts-col-view .contacts-col {
+      flex: 0 0 $contact-col-width !important;
+      max-width: $contact-col-width !important;
+    }
+  }
+}
+
+.material-style {
+  @import "../_appwork/include-material";
+
+  @include media-breakpoint-up($contact-col-breakpoint) {
+    .contacts-col-view .contacts-col {
+      flex: 0 0 $contact-col-width !important;
+      max-width: $contact-col-width !important;
+    }
+  }
+}

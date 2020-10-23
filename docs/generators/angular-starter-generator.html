@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style docs-generator-page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Angular Starter Template Generator - Appwork v1.4.0 Docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/bootstrap.css">
+  <link rel="stylesheet" href="../assets/appwork.css">
+  <link rel="stylesheet" href="../assets/theme-corporate.css">
+
+  <link rel="stylesheet" href="../assets/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+</head>
+<body>
+
+<div id="generator-angular">
+    <div class="docs-generator-wrapper">
+      <div class="docs-generator-settings p-4">
+        <gen-select v-model="options.style" :options="styleOptions" class="mb-2"></gen-select>
+        <gen-checkbox v-model="options.materialRipple" :disabled="options.style !== 'material' && !options.settingsPanel" class="mb-2">Material ripple</gen-checkbox>
+        
+        <gen-checkbox v-model="options.splashScreen" class="mb-2">Splash screen</gen-checkbox>
+        
+        <gen-checkbox v-model="options.rtlSupport" class="mb-2">RTL support</gen-checkbox>
+        <gen-checkbox v-model="options.rtlMode" :disabled="!options.rtlSupport" class="mb-2">RTL mode</gen-checkbox>
+        <gen-checkbox v-model="options.settingsPanel" class="mb-2">Theme settings panel</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">PAGE LAYOUT</div>
+
+        <gen-select v-model="options.pageLayout" :options="pageLayoutOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">LAYOUT OPTIONS</div>
+
+        <gen-select v-model="options.layoutPosition" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in layoutPositionOptions" :value="option[0]" :disabled="layoutPositionOptionDisabled(option[0])">{{option[1]}}</option>
+        </gen-select>
+        <gen-checkbox v-model="options.fixedNavbar" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">Fixed navbar</gen-checkbox>
+        <gen-checkbox v-model="options.fixedFooter" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">Fixed footer</gen-checkbox>
+        <gen-checkbox v-model="options.reversedLayout" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Reversed</gen-checkbox>
+        <gen-checkbox v-model="options.collapsedSidenav" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Collapsed sidenav</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">THEME</div>
+
+        <gen-select v-model="options.theme" :options="themeOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">NAVBAR BG</div>
+
+        <gen-select v-model="options.navbarBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">
+          <option v-for="option in navbarBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">SIDENAV BG</div>
+
+        <gen-select v-model="options.sidenavBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'blank'">
+          <option v-for="option in sidenavBgOptions" :value="option" :disabled="sidenavBgOptionDisabled(option)">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">FOOTER BG</div>
+
+        <gen-select v-model="options.footerBg" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in footerBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+      </div>
+      <div class="docs-generator-content">
+        <gen-tabs v-on:tabchange="tabChange">
+          <gen-tab title="angular.json"><pre v-html="tabContent['angular.json']"></pre></gen-tab>
+<gen-tab title="src/index.html"><pre v-html="tabContent['src/index.html']"></pre></gen-tab>
+<gen-tab title="src/app/app.component.ts"><pre v-html="tabContent['src/app/app.component.ts']"></pre></gen-tab>
+<gen-tab title="src/app/app-routing.module.ts"><pre v-html="tabContent['src/app/app-routing.module.ts']"></pre></gen-tab>
+<gen-tab title="src/app/app.module.ts"><pre v-html="tabContent['src/app/app.module.ts']"></pre></gen-tab>
+<gen-tab title="src/app/app.service.ts"><pre v-html="tabContent['src/app/app.service.ts']"></pre></gen-tab>
+        </gen-tabs>
+      </div>
+    </div>
+
+    <gen-copy-btn :file="curTab" :text="originalContent[curTab]"></gen-copy-btn>
+  </div>
+
+
+  <textarea class="d-none" id="template__index-html">
+
+<!DOCTYPE html>
+
+<html lang="en"{% if rtlMode %} dir="rtl"{% endif %} class="{{style}}-style{% if pageLayout != 'blank' and layoutPosition %} layout-{{layoutPosition}}{% endif %}{% if reversedLayout %} layout-reversed{% endif %}{% if collapsedSidenav %} layout-collapsed{% endif %}{% if fixedNavbar %} layout-navbar-fixed{% endif %}{% if fixedFooter %} layout-footer-fixed{% endif %}">
+  <head>
+    <base href="/">
+    <title>Angular Starter</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Main font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <!-- <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css"> -->
+    <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+    <!-- <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css"> -->
+    <!-- <link rel="stylesheet" href="assets/vendor/fonts/open-iconic.css"> -->
+    <!-- <link rel="stylesheet" href="assets/vendor/fonts/pe-icon-7-stroke.css"> -->
+
+    {% if settingsPanel -%}
+    <!-- Core stylesheets -->
+    <link rel="stylesheet" href="vendor/styles/bootstrap{% if style == 'material' %}-material{% endif %}.css" class="theme-settings-bootstrap-css">
+    <link rel="stylesheet" href="vendor/styles/appwork{% if style == 'material' %}-material{% endif %}.css" class="theme-settings-appwork-css">
+    <link rel="stylesheet" href="vendor/styles/theme-{{theme}}{% if style == 'material' %}-material{% endif %}.css" class="theme-settings-theme-css">
+    <link rel="stylesheet" href="vendor/styles/colors{% if style == 'material' %}-material{% endif %}.css" class="theme-settings-colors-css">
+    <link rel="stylesheet" href="vendor/styles/uikit.css">
+    {% endif %}
+
+    {% if materialRipple %}
+    <!-- Material ripple -->
+    <script src="assets/vendor/js/material-ripple.js"></script>
+    {% endif %}
+    {%- if materialRipple and not settingsPanel -%}
+    <script>window.attachMaterialRippleOnLoad();</script>
+    {% endif %}
+
+    <!-- Layout helpers -->
+    <script src="assets/vendor/js/layout-helpers.js"></script>
+
+    {% if settingsPanel %}
+    <!-- Theme settings -->
+    <script src="assets/vendor/js/theme-settings.js"></script>
+    <script>
+      // Use settings panel generator to configure the plugin
+      window.themeSettings = new ThemeSettings({
+        cssPath: 'vendor/styles/',
+        themesPath: 'vendor/styles/'
+      });
+    </script>
+    {% endif %}
+
+    <!-- Custom elements polyfill -->
+    <script>this.customElements||document.write('<script src="//unpkg.com/document-register-element"><\x2fscript>');</script>
+  </head>
+  <body>
+
+    {% if splashScreen %}
+    <!-- Splash screen -->
+    <div class="app-splash-screen" style="background: #fff; position: fixed; z-index: 99999999; top: 0; right: 0; bottom: 0; left: 0; opacity: 1; -webkit-transition: opacity .3s; transition: opacity .3s;">
+      <div class="app-splash-screen-content" style="position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+        <span class="text-large font-weight-bolder">CompanyName</span>
+      </div>
+    </div>
+    <!-- / Splash screen -->
+    {% endif %}
+
+    <!-- App root -->
+    <app-root></app-root>
+    <!-- / App root -->
+
+  </body>
+</html>
+
+</textarea>
+  <textarea class="d-none" id="template__angular-json">
+
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "angular-starter": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/angular-starter",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss",
+
+              {% if not settingsPanel -%}
+              "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/bootstrap{% if style == 'material' %}-material{% endif %}.scss",
+              "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/appwork{% if style == 'material' %}-material{% endif %}.scss",
+              "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-{{theme}}{% if style == 'material' %}-material{% endif %}.scss",
+              "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/colors{% if style == 'material' %}-material{% endif %}.scss",
+              "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/uikit.scss"
+              {%- else -%}
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/appwork.scss", "bundleName": "vendor/styles/appwork", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/appwork-material.scss", "bundleName": "vendor/styles/appwork-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/bootstrap.scss", "bundleName": "vendor/styles/bootstrap", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/bootstrap-material.scss", "bundleName": "vendor/styles/bootstrap-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/colors.scss", "bundleName": "vendor/styles/colors", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/colors-material.scss", "bundleName": "vendor/styles/colors-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/uikit.scss", "bundleName": "vendor/styles/uikit", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-air.scss", "bundleName": "vendor/styles/theme-air", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-air-material.scss", "bundleName": "vendor/styles/theme-air-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-corporate.scss", "bundleName": "vendor/styles/theme-corporate", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-corporate-material.scss", "bundleName": "vendor/styles/theme-corporate-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-cotton.scss", "bundleName": "vendor/styles/theme-cotton", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-cotton-material.scss", "bundleName": "vendor/styles/theme-cotton-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-gradient.scss", "bundleName": "vendor/styles/theme-gradient", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-gradient-material.scss", "bundleName": "vendor/styles/theme-gradient-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-paper.scss", "bundleName": "vendor/styles/theme-paper", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-paper-material.scss", "bundleName": "vendor/styles/theme-paper-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-shadow.scss", "bundleName": "vendor/styles/theme-shadow", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-shadow-material.scss", "bundleName": "vendor/styles/theme-shadow-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-soft.scss", "bundleName": "vendor/styles/theme-soft", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-soft-material.scss", "bundleName": "vendor/styles/theme-soft-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-sunrise.scss", "bundleName": "vendor/styles/theme-sunrise", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-sunrise-material.scss", "bundleName": "vendor/styles/theme-sunrise-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-twitlight.scss", "bundleName": "vendor/styles/theme-twitlight", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-twitlight-material.scss", "bundleName": "vendor/styles/theme-twitlight-material", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-vibrant.scss", "bundleName": "vendor/styles/theme-vibrant", "lazy": true },
+              { "input": "src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-vibrant-material.scss", "bundleName": "vendor/styles/theme-vibrant-material", "lazy": true }
+              {%- endif %}
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
+            "serve": {
+              "extractCss": true,
+              "namedChunks": true,
+              "vendorChunk": true,
+              "commonChunk": true,
+              "verbose": false
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "angular-starter:build:serve"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-starter:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "angular-starter:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "angular-starter-e2e": {
+      "root": "e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "angular-starter:serve"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "e2e/tsconfig.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-starter"
+}
+
+</textarea>
+  <textarea class="d-none" id="template__app-component-ts">
+
+import { Component } from '@angular/core';
+import { Router, Event as RouterEvent, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
+import { AppService } from './app.service';
+import { LayoutService } from './layout/layout.service';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styles: [':host { display: block; }']
+})
+export class AppComponent {
+  constructor(private router: Router, private appService: AppService, private layoutService: LayoutService) {
+    // Subscribe to router events to handle page transition
+    this.router.events.subscribe(this.navigationInterceptor.bind(this));
+
+    // Disable animations and transitions in IE10 to increase performance
+    if (typeof document['documentMode'] === 'number' && document['documentMode'] < 11) {
+      const style = document.createElement('style');
+      style.textContent = `
+        * {
+          -ms-animation: none !important;
+          animation: none !important;
+          -ms-transition: none !important;
+          transition: none !important;
+        }`;
+      document.head.appendChild(style);
+    }
+  }
+
+  private navigationInterceptor(e: RouterEvent) {
+    if (e instanceof NavigationStart) {
+      // Set loading state
+      document.body.classList.add('app-loading');
+    }
+
+    if (e instanceof NavigationEnd) {
+      // Scroll to top of the page
+      this.appService.scrollTop(0, 0);
+    }
+
+    if (e instanceof NavigationEnd || e instanceof NavigationCancel || e instanceof NavigationError) {
+      // On small screens collapse sidenav
+      if (this.layoutService.isSmallScreen() && !this.layoutService.isCollapsed()) {
+        setTimeout(() => this.layoutService.setCollapsed(true, true), 10);
+      }
+
+      // Remove loading state
+      document.body.classList.remove('app-loading');
+
+      {%- if splashScreen %}
+
+      // Remove initial splash screen
+      const splashScreen = document.querySelector('.app-splash-screen');
+      if (splashScreen) {
+        splashScreen['style'].opacity = 0;
+        setTimeout(() => splashScreen && splashScreen.parentNode.removeChild(splashScreen), 300);
+      }
+      {%- endif %}
+    }
+  }
+}
+
+</textarea>
+  <textarea class="d-none" id="template__app-module-ts">
+
+import { BrowserModule, Title } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+// *******************************************************************************
+// NgBootstrap
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+// *******************************************************************************
+// App
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AppService } from './app.service';
+import { LayoutModule } from './layout/layout.module';
+{% if settingsPanel -%}
+import { ThemeSettingsModule } from '../vendor/libs/theme-settings/theme-settings.module';
+{%- endif %}
+
+
+// *******************************************************************************
+// Pages
+
+import { HomeComponent } from './home/home.component';
+import { Page2Component } from './page-2/page-2.component';
+
+
+// *******************************************************************************
+//
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    NotFoundComponent,
+
+    // Pages
+    HomeComponent,
+    Page2Component
+  ],
+
+  imports: [
+    BrowserModule,
+    NgbModule,
+
+    // App
+    AppRoutingModule,
+    LayoutModule{% if settingsPanel -%},
+    ThemeSettingsModule
+    {%- endif %}
+  ],
+
+  providers: [
+    Title,
+    AppService
+  ],
+
+  bootstrap: [
+    AppComponent
+  ]
+})
+export class AppModule {}
+
+</textarea>
+  <textarea class="d-none" id="template__app-service-ts">
+
+import { Injectable } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+{%- if settingsPanel %}
+import { ThemeSettingsService } from '../vendor/libs/theme-settings/theme-settings.service';
+{%- endif %}
+
+@Injectable()
+export class AppService {
+  {% if settingsPanel -%}
+  constructor(private titleService: Title, private themeSettingsService: ThemeSettingsService) {}
+  {%- else -%}
+  constructor(private titleService: Title) {}
+  {%- endif %}
+
+  // Set page title
+  set pageTitle(value: string) {
+    this.titleService.setTitle(`${value} - Angular Starter`);
+  }
+
+  // Check for RTL layout
+  get isRTL() {
+    return document.documentElement.getAttribute('dir') === 'rtl' ||
+           document.body.getAttribute('dir') === 'rtl';
+  }
+
+  // Check if IE10
+  get isIE10() {
+    return typeof document['documentMode'] === 'number' && document['documentMode'] === 10;
+  }
+
+  // Layout navbar color
+  get layoutNavbarBg() {
+    {% if settingsPanel -%}
+    return this.themeSettingsService.getOption('navbarBg') || '{{navbarBg}}';
+    {%- else -%}
+    return '{{navbarBg}}';
+    {%- endif %}
+  }
+
+  // Layout sidenav color
+  get layoutSidenavBg() {
+    {% if settingsPanel -%}
+    return this.themeSettingsService.getOption('sidenavBg') || '{{sidenavBg}}';
+    {%- else -%}
+    return '{{sidenavBg}}';
+    {%- endif %}
+  }
+
+  // Layout footer color
+  get layoutFooterBg() {
+    {% if settingsPanel -%}
+    return this.themeSettingsService.getOption('footerBg') || '{{footerBg}}';
+    {%- else -%}
+    return '{{footerBg}}';
+    {%- endif %}
+  }
+
+  // Animate scrollTop
+  scrollTop(to: number, duration: number, element = document.scrollingElement || document.documentElement) {
+    if (element.scrollTop === to) { return; }
+    const start = element.scrollTop;
+    const change = to - start;
+    const startDate = +new Date();
+
+    // t = current time; b = start value; c = change in value; d = duration
+    const easeInOutQuad = (t, b, c, d) => {
+      t /= d / 2;
+      if (t < 1) { return c / 2 * t * t + b; }
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+
+    const animateScroll = () => {
+      const currentDate = +new Date();
+      const currentTime = currentDate - startDate;
+      element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration), 10);
+      if (currentTime < duration) {
+        requestAnimationFrame(animateScroll);
+      } else {
+        element.scrollTop = to;
+      }
+    };
+
+    animateScroll();
+  }
+}
+
+</textarea>
+  <textarea class="d-none" id="template__app-routing-module-ts">
+
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
+
+// *******************************************************************************
+// Layouts
+
+import { {{layoutClass(pageLayout)}} } from './layout/{{prefixLayout(pageLayout)}}/{{prefixLayout(pageLayout)}}.component';
+
+
+// *******************************************************************************
+// Pages
+
+import { HomeComponent } from './home/home.component';
+import { Page2Component } from './page-2/page-2.component';
+
+
+// *******************************************************************************
+// Routes
+
+const routes: Routes = [
+
+  { path: '', component: {{layoutClass(pageLayout)}}, pathMatch: 'full', children: [
+    { path: '', component: HomeComponent },
+  ]},
+
+  { path: 'page-2', component: {{layoutClass(pageLayout)}}, children: [
+    { path: '', component: Page2Component },
+  ]},
+
+  // 404 Not Found page
+  { path: '**', component: NotFoundComponent }
+
+];
+
+
+// *******************************************************************************
+//
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
+
+</textarea>
+
+
+  <!-- Scripts -->
+
+  <script src="../assets/generator.js"></script>
+  <script src="../assets/generator-angular-starter.js"></script>
+
+</body>
+</html>

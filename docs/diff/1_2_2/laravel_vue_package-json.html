@@ -1,0 +1,844 @@
+<html>
+
+<head>
+  <style>
+    .AlignLeft {
+      text-align: left;
+    }
+
+    .AlignCenter {
+      text-align: center;
+    }
+
+    .AlignRight {
+      text-align: right;
+    }
+
+    .Wrap {
+      white-space: nowrap;
+    }
+
+    body {
+      font-family: sans-serif;
+      font-size: 11pt;
+    }
+
+    img.AutoScale {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    td {
+      vertical-align: top;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+
+    tr.SectionGap td {
+      font-size: 4px;
+      border-left: none;
+      border-top: none;
+      border-bottom: 1px solid Black;
+      border-right: 1px solid Black;
+    }
+
+    tr.SectionAll td {
+      border-left: none;
+      border-top: none;
+      border-bottom: 1px solid Black;
+      border-right: 1px solid Black;
+    }
+
+    tr.SectionBegin td {
+      border-left: none;
+      border-top: none;
+      border-right: 1px solid Black;
+    }
+
+    tr.SectionEnd td {
+      border-left: none;
+      border-top: none;
+      border-bottom: 1px solid Black;
+      border-right: 1px solid Black;
+    }
+
+    tr.SectionMiddle td {
+      border-left: none;
+      border-top: none;
+      border-right: 1px solid Black;
+    }
+
+    tr.SubsectionAll td {
+      border-left: none;
+      border-top: none;
+      border-bottom: 1px solid Gray;
+      border-right: 1px solid Black;
+    }
+
+    tr.SubsectionEnd td {
+      border-left: none;
+      border-top: none;
+      border-bottom: 1px solid Gray;
+      border-right: 1px solid Black;
+    }
+
+    table.fc {
+      border-top: 1px solid Black;
+      border-left: 1px solid Black;
+      width: 100%;
+      font-family: monospace;
+      font-size: 10pt;
+    }
+
+    td.TextItemInsigMod {
+      color: #000000;
+      background-color: #EEEEFF;
+    }
+
+    td.TextItemInsigOrphan {
+      color: #000000;
+      background-color: #FAEEFF;
+    }
+
+    td.TextItemNum {
+      color: #696969;
+      background-color: #F0F0F0;
+    }
+
+    td.TextItemSame {
+      color: #000000;
+      background-color: #FFFFFF;
+    }
+
+    td.TextItemSigMod {
+      color: #000000;
+      background-color: #FFE3E3;
+    }
+
+    td.TextItemSigOrphan {
+      color: #000000;
+      background-color: #F1E3FF;
+    }
+
+    .TextSegInsigDiff {
+      color: #0000FF;
+    }
+
+    .TextSegReplacedDiff {
+      color: #0000FF;
+      font-style: italic;
+    }
+
+    .TextSegSigDiff {
+      color: #FF0000;
+    }
+
+    td.TextItemInsigAdd {
+      color: #000000;
+      background-color: #EEEEFF;
+    }
+
+    td.TextItemInsigDel {
+      color: #000000;
+      background-color: #EEEEFF;
+      text-decoration: line-through;
+    }
+
+    td.TextItemSigAdd {
+      color: #000000;
+      background-color: #FFE3E3;
+    }
+
+    td.TextItemSigDel {
+      color: #000000;
+      background-color: #FFE3E3;
+      text-decoration: line-through;
+    }
+  </style>
+
+</head>
+
+<body>
+  Left file: appwork-v1_2_1/laravel-vue-starter/package.json &nbsp;
+  <br />
+  Right file: appwork-v1_2_2/laravel-vue-starter/package.json &nbsp;
+  <br />
+  <table class="fc" cellspacing="0" cellpadding="0">
+    <tr class="SectionBegin">
+      <td class="TextItemNum AlignRight Wrap">1</td>
+      <td class="TextItemSame Wrap">{</td>
+      <td class="AlignCenter Wrap">=</td>
+      <td class="TextItemNum AlignRight Wrap">1</td>
+      <td class="TextItemSame Wrap">{</td>
+    </tr>
+    <tr class="SectionEnd">
+      <td class="TextItemNum AlignRight Wrap">2</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;name&quot;: &quot;appwork-laravel-vue-starter&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">2</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;name&quot;: &quot;appwork-laravel-vue-starter&quot;,</td>
+    </tr>
+    <tr class="SectionAll">
+      <td class="TextItemNum AlignRight Wrap">3</td>
+      <td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; &quot;version&quot;: &quot;1.2.<span class="TextSegSigDiff">1</span>&quot;,</td>
+      <td class="AlignCenter Wrap">&lt;&gt;</td>
+      <td class="TextItemNum AlignRight Wrap">3</td>
+      <td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; &quot;version&quot;: &quot;1.2.<span class="TextSegSigDiff">2</span>&quot;,</td>
+    </tr>
+    <tr class="SectionBegin">
+      <td class="TextItemNum AlignRight Wrap">4</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;private&quot;: true,</td>
+      <td class="AlignCenter Wrap">=</td>
+      <td class="TextItemNum AlignRight Wrap">4</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;private&quot;: true,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">5</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;scripts&quot;: {</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">5</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;scripts&quot;: {</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">6</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;dev&quot;: &quot;npm run development&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">6</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;dev&quot;: &quot;npm run development&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">7</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;development&quot;: &quot;cross-env
+        NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules
+        --config=node_modules/laravel-mix/setup/webpack.config.js&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">7</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;development&quot;: &quot;cross-env
+        NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules
+        --config=node_modules/laravel-mix/setup/webpack.config.js&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">8</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;watch&quot;: &quot;npm run development --
+        --watch&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">8</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;watch&quot;: &quot;npm run development --
+        --watch&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">9</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;watch-poll&quot;: &quot;npm run watch --
+        --watch-poll&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">9</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;watch-poll&quot;: &quot;npm run watch --
+        --watch-poll&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">10</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;hot&quot;: &quot;cross-env
+        NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot
+        --config=node_modules/laravel-mix/setup/webpack.config.js&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">10</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;hot&quot;: &quot;cross-env
+        NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot
+        --config=node_modules/laravel-mix/setup/webpack.config.js&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">11</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;prod&quot;: &quot;npm run production&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">11</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;prod&quot;: &quot;npm run production&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">12</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;production&quot;: &quot;cross-env
+        NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules
+        --config=node_modules/laravel-mix/setup/webpack.config.js&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">12</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;production&quot;: &quot;cross-env
+        NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules
+        --config=node_modules/laravel-mix/setup/webpack.config.js&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">13</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;postinstall&quot;: &quot;npm rebuild
+        node-sass&quot;</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">13</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;postinstall&quot;: &quot;npm rebuild
+        node-sass&quot;</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">14</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; },</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">14</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; },</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">15</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;devDependencies&quot;: {</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">15</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;devDependencies&quot;: {</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">16</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;cross-env&quot;: &quot;~5.2.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">16</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;cross-env&quot;: &quot;~5.2.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">17</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;laravel-mix&quot;: &quot;~2.1.11&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">17</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;laravel-mix&quot;: &quot;~2.1.11&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">18</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;babel-plugin-syntax-dynamic-import&quot;:
+        &quot;~6.18.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">18</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;babel-plugin-syntax-dynamic-import&quot;:
+        &quot;~6.18.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">19</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;axios&quot;: &quot;~0.18.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">19</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;axios&quot;: &quot;~0.18.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">20</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;bootstrap&quot;: &quot;~4.1.1&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">20</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;bootstrap&quot;: &quot;~4.1.1&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">21</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;bootstrap-vue&quot;:
+        &quot;2.0.0-rc.11&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">21</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;bootstrap-vue&quot;:
+        &quot;2.0.0-rc.11&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">22</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;chart.js&quot;: &quot;~2.7.2&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">22</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;chart.js&quot;: &quot;~2.7.2&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">23</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;idle-vue&quot;: &quot;~2.0.5&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">23</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;idle-vue&quot;: &quot;~2.0.5&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">24</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;ladda&quot;: &quot;~2.0.1&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">24</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;ladda&quot;: &quot;~2.0.1&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">25</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;moment&quot;: &quot;~2.22.1&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">25</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;moment&quot;: &quot;~2.22.1&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">26</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;nouislider&quot;: &quot;~12.0.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">26</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;nouislider&quot;: &quot;~12.0.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">27</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;numeral&quot;: &quot;~2.0.6&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">27</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;numeral&quot;: &quot;~2.0.6&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">28</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;perfect-scrollbar&quot;: &quot;~1.4.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">28</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;perfect-scrollbar&quot;: &quot;~1.4.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">29</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;plyr&quot;: &quot;~2.0.18&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">29</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;plyr&quot;: &quot;~2.0.18&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">30</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;simplemde&quot;: &quot;~1.11.2&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">30</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;simplemde&quot;: &quot;~1.11.2&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">31</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;spinkit&quot;: &quot;~1.2.5&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">31</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;spinkit&quot;: &quot;~1.2.5&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">32</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;sweet-modal-vue&quot;: &quot;~2.0.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">32</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;sweet-modal-vue&quot;: &quot;~2.0.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">33</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;text-mask-addons&quot;: &quot;~3.8.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">33</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;text-mask-addons&quot;: &quot;~3.8.0&quot;,</td>
+    </tr>
+    <tr class="SectionEnd">
+      <td class="TextItemNum AlignRight Wrap">34</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;v-img&quot;: &quot;~0.2.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">34</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;v-img&quot;: &quot;~0.2.0&quot;,</td>
+    </tr>
+    <tr class="SectionAll">
+      <td class="TextItemNum AlignRight Wrap">35</td>
+      <td class="TextItemSigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue&quot;: &quot;~2.<span class="TextSegSigDiff">5.15</span>&quot;,</td>
+      <td class="AlignCenter Wrap">&lt;&gt;</td>
+      <td class="TextItemNum AlignRight Wrap">35</td>
+      <td class="TextItemSigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue&quot;: &quot;~2.<span class="TextSegSigDiff">6.6</span>&quot;,</td>
+    </tr>
+    <tr class="SectionBegin">
+      <td class="TextItemNum AlignRight Wrap">36</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-awesome-swiper&quot;:
+        &quot;~3.1.3&quot;,</td>
+      <td class="AlignCenter Wrap">=</td>
+      <td class="TextItemNum AlignRight Wrap">36</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-awesome-swiper&quot;:
+        &quot;~3.1.3&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">37</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-blockui&quot;: &quot;~1.1.6&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">37</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-blockui&quot;: &quot;~1.1.6&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">38</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-chartjs&quot;: &quot;~3.4.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">38</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-chartjs&quot;: &quot;~3.4.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">39</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-clipboard2&quot;: &quot;~0.2.1&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">39</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-clipboard2&quot;: &quot;~0.2.1&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">40</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-color&quot;: &quot;~2.7.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">40</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-color&quot;: &quot;~2.7.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">41</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-context-menu&quot;: &quot;~2.0.6&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">41</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-context-menu&quot;: &quot;~2.0.6&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">42</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-dragula&quot;: &quot;~1.3.1&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">42</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-dragula&quot;: &quot;~1.3.1&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">43</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-echarts&quot;: &quot;~3.1.3&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">43</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-echarts&quot;: &quot;~3.1.3&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">44</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-flatpickr-component&quot;:
+        &quot;~8.0.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">44</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-flatpickr-component&quot;:
+        &quot;~8.0.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">45</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-form-wizard&quot;: &quot;~0.8.4&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">45</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-form-wizard&quot;: &quot;~0.8.4&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">46</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-gallery&quot;: &quot;~1.4.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">46</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-gallery&quot;: &quot;~1.4.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">47</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-input-tag&quot;: &quot;~1.0.3&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">47</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-input-tag&quot;: &quot;~1.0.3&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">48</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-jstree&quot;: &quot;~2.1.6&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">48</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-jstree&quot;: &quot;~2.1.6&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">49</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-masonry&quot;: &quot;~0.11.1&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">49</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-masonry&quot;: &quot;~0.11.1&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">50</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-meta&quot;: &quot;~1.5.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">50</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-meta&quot;: &quot;~1.5.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">51</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-multiselect&quot;: &quot;~2.1.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">51</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-multiselect&quot;: &quot;~2.1.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">52</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-notification&quot;: &quot;~1.3.7&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">52</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-notification&quot;: &quot;~1.3.7&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">53</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-number-input-spinner&quot;:
+        &quot;~2.0.3&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">53</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-number-input-spinner&quot;:
+        &quot;~2.0.3&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">54</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-password-strength-meter&quot;:
+        &quot;~1.3.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">54</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-password-strength-meter&quot;:
+        &quot;~1.3.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">55</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-quill-editor&quot;: &quot;~3.0.5&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">55</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-quill-editor&quot;: &quot;~3.0.5&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">56</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-router&quot;: &quot;~3.0.1&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">56</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-router&quot;: &quot;~3.0.1&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">57</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-simple-calendar&quot;:
+        &quot;~4.1.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">57</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-simple-calendar&quot;:
+        &quot;~4.1.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">58</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-simplemde&quot;: &quot;~0.4.6&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">58</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-simplemde&quot;: &quot;~0.4.6&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">59</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-slider-component&quot;:
+        &quot;~2.7.1&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">59</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-slider-component&quot;:
+        &quot;~2.7.1&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">60</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-tables-2&quot;: &quot;~1.4.50&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">60</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-tables-2&quot;: &quot;~1.4.50&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">61</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-text-mask&quot;: &quot;~6.1.1&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">61</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-text-mask&quot;: &quot;~6.1.1&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">62</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-toasted&quot;: &quot;~1.1.24&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">62</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-toasted&quot;: &quot;~1.1.24&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">63</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-typeahead&quot;: &quot;~2.3.2&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">63</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-typeahead&quot;: &quot;~2.3.2&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">64</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-upload-component&quot;:
+        &quot;~2.8.3&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">64</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue-upload-component&quot;:
+        &quot;~2.8.3&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">65</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue2-dropzone&quot;: &quot;~3.5.2&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">65</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue2-dropzone&quot;: &quot;~3.5.2&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">66</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue2-google-maps&quot;: &quot;~0.10.2&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">66</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vue2-google-maps&quot;: &quot;~0.10.2&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">67</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vuedraggable&quot;: &quot;~2.16.0&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">67</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vuedraggable&quot;: &quot;~2.16.0&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">68</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vuejs-datepicker&quot;: &quot;~1.5.3&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">68</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vuejs-datepicker&quot;: &quot;~1.5.3&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">69</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vuetrend&quot;: &quot;~0.3.2&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">69</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;vuetrend&quot;: &quot;~0.3.2&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">70</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;zxcvbn&quot;: &quot;~4.4.2&quot;</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">70</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;zxcvbn&quot;: &quot;~4.4.2&quot;</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">71</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; },</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">71</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; },</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">72</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;resolutions&quot;: {</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">72</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;resolutions&quot;: {</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">73</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;laravel-mix/node-sass&quot;:
+        &quot;~4.7.2&quot;</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">73</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;laravel-mix/node-sass&quot;:
+        &quot;~4.7.2&quot;</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">74</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; },</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">74</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; },</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">75</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;browserslist&quot;: [</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">75</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;browserslist&quot;: [</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">76</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;&gt; 1%&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">76</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;&gt; 1%&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">77</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;last 2 versions&quot;,</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">77</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;last 2 versions&quot;,</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">78</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;not ie &lt;= 9&quot;</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">78</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;not ie &lt;= 9&quot;</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">79</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">79</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">80</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;babel&quot;: {</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">80</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; &quot;babel&quot;: {</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">81</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;presets&quot;: [</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">81</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;presets&quot;: [</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">82</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; [&quot;env&quot;, {</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">82</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; [&quot;env&quot;, {</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">83</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &quot;targets&quot;: {</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">83</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &quot;targets&quot;: {</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">84</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+        &quot;browsers&quot;: [ &quot;&gt; 1%&quot;, &quot;last 2 versions&quot;, &quot;not ie &lt;= 9&quot; ]</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">84</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+        &quot;browsers&quot;: [ &quot;&gt; 1%&quot;, &quot;last 2 versions&quot;, &quot;not ie &lt;= 9&quot; ]</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">85</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">85</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">86</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }]</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">86</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; }]</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">87</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ],</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">87</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ],</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">88</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;plugins&quot;: [
+        &quot;syntax-dynamic-import&quot; ]</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">88</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &quot;plugins&quot;: [
+        &quot;syntax-dynamic-import&quot; ]</td>
+    </tr>
+    <tr class="SectionMiddle">
+      <td class="TextItemNum AlignRight Wrap">89</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; }</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">89</td>
+      <td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; }</td>
+    </tr>
+    <tr class="SectionEnd">
+      <td class="TextItemNum AlignRight Wrap">90</td>
+      <td class="TextItemSame Wrap">}</td>
+      <td class="AlignCenter Wrap">&nbsp;</td>
+      <td class="TextItemNum AlignRight Wrap">90</td>
+      <td class="TextItemSame Wrap">}</td>
+    </tr>
+  </table>
+  <br />
+  <!--EndFragment-->
+</body>
+
+</html>

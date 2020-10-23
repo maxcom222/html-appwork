@@ -1,0 +1,108 @@
+// Utilities
+//
+
+// [NEW CLASS]: .font-weight-lighter
+.font-weight-thin { font-weight: $font-weight-thin !important; }
+
+// [NEW CLASS]: .text-body
+.text-dark {
+  color: $body-color !important;
+
+  &[href] {
+    &:hover {
+      color: $link-hover-color !important;
+    }
+
+    &:focus:not(:hover) {
+      color: $body-color !important;
+    }
+  }
+}
+
+// [NEW CLASS]: .bg-transparent
+.bg-none {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+// [NEW CLASS]: .text-sans-serif
+.font-sans-serif { font-family: $font-family-sans-serif !important; }
+
+// [NEW CLASS]: .text-serif
+.font-serif { font-family: $font-family-serif !important; }
+
+// [NEW CLASS]: .text-monospace
+.font-monospace { font-family: $font-family-monospace !important; }
+
+// [NEW CLASS]: .shadow-none
+.box-shadow-none { box-shadow: none !important; }
+
+// [NEW CLASS]: .container-m-nx
+.container-m--x {
+  margin-right: -$container-padding-x-sm !important;
+  margin-left: -$container-padding-x-sm !important;
+
+  @include media-breakpoint-up(lg) {
+    margin-right: -$container-padding-x !important;
+    margin-left: -$container-padding-x !important;
+  }
+}
+
+// [NEW CLASS]: .container-m-ny
+.container-m--y {
+  &:not([class^="mt-"]):not([class*=" mt-"]) {
+    margin-top: -$container-padding-y !important;
+  }§
+  &:not([class^="mb-"]):not([class*=" mb-"]) {
+    margin-bottom: -$container-padding-y !important;
+  }
+}
+
+// *******************************************************************************
+// * Negative horizontal margins
+// * https://getbootstrap.com/docs/4.2/utilities/spacing/#negative-margin
+//
+// [OLD CLASS]                     [NEW CLASS]
+// m{sides}--{size}                m{sides}-n{size}
+// m{sides}-{breakpoint}--{size}   m{sides}-{breakpoint}-n{size}
+//
+// Examples:
+// ml--3 => ml-n3
+// mr-md--4 => mr-md-n4
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $size, $length in $spacers {
+
+      html:not([dir=rtl]) body:not([dir=rtl]) {
+        .mr#{$infix}--#{$size},
+        .mx#{$infix}--#{$size} {
+          margin-right: -$length !important;
+        }
+
+        .ml#{$infix}--#{$size},
+        .mx#{$infix}--#{$size} {
+          margin-left: -$length !important;
+        }
+      }
+
+      [dir=rtl] {
+        .mr#{$infix}--#{$size},
+        .mx#{$infix}--#{$size} {
+          margin-left: -$length !important;
+        }
+        .ml#{$infix}--#{$size},
+        .mx#{$infix}--#{$size} {
+          margin-right: -$length !important;
+        }
+      }
+
+    }
+  }
+}
+
+// [NEW CLASS]: .rounded-pill
+.btn-round {
+  border-radius: 60rem !important;
+}

@@ -1,0 +1,36 @@
+// Breadcrumbs
+//
+
+.breadcrumb-item,
+.breadcrumb-item a {
+  color: $breadcrumb-color;
+
+  @include hover-focus {
+    color: $breadcrumb-active-color;
+  }
+}
+
+.breadcrumb-item.active a {
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+  }
+}
+
+// *******************************************************************************
+// * RTL
+
+@include rtl-only {
+  .breadcrumb-item +.breadcrumb-item {
+    padding-left: 0;
+    padding-right: $breadcrumb-item-padding;
+
+    &::before {
+      padding-left: $breadcrumb-item-padding;
+      padding-right: 0;
+      content: "#{$breadcrumb-divider-rtl}";
+    }
+  }
+}

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style docs-generator-page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Vue Starter Template Generator - Appwork v1.4.0 Docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/bootstrap.css">
+  <link rel="stylesheet" href="../assets/appwork.css">
+  <link rel="stylesheet" href="../assets/theme-corporate.css">
+
+  <link rel="stylesheet" href="../assets/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+</head>
+<body>
+
+<div id="generator-vue">
+    <div class="docs-generator-wrapper">
+      <div class="docs-generator-settings p-4">
+        <gen-select v-model="options.style" :options="styleOptions" class="mb-2"></gen-select>
+        <gen-checkbox v-model="options.materialRipple" :disabled="options.style !== 'material' && !options.settingsPanel" class="mb-2">Material ripple</gen-checkbox>
+        
+        <gen-checkbox v-model="options.splashScreen" class="mb-2">Splash screen</gen-checkbox>
+        
+        <gen-checkbox v-model="options.rtlSupport" class="mb-2">RTL support</gen-checkbox>
+        <gen-checkbox v-model="options.rtlMode" :disabled="!options.rtlSupport" class="mb-2">RTL mode</gen-checkbox>
+        <gen-checkbox v-model="options.settingsPanel" class="mb-2">Theme settings panel</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">PAGE LAYOUT</div>
+
+        <gen-select v-model="options.pageLayout" :options="pageLayoutOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">LAYOUT OPTIONS</div>
+
+        <gen-select v-model="options.layoutPosition" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in layoutPositionOptions" :value="option[0]" :disabled="layoutPositionOptionDisabled(option[0])">{{option[1]}}</option>
+        </gen-select>
+        <gen-checkbox v-model="options.fixedNavbar" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">Fixed navbar</gen-checkbox>
+        <gen-checkbox v-model="options.fixedFooter" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">Fixed footer</gen-checkbox>
+        <gen-checkbox v-model="options.reversedLayout" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Reversed</gen-checkbox>
+        <gen-checkbox v-model="options.collapsedSidenav" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Collapsed sidenav</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">THEME</div>
+
+        <gen-select v-model="options.theme" :options="themeOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">NAVBAR BG</div>
+
+        <gen-select v-model="options.navbarBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">
+          <option v-for="option in navbarBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">SIDENAV BG</div>
+
+        <gen-select v-model="options.sidenavBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'blank'">
+          <option v-for="option in sidenavBgOptions" :value="option" :disabled="sidenavBgOptionDisabled(option)">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">FOOTER BG</div>
+
+        <gen-select v-model="options.footerBg" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in footerBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+      </div>
+      <div class="docs-generator-content">
+        <gen-tabs v-on:tabchange="tabChange">
+          <gen-tab title="vue.config.js"><pre v-html="tabContent['vue.config.js']"></pre></gen-tab>
+<gen-tab title="public/index.html"><pre v-html="tabContent['public/index.html']"></pre></gen-tab>
+<gen-tab title="src/router/index.js"><pre v-html="tabContent['src/router/index.js']"></pre></gen-tab>
+<gen-tab title="src/App.vue"><pre v-html="tabContent['src/App.vue']"></pre></gen-tab>
+<gen-tab title="src/globals.js"><pre v-html="tabContent['src/globals.js']"></pre></gen-tab>
+        </gen-tabs>
+      </div>
+    </div>
+
+    <gen-copy-btn :file="curTab" :text="originalContent[curTab]"></gen-copy-btn>
+  </div>
+
+
+  <textarea class="d-none" id="template__vue-config-js">
+const path = require('path')
+{%- if settingsPanel %}
+const RenameWebpackPlugin = require('rename-webpack-plugin')
+const SuppressChunksPlugin = require('suppress-chunks-webpack-plugin').default
+const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const STYLES = {
+  'vendor/appwork': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/appwork.scss',
+  'vendor/appwork-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/appwork-material.scss',
+  'vendor/bootstrap': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/bootstrap.scss',
+  'vendor/bootstrap-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/bootstrap-material.scss',
+  'vendor/colors': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/colors.scss',
+  'vendor/colors-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/colors-material.scss',
+  'vendor/uikit': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/uikit.scss',
+  'vendor/theme-air': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-air.scss',
+  'vendor/theme-air-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-air-material.scss',
+  'vendor/theme-corporate': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-corporate.scss',
+  'vendor/theme-corporate-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-corporate-material.scss',
+  'vendor/theme-cotton': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-cotton.scss',
+  'vendor/theme-cotton-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-cotton-material.scss',
+  'vendor/theme-gradient': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-gradient.scss',
+  'vendor/theme-gradient-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-gradient-material.scss',
+  'vendor/theme-paper': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-paper.scss',
+  'vendor/theme-paper-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-paper-material.scss',
+  'vendor/theme-shadow': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-shadow.scss',
+  'vendor/theme-shadow-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-shadow-material.scss',
+  'vendor/theme-soft': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-soft.scss',
+  'vendor/theme-soft-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-soft-material.scss',
+  'vendor/theme-sunrise': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-sunrise.scss',
+  'vendor/theme-sunrise-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-sunrise-material.scss',
+  'vendor/theme-twitlight': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-twitlight.scss',
+  'vendor/theme-twitlight-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-twitlight-material.scss',
+  'vendor/theme-vibrant': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-vibrant.scss',
+  'vendor/theme-vibrant-material': './src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-vibrant-material.scss'
+}
+{% endif %}
+
+module.exports = {
+  transpileDependencies: [
+    /\bbootstrap-vue\b/,
+    /\bvuejs-datepicker\b/,
+    /\bvue-echarts\b/,
+    /\bresize-detector\b/,
+    /\bvue-c3\b/,
+    /\bvue-masonry\b/,
+    /\bvue-cropper\b/,
+    /\bvuedraggable\b/
+  ],
+  chainWebpack: config => {
+    // Add "node_modules" alias
+    config.resolve.alias
+      .set('node_modules', path.join(__dirname, './node_modules'))
+
+    {% if settingsPanel -%}
+    // Add styles to entry points
+    Object.keys(STYLES).forEach(k => {
+      config.entry(k)
+        .add(STYLES[k])
+    })
+    {%- endif %}
+
+    // Disable "prefetch" plugin since it's not properly working in some browsers
+    config.plugins
+      .delete('prefetch')
+
+    {% if settingsPanel -%}
+    // Do not inject "vendor" assets
+    config.plugin('html')
+      .tap(args => {
+        args[0].excludeAssets = [/[/\\]vendor[/\\]/]
+        return args
+      })
+    {%- endif %}
+
+    // Do not remove whitespaces
+    config.module.rule('vue')
+      .use('vue-loader')
+      .loader('vue-loader')
+      .tap(options => {
+        options.compilerOptions.whitespace = 'preserve'
+        return options
+      })
+
+    {%- if settingsPanel %}
+
+    // Add exclude assets plugin
+    config.plugin('html-exclude-assets')
+      .use(HtmlWebpackExcludeAssetsPlugin)
+
+    // Non-production config
+    if (process.env.NODE_ENV !== 'production') {
+      // Exclude vendor styles (except page styles) from the default SCSS rule
+      config.module.rule('scss')
+        .test(/^(?!.*?vendor[/\\]styles[/\\]).*?\.scss$|vendor[/\\]styles[/\\]pages[/\\].*?\.scss$/)
+
+      // Create a rule for handling vendor styles. Do not include page styles
+      config.module.rule('vendor-css')
+        .test(/^.*?vendor[/\\]styles[/\\](?!.*?pages[/\\]).*?\.scss$/)
+        .use('extract-css-loader').loader(MiniCssExtractPlugin.loader).options({
+          publicPath: '../'
+        }).end()
+        .use('css-loader').loader('css-loader').options({
+          sourceMap: false,
+          importLoaders: 2
+        }).end()
+        .use('postcss-loader').loader('postcss-loader').options({
+          sourceMap: false
+        }).end()
+        .use('sass-loader').loader('sass-loader').options({
+          sourceMap: false
+        })
+
+      // Add extract-vendor-css plugin
+      config.plugin('extract-vendor-css')
+        .use(MiniCssExtractPlugin, [{
+          filename: 'css/[name].css',
+          chunkFilename: 'css/[name].css'
+        }])
+
+    // Production config
+    } else {
+      // Do not generate .js files for stylesheets
+      config.plugin('suppress-chunks')
+        .use(SuppressChunksPlugin, [
+          Object.keys(STYLES),
+          { filter: /\.js(?:\.map)?$/ }
+        ])
+
+      // Rename vendor styles to remove hashes from their names
+      config.plugin('rename-chunks')
+        .use(RenameWebpackPlugin, [{
+          originNameReg: /(appwork(?:-material)?|bootstrap(?:-material)?|colors(?:-material)?|uikit|theme-[^.]+)\..*?\.css$/,
+          targetName: '$1.css'
+        }])
+    }{%- endif %}
+  }
+}
+
+</textarea>
+  <textarea class="d-none" id="template__index-html">
+
+<!DOCTYPE html>
+
+<html lang="en"{% if rtlMode %} dir="rtl"{% endif %} class="{{style}}-style{% if pageLayout != 'blank' and layoutPosition %} layout-{{layoutPosition}}{% endif %}{% if reversedLayout %} layout-reversed{% endif %}{% if collapsedSidenav %} layout-collapsed{% endif %}{% if fixedNavbar %} layout-navbar-fixed{% endif %}{% if fixedFooter %} layout-footer-fixed{% endif %}">
+  <head>
+    <title>Vue Starter</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Main font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <!-- <link rel="stylesheet" href="<%= BASE_URL %>vendor/fonts/fontawesome.css"> -->
+    <link rel="stylesheet" href="<%= BASE_URL %>vendor/fonts/ionicons.css">
+    <!-- <link rel="stylesheet" href="<%= BASE_URL %>vendor/fonts/linearicons.css"> -->
+    <!-- <link rel="stylesheet" href="<%= BASE_URL %>vendor/fonts/open-iconic.css"> -->
+    <!-- <link rel="stylesheet" href="<%= BASE_URL %>vendor/fonts/pe-icon-7-stroke.css"> -->
+
+    {% if settingsPanel -%}
+    <!-- Core stylesheets -->
+    <link rel="stylesheet" href="<%= BASE_URL %>css/vendor/bootstrap{% if style == 'material' %}-material{% endif %}.css" class="theme-settings-bootstrap-css">
+    <link rel="stylesheet" href="<%= BASE_URL %>css/vendor/appwork{% if style == 'material' %}-material{% endif %}.css" class="theme-settings-appwork-css">
+    <link rel="stylesheet" href="<%= BASE_URL %>css/vendor/theme-{{theme}}{% if style == 'material' %}-material{% endif %}.css" class="theme-settings-theme-css">
+    <link rel="stylesheet" href="<%= BASE_URL %>css/vendor/colors{% if style == 'material' %}-material{% endif %}.css" class="theme-settings-colors-css">
+    <link rel="stylesheet" href="<%= BASE_URL %>css/vendor/uikit.css">
+    {% endif %}
+
+    {% if materialRipple %}
+    <!-- Material ripple -->
+    <script src="<%= BASE_URL %>vendor/js/material-ripple.js"></script>
+    {% endif %}
+    {%- if materialRipple and not settingsPanel -%}
+    <script>window.attachMaterialRippleOnLoad();</script>
+    {% endif %}
+
+    <!-- Layout helpers -->
+    <script src="<%= BASE_URL %>vendor/js/layout-helpers.js"></script>
+
+    {% if settingsPanel %}
+    <!-- Theme settings -->
+    <script src="<%= BASE_URL %>vendor/js/theme-settings.js"></script>
+    <script>
+      // Use settings panel generator to configure the plugin
+      window.themeSettings = new ThemeSettings({
+        cssPath: '<%= BASE_URL %>css/vendor/',
+        themesPath: '<%= BASE_URL %>css/vendor/'
+      });
+    </script>
+    {% endif %}
+  </head>
+  <body>
+
+    {% if splashScreen %}
+    <!-- Splash screen -->
+    <div class="app-splash-screen" style="background: #fff; position: fixed; z-index: 99999999; top: 0; right: 0; bottom: 0; left: 0; opacity: 1; -webkit-transition: opacity .3s; transition: opacity .3s;">
+      <div class="app-splash-screen-content" style="position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+        <span class="text-large font-weight-bolder">CompanyName</span>
+      </div>
+    </div>
+    <!-- / Splash screen -->
+    {% endif %}
+
+    <div id="app"></div>
+
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+
+</textarea>
+  <textarea class="d-none" id="template__globals-js">
+
+import layoutHelpers from '@/layout/helpers.js'
+{% if settingsPanel -%}
+import themeSettings from '@/vendor/libs/theme-settings/theme-settings.js'
+{%- endif %}
+
+export default function () {
+  return {
+    // Public url
+    publicUrl: process.env.BASE_URL,
+
+    // Layout helpers
+    layoutHelpers,
+
+    {% if settingsPanel -%}
+    // Theme settings
+    themeSettings,
+    {%- endif %}
+
+    // Check for RTL layout
+    get isRTL () {
+      return document.documentElement.getAttribute('dir') === 'rtl' ||
+             document.body.getAttribute('dir') === 'rtl'
+    },
+
+    // Check if IE
+    get isIEMode () {
+      return typeof document['documentMode'] === 'number'
+    },
+
+    // Check if IE10
+    get isIE10Mode () {
+      return this.isIEMode && document['documentMode'] === 10
+    },
+
+    // Layout navbar color
+    get layoutNavbarBg () {
+      {% if settingsPanel -%}
+      return this.themeSettings.getOption('navbarBg') || '{{navbarBg}}'
+      {%- else -%}
+      return '{{navbarBg}}'
+      {%- endif %}
+    },
+
+    // Layout sidenav color
+    get layoutSidenavBg () {
+      {% if settingsPanel -%}
+      return this.themeSettings.getOption('sidenavBg') || '{{sidenavBg}}'
+      {%- else -%}
+      return '{{sidenavBg}}'
+      {%- endif %}
+    },
+
+    // Layout footer color
+    get layoutFooterBg () {
+      {% if settingsPanel -%}
+      return this.themeSettings.getOption('footerBg') || '{{footerBg}}'
+      {%- else -%}
+      return '{{footerBg}}'
+      {%- endif %}
+    },
+
+    // Animate scrollTop
+    scrollTop (to, duration, element = document.scrollingElement || document.documentElement) {
+      if (element.scrollTop === to) return
+      const start = element.scrollTop
+      const change = to - start
+      const startDate = +new Date()
+
+      // t = current time; b = start value; c = change in value; d = duration
+      const easeInOutQuad = (t, b, c, d) => {
+        t /= d / 2
+        if (t < 1) return c / 2 * t * t + b
+        t--
+        return -c / 2 * (t * (t - 2) - 1) + b
+      }
+
+      const animateScroll = () => {
+        const currentDate = +new Date()
+        const currentTime = currentDate - startDate
+        element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration))
+        if (currentTime < duration) {
+          requestAnimationFrame(animateScroll)
+        } else {
+          element.scrollTop = to
+        }
+      }
+
+      animateScroll()
+    }
+  }
+}
+
+</textarea>
+  <textarea class="d-none" id="template__router">
+
+import Vue from 'vue'
+import Router from 'vue-router'
+import Meta from 'vue-meta'
+import NotFound from '@/components/NotFound'
+
+import globals from '@/globals'
+
+// Layouts
+import {{layoutClass(pageLayout)}} from '@/layout/{{layoutClass(pageLayout)}}'
+
+Vue.use(Router)
+Vue.use(Meta)
+
+const router = new Router({
+  base: '/',
+  mode: 'history',
+  routes: [{
+    path: '/',
+    component: {{layoutClass(pageLayout)}},
+    children: [{
+      path: '',
+      component: () => import('@/components/Home')
+    }, {
+      path: 'page-2',
+      component: () => import('@/components/Page2')
+    }]
+  }, {
+    // 404 Not Found page
+    path: '*',
+    component: NotFound
+  }]
+})
+
+router.afterEach(() => {
+  {% if splashScreen -%}
+  // Remove initial splash screen
+  const splashScreen = document.querySelector('.app-splash-screen')
+  if (splashScreen) {
+    splashScreen.style.opacity = 0
+    setTimeout(() => splashScreen && splashScreen.parentNode.removeChild(splashScreen), 300)
+  }
+
+  {% endif -%}
+
+  // On small screens collapse sidenav
+  if (window.layoutHelpers && window.layoutHelpers.isSmallScreen() && !window.layoutHelpers.isCollapsed()) {
+    setTimeout(() => window.layoutHelpers.setCollapsed(true, true), 10)
+  }
+
+  // Scroll to top of the page
+  globals().scrollTop(0, 0)
+})
+
+router.beforeEach((to, from, next) => {
+  // Set loading state
+  document.body.classList.add('app-loading')
+
+  // Add tiny timeout to finish page transition
+  setTimeout(() => next(), 10)
+})
+
+export default router
+
+</textarea>
+  <textarea class="d-none" id="template__app-vue">
+
+<template>
+  <div id="app">
+    <router-view/>
+  </div>
+</template>
+
+{% if not settingsPanel -%}
+<style src="@/vendor/styles{% if rtlSupport %}/rtl{% endif %}/bootstrap{% if style == 'material' %}-material{% endif %}.scss" lang="scss"></style>
+<style src="@/vendor/styles{% if rtlSupport %}/rtl{% endif %}/appwork{% if style == 'material' %}-material{% endif %}.scss" lang="scss"></style>
+<style src="@/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-{{theme}}{% if style == 'material' %}-material{% endif %}.scss" lang="scss"></style>
+<style src="@/vendor/styles{% if rtlSupport %}/rtl{% endif %}/colors{% if style == 'material' %}-material{% endif %}.scss" lang="scss"></style>
+<style src="@/vendor/styles{% if rtlSupport %}/rtl{% endif %}/uikit.scss" lang="scss"></style>
+{%- endif %}
+<style src="./style.scss" lang="scss"></style>
+
+<script>
+export default {
+  name: 'app',
+  metaInfo: {
+    title: 'Index',
+    titleTemplate: '%s - Vue Starter'
+  },
+  updated () {
+    // Remove loading state
+    setTimeout(() => document.body.classList.remove('app-loading'), 1)
+  }
+}
+</script>
+
+</textarea>
+
+
+  <!-- Scripts -->
+
+  <script src="../assets/generator.js"></script>
+  <script src="../assets/generator-vue-starter.js"></script>
+
+</body>
+</html>

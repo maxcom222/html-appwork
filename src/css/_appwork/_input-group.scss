@@ -1,0 +1,230 @@
+// Input groups
+//
+
+.input-group .custom-select {
+  flex: 0 1 auto;
+  width: auto;
+}
+
+.input-group-text {
+  background-clip: padding-box;
+}
+
+// *******************************************************************************
+// * Button groups within input group addon
+
+.input-group>.input-group-append>.btn-group>.btn,
+.input-group>.input-group-prepend:first-child>.btn-group:not(:first-child)>.btn,
+.input-group>.input-group-prepend:not(:first-child)>.btn-group>.btn {
+  @include border-left-radius(0);
+}
+
+.input-group>.input-group-prepend>.btn-group>.btn,
+.input-group>.input-group-append:last-child>.btn-group:not(:last-child)>.btn,
+.input-group>.input-group-append:not(:last-child)>.btn-group>.btn {
+  @include border-right-radius(0);
+}
+
+.input-group-append,
+.input-group-prepend {
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group+.btn-group,
+  .btn-group+.input-group-text,
+  .input-group-text+.btn-group {
+    margin-left: -1 * $input-border-width;
+  }
+}
+
+// *******************************************************************************
+// * Material
+
+@if $material-style {
+  .input-group-text {
+    border-bottom-width: 1px;
+  }
+
+  .input-group-text+.input-group-text,
+  .input-group-prepend .input-group-text:first-child,
+  .input-group-append .input-group-text:first-child,
+  .input-group>.form-control:first-child,
+  .input-group>.custom-select:first-child,
+  .input-group>.form-control+.form-control,
+  .input-group>.form-control+.custom-select,
+  .input-group>.custom-select+.form-control,
+  .input-group>.custom-select+.custom-select {
+    @include ltr-style {
+      padding-left: 0;
+    }
+
+    @include rtl-style {
+      padding-right: 0;
+    }
+  }
+
+  .input-group-prepend .input-group-text:last-child,
+  .input-group-append .input-group-text:last-child,
+  .input-group>.form-control:last-child {
+    @include ltr-style {
+      padding-right: 0;
+    }
+
+    @include rtl-style {
+      padding-left: 0;
+    }
+  }
+
+  .input-group>.custom-select:last-child {
+    @include ltr-style {
+      padding-right: $custom-select-padding-x;
+      background-position: right center;
+    }
+
+    @include rtl-style {
+      padding-left: $custom-select-padding-x;
+      background-position: left center;
+    }
+  }
+}
+
+// *******************************************************************************
+// * RTL
+
+@include rtl-only {
+  // Reset border radius
+
+  .input-group>.form-control,
+  .input-group>.custom-select,
+  .input-group>.input-group-prepend>.input-group-text,
+  .input-group>.input-group-append>.input-group-text,
+  .input-group>.custom-file .custom-file-label,
+  .input-group>.custom-file .custom-file-label::before {
+    @include border-radius($input-border-radius);
+  }
+  .input-group>.input-group-prepend>.btn,
+  .input-group>.input-group-append>.btn,
+  .input-group>.input-group-prepend>.btn-group>.btn,
+  .input-group>.input-group-append>.btn-group>.btn {
+    @include border-radius($btn-border-radius);
+  }
+
+  .input-group-lg>.form-control,
+  .input-group-lg>.custom-select,
+  .input-group-lg>.input-group-prepend>.input-group-text,
+  .input-group-lg>.input-group-append>.input-group-text,
+  .input-group-lg>.custom-file .custom-file-label,
+  .input-group-lg>.custom-file .custom-file-label::before {
+    @include border-radius($input-border-radius-lg);
+  }
+  .input-group-lg>.input-group-prepend>.btn,
+  .input-group-lg>.input-group-append>.btn,
+  .input-group-lg>.input-group-prepend>.btn-group>.btn,
+  .input-group-lg>.input-group-append>.btn-group>.btn {
+    @include border-radius($btn-border-radius-lg);
+  }
+
+  .input-group-sm>.form-control,
+  .input-group-sm>.custom-select,
+  .input-group-sm>.input-group-prepend>.input-group-text,
+  .input-group-sm>.input-group-append>.input-group-text,
+  .input-group-sm>.custom-file .custom-file-label,
+  .input-group-sm>.custom-file .custom-file-label::before {
+    @include border-radius($input-border-radius-sm);
+  }
+  .input-group-sm>.input-group-prepend>.btn,
+  .input-group-sm>.input-group-append>.btn-group>.btn,
+  .input-group-sm>.input-group-prepend>.btn-group>.btn,
+  .input-group-sm>.input-group-append>.btn {
+    @include border-radius($btn-border-radius-sm);
+  }
+
+  // Remove border radius
+
+  .input-group>.form-control,
+  .input-group>.custom-select {
+    &:not(:last-child) {
+      @include border-left-radius(0);
+    }
+
+    &:not(:first-child) {
+      @include border-right-radius(0);
+    }
+  }
+
+  .input-group>.custom-file {
+
+    &:not(:last-child) .custom-file-label,
+    &:not(:last-child) .custom-file-label::after {
+      @include border-left-radius(0);
+    }
+
+    &:not(:first-child) .custom-file-label {
+      @include border-right-radius(0);
+    }
+  }
+
+  .input-group>.input-group-prepend>.btn,
+  .input-group>.input-group-prepend>.input-group-text,
+  .input-group>.input-group-append:not(:last-child)>.btn,
+  .input-group>.input-group-append:not(:last-child)>.input-group-text,
+  .input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
+  .input-group>.input-group-append:last-child>.input-group-text:not(:last-child),
+  .input-group>.input-group-prepend>.btn-group>.btn,
+  .input-group>.input-group-append>.btn-group>.btn:not(:last-of-type),
+  .input-group>.input-group-append:last-child>.btn-group:not(:last-child)>.btn {
+    @include border-left-radius(0);
+  }
+
+  .input-group>.input-group-append>.btn,
+  .input-group>.input-group-append>.input-group-text,
+  .input-group>.input-group-prepend:not(:first-child)>.btn,
+  .input-group>.input-group-prepend:not(:first-child)>.input-group-text,
+  .input-group>.input-group-prepend:first-child>.btn:not(:first-child),
+  .input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child),
+  .input-group>.input-group-append>.btn-group>.btn,
+  .input-group>.input-group-prepend>.btn-group>.btn:not(:first-of-type),
+  .input-group>.input-group-prepend:first-child>.btn-group:not(:first-child)>.btn {
+    @include border-right-radius(0);
+  }
+
+  // Margins
+
+  .input-group>.form-control,
+  .input-group>.form-control-plaintext,
+  .input-group>.custom-select,
+  .input-group>.custom-file {
+
+    +.form-control,
+    +.custom-select,
+    +.custom-file {
+      margin-right: -$input-border-width;
+      margin-left: 0;
+    }
+  }
+
+  .input-group-prepend,
+  .input-group-append {
+    .btn+.btn,
+    .btn+.input-group-text,
+    .input-group-text+.input-group-text,
+    .input-group-text+.btn,
+    .btn+.btn-group,
+    .btn-group+.btn,
+    .btn-group+.btn-group,
+    .btn-group+.input-group-text,
+    .input-group-text+.btn-group {
+      margin-right: -$input-border-width;
+      margin-left: 0;
+    }
+  }
+
+  .input-group-prepend {
+    margin-right: 0;
+    margin-left: -$input-border-width;
+  }
+
+  .input-group-append {
+    margin-right: -$input-border-width;
+    margin-left: 0;
+  }
+}

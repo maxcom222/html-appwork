@@ -1,0 +1,380 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/aspnet-mvc-starter/AspnetMvcStarter/Views/Shared/Layouts/_Application.cshtml &nbsp;
+<br/>
+Right file: appwork-v1_4_0/aspnet-mvc-starter/AspnetMvcStarter/Views/Shared/Layouts/_Application.cshtml &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame">&lt;!DOCTYPE html&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&lt;!DOCTYPE html&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&lt;html lang=&quot;en&quot; class=&quot;default-style&quot;&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;html lang=&quot;en&quot; class=&quot;default-style&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&lt;head&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;head&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;meta charset=&quot;utf-8&quot; /&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;meta charset=&quot;utf-8&quot; /&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;meta name=&quot;description&quot; content=&quot;&quot; /&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;meta name=&quot;description&quot; content=&quot;&quot; /&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0&quot; /&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0&quot; /&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;title&gt;@ViewBag.Title - Asp.Net MVC Starter&lt;/title&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;title&gt;@ViewBag.Title - Asp.Net MVC Starter&lt;/title&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Main font --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Main font --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;link href=&quot;https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&quot; rel=&quot;stylesheet&quot; crossorigin=&quot;anonymous&quot; /&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;link href=&quot;https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&quot; rel=&quot;stylesheet&quot; crossorigin=&quot;anonymous&quot; /&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Icons. Uncomment required icon fonts --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Icons. Uncomment required icon fonts --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- @Styles.Render(&quot;~/bundle/vendor/fonts/fontawesome&quot;) --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- @Styles.Render(&quot;~/bundle/vendor/fonts/fontawesome&quot;) --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/fonts/ionicons&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/fonts/ionicons&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- @Styles.Render(&quot;~/bundle/vendor/fonts/linearicons&quot;) --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- @Styles.Render(&quot;~/bundle/vendor/fonts/linearicons&quot;) --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- @Styles.Render(&quot;~/bundle/vendor/fonts/open-iconic&quot;) --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- @Styles.Render(&quot;~/bundle/vendor/fonts/open-iconic&quot;) --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- @Styles.Render(&quot;~/bundle/vendor/fonts/pe-icon-7-stroke&quot;) --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- @Styles.Render(&quot;~/bundle/vendor/fonts/pe-icon-7-stroke&quot;) --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Core stylesheets --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Core stylesheets --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/bootstrap&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/bootstrap&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/appwork&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/appwork&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/theme-corporate&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/theme-corporate&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/colors&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/colors&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/uikit&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/uikit&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Load polyfills --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Load polyfills --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/polyfills&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/polyfills&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;script&gt;document['documentMode']===10&amp;&amp;document.write('&lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en&quot;&gt;&lt;\/script&gt;')&lt;/script&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;script&gt;document['documentMode']===10&amp;&amp;document.write('&lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en&quot;&gt;&lt;\/script&gt;')&lt;/script&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Layout helpers --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Layout helpers --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/layout-helpers&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/layout-helpers&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Libs --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Libs --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- `perfect-scrollbar` library required by SideNav plugin --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- `perfect-scrollbar` library required by SideNav plugin --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/perfect-scrollbar/perfect-scrollbar&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/vendor/css/perfect-scrollbar/perfect-scrollbar&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Application stylesheets --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Application stylesheets --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/css/main&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Styles.Render(&quot;~/bundle/css/main&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @RenderSection(&quot;styles&quot;, required: false)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @RenderSection(&quot;styles&quot;, required: false)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&lt;/head&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;/head&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&lt;body&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;body&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @RenderBody()</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @RenderBody()</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Core scripts --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Core scripts --&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;!--</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Uncomment</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">following</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">line</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">enable</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">unobtrusive</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">validation</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">--&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;!--</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">@Html.Partial(&quot;_ValidationScriptsPartial&quot;)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">--&gt;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/popper/popper&quot;)</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/popper/popper&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/bootstrap&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/bootstrap&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/sidenav&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/sidenav&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Libs --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Libs --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- `perfect-scrollbar` library required by SideNav plugin --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- `perfect-scrollbar` library required by SideNav plugin --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/perfect-scrollbar/perfect-scrollbar&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/vendor/js/perfect-scrollbar/perfect-scrollbar&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Application javascripts --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &lt;!-- Application javascripts --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/js/main&quot;)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @Scripts.Render(&quot;~/bundle/js/main&quot;)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @RenderSection(&quot;scripts&quot;, required: false)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; @RenderSection(&quot;scripts&quot;, required: false)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&lt;/body&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;/body&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&lt;/html&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;/html&gt;</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

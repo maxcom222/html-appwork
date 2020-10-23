@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style docs-generator-page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>ASP.NET Core MVC Starter Template Generator - Appwork v1.4.0 Docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/bootstrap.css">
+  <link rel="stylesheet" href="../assets/appwork.css">
+  <link rel="stylesheet" href="../assets/theme-corporate.css">
+
+  <link rel="stylesheet" href="../assets/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+</head>
+<body>
+
+<div id="generator-aspnet-core-mvc">
+    <div class="docs-generator-wrapper">
+      <div class="docs-generator-settings p-4">
+        <gen-select v-model="options.style" :options="styleOptions" class="mb-2"></gen-select>
+        <gen-checkbox v-model="options.materialRipple" :disabled="options.style !== 'material' && !options.settingsPanel" class="mb-2">Material ripple</gen-checkbox>
+        
+        <gen-checkbox v-model="options.paceLoader" class="mb-2">PACE.js loader</gen-checkbox>
+        
+        <gen-checkbox v-model="options.rtlSupport" class="mb-2">RTL support</gen-checkbox>
+        <gen-checkbox v-model="options.rtlMode" :disabled="!options.rtlSupport" class="mb-2">RTL mode</gen-checkbox>
+        <gen-checkbox v-model="options.settingsPanel" class="mb-2">Theme settings panel</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">PAGE LAYOUT</div>
+
+        <gen-select v-model="options.pageLayout" :options="pageLayoutOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">LAYOUT OPTIONS</div>
+
+        <gen-select v-model="options.layoutPosition" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in layoutPositionOptions" :value="option[0]" :disabled="layoutPositionOptionDisabled(option[0])">{{option[1]}}</option>
+        </gen-select>
+        <gen-checkbox v-model="options.fixedNavbar" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">Fixed navbar</gen-checkbox>
+        <gen-checkbox v-model="options.fixedFooter" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">Fixed footer</gen-checkbox>
+        <gen-checkbox v-model="options.reversedLayout" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Reversed</gen-checkbox>
+        <gen-checkbox v-model="options.collapsedSidenav" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Collapsed sidenav</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">THEME</div>
+
+        <gen-select v-model="options.theme" :options="themeOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">NAVBAR BG</div>
+
+        <gen-select v-model="options.navbarBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">
+          <option v-for="option in navbarBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">SIDENAV BG</div>
+
+        <gen-select v-model="options.sidenavBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'blank'">
+          <option v-for="option in sidenavBgOptions" :value="option" :disabled="sidenavBgOptionDisabled(option)">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">FOOTER BG</div>
+
+        <gen-select v-model="options.footerBg" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in footerBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+      </div>
+      <div class="docs-generator-content">
+        <gen-tabs v-on:tabchange="tabChange">
+          <gen-tab title="AspnetCoreMvcStarter/Views/Shared/Layouts/_Application.cshtml"><pre v-html="tabContent['AspnetCoreMvcStarter/Views/Shared/Layouts/_Application.cshtml']"></pre></gen-tab>
+<gen-tab title="AspnetCoreMvcStarter/Views/_ViewStart.cshtml"><pre v-html="tabContent['AspnetCoreMvcStarter/Views/_ViewStart.cshtml']"></pre></gen-tab>
+<gen-tab title="AspnetCoreMvcStarter/Views/Shared/Layouts/Partials/_LayoutNavbar.cshtml"><pre v-html="tabContent['AspnetCoreMvcStarter/Views/Shared/Layouts/Partials/_LayoutNavbar.cshtml']"></pre></gen-tab>
+<gen-tab title="AspnetCoreMvcStarter/Views/Shared/Layouts/Partials/_LayoutSidenav.cshtml"><pre v-html="tabContent['AspnetCoreMvcStarter/Views/Shared/Layouts/Partials/_LayoutSidenav.cshtml']"></pre></gen-tab>
+<gen-tab title="AspnetCoreMvcStarter/Views/Shared/Layouts/Partials/_LayoutFooter.cshtml"><pre v-html="tabContent['AspnetCoreMvcStarter/Views/Shared/Layouts/Partials/_LayoutFooter.cshtml']"></pre></gen-tab>
+        </gen-tabs>
+      </div>
+    </div>
+
+    <gen-copy-btn :file="curTab" :text="originalContent[curTab]"></gen-copy-btn>
+  </div>
+
+
+  <textarea class="d-none" id="template__application-cshtml">
+
+<!DOCTYPE html>
+<html lang="en"{% if rtlMode %} dir="rtl"{% endif %} class="{{style}}-style{% if pageLayout != 'blank' and layoutPosition %} layout-{{layoutPosition}}{% endif %}{% if reversedLayout %} layout-reversed{% endif %}{% if collapsedSidenav %} layout-collapsed{% endif %}{% if fixedNavbar %} layout-navbar-fixed{% endif %}{% if fixedFooter %} layout-footer-fixed{% endif %}">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>@ViewData["Title"] - Asp.Net Core MVC Starter</title>
+
+    <!-- Main font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet" crossorigin="anonymous" />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <environment include="Development">
+        <!-- <link rel="stylesheet" href="~/vendor/fonts/fontawesome.dist.css" /> -->
+        <link rel="stylesheet" href="~/vendor/fonts/ionicons.dist.css" />
+        <!-- <link rel="stylesheet" href="~/vendor/fonts/linearicons.dist.css" /> -->
+        <!-- <link rel="stylesheet" href="~/vendor/fonts/open-iconic.dist.css" /> -->
+        <!-- <link rel="stylesheet" href="~/vendor/fonts/pe-icon-7-stroke.dist.css" /> -->
+    </environment>
+    <environment exclude="Development">
+        <!-- <link rel="stylesheet" href="~/vendor/fonts/fontawesome.dist.css" asp-append-version="true" /> -->
+        <link rel="stylesheet" href="~/vendor/fonts/ionicons.dist.css" asp-append-version="true" />
+        <!-- <link rel="stylesheet" href="~/vendor/fonts/linearicons.dist.css" asp-append-version="true" /> -->
+        <!-- <link rel="stylesheet" href="~/vendor/fonts/open-iconic.dist.css" asp-append-version="true" /> -->
+        <!-- <link rel="stylesheet" href="~/vendor/fonts/pe-icon-7-stroke.dist.css" asp-append-version="true" /> -->
+    </environment>
+
+    <!-- Core stylesheets -->
+    <environment include="Development">
+        <link rel="stylesheet" href="~/vendor/css/{% if rtlSupport %}rtl/{% endif %}bootstrap{% if style == 'material' %}-material{% endif %}.dist.css"{% if settingsPanel %} class="theme-settings-bootstrap-css"{% endif %} />
+        <link rel="stylesheet" href="~/vendor/css/{% if rtlSupport %}rtl/{% endif %}appwork{% if style == 'material' %}-material{% endif %}.dist.css"{% if settingsPanel %} class="theme-settings-appwork-css"{% endif %} />
+        <link rel="stylesheet" href="~/vendor/css/{% if rtlSupport %}rtl/{% endif %}theme-{{theme}}{% if style == 'material' %}-material{% endif %}.dist.css"{% if settingsPanel %} class="theme-settings-theme-css"{% endif %} />
+        <link rel="stylesheet" href="~/vendor/css/{% if rtlSupport %}rtl/{% endif %}colors{% if style == 'material' %}-material{% endif %}.dist.css"{% if settingsPanel %} class="theme-settings-colors-css"{% endif %} />
+        <link rel="stylesheet" href="~/vendor/css/{% if rtlSupport %}rtl/{% endif %}uikit.dist.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/vendor/css/{% if rtlSupport %}rtl/{% endif %}bootstrap{% if style == 'material' %}-material{% endif %}.dist.css"{% if settingsPanel %} class="theme-settings-bootstrap-css"{% else %} asp-append-version="true"{% endif %} />
+        <link rel="stylesheet" href="~/vendor/css/{% if rtlSupport %}rtl/{% endif %}appwork{% if style == 'material' %}-material{% endif %}.dist.css"{% if settingsPanel %} class="theme-settings-appwork-css"{% else %} asp-append-version="true"{% endif %} />
+        <link rel="stylesheet" href="~/vendor/css/{% if rtlSupport %}rtl/{% endif %}theme-{{theme}}{% if style == 'material' %}-material{% endif %}.dist.css"{% if settingsPanel %} class="theme-settings-theme-css"{% else %} asp-append-version="true"{% endif %} />
+        <link rel="stylesheet" href="~/vendor/css/{% if rtlSupport %}rtl/{% endif %}colors{% if style == 'material' %}-material{% endif %}.dist.css"{% if settingsPanel %} class="theme-settings-colors-css"{% else %} asp-append-version="true"{% endif %} />
+        <link rel="stylesheet" href="~/vendor/css/{% if rtlSupport %}rtl/{% endif %}uikit.dist.css" asp-append-version="true" />
+    </environment>
+
+    <!-- Load polyfills -->
+    <environment include="Development"><script src="~/vendor/js/polyfills.dist.js"></script></environment>
+    <environment exclude="Development"><script src="~/vendor/js/polyfills.dist.js" asp-append-version="true"></script></environment>
+    <script>document['documentMode']===10&&document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
+
+    {% if materialRipple %}
+    <!-- Material ripple -->
+    <environment include="Development"><script src="~/vendor/js/material-ripple.dist.js"></script></environment>
+    <environment exclude="Development"><script src="~/vendor/js/material-ripple.dist.js" asp-append-version="true"></script></environment>
+    {%- endif %}
+    {% if materialRipple and not settingsPanel -%}
+    <script>window.attachMaterialRippleOnLoad();</script>
+    {% endif %}
+
+    {% if pageLayout != 'blank' or settingsPanel %}
+    <!-- Layout helpers -->
+    <environment include="Development"><script src="~/vendor/js/layout-helpers.dist.js"></script></environment>
+    <environment exclude="Development"><script src="~/vendor/js/layout-helpers.dist.js" asp-append-version="true"></script></environment>
+    {%- endif %}
+
+    {% if settingsPanel %}
+    <!-- Theme settings -->
+    <environment include="Development"><script src="~/vendor/js/theme-settings.dist.js"></script></environment>
+    <environment exclude="Development"><script src="~/vendor/js/theme-settings.dist.js" asp-append-version="true"></script></environment>
+    <script>
+        // Use settings panel generator to configure the plugin
+        window.themeSettings = new ThemeSettings({
+            cssPath: '',
+            themesPath: '',
+            pathResolver: function (path) {
+                var resolvedPaths = {
+                    @foreach (string name in new string[] { "bootstrap", "appwork", "colors" })
+                    {
+                        <text>
+                            '@(name).css': '@Url.Content("~/vendor/css/{% if rtlSupport %}rtl/{% endif %}" + name + ".dist.css")',
+                            '@(name)-material.css': '@Url.Content("~/vendor/css/{% if rtlSupport %}rtl/{% endif %}" + name + "-material.dist.css")',
+                        </text>
+                    }
+
+                    // UI Kit
+                    'uikit.css': '@Url.Content("~/vendor/css/{% if rtlSupport %}rtl/{% endif %}uikit.dist.css"))',
+
+                    @foreach (string name in new string[] { "air", "corporate", "cotton", "gradient", "paper", "shadow", "soft", "sunrise", "twitlight", "vibrant" })
+                    {
+                        <text>
+                            'theme-@(name).css': '@Url.Content("~/vendor/css/{% if rtlSupport %}rtl/{% endif %}theme-" + name + ".dist.css")',
+                            'theme-@(name)-material.css': '@Url.Content("~/vendor/css/{% if rtlSupport %}rtl/{% endif %}theme-" + name + "-material.dist.css")',
+                        </text>
+                    }
+                };
+
+                return resolvedPaths[path] || path;
+            }
+        });
+    </script>
+    {% endif %}
+
+    {% if paceLoader %}
+    <!-- PACE.js loader -->
+    <environment include="Development"><script src="~/vendor/js/pace.dist.js"></script></environment>
+    <environment exclude="Development"><script src="~/vendor/js/pace.dist.js" asp-append-version="true"></script></environment>
+    {% endif %}
+
+    {% if pageLayout != 'blank' and pageLayout != 'without-sidenav' %}
+    <!-- Libs -->
+    <!-- `perfect-scrollbar` library required by SideNav plugin -->
+    <environment include="Development"><link rel="stylesheet" href="~/vendor/libs/perfect-scrollbar/perfect-scrollbar.dist.css" /></environment>
+    <environment exclude="Development"><link rel="stylesheet" href="~/vendor/libs/perfect-scrollbar/perfect-scrollbar.dist.css" asp-append-version="true" /></environment>
+    {% endif %}
+
+    <!-- Application stylesheets -->
+    <environment include="Development"><link rel="stylesheet" href="~/css/site.dist.css" /></environment>
+    <environment exclude="Development"><link rel="stylesheet" href="~/css/site.dist.css" asp-append-version="true" /></environment>
+
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    {% if paceLoader %}
+    <!-- PACE.js loader -->
+    <div class="page-loader"><div class="bg-primary"></div></div>
+    {% endif %}
+
+    @RenderBody()
+
+    <!-- Core scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
+
+    &lt;!-- Uncomment the following line to enable unobtrusive validation -->
+    &lt;!-- @await Html.PartialAsync("_ValidationScriptsPartial") -->
+
+    <environment include="Development">
+        <script src="~/vendor/libs/popper/popper.dist.js"></script>
+        <script src="~/vendor/js/bootstrap.dist.js"></script>
+        {%- if pageLayout != 'blank' and pageLayout != 'without-sidenav' %}
+        <script src="~/vendor/js/sidenav.dist.js"></script>
+        {%- endif %}
+
+        {% if pageLayout != 'blank' and pageLayout != 'without-sidenav' %}
+        <!-- Libs -->
+        <!-- `perfect-scrollbar` library required by SideNav plugin -->
+        <script src="~/vendor/libs/perfect-scrollbar/perfect-scrollbar.dist.js"></script>
+        {% endif %}
+
+        <!-- Application javascripts -->
+        <script src="~/js/site.dist.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/vendor/libs/popper/popper.dist.js" asp-append-version="true"></script>
+        <script src="~/vendor/js/bootstrap.dist.js" asp-append-version="true"></script>
+        {%- if pageLayout != 'blank' and pageLayout != 'without-sidenav' %}
+        <script src="~/vendor/js/sidenav.dist.js" asp-append-version="true"></script>
+        {%- endif %}
+
+        <!-- Libs -->
+        <!-- `perfect-scrollbar` library required by SideNav plugin -->
+        <script src="~/vendor/libs/perfect-scrollbar/perfect-scrollbar.dist.js" asp-append-version="true"></script>
+
+        <!-- Application javascripts -->
+        <script src="~/js/site.dist.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+</textarea>
+<textarea class="d-none" id="template__viewstart-cshtml">
+
+@{
+    Layout = "Layouts/_{{layoutClass(pageLayout)}}";
+}
+
+</textarea>
+<textarea class="d-none" id="template__layout-navbar-cshtml">
+
+@{bool hideToggle = ViewData["LayoutNavbarHideToggle"] != null && ViewData["LayoutNavbarHideToggle"].ToString() == "True";}
+
+<!-- Layout navbar -->
+<nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-{{navbarBg}} container-p-x" id="layout-navbar">
+    <!-- Brand -->
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Asp.Net Core MVC Starter</a>
+
+    @if (!hideToggle)
+    {
+        <!-- Sidenav toggle -->
+        <div class="layout-sidenav-toggle navbar-nav align-items-lg-center mr-auto mr-lg-4">
+            <a class="nav-item nav-link px-0 ml-2" href="javascript:void(0)">
+                <i class="ion ion-md-menu text-large align-middle"></i>
+            </a>
+        </div>
+    }
+
+    <!-- Navbar toggle -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#layout-navbar-collapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="layout-navbar-collapse">
+        <div class="navbar-nav align-items-lg-center">
+            <div class="nav-item"><a class="nav-link" href="#">Link 1</a></div>
+            <div class="nav-item"><a class="nav-link" href="#">Link 2</a></div>
+        </div>
+    </div>
+</nav>
+<!-- / Layout navbar -->
+
+</textarea>
+<textarea class="d-none" id="template__layout-sidenav-cshtml">
+
+@{bool isHorizontal = ViewData["LayoutSidenavHorizontal"] != null && ViewData["LayoutSidenavHorizontal"].ToString() == "True";}
+@{string currentPage = ViewContext.RouteData.Values["Controller"].ToString() + "/" + ViewContext.RouteData.Values["Action"].ToString();}
+
+<!-- Layout sidenav -->
+<div id="layout-sidenav" class="@(isHorizontal ? "layout-sidenav-horizontal sidenav-horizontal container-p-x flex-grow-0" : "layout-sidenav sidenav-vertical") sidenav bg-{{sidenavBg}}">
+    <!-- Inner -->
+    <ul class="sidenav-inner@(!isHorizontal ? " py-1" : "")">
+        <li class="sidenav-item@(currentPage == "Home/Index" ? " active" : "")">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="sidenav-link"><i class="sidenav-icon ion ion-ios-contact"></i><div>Home</div></a>
+        </li>
+        <li class="sidenav-item@(currentPage == "Page2/Index" ? " active" : "")">
+            <a asp-area="" asp-controller="Page2" asp-action="Index" class="sidenav-link"><i class="sidenav-icon ion ion-md-desktop"></i><div>Page 2</div></a>
+        </li>
+    </ul>
+</div>
+<!-- / Layout sidenav -->
+
+</textarea>
+<textarea class="d-none" id="template__layout-footer-cshtml">
+
+<!-- Layout footer -->
+<nav class="layout-footer footer bg-{{footerBg}}">
+    <div class="container-fluid container-p-x pb-3">
+        <a href="#" class="footer-link pt-3">Link 1</a>
+        <a href="#" class="footer-link pt-3 ml-4">Link 2</a>
+    </div>
+</nav>
+<!-- / Layout footer -->
+
+</textarea>
+
+
+  <!-- Scripts -->
+
+  <script src="../assets/generator.js"></script>
+  <script src="../assets/generator-aspnet-core-mvc-starter.js"></script>
+
+</body>
+</html>

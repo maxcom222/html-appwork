@@ -1,0 +1,306 @@
+@import '../_custom-variables/pages';
+
+$file-manager-col-spacer: .25rem !default;
+$file-manager-col-item-width: 9rem !default;
+$file-manager-col-icon-size: 4rem !default;
+$file-manager-col-icon-font-size: 2.5rem !default;
+$file-manager-col-levelup-font-size: 1.5rem !default;
+$file-manager-col-item-spacer: 1.25rem !default;
+$file-manager-col-item-name-spacer: .75rem !default;
+
+$file-manager-row-spacer: .125rem !default;
+$file-manager-row-icon-size: 2rem !default;
+$file-manager-row-icon-font-size: 1.25rem !default;
+$file-manager-row-levelup-font-size: 1rem !default;
+$file-manager-row-item-spacer: .25rem !default;
+$file-manager-changed-width: 10rem !default;
+
+.file-manager-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+   > * {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.file-manager-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.file-item {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &:hover,
+  &.focused {
+    border-color: rgba(0,0,0,.05);
+  }
+
+  &.focused {
+    z-index: 2;
+  }
+
+  * {
+    flex-shrink: 0;
+  }
+}
+
+.file-item-checkbox {
+  margin: 0 !important;
+}
+
+.file-item-select-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.file-item-img {
+  background-color: transparent;
+  background-position: center center;
+  background-size: cover;
+}
+
+.file-item-name {
+  display: block;
+  overflow: hidden;
+}
+
+.file-manager-col-view {
+  .file-item {
+    margin: 0 $file-manager-col-spacer $file-manager-col-spacer 0;
+    padding: $file-manager-col-item-spacer 0 ($file-manager-col-item-spacer - .25rem) 0;
+    width: $file-manager-col-item-width;
+    text-align: center;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: $file-manager-col-spacer;
+    }
+  }
+
+  .file-item-img,
+  .file-item-icon {
+    display: block;
+    margin: 0 auto $file-manager-col-item-name-spacer auto;
+    width: $file-manager-col-icon-size;
+    height: $file-manager-col-icon-size;
+    font-size: $file-manager-col-icon-font-size;
+    line-height: $file-manager-col-icon-size;
+  }
+
+  .file-item-level-up {
+    font-size: $file-manager-col-levelup-font-size;
+  }
+
+  .file-item-checkbox,
+  .file-item-actions {
+    position: absolute;
+    top: 6px;
+  }
+
+  .file-item-checkbox {
+    left: 6px;
+
+    [dir=rtl] & {
+      right: 6px;
+      left: auto;
+    }
+  }
+
+  .file-item-actions {
+    right: 6px;
+
+    [dir=rtl] & {
+      right: auto;
+      left: 6px;
+    }
+  }
+
+  .file-item-name {
+    width: 100%;
+  }
+
+  .file-manager-row-header,
+  .file-item-changed {
+    display: none;
+  }
+}
+
+.file-manager-row-view {
+  .file-manager-row-header,
+  .file-item {
+    display: flex;
+    align-items: center;
+    margin: 0 0 $file-manager-row-spacer 0;
+    padding: $file-manager-row-item-spacer 3rem $file-manager-row-item-spacer 2.25em;
+    width: 100%;
+
+    [dir=rtl] & {
+      padding-right: 2.25em;
+      padding-left: 3rem;
+    }
+  }
+
+  .file-item-img,
+  .file-item-icon {
+    display: block;
+    margin: 0 1rem;
+    width: $file-manager-row-icon-size;
+    height: $file-manager-row-icon-size;
+    text-align: center;
+    font-size: $file-manager-row-icon-font-size;
+    line-height: $file-manager-row-icon-size;
+  }
+
+  .file-item-level-up {
+    font-size: $file-manager-row-levelup-font-size;
+  }
+
+  .file-item-checkbox,
+  .file-item-actions {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .file-item-checkbox {
+    left: 10px;
+
+    [dir=rtl] & {
+      right: 10px;
+      left: auto;
+    }
+  }
+
+  .file-item-actions {
+    right: 10px;
+
+    [dir=rtl] & {
+      right: auto;
+      left: 10px;
+    }
+  }
+
+  .file-item-changed {
+    display: none;
+    margin-left: auto;
+    width: $file-manager-changed-width;
+
+    [dir=rtl] & {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+
+  .file-item-name {
+    width: calc(100% - #{$file-manager-row-icon-size + 2rem});
+  }
+
+  .file-manager-row-header {
+    border-bottom: 2px solid rgba(0,0,0,.05);
+    font-weight: bold;
+  }
+
+  .file-manager-row-header .file-item-name {
+    margin-left: $file-manager-row-icon-size + 2rem;
+
+    [dir=rtl] & {
+      margin-right: $file-manager-row-icon-size + 2rem;
+      margin-left: 0;
+    }
+  }
+}
+
+.default-style {
+  @import "../_appwork/include";
+
+  .file-item-name {
+    color: $body-color !important;
+  }
+
+  .file-item.selected .file-item-select-bg {
+    opacity: .15;
+  }
+
+  @include media-breakpoint-up(md) {
+    .file-manager-row-view {
+      .file-item-changed {
+        display: block;
+      }
+      .file-item-name {
+        width: calc(100% - #{$file-manager-row-icon-size + $file-manager-changed-width + 3rem});
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .file-manager-col-view {
+      .file-item-checkbox,
+      .file-item-actions {
+        opacity: 0;
+      }
+
+      .file-item:hover .file-item-checkbox,
+      .file-item.focused .file-item-checkbox,
+      .file-item.selected .file-item-checkbox,
+      .file-item:hover .file-item-actions,
+      .file-item.focused .file-item-actions,
+      .file-item.selected .file-item-actions {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.material-style {
+  @import "../_appwork/include-material";
+
+  .file-item-name {
+    color: $body-color !important;
+  }
+
+  .file-item.selected .file-item-select-bg {
+    opacity: .15;
+  }
+
+  @include media-breakpoint-up(md) {
+    .file-manager-row-view {
+      .file-item-changed {
+        display: block;
+      }
+      .file-item-name {
+        width: calc(100% - #{$file-manager-row-icon-size + $file-manager-changed-width + 3rem});
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .file-manager-col-view {
+      .file-item-checkbox,
+      .file-item-actions {
+        opacity: 0;
+      }
+
+      .file-item:hover .file-item-checkbox,
+      .file-item.focused .file-item-checkbox,
+      .file-item.selected .file-item-checkbox,
+      .file-item:hover .file-item-actions,
+      .file-item.focused .file-item-actions,
+      .file-item.selected .file-item-actions {
+        opacity: 1;
+      }
+    }
+  }
+}

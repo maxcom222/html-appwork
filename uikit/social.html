@@ -1,0 +1,3123 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style">
+
+<head>
+  <title>Social UI Kit - Appwork</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css">
+
+  <!-- Load polyfills -->
+  <script src="assets/vendor/js/polyfills.js"></script>
+  <script>document['documentMode']===10&&document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
+
+  <script src="assets/vendor/js/material-ripple.js"></script>
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Theme settings -->
+  <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
+  <script src="assets/vendor/js/theme-settings.js"></script>
+  <script>
+    window.themeSettings = new ThemeSettings({
+      cssPath: 'assets/vendor/css/rtl/',
+      themesPath: 'assets/vendor/css/rtl/'
+    });
+  </script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/js/pace.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/vendor/libs/clipboard/clipboard.js"></script>
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="assets/vendor/libs/nouislider/nouislider.css">
+  <link rel="stylesheet" href="assets/vendor/libs/bootstrap-select/bootstrap-select.css">
+  <link rel="stylesheet" href="assets/vendor/libs/datatables/datatables.css">
+  <link rel="stylesheet" href="assets/vendor/libs/plyr/plyr.css">
+  <link rel="stylesheet" href="assets/vendor/libs/swiper/swiper.css">
+  <link rel="stylesheet" href="assets/vendor/libs/blueimp-gallery/gallery.css">
+  <link rel="stylesheet" href="assets/vendor/libs/blueimp-gallery/gallery-indicator.css">
+
+  <!-- highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+  <!-- Custom styles -->
+  <style>
+    #main-header {
+      font-weight: bold;
+      font-size: 1.6875rem;
+      margin: 0 0 -.3125rem 0;
+      padding: .9375rem 3.125rem;
+      line-height: 2.5rem;
+    }
+
+    #main-header-path {
+      opacity: .4;
+    }
+
+    /* Page background */
+    .ui-block,
+    .cui-bottom-spacer {
+      background: transparent;
+    }
+
+    /* Blocks */
+    .ui-block {
+      padding: 2.5rem 0;
+      border-top: .3125rem solid rgba(49, 68, 82, .07);
+    }
+
+    /* Headings */
+    .ui-block-heading {
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      color: rgba(24, 28, 33, .4);
+      font-size: .6875rem;
+    }
+
+    /* Code examples */
+    .uikit-example {
+      position: relative;
+    }
+
+    .uikit-example-btns {
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      transition: all .2s;
+      direction: ltr !important;
+    }
+
+    [dir=rtl] .uikit-example-btns {
+      right: auto;
+      left: 0;
+    }
+
+    .uikit-example:hover .uikit-example-btns {
+      top: -17px;
+      opacity: 1;
+    }
+
+    .uikit-example-btn {
+      display: inline-block;
+      line-height: 1;
+      font-weight: 800;
+      background: #efefef;
+      direction: ltr !important;
+      color: #aaa;
+      padding: .1875rem .3125rem;
+      border-radius: .125rem;
+      white-space: nowrap;
+      font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 11px;
+      margin: 0 4px;
+    }
+
+    .uikit-example-btn.copy::before {
+      content: "COPY";
+    }
+
+    .uikit-example-btn.copied {
+      background: #000 !important;
+      color: #fff !important;
+    }
+
+    .uikit-example-btn.copied::before {
+      content: "COPIED!";
+    }
+
+    /* Modal */
+    .uikit-example-modal-opened {
+      overflow: hidden !important;
+    }
+
+    .uikit-example-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000000;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: auto;
+      background: rgba(255, 255, 255, .95);
+      animation-duration: .2s;
+      direction: ltr !important;
+      text-align: left !important;
+    }
+
+    .uikit-example-modal-opened .uikit-example-modal {
+      display: flex;
+    }
+
+    .uikit-example-modal-content {
+      max-width: 80%;
+      margin: auto;
+      padding: 30px 0;
+    }
+
+    .uikit-example-modal-copy {
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+
+    .uikit-example-modal-copy.copied::before {
+      content: "Copied to clipboard!";
+      position: absolute;
+      display: block;
+      right: 100%;
+      margin-right: 10px;
+      font-size: 14px;
+      white-space: nowrap;
+      background: #111;
+      line-height: 24px;
+      height: 24px;
+      border-radius: 3px;
+      padding: 0 6px;
+      top: 50%;
+      margin-top: -12px;
+    }
+
+    .uikit-example-modal-close {
+      display: block;
+      position: fixed;
+      top: 10px;
+      right: 30px;
+      color: #000 !important;
+      opacity: .2;
+      font-size: 3rem;
+      font-weight: 100;
+    }
+
+    .uikit-example-modal-close:hover {
+      opacity: .9;
+    }
+
+    /* Code */
+    .uikit-example-modal-content>pre {
+      overflow: auto;
+    }
+
+    .uikit-example-modal-content>pre>code {
+      padding: 0;
+      background: none;
+      font-size: 16px;
+    }
+
+    .cui-bottom-spacer {
+      height: 12rem;
+    }
+  </style>
+  <!-- / Custom styles -->
+</head>
+
+<body>
+  <div class="page-loader">
+    <div class="bg-primary"></div>
+  </div>
+
+  <div class="uikit-example-modal animated fadeIn">
+    <a href="javascript:void(0)" class="uikit-example-modal-copy btn icon-btn btn-lg btn-primary rounded-pill"><span class="ion ion-md-clipboard"></span></a>
+    <a href="javascript:void(0)" class="uikit-example-modal-close">&times;</a>
+    <div class="uikit-example-modal-content"></div>
+  </div>
+
+  <h1 id="main-header" class="bg-dark text-white">
+    <span id="main-header-path">UI Kit &nbsp;/&nbsp;</span>
+    <span class="d-inline-block position-relative">
+      <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown">Social</a>
+      <span class="dropdown-menu mt-3">
+        <a href="base.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Base</span></a>
+        <a href="company.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Company</span></a>
+        <a href="dashboard.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Dashboard</span></a>
+        <a href="e-commerce.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">E-Commerce</span></a>
+        <a href="headers-and-footers.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Headers &amp; Footers</span></a>
+        <a href="magazine.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Magazine</span></a>
+
+      </span>
+    </span>
+  </h1>
+
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Headers</h4>
+    </div>
+
+    <div class="uikit-example">
+
+      <div class="bg-white">
+
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center py-4">
+            <div>
+              <a href="javascript:void(0)" class="d-inline-block text-body">
+                <strong>234</strong> <span class="text-muted">followers</span>
+              </a>
+              <a href="javascript:void(0)" class="d-inline-block text-body ml-3">
+                <strong>111</strong> <span class="text-muted">following</span>
+              </a>
+            </div>
+            <div>
+              <a href="javascript:void(0)" class="btn btn-success btn-sm">
+                Follow
+              </a>
+              <a href="javascript:void(0)" class="btn btn-default icon-btn md-btn-flat btn-sm ml-1">
+                <i class="ion ion-md-mail"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="m-0">
+
+        <div class="container">
+          <div class="text-center py-5">
+            <img src="assets/img/avatars/1.png" alt="" class="ui-w-100 rounded-circle">
+
+            <div class="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
+              <h4 class="font-weight-bold my-4">Mike Greene</h4>
+
+              <div class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, nibh suavitate qualisque ut nam. Ad harum primis electram duo, porro principes ei has.
+              </div>
+            </div>
+
+            <div class="text-center">
+              <a href="javascript:void(0)" class="btn icon-btn borderless btn-outline-twitter btn-lg rounded-pill"><span class="ion ion-logo-twitter"></span></a>
+              <a href="javascript:void(0)" class="btn icon-btn borderless btn-outline-facebook btn-lg rounded-pill"><span class="ion ion-logo-facebook"></span></a>
+              <a href="javascript:void(0)" class="btn icon-btn borderless btn-outline-instagram btn-lg rounded-pill"><span class="ion ion-logo-instagram"></span></a>
+            </div>
+          </div>
+        </div>
+        <hr class="m-0">
+
+        <ul class="nav nav-tabs tabs-alt justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link py-4 active" href="javascript:void(0)">Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="javascript:void(0)">Likes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="javascript:void(0)">Followers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="javascript:void(0)">Following</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+    <div class="uikit-example mt-4">
+
+      <div class="bg-white">
+
+        <div class="container">
+          <div class="text-center py-5">
+            <img src="assets/img/avatars/3.png" alt="" class="ui-w-100 rounded-circle">
+
+            <div class="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
+              <h4 class="font-weight-bold my-4">Allie Rodriguez</h4>
+
+              <div class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, nibh suavitate qualisque ut nam. Ad harum primis electram duo, porro principes ei has.
+              </div>
+            </div>
+
+            <div class="text-center">
+              <a href="javascript:void(0)" class="d-inline-block text-body">
+                <strong>234</strong> <span class="text-muted">followers</span>
+              </a>
+              <a href="javascript:void(0)" class="d-inline-block text-body ml-3">
+                <strong>111</strong> <span class="text-muted">following</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="m-0">
+
+        <ul class="nav nav-tabs tabs-alt justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link py-4 active" href="javascript:void(0)">Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="javascript:void(0)">Likes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="javascript:void(0)">Followers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="javascript:void(0)">Following</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+    <div class="uikit-example mt-4">
+
+      <div class="bg-white">
+
+        <div class="container py-5">
+          <div class="media col-md-10 col-lg-8 col-xl-7 p-0 my-4 mx-auto">
+            <img src="assets/img/avatars/5.png" alt="" class="d-block ui-w-100 rounded-circle">
+            <div class="media-body ml-5">
+              <h4 class="font-weight-bold mb-4">Nellie Maxwell</h4>
+
+              <div class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, nibh suavitate qualisque ut nam. Ad harum primis electram duo, porro principes ei has.
+              </div>
+
+              <a href="javascript:void(0)" class="d-inline-block text-body">
+                <strong>234</strong> <span class="text-muted">followers</span>
+              </a>
+              <a href="javascript:void(0)" class="d-inline-block text-body ml-3">
+                <strong>111</strong> <span class="text-muted">following</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="m-0">
+
+        <ul class="nav nav-tabs tabs-alt justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link py-4 active" href="javascript:void(0)">Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="javascript:void(0)">Likes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="javascript:void(0)">Followers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link py-4" href="javascript:void(0)">Following</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+    <div class="uikit-example mt-4">
+
+      <div class="bg-white">
+
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center py-4">
+            <div class="media align-items-center flex-grow-1">
+              <img src="assets/img/avatars/4.png" alt="" class="d-block ui-w-80 rounded-circle">
+              <div class="media-body ml-4">
+                <h5 class="font-weight-bold mb-1"><span class="text-big">Kenneth Frazier</span></h5>
+                <div class="text-muted">@kfrazier</div>
+              </div>
+            </div>
+
+            <div class="flex-shrink-1">
+              <a href="javascript:void(0)" class="btn btn-success rounded-pill">
+                Follow
+              </a>
+              <a href="javascript:void(0)" class="btn btn-default icon-btn md-btn-flat rounded-pill ml-1">
+                <i class="ion ion-md-mail"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="m-0">
+
+        <div class="container">
+          <ul class="nav nav-tabs tabs-alt border-0">
+            <li class="nav-item">
+              <a class="nav-link py-3 active" href="javascript:void(0)">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-3" href="javascript:void(0)">Likes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-3" href="javascript:void(0)">Followers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link py-3" href="javascript:void(0)">Following</a>
+            </li>
+          </ul>
+        </div>
+        <hr class="m-0">
+
+      </div>
+
+    </div>
+    <div class="uikit-example mt-4">
+
+      <div class="ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/1.jpg');">
+        <div class="ui-bg-overlay bg-dark opacity-50"></div>
+
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center pt-4">
+            <div>
+              <a href="javascript:void(0)" class="d-inline-block text-white">
+                <strong>234</strong> <span class="opacity-75">followers</span>
+              </a>
+              <a href="javascript:void(0)" class="d-inline-block text-white ml-3">
+                <strong>111</strong> <span class="opacity-75">following</span>
+              </a>
+            </div>
+            <div>
+              <a href="javascript:void(0)" class="btn btn-success btn-sm">
+                Follow
+              </a>
+              <a href="javascript:void(0)" class="btn btn-outline-white icon-btn btn-sm ml-1">
+                <i class="ion ion-md-mail"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="text-center py-5">
+            <img src="assets/img/avatars/7.png" alt="" class="ui-w-100 rounded-circle">
+
+            <div class="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
+              <h4 class="font-weight-bold my-4">Alice Hampton</h4>
+
+              <div class="opacity-75 mb-4">
+                Lorem ipsum dolor sit amet, nibh suavitate qualisque ut nam. Ad harum primis electram duo, porro principes ei has.
+              </div>
+            </div>
+
+            <div class="text-center pt-3">
+              <a href="javascript:void(0)" class="btn icon-btn btn-twitter rounded-pill"><span class="ion ion-logo-twitter"></span></a>
+              &nbsp;
+              <a href="javascript:void(0)" class="btn icon-btn btn-facebook rounded-pill"><span class="ion ion-logo-facebook"></span></a>
+              &nbsp;
+              <a href="javascript:void(0)" class="btn icon-btn btn-instagram rounded-pill"><span class="ion ion-logo-instagram"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-bg-overlay-container">
+          <div class="ui-bg-overlay bg-dark opacity-25"></div>
+          <ul class="nav nav-tabs tabs-alt justify-content-center border-transparent">
+            <li class="nav-item">
+              <a class="nav-link text-white py-4 active" href="javascript:void(0)">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-4" href="javascript:void(0)">Likes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-4" href="javascript:void(0)">Followers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-4" href="javascript:void(0)">Following</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="uikit-example mt-4">
+
+      <div class="ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/2.jpg');">
+        <div class="ui-bg-overlay bg-dark opacity-50"></div>
+
+        <div class="container">
+          <div class="text-center py-5">
+            <img src="assets/img/avatars/6.png" alt="" class="ui-w-100 rounded-circle">
+
+            <div class="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
+              <h4 class="font-weight-bold my-4">Mae Gibson</h4>
+
+              <div class="opacity-75 mb-4">
+                Lorem ipsum dolor sit amet, nibh suavitate qualisque ut nam. Ad harum primis electram duo, porro principes ei has.
+              </div>
+            </div>
+
+            <div class="text-center">
+              <a href="javascript:void(0)" class="d-inline-block text-white">
+                <strong>234</strong> <span class="opacity-75">followers</span>
+              </a>
+              <a href="javascript:void(0)" class="d-inline-block text-white ml-3">
+                <strong>111</strong> <span class="opacity-75">following</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-bg-overlay-container">
+          <div class="ui-bg-overlay bg-dark opacity-25"></div>
+          <ul class="nav nav-tabs tabs-alt justify-content-center border-transparent">
+            <li class="nav-item">
+              <a class="nav-link text-white py-4 active" href="javascript:void(0)">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-4" href="javascript:void(0)">Likes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-4" href="javascript:void(0)">Followers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-4" href="javascript:void(0)">Following</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="uikit-example mt-4">
+
+      <div class="ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/3.jpg');">
+        <div class="ui-bg-overlay bg-dark opacity-50"></div>
+
+        <div class="container py-5">
+          <div class="media col-md-10 col-lg-8 col-xl-7 p-0 my-4 mx-auto">
+            <img src="assets/img/avatars/11.png" alt="" class="d-block ui-w-100 rounded-circle">
+            <div class="media-body ml-5">
+              <h4 class="font-weight-bold mb-4">Belle Ross</h4>
+
+              <div class="opacity-75 mb-4">
+                Lorem ipsum dolor sit amet, nibh suavitate qualisque ut nam. Ad harum primis electram duo, porro principes ei has.
+              </div>
+
+              <a href="javascript:void(0)" class="d-inline-block text-white">
+                <strong>234</strong> <span class="opacity-75">followers</span>
+              </a>
+              <a href="javascript:void(0)" class="d-inline-block text-white ml-3">
+                <strong>111</strong> <span class="opacity-75">following</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-bg-overlay-container">
+          <div class="ui-bg-overlay bg-dark opacity-25"></div>
+          <ul class="nav nav-tabs tabs-alt justify-content-center border-transparent">
+            <li class="nav-item">
+              <a class="nav-link text-white py-4 active" href="javascript:void(0)">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-4" href="javascript:void(0)">Likes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-4" href="javascript:void(0)">Followers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white py-4" href="javascript:void(0)">Following</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="uikit-example mt-4">
+
+      <div class="ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/4.jpg');">
+        <div class="ui-bg-overlay bg-dark opacity-50"></div>
+
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center py-4">
+            <div class="media align-items-center flex-grow-1">
+              <img src="assets/img/avatars/12.png" alt="" class="d-block ui-w-80 rounded-circle">
+              <div class="media-body ml-4">
+                <h5 class="font-weight-bold mb-1"><span class="text-big">Arthur Duncan</span></h5>
+                <div class="opacity-75">@mgreene</div>
+              </div>
+            </div>
+
+            <div class="flex-shrink-1">
+              <a href="javascript:void(0)" class="btn btn-success rounded-pill">
+                Follow
+              </a>
+              <a href="javascript:void(0)" class="btn btn-outline-white icon-btn md-btn-flat rounded-pill ml-1">
+                <i class="ion ion-md-mail"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-bg-overlay-container">
+          <div class="ui-bg-overlay bg-dark opacity-25"></div>
+          <div class="container">
+            <ul class="nav nav-tabs tabs-alt border-transparent">
+              <li class="nav-item">
+                <a class="nav-link text-white py-3 active" href="javascript:void(0)">Posts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white py-3" href="javascript:void(0)">Likes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white py-3" href="javascript:void(0)">Followers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white py-3" href="javascript:void(0)">Following</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Profile card</h4>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body text-center">
+                <img src="assets/img/avatars/1.png" alt="" class="ui-w-80 rounded-circle mt-2 mb-3">
+                <h5 class="mb-2">Mike Greene</h5>
+                <p class="text-muted small">UI/UX Designer</p>
+                <a href="javascript:void(0)" class="btn icon-btn borderless btn-outline-twitter rounded-pill"><span class="ion ion-logo-twitter"></span></a>
+                &nbsp;
+                <a href="javascript:void(0)" class="btn icon-btn borderless btn-outline-facebook rounded-pill"><span class="ion ion-logo-facebook"></span></a>
+                &nbsp;
+                <a href="javascript:void(0)" class="btn icon-btn borderless btn-outline-instagram rounded-pill"><span class="ion ion-logo-instagram"></span></a>
+              </div>
+              <div class="card-footer text-center p-0">
+                <div class="row no-gutters row-bordered">
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">234</div>
+                    <div class="text-muted small">followers</div>
+                  </a>
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">111</div>
+                    <div class="text-muted small">following</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-img ui-bg-cover ui-bg-overlay-container" style="background-image: url('assets/img/bg/5.jpg');">
+                <div class="ui-bg-overlay bg-dark opacity-25"></div>
+                <div class="text-center text-white py-4">
+                  <img src="assets/img/avatars/2.png" alt="" class="ui-w-80 rounded-circle mb-3">
+                  <h5 class="mb-2">Leon Wilson</h5>
+                  <p class="small opacity-75">UI/UX Designer</p>
+                  <button type="button" class="btn btn-success rounded-pill">Send Message</button>
+                </div>
+              </div>
+              <div class="card-footer border-0 text-center p-0">
+                <div class="row no-gutters row-bordered row-border-light">
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">24</div>
+                    <div class="text-muted small">posts</div>
+                  </a>
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">234</div>
+                    <div class="text-muted small">followers</div>
+                  </a>
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">111</div>
+                    <div class="text-muted small">following</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="media">
+                  <img src="assets/img/avatars/3.png" alt="" class="ui-w-60 rounded-circle">
+                  <div class="media-body pt-2 ml-3">
+                    <h5 class="mb-2">Allie Rodriguez</h5>
+                    <div class="text-muted small mb-2">UI/UX Designer</div>
+                    <a href="javascript:void(0)" class="text-twitter"><span class="ion ion-logo-twitter"></span></a>
+                    &nbsp;&nbsp;
+                    <a href="javascript:void(0)" class="text-facebook"><span class="ion ion-logo-facebook"></span></a>
+                    &nbsp;&nbsp;
+                    <a href="javascript:void(0)" class="text-instagram"><span class="ion ion-logo-instagram"></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="media">
+                  <img src="assets/img/avatars/4.png" alt="" class="ui-w-60 rounded-circle">
+                  <div class="media-body pt-2 ml-3">
+                    <h5 class="mb-2">Kenneth Frazier</h5>
+                    <div class="text-muted small mb-2">UI/UX Designer</div>
+                    <a href="javascript:void(0)" class="text-twitter"><span class="ion ion-logo-twitter"></span></a>
+                    &nbsp;&nbsp;
+                    <a href="javascript:void(0)" class="text-facebook"><span class="ion ion-logo-facebook"></span></a>
+                    &nbsp;&nbsp;
+                    <a href="javascript:void(0)" class="text-instagram"><span class="ion ion-logo-instagram"></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer text-center p-0">
+                <div class="row no-gutters row-bordered">
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">234</div>
+                    <div class="text-muted small">followers</div>
+                  </a>
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">111</div>
+                    <div class="text-muted small">following</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="media">
+                  <img src="assets/img/avatars/5.png" alt="" class="ui-w-60 rounded-circle">
+                  <div class="media-body pt-2 ml-3">
+                    <h5 class="mb-2">Nellie Maxwell</h5>
+                    <div class="text-muted small">UI/UX Designer</div>
+                    <div class="mt-3">
+                      <a href="javascript:void(0)" class="btn icon-btn borderless btn-twitter rounded-pill"><span class="ion ion-logo-twitter"></span></a>
+                      &nbsp;
+                      <a href="javascript:void(0)" class="btn icon-btn borderless btn-facebook rounded-pill"><span class="ion ion-logo-facebook"></span></a>
+                      &nbsp;
+                      <a href="javascript:void(0)" class="btn icon-btn borderless btn-instagram rounded-pill"><span class="ion ion-logo-instagram"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer text-center p-0">
+                <div class="row no-gutters row-bordered">
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">234</div>
+                    <div class="text-muted small">followers</div>
+                  </a>
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">111</div>
+                    <div class="text-muted small">following</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="media align-items-center">
+                  <img src="assets/img/avatars/6.png" alt="" class="ui-w-60 rounded-circle">
+                  <div class="media-body ml-3">
+                    <h5 class="mb-2">Mae Gibson</h5>
+                    <div class="text-muted small">UI/UX Designer</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn icon-btn borderless btn-success rounded-pill d-block"><span class="ion ion-md-mail"></span></a>
+                </div>
+              </div>
+              <div class="card-footer py-3">
+                <p class="mb-2"><i class="ion ion-md-desktop ui-w-30 text-center text-lighter"></i> UI/UX Designer</p>
+                <p class="mb-2"><i class="ion ion-ios-navigate ui-w-30 text-center text-lighter"></i> London, United Kingdom</p>
+                <p class="mb-0"><i class="ion ion-md-globe ui-w-30 text-center text-lighter"></i> <a href="javascript:void(0)" class="text-body">website.com</a></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="media">
+                  <img src="assets/img/avatars/12.png" alt="" class="ui-w-60 rounded-circle">
+                  <div class="media-body pt-2 ml-3">
+                    <h5 class="mb-2">Arthur Duncan</h5>
+                    <div class="text-muted small mb-2">UI/UX Designer</div>
+                    <a href="javascript:void(0)" class="text-twitter"><span class="ion ion-logo-twitter"></span></a>
+                    &nbsp;&nbsp;
+                    <a href="javascript:void(0)" class="text-facebook"><span class="ion ion-logo-facebook"></span></a>
+                    &nbsp;&nbsp;
+                    <a href="javascript:void(0)" class="text-instagram"><span class="ion ion-logo-instagram"></span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer py-3">
+                <a href="javascript:void(0)" class="btn btn-primary rounded-pill">+&nbsp; Follow</a>
+                &nbsp;
+                <a href="javascript:void(0)" class="btn icon-btn btn-default md-btn-flat rounded-pill"><span class="ion ion-md-mail"></span></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="media align-items-center">
+                  <img src="assets/img/avatars/11.png" alt="" class="ui-w-60 rounded-circle">
+                  <div class="media-body ml-3">
+                    <h5 class="mb-2">Belle Ross</h5>
+                    <div class="mb text-muted small">UI/UX Designer</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-primary rounded-pill d-block">+&nbsp; Follow</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="media align-items-center">
+                  <img src="assets/img/avatars/10.png" alt="" class="ui-w-60 rounded-circle">
+                  <div class="media-body ml-3">
+                    <h5 class="mb-2">Wayne Morgan</h5>
+                    <div class="mb text-muted small">UI/UX Designer</div>
+                  </div>
+                  <div>
+                    <a href="javascript:void(0)" class="btn btn-primary rounded-pill icon-btn"><i class="ion ion-md-person-add"></i></a>&nbsp;
+                    <a href="javascript:void(0)" class="btn btn-default md-btn-flat rounded-pill icon-btn"><i class="ion ion-md-mail"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Cards</h4>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header with-elements">
+                <span class="card-header-title">Friends &nbsp;<small class="text-muted">591</small></span>
+                <div class="card-header-elements ml-md-auto">
+                  <a href="javascript:void(0)" class="btn btn-default md-btn-flat btn-xs">Show All</a>
+                </div>
+              </div>
+              <div class="row no-gutters row-bordered row-border-light">
+                <a href="javascript:void(0)" class="d-flex col-4 col-sm-3 col-md-4 flex-column align-items-center text-body py-3 px-2">
+                  <img src="assets/img/avatars/2-small.png" alt="" class="d-block ui-w-40 rounded-circle mb-2">
+                  <div class="text-center small">Leon Wilson</div>
+                </a>
+                <a href="javascript:void(0)" class="d-flex col-4 col-sm-3 col-md-4 flex-column align-items-center text-body py-3 px-2">
+                  <img src="assets/img/avatars/3-small.png" alt="" class="d-block ui-w-40 rounded-circle mb-2">
+                  <div class="text-center small">Allie Rodriguez</div>
+                </a>
+                <a href="javascript:void(0)" class="d-flex col-4 col-sm-3 col-md-4 flex-column align-items-center text-body py-3 px-2">
+                  <img src="assets/img/avatars/4-small.png" alt="" class="d-block ui-w-40 rounded-circle mb-2">
+                  <div class="text-center small">Kenneth Frazier</div>
+                </a>
+                <a href="javascript:void(0)" class="d-flex col-4 col-sm-3 col-md-4 flex-column align-items-center text-body py-3 px-2">
+                  <img src="assets/img/avatars/5-small.png" alt="" class="d-block ui-w-40 rounded-circle mb-2">
+                  <div class="text-center small">Nellie Maxwell</div>
+                </a>
+                <a href="javascript:void(0)" class="d-flex col-4 col-sm-3 col-md-4 flex-column align-items-center text-body py-3 px-2">
+                  <img src="assets/img/avatars/6-small.png" alt="" class="d-block ui-w-40 rounded-circle mb-2">
+                  <div class="text-center small">Mae Gibson</div>
+                </a>
+                <a href="javascript:void(0)" class="d-flex col-4 col-sm-3 col-md-4 flex-column align-items-center text-body py-3 px-2">
+                  <img src="assets/img/avatars/7-small.png" alt="" class="d-block ui-w-40 rounded-circle mb-2">
+                  <div class="text-center small">Alice Hampton</div>
+                </a>
+                <a href="javascript:void(0)" class="d-flex col-4 col-sm-3 col-md-4 flex-column align-items-center text-body py-3 px-2">
+                  <img src="assets/img/avatars/11-small.png" alt="" class="d-block ui-w-40 rounded-circle mb-2">
+                  <div class="text-center small">Belle Ross</div>
+                </a>
+                <a href="javascript:void(0)" class="d-flex col-4 col-sm-3 col-md-4 flex-column align-items-center text-body py-3 px-2">
+                  <img src="assets/img/avatars/12-small.png" alt="" class="d-block ui-w-40 rounded-circle mb-2">
+                  <div class="text-center small">Arthur Duncan</div>
+                </a>
+                <a href="javascript:void(0)" class="d-flex col-4 col-sm-3 col-md-4 flex-column align-items-center text-body py-3 px-2">
+                  <img src="assets/img/avatars/9-small.png" alt="" class="d-block ui-w-40 rounded-circle mb-2">
+                  <div class="text-center small">Amanda Warner</div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header with-elements">
+                <span class="card-header-title">You khow these people?</span>
+                <div class="card-header-elements ml-md-auto">
+                  <a href="javascript:void(0)" class="btn btn-default md-btn-flat btn-xs">Show More</a>
+                </div>
+              </div>
+
+              <div class="card-body">
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/2-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Leon Wilson</a>
+                    <div class="text-muted small">1 mutual friend</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/3-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Allie Rodriguez</a>
+                    <div class="text-muted small">2 mutual friends</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/4-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Kenneth Frazier</a>
+                    <div class="text-muted small">3 mutual friends</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/5-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Nellie Maxwell</a>
+                    <div class="text-muted small">1 mutual friend</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center">
+                  <img src="assets/img/avatars/11-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Belle Ross</a>
+                    <div class="text-muted small">1 mutual friend</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Skills</div>
+              <div class="card-body">
+
+                <div class="mb-1">HTML - <small class="text-muted">80%</small></div>
+                <div class="progress mb-3" style="height: 4px;">
+                  <div class="progress-bar bg-secondary" style="width: 80%;"></div>
+                </div>
+
+                <div class="mb-1">CSS - <small class="text-muted">95%</small></div>
+                <div class="progress mb-3" style="height: 4px;">
+                  <div class="progress-bar bg-success" style="width: 95%;"></div>
+                </div>
+
+                <div class="mb-1">Javascript - <small class="text-muted">90%</small></div>
+                <div class="progress mb-3" style="height: 4px;">
+                  <div class="progress-bar bg-warning" style="width: 90%;"></div>
+                </div>
+
+                <div class="mb-1">UI/UX - <small class="text-muted">80%</small></div>
+                <div class="progress" style="height: 4px;">
+                  <div class="progress-bar bg-danger" style="width: 80%;"></div>
+                </div>
+
+              </div>
+              <a href="javascript:void(0)" class="card-footer d-block text-center text-body small font-weight-semibold">SHOW ALL SKILLS</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header with-elements">
+                <span class="card-header-title">Events</span>
+                <div class="card-header-elements ml-2">
+                  <small class="text-muted">16</small>
+                </div>
+                <div class="card-header-elements ml-md-auto">
+                  <a href="javascript:void(0)" class="btn btn-default md-btn-flat btn-xs">Show More</a>
+                </div>
+              </div>
+              <div class="card-body">
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-1.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Movie Awards</a><br>
+                    <div class="text-muted small">June 1, 2017</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-2.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Game jam</a><br>
+                    <div class="text-muted small">July 1, 2017</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-3.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Javascript conference</a><br>
+                    <div class="text-muted small">August 1, 2017</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center">
+                  <img src="assets/img/uikit/logo-4.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Meeting</a><br>
+                    <div class="text-muted small">September 1, 2017</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header with-elements">
+                <span class="card-header-title">Groups</span>
+                <div class="card-header-elements ml-2">
+                  <small class="text-muted">54</small>
+                </div>
+                <div class="card-header-elements ml-md-auto">
+                  <a href="javascript:void(0)" class="btn btn-default md-btn-flat btn-xs">Show More</a>
+                </div>
+              </div>
+              <div class="card-body">
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-5.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">NBA All-Stars</a><br>
+                    <div class="text-muted small">1248 members</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-6.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">New movies</a><br>
+                    <div class="text-muted small">5213 members</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-7.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Supercars</a><br>
+                    <div class="text-muted small">2954 members</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center">
+                  <img src="assets/img/uikit/logo-8.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Programming Notes</a><br>
+                    <div class="text-muted small">3619 members</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Links</div>
+              <div class="card-body">
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-5.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body flex-truncate ml-3">
+                    <a href="javascript:void(0)">Google+</a>
+                    <div class="text-muted small text-truncate">plus.google.com/8975983245687028</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-6.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body flex-truncate ml-3">
+                    <a href="javascript:void(0)">Twitter</a>
+                    <div class="text-muted small text-truncate">twitter.com/username</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-7.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body flex-truncate ml-3">
+                    <a href="javascript:void(0)">Instagram</a>
+                    <div class="text-muted small text-truncate">instagram.com/username/</div>
+                  </div>
+                </div>
+
+                <div class="media align-items-center">
+                  <img src="assets/img/uikit/logo-8.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body flex-truncate ml-3">
+                    <a href="javascript:void(0)">Amazingior Design With Perfect Lighting</a>
+                    <div class="text-muted small text-truncate">example.com/articles/amazing-classic-interior-design-with-perfect-lighting</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Friends</div>
+              <div class="card-body">
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/2-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Leon Wilson</a>
+                    <div class="text-muted small">@lwilson</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-sm btn-default md-btn-flat d-block">Follow</a>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/3-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Allie Rodriguez</a>
+                    <div class="text-muted small">@arodriguez</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-sm btn-success d-block"><span class="ion ion-md-checkmark"></span> Following</a>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/4-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Kenneth Frazier</a>
+                    <div class="text-muted small">@kfrazier</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-sm btn-default md-btn-flat d-block">Follow</a>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/5-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Nellie Maxwell</a>
+                    <div class="text-muted small">@nmaxwell</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-sm btn-default md-btn-flat d-block">Follow</a>
+                </div>
+
+                <div class="media align-items-center">
+                  <img src="assets/img/avatars/6-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Mae Gibson</a>
+                    <div class="text-muted small">@mgibson</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-sm btn-default md-btn-flat d-block">Follow</a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Groups</div>
+              <div class="card-body">
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-5.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">NBA All-Stars</a><br>
+                    <div class="text-muted small">1248 members</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-sm btn-default md-btn-flat d-block">Join</a>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-6.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">New movies</a><br>
+                    <div class="text-muted small">5213 members</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-sm btn-success d-block"><span class="ion ion-md-checkmark"></span> Joined</a>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-7.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Supercars</a><br>
+                    <div class="text-muted small">2954 members</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-sm btn-default md-btn-flat d-block">Join</a>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/uikit/logo-8.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Programming Notes</a><br>
+                    <div class="text-muted small">3619 members</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-sm btn-default md-btn-flat d-block">Join</a>
+                </div>
+
+                <div class="media align-items-center">
+                  <img src="assets/img/uikit/logo-9.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)" class="text-body">Stand Up Club</a>
+                    <div class="text-muted small">812 members</div>
+                  </div>
+                  <a href="javascript:void(0)" class="btn btn-sm btn-default md-btn-flat d-block">Join</a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body text-center py-4 my-2">
+                <i class="lnr lnr-license display-3 d-inline-block text-success mb-3"></i>
+                <div class="text-big font-weight-semibold mb-1">3 steps remaining</div>
+                <div class="text-muted small">to complete your profile</div>
+              </div>
+              <hr class="m-0">
+              <div class="card-body">
+
+                <a href="javascript:void(0)" class="d-block text-body mb-3">
+                  <i class="ion ion-md-camera ui-w-30 text-center text-lighter"></i>
+                  Upload a photo
+                </a>
+                <a href="javascript:void(0)" class="d-block text-body mb-3">
+                  <i class="ion ion-md-person-add ui-w-30 text-center text-lighter"></i>
+                  Add a friend
+                </a>
+                <a href="javascript:void(0)" class="d-block text-body">
+                  <i class="ion ion-md-school ui-w-30 text-center text-lighter"></i>
+                  Add your school
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Overview</div>
+              <div class="card-body">
+
+                <div class="row mb-2">
+                  <div class="col-md-3 text-muted">Birthday:</div>
+                  <div class="col-md-9">
+                    May 3, 1995
+                  </div>
+                </div>
+
+                <div class="row mb-2">
+                  <div class="col-md-3 text-muted">Country:</div>
+                  <div class="col-md-9">
+                    <a href="javascript:void(0)" class="text-body">Canada</a>
+                  </div>
+                </div>
+
+                <div class="row mb-2">
+                  <div class="col-md-3 text-muted">Languages:</div>
+                  <div class="col-md-9">
+                    <a href="javascript:void(0)" class="text-body">English</a>
+                  </div>
+                </div>
+
+                <h6 class="my-3">Contacts</h6>
+
+                <div class="row mb-2">
+                  <div class="col-md-3 text-muted">Phone:</div>
+                  <div class="col-md-9">
+                    +0 (123) 456 7891
+                  </div>
+                </div>
+
+                <h6 class="my-3">Interests</h6>
+
+                <div class="row mb-2">
+                  <div class="col-md-3 text-muted">Favorite music:</div>
+                  <div class="col-md-9">
+                    <a href="javascript:void(0)" class="text-body">Rock</a>,
+                    <a href="javascript:void(0)" class="text-body">Alternative</a>,
+                    <a href="javascript:void(0)" class="text-body">Electro</a>,
+                    <a href="javascript:void(0)" class="text-body">Drum &amp; Bass</a>,
+                    <a href="javascript:void(0)" class="text-body">Dance</a>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-3 text-muted">Favorite movies:</div>
+                  <div class="col-md-9">
+                    <a href="javascript:void(0)" class="text-body">The Green Mile</a>,
+                    <a href="javascript:void(0)" class="text-body">Pulp Fiction</a>,
+                    <a href="javascript:void(0)" class="text-body">Back to the Future</a>,
+                    <a href="javascript:void(0)" class="text-body">WALL·E</a>,
+                    <a href="javascript:void(0)" class="text-body">Django Unchained</a>,
+                    <a href="javascript:void(0)" class="text-body">The Truman Show</a>,
+                    <a href="javascript:void(0)" class="text-body">Home Alone</a>,
+                    <a href="javascript:void(0)" class="text-body">Seven Pounds</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Overview</div>
+              <div class="card-body">
+
+                <div class="row mb-2">
+                  <div class="col-md-3 text-muted">Birthday:</div>
+                  <div class="col-md-9">
+                    May 3, 1995
+                  </div>
+                </div>
+
+                <div class="row mb-2">
+                  <div class="col-md-3 text-muted">Country:</div>
+                  <div class="col-md-9">
+                    <a href="javascript:void(0)" class="text-body">Canada</a>
+                  </div>
+                </div>
+
+                <div class="row mb-2">
+                  <div class="col-md-3 text-muted">Languages:</div>
+                  <div class="col-md-9">
+                    <a href="javascript:void(0)" class="text-body">English</a>
+                  </div>
+                </div>
+
+                <h6 class="my-3">Contacts</h6>
+
+                <div class="row mb-2">
+                  <div class="col-md-3 text-muted">Phone:</div>
+                  <div class="col-md-9">
+                    +0 (123) 456 7891
+                  </div>
+                </div>
+
+                <h6 class="my-3">Interests</h6>
+
+                <div class="row mb-2">
+                  <div class="col-md-3 text-muted">Favorite music:</div>
+                  <div class="col-md-9">
+                    <a href="javascript:void(0)" class="text-body">Rock</a>,
+                    <a href="javascript:void(0)" class="text-body">Alternative</a>,
+                    <a href="javascript:void(0)" class="text-body">Electro</a>,
+                    <a href="javascript:void(0)" class="text-body">Drum &amp; Bass</a>,
+                    <a href="javascript:void(0)" class="text-body">Dance</a>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-3 text-muted">Favorite movies:</div>
+                  <div class="col-md-9">
+                    <a href="javascript:void(0)" class="text-body">The Green Mile</a>,
+                    <a href="javascript:void(0)" class="text-body">Pulp Fiction</a>,
+                    <a href="javascript:void(0)" class="text-body">Back to the Future</a>,
+                    <a href="javascript:void(0)" class="text-body">WALL·E</a>,
+                    <a href="javascript:void(0)" class="text-body">Django Unchained</a>,
+                    <a href="javascript:void(0)" class="text-body">The Truman Show</a>,
+                    <a href="javascript:void(0)" class="text-body">Home Alone</a>,
+                    <a href="javascript:void(0)" class="text-body">Seven Pounds</a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-footer text-center p-0">
+                <div class="row no-gutters row-bordered row-border-light">
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">24</div>
+                    <div class="text-muted small">posts</div>
+                  </a>
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">51</div>
+                    <div class="text-muted small">videos</div>
+                  </a>
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">215</div>
+                    <div class="text-muted small">photos</div>
+                  </a>
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">234</div>
+                    <div class="text-muted small">followers</div>
+                  </a>
+                  <a href="javascript:void(0)" class="d-flex col flex-column text-body py-3">
+                    <div class="font-weight-bold">111</div>
+                    <div class="text-muted small">following</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header with-elements">
+                <span class="card-header-title">Photos</span>
+                <div class="card-header-elements ml-2">
+                  <small class="text-muted">54</small>
+                </div>
+                <div class="card-header-elements ml-md-auto">
+                  <a href="javascript:void(0)" class="btn btn-default md-btn-flat btn-xs">Show More</a>
+                </div>
+              </div>
+              <div class="row no-gutters align-items-start pt-1 pl-1">
+
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/1.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/2.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/3.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/4.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/5.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/6.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/7.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/8.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/9.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/10.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/11.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/12.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/13.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/14.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/15.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block col-3 col-sm-2 col-lg-3 pr-1 pb-1">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/16.jpg');"></span>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header border-0">About group</div>
+              <div class="ui-bg-cover" style="height:150px; background-image: url('assets/img/bg/6.jpg');"></div>
+              <div class="card-body">
+
+                <div class="media mb-3">
+                  <div class="ion ion-md-information-circle ui-w-30 text-center text-lighter mt-1"></div>
+                  <div class="media-body ml-2">
+                    Lorem ipsum dolor sit amet, nibh suavitate qualisque ut nam.
+                    Ad harum primis electram duo, porro principes ei has.
+                  </div>
+                </div>
+                <div class="media">
+                  <div class="ion ion-md-globe ui-w-30 text-center text-lighter mt-1"></div>
+                  <a href="javascript:void(0)" class="media-body d-block ml-2">website.com/about</a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">About group</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="input-group">
+                    <input type="text" class="form-control border-transparent pl-0" placeholder="Search for post...">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-outline-secondary icon-btn borderless rounded"><i class="ion ion-ios-search"></i></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <div class="media">
+                    <div class="ion ion-md-people ui-w-30 text-center text-lighter mt-1"></div>
+                    <div class="media-body ml-2">
+                      1,625 members
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <div class="media">
+                    <div class="ion ion-md-chatboxes ui-w-30 text-center text-lighter mt-1"></div>
+                    <div class="media-body ml-2">
+                      652 posts
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <div class="media">
+                    <div class="ion ion-md-person-add ui-w-30 text-center text-lighter mt-1"></div>
+                    <a href="javascript:void(0)" class="media-body d-block text-body ml-2">Invite a friend</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">About event</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item py-3">
+                  <div class="media">
+                    <div class="ion ion-md-time ui-w-30 text-center text-lighter mt-1"></div>
+                    <div class="media-body ml-2">
+                      June 1, 2017
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <div class="media">
+                    <div class="ion ion-ios-navigate ui-w-30 text-center text-lighter mt-1"></div>
+                    <div class="media-body ml-2">
+                      Glendale, 330 North Brand Boulevard
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <div class="media">
+                    <div class="ion ion-md-information-circle ui-w-30 text-center text-lighter mt-1"></div>
+                    <div class="media-body ml-2">
+                      Lorem ipsum dolor sit amet, nibh suavitate qualisque ut nam.
+                      Ad harum primis electram duo, porro principes ei has.
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item py-3">
+                  <div class="media">
+                    <div class="ion ion-md-globe ui-w-30 text-center text-lighter mt-1"></div>
+                    <a href="javascript:void(0)" class="media-body d-block ml-2">website.com/about</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header with-elements">
+                <span class="card-header-title">Photos</span>
+                <div class="card-header-elements ml-2">
+                  <small class="text-muted">54</small>
+                </div>
+                <div class="card-header-elements ml-md-auto">
+                  <a href="javascript:void(0)" class="btn btn-default md-btn-flat btn-xs">Show More</a>
+                </div>
+              </div>
+              <div class="card-body p-3">
+                <div id="social-photos">
+
+                  <a href="javascript:void(0)" class="d-block col-6 col-sm-4 col-lg-3 p-1">
+                    <span class="img-thumbnail img-thumbnail-zoom-in">
+                      <span class="img-thumbnail-content text-white">
+                        <i class="ui-icon ion ion-ios-search bg-dark border-0 text-white"></i>
+                      </span>
+                      <img src="assets/img/bg/1.jpg" class="img-fluid" alt="">
+                    </span>
+                  </a>
+                  <a href="javascript:void(0)" class="d-block col-6 col-sm-4 col-lg-3 p-1">
+                    <span class="img-thumbnail img-thumbnail-zoom-in">
+                      <span class="img-thumbnail-content text-white">
+                        <i class="ui-icon ion ion-ios-search bg-dark border-0 text-white"></i>
+                      </span>
+                      <img src="assets/img/uikit/presentation-shirt.jpg" class="img-fluid" alt="">
+                    </span>
+                  </a>
+                  <a href="javascript:void(0)" class="d-block col-6 col-sm-4 col-lg-3 p-1">
+                    <span class="img-thumbnail img-thumbnail-zoom-in">
+                      <span class="img-thumbnail-content text-white">
+                        <i class="ui-icon ion ion-ios-search bg-dark border-0 text-white"></i>
+                      </span>
+                      <img src="assets/img/bg/2.jpg" class="img-fluid" alt="">
+                    </span>
+                  </a>
+                  <a href="javascript:void(0)" class="d-block col-6 col-sm-4 col-lg-3 p-1">
+                    <span class="img-thumbnail img-thumbnail-zoom-in">
+                      <span class="img-thumbnail-content text-white">
+                        <i class="ui-icon ion ion-ios-search bg-dark border-0 text-white"></i>
+                      </span>
+                      <img src="assets/img/uikit/rainy.jpg" class="img-fluid" alt="">
+                    </span>
+                  </a>
+                  <a href="javascript:void(0)" class="d-block col-6 col-sm-4 col-lg-3 p-1">
+                    <span class="img-thumbnail img-thumbnail-zoom-in">
+                      <span class="img-thumbnail-content text-white">
+                        <i class="ui-icon ion ion-ios-search bg-dark border-0 text-white"></i>
+                      </span>
+                      <img src="assets/img/bg/3.jpg" class="img-fluid" alt="">
+                    </span>
+                  </a>
+                  <a href="javascript:void(0)" class="d-block col-6 col-sm-4 col-lg-3 p-1">
+                    <span class="img-thumbnail img-thumbnail-zoom-in">
+                      <span class="img-thumbnail-content text-white">
+                        <i class="ui-icon ion ion-ios-search bg-dark border-0 text-white"></i>
+                      </span>
+                      <img src="assets/img/bg/4.jpg" class="img-fluid" alt="">
+                    </span>
+                  </a>
+                  <a href="javascript:void(0)" class="d-block col-6 col-sm-4 col-lg-3 p-1">
+                    <span class="img-thumbnail img-thumbnail-zoom-in">
+                      <span class="img-thumbnail-content text-white">
+                        <i class="ui-icon ion ion-ios-search bg-dark border-0 text-white"></i>
+                      </span>
+                      <img src="assets/img/uikit/presentation-jeans.jpg" class="img-fluid" alt="">
+                    </span>
+                  </a>
+                  <a href="javascript:void(0)" class="d-block col-6 col-sm-4 col-lg-3 p-1">
+                    <span class="img-thumbnail img-thumbnail-zoom-in">
+                      <span class="img-thumbnail-content text-white">
+                        <i class="ui-icon ion ion-ios-search bg-dark border-0 text-white"></i>
+                      </span>
+                      <img src="assets/img/bg/5.jpg" class="img-fluid" alt="">
+                    </span>
+                  </a>
+                  <a href="javascript:void(0)" class="d-block col-6 col-sm-4 col-lg-3 p-1">
+                    <span class="img-thumbnail img-thumbnail-zoom-in">
+                      <span class="img-thumbnail-content text-white">
+                        <i class="ui-icon ion ion-ios-search bg-dark border-0 text-white"></i>
+                      </span>
+                      <img src="assets/img/bg/6.jpg" class="img-fluid" alt="">
+                    </span>
+                  </a>
+                  <a href="javascript:void(0)" class="d-block col-6 col-sm-4 col-lg-3 p-1">
+                    <span class="img-thumbnail img-thumbnail-zoom-in">
+                      <span class="img-thumbnail-content text-white">
+                        <i class="ui-icon ion ion-ios-search bg-dark border-0 text-white"></i>
+                      </span>
+                      <img src="assets/img/bg/7.jpg" class="img-fluid" alt="">
+                    </span>
+                  </a>
+
+                </div>
+              </div>
+              <a href="javascript:void(0)" class="card-footer d-block text-center text-body small font-weight-semibold">MORE PHOTOS</a>
+            </div>
+
+            <script>
+              $(function() {
+                $('#social-photos').masonry({
+                  itemSelector: '.col-6',
+                  transitionDuration: 0,
+                  originLeft: !($('body').attr('dir') === 'rtl' || $('html').attr('dir') === 'rtl')
+                });
+              });
+            </script>
+
+          </div>
+        </div>
+        <div class="col-lg-8 col-xl-9">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Albums</div>
+              <div class="card-body pb-0">
+
+                <div class="row">
+
+                  <div class="col-md-6 mb-4">
+                    <a href="javascript:void(0)" class="ui-rect ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/7.jpg');">
+                      <div class="ui-bg-overlay bg-dark opacity-25"></div>
+
+                      <div class="d-flex justify-content-between align-items-end ui-rect-content p-3">
+                        <div class="flex-shrink-1 font-weight-semibold">Lorem ipsum dolor sit amet</div>
+                        <div class="small pl-2">12</div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+                    <a href="javascript:void(0)" class="ui-rect ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/8.jpg');">
+                      <div class="ui-bg-overlay bg-dark opacity-25"></div>
+
+                      <div class="d-flex justify-content-between align-items-end ui-rect-content p-3">
+                        <div class="flex-shrink-1 font-weight-semibold">Proin finibus commodo vestibulum</div>
+                        <div class="small pl-2">12</div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+                    <a href="javascript:void(0)" class="ui-rect ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/9.jpg');">
+                      <div class="ui-bg-overlay bg-dark opacity-25"></div>
+
+                      <div class="d-flex justify-content-between align-items-end ui-rect-content p-3">
+                        <div class="flex-shrink-1 font-weight-semibold">Proin bibendum id ante et commodo</div>
+                        <div class="small pl-2">12</div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+                    <a href="javascript:void(0)" class="ui-rect ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/10.jpg');">
+                      <div class="ui-bg-overlay bg-dark opacity-25"></div>
+
+                      <div class="d-flex justify-content-between align-items-end ui-rect-content p-3">
+                        <div class="flex-shrink-1 font-weight-semibold">Sed sollicitudin felis et urna posuere, ut euismod velit facilisis</div>
+                        <div class="small pl-2">12</div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+              <a href="javascript:void(0)" class="card-footer d-block text-center text-body small font-weight-semibold">MORE ALBUMS</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4 overflow-hidden">
+              <div class="card-header with-elements">
+                <span class="card-header-title">Albums</span>
+                <div class="card-header-elements ml-2">
+                  <small class="text-muted">54</small>
+                </div>
+                <div class="card-header-elements ml-md-auto">
+                  <a href="javascript:void(0)" class="btn btn-default md-btn-flat btn-xs">Show More</a>
+                </div>
+              </div>
+              <div class="row no-gutters p-3 px-lg-0 pt-lg-1 pb-lg-0">
+
+                <div class="col-md-6 col-lg-12 p-1 pt-lg-0">
+                  <a href="javascript:void(0)" class="ui-rect ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/11.jpg');">
+                    <div class="ui-bg-overlay bg-dark opacity-25"></div>
+
+                    <div class="d-flex justify-content-between align-items-end ui-rect-content small py-2 px-3">
+                      <div class="flex-shrink-1 font-weight-semibold">Lorem ipsum dolor sit amet</div>
+                      <div class="pl-2">12</div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-md-6 col-lg-12 p-1 pt-lg-0">
+                  <a href="javascript:void(0)" class="ui-rect ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/12.jpg');">
+                    <div class="ui-bg-overlay bg-dark opacity-25"></div>
+
+                    <div class="d-flex justify-content-between align-items-end ui-rect-content small py-2 px-3">
+                      <div class="flex-shrink-1 font-weight-semibold">Proin finibus commodo vestibulum</div>
+                      <div class="pl-2">12</div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-md-6 col-lg-12 p-1 pt-lg-0">
+                  <a href="javascript:void(0)" class="ui-rect ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/13.jpg');">
+                    <div class="ui-bg-overlay bg-dark opacity-25"></div>
+
+                    <div class="d-flex justify-content-between align-items-end ui-rect-content small py-2 px-3">
+                      <div class="flex-shrink-1 font-weight-semibold">Proin bibendum id ante et commodo</div>
+                      <div class="pl-2">12</div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-8 col-xl-9">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Videos</div>
+              <div class="card-body pb-0">
+
+                <div class="row">
+
+                  <div class="col-md-6 col-xl-4 mb-4">
+                    <a href="javascript:void(0)" class="ui-rect-60 ui-bg-cover text-white" style="background-image: url('assets/img/bg/14.jpg');">
+                      <div class="d-flex justify-content-end align-items-end ui-rect-content p-2">
+                        <div class="bg-dark rounded text-white small font-weight-semibold line-height-1 p-1">12:34</div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)" class="d-block text-body mt-3 mb-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </a>
+                    <div>
+                      <a href="javascript:void(0)" class="text-muted small"> 1,342 views</a> &nbsp;
+                      <a href="javascript:void(0)" class="text-muted small"> 256 likes</a> &nbsp;
+                      <a href="javascript:void(0)" class="text-muted small"> 32 reposts</a>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-xl-4 mb-4">
+                    <a href="javascript:void(0)" class="ui-rect-60 ui-bg-cover text-white" style="background-image: url('assets/img/bg/15.jpg');">
+                      <div class="d-flex justify-content-end align-items-end ui-rect-content p-2">
+                        <div class="bg-dark rounded text-white small font-weight-semibold line-height-1 p-1">12:34</div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)" class="d-block text-body mt-3 mb-1">
+                      Aenean id condimentum nulla, nec porttitor purus
+                    </a>
+                    <div>
+                      <a href="javascript:void(0)" class="text-muted small"> 1,342 views</a> &nbsp;
+                      <a href="javascript:void(0)" class="text-muted small"> 256 likes</a> &nbsp;
+                      <a href="javascript:void(0)" class="text-muted small"> 32 reposts</a>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-xl-4 mb-4">
+                    <a href="javascript:void(0)" class="ui-rect-60 ui-bg-cover text-white" style="background-image: url('assets/img/bg/16.jpg');">
+                      <div class="d-flex justify-content-end align-items-end ui-rect-content p-2">
+                        <div class="bg-dark rounded text-white small font-weight-semibold line-height-1 p-1">12:34</div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)" class="d-block text-body mt-3 mb-1">
+                      Nullam vulputate ante scelerisque condimentum dignissim
+                    </a>
+                    <div>
+                      <a href="javascript:void(0)" class="text-muted small"> 1,342 views</a> &nbsp;
+                      <a href="javascript:void(0)" class="text-muted small"> 256 likes</a> &nbsp;
+                      <a href="javascript:void(0)" class="text-muted small"> 32 reposts</a>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-xl-4 mb-4">
+                    <a href="javascript:void(0)" class="ui-rect-60 ui-bg-cover text-white" style="background-image: url('assets/img/bg/1.jpg');">
+                      <div class="d-flex justify-content-end align-items-end ui-rect-content p-2">
+                        <div class="bg-dark rounded text-white small font-weight-semibold line-height-1 p-1">12:34</div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)" class="d-block text-body mt-3 mb-1">
+                      Nullam sit amet massa ultricies elit
+                    </a>
+                    <div>
+                      <a href="javascript:void(0)" class="text-muted small"> 1,342 views</a> &nbsp;
+                      <a href="javascript:void(0)" class="text-muted small"> 256 likes</a> &nbsp;
+                      <a href="javascript:void(0)" class="text-muted small"> 32 reposts</a>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <a href="javascript:void(0)" class="card-footer d-block text-center text-body small font-weight-semibold">MORE VIDEOS</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Videos</div>
+              <div class="row no-gutters p-3 px-lg-0 pt-lg-1 pb-lg-0">
+
+                <div class="col-sm-6 col-lg-12 p-1 pt-lg-0">
+                  <a href="javascript:void(0)" class="ui-rect-60 ui-bg-cover text-white" style="background-image: url('assets/img/bg/2.jpg');">
+                    <div class="d-flex justify-content-end align-items-end ui-rect-content p-2">
+                      <div class="bg-dark rounded text-white small font-weight-semibold line-height-1 p-1">12:34</div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-lg-12 p-1 pt-lg-0">
+                  <a href="javascript:void(0)" class="ui-rect-60 ui-bg-cover text-white" style="background-image: url('assets/img/bg/3.jpg');">
+                    <div class="d-flex justify-content-end align-items-end ui-rect-content p-2">
+                      <div class="bg-dark rounded text-white small font-weight-semibold line-height-1 p-1">12:34</div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-lg-12 p-1 pt-lg-0">
+                  <a href="javascript:void(0)" class="ui-rect-60 ui-bg-cover text-white" style="background-image: url('assets/img/bg/4.jpg');">
+                    <div class="d-flex justify-content-end align-items-end ui-rect-content p-2">
+                      <div class="bg-dark rounded text-white small font-weight-semibold line-height-1 p-1">12:34</div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-sm-6 col-lg-12 p-1 pt-lg-0">
+                  <a href="javascript:void(0)" class="ui-rect-60 ui-bg-cover text-white" style="background-image: url('assets/img/bg/5.jpg');">
+                    <div class="d-flex justify-content-end align-items-end ui-rect-content p-2">
+                      <div class="bg-dark rounded text-white small font-weight-semibold line-height-1 p-1">12:34</div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-8 col-xl-9">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Music</div>
+
+              <div class="media media align-items-center bg-lightest p-4">
+                <a href="javascripd:void(0)" class="ui-icon border-primary text-primary" id="social-audio-control"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                <div class="media-body ml-3">
+                  <div class="media align-items-end flex-truncate mb-1">
+                    <div class="media-body font-weight-semibold text-truncate">
+                      Maroon 5 – What Lovers Do
+                    </div>
+                    <div class="text-muted small">2:13</div>
+                  </div>
+                  <audio id="social-audio">
+                    <source src="assets/audio/Water_Lily.mp3" type="audio/mp3">
+                  </audio>
+                </div>
+                <div class="d-flex text-nowrap">
+                  <a href="javascript:void(0)" class="ion ion-md-heart-outline d-block text-light text-large ml-4"></a>
+                  <a href="javascript:void(0)" class="ion ion-md-share d-block text-light text-large ml-3"></a>
+                </div>
+              </div>
+              <hr class="m-0">
+
+              <div class="card-body">
+                <div class="media align-items-center flex-truncate mb-3">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body text-truncate ml-3">
+                    Post Malone – Rockstar
+                    &nbsp;
+                    <span class="text-muted small">2:13</span>
+                  </div>
+                </div>
+
+                <div class="media align-items-center flex-truncate mb-3">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body text-truncate ml-3">
+                    Camila Cabello – Havana
+                    &nbsp;
+                    <span class="text-muted small">2:13</span>
+                  </div>
+                </div>
+
+                <div class="media align-items-center flex-truncate mb-3">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body text-truncate ml-3">
+                    Lil Pump – Gucci Gang
+                    &nbsp;
+                    <span class="text-muted small">2:13</span>
+                  </div>
+                </div>
+
+                <div class="media align-items-center flex-truncate mb-3">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body text-truncate ml-3">
+                    Imagine Dragons – Thunder
+                    &nbsp;
+                    <span class="text-muted small">2:13</span>
+                  </div>
+                </div>
+
+                <div class="media align-items-center flex-truncate mb-3">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body text-truncate ml-3">
+                    Sam Smith – Too Good At Goodbyes
+                    &nbsp;
+                    <span class="text-muted small">2:13</span>
+                  </div>
+                </div>
+
+                <div class="media align-items-center flex-truncate">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body text-truncate ml-3">
+                    Ed Sheeran – Perfect
+                    &nbsp;
+                    <span class="text-muted small">2:13</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <script>
+              $(function() {
+                var player = plyr.setup(document.getElementById('social-audio'), {
+                  controls: ['progress'],
+                  tooltips: {
+                    controls: false,
+                    seek: true
+                  }
+                })[0];
+
+                $('#social-audio-control').click(function() {
+                  var play = $(this)
+                    .toggleClass('bg-primary border-primary border-transparent text-primary text-white')
+                    .find('.ion')
+                    .toggleClass('ion-ios-play ui-play-icon ion-ios-pause')
+                    .hasClass('ion-ios-pause');
+
+                  if (play) {
+                    player.play();
+                  } else {
+                    player.pause();
+                  }
+                });
+              });
+            </script>
+
+          </div>
+        </div>
+        <div class="col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Music</div>
+              <div class="card-body">
+                <div class="media align-items-center flex-truncate mb-3">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body small text-truncate ml-2">
+                    Maroon 5 – What Lovers Do
+                  </div>
+                  <div class="text-muted small">2:13</div>
+                </div>
+
+                <div class="media align-items-center flex-truncate mb-3">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body small text-truncate ml-2">
+                    Post Malone – Rockstar
+                  </div>
+                  <div class="text-muted small">2:13</div>
+                </div>
+
+                <div class="media align-items-center flex-truncate mb-3">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body small text-truncate ml-2">
+                    Camila Cabello – Havana
+                  </div>
+                  <div class="text-muted small">2:13</div>
+                </div>
+
+                <div class="media align-items-center flex-truncate mb-3">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body small text-truncate ml-2">
+                    Lil Pump – Gucci Gang
+                  </div>
+                  <div class="text-muted small">2:13</div>
+                </div>
+
+                <div class="media align-items-center flex-truncate mb-3">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body small text-truncate ml-2">
+                    Imagine Dragons – Thunder
+                  </div>
+                  <div class="text-muted small">2:13</div>
+                </div>
+
+                <div class="media align-items-center flex-truncate mb-3">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body small text-truncate ml-2">
+                    Sam Smith – Too Good At Goodbyes
+                  </div>
+                  <div class="text-muted small">2:13</div>
+                </div>
+
+                <div class="media align-items-center flex-truncate">
+                  <a href="javascript:void(0)" class="ui-icon ui-icon-sm text-body"><i class="ion ion-ios-play ui-play-icon"></i></a>
+                  <div class="media-body small text-truncate ml-2">
+                    Ed Sheeran – Perfect
+                  </div>
+                  <div class="text-muted small">2:13</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Posts</h4>
+
+      <div class="row">
+
+        <div class="col-lg-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="media mb-3">
+                  <img src="assets/img/avatars/2-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    Leon Wilson
+                    <div class="text-muted small">3 days ago</div>
+                  </div>
+                </div>
+
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus finibus commodo bibendum. Vivamus laoreet blandit
+                  odio, vel finibus quam dictum ut.
+                </p>
+                <div id="social-video-1" data-type="youtube" data-video-id="bTqVqk7FSmY" class="w-100"></div>
+              </div>
+              <div class="card-footer">
+                <a href="javascript:void(0)" class="d-inline-block text-muted">
+                  <small class="align-middle"><strong>123</strong> Likes</small>
+                </a>
+                <a href="javascript:void(0)" class="d-inline-block text-muted ml-3">
+                  <small class="align-middle"><strong>12</strong> Comments</small>
+                </a>
+                <a href="javascript:void(0)" class="d-inline-block text-muted ml-3">
+                  <i class="ion ion-md-share align-middle"></i>&nbsp; <small class="align-middle">Repost</small>
+                </a>
+              </div>
+              <div class="card-footer">
+
+                <div class="media py-1">
+                  <img src="assets/img/avatars/5-small.png" class="d-block ui-w-30 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <div class="mb-1">
+                      <div class="float-right text-muted small">3 days ago</div>
+                      <span class="font-weight-semibold">Nellie Maxwell</span>
+                    </div>
+                    In hac habitasse platea dictumst. Maecenas lacinia risus vitae arcu convallis congue.
+                  </div>
+                </div>
+                <hr class="border-light my-2">
+
+                <div class="media py-1">
+                  <img src="assets/img/avatars/6-small.png" class="d-block ui-w-30 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <div class="mb-1">
+                      <div class="float-right text-muted small">3 days ago</div>
+                      <span class="font-weight-semibold">Mae Gibson</span>
+                    </div>
+                    Nam ultricies risus massa, sit amet tincidunt augue ultricies at.
+                  </div>
+                </div>
+                <hr class="border-light my-2">
+
+                <a href="javascript:void(0)" class="d-block text-center text-body small font-weight-semibold py-1">Show all comments</a>
+              </div>
+              <div class="card-footer py-2">
+                <input type="text" class="form-control border-transparent pl-0" placeholder="Write your comment...">
+              </div>
+            </div>
+
+            <script>
+              $(function() {
+                plyr.setup(document.getElementById('social-video-1'), {
+                  tooltips: {
+                    controls: false,
+                    seek: true
+                  }
+                })[0];
+              });
+            </script>
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="media mb-3">
+                  <img src="assets/img/avatars/3-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    Allie Rodriguez
+                    <div class="text-muted small">3 days ago</div>
+                  </div>
+                </div>
+                <p>
+                  Aliquam varius euismod lectus, vel consectetur nibh tincidunt vitae.
+                  In non dignissim est. Sed eu ligula metus. Vivamus eget quam sit amet
+                  risus venenatis laoreet ut vel magna. Sed dui ligula, tincidunt in nunc
+                  eu, rhoncus iaculis nisi.
+                </p>
+                <p>
+                  Sed et convallis odio, vel laoreet tellus.
+                  Vivamus a leo eu metus porta pulvinar. Pellentesque tristique varius rutrum.
+                </p>
+                <div class="ui-bordered">
+                  <a href="javascript:void(0)" class="ui-rect ui-bg-cover text-white" style="background-image: url('assets/img/bg/1.jpg');">
+                    <div class="d-flex justify-content-start align-items-end ui-rect-content p-2">
+                      <div class="bg-dark rounded text-white small py-1 px-2">
+                        <i class="ion ion-md-link"></i> &nbsp; external.com/some/page
+                      </div>
+                    </div>
+                  </a>
+                  <div class="p-4">
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+                    Duis ut quam nec mi bibendum finibus et id tortor. Maecenas
+                    tristique dolor enim, sed tristique sem cursus et. Etiam tempus
+                    iaculis blandit. Vivamus a justo a elit bibendum pulvinar ut non
+                    erat. Cras in purus sed leo mattis consequat viverra id arcu.
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="javascript:void(0)" class="d-inline-block text-muted">
+                  <small class="align-middle"><strong>123</strong> Likes</small>
+                </a>
+                <a href="javascript:void(0)" class="d-inline-block text-muted ml-3">
+                  <small class="align-middle"><strong>12</strong> Comments</small>
+                </a>
+                <a href="javascript:void(0)" class="d-inline-block text-muted ml-3">
+                  <i class="ion ion-md-share align-middle"></i>&nbsp; <small class="align-middle">Repost</small>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="media mb-3">
+                  <img src="assets/img/avatars/4-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    Kenneth Frazier
+                    <div class="text-muted small">3 days ago</div>
+                  </div>
+                </div>
+
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus finibus commodo bibendum. Vivamus laoreet blandit
+                  odio, vel finibus quam dictum ut.
+                </p>
+                <a href="javascript:void(0)" class="ui-rect ui-bg-cover" style="background-image: url('assets/img/bg/6.jpg');"></a>
+              </div>
+              <div class="card-footer">
+                <a href="javascript:void(0)" class="d-inline-block text-muted">
+                  <small class="align-middle"><strong>123</strong> Likes</small>
+                </a>
+                <a href="javascript:void(0)" class="d-inline-block text-muted ml-3">
+                  <small class="align-middle"><strong>12</strong> Comments</small>
+                </a>
+                <a href="javascript:void(0)" class="d-inline-block text-muted ml-3">
+                  <i class="ion ion-md-share align-middle"></i>&nbsp; <small class="align-middle">Repost</small>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="media mb-3">
+                  <img src="assets/img/avatars/11-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    Belle Ross
+                    <div class="text-muted small">3 days ago</div>
+                  </div>
+                </div>
+
+                <p>
+                  Aliquam viverra ornare tincidunt. Vestibulum sit amet vestibulum quam.
+                  Donec eu est non velit rhoncus interdum eget vel lorem.
+                </p>
+
+                <div class="border-top-0 border-right-0 border-bottom-0 ui-bordered pl-3 mt-4 mb-2">
+                  <div class="media mb-3">
+                    <img src="assets/img/avatars/4-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                    <div class="media-body ml-3">
+                      Kenneth Frazier
+                      <div class="text-muted small">3 days ago</div>
+                    </div>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus finibus commodo bibendum. Vivamus laoreet blandit
+                    odio, vel finibus quam dictum ut.
+                  </p>
+                  <a href="javascript:void(0)" class="ui-rect ui-bg-cover" style="background-image: url('assets/img/bg/8.jpg');"></a>
+                </div>
+                <a href="javascript:void(0)" class="text-muted small">Reposted from @kfrazier/posts/123</a>
+              </div>
+              <div class="card-footer">
+                <a href="javascript:void(0)" class="d-inline-block text-muted">
+                  <small class="align-middle"><strong>123</strong> Likes</small>
+                </a>
+                <a href="javascript:void(0)" class="d-inline-block text-muted ml-3">
+                  <small class="align-middle"><strong>12</strong> Comments</small>
+                </a>
+                <a href="javascript:void(0)" class="d-inline-block text-muted ml-3">
+                  <i class="ion ion-md-share align-middle"></i>&nbsp; <small class="align-middle">Repost</small>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Timeline</h4>
+
+      <div class="uikit-example">
+        <!-- Centered timeline with info block -->
+        <div class="ui-timeline ui-timeline-with-info ui-timeline-center">
+          <div class="ui-timeline-separator text-big">
+            <div class="ui-timeline-track-bg d-inline-block rounded small font-weight-semibold py-2 px-4">Yesterday</div>
+          </div>
+
+          <div class="ui-timeline-item ui-timeline-item-left">
+            <div class="ui-timeline-info small font-weight-semibold">
+              12:15 PM
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <p><span class="badge badge-outline-success">Event</span></p>
+                <p class="mb-0">
+                  Mauris facilisis purus id luctus feugiat. Vivamus quis scelerisque libero.
+                  Curabitur mollis vel felis nec feugiat. Sed efficitur elementum rutrum.
+                  Nulla gravida ligula ut ultricies viverra. Morbi interdum urna sed dolor sagittis luctus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-info text-right small font-weight-semibold">
+              4:53 PM
+            </div>
+            <div class="ui-timeline-badge">
+              <img src="assets/img/avatars/4-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <div class="font-weight-bold mb-3">
+                  Kenneth Frazier
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus finibus commodo bibendum. Vivamus laoreet blandit
+                  odio, vel finibus quam dictum ut.
+                </p>
+                <a href="javascript:void(0)" class="ui-rect ui-bg-cover" style="background-image: url('assets/img/bg/6.jpg');"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item ui-timeline-item-left">
+            <div class="ui-timeline-info small font-weight-semibold">
+              8:34 PM
+            </div>
+            <div class="ui-timeline-badge ui-w-40">
+              <div class="ui-square bg-success rounded-circle text-white">
+                <div class="d-flex ui-square-content">
+                  <div class="ion ion-md-list-box m-auto"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body media">
+                <div class="d-none d-sm-block col-sm-3 px-0">
+                  <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/4.jpg');"></div>
+                </div>
+                <div class="media-body py-2 pl-sm-3">
+                  <div class="text-big font-weight-bold mb-2">
+                    <a href="#" class="text-body">Advertisers Embrace Rich Media Format</a>
+                  </div>
+                  <div class="text-muted small mb-3">
+                    <a href="javascript:void(0)" class="text-muted">Allie Rodriguez</a>
+                    &nbsp; &nbsp;·&nbsp; &nbsp;
+                    <span class="ion ion-ios-eye"></span> 562
+                    &nbsp; &nbsp; &nbsp;
+                    <a href="javascript:void(0)" class="text-muted"><span class="ion ion-ios-text"></span> 12</a>
+                  </div>
+                  <div>
+                    Curabitur pulvinar felis auctor lectus tincidunt iaculis. Vivamus aliquam elementum
+                    libero. Curabitur pulvinar lorem in nisi mollis eleifend. In aliquet arcu eu cursus
+                    blandit. Nulla sed pretium nisi.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-separator text-big">
+            <div class="d-inline-block bg-primary rounded text-white small font-weight-semibold py-2 px-4">Today</div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-info text-right small font-weight-semibold">
+              8:44 AM
+            </div>
+            <div class="ui-timeline-badge">
+              <div class="ui-feed-icon-container">
+                <span class="ui-icon ui-feed-icon ion ion-ios-text bg-secondary text-white"></span>
+                <img src="assets/img/avatars/8-small.png" class="ui-w-40 rounded-circle" alt>
+              </div>
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <a href="#">Hallie Lewis</a> commented on <a href="#">Article Name</a>
+                <div class="my-1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+                </div>
+                <div class="text-muted small">2 hours ago</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item ui-timeline-item-left">
+            <div class="ui-timeline-info small font-weight-semibold">
+              11:22 AM
+            </div>
+            <div class="ui-timeline-badge">
+              <span class="badge badge-danger">NEW</span>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                Nullam nec nisl eu nisl ultricies commodo nec eu arcu. Vivamus blandit lorem id nisi malesuada, in semper dui
+                vulputate. Sed eleifend rhoncus maximus. Integer at lacinia lacus, vel iaculis turpis. Integer tristique purus
+                mi, eget
+                iaculis urna congue in. Mauris eget neque ut mauris ultricies semper.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="my-5">
+
+      <div class="uikit-example">
+        <!-- Centered stacked timeline -->
+        <div class="ui-timeline ui-timeline-center ui-timeline-stacked">
+          <div class="ui-timeline-separator text-big">
+            <div class="ui-timeline-track-bg d-inline-block rounded small font-weight-semibold py-2 px-4">Yesterday</div>
+          </div>
+
+          <div class="ui-timeline-item ui-timeline-item-left">
+            <div class="card card-condenced">
+              <div class="card-body">
+                <p><span class="badge badge-outline-success">Event</span></p>
+                <p class="mb-0">
+                  Mauris facilisis purus id luctus feugiat. Vivamus quis scelerisque libero.
+                  Curabitur mollis vel felis nec feugiat. Sed efficitur elementum rutrum.
+                  Nulla gravida ligula ut ultricies viverra. Morbi interdum urna sed dolor sagittis luctus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-badge">
+              <img src="assets/img/avatars/4-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <div class="font-weight-bold mb-3">
+                  Kenneth Frazier
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus finibus commodo bibendum. Vivamus laoreet blandit
+                  odio, vel finibus quam dictum ut.
+                </p>
+                <a href="javascript:void(0)" class="ui-rect ui-bg-cover" style="background-image: url('assets/img/bg/6.jpg');"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item ui-timeline-item-left">
+            <div class="ui-timeline-badge ui-w-40">
+              <div class="ui-square bg-success rounded-circle text-white">
+                <div class="d-flex ui-square-content">
+                  <div class="ion ion-md-list-box m-auto"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body media">
+                <div class="d-none d-sm-block col-sm-3 px-0">
+                  <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/4.jpg');"></div>
+                </div>
+                <div class="media-body py-2 pl-sm-3">
+                  <div class="text-big font-weight-bold mb-2">
+                    <a href="#" class="text-body">Advertisers Embrace Rich Media Format</a>
+                  </div>
+                  <div class="text-muted small mb-3">
+                    <a href="javascript:void(0)" class="text-muted">Allie Rodriguez</a>
+                    &nbsp; &nbsp;·&nbsp; &nbsp;
+                    <span class="ion ion-ios-eye"></span> 562
+                    &nbsp; &nbsp; &nbsp;
+                    <a href="javascript:void(0)" class="text-muted"><span class="ion ion-ios-text"></span> 12</a>
+                  </div>
+                  <div>
+                    Curabitur pulvinar felis auctor lectus tincidunt iaculis. Vivamus aliquam elementum
+                    libero. Curabitur pulvinar lorem in nisi mollis eleifend. In aliquet arcu eu cursus
+                    blandit. Nulla sed pretium nisi.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-separator text-big">
+            <div class="d-inline-block bg-primary rounded text-white small font-weight-semibold py-2 px-4">Today</div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-badge">
+              <div class="ui-feed-icon-container">
+                <span class="ui-icon ui-feed-icon ion ion-ios-text bg-secondary text-white"></span>
+                <img src="assets/img/avatars/8-small.png" class="ui-w-40 rounded-circle" alt>
+              </div>
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <a href="#">Hallie Lewis</a> commented on <a href="#">Article Name</a>
+                <div class="my-1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+                </div>
+                <div class="text-muted small">2 hours ago</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item ui-timeline-item-left">
+            <div class="ui-timeline-badge">
+              <span class="badge badge-danger">NEW</span>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                Nullam nec nisl eu nisl ultricies commodo nec eu arcu. Vivamus blandit lorem id nisi malesuada, in semper dui
+                vulputate. Sed eleifend rhoncus maximus. Integer at lacinia lacus, vel iaculis turpis. Integer tristique purus
+                mi, eget
+                iaculis urna congue in. Mauris eget neque ut mauris ultricies semper.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="my-5">
+
+      <div class="uikit-example">
+        <!-- Left timeline -->
+        <div class="ui-timeline">
+          <div class="ui-timeline-separator text-big">
+            <div class="ui-timeline-track-bg d-inline-block rounded small font-weight-semibold py-2 px-4">Yesterday</div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="card card-condenced">
+              <div class="card-body">
+                <p><span class="badge badge-outline-success">Event</span></p>
+                <p class="mb-0">
+                  Mauris facilisis purus id luctus feugiat. Vivamus quis scelerisque libero.
+                  Curabitur mollis vel felis nec feugiat. Sed efficitur elementum rutrum.
+                  Nulla gravida ligula ut ultricies viverra. Morbi interdum urna sed dolor sagittis luctus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-badge">
+              <img src="assets/img/avatars/4-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <div class="font-weight-bold mb-3">
+                  Kenneth Frazier
+                </div>
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus finibus commodo bibendum. Vivamus laoreet blandit
+                  odio, vel finibus quam dictum ut.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-badge ui-w-40">
+              <div class="ui-square bg-success rounded-circle text-white">
+                <div class="d-flex ui-square-content">
+                  <div class="ion ion-md-list-box m-auto"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <div class="text-big font-weight-bold mb-2">
+                  <a href="#" class="text-body">Advertisers Embrace Rich Media Format</a>
+                </div>
+                <div class="text-muted small mb-3">
+                  <a href="javascript:void(0)" class="text-muted">Allie Rodriguez</a>
+                  &nbsp; &nbsp;·&nbsp; &nbsp;
+                  <span class="ion ion-ios-eye"></span> 562
+                  &nbsp; &nbsp; &nbsp;
+                  <a href="javascript:void(0)" class="text-muted"><span class="ion ion-ios-text"></span> 12</a>
+                </div>
+                <div>
+                  Curabitur pulvinar felis auctor lectus tincidunt iaculis. Vivamus aliquam elementum
+                  libero. Curabitur pulvinar lorem in nisi mollis eleifend. In aliquet arcu eu cursus
+                  blandit. Nulla sed pretium nisi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-separator text-big">
+            <div class="d-inline-block bg-primary rounded text-white small font-weight-semibold py-2 px-4">Today</div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-badge">
+              <div class="ui-feed-icon-container">
+                <span class="ui-icon ui-feed-icon ion ion-ios-text bg-secondary text-white"></span>
+                <img src="assets/img/avatars/8-small.png" class="ui-w-40 rounded-circle" alt>
+              </div>
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <a href="#">Hallie Lewis</a> commented on <a href="#">Article Name</a>
+                <div class="my-1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+                </div>
+                <div class="text-muted small">2 hours ago</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-badge">
+              <span class="badge badge-danger">NEW</span>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                Nullam nec nisl eu nisl ultricies commodo nec eu arcu. Vivamus blandit lorem id nisi malesuada, in semper dui
+                vulputate. Sed eleifend rhoncus maximus. Integer at lacinia lacus, vel iaculis turpis. Integer tristique
+                purus
+                mi, eget
+                iaculis urna congue in. Mauris eget neque ut mauris ultricies semper.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="my-5">
+
+      <div class="uikit-example">
+        <!-- Left timeline with info -->
+        <div class="ui-timeline ui-timeline-with-info">
+          <div class="ui-timeline-separator text-big">
+            <div class="ui-timeline-track-bg d-inline-block rounded small font-weight-semibold py-2 px-4">Yesterday</div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-info text-right small font-weight-semibold">
+              12:15 PM
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <p><span class="badge badge-outline-success">Event</span></p>
+                <p class="mb-0">
+                  Mauris facilisis purus id luctus feugiat. Vivamus quis scelerisque libero.
+                  Curabitur mollis vel felis nec feugiat. Sed efficitur elementum rutrum.
+                  Nulla gravida ligula ut ultricies viverra. Morbi interdum urna sed dolor sagittis luctus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-info text-right small font-weight-semibold">
+              4:53 PM
+            </div>
+            <div class="ui-timeline-badge">
+              <img src="assets/img/avatars/4-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <div class="font-weight-bold mb-3">
+                  Kenneth Frazier
+                </div>
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus finibus commodo bibendum. Vivamus laoreet blandit
+                  odio, vel finibus quam dictum ut.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-info text-right small font-weight-semibold">
+              8:34 PM
+            </div>
+            <div class="ui-timeline-badge ui-w-40">
+              <div class="ui-square bg-success rounded-circle text-white">
+                <div class="d-flex ui-square-content">
+                  <div class="ion ion-md-list-box m-auto"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <div class="text-big font-weight-bold mb-2">
+                  <a href="#" class="text-body">Advertisers Embrace Rich Media Format</a>
+                </div>
+                <div class="text-muted small mb-3">
+                  <a href="javascript:void(0)" class="text-muted">Allie Rodriguez</a>
+                  &nbsp; &nbsp;·&nbsp; &nbsp;
+                  <span class="ion ion-ios-eye"></span> 562
+                  &nbsp; &nbsp; &nbsp;
+                  <a href="javascript:void(0)" class="text-muted"><span class="ion ion-ios-text"></span> 12</a>
+                </div>
+                <div>
+                  Curabitur pulvinar felis auctor lectus tincidunt iaculis. Vivamus aliquam elementum
+                  libero. Curabitur pulvinar lorem in nisi mollis eleifend. In aliquet arcu eu cursus
+                  blandit. Nulla sed pretium nisi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-separator text-big">
+            <div class="d-inline-block bg-primary rounded text-white small font-weight-semibold py-2 px-4">Today</div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-info text-right small font-weight-semibold">
+              8:44 AM
+            </div>
+            <div class="ui-timeline-badge">
+              <div class="ui-feed-icon-container">
+                <span class="ui-icon ui-feed-icon ion ion-ios-text bg-secondary text-white"></span>
+                <img src="assets/img/avatars/8-small.png" class="ui-w-40 rounded-circle" alt>
+              </div>
+            </div>
+            <div class="card card-condenced">
+              <div class="card-body">
+                <a href="#">Hallie Lewis</a> commented on <a href="#">Article Name</a>
+                <div class="my-1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+                </div>
+                <div class="text-muted small">2 hours ago</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-timeline-item">
+            <div class="ui-timeline-info text-right small font-weight-semibold">
+              11:22 AM
+            </div>
+            <div class="ui-timeline-badge">
+              <span class="badge badge-danger">NEW</span>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                Nullam nec nisl eu nisl ultricies commodo nec eu arcu. Vivamus blandit lorem id nisi malesuada, in semper dui
+                vulputate. Sed eleifend rhoncus maximus. Integer at lacinia lacus, vel iaculis turpis. Integer tristique
+                purus
+                mi, eget
+                iaculis urna congue in. Mauris eget neque ut mauris ultricies semper.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cui-bottom-spacer"></div>
+
+  <script>
+  (function() {
+    function hasClass(el, cls) {
+      return el.className.split(' ').indexOf(cls) !== -1;
+    }
+
+    function sanitizeSource(source, blacklist) {
+      source = source
+        .replace(/\r/g, '')
+        .replace(/\t/g, '  ')
+        .replace(/^ *\n+/, '\n')
+        .replace(/[\s\n]+$/, '');
+
+      source = source.replace(new RegExp('\\n' + source.match(/^\n( *)/)[1], 'g'), '\n');
+
+      if (blacklist) {
+        source = source.replace(/class="([^"]+)"/g, function(m, clsStr) {
+          var clsArr = clsStr.replace(/^\s+|\s+$/, '').replace(/\s+/g, ' ').split(' ');
+
+          for (var i = 0, l = blacklist.length, clsInd; i < l; i++) {
+            if ((clsInd = clsArr.indexOf(blacklist[i])) !== -1) {
+              clsArr.splice(clsInd, 1);
+            }
+          }
+
+          return 'class="' + clsArr.join(' ') + '"';
+        });
+      }
+
+      return source
+        .replace(/\s+class=""/ig, '')
+        .replace(/([a-z]+)=""/ig, '$1')
+        .replace(/javascript:void\(0\)/g, '#')
+        .replace(/^\n/, '');
+    }
+
+    function attachClipboard(el, src) {
+      return new Clipboard(el, {
+        text: function() {
+          return src;
+        }
+      });
+    }
+
+    function openModal(src, formattedSrc) {
+      document.querySelector('.uikit-example-modal-content').innerHTML = '<pre><code class="hljs html xml">' + formattedSrc + '</code></pre>';
+
+      var copyBtn = document.querySelector('.uikit-example-modal-copy');
+      var closeBtn = document.querySelector('.uikit-example-modal-close');
+
+      var copyBtnTimeout = null;
+      var clipboard = attachClipboard(copyBtn, src);
+
+      clipboard.on('success', function(e) {
+        if (copyBtnTimeout) {
+          clearTimeout(copyBtnTimeout);
+          copyBtnTimeout = null;
+        }
+
+        copyBtn.className = copyBtn.className.replace(' copied', '');
+        copyBtn.className += ' copied';
+
+        copyBtnTimeout = setTimeout(function() {
+          copyBtn.className = copyBtn.className.replace(' copied', '');
+        }, 1000);
+      });
+
+      var closeListener = function() {
+        document.querySelector('.uikit-example-modal-content').innerHTML = '';
+        document.querySelector('.uikit-example-modal').scrollTop = 0;
+        closeBtn.removeEventListener('click', closeListener);
+        clipboard.destroy();
+        document.documentElement.className = document.documentElement.className.replace(' uikit-example-modal-opened', '');
+      };
+
+      closeBtn.addEventListener('click', closeListener);
+
+      document.documentElement.className += ' uikit-example-modal-opened';
+    }
+
+    Array.prototype.slice.call(document.querySelectorAll('.uikit-example')).forEach(function(parentEl) {
+      var btnsWrapper = document.createElement('div');
+      btnsWrapper.className = 'uikit-example-btns';
+
+      var copyBtn = document.createElement('a');
+      copyBtn.href = 'javascript:void(0)';
+      copyBtn.className = 'uikit-example-btn copy';
+
+      var sourceBtn = document.createElement('a');
+      sourceBtn.href = 'javascript:void(0)';
+      sourceBtn.className = 'uikit-example-btn';
+      sourceBtn.innerHTML = 'SOURCE'
+
+      btnsWrapper.appendChild(copyBtn);
+      btnsWrapper.appendChild(sourceBtn);
+
+      var blacklistStr = (parentEl.getAttribute('data-blacklist') || null);
+      var blacklist = (blacklistStr && blacklistStr.split(',')) || null;
+      var src = sanitizeSource(parentEl.innerHTML, blacklist);
+      var formattedSrc = hljs.highlight('html', src).value;
+
+      parentEl.appendChild(btnsWrapper);
+
+      var copyBtnTimeout = null;
+      attachClipboard(copyBtn, src).on('success', function(e) {
+        if (copyBtnTimeout) {
+          clearTimeout(copyBtnTimeout);
+          copyBtnTimeout = null;
+        }
+
+        copyBtn.className = copyBtn.className.replace(' copied', '');
+        copyBtn.className += ' copied';
+
+        copyBtnTimeout = setTimeout(function() {
+          copyBtn.className = copyBtn.className.replace(' copied', '');
+        }, 1000);
+      });
+
+      sourceBtn.addEventListener('click', function(e) {
+        openModal(src, formattedSrc);
+      });
+    });
+  })();
+
+  $(function() {
+    // Initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+
+  <!-- Libs -->
+  <script src="assets/vendor/libs/nouislider/nouislider.js"></script>
+  <script src="assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+  <script src="assets/vendor/libs/chartjs/chartjs.js"></script>
+  <script src="assets/vendor/libs/datatables/datatables.js"></script>
+  <script src="assets/vendor/libs/moment/moment.js"></script>
+  <script src="assets/vendor/libs/numeral/numeral.js"></script>
+  <script src="assets/vendor/libs/plyr/plyr.js"></script>
+  <script src="assets/vendor/libs/swiper/swiper.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery-fullscreen.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery-indicator.js"></script>
+  <!-- Google Maps -->
+  <!-- NOTE: When using Google Maps on your own site you MUST get your own API key:
+           //developers.google.com/maps/documentation/javascript/get-api-key
+           After you got the key paste it in the URL below. -->
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyCHtdj4L66c05v1UZm-nte1FzUEAN6GKBI"></script>
+  <script src="assets/vendor/libs/gmaps/gmaps.js"></script>
+  <script src="assets/vendor/libs/masonry/masonry.js"></script>
+
+</body>
+
+</html>

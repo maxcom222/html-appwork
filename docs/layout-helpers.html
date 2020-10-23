@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style docs-page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Layout helpers - Appwork v1.4.0 Docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/bootstrap.css">
+  <link rel="stylesheet" href="assets/appwork.css">
+  <link rel="stylesheet" href="assets/theme-corporate.css">
+
+  <link rel="stylesheet" href="assets/main.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/main.js"></script>
+
+</head>
+<body>
+
+  <h1 class="docs-page-header bg-dark text-white">
+    <span class="docs-page-header-path">Docs v1.4.0 &nbsp;/&nbsp;</span>
+    <span class="docs-page-header-dropdown">
+      <span class="dropdown-toggle text-white">Layout helpers</span>
+      <span class="dropdown-menu mt-3">
+        <a href="html5.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">HTML5</span></a>
+        <a href="angular.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Angular</span></a>
+        <a href="vue.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Vue.js</span></a>
+        <a href="react.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">React</span></a>
+        <a href="laravel.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Laravel</span></a>
+        <a href="laravel-vue.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Laravel + Vue.js</span></a>
+        <a href="rails.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Rails</span></a>
+        <a href="rails-turbolinks.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Rails + Turbolinks</span></a>
+        <a href="aspnet-core.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET Core</span></a>
+        <a href="aspnet-core-mvc.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET Core MVC</span></a>
+        <a href="aspnet-mvc.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET MVC</span></a>
+        <a href="aspnet-mvc-webpack.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET MVC + Webpack</span></a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">OTHER</h6>
+        <a href="settings-panel.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Settings panel</span></a>
+        
+      </span>
+    </span>
+  </h1>
+
+
+  <div class="docs-wrapper">
+    <div class="docs-sections bg-light">
+      <ul class="docs-sections-inner">
+
+<li><a href="#usage">Usage</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#events">Events</a></li>
+      </ul>
+    </div>
+
+    <div class="docs-inner">
+<div class="docs-framework-version">
+  <div class="docs-block text-white">
+    Layout helpers allow you to easily set layout options and get current layout info.
+  </div>
+  <ul class="nav nav-lg nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#html5">HTML5, Laravel, Rails, ASP.NET</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#angular">Angular</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#vuejs">Vue.js</a>
+    </li>
+  </ul>
+</div>
+
+<h2 class="docs-header docs-header-anchor"><a name="usage">Usage</h2>
+<div class="docs-block">
+  <p>
+    Include <code>layout-helpers.js</code> script in the <code>&lt;head></code>
+    section of the main layout. Then you can use helper methods to control page layout.
+  </p>
+</div>
+<div class="docs-block docs-html5-version">
+  <pre class="docs-code javascript"><code>window.layoutHelpers.toggleCollapsed()</code></pre>
+</div>
+<div class="docs-block docs-angular-version">
+  <pre class="docs-code typescript"><code>import { Component } from '@angular/core';
+// Path to `src/app/layout/layout.service.ts` file
+import { LayoutService } from './layout/layout.service';
+
+@Component({
+  selector: 'some-component',
+  templateUrl: './some-component.component.html'
+})
+export class LayoutNavbarComponent {
+  constructor(private layoutService: LayoutService) {}
+
+  toggleSidenav() {
+    this.layoutService.toggleCollapsed();
+  }
+}</code></pre>
+</div>
+<div class="docs-block docs-vuejs-version">
+  <pre class="docs-code javascript"><code>export default {
+  name: 'some-component',
+  toggleSidenav() {
+    this.layoutHelpers.toggleCollapsed()
+  }
+}</code></pre>
+</div>
+
+<h2 class="docs-header docs-header-anchor"><a name="methods">Methods</h2>
+<div class="docs-block">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="text-nowrap">getLayoutSidenav()</code></td>
+        <td>Returns the <code>.layout-sidenav</code> element (if exists). Otherwise returns <code>null</code>.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">getSidenav()</code></td>
+        <td>Returns the <code>.sidenav.layout-sidenav</code> element or <code>.sidenav</code> element within <code>.layout-sidenav</code> (if exists). Otherwise returns <code>null</code>.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">getLayoutNavbar()</code></td>
+        <td>Returns the <code>.layout-navbar</code> element (if exists). Otherwise returns <code>null</code>.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">getLayoutFooter()</code></td>
+        <td>Returns the <code>.layout-footer</code> element (if exists). Otherwise returns <code>null</code>.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">getLayoutContainer()</code></td>
+        <td>Returns the <code>.layout-container</code> element (if exists). Otherwise returns <code>null</code>.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">isSmallScreen()</code></td>
+        <td>Returns <code>true</code> if the window width is less than 992px (lg breakpoint).</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">isLayout1()</code></td>
+        <td>Returns <code>true</code> if the current layout is <code>.layout-1</code>.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">isCollapsed()</code></td>
+        <td>Returns <code>true</code> if the layout sidenav is collapsed.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">isFixed()</code></td>
+        <td>Returns <code>true</code> if the layout position is fixed.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">isOffcanvas()</code></td>
+        <td>Returns <code>true</code> if the current layout is offcanvas.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">isNavbarFixed()</code></td>
+        <td>Returns <code>true</code> if the layout navbar position is fixed.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">isFooterFixed()</code></td>
+        <td>Returns <code>true</code> if the layout footer position is fixed.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">isReversed()</code></td>
+        <td>Returns <code>true</code> if layout is reversed.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setCollapsed(collapsed, animate = true)</code></td>
+        <td>Collapse / expand layout sidenav.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">toggleCollapsed(animate = true)</code></td>
+        <td>Toggle layout sidenav.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setPosition(fixed, offcanvas)</code></td>
+        <td>Set layout position. <span class="text-muted">Note:</span> If the layout position is fixed and the current layout is <code>.layout-1</code>, the layout navbar position also will be fixed.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setNavbarFixed(fixed)</code></td>
+        <td>Set layout navbar position.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setFooterFixed(fixed)</code></td>
+        <td>Set layout footer position.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setReversed(reversed)</code></td>
+        <td>Reverse layout.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">update()</code></td>
+        <td>Update layout.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setAutoUpdate(enable)</code></td>
+        <td>Update layout on window resize.</td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">on(event, callback)</code></td>
+        <td>
+          <p>Add an event listener. You can set listener namespace using the next syntax: <code>{EventName}.{Namespace}</code>.</p>
+          <pre class="docs-code javascript docs-html5-version"><code>// Subscribe to `resize` event. No namespace defined.
+window.layoutHelpers.on('resize', function() {
+  ...
+});
+
+// Subscribe to `resize` event with `page-1` namespace.
+window.layoutHelpers.on('resize.page-1', function() {
+  ...
+});</code></pre>
+          <pre class="docs-code typescript docs-angular-version"><code>// Subscribe to `resize` event. No namespace defined.
+this.layoutService.on('resize', function() {
+  ...
+});
+
+// Subscribe to `resize` event with `page-1` namespace.
+this.layoutService.on('resize.page-1', function() {
+  ...
+});</code></pre>
+          <pre class="docs-code javascript docs-vuejs-version"><code>// Subscribe to `resize` event. No namespace defined.
+this.layoutHelpers.on('resize', function() {
+  ...
+})
+
+// Subscribe to `resize` event with `page-1` namespace.
+this.layoutHelpers.on('resize.page-1', function() {
+  ...
+})</code></pre>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">off(event)</code>
+        <td>
+          <p>Remove an event listener. Will remove only events with given namespace, otherwise will remove all events without namespace.</p>
+          <pre class="docs-code javascript docs-html5-version"><code>// Remove all `resize` listeners without namespace.
+window.ayoutHelpers.off('resize');
+
+// Remove all `resize` listeners with `page-1` namespace.
+window.layoutHelpers.off('resize.page-1');</code></pre>
+          <pre class="docs-code javascript docs-angular-version"><code>// Remove all `resize` listeners without namespace.
+this.layoutService.off('resize');
+
+// Remove all `resize` listeners with `page-1` namespace.
+this.layoutService.off('resize.page-1');</code></pre>
+          <pre class="docs-code javascript docs-vuejs-version"><code>// Remove all `resize` listeners without namespace.
+this.layoutHelpers.off('resize')
+
+// Remove all `resize` listeners with `page-1` namespace.
+this.layoutHelpers.off('resize.page-1')</code></pre>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">init()</code></td>
+        <td>
+          Performs <code>layoutHelpers</code> initialization. Invoked automatically after the page loaded.
+          You need to call this method only if the <code>destroy()</code> method called before.
+          If <code>layoutHelpers</code> is already initialized, nothing will happen.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">destroy()</code></td>
+        <td>
+          <p>Remove bound events, clean markup and disable layout auto update.</p>
+          <div class="alert alert-warning m-0">
+            Will remove all bound events except <code>init</code> events. You will need unbind <code>init</code> events manually using the <code>off()</code> method.
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="docs-header docs-header-anchor"><a name="events">Events</h2>
+<div class="docs-block">
+  <p>You can subscribe / unsubscribe events in two ways:</p>
+  <ol class="mb-4">
+    <li class="mb-1">
+      Using the <code>on()</code> / <code>off()</code> methods <strong>(preferred way)</strong>;
+    </li>
+    <li>
+      Using <code>window.addEventListener('layout{EventName}', ...)</code> / <code>window.removeEventListener('layout{EventName}', ...)</code>.
+    </li>
+  </ol>
+  <div class="alert alert-warning m-0">
+    The <code>destroy()</code> method will remove only events bound using the <code>on()</code> method. So, after destroy, you will need to manually remove events bound using <code>window.addEventListener</code>.
+  </div>
+</div>
+<div class="docs-block">
+  <pre class="docs-code javascript docs-html5-version"><code>Examples:
+
+// - Using the on() / off() methods, without namespace:
+
+// Subscribe to `resize` event.
+window.layoutHelpers.on('resize', function() {
+  ...
+});
+
+// Unsubscribe `resize` event.
+window.layoutHelpers.off('resize');
+
+
+// - Using the on() / off() methods, with `page-1` namespace:
+
+// Subscribe to `resize` event.
+window.layoutHelpers.on('resize.page-1', function() {
+  ...
+});
+
+// Unsubscribe `resize` event.
+window.layoutHelpers.off('resize.page-1');
+
+
+// - Using window.addEventListener / window.removeEventListener:
+
+function resizeCallback() {
+  ...
+}
+
+// Subscribe to `resize` event.
+window.addEventListener('layoutresize', resizeCallback, false);
+
+// Unsubscribe `resize` event.
+window.removeEventListener('layoutresize', resizeCallback, false);</code></pre>
+  <pre class="docs-code javascript docs-angular-version"><code>Examples:
+
+// - Using the on() / off() methods, without namespace:
+
+// Subscribe to `resize` event.
+this.layoutService.on('resize', function() {
+  ...
+});
+
+// Unsubscribe `resize` event.
+this.layoutService.off('resize');
+
+
+// - Using the on() / off() methods, with `page-1` namespace:
+
+// Subscribe to `resize` event.
+this.layoutService.on('resize.page-1', function() {
+  ...
+});
+
+// Unsubscribe `resize` event.
+this.layoutService.off('resize.page-1');
+
+
+// - Using window.addEventListener / window.removeEventListener:
+
+function resizeCallback() {
+  ...
+}
+
+// Subscribe to `resize` event.
+window.addEventListener('layoutresize', resizeCallback, false);
+
+// Unsubscribe `resize` event.
+window.removeEventListener('layoutresize', resizeCallback, false);</code></pre>
+  <pre class="docs-code javascript docs-vuejs-version"><code>Examples:
+
+// - Using the on() / off() methods, without namespace:
+
+// Subscribe to `resize` event.
+this.layoutHelpers.on('resize', function() {
+  ...
+})
+
+// Unsubscribe `resize` event.
+this.layoutHelpers.off('resize')
+
+// - Using the on() / off() methods, with `page-1` namespace:
+
+// Subscribe to `resize` event.
+this.layoutHelpers.on('resize.page-1', function() {
+  ...
+})
+
+// Unsubscribe `resize` event.
+this.layoutHelpers.off('resize.page-1')
+
+// - Using window.addEventListener / window.removeEventListener:
+
+function resizeCallback() {
+  ...
+}
+
+// Subscribe to `resize` event.
+window.addEventListener('layoutresize', resizeCallback, false)
+
+// Unsubscribe `resize` event.
+window.removeEventListener('layoutresize', resizeCallback, false)</code></pre>
+</div>
+<div class="docs-block">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Event</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>init</code></td>
+        <td>Triggered after <code>layoutHelpers</code> initialization completed.</td>
+      </tr>
+      <tr>
+        <td><code>toggle</code></td>
+        <td>Triggered after layout sidenav collapsed / expanded.</td>
+      </tr>
+      <tr>
+        <td><code>resize</code></td>
+        <td>Delayed window resize event. Default resize event delay: <code>200ms</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    </div>
+  </div>
+
+</body>
+</html>

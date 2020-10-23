@@ -1,0 +1,29 @@
+@import "../../node_modules/vegas/dist/vegas";
+
+.vegas-wrapper {
+  position: relative;
+  bottom: auto;
+  width: 100%;
+}
+
+.card.vegas-container {
+  position: relative !important;
+  border: 0 !important;
+
+  // WebKit overflow fix
+  -webkit-mask-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC");
+}
+
+.vegas-overlay-black .vegas-overlay {
+  background: rgba(#000, .4) !important;
+  opacity: 1 !important;
+}
+
+.vegas-overlay-white .vegas-overlay {
+  background: rgba(#fff, .8) !important;
+  opacity: 1 !important;
+}
+
+.vegas-fixed-background .vegas-slide-inner {
+  background-attachment: fixed !important;
+}

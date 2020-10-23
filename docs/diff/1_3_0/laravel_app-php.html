@@ -1,0 +1,1662 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_2_2/laravel-starter/config/app.php &nbsp;
+<br/>
+Right file: appwork-v1_3_0/laravel-starter/config/app.php &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">&lt;?php</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">&lt;?php</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame">return [</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame">return [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Name</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Name</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This value is the name of your application. This value is used when the</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This value is the name of your application. This value is used when the</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | framework needs to place the application's name in a notification or</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | framework needs to place the application's name in a notification or</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | any other location as required by the application or its packages.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | any other location as required by the application or its packages.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'name' =&gt; env('APP_NAME', 'Laravel'),</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'name' =&gt; env('APP_NAME', 'Laravel'),</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Environment</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Environment</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This value determines the &quot;environment&quot; your application is currently</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This value determines the &quot;environment&quot; your application is currently</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | running in. This may determine how you prefer to configure various</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | running in. This may determine how you prefer to configure various</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | services the application utilizes. Set this in your &quot;.env&quot; file.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | services the application utilizes. Set this in your &quot;.env&quot; file.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'env' =&gt; env('APP_ENV', 'production'),</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'env' =&gt; env('APP_ENV', 'production'),</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Debug Mode</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Debug Mode</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | When your application is in debug mode, detailed error messages with</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | When your application is in debug mode, detailed error messages with</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | stack traces will be shown on every error that occurs within your</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | stack traces will be shown on every error that occurs within your</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | application. If disabled, a simple generic error page is shown.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | application. If disabled, a simple generic error page is shown.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'debug' =&gt; env('APP_DEBUG', false),</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'debug' =&gt; env('APP_DEBUG', false),</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application URL</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application URL</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This URL is used by the console to properly generate URLs when using</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This URL is used by the console to properly generate URLs when using</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | the Artisan command line tool. You should set this to the root of</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | the Artisan command line tool. You should set this to the root of</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | your application so that it is used when running Artisan tasks.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | your application so that it is used when running Artisan tasks.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'url' =&gt; env('APP_URL', 'http://localhost'),</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'url' =&gt; env('APP_URL', 'http://localhost'),</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'asset_url' =&gt; env('ASSET_URL', null),</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'asset_url' =&gt; env('ASSET_URL', null),</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Timezone</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Timezone</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Here you may specify the default timezone for your application, which</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Here you may specify the default timezone for your application, which</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | will be used by the PHP date and date-time functions. We have gone</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | will be used by the PHP date and date-time functions. We have gone</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">66</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | ahead and set this to a sensible default for you out of the box.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">66</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | ahead and set this to a sensible default for you out of the box.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">67</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">67</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">68</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">68</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">69</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">69</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">70</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'timezone' =&gt; 'UTC',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">70</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'timezone' =&gt; 'UTC',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">71</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">71</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">72</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">72</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">73</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">73</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">74</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Locale Configuration</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">74</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Locale Configuration</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">75</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">75</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">76</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">76</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">77</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | The application locale determines the default locale that will be used</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">77</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | The application locale determines the default locale that will be used</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">78</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | by the translation service provider. You are free to set this value</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">78</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | by the translation service provider. You are free to set this value</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">79</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | to any of the locales which will be supported by the application.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">79</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | to any of the locales which will be supported by the application.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">80</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">80</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">81</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">81</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">82</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">82</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">83</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'locale' =&gt; 'en',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">83</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'locale' =&gt; 'en',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">84</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">84</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">85</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">85</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">86</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">86</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">87</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Fallback Locale</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">87</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Application Fallback Locale</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">88</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">88</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">89</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">89</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">90</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | The fallback locale determines the locale to use when the current one</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">90</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | The fallback locale determines the locale to use when the current one</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">91</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | is not available. You may change the value to correspond to any of</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">91</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | is not available. You may change the value to correspond to any of</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">92</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | the language folders that are provided through your application.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">92</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | the language folders that are provided through your application.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">93</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">93</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">94</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">94</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">95</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">95</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">96</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'fallback_locale' =&gt; 'en',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">96</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'fallback_locale' =&gt; 'en',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">97</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">97</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">98</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">98</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">99</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">99</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">100</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Faker Locale</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">100</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Faker Locale</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">101</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">101</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">102</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">102</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">103</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This locale will be used by the Faker PHP library when generating fake</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">103</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This locale will be used by the Faker PHP library when generating fake</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">104</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | data for your database seeds. For example, this will be used to get</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">104</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | data for your database seeds. For example, this will be used to get</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">105</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | localized telephone numbers, street address information and more.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">105</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | localized telephone numbers, street address information and more.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">106</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">106</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">107</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">107</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">108</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">108</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">109</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'faker_locale' =&gt; 'en_US',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">109</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'faker_locale' =&gt; 'en_US',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">110</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">110</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">111</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">111</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">112</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">112</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">113</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Encryption Key</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">113</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Encryption Key</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">114</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">114</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">115</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">115</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">116</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This key is used by the Illuminate encrypter service and should be set</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">116</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This key is used by the Illuminate encrypter service and should be set</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">117</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | to a random, 32 character string, otherwise these encrypted strings</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">117</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | to a random, 32 character string, otherwise these encrypted strings</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">118</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | will not be safe. Please do this before deploying an application!</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">118</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | will not be safe. Please do this before deploying an application!</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">119</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">119</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">120</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">120</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">121</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">121</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">122</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'key' =&gt; env('APP_KEY'),</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">122</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'key' =&gt; env('APP_KEY'),</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">123</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">123</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">124</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'cipher' =&gt; 'AES-256-CBC',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">124</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'cipher' =&gt; 'AES-256-CBC',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">125</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">125</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">126</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">126</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">127</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">127</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">128</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Autoloaded Service Providers</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">128</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Autoloaded Service Providers</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">129</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">129</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">130</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">130</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">131</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | The service providers listed here will be automatically loaded on the</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">131</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | The service providers listed here will be automatically loaded on the</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">132</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | request to your application. Feel free to add your own services to</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">132</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | request to your application. Feel free to add your own services to</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">133</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | this array to grant expanded functionality to your applications.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">133</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | this array to grant expanded functionality to your applications.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">134</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">134</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">135</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">135</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">136</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">136</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">137</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'providers' =&gt; [</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">137</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'providers' =&gt; [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">138</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">138</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">139</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">139</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">140</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; * Laravel Framework Service Providers...</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">140</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; * Laravel Framework Service Providers...</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">141</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">141</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">142</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Auth\AuthServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">142</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Auth\AuthServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">143</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Broadcasting\BroadcastServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">143</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Broadcasting\BroadcastServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">144</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Bus\BusServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">144</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Bus\BusServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">145</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Cache\CacheServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">145</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Cache\CacheServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">146</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">146</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">147</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Cookie\CookieServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">147</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Cookie\CookieServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">148</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Database\DatabaseServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">148</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Database\DatabaseServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">149</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Encryption\EncryptionServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">149</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Encryption\EncryptionServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">150</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Filesystem\FilesystemServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">150</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Filesystem\FilesystemServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">151</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Foundation\Providers\FoundationServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">151</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Foundation\Providers\FoundationServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">152</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Hashing\HashServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">152</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Hashing\HashServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">153</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Mail\MailServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">153</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Mail\MailServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">154</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Notifications\NotificationServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">154</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Notifications\NotificationServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">155</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Pagination\PaginationServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">155</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Pagination\PaginationServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">156</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Pipeline\PipelineServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">156</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Pipeline\PipelineServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">157</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Queue\QueueServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">157</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Queue\QueueServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">158</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Redis\RedisServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">158</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Redis\RedisServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">159</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">159</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">160</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Session\SessionServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">160</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Session\SessionServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">161</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Translation\TranslationServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">161</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Translation\TranslationServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">162</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Validation\ValidationServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">162</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\Validation\ValidationServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">163</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\View\ViewServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">163</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Illuminate\View\ViewServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">164</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">164</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">165</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">165</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">166</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; * Package Service Providers...</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">166</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; * Package Service Providers...</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">167</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">167</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">168</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">168</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">169</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">169</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">170</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; * Application Service Providers...</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">170</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; * Application Service Providers...</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">171</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">171</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">172</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; App\Providers\AppServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">172</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; App\Providers\AppServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">173</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; App\Providers\AuthServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">173</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; App\Providers\AuthServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">174</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; // App\Providers\BroadcastServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">174</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; // App\Providers\BroadcastServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">175</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; App\Providers\EventServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">175</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; App\Providers\EventServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">176</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; App\Providers\RouteServiceProvider::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">176</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; App\Providers\RouteServiceProvider::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">177</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">177</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">178</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; ],</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">178</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; ],</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">179</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">179</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">180</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">180</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">181</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">181</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">182</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Class Aliases</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">182</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Class Aliases</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">183</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">183</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">184</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">184</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">185</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This array of class aliases will be registered when this application</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">185</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This array of class aliases will be registered when this application</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">186</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | is started. However, feel free to register as many as you wish as</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">186</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | is started. However, feel free to register as many as you wish as</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">187</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | the aliases are &quot;lazy&quot; loaded so they don't hinder performance.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">187</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | the aliases are &quot;lazy&quot; loaded so they don't hinder performance.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">188</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">188</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">189</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">189</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">190</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">190</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">191</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'aliases' =&gt; [</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">191</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; 'aliases' =&gt; [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">192</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">192</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">193</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'App' =&gt; Illuminate\Support\Facades\App::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">193</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'App' =&gt; Illuminate\Support\Facades\App::class,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemNum AlignRight">194</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'Arr'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Illuminate\Support\Arr::class,</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">194</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Artisan' =&gt; Illuminate\Support\Facades\Artisan::class,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">195</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Artisan' =&gt; Illuminate\Support\Facades\Artisan::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">195</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Auth' =&gt; Illuminate\Support\Facades\Auth::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">196</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Auth' =&gt; Illuminate\Support\Facades\Auth::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">196</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Blade' =&gt; Illuminate\Support\Facades\Blade::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">197</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Blade' =&gt; Illuminate\Support\Facades\Blade::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">197</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Broadcast' =&gt; Illuminate\Support\Facades\Broadcast::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">198</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Broadcast' =&gt; Illuminate\Support\Facades\Broadcast::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">198</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Bus' =&gt; Illuminate\Support\Facades\Bus::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">199</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Bus' =&gt; Illuminate\Support\Facades\Bus::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">199</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Cache' =&gt; Illuminate\Support\Facades\Cache::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">200</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Cache' =&gt; Illuminate\Support\Facades\Cache::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">200</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Config' =&gt; Illuminate\Support\Facades\Config::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">201</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Config' =&gt; Illuminate\Support\Facades\Config::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">201</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Cookie' =&gt; Illuminate\Support\Facades\Cookie::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">202</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Cookie' =&gt; Illuminate\Support\Facades\Cookie::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">202</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Crypt' =&gt; Illuminate\Support\Facades\Crypt::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">203</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Crypt' =&gt; Illuminate\Support\Facades\Crypt::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">203</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'DB' =&gt; Illuminate\Support\Facades\DB::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">204</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'DB' =&gt; Illuminate\Support\Facades\DB::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">204</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Eloquent' =&gt; Illuminate\Database\Eloquent\Model::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">205</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Eloquent' =&gt; Illuminate\Database\Eloquent\Model::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">205</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Event' =&gt; Illuminate\Support\Facades\Event::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">206</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Event' =&gt; Illuminate\Support\Facades\Event::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">206</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'File' =&gt; Illuminate\Support\Facades\File::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">207</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'File' =&gt; Illuminate\Support\Facades\File::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">207</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Gate' =&gt; Illuminate\Support\Facades\Gate::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">208</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Gate' =&gt; Illuminate\Support\Facades\Gate::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">208</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Hash' =&gt; Illuminate\Support\Facades\Hash::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">209</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Hash' =&gt; Illuminate\Support\Facades\Hash::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">209</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Lang' =&gt; Illuminate\Support\Facades\Lang::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">210</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Lang' =&gt; Illuminate\Support\Facades\Lang::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">210</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Log' =&gt; Illuminate\Support\Facades\Log::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">211</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Log' =&gt; Illuminate\Support\Facades\Log::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">211</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Mail' =&gt; Illuminate\Support\Facades\Mail::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">212</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Mail' =&gt; Illuminate\Support\Facades\Mail::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">212</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Notification' =&gt; Illuminate\Support\Facades\Notification::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">213</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Notification' =&gt; Illuminate\Support\Facades\Notification::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">213</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Password' =&gt; Illuminate\Support\Facades\Password::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">214</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Password' =&gt; Illuminate\Support\Facades\Password::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">214</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Queue' =&gt; Illuminate\Support\Facades\Queue::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">215</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Queue' =&gt; Illuminate\Support\Facades\Queue::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">215</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Redirect' =&gt; Illuminate\Support\Facades\Redirect::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">216</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Redirect' =&gt; Illuminate\Support\Facades\Redirect::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">216</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Redis' =&gt; Illuminate\Support\Facades\Redis::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">217</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Redis' =&gt; Illuminate\Support\Facades\Redis::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">217</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Request' =&gt; Illuminate\Support\Facades\Request::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">218</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Request' =&gt; Illuminate\Support\Facades\Request::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">218</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Response' =&gt; Illuminate\Support\Facades\Response::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">219</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Response' =&gt; Illuminate\Support\Facades\Response::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">219</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Route' =&gt; Illuminate\Support\Facades\Route::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">220</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Route' =&gt; Illuminate\Support\Facades\Route::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">220</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Schema' =&gt; Illuminate\Support\Facades\Schema::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">221</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Schema' =&gt; Illuminate\Support\Facades\Schema::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">221</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Session' =&gt; Illuminate\Support\Facades\Session::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">222</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Session' =&gt; Illuminate\Support\Facades\Session::class,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">222</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Storage' =&gt; Illuminate\Support\Facades\Storage::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">223</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Storage' =&gt; Illuminate\Support\Facades\Storage::class,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemNum AlignRight">224</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'Str'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Illuminate\Support\Str::class,</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">223</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'URL' =&gt; Illuminate\Support\Facades\URL::class,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">225</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'URL' =&gt; Illuminate\Support\Facades\URL::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">224</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Validator' =&gt; Illuminate\Support\Facades\Validator::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">226</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Validator' =&gt; Illuminate\Support\Facades\Validator::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">225</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'View' =&gt; Illuminate\Support\Facades\View::class,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">227</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'View' =&gt; Illuminate\Support\Facades\View::class,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">226</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">228</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">227</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; ],</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">229</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; ],</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">228</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">230</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">229</td>
+<td class="TextItemSame">];</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">231</td>
+<td class="TextItemSame">];</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

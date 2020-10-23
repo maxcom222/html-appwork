@@ -1,0 +1,1210 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/src/gulpfile.js &nbsp;
+<br/>
+Right file: appwork-v1_4_0/src/gulpfile.js &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame">const path = require('path')</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">const path = require('path')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Config</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Config</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const env = require('gulp-environment')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const env = require('gulp-environment')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">process.env.NODE_ENV = env.current.name</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">process.env.NODE_ENV = env.current.name</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const conf = (() =&gt; {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const conf = (() =&gt; {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; const _conf = require('./build-config')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; const _conf = require('./build-config')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; return require('deepmerge').all([{}, _conf.base || {}, _conf[process.env.NODE_ENV] || {}])</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; return require('deepmerge').all([{}, _conf.base || {}, _conf[process.env.NODE_ENV] || {}])</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">})()</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">})()</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">conf.buildPath = path.resolve(__dirname, conf.buildPath).replace(/\\/g, '/')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">conf.buildPath = path.resolve(__dirname, conf.buildPath).replace(/\\/g, '/')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Modules</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Modules</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const { src, dest, parallel, series, watch } = require('gulp')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const { src, dest, parallel, series, watch } = require('gulp')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const webpack = require('webpack')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const webpack = require('webpack')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const sass = require('gulp-sass')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const sass = require('gulp-sass')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const autoprefixer = require('gulp-autoprefixer')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const autoprefixer = require('gulp-autoprefixer')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const rename = require('gulp-rename')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const rename = require('gulp-rename')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const replace = require('gulp-replace')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const replace = require('gulp-replace')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const gulpIf = require('gulp-if')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const gulpIf = require('gulp-if')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const sourcemaps = require('gulp-sourcemaps')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const sourcemaps = require('gulp-sourcemaps')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const del = require('del')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const del = require('del')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const colors = require('ansi-colors')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const colors = require('ansi-colors')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const log = require('fancy-log')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const log = require('fancy-log')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">colors.enabled = require('color-support').hasBasic</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">colors.enabled = require('color-support').hasBasic</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Utilities</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Utilities</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">function normalize(p) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">function normalize(p) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; return p.replace(/\\/g, '/')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; return p.replace(/\\/g, '/')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">function root(p) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">function root(p) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; return p.startsWith('!') ?</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; return p.startsWith('!') ?</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; normalize(`!${path.join(__dirname, p.slice(1))}`) :</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; normalize(`!${path.join(__dirname, p.slice(1))}`) :</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; normalize(path.join(__dirname, p))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; normalize(path.join(__dirname, p))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">function getSrc(...src) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">function getSrc(...src) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; return src.map(p =&gt; root(p)).concat(conf.exclude.map(d =&gt; `!${root(d)}/**/*`))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; return src.map(p =&gt; root(p)).concat(conf.exclude.map(d =&gt; `!${root(d)}/**/*`))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Clean build directory</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Clean build directory</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const cleanTask = function () {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const cleanTask = function () {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; return del([conf.buildPath], {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; return del([conf.buildPath], {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; force: true</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; force: true</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; })</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; })</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Build css</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Build css</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const buildCssTask = function () {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const buildCssTask = function () {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; return src(getSrc('**/*.scss', '!**/_*.scss'), { base: root('.') })</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; return src(getSrc('**/*.scss', '!**/_*.scss'), { base: root('.') })</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(gulpIf(conf.sourcemaps, sourcemaps.init()))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(gulpIf(conf.sourcemaps, sourcemaps.init()))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(sass({</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(sass({</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; outputStyle: conf.minify ? 'compressed' : 'nested'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; outputStyle: conf.minify ? 'compressed' : 'nested'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }).on('error', sass.logError))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }).on('error', sass.logError))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(gulpIf(conf.sourcemaps, sourcemaps.write()))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(gulpIf(conf.sourcemaps, sourcemaps.write()))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(gulpIf(conf.sourcemaps, sourcemaps.init({</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(gulpIf(conf.sourcemaps, sourcemaps.init({</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; loadMaps: true</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; loadMaps: true</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; })))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; })))</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(autoprefixer({</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(autoprefixer({</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegInsigDiff">b</span>rowser<span class="TextSegSigDiff">s</span>: [</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegSigDiff">override</span><span class="TextSegInsigDiff">B</span>rowser<span class="TextSegSigDiff">slist</span>: [</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; '&gt;= 1%',</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; '&gt;= 1%',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'last 2 versions',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'last 2 versions',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'not dead',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'not dead',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Chrome &gt;= 45',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Chrome &gt;= 45',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Firefox &gt;= 38',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Firefox &gt;= 38',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Edge &gt;= 12',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Edge &gt;= 12',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Explorer &gt;= 10',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Explorer &gt;= 10',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'iOS &gt;= 9',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'iOS &gt;= 9',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Safari &gt;= 9',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Safari &gt;= 9',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Android &gt;= 4.4',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Android &gt;= 4.4',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Opera &gt;= 30'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'Opera &gt;= 30'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; ]</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; ]</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(gulpIf(conf.sourcemaps, sourcemaps.write()))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(gulpIf(conf.sourcemaps, sourcemaps.write()))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(dest(conf.buildPath))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(dest(conf.buildPath))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Build js</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Build js</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const buildJsTask = function (cb) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const buildJsTask = function (cb) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; setTimeout(function () {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; setTimeout(function () {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; webpack(require('./webpack.config'), (err, stats) =&gt; {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; webpack(require('./webpack.config'), (err, stats) =&gt; {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; if (err) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; if (err) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; log(colors.gray('Webpack error:'), colors.red(err.stack || err))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; log(colors.gray('Webpack error:'), colors.red(err.stack || err))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if (err.details) log(colors.gray('Webpack error details:'), err.details)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if (err.details) log(colors.gray('Webpack error details:'), err.details)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; return cb()</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; return cb()</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; const info = stats.toJson()</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; const info = stats.toJson()</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; if (stats.hasErrors()) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; if (stats.hasErrors()) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; info.errors.forEach(e =&gt; log(colors.gray('Webpack compilation error:'), colors.red(e)))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; info.errors.forEach(e =&gt; log(colors.gray('Webpack compilation error:'), colors.red(e)))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; if (stats.hasWarnings()) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; if (stats.hasWarnings()) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; info.warnings.forEach(w =&gt; log(colors.gray('Webpack compilation warning:'), colors.yellow(w)))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; info.warnings.forEach(w =&gt; log(colors.gray('Webpack compilation warning:'), colors.yellow(w)))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; // Print log</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; // Print log</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; log(stats.toString({</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; log(stats.toString({</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; colors: colors.enabled,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; colors: colors.enabled,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; hash: false,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; hash: false,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; timings: false,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; timings: false,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; chunks: false,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; chunks: false,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; chunkModules: false,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; chunkModules: false,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; modules: false,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; modules: false,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; children: true,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; children: true,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; version: true,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; version: true,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; cached: false,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; cached: false,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; cachedAssets: false,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; cachedAssets: false,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; reasons: false,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; reasons: false,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; source: false,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; source: false,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; errorDetails: false</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; errorDetails: false</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; }))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; }))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; cb()</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; cb()</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; })</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; })</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }, 1)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }, 1)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Build fonts</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Build fonts</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const FONT_TASKS = [{</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const FONT_TASKS = [{</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; name: 'fontawesome',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; name: 'fontawesome',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; path: 'node_modules/@fortawesome/fontawesome-free/webfonts/*'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; path: 'node_modules/@fortawesome/fontawesome-free/webfonts/*'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; name: 'linearicons',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; name: 'linearicons',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; path: 'node_modules/linearicons/dist/web-font/fonts/*'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; path: 'node_modules/linearicons/dist/web-font/fonts/*'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; name: 'pe-icon-7-stroke',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; name: 'pe-icon-7-stroke',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; path: 'node_modules/pixeden-stroke-7-icon/pe-icon-7-stroke/fonts/*'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; path: 'node_modules/pixeden-stroke-7-icon/pe-icon-7-stroke/fonts/*'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; name: 'open-iconic',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; name: 'open-iconic',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; path: 'node_modules/open-iconic/font/fonts/*'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; path: 'node_modules/open-iconic/font/fonts/*'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; name: 'ionicons',</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; name: 'ionicons',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; path: 'node_modules/ionicons/dist/fonts/*'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; path: 'node_modules/ionicons/dist/fonts/*'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">].reduce(function (tasks, font) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">].reduce(function (tasks, font) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; const functionName = `buildFonts${font.name.replace(/^./, m =&gt; m.toUpperCase())}Task`</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; const functionName = `buildFonts${font.name.replace(/^./, m =&gt; m.toUpperCase())}Task`</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; const taskFunction = function () {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; const taskFunction = function () {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return src(root(font.path))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return src(root(font.path))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; .pipe(dest(normalize(path.join(conf.buildPath, 'fonts', font.name))))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; .pipe(dest(normalize(path.join(conf.buildPath, 'fonts', font.name))))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; Object.defineProperty(taskFunction, 'name', {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; Object.defineProperty(taskFunction, 'name', {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; value: functionName</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; value: functionName</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; });</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; });</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; return tasks.concat([taskFunction])</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; return tasks.concat([taskFunction])</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}, [])</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}, [])</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Copy linearicons' style.css</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Copy linearicons' style.css</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">FONT_TASKS.push(function buildFontsLinearicons () {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">FONT_TASKS.push(function buildFontsLinearicons () {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; return src(root('node_modules/linearicons/dist/web-font/style.css'))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; return src(root('node_modules/linearicons/dist/web-font/style.css'))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(replace(/'fonts\//g, '\'linearicons/'))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(replace(/'fonts\//g, '\'linearicons/'))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(rename({</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(rename({</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; basename: 'linearicons'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; basename: 'linearicons'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(dest(normalize(path.join(conf.buildPath, 'fonts'))))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; .pipe(dest(normalize(path.join(conf.buildPath, 'fonts'))))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">})</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">})</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const buildFontsTask = parallel(FONT_TASKS)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const buildFontsTask = parallel(FONT_TASKS)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Copy</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Copy</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const buildCopyTask = function () {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const buildCopyTask = function () {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; return src(getSrc('**/*.png', '**/*.gif', '**/*.jpg', '**/*.jpeg', '**/*.svg', '**/*.swf', '**/*.eot', '**/*.ttf', '**/*.woff', '**/*.woff2'), {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; return src(getSrc('**/*.png', '**/*.gif', '**/*.jpg', '**/*.jpeg', '**/*.svg', '**/*.swf', '**/*.eot', '**/*.ttf', '**/*.woff', '**/*.woff2'), {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; base: root('.')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; base: root('.')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; })</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; })</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; .pipe(dest(conf.buildPath))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; .pipe(dest(conf.buildPath))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Watch</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Watch</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const watchTask = function () {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const watchTask = function () {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; watch(getSrc('**/*.scss', '!fonts/**/*.scss'), buildCssTask)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; watch(getSrc('**/*.scss', '!fonts/**/*.scss'), buildCssTask)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; watch(getSrc('fonts/**/*.scss'), parallel(buildCssTask, buildFontsTask))</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; watch(getSrc('fonts/**/*.scss'), parallel(buildCssTask, buildFontsTask))</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; watch(getSrc('**/*.@(js|es6)', '!*.js'), buildJsTask)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; watch(getSrc('**/*.@(js|es6)', '!*.js'), buildJsTask)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; watch(getSrc('**/*.png', '**/*.gif', '**/*.jpg', '**/*.jpeg', '**/*.svg', '**/*.swf'), buildCopyTask)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; watch(getSrc('**/*.png', '**/*.gif', '**/*.jpg', '**/*.jpeg', '**/*.svg', '**/*.swf'), buildCopyTask)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Build</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Build</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const buildTasks = [</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const buildTasks = [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; buildCssTask,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; buildCssTask,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; buildJsTask,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; buildJsTask,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; buildFontsTask,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; buildFontsTask,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; buildCopyTask</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; buildCopyTask</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">]</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">]</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const buildTask = conf.cleanBuild ?</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const buildTask = conf.cleanBuild ?</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; series(cleanTask, parallel(buildTasks)) :</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; series(cleanTask, parallel(buildTasks)) :</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; parallel(buildTasks)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; parallel(buildTasks)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// -------------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Exports</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Exports</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">module.exports = {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">module.exports = {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; default: buildTask,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; default: buildTask,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; build: buildTask,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; build: buildTask,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; 'build:js': buildJsTask,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; 'build:js': buildJsTask,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; 'build:css': buildCssTask,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; 'build:css': buildCssTask,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; 'build:fonts': buildFontsTask,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; 'build:fonts': buildFontsTask,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; 'build:copy': buildCopyTask,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; 'build:copy': buildCopyTask,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; watch: watchTask</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; watch: watchTask</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

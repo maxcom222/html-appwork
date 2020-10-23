@@ -1,0 +1,355 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/rails-starter/app/views/layouts/application.html.erb &nbsp;
+<br/>
+Right file: appwork-v1_4_0/rails-turbolinks-starter/app/views/layouts/application.html.erb &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame">&lt;!DOCTYPE html&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&lt;!DOCTYPE html&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&lt;html lang=&quot;en&quot; class=&quot;default-style&quot;&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;html lang=&quot;en&quot; class=&quot;default-style&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&lt;head&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;head&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;meta charset=&quot;utf-8&quot;&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;meta charset=&quot;utf-8&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0&quot;&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;%= csrf_meta_tags %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;%= csrf_meta_tags %&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;%= csp_meta_tag %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;%= csp_meta_tag %&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;title&gt;&lt;%= @title ? @title + &quot; - &quot; : &quot;&quot; %&gt;Rails Starter&lt;/title&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;title&gt;&lt;%= @title ? @title + &quot; - &quot; : &quot;&quot; %&gt;Rails Starter&lt;/title&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;!-- Main font --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;!-- Main font --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;link href=&quot;https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&quot; rel=&quot;stylesheet&quot;&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;link href=&quot;https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&quot; rel=&quot;stylesheet&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &lt;!-- Icons. Uncomment required icon fonts --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;!-- Icons. Uncomment required icon fonts --&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; &lt;!-- &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag 'fontawesome<span class="TextSegSigDiff">.css</span>', media: 'all', 'data-turbolinks-track': 'reload' %&gt; --&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; &lt;!-- &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag '<span class="TextSegSigDiff">vendor/</span>font<span class="TextSegSigDiff">s/font</span>awesome', media: 'all', 'data-turbolinks-track': 'reload' %&gt; --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag 'ionicon<span class="TextSegSigDiff">s.cs</span>s', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag '<span class="TextSegSigDiff">vendor/fonts/</span>ionicons', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; &lt;!-- &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag 'linearicon<span class="TextSegSigDiff">s.cs</span>s', media: 'all', 'data-turbolinks-track': 'reload' %&gt; --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;!-- &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag '<span class="TextSegSigDiff">vendor/fonts/</span>linearicons', media: 'all', 'data-turbolinks-track': 'reload' %&gt; --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; &lt;!-- &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag '<span class="TextSegSigDiff">o</span>pen-iconi<span class="TextSegSigDiff">c.css</span>', media: 'all', 'data-turbolinks-track': 'reload' %&gt; --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;!-- &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag '<span class="TextSegSigDiff">vendor/fonts/o</span>pen-iconi<span class="TextSegSigDiff">c</span>', media: 'all', 'data-turbolinks-track': 'reload' %&gt; --&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp; &lt;!-- &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag 'pe-icon-7-stroke<span class="TextSegSigDiff">.css</span>', media: 'all', 'data-turbolinks-track': 'reload' %&gt; --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;!-- &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag '<span class="TextSegSigDiff">vendor/fonts/</span>pe-icon-7-stroke', media: 'all', 'data-turbolinks-track': 'reload' %&gt; --&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &lt;!-- Core stylesheets --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;!-- Core stylesheets --&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag 'bootstrap<span class="TextSegSigDiff">.css</span>', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag '<span class="TextSegSigDiff">vendor/</span>bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag 'appwork<span class="TextSegSigDiff">.css</span>', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag '<span class="TextSegSigDiff">vendor/</span>appwork', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag 'theme-corporate<span class="TextSegSigDiff">.css</span>', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag '<span class="TextSegSigDiff">vendor/</span>theme-corporate', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag 'color<span class="TextSegSigDiff">s.cs</span>s', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag '<span class="TextSegSigDiff">vendor/</span>colors', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag 'uikit<span class="TextSegSigDiff">.css</span>', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag '<span class="TextSegSigDiff">vendor/</span>uikit', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &lt;!-- Load polyfills --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;!-- Load polyfills --&gt;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">include</span>_tag 'polyfill<span class="TextSegSigDiff">s.j</span>s', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">pack</span>_tag '<span class="TextSegSigDiff">vendor/</span>polyfills', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; &lt;script&gt;document['documentMode']===10&amp;&amp;document.write('&lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en&quot;&gt;&lt;\/script&gt;')&lt;/script&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; &lt;script&gt;document['documentMode']===10&amp;&amp;document.write('&lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en&quot;&gt;&lt;\/script&gt;')&lt;/script&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &lt;!-- Layout helpers --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;!-- Layout helpers --&gt;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">include</span>_tag 'layout-helper<span class="TextSegSigDiff">s.j</span>s', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">pack</span>_tag '<span class="TextSegSigDiff">vendor/</span>layout-helpers', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;!-- jQuery --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;!-- jQuery --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;!-- Libs --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;!-- Libs --&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &lt;!-- `perfect-scrollbar` library required by SideNav plugin --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;!-- `perfect-scrollbar` library required by SideNav plugin --&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">lin</span>k_tag 'perfect-scrollbar/perfect-scrollbar<span class="TextSegSigDiff">.css</span>', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= stylesheet_<span class="TextSegSigDiff">pac</span>k_tag '<span class="TextSegSigDiff">vendor/libs/</span>perfect-scrollbar/perfect-scrollbar', media: 'all', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">include</span>_tag 'perfect-scrollbar/perfect-scrollbar<span class="TextSegSigDiff">.js</span>', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">pack</span>_tag '<span class="TextSegSigDiff">vendor/libs/</span>perfect-scrollbar/perfect-scrollbar', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &lt;!-- Core scripts --&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;!-- Core scripts --&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">include</span>_tag 'popper/popper<span class="TextSegSigDiff">.js</span>', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">pack</span>_tag '<span class="TextSegSigDiff">vendor/libs/</span>popper/popper', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">include</span>_tag 'bootstrap<span class="TextSegSigDiff">.js</span>', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">pack</span>_tag '<span class="TextSegSigDiff">vendor/</span>bootstrap', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">include</span>_tag 'sidenav<span class="TextSegSigDiff">.js</span>', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">pack</span>_tag '<span class="TextSegSigDiff">vendor/</span>sidenav', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">include</span>_tag 'application', 'data-turbolinks-track': 'reload' %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;%= javascript_<span class="TextSegSigDiff">pack</span>_tag 'application', 'data-turbolinks-track': 'reload' %&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;%= yield :head %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;%= yield :head %&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&lt;/head&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;/head&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&lt;body&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;body&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &lt;%= content_for?(:content) ? yield(:content) : yield %&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;%= content_for?(:content) ? yield(:content) : yield %&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&lt;/body&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;/body&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&lt;/html&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;/html&gt;</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

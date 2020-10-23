@@ -1,0 +1,29 @@
+// Spinners
+//
+
+@include keyframes('spinner-border-rtl') {
+  to { transform: rotate(-360deg); }
+}
+
+@include rtl-only {
+  .spinner-border {
+    animation-name: spinner-border-rtl;
+  }
+}
+
+// *******************************************************************************
+// * Within button
+
+.btn {
+  .spinner-border,
+  .spinner-grow {
+    height: 1em;
+    width: 1em;
+    top: -.0625rem;
+    position: relative;
+  }
+
+  .spinner-border {
+    border-width: .15em;
+  }
+}

@@ -1,0 +1,500 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_2_2/rails-starter/Gemfile &nbsp;
+<br/>
+Right file: appwork-v1_3_0/rails-starter/Gemfile &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">source 'https://rubygems.org'</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">source 'https://rubygems.org'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame">git_source(:github) { |repo| &quot;https://github.com/#{repo}.git&quot; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame">git_source(:github) { |repo| &quot;https://github.com/#{repo}.git&quot; }</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSigMod">ruby '<span class="TextSegSigDiff">&gt;=</span><span class="TextSegInsigDiff"> </span>2.3.<span class="TextSegSigDiff">3</span>'</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSigMod">ruby '2.3.<span class="TextSegSigDiff">7</span>'</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSame"># Bundle edge Rails instead: gem 'rails', github: 'rails/rails'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSame"># Bundle edge Rails instead: gem 'rails', github: 'rails/rails'</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSigMod">gem 'rails', '~&gt; 5.2.<span class="TextSegSigDiff">0</span>'</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSigMod">gem 'rails', '~&gt; 5.2.<span class="TextSegSigDiff">3</span>'</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame"># Use sqlite3 as the database for Active Record</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame"># Use sqlite3 as the database for Active Record</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">gem 'sqlite3'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">gem 'sqlite3'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame"># Use Puma as the app server</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame"># Use Puma as the app server</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">gem 'puma', '~&gt; 3.11'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">gem 'puma', '~&gt; 3.11'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame"># Use SCSS for stylesheets</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame"># Use SCSS for stylesheets</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">gem 'sass-rails', '~&gt; 5.0'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">gem 'sass-rails', '~&gt; 5.0'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame"># Use Uglifier as compressor for JavaScript assets</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame"># Use Uglifier as compressor for JavaScript assets</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame">gem 'uglifier', '&gt;= 1.3.0'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame">gem 'uglifier', '&gt;= 1.3.0'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame"># See https://github.com/rails/execjs#readme for more supported runtimes</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame"># See https://github.com/rails/execjs#readme for more supported runtimes</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSame"># gem 'mini_racer', platforms: :ruby</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSame"># gem 'mini_racer', platforms: :ruby</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame"># Use CoffeeScript for .coffee assets and views</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame"># Use CoffeeScript for .coffee assets and views</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">gem 'coffee-rails', '~&gt; 4.2'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">gem 'coffee-rails', '~&gt; 4.2'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame"># Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame"># Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">gem 'turbolinks', '~&gt; 5'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">gem 'turbolinks', '~&gt; 5'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame"># Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame"># Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">gem 'jbuilder', '~&gt; 2.5'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">gem 'jbuilder', '~&gt; 2.5'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame"># Use Redis adapter to run Action Cable in production</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame"># Use Redis adapter to run Action Cable in production</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame"># gem 'redis', '~&gt; 4.0'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame"># gem 'redis', '~&gt; 4.0'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame"># Use ActiveModel has_secure_password</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame"># Use ActiveModel has_secure_password</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame"># gem 'bcrypt', '~&gt; 3.1.7'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame"># gem 'bcrypt', '~&gt; 3.1.7'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSame"># Use ActiveStorage variant</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSame"># Use ActiveStorage variant</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame"># gem 'mini_magick', '~&gt; 4.8'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame"># gem 'mini_magick', '~&gt; 4.8'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame"># Use Capistrano for deployment</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame"># Use Capistrano for deployment</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame"># gem 'capistrano-rails', group: :development</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame"># gem 'capistrano-rails', group: :development</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSame"># Reduces boot times through caching; required in config/boot.rb</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSame"># Reduces boot times through caching; required in config/boot.rb</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSame">gem 'bootsnap', '&gt;= 1.1.0', require: false</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSame">gem 'bootsnap', '&gt;= 1.1.0', require: false</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSame">group :development, :test do</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSame">group :development, :test do</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSame">&nbsp; # Call 'byebug' anywhere in the code to stop execution and get a debugger console</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSame">&nbsp; # Call 'byebug' anywhere in the code to stop execution and get a debugger console</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSame">&nbsp; gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSame">&nbsp; gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame">end</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame">end</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame">group :development do</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame">group :development do</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSame">&nbsp; # Access an interactive console on exception pages or by calling 'console' anywhere in the code.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSame">&nbsp; # Access an interactive console on exception pages or by calling 'console' anywhere in the code.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSame">&nbsp; gem 'web-console', '&gt;= 3.3.0'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSame">&nbsp; gem 'web-console', '&gt;= 3.3.0'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame">&nbsp; gem 'listen', '&gt;= 3.0.5', '&lt; 3.2'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame">&nbsp; gem 'listen', '&gt;= 3.0.5', '&lt; 3.2'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSame">&nbsp; # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSame">&nbsp; # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame">&nbsp; gem 'spring'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame">&nbsp; gem 'spring'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame">&nbsp; gem 'spring-watcher-listen', '~&gt; 2.0.0'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame">&nbsp; gem 'spring-watcher-listen', '~&gt; 2.0.0'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame">end</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame">end</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame">group :test do</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame">group :test do</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSame">&nbsp; # Adds support for Capybara system testing and selenium driver</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSame">&nbsp; # Adds support for Capybara system testing and selenium driver</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSigMod">&nbsp; gem 'capybara', '&gt;= 2.15'<span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'&lt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">4.0'</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSigMod">&nbsp; gem 'capybara', '&gt;= 2.15'</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame">&nbsp; gem 'selenium-webdriver'</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame">&nbsp; gem 'selenium-webdriver'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame">&nbsp; # Easy installation and use of chromedriver to run system tests with Chrome</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame">&nbsp; # Easy installation and use of chromedriver to run system tests with Chrome</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame">&nbsp; gem 'chromedriver-helper'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame">&nbsp; gem 'chromedriver-helper'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame">end</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame">end</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame"># Windows does not include zoneinfo files, so bundle the tzinfo-data gem</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame"># Windows does not include zoneinfo files, so bundle the tzinfo-data gem</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSame">gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSame">gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSame"># Autoprefixer</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSame"># Autoprefixer</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSame">gem &quot;autoprefixer-rails&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSame">gem &quot;autoprefixer-rails&quot;</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

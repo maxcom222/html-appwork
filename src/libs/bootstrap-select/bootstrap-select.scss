@@ -1,0 +1,93 @@
+$width-default: 100%;
+
+@import "../../node_modules/bootstrap-select/sass/bootstrap-select";
+
+.bootstrap-select *,
+.bootstrap-select .dropdown-toggle:focus {
+  outline: 0 !important;
+}
+
+.bootstrap-select .dropdown-toggle:after {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: rotate(45deg) translateY(-50%);
+
+  [dir=rtl] & {
+    right: auto;
+    left: 13px;
+  }
+}
+
+.bootstrap-select.dropup .dropdown-toggle:after {
+  transform: rotate(-45deg) translateY(-50%);
+}
+
+[dir=rtl] .bootstrap-select .dropdown-toggle .filter-option {
+  text-align: right;
+  left: auto;
+  right: 0;
+  float: right;
+  padding-right: 0;
+  padding-left: inherit;
+  margin-right: 0;
+  margin-left: -100%;
+}
+
+.bootstrap-select.show-tick .dropdown-menu {
+  li a {
+    position: relative;
+  }
+
+  [dir=rtl] & li a span.text {
+    margin-right: 0;
+    margin-left: 2.125rem;
+  }
+
+  .selected span.check-mark {
+    top: 50%;
+    right: 1rem;
+    display: block;
+    line-height: 1;
+    transform: translateY(-50%);
+    margin: 0;
+
+    [dir=rtl] & {
+      right: auto;
+      left: 1rem;
+    }
+  }
+}
+
+[dir=rtl] .bootstrap-select .dropdown-toggle .filter-option-inner {
+  padding-right: 0;
+  padding-left: inherit;
+}
+
+html:not([dir=rtl]) .bootstrap-select.custom-select,
+[dir=rtl] .bootstrap-select.custom-select {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+}
+
+.bootstrap-select:not(.input-group-btn),
+.bootstrap-select[class*="col-"] {
+  display: block;
+}
+
+.bootstrap-select .dropdown-menu.inner .selected .waves-ripple {
+  display: none !important;
+}
+
+.material-style {
+  @import "../../css/_appwork/include-material";
+
+  // IE has a strange material ripple bug, so just hide the ripple element
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .bootstrap-select .waves-ripple {
+      display: none !important;
+    }
+  }
+}

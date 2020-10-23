@@ -1,0 +1,111 @@
+@import "../../node_modules/bootstrap-table/src/bootstrap-table";
+
+.bootstrap-table .bs-checkbox label {
+  margin-bottom: 0;
+}
+
+html:not([dir=rtl]) .bootstrap-table {
+  .fixed-table-container .table {
+    thead th .sortable {
+      padding-right: 30px !important;
+    }
+  }
+}
+
+[dir=rtl] .bootstrap-table {
+  .fixed-table-toolbar {
+    .columns .btn-group>.btn-group {
+      margin-left: 0 !important;
+      margin-right: -1px !important;
+    }
+
+    .columns .dropdown-menu {
+      text-align: right;
+    }
+
+    .columns-left {
+      margin-left: 5px;
+      margin-right: 0;
+    }
+
+    .columns-right {
+      margin-left: 0;
+      margin-right: 5px;
+    }
+
+    .pull-right .dropdown-menu {
+      right: auto;
+      left: 0;
+    }
+  }
+
+  .fixed-table-container .fixed-table-body .fixed-table-loading .loading-wrap .loading-text {
+    margin-right: 0;
+    margin-left: 6px;
+  }
+
+  .table {
+    thead th .sortable {
+      padding-left: 30px !important;
+      background-position: left;
+    }
+
+    tbody tr .card-view .card-view-title {
+      text-align: right !important;
+    }
+  }
+
+  .fixed-table-pagination > .pagination-detail .pagination-info {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+}
+
+[dir=rtl] div.fixed-table-scroll-outer {
+  left: auto;
+  right: 0;
+}
+
+.default-style {
+  @import "../../css/_appwork/include";
+
+  .bootstrap-table .fixed-table-container.fixed-height {
+    &:not(.has-footer),
+    .fixed-table-border,
+    .table thead th {
+      border-color: $table-border-color;
+    }
+  }
+
+  .bootstrap-table .fixed-table-container .table {
+    thead th .th-inner {
+      padding: $table-cell-padding;
+    }
+
+    &.table-sm .th-inner {
+      padding: $table-cell-padding-sm;
+    }
+  }
+}
+
+.material-style {
+  @import "../../css/_appwork/include-material";
+
+  .bootstrap-table .fixed-table-container.fixed-height {
+    &:not(.has-footer),
+    .fixed-table-border,
+    .table thead th {
+      border-color: $table-border-color;
+    }
+  }
+
+  .bootstrap-table .fixed-table-container .table {
+    thead th .th-inner {
+      padding: $table-cell-padding;
+    }
+
+    &.table-sm .th-inner {
+      padding: $table-cell-padding-sm;
+    }
+  }
+}

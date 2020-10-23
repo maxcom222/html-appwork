@@ -1,0 +1,363 @@
+@import '../_custom-variables/pages';
+
+$messages-inner-bg: transparent !default;
+$messages-sidebox-width: 14rem !default;
+$messages-sidebox-border-width: 1px !default;
+$messages-transition-duration: .2s !default;
+$message-item-padding-y: .75rem !default;
+$message-sender-width: 10rem !default;
+$message-attachment-width: 18rem !default;
+$message-attachment-size: 4rem !default;
+
+// Make wrapper full page height
+.messages-wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex: 1 1 100%;
+  width: 100%;
+}
+
+.messages-card {
+  overflow: hidden;
+}
+
+.messages-wrapper,
+.messages-sidebox {
+  transition: all $messages-transition-duration;
+}
+
+.messages-sidebox {
+  flex-basis: 100%;
+  flex-grow: 0;
+}
+
+.messages-wrapper .messages-sidebox,
+.messages-card .messages-sidebox {
+  position: fixed;
+  left: calc(-#{$messages-sidebox-width} - #{$messages-sidebox-border-width});
+  z-index: 10;
+  flex-basis: auto;
+  flex-grow: 1;
+  width: $messages-sidebox-width;
+
+  [dir=rtl] & {
+    right: calc(-#{$messages-sidebox-width} - #{$messages-sidebox-border-width});
+    left: auto;
+  }
+}
+
+.layout-sidenav-100vh .messages-wrapper .messages-sidebox {
+  height: 100vh;
+}
+
+.messages-card .messages-sidebox {
+  position: absolute;
+  bottom: 0;
+}
+
+.messages-scroll {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+
+  &.messages-content {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+// List
+
+.messages-list .list-group-item {
+  z-index: auto !important;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: ($message-item-padding-y / 2);
+  padding-bottom: ($message-item-padding-y / 2);
+  width: 100%;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+
+  &:first-child {
+    border-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+   > * {
+    padding-top: ($message-item-padding-y / 2);
+    padding-bottom: ($message-item-padding-y / 2);
+  }
+}
+
+.message-checkbox .custom-control {
+  display: block !important;
+  margin: 0;
+  margin-top: -1px;
+}
+
+.message-sender {
+  min-width: $message-sender-width;
+}
+
+.message-subject {
+  width: 100%;
+}
+
+.message-date {
+  white-space: nowrap;
+}
+
+// Attachments
+
+.message-attachment {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+   > .media-body {
+    min-width: 0;
+  }
+}
+
+.message-attachment-file,
+.message-attachment-img {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: $message-attachment-size;
+  height: $message-attachment-size;
+}
+
+.message-attachment-file {
+  display: inline-block;
+  text-align: center;
+  line-height: $message-attachment-size;
+}
+
+.message-attachment-img {
+  background-color: transparent;
+  background-position: center center;
+  background-size: cover;
+}
+
+.message-attachment-filename {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.default-style {
+  @import "../_appwork/include";
+
+  .messages-wrapper .messages-sidebox {
+    z-index: $zindex-layout-fixed + 1;
+  }
+
+  .messages-sidebox-open .messages-sidebox {
+    left: 0;
+  }
+
+  .messages-card .messages-sidebox {
+    background: $white;
+    box-shadow: 0 0 0 $messages-sidebox-border-width $card-inner-border-color;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .messages-list .list-group-item {
+      flex-wrap: nowrap;
+    }
+
+    .message-subject {
+      width: auto;
+    }
+
+    .message-date {
+      margin-left: auto;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .messages-sidebox {
+      flex-basis: $messages-sidebox-width;
+    }
+
+    .messages-wrapper .messages-sidebox {
+      flex-basis: auto;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .messages-wrapper,
+    .messages-sidebox {
+      transition: none !important;
+    }
+
+    .messages-wrapper {
+      padding-left: $messages-sidebox-width;
+    }
+
+    .messages-sidebox {
+      z-index: auto !important;
+    }
+
+    .messages-wrapper .messages-sidebox {
+      position: absolute;
+      left: 0;
+      z-index: auto;
+    }
+
+    .messages-wrapper .messages-sidebox {
+      height: 100% !important;
+    }
+
+    .messages-card .messages-sidebox {
+      position: static;
+      right: auto;
+      left: auto;
+      flex-grow: 0;
+      height: auto;
+    }
+  }
+}
+
+.default-style[dir=rtl] {
+  @import "../_appwork/include";
+
+  .messages-sidebox-open .messages-sidebox {
+    right: 0;
+    left: auto;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .message-date {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .messages-wrapper {
+      padding-right: $messages-sidebox-width;
+      padding-left: 0;
+    }
+
+    .messages-wrapper .messages-sidebox {
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+.material-style {
+  @import "../_appwork/include-material";
+
+  .messages-wrapper .messages-sidebox {
+    z-index: $zindex-layout-fixed + 1;
+  }
+
+  .messages-sidebox-open .messages-sidebox {
+    left: 0;
+  }
+
+  .messages-card .messages-sidebox {
+    background: $white;
+    box-shadow: 0 0 0 $messages-sidebox-border-width $card-inner-border-color;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .messages-list .list-group-item {
+      flex-wrap: nowrap;
+    }
+
+    .message-subject {
+      width: auto;
+    }
+
+    .message-date {
+      margin-left: auto;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .messages-sidebox {
+      flex-basis: $messages-sidebox-width;
+    }
+
+    .messages-wrapper .messages-sidebox {
+      flex-basis: auto;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .messages-wrapper,
+    .messages-sidebox {
+      transition: none !important;
+    }
+
+    .messages-wrapper {
+      padding-left: $messages-sidebox-width;
+    }
+
+    .messages-sidebox {
+      z-index: auto !important;
+    }
+
+    .messages-wrapper .messages-sidebox {
+      position: absolute;
+      left: 0;
+      z-index: auto;
+    }
+
+    .messages-wrapper .messages-sidebox {
+      height: 100% !important;
+    }
+
+    .messages-card .messages-sidebox {
+      position: static;
+      right: auto;
+      left: auto;
+      flex-grow: 0;
+      height: auto;
+    }
+  }
+}
+
+.material-style[dir=rtl] {
+  @import "../_appwork/include-material";
+
+  .messages-sidebox-open .messages-sidebox {
+    right: 0;
+    left: auto;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .message-date {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .messages-wrapper {
+      padding-right: $messages-sidebox-width;
+      padding-left: 0;
+    }
+
+    .messages-wrapper .messages-sidebox {
+      right: 0;
+      left: auto;
+    }
+  }
+}

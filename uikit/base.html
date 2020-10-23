@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style">
+
+<head>
+  <title>Base UI Kit - Appwork</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css">
+
+  <!-- Load polyfills -->
+  <script src="assets/vendor/js/polyfills.js"></script>
+  <script>document['documentMode']===10&&document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
+
+  <script src="assets/vendor/js/material-ripple.js"></script>
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Theme settings -->
+  <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
+  <script src="assets/vendor/js/theme-settings.js"></script>
+  <script>
+    window.themeSettings = new ThemeSettings({
+      cssPath: 'assets/vendor/css/rtl/',
+      themesPath: 'assets/vendor/css/rtl/'
+    });
+  </script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/js/pace.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/vendor/libs/clipboard/clipboard.js"></script>
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="assets/vendor/libs/nouislider/nouislider.css">
+  <link rel="stylesheet" href="assets/vendor/libs/bootstrap-select/bootstrap-select.css">
+  <link rel="stylesheet" href="assets/vendor/libs/datatables/datatables.css">
+  <link rel="stylesheet" href="assets/vendor/libs/plyr/plyr.css">
+  <link rel="stylesheet" href="assets/vendor/libs/swiper/swiper.css">
+  <link rel="stylesheet" href="assets/vendor/libs/blueimp-gallery/gallery.css">
+  <link rel="stylesheet" href="assets/vendor/libs/blueimp-gallery/gallery-indicator.css">
+
+  <!-- highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+  <!-- Custom styles -->
+  <style>
+    #main-header {
+      font-weight: bold;
+      font-size: 1.6875rem;
+      margin: 0 0 -.3125rem 0;
+      padding: .9375rem 3.125rem;
+      line-height: 2.5rem;
+    }
+
+    #main-header-path {
+      opacity: .4;
+    }
+
+    /* Page background */
+    .ui-block,
+    .cui-bottom-spacer {
+      background: transparent;
+    }
+
+    /* Blocks */
+    .ui-block {
+      padding: 2.5rem 0;
+      border-top: .3125rem solid rgba(49, 68, 82, .07);
+    }
+
+    /* Headings */
+    .ui-block-heading {
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      color: rgba(24, 28, 33, .4);
+      font-size: .6875rem;
+    }
+
+    /* Code examples */
+    .uikit-example {
+      position: relative;
+    }
+
+    .uikit-example-btns {
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      transition: all .2s;
+      direction: ltr !important;
+    }
+
+    [dir=rtl] .uikit-example-btns {
+      right: auto;
+      left: 0;
+    }
+
+    .uikit-example:hover .uikit-example-btns {
+      top: -17px;
+      opacity: 1;
+    }
+
+    .uikit-example-btn {
+      display: inline-block;
+      line-height: 1;
+      font-weight: 800;
+      background: #efefef;
+      direction: ltr !important;
+      color: #aaa;
+      padding: .1875rem .3125rem;
+      border-radius: .125rem;
+      white-space: nowrap;
+      font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 11px;
+      margin: 0 4px;
+    }
+
+    .uikit-example-btn.copy::before {
+      content: "COPY";
+    }
+
+    .uikit-example-btn.copied {
+      background: #000 !important;
+      color: #fff !important;
+    }
+
+    .uikit-example-btn.copied::before {
+      content: "COPIED!";
+    }
+
+    /* Modal */
+    .uikit-example-modal-opened {
+      overflow: hidden !important;
+    }
+
+    .uikit-example-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000000;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: auto;
+      background: rgba(255, 255, 255, .95);
+      animation-duration: .2s;
+      direction: ltr !important;
+      text-align: left !important;
+    }
+
+    .uikit-example-modal-opened .uikit-example-modal {
+      display: flex;
+    }
+
+    .uikit-example-modal-content {
+      max-width: 80%;
+      margin: auto;
+      padding: 30px 0;
+    }
+
+    .uikit-example-modal-copy {
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+
+    .uikit-example-modal-copy.copied::before {
+      content: "Copied to clipboard!";
+      position: absolute;
+      display: block;
+      right: 100%;
+      margin-right: 10px;
+      font-size: 14px;
+      white-space: nowrap;
+      background: #111;
+      line-height: 24px;
+      height: 24px;
+      border-radius: 3px;
+      padding: 0 6px;
+      top: 50%;
+      margin-top: -12px;
+    }
+
+    .uikit-example-modal-close {
+      display: block;
+      position: fixed;
+      top: 10px;
+      right: 30px;
+      color: #000 !important;
+      opacity: .2;
+      font-size: 3rem;
+      font-weight: 100;
+    }
+
+    .uikit-example-modal-close:hover {
+      opacity: .9;
+    }
+
+    /* Code */
+    .uikit-example-modal-content>pre {
+      overflow: auto;
+    }
+
+    .uikit-example-modal-content>pre>code {
+      padding: 0;
+      background: none;
+      font-size: 16px;
+    }
+
+    .cui-bottom-spacer {
+      height: 12rem;
+    }
+  </style>
+  <!-- / Custom styles -->
+</head>
+
+<body>
+  <div class="page-loader">
+    <div class="bg-primary"></div>
+  </div>
+
+  <div class="uikit-example-modal animated fadeIn">
+    <a href="javascript:void(0)" class="uikit-example-modal-copy btn icon-btn btn-lg btn-primary rounded-pill"><span class="ion ion-md-clipboard"></span></a>
+    <a href="javascript:void(0)" class="uikit-example-modal-close">&times;</a>
+    <div class="uikit-example-modal-content"></div>
+  </div>
+
+  <h1 id="main-header" class="bg-dark text-white">
+    <span id="main-header-path">UI Kit &nbsp;/&nbsp;</span>
+    <span class="d-inline-block position-relative">
+      <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown">Base</a>
+      <span class="dropdown-menu mt-3">
+
+        <a href="company.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Company</span></a>
+        <a href="dashboard.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Dashboard</span></a>
+        <a href="e-commerce.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">E-Commerce</span></a>
+        <a href="headers-and-footers.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Headers &amp; Footers</span></a>
+        <a href="magazine.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Magazine</span></a>
+        <a href="social.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Social</span></a>
+      </span>
+    </span>
+  </h1>
+
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Width</h4>
+
+      <div class="uikit-example">
+        <div class="d-inline-block mr-3 mb-3">
+          <code>.ui-w-140</code>
+          <img src="assets/img/avatars/1.png" class="d-block ui-w-140" />
+        </div>
+
+        <div class="d-inline-block mr-3 mb-3">
+          <code>.ui-w-120</code>
+          <img src="assets/img/avatars/1.png" class="d-block ui-w-120" />
+        </div>
+
+        <div class="d-inline-block mr-3 mb-3">
+          <code>.ui-w-100</code>
+          <img src="assets/img/avatars/1.png" class="d-block ui-w-100" />
+        </div>
+
+        <div class="d-inline-block mr-3 mb-3">
+          <code>.ui-w-80</code>
+          <img src="assets/img/avatars/1.png" class="d-block ui-w-80" />
+        </div>
+
+        <div class="d-inline-block mr-3 mb-3">
+          <code>.ui-w-60</code>
+          <img src="assets/img/avatars/1.png" class="d-block ui-w-60" />
+        </div>
+
+        <div class="d-inline-block mr-3 mb-3">
+          <code>.ui-w-50</code>
+          <img src="assets/img/avatars/1.png" class="d-block ui-w-50" />
+        </div>
+
+        <div class="d-inline-block mr-3 mb-3">
+          <code>.ui-w-40</code>
+          <img src="assets/img/avatars/1.png" class="d-block ui-w-40" />
+        </div>
+
+        <div class="d-inline-block mr-3 mb-3">
+          <code>.ui-w-30</code>
+          <img src="assets/img/avatars/1.png" class="d-block ui-w-30" />
+        </div>
+
+        <div class="d-inline-block mr-3 mb-3">
+          <code>.ui-w-20</code>
+          <img src="assets/img/avatars/1.png" class="d-block ui-w-20" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Grayscale images</h4>
+
+      <div class="uikit-example">
+        <img src="assets/img/avatars/11.png" class="d-block ui-w-100 ui-img-grayscale" />
+
+        <p class="mt-4">Hoverable:</p>
+
+        <img src="assets/img/avatars/11.png" class="hoverable d-block ui-w-100 ui-img-grayscale" />
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Full height</h4>
+
+      <div class="uikit-example">
+        <div class="d-flex ui-mh-100vh bg-light">
+          <code class="d-block m-auto">min-height: 100vh</code>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Squares and rects</h4>
+
+      <p>Square and rect blocks are keep their height relative to the parent's width.</p>
+
+      <div class="uikit-example">
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <code>.ui-square</code>
+          <div class="ui-square bg-dark"></div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <code>.ui-rect-75</code>
+          <div class="ui-rect-75 bg-dark"></div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <code>.ui-rect-67</code>
+          <div class="ui-rect-67 bg-dark"></div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <code>.ui-rect-60</code>
+          <div class="ui-rect-60 bg-dark"></div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <code>.ui-rect</code>
+          <div class="ui-rect bg-dark"></div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <code>.ui-rect-30</code>
+          <div class="ui-rect-30 bg-dark"></div>
+        </div>
+      </div>
+
+      <p>With content:</p>
+
+      <div class="uikit-example">
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <div class="ui-square bg-dark">
+            <div class="d-flex ui-square-content">
+              <code class="d-block m-auto">.ui-square</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <div class="ui-rect-75 bg-dark">
+            <div class="d-flex ui-rect-content">
+              <code class="d-block m-auto">.ui-rect-75</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <div class="ui-rect-67 bg-dark">
+            <div class="d-flex ui-rect-content">
+              <code class="d-block m-auto">.ui-rect-67</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <div class="ui-rect-60 bg-dark">
+            <div class="d-flex ui-rect-content">
+              <code class="d-block m-auto">.ui-rect-60</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <div class="ui-rect bg-dark">
+            <div class="d-flex ui-rect-content">
+              <code class="d-block m-auto">.ui-rect</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 200px; max-width:200px">
+          <div class="ui-rect-30 bg-dark">
+            <div class="d-flex ui-rect-content">
+              <code class="d-block m-auto">.ui-rect-30</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Icons</h4>
+
+      <div class="uikit-example">
+        <span class="ui-icon ion ion-md-cart text-primary"></span>
+        <span class="ui-icon ion ion-md-cart bg-primary border-0 text-white"></span>
+
+        <p class="mt-4">Small:</p>
+
+        <span class="ui-icon ui-icon-sm ion ion-md-cart text-primary"></span>
+        <span class="ui-icon ui-icon-sm ion ion-md-cart bg-primary border-0 text-white"></span>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Stars</h4>
+
+      <div class="uikit-example">
+        <div class="ui-stars text-large">
+          <div class="ui-star filled">
+            <i class="ion ion-md-star"></i>
+            <i class="ion ion-md-star"></i>
+          </div>
+          <div class="ui-star filled">
+            <i class="ion ion-md-star"></i>
+            <i class="ion ion-md-star"></i>
+          </div>
+          <div class="ui-star filled">
+            <i class="ion ion-md-star"></i>
+            <i class="ion ion-md-star"></i>
+          </div>
+          <div class="ui-star half-filled">
+            <i class="ion ion-md-star"></i>
+            <i class="ion ion-md-star"></i>
+          </div>
+          <div class="ui-star">
+            <i class="ion ion-md-star"></i>
+            <i class="ion ion-md-star"></i>
+          </div>
+        </div>
+
+        <p class="mt-4">Hoverable:</p>
+
+        <div class="ui-stars hoverable text-large">
+          <div class="ui-star filled">
+            <i class="ion ion-md-star"></i>
+            <i class="ion ion-md-star"></i>
+          </div>
+          <div class="ui-star filled">
+            <i class="ion ion-md-star"></i>
+            <i class="ion ion-md-star"></i>
+          </div>
+          <div class="ui-star half-filled">
+            <i class="ion ion-md-star"></i>
+            <i class="ion ion-md-star"></i>
+          </div>
+          <div class="ui-star">
+            <i class="ion ion-md-star"></i>
+            <i class="ion ion-md-star"></i>
+          </div>
+          <div class="ui-star">
+            <i class="ion ion-md-star"></i>
+            <i class="ion ion-md-star"></i>
+          </div>
+        </div>
+
+        <p class="mt-4">Custom icon:</p>
+
+        <div class="ui-stars text-large">
+          <div class="ui-star filled">
+            <div>&#10026;</div>
+            <div>&#10026;</div>
+          </div>
+          <div class="ui-star filled">
+            <div>&#10026;</div>
+            <div>&#10026;</div>
+          </div>
+          <div class="ui-star filled">
+            <div>&#10026;</div>
+            <div>&#10026;</div>
+          </div>
+          <div class="ui-star">
+            <div>&#10026;</div>
+            <div>&#10026;</div>
+          </div>
+          <div class="ui-star">
+            <div>&#10026;</div>
+            <div>&#10026;</div>
+          </div>
+        </div>
+
+        <p class="mt-4">Custom colors:</p>
+
+        <div class="bg-dark p-4">
+          <div class="ui-stars text-large">
+            <div class="ui-star filled">
+              <i class="ion ion-md-star text-primary"></i>
+              <i class="ion ion-md-star text-white opacity-25"></i>
+            </div>
+            <div class="ui-star filled">
+              <i class="ion ion-md-star text-primary"></i>
+              <i class="ion ion-md-star text-white opacity-25"></i>
+            </div>
+            <div class="ui-star half-filled">
+              <i class="ion ion-md-star text-primary"></i>
+              <i class="ion ion-md-star text-white opacity-25"></i>
+            </div>
+            <div class="ui-star">
+              <i class="ion ion-md-star text-primary"></i>
+              <i class="ion ion-md-star text-white opacity-25"></i>
+            </div>
+            <div class="ui-star">
+              <i class="ion ion-md-star text-primary"></i>
+              <i class="ion ion-md-star text-white opacity-25"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">List</h4>
+
+      <div class="uikit-example">
+        <ul class="ui-list">
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Integer molestie lorem at massa</li>
+          <li>Facilisis in pretium nisl aliquet</li>
+          <li>Nulla volutpat aliquam velit</li>
+          <li>Faucibus porta lacus fringilla vel</li>
+          <li>Aenean sit amet erat nunc</li>
+          <li>Eget porttitor lorem</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Text block</h4>
+
+      <div class="uikit-example">
+        <div class="ui-text-block">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed sollicitudin metus. Pellentesque ut ultrices metus. Nam rutrum vehicula odio, sed auctor libero lacinia vitae. Nullam volutpat pretium suscipit. Nunc eget lectus mauris. Vestibulum laoreet euismod nisl non tristique. Etiam mollis ex sed nibh feugiat dictum. Nullam ornare diam sed arcu interdum condimentum. Maecenas pharetra nibh interdum, laoreet ex et, dapibus lorem. Pellentesque a justo eu dolor tempus luctus. </p>
+          <p>Suspendisse nec nisl quis ligula volutpat scelerisque vel a mi. Vivamus et velit elit. </p>
+          <p>Aliquam consequat orci id arcu venenatis tempus. Donec varius convallis enim, ac auctor libero euismod eu. Nam rutrum molestie diam et sagittis. Integer consequat vestibulum interdum. Integer consequat scelerisque lectus, et viverra massa aliquam at. Phasellus consequat faucibus justo eu pulvinar. Maecenas tincidunt non urna in luctus. Vivamus et tellus tortor. In eleifend euismod imperdiet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Company text</h4>
+
+      <div class="uikit-example">
+        <div class="ui-company-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed sollicitudin metus. Pellentesque ut ultrices metus. Nam rutrum vehicula odio, sed auctor libero lacinia vitae. Nullam volutpat pretium suscipit. Nunc eget lectus mauris. Vestibulum laoreet euismod nisl non tristique. Etiam mollis ex sed nibh feugiat dictum. Nullam ornare diam sed arcu interdum condimentum. Maecenas pharetra nibh interdum, laoreet ex et, dapibus lorem. Pellentesque a justo eu dolor tempus luctus.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Backgrounds</h4>
+
+      <div class="uikit-example">
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 300px; max-width:300px">
+          <code>.ui-bg-cover</code>
+          <div class="ui-rect-67 ui-bg-cover" style="background-image: url(assets/img/bg/1.jpg)"></div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 300px; max-width:300px">
+          <code>.ui-bg-fixed</code>
+          <div class="ui-rect-67 ui-bg-cover ui-bg-fixed" style="background-image: url(assets/img/bg/1.jpg)"></div>
+        </div>
+
+        <p class="mt-4">With overlay:</p>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 300px; max-width:300px">
+          <code>.ui-bg-cover</code>
+          <div class="ui-rect-67 ui-bg-cover ui-bg-overlay-container" style="background-image: url(assets/img/bg/1.jpg)">
+            <div class="ui-bg-overlay bg-primary opacity-50"></div>
+          </div>
+        </div>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 300px; max-width:300px">
+          <code>.ui-bg-fixed</code>
+          <div class="ui-rect-67 ui-bg-cover ui-bg-fixed ui-bg-overlay-container" style="background-image: url(assets/img/bg/1.jpg)">
+            <div class="ui-bg-overlay bg-primary opacity-50"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Video background</h4>
+
+      <div class="uikit-example">
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 300px; max-width:300px">
+          <div class="ui-rect-67 ui-bg-video-container">
+            <div class="ui-bg-video">
+              <video preload="true" autoplay="true" loop="true">
+                <source src="assets/video/video.mp4?1" />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-4">With overlay:</p>
+
+        <div class="d-inline-block align-top mr-3 mb-3" style="width: 300px; max-width:300px">
+          <div class="ui-rect-67 ui-bg-overlay-container ui-bg-video-container">
+            <div class="ui-bg-video">
+              <video preload="true" autoplay="true" loop="true">
+                <source src="assets/video/video.mp4?1" />
+              </video>
+            </div>
+            <div class="ui-bg-overlay bg-primary opacity-50"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Responsive devices</h4>
+
+      <p>Macbook:</p>
+
+      <div class="uikit-example">
+        <div class="ui-device macbook w-100">
+          <img class="device-img" src="assets/img/devices/macbook-gold.png" alt>
+          <div class="device-content">
+            <img src="assets/img/uikit/app.png" alt>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-4">
+        Available macbook images:
+        <ul>
+          <li>macbook-gold.png</li>
+          <li>macbook-silver.png</li>
+          <li>macbook-spacegray.png</li>
+        </ul>
+      </p>
+
+      <p>iPhone:</p>
+
+      <div class="uikit-example">
+        <div class="ui-device iphone mw-100 mx-auto" style="width: 230px;">
+          <div class="device-content">
+            <img src="assets/img/uikit/app-phone.png" alt>
+          </div>
+          <img class="device-img" src="assets/img/devices/iphone.png" alt>
+        </div>
+      </div>
+
+      <p class="mt-4">Browser window:</p>
+
+      <div class="uikit-example">
+        <div class="ui-window w-100 rounded">
+          <div class="window-content">
+            <img src="assets/img/uikit/app.png" alt>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Presentaions</h4>
+
+      <div class="uikit-example">
+        <div class="row">
+          <div class="col overflow-hidden">
+            <div class="ui-presentation-left ui-device macbook float-right">
+              <img class="device-img" src="assets/img/devices/macbook-gold.png" alt>
+              <div class="device-content">
+                <img src="assets/img/uikit/app.png" alt>
+              </div>
+            </div>
+          </div>
+          <div class="col overflow-hidden">
+            <div class="ui-presentation-right ui-window float-left rounded">
+              <div class="window-content">
+                <img src="assets/img/uikit/app.png" alt>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Hero</h4>
+
+      <div class="uikit-example">
+        <div class="jumbotron ui-hero" style="height: 500px">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">Hero content</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Customer review</h4>
+
+      <div class="uikit-example">
+        <div class="ui-customer-review">
+          Lorem ipsum dolor sit amet, mel ea molestie erroribus consequuntur, munere iracundia percipitur ne usu, his saperet tractatos no.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Statistics icon</h4>
+
+      <div class="uikit-example">
+        <span class="ui-icon ui-statistics-icon ion ion-md-cart text-primary"></span>
+        <span class="ui-icon ui-statistics-icon ion ion-md-cart bg-primary border-0 text-white"></span>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Feed icons</h4>
+
+      <div class="uikit-example">
+        <div class="ui-feed-icon-container d-inline-block">
+          <span class="ui-icon ui-feed-icon ion ion-ios-thumbs-up bg-success text-white"></span>
+          <img src="assets/img/avatars/7-small.png" class="ui-w-40 rounded-circle" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Activity icons</h4>
+
+      <div class="uikit-example">
+        <span class="ui-icon ui-activity-icon ion ion-md-cart text-primary"></span>
+        <span class="ui-icon ui-activity-icon ion ion-md-cart bg-primary border-0 text-white"></span>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Product badge</h4>
+
+      <div class="uikit-example">
+        <span class="badge ui-product-badge badge-primary">BEST CHOICE</span>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Product color</h4>
+
+      <div class="uikit-example">
+        <div>
+          <a href="javascript:void(0)" class="ui-product-color" style="background:#000;"></a>&nbsp;
+          <a href="javascript:void(0)" class="ui-product-color" style="background:#3f51b5;"></a>&nbsp;
+          <a href="javascript:void(0)" class="ui-product-color active" style="background:#ff5722;"></a>&nbsp;
+          <a href="javascript:void(0)" class="ui-product-color" style="background:#607d8b;"></a>
+        </div>
+
+        <p class="mt-4">Small:</p>
+        <div>
+          <a href="javascript:void(0)" class="ui-product-color ui-product-color-sm" style="background:#000;"></a>&nbsp;
+          <a href="javascript:void(0)" class="ui-product-color ui-product-color-sm" style="background:#3f51b5;"></a>&nbsp;
+          <a href="javascript:void(0)" class="ui-product-color ui-product-color-sm active" style="background:#ff5722;"></a>&nbsp;
+          <a href="javascript:void(0)" class="ui-product-color ui-product-color-sm" style="background:#607d8b;"></a>
+        </div>
+
+        <p class="mt-4">Large:</p>
+        <div>
+          <a href="javascript:void(0)" class="ui-product-color ui-product-color-lg" style="background:#000;"></a>&nbsp;
+          <a href="javascript:void(0)" class="ui-product-color ui-product-color-lg" style="background:#3f51b5;"></a>&nbsp;
+          <a href="javascript:void(0)" class="ui-product-color ui-product-color-lg active" style="background:#ff5722;"></a>&nbsp;
+          <a href="javascript:void(0)" class="ui-product-color ui-product-color-lg" style="background:#607d8b;"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Payment</h4>
+
+      <div class="uikit-example">
+        <div>
+          <img src="assets/img/payment/Visa-light.png" class="ui-payment" alt="">
+          <img src="assets/img/payment/MasterCard-light.png" class="ui-payment" alt="">
+          <img src="assets/img/payment/Maestro-light.png" class="ui-payment" alt="">
+          <img src="assets/img/payment/AmericanExpress-light.png" class="ui-payment" alt="">
+          <img src="assets/img/payment/Paypal-light.png" class="ui-payment" alt="">
+          <img src="assets/img/payment/WesternUnion-light.png" class="ui-payment" alt="">
+        </div>
+
+        <p class="mt-4">Small:</p>
+        <div>
+          <img src="assets/img/payment/Visa-light.png" class="ui-payment-small" alt="">
+          <img src="assets/img/payment/MasterCard-light.png" class="ui-payment-small" alt="">
+          <img src="assets/img/payment/Maestro-light.png" class="ui-payment-small" alt="">
+          <img src="assets/img/payment/AmericanExpress-light.png" class="ui-payment-small" alt="">
+          <img src="assets/img/payment/Paypal-light.png" class="ui-payment-small" alt="">
+          <img src="assets/img/payment/WesternUnion-light.png" class="ui-payment-small" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Play icon</h4>
+
+      <div class="uikit-example">
+        <div>
+          <span class="ui-icon bg-primary border-0 text-white">
+            <i class="ui-play-icon ion ion-md-play scaleX--1-rtl"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cui-bottom-spacer"></div>
+
+  <script>
+  (function() {
+    function hasClass(el, cls) {
+      return el.className.split(' ').indexOf(cls) !== -1;
+    }
+
+    function sanitizeSource(source, blacklist) {
+      source = source
+        .replace(/\r/g, '')
+        .replace(/\t/g, '  ')
+        .replace(/^ *\n+/, '\n')
+        .replace(/[\s\n]+$/, '');
+
+      source = source.replace(new RegExp('\\n' + source.match(/^\n( *)/)[1], 'g'), '\n');
+
+      if (blacklist) {
+        source = source.replace(/class="([^"]+)"/g, function(m, clsStr) {
+          var clsArr = clsStr.replace(/^\s+|\s+$/, '').replace(/\s+/g, ' ').split(' ');
+
+          for (var i = 0, l = blacklist.length, clsInd; i < l; i++) {
+            if ((clsInd = clsArr.indexOf(blacklist[i])) !== -1) {
+              clsArr.splice(clsInd, 1);
+            }
+          }
+
+          return 'class="' + clsArr.join(' ') + '"';
+        });
+      }
+
+      return source
+        .replace(/\s+class=""/ig, '')
+        .replace(/([a-z]+)=""/ig, '$1')
+        .replace(/javascript:void\(0\)/g, '#')
+        .replace(/^\n/, '');
+    }
+
+    function attachClipboard(el, src) {
+      return new Clipboard(el, {
+        text: function() {
+          return src;
+        }
+      });
+    }
+
+    function openModal(src, formattedSrc) {
+      document.querySelector('.uikit-example-modal-content').innerHTML = '<pre><code class="hljs html xml">' + formattedSrc + '</code></pre>';
+
+      var copyBtn = document.querySelector('.uikit-example-modal-copy');
+      var closeBtn = document.querySelector('.uikit-example-modal-close');
+
+      var copyBtnTimeout = null;
+      var clipboard = attachClipboard(copyBtn, src);
+
+      clipboard.on('success', function(e) {
+        if (copyBtnTimeout) {
+          clearTimeout(copyBtnTimeout);
+          copyBtnTimeout = null;
+        }
+
+        copyBtn.className = copyBtn.className.replace(' copied', '');
+        copyBtn.className += ' copied';
+
+        copyBtnTimeout = setTimeout(function() {
+          copyBtn.className = copyBtn.className.replace(' copied', '');
+        }, 1000);
+      });
+
+      var closeListener = function() {
+        document.querySelector('.uikit-example-modal-content').innerHTML = '';
+        document.querySelector('.uikit-example-modal').scrollTop = 0;
+        closeBtn.removeEventListener('click', closeListener);
+        clipboard.destroy();
+        document.documentElement.className = document.documentElement.className.replace(' uikit-example-modal-opened', '');
+      };
+
+      closeBtn.addEventListener('click', closeListener);
+
+      document.documentElement.className += ' uikit-example-modal-opened';
+    }
+
+    Array.prototype.slice.call(document.querySelectorAll('.uikit-example')).forEach(function(parentEl) {
+      var btnsWrapper = document.createElement('div');
+      btnsWrapper.className = 'uikit-example-btns';
+
+      var copyBtn = document.createElement('a');
+      copyBtn.href = 'javascript:void(0)';
+      copyBtn.className = 'uikit-example-btn copy';
+
+      var sourceBtn = document.createElement('a');
+      sourceBtn.href = 'javascript:void(0)';
+      sourceBtn.className = 'uikit-example-btn';
+      sourceBtn.innerHTML = 'SOURCE'
+
+      btnsWrapper.appendChild(copyBtn);
+      btnsWrapper.appendChild(sourceBtn);
+
+      var blacklistStr = (parentEl.getAttribute('data-blacklist') || null);
+      var blacklist = (blacklistStr && blacklistStr.split(',')) || null;
+      var src = sanitizeSource(parentEl.innerHTML, blacklist);
+      var formattedSrc = hljs.highlight('html', src).value;
+
+      parentEl.appendChild(btnsWrapper);
+
+      var copyBtnTimeout = null;
+      attachClipboard(copyBtn, src).on('success', function(e) {
+        if (copyBtnTimeout) {
+          clearTimeout(copyBtnTimeout);
+          copyBtnTimeout = null;
+        }
+
+        copyBtn.className = copyBtn.className.replace(' copied', '');
+        copyBtn.className += ' copied';
+
+        copyBtnTimeout = setTimeout(function() {
+          copyBtn.className = copyBtn.className.replace(' copied', '');
+        }, 1000);
+      });
+
+      sourceBtn.addEventListener('click', function(e) {
+        openModal(src, formattedSrc);
+      });
+    });
+  })();
+
+  $(function() {
+    // Initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+
+  <!-- Libs -->
+  <script src="assets/vendor/libs/nouislider/nouislider.js"></script>
+  <script src="assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+  <script src="assets/vendor/libs/chartjs/chartjs.js"></script>
+  <script src="assets/vendor/libs/datatables/datatables.js"></script>
+  <script src="assets/vendor/libs/moment/moment.js"></script>
+  <script src="assets/vendor/libs/numeral/numeral.js"></script>
+  <script src="assets/vendor/libs/plyr/plyr.js"></script>
+  <script src="assets/vendor/libs/swiper/swiper.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery-fullscreen.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery-indicator.js"></script>
+  <!-- Google Maps -->
+  <!-- NOTE: When using Google Maps on your own site you MUST get your own API key:
+           //developers.google.com/maps/documentation/javascript/get-api-key
+           After you got the key paste it in the URL below. -->
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyCHtdj4L66c05v1UZm-nte1FzUEAN6GKBI"></script>
+  <script src="assets/vendor/libs/gmaps/gmaps.js"></script>
+  <script src="assets/vendor/libs/masonry/masonry.js"></script>
+
+</body>
+
+</html>

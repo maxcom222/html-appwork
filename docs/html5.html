@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style docs-page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>HTML5 - Appwork v1.4.0 Docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/bootstrap.css">
+  <link rel="stylesheet" href="assets/appwork.css">
+  <link rel="stylesheet" href="assets/theme-corporate.css">
+
+  <link rel="stylesheet" href="assets/main.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/main.js"></script>
+
+</head>
+<body>
+
+  <h1 class="docs-page-header bg-dark text-white">
+    <span class="docs-page-header-path">Docs v1.4.0 &nbsp;/&nbsp;</span>
+    <span class="docs-page-header-dropdown">
+      <span class="dropdown-toggle text-white">HTML5</span>
+      <span class="dropdown-menu mt-3">
+        
+        <a href="angular.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Angular</span></a>
+        <a href="vue.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Vue.js</span></a>
+        <a href="react.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">React</span></a>
+        <a href="laravel.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Laravel</span></a>
+        <a href="laravel-vue.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Laravel + Vue.js</span></a>
+        <a href="rails.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Rails</span></a>
+        <a href="rails-turbolinks.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Rails + Turbolinks</span></a>
+        <a href="aspnet-core.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET Core</span></a>
+        <a href="aspnet-core-mvc.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET Core MVC</span></a>
+        <a href="aspnet-mvc.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET MVC</span></a>
+        <a href="aspnet-mvc-webpack.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET MVC + Webpack</span></a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">OTHER</h6>
+        <a href="settings-panel.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Settings panel</span></a>
+        <a href="layout-helpers.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Layout helpers</span></a>
+      </span>
+    </span>
+  </h1>
+
+
+  <div class="docs-wrapper">
+    <div class="docs-sections bg-light">
+      <ul class="docs-sections-inner">
+
+<li><a href="#directory-structure"><code class="bg-light px-1">html-starter</code> directory structure</a></li>
+<li>
+  <span>Page structure</span>
+  <ul>
+    <li><a href="#page-structure-main">Main</a></li>
+    <li><a href="#page-structure-layouts">Layouts</a></li>
+    <li><a href="#page-structure-theming">Theming</a></li>
+    <li><a href="#page-structure-material">Material styling</a></li>
+    <li><a href="#page-structure-rtl">RTL support</a></li>
+    <li><a href="#page-structure-options">Layout options</a></li>
+    <li><a href="#page-structure-pacejs">PACE.js progress</a></li>
+    <li><a href="#page-structure-generator">Generator</a></li>
+  </ul>
+</li>
+<li>
+  <span>Sources</span>
+  <ul>
+    <li><a href="#sources-structure"><code class="bg-light px-1">src</code> directory structure</a></li>
+    <li><a href="#sources-plugins">Third-party plugins</a></li>
+    <li><a href="#sources-installation">Installation</a></li>
+    <li><a href="#sources-build">Build</a></li>
+    <li><a href="#sources-tasks">Available tasks</a></li>
+  </ul>
+</li>
+<li><a href="#migration-guides">Migration guide</a></li>
+      </ul>
+    </div>
+
+    <div class="docs-inner">
+<div class="docs-version">
+  <div class="docs-block text-white">
+    Instructions can vary depending on whatever you use theme settings panel or not.
+    Please select the appropriate version.
+  </div>
+  <ul class="nav nav-lg nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#without-theme-settings">Without settings panel</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#with-theme-settings">With settings panel</a>
+    </li>
+  </ul>
+</div>
+
+<h2 class="docs-header docs-header-anchor"><a name="directory-structure"><code class="bg-light px-1">html-starter</code> directory structure</a></h2>
+<div class="docs-block">
+  <div class="directory-structure">
+    <div class="file-item folder">
+      <div class="file-icon fas fa-folder"></div><div class="file-name">html-starter</div>
+
+      <div><div class="file-item folder">
+        <div class="file-icon fas fa-folder"></div><div class="file-name">assets</div>
+
+        <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">js</div><div class="file-description">Application javascripts</div></div></div>
+
+        <div><div class="file-item folder">
+          <div class="file-icon fas fa-folder"></div><div class="file-name">vendor</div><div class="file-description">Appwork's assets</div>
+
+          <div><div class="file-item folder">
+            <div class="file-icon fas fa-folder"></div><div class="file-name">js</div><div class="file-description">Javascripts</div>
+            <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">bootstrap.js</div></div></div>
+            <div><div class="file-item"><div class="file-icon"></div><div class="file-name">...</div></div></div>
+          </div></div>
+
+          <div><div class="file-item folder">
+            <div class="file-icon fas fa-folder"></div><div class="file-name">css</div><div class="file-description">Stylesheets</div>
+            <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">pages</div><div class="file-description">Pages styling</div></div></div>
+            <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">rtl</div><div class="file-description">Stylesheets with RTL support</div></div></div>
+
+            <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">bootstrap.css</div></div></div>
+            <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">appwork.css</div></div></div>
+            <div><div class="file-item"><div class="file-icon"></div><div class="file-name">...</div></div></div>
+          </div></div>
+
+          <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">fonts</div><div class="file-description">Iconic fonts</div></div></div>
+
+          <div><div class="file-item folder">
+            <div class="file-icon fas fa-folder"></div><div class="file-name">libs</div><div class="file-description">Third-party libraries</div>
+            <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">animate-css</div></div></div>
+            <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">autosize</div></div></div>
+            <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">block-ui</div></div></div>
+            <div><div class="file-item"><div class="file-icon"></div><div class="file-name">...</div></div></div>
+          </div></div>
+
+        </div></div>
+
+      </div></div>
+
+      <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">index.html</div></div></div>
+      <div><div class="file-item"><div class="file-icon"></div><div class="file-name">...</div></div></div>
+    </div>
+  </div>
+</div>
+
+<h2 class="docs-header">Page structure</h2>
+<div class="docs-block">
+  <div class="alert alert-info">
+    Instead of configuring the layout manually, you can use the <a href="#page-structure-generator" class="alert-link">Starter template generator</a>. It will dramatically simplify the initial setup.
+  </div>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="page-structure-main">Main</a></h4>
+<div class="docs-block docs-default-version">
+  <pre class="docs-code-path">index.html</pre>
+  <pre class="docs-code html"><code>&lt;!DOCTYPE html>
+
+&lt;html lang="en" class="default-style">
+&lt;head>
+  &lt;meta charset="utf-8">
+  &lt;meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  &lt;meta name="description" content="">
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  &lt;title>TITLE&lt;/title>
+
+  &lt;!-- Main font -->
+  &lt;link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  &lt;!-- Icons. Uncomment required icon fonts -->
+  &lt;!-- &lt;link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css"> -->
+  &lt;link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  &lt;!-- &lt;link rel="stylesheet" href="assets/vendor/fonts/linearicons.css"> -->
+  &lt;!-- &lt;link rel="stylesheet" href="assets/vendor/fonts/open-iconic.css"> -->
+  &lt;!-- &lt;link rel="stylesheet" href="assets/vendor/fonts/pe-icon-7-stroke.css"> -->
+
+  &lt;!-- Core stylesheets -->
+  &lt;link rel="stylesheet" href="assets/vendor/css/bootstrap.css">
+  &lt;link rel="stylesheet" href="assets/vendor/css/appwork.css">
+  &lt;link rel="stylesheet" href="assets/vendor/css/theme-corporate.css">
+  &lt;link rel="stylesheet" href="assets/vendor/css/colors.css">
+  &lt;link rel="stylesheet" href="assets/vendor/css/uikit.css">
+
+  &lt;!-- Load polyfills -->
+  &lt;script src="assets/vendor/js/polyfills.js">&lt;/script>
+  &lt;script>document['documentMode']===10&&document.write('&lt;script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en">&lt;\/script>')&lt;/script>
+
+  &lt;!-- Layout helpers -->
+  &lt;script src="assets/vendor/js/layout-helpers.js">&lt;/script>
+
+  &lt;!-- Libs -->
+
+  &lt;!-- `perfect-scrollbar` library required by SideNav plugin -->
+  &lt;link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+
+&lt;/head>
+&lt;body>
+
+  CONTENT
+
+  &lt;!-- Core scripts -->
+
+  &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">&lt;/script>
+  &lt;script src="assets/vendor/libs/popper/popper.js">&lt;/script>
+  &lt;script src="assets/vendor/js/bootstrap.js">&lt;/script>
+  &lt;script src="assets/vendor/js/sidenav.js">&lt;/script>
+
+  &lt;!-- Libs -->
+
+  &lt;!-- `perfect-scrollbar` library required by SideNav plugin -->
+  &lt;script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js">&lt;/script>
+
+&lt;/body>
+&lt;/html></code></pre>
+</div>
+<div class="docs-block docs-theme-settings-version">
+  <pre class="docs-code-path">index.html</pre>
+  <pre class="docs-code html"><code>&lt;!DOCTYPE html>
+
+&lt;html lang="en" class="default-style">
+&lt;head>
+  &lt;meta charset="utf-8">
+  &lt;meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  &lt;meta name="description" content="">
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  &lt;title>TITLE&lt;/title>
+
+  &lt;!-- Main font -->
+  &lt;link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  &lt;!-- Icons. Uncomment required icon fonts -->
+  &lt;!-- &lt;link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css"> -->
+  &lt;link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  &lt;!-- &lt;link rel="stylesheet" href="assets/vendor/fonts/linearicons.css"> -->
+  &lt;!-- &lt;link rel="stylesheet" href="assets/vendor/fonts/open-iconic.css"> -->
+  &lt;!-- &lt;link rel="stylesheet" href="assets/vendor/fonts/pe-icon-7-stroke.css"> -->
+
+  &lt;!-- Core stylesheets -->
+  &lt;link rel="stylesheet" href="assets/vendor/css/bootstrap.css" class="theme-settings-bootstrap-css">
+  &lt;link rel="stylesheet" href="assets/vendor/css/appwork.css" class="theme-settings-appwork-css">
+  &lt;link rel="stylesheet" href="assets/vendor/css/theme-corporate.css" class="theme-settings-theme-css">
+  &lt;link rel="stylesheet" href="assets/vendor/css/colors.css" class="theme-settings-colors-css">
+  &lt;link rel="stylesheet" href="assets/vendor/css/uikit.css">
+
+  &lt;!-- Load polyfills -->
+  &lt;script src="assets/vendor/js/polyfills.js">&lt;/script>
+  &lt;script>document['documentMode']===10&&document.write('&lt;script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en">&lt;\/script>')&lt;/script>
+
+  &lt;!-- Layout helpers -->
+  &lt;script src="assets/vendor/js/layout-helpers.js">&lt;/script>
+
+  &lt;!-- Theme settings -->
+  &lt;script src="assets/vendor/js/theme-settings.js">&lt;/script>
+  &lt;script>
+    window.themeSettings = new ThemeSettings({
+      cssPath: 'assets/vendor/css/',
+      themesPath: 'assets/vendor/css/'
+    });
+  &lt;/script>
+
+  &lt;!-- Libs -->
+
+  &lt;!-- `perfect-scrollbar` library required by SideNav plugin -->
+  &lt;link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+
+&lt;/head>
+&lt;body>
+
+  CONTENT
+
+  &lt;!-- Core scripts -->
+
+  &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">&lt;/script>
+  &lt;script src="assets/vendor/libs/popper/popper.js">&lt;/script>
+  &lt;script src="assets/vendor/js/bootstrap.js">&lt;/script>
+  &lt;script src="assets/vendor/js/sidenav.js">&lt;/script>
+
+  &lt;!-- Libs -->
+
+  &lt;!-- `perfect-scrollbar` library required by SideNav plugin -->
+  &lt;script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js">&lt;/script>
+
+&lt;/body>
+&lt;/html></code></pre>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="page-structure-layouts">Layouts</a></h4>
+
+<div class="docs-block">
+  <ul class="docs-nav nav nav-pills nav-sm mb-3">
+    <li class="nav-item">
+      <a class="nav-link rounded-pill active" href="#page-structure-layouts-layout1">Layout 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-pill" href="#page-structure-layouts-layout1-flex">Layout 1 (Flex)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-pill" href="#page-structure-layouts-layout2">Layout 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-pill" href="#page-structure-layouts-layout2-flex">Layout 2 (Flex)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-pill" href="#page-structure-layouts-without-navbar">Without navbar</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-pill" href="#page-structure-layouts-without-navbar-flex">Without navbar (Flex)</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-pill" href="#page-structure-layouts-without-sidenav">Without sidenav</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link rounded-pill" href="#page-structure-layouts-horizontal-sidenav">Horizontal sidenav</a>
+    </li>
+  </ul>
+  <pre class="docs-code html docs-nav-content d-block" id="page-structure-layouts-layout1"><code>&lt;!-- Layout wrapper -->
+&lt;div class="layout-wrapper layout-1">
+  &lt;!-- Layout inner -->
+  &lt;div class="layout-inner">
+
+    &lt;!-- Layout navbar -->
+    &lt;nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-navbar-theme container-p-x" id="layout-navbar">
+      NAVBAR CONTENT
+    &lt;/nav>
+    &lt;!-- / Layout navbar -->
+
+    &lt;div class="layout-container">
+
+      &lt;!-- Layout sidenav -->
+      &lt;div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-sidenav-theme">
+        SIDENAV CONTENT
+      &lt;/div>
+      &lt;!-- / Layout sidenav -->
+
+      &lt;div class="layout-content">
+
+        &lt;!-- Page content -->
+        &lt;div class="container-fluid flex-grow-1 container-p-y">
+          PAGE CONTENT
+        &lt;/div>
+        &lt;!-- / Page content -->
+
+        &lt;!-- Layout footer -->
+        &lt;nav class="layout-footer footer bg-footer-theme">
+          FOOTER CONTENT
+        &lt;/nav>
+        &lt;!-- / Layout footer -->
+
+      &lt;/div>
+    &lt;/div>
+
+  &lt;/div>
+  &lt;!-- Layout inner -->
+
+  &lt;div class="layout-overlay layout-sidenav-toggle">&lt;/div>
+&lt;/div>
+&lt;!-- / Layout wrapper --></code></pre>
+  <pre class="docs-code html docs-nav-content d-none" id="page-structure-layouts-layout1-flex"><code>&lt;!-- Layout wrapper -->
+&lt;div class="layout-wrapper layout-1">
+  &lt;!-- Layout inner -->
+  &lt;div class="layout-inner">
+
+    &lt;!-- Layout navbar -->
+    &lt;nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-navbar-theme container-p-x" id="layout-navbar">
+      NAVBAR CONTENT
+    &lt;/nav>
+    &lt;!-- / Layout navbar -->
+
+    &lt;div class="layout-container">
+
+      &lt;!-- Layout sidenav -->
+      &lt;div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-sidenav-theme">
+        SIDENAV CONTENT
+      &lt;/div>
+      &lt;!-- / Layout sidenav -->
+
+      &lt;div class="layout-content">
+
+        &lt;!-- Page content -->
+        &lt;div class="container-fluid flex-grow-1 d-flex align-items-stretch p-0">
+          PAGE CONTENT
+        &lt;/div>
+        &lt;!-- / Page content -->
+
+        &lt;!-- Layout footer -->
+        &lt;nav class="layout-footer footer bg-footer-theme">
+          FOOTER CONTENT
+        &lt;/nav>
+        &lt;!-- / Layout footer -->
+
+      &lt;/div>
+    &lt;/div>
+
+  &lt;/div>
+  &lt;!-- Layout inner -->
+
+  &lt;div class="layout-overlay layout-sidenav-toggle">&lt;/div>
+&lt;/div>
+&lt;!-- / Layout wrapper --></code></pre>
+  <pre class="docs-code html html docs-nav-content d-none" id="page-structure-layouts-layout2"><code>&lt;!-- Layout wrapper -->
+&lt;div class="layout-wrapper layout-2">
+  &lt;!-- Layout inner -->
+  &lt;div class="layout-inner">
+
+    &lt;!-- Layout sidenav -->
+    &lt;div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-sidenav-theme">
+      SIDENAV CONTENT
+    &lt;/div>
+    &lt;!-- / Layout sidenav -->
+
+    &lt;div class="layout-container">
+
+      &lt;!-- Layout navbar -->
+      &lt;nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-navbar-theme container-p-x" id="layout-navbar">
+        NAVBAR CONTENT
+      &lt;/nav>
+      &lt;!-- / Layout navbar -->
+
+      &lt;div class="layout-content">
+
+        &lt;!-- Page content -->
+        &lt;div class="container-fluid flex-grow-1 container-p-y">
+          PAGE CONTENT
+        &lt;/div>
+        &lt;!-- / Page content -->
+
+        &lt;!-- Layout footer -->
+        &lt;nav class="layout-footer footer bg-footer-theme">
+          FOOTER CONTENT
+        &lt;/nav>
+        &lt;!-- / Layout footer -->
+
+      &lt;/div>
+    &lt;/div>
+
+  &lt;/div>
+  &lt;!-- Layout inner -->
+
+  &lt;div class="layout-overlay layout-sidenav-toggle">&lt;/div>
+&lt;/div>
+&lt;!-- / Layout wrapper --></code></pre>
+  <pre class="docs-code html docs-nav-content d-none" id="page-structure-layouts-layout2-flex"><code>&lt;!-- Layout wrapper -->
+&lt;div class="layout-wrapper layout-2">
+  &lt;!-- Layout inner -->
+  &lt;div class="layout-inner">
+
+    &lt;!-- Layout sidenav -->
+    &lt;div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-sidenav-theme">
+      SIDENAV CONTENT
+    &lt;/div>
+    &lt;!-- / Layout sidenav -->
+
+    &lt;div class="layout-container">
+
+      &lt;!-- Layout navbar -->
+      &lt;nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-navbar-theme container-p-x" id="layout-navbar">
+        NAVBAR CONTENT
+      &lt;/nav>
+      &lt;!-- / Layout navbar -->
+
+      &lt;div class="layout-content">
+
+        &lt;!-- Page content -->
+        &lt;div class="container-fluid flex-grow-1 d-flex align-items-stretch p-0">
+          PAGE CONTENT
+        &lt;/div>
+        &lt;!-- / Page content -->
+
+        &lt;!-- Layout footer -->
+        &lt;nav class="layout-footer footer bg-footer-theme">
+          FOOTER CONTENT
+        &lt;/nav>
+        &lt;!-- / Layout footer -->
+
+      &lt;/div>
+    &lt;/div>
+
+  &lt;/div>
+  &lt;!-- Layout inner -->
+
+  &lt;div class="layout-overlay layout-sidenav-toggle">&lt;/div>
+&lt;/div>
+&lt;!-- / Layout wrapper --></code></pre>
+  <pre class="docs-code html docs-nav-content d-none" id="page-structure-layouts-without-navbar"><code>&lt;!-- Layout wrapper -->
+&lt;div class="layout-wrapper layout-1">
+  &lt;!-- Layout inner -->
+  &lt;div class="layout-inner">
+
+    &lt;div class="layout-container">
+
+      &lt;!-- Layout sidenav -->
+      &lt;div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-sidenav-theme">
+        SIDENAV CONTENT
+      &lt;/div>
+      &lt;!-- / Layout sidenav -->
+
+      &lt;div class="layout-content">
+
+        &lt;!-- Page content -->
+        &lt;div class="container-fluid flex-grow-1 container-p-y">
+          PAGE CONTENT
+        &lt;/div>
+        &lt;!-- / Page content -->
+
+        &lt;!-- Layout footer -->
+        &lt;nav class="layout-footer footer bg-footer-theme">
+          FOOTER CONTENT
+        &lt;/nav>
+        &lt;!-- / Layout footer -->
+
+      &lt;/div>
+    &lt;/div>
+
+  &lt;/div>
+  &lt;!-- Layout inner -->
+
+  &lt;div class="layout-overlay layout-sidenav-toggle">&lt;/div>
+&lt;/div>
+&lt;!-- / Layout wrapper --></code></pre>
+  <pre class="docs-code html docs-nav-content d-none" id="page-structure-layouts-without-navbar-flex"><code>&lt;!-- Layout wrapper -->
+&lt;div class="layout-wrapper layout-1">
+  &lt;!-- Layout inner -->
+  &lt;div class="layout-inner">
+
+    &lt;div class="layout-container">
+
+      &lt;!-- Layout sidenav -->
+      &lt;div id="layout-sidenav" class="layout-sidenav sidenav sidenav-vertical bg-sidenav-theme">
+        SIDENAV CONTENT
+      &lt;/div>
+      &lt;!-- / Layout sidenav -->
+
+      &lt;div class="layout-content">
+
+        &lt;!-- Page content -->
+        &lt;div class="container-fluid flex-grow-1 d-flex align-items-stretch p-0">
+          PAGE CONTENT
+        &lt;/div>
+        &lt;!-- / Page content -->
+
+        &lt;!-- Layout footer -->
+        &lt;nav class="layout-footer footer bg-footer-theme">
+          FOOTER CONTENT
+        &lt;/nav>
+        &lt;!-- / Layout footer -->
+
+      &lt;/div>
+    &lt;/div>
+
+  &lt;/div>
+  &lt;!-- Layout inner -->
+
+  &lt;div class="layout-overlay layout-sidenav-toggle">&lt;/div>
+&lt;/div>
+&lt;!-- / Layout wrapper --></code></pre>
+  <pre class="docs-code html docs-nav-content d-none" id="page-structure-layouts-without-sidenav"><code>&lt;!-- Layout wrapper -->
+&lt;div class="layout-wrapper layout-1 layout-without-sidenav">
+  &lt;!-- Layout inner -->
+  &lt;div class="layout-inner">
+
+    &lt;!-- Layout navbar -->
+    &lt;nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-navbar-theme container-p-x" id="layout-navbar">
+      NAVBAR CONTENT
+    &lt;/nav>
+    &lt;!-- / Layout navbar -->
+
+    &lt;div class="layout-container">
+
+      &lt;div class="layout-content">
+
+        &lt;!-- Page content -->
+        &lt;div class="container-fluid flex-grow-1 container-p-y">
+          PAGE CONTENT
+        &lt;/div>
+        &lt;!-- / Page content -->
+
+        &lt;!-- Layout footer -->
+        &lt;nav class="layout-footer footer bg-footer-theme">
+          FOOTER CONTENT
+        &lt;/nav>
+        &lt;!-- / Layout footer -->
+
+      &lt;/div>
+    &lt;/div>
+
+  &lt;/div>
+  &lt;!-- Layout inner -->
+&lt;/div>
+&lt;!-- / Layout wrapper --></code></pre>
+  <pre class="docs-code html docs-nav-content d-none" id="page-structure-layouts-horizontal-sidenav"><code>&lt;!-- Layout wrapper -->
+&lt;div class="layout-wrapper layout-1 layout-without-sidenav">
+  &lt;!-- Layout inner -->
+  &lt;div class="layout-inner">
+
+    &lt;!-- Layout navbar -->
+    &lt;nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-navbar-theme container-p-x" id="layout-navbar">
+      NAVBAR CONTENT
+    &lt;/nav>
+    &lt;!-- / Layout navbar -->
+
+    &lt;div class="layout-container">
+
+      &lt;div class="layout-content">
+
+        &lt;!-- Layout sidenav -->
+        &lt;div id="layout-sidenav" class="layout-sidenav-horizontal sidenav sidenav-horizontal bg-sidenav-theme container-p-x flex-grow-0">
+          SIDENAV CONTENT
+        &lt;/div>
+        &lt;!-- / Layout sidenav -->
+
+        &lt;!-- Page content -->
+        &lt;div class="container-fluid flex-grow-1 container-p-y">
+          PAGE CONTENT
+        &lt;/div>
+        &lt;!-- / Page content -->
+
+        &lt;!-- Layout footer -->
+        &lt;nav class="layout-footer footer bg-footer-theme">
+          FOOTER CONTENT
+        &lt;/nav>
+        &lt;!-- / Layout footer -->
+
+      &lt;/div>
+    &lt;/div>
+
+  &lt;/div>
+  &lt;!-- Layout inner -->
+&lt;/div>
+&lt;!-- / Layout wrapper --></code></pre>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="page-structure-theming">Theming</a></h4>
+
+<div class="docs-block">
+  <p>
+    To enable theme just include the required theme stylesheet from the <code>vendor/css/</code> path.
+  </p>
+  <pre class="docs-code-path">index.html</pre>
+  <pre class="docs-code html docs-default-version"><code>&lt;link rel="stylesheet" href="assets/vendor/css/theme-air.css"></code></pre>
+  <pre class="docs-code html docs-theme-settings-version"><code>&lt;link rel="stylesheet" href="assets/vendor/css/theme-air.css" class="theme-settings-theme-css"></code></pre>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="page-structure-material">Material styling</a></h4>
+<div class="docs-block">
+  <p>
+    To enable material styling you need to:
+  </p>
+  <ol>
+    <li>
+      <p>Set <code>material-style</code> class on the <code>&lt;html&gt;</code> element instead of <code>default-style</code>.</p>
+      <pre class="docs-code-path">index.html</pre>
+      <pre class="docs-code html"><code>&lt;html class="material-style"></code></pre>
+    </li>
+    <li>
+      <p>Add <code>-material</code> suffix to <code>bootstrap.css</code>, <code>appwork.css</code>, <code>theme-*.css</code> and <code>colors.css</code> stylesheets.</p>
+      <pre class="docs-code-path">index.html</pre>
+      <pre class="docs-code html docs-default-version"><code>&lt;link rel="stylesheet" href="assets/vendor/css/bootstrap-material.css">
+&lt;link rel="stylesheet" href="assets/vendor/css/appwork-material.css">
+&lt;link rel="stylesheet" href="assets/vendor/css/theme-corporate-material.css">
+&lt;link rel="stylesheet" href="assets/vendor/css/colors-material.css"></code></pre>
+      <pre class="docs-code html docs-theme-settings-version"><code>&lt;link rel="stylesheet" href="assets/vendor/css/bootstrap-material.css" class="theme-settings-bootstrap-css">
+&lt;link rel="stylesheet" href="assets/vendor/css/appwork-material.css" class="theme-settings-appwork-css">
+&lt;link rel="stylesheet" href="assets/vendor/css/theme-corporate-material.css" class="theme-settings-theme-css">
+&lt;link rel="stylesheet" href="assets/vendor/css/colors-material.css" class="theme-settings-colors-css"></code></pre>
+    </li>
+    <li class="docs-default-version">
+      <p>
+        Optionally you can enable material ripple. Just append <code>material-ripple.js</code>
+        script to the <code>&lt;head></code> section and call <code>attachMaterialRippleOnLoad()</code> function.
+      </p>
+      <pre class="docs-code-path">index.html</pre>
+      <pre class="docs-code html"><code>&lt;script src="assets/vendor/js/material-ripple.js">&lt;/script>
+&lt;script>
+  window.attachMaterialRippleOnLoad();
+&lt;/script></code></pre>
+    <li class="docs-theme-settings-version">
+      <p>
+        Optionally you can enable material ripple. Just append <code>material-ripple.js</code>
+        script to the <code>&lt;head></code> section.
+      </p>
+      <pre class="docs-code-path">index.html</pre>
+      <pre class="docs-code html"><code>&lt;script src="assets/vendor/js/material-ripple.js">&lt;/script></code></pre>
+    </li>
+  </ol>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="page-structure-rtl">RTL support</a></h4>
+<div class="docs-block">
+  <p>
+    To enable RTL direction support just load Appwork's stylesheets from the <code>vendor/css/rtl/</code> path instead of <code>vendor/css/</code>.
+  </p>
+  <pre class="docs-code-path">index.html</pre>
+  <pre class="docs-code html docs-default-version"><code>&lt;link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css">
+&lt;link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css">
+&lt;link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css">
+&lt;link rel="stylesheet" href="assets/vendor/css/rtl/colors.css">
+&lt;link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css"></code></pre>
+  <pre class="docs-code html docs-theme-settings-version"><code>&lt;link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+&lt;link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+&lt;link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+&lt;link rel="stylesheet" href="assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+&lt;link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css"></code></pre>
+  <p>To enable RTL direction, add <code>dir="rtl"</code> attribute to the <code>&lt;html></code> element.</p>
+  <pre class="docs-code-path">index.html</pre>
+  <pre class="docs-code html"><code>&lt;html dir="rtl"></code></pre>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="page-structure-options">Layout options</a></h4>
+
+<div class="docs-block">
+  <p>
+    You can configure the initial layout by setting control classes to the <code>&lt;html></code> element.
+  </p>
+  <div class="alert alert-warning mb-3">
+    After the initial layout setup the recommended way to control layout options is
+    <a href="layout-helpers.html" class="alert-link">layout helpers</a>, because the helpers do some extra work, such as: setting
+    container paddings (when navbar is fixed), performing layout animations,
+    setting correct sidenav state classes depending on screen size etc.
+  </div>
+  <pre class="docs-code-path">index.html</pre>
+  <pre class="docs-code html"><code>&lt;html class="layout-fixed layout-collapsed"></code></pre>
+</div>
+<div class="docs-block">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Control class</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>.layout-reversed</code></td>
+        <td>Reverse layout direction without markup change.</td>
+      </tr>
+      <tr>
+        <td><code>.layout-expanded</code></td>
+        <td>Expand layout sidenav on small screens (< 992px).</td>
+      </tr>
+      <tr>
+        <td><code>.layout-collapsed</code></td>
+        <td>Collapse layout sidenav on large screens (>= 992px).</td>
+      </tr>
+      <tr>
+        <td><code>.layout-offcanvas</code></td>
+        <td>Make layout sidenav offcanvas.</td>
+      </tr>
+      <tr>
+        <td><code>.layout-fixed</code></td>
+        <td>Set layout position to fixed.</td>
+      </tr>
+      <tr>
+        <td><code>.layout-fixed-offcanvas</code></td>
+        <td>Set layout position to fixed with offcanvas sidenav.</td>
+      </tr>
+      <tr>
+        <td><code>.layout-navbar-fixed</code></td>
+        <td>Set layout navbar position to fixed.</td>
+      </tr>
+      <tr>
+        <td><code>.layout-footer-fixed</code></td>
+        <td>Set layout footer position to fixed.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="page-structure-pacejs">PACE.js progress</a></h4>
+
+<div class="docs-block">
+  <p>
+    Optionally you can enable PACE.js progress bar:
+  </p>
+  <ol>
+    <li>
+      <p>Append <code>pace.js</code> script to the <code>&lt;head></code> section.</p>
+      <pre class="docs-code-path">index.html</pre>
+      <pre class="docs-code html"><code>&lt;script src="assets/vendor/js/pace.js">&lt;/script></code></pre>
+    </li>
+    <li>
+      <p>Append <code>.page-loader</code> element to the <code>&lt;body></code>.</p>
+      <pre class="docs-code-path">index.html</pre>
+      <pre class="docs-code html"><code>&lt;div class="page-loader">&lt;div class="bg-primary">&lt;/div>&lt;/div></code></pre>
+    </li>
+  </ol>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="page-structure-generator">Generator</a></h4>
+
+<p>
+  Use starter template generator to simplify the initial setup. Just replace a content of appropriate files with the generated code within the <code>html-starter</code> directory.
+</p>
+<div class="text-right small font-weight-bold mb-1"><a class="text-body" target="_blank" href="generators/html5-starter-generator.html">Open in new tab <i class="fas fa-external-link-alt"></i></a></div>
+<div class="docs-block">
+  <iframe src="generators/html5-starter-generator.html" frameborder="0" style="width: 100%;height: 600px;"></iframe>
+</div>
+
+<h2 class="docs-header">Sources</h2>
+
+<h4 class="docs-header docs-header-anchor"><a name="sources-structure"><code class="bg-light px-1">src</code> directory structure</a></h4>
+<div class="docs-block">
+  <div class="directory-structure">
+    <div class="file-item folder">
+      <div class="file-icon fas fa-folder"></div><div class="file-name">src</div>
+
+      <div><div class="file-item folder">
+        <div class="file-icon fas fa-folder"></div><div class="file-name">css</div><div class="file-description">CSS sources</div>
+
+        <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">_appwork</div><div class="file-description">Appwork includes</div></div></div>
+        <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">_custom-variables</div><div class="file-description">Custom variables</div></div></div>
+        <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">_theme</div><div class="file-description">Theme includes</div></div></div>
+        <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">_uikit</div><div class="file-description">UIKit includes</div></div></div>
+        <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">pages</div><div class="file-description">Page styles</div></div></div>
+        <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">rtl</div><div class="file-description">Styles with RTL support enabled</div></div></div>
+        <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">appwork.scss</div></div></div>
+        <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">appwork-material.scss</div></div></div>
+        <div><div class="file-item"><div class="file-icon"></div><div class="file-name">...</div></div></div>
+      </div></div>
+
+      <div><div class="file-item folder">
+        <div class="file-icon fas fa-folder"></div><div class="file-name">fonts</div><div class="file-description">Iconic fonts</div>
+
+        <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">fontawesome.scss</div></div></div>
+        <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">ionicons.scss</div></div></div>
+        <div><div class="file-item"><div class="file-icon"></div><div class="file-name">...</div></div></div>
+      </div></div>
+
+      <div><div class="file-item folder">
+        <div class="file-icon fas fa-folder"></div><div class="file-name">js</div><div class="file-description">Javascript sources</div>
+
+        <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">bootstrap.js</div></div></div>
+        <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">dropdown-hover.js</div></div></div>
+        <div><div class="file-item"><div class="file-icon"></div><div class="file-name">...</div></div></div>
+      </div></div>
+
+      <div><div class="file-item folder">
+        <div class="file-icon fas fa-folder"></div><div class="file-name">libs</div><div class="file-description">Third-party libraries</div>
+        <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">animate-css</div></div></div>
+        <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">autosize</div></div></div>
+        <div><div class="file-item folder"><div class="file-icon fas fa-folder"></div><div class="file-name">block-ui</div></div></div>
+        <div><div class="file-item"><div class="file-icon"></div><div class="file-name">...</div></div></div>
+      </div></div>
+
+      <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">build-config.js</div><div class="file-description">Build config</div></div></div>
+      <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">gulpfile.js</div><div class="file-description">Gulp tasks</div></div></div>
+      <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">webpack.config.js</div><div class="file-description">Webpack config</div></div></div>
+      <div><div class="file-item"><div class="file-icon"></div><div class="file-name">...</div></div></div>
+    </div>
+  </div>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="sources-plugins">Third-party plugins</a></h4>
+
+<div class="docs-block">
+  <p>
+    The starter project by default includes all third-party plugins.<br>
+    Optionally you can remove unwanted plugins to reduce bundle size and compile time:
+  </p>
+  <ol>
+    <li>Remove unwanted packages from the <code>dependencies</code> section in the <code>src/package.json</code> file.</li>
+    <li>Remove related directories within the <code>src/libs</code> directory.</li>
+    <li>Remove related <code>@import</code>s and <code>@include</code>s in the <code>src/css/_theme/_libs.scss</code> file.</li>
+  </ol>
+</div>
+<div class="docs-block">
+  <p>For example, if you want to exclude <code>plyr</code> plugin, you will need to:</p>
+  <ol>
+    <li>Remove <code>plyr</code> dependency in the <code>src/package.json</code> file.</li>
+    <li>Remove the <code>src/libs/plyr</code> directory.</li>
+    <li>
+      Remove <code>@import "../../libs/plyr/mixins";</code> and <code>@include plyr-theme($background, $color);</code>
+      lines in the <code>src/css/_theme/_libs.scss</code> file.
+    </li>
+  </ol>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="sources-installation">Installation</a></h4>
+
+<h5>Windows</h5>
+<div class="docs-block">
+  <ol>
+    <li>Download and install Nodejs 10.16.x LTS from <a target="_blank" href="https://nodejs.org/en/">https://nodejs.org/en/</a>.</li>
+    <li>Download and install Git from <a target="_blank" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.</li>
+    <li>Download and install Yarn from <a target="_blank" href="https://yarnpkg.com/en/docs/install">https://yarnpkg.com/en/docs/install</a>.</li>
+    <li>Logout from the system and login again.</li>
+    <li>Launch <code>cmd.exe</code> as administrator and run command <code>npm install --add-python-to-path='true' --global --production windows-build-tools</code>.</li>
+    <li>Logout from the system and login again.</li>
+    <li>Open <code>cmd.exe</code>, go to the <code>src</code> directory and run command <code>yarn install --ignore-engines</code>.</li>
+  </ol>
+</div>
+
+<h5>Ubuntu</h5>
+<div class="docs-block">
+  <ol>
+    <li>Update system definitions: <code>sudo apt-get update</code>.</li>
+    <li>Upgrade system: <code>sudo apt-get upgrade</code>.</li>
+    <li>Install curl: <code>sudo apt-get install curl</code>.</li>
+    <li>Install Nodejs 10.16.x LTS and build tools following instructions on <a target="_blank" href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions-enterprise-linux-fedora-and-snap-packages">https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions-enterprise-linux-fedora-and-snap-packages</a>.</li>
+    <li>Install Git following instructions on <a target="_blank" href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a>.</li>
+    <li>Install Yarn following instructions on <a target="_blank" href="https://yarnpkg.com/en/docs/install#debian-stable">https://yarnpkg.com/en/docs/install#debian-stable</a>.</li>
+    <li>Open terminal, go to the <code>src</code> directory and run command <code>yarn install --ignore-engines</code>.</li>
+  </ol>
+</div>
+
+<h5>Mac OS X</h5>
+<div class="docs-block">
+  <ol>
+    <li>Install Xcode from App Store. After installing, launch the Xcode, accept the license agreement and wait while components installed.</li>
+    <li>Install Homebrew following instructions on <a target="_blank" href="https://brew.sh">https://brew.sh</a>.</li>
+    <li>Download and install Nodejs 10.16.x LTS from <a target="_blank" href="https://nodejs.org/en/">https://nodejs.org/en/</a>.</li>
+    <li>Download and install Git from <a target="_blank" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.</li>
+    <li>Install Yarn following instructions on <a target="_blank" href="https://yarnpkg.com/en/docs/install">https://yarnpkg.com/en/docs/install</a>.</li>
+    <li>Open terminal, go to the <code>src</code> directory and run command <code>yarn install --ignore-engines</code>.</li>
+  </ol>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="sources-build">Build</a></h4>
+
+<div class="docs-block">
+  <p>
+    Appwork's build system is a simple but powerful solution:
+    <ul>
+      <li>
+        Uses Webpack + Babel for compilation. So you can use all Webpack
+        features (such as requiring scripts) and write your code using the
+        ES6 specification.
+      </li>
+      <li>Simple SCSS compilation without any wrappers.</li>
+      <li>The output directory structure will repeat the source directory structure.</li>
+      <li>
+        Automatically discovers <code>.scss</code> and <code>.js</code> files to compile. To exclude a file from compilation
+        list just prepend a <code>_</code> symbol to the filename.
+      </li>
+      <li>Automatically copies images and font files.</li>
+      <li>Easy to configure - just edit <code>build-config.js</code> file.</li>
+      <li>Development and production environments. To add environment edit <code>gulp-environment.environments</code> section within <code>package.json</code> file.</li>
+      <li>Easy to extend the build system by adding new Gulp/Webpack tasks.</li>
+    </ul>
+  </p>
+</div>
+
+<div class="docs-block">
+  <h5>Example</h5>
+  <div class="row">
+    <div class="col-6">
+      <p>Let's assume that <code>src</code> directory have the next structure:</p>
+      <div class="directory-structure">
+        <div class="file-item folder">
+          <div class="file-icon fas fa-folder"></div><div class="file-name">src</div>
+
+          <div><div class="file-item folder">
+            <div class="file-icon fas fa-folder"></div><div class="file-name">stylesheets</div>
+
+            <div><div class="file-item folder">
+              <div class="file-icon fas fa-folder"></div><div class="file-name">components</div>
+
+              <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">dropdown.scss</div></div></div>
+            </div></div>
+
+            <div><div class="file-item folder">
+              <div class="file-icon fas fa-folder"></div><div class="file-name">includes</div>
+
+              <div><div class="file-item folder">
+                <div class="file-icon fas fa-folder"></div><div class="file-name">components</div>
+
+                <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">_dropdown-item.scss</div></div></div>
+              </div></div>
+
+              <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">_mixins.scss</div></div></div>
+              <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">_common.scss</div></div></div>
+            </div></div>
+
+            <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">_variables.scss</div></div></div>
+            <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">main.scss</div></div></div>
+
+          </div></div>
+
+          <div><div class="file-item folder">
+            <div class="file-icon fas fa-folder"></div><div class="file-name">javascripts</div>
+
+            <div><div class="file-item folder">
+              <div class="file-icon fas fa-folder"></div><div class="file-name">components</div>
+
+              <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">_dropdown-item.js</div></div></div>
+              <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">dropdown.js</div></div></div>
+            </div></div>
+
+            <div><div class="file-item folder">
+              <div class="file-icon fas fa-folder"></div><div class="file-name">utils</div>
+
+              <div><div class="file-item folder">
+                <div class="file-icon fas fa-folder"></div><div class="file-name">html</div>
+
+                <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">_elements.js</div></div></div>
+                <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">_selectors.js</div></div></div>
+              </div></div>
+
+              <div><div class="file-item folder">
+                <div class="file-icon fas fa-folder"></div><div class="file-name">http</div>
+
+                <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">_ajax.js</div></div></div>
+                <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">_serializer.js</div></div></div>
+              </div></div>
+
+              <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">utils.js</div></div></div>
+            </div></div>
+
+            <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">_config.js</div></div></div>
+            <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">common.js</div></div></div>
+
+          </div></div>
+
+          <div><div class="file-item folder">
+            <div class="file-icon fas fa-folder"></div><div class="file-name">images</div>
+
+            <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">logo.png</div></div></div>
+
+          </div></div>
+
+          <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">site.scss</div></div></div>
+          <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">site.js</div></div></div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <p>The output directory will have the next structure:</p>
+      <div class="directory-structure">
+        <div class="file-item folder">
+          <div class="file-icon fas fa-folder"></div><div class="file-name">dist</div>
+
+          <div><div class="file-item folder">
+            <div class="file-icon fas fa-folder"></div><div class="file-name">stylesheets</div>
+
+            <div><div class="file-item folder">
+              <div class="file-icon fas fa-folder"></div><div class="file-name">components</div>
+
+              <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">dropdown.css</div></div></div>
+            </div></div>
+
+            <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">main.css</div></div></div>
+
+          </div></div>
+
+          <div><div class="file-item folder">
+            <div class="file-icon fas fa-folder"></div><div class="file-name">javascripts</div>
+
+            <div><div class="file-item folder">
+              <div class="file-icon fas fa-folder"></div><div class="file-name">components</div>
+
+              <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">dropdown.js</div></div></div>
+            </div></div>
+
+            <div><div class="file-item folder">
+              <div class="file-icon fas fa-folder"></div><div class="file-name">utils</div>
+
+              <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">utils.js</div></div></div>
+            </div></div>
+
+            <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">common.js</div></div></div>
+
+          </div></div>
+
+          <div><div class="file-item folder">
+            <div class="file-icon fas fa-folder"></div><div class="file-name">images</div>
+
+            <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">logo.png</div></div></div>
+
+          </div></div>
+
+          <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">site.css</div></div></div>
+          <div><div class="file-item"><div class="file-icon far fa-file"></div><div class="file-name">site.js</div></div></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="docs-block">
+  <p>
+    When you execute <code>build</code> task the next actions will be performed:
+  </p>
+  <ol>
+    <li>
+      Read build config options from <code>build-config.js</code>.
+      The options can vary depending on the current environment.
+    </li>
+    <li>
+      Run <code>clean</code> task if <code>cleanBuild</code> option is enabled.
+    </li>
+    <li>
+      Run the next gulp tasks in parallel:
+      <ul>
+        <li><code>build:css</code> - Runs SCSS compiltion for each file which filename is not starting with a <code>_</code> symbol.</li>
+        <li>
+          <code>build:js</code> - Collects all <code>.js</code> files which filename is not starting with a <code>_</code> symbol.
+          Then performs compilation via Webpack and Babel. All files are processed as separate entries.
+        </li>
+        <li><code>build:fonts</code> - Copies font files(that defined in the gulpfile) from <code>node_modules</code>.</li>
+        <li><code>build:copy</code> - Copies images and other font files</li>
+      </ul>
+    </li>
+  </ol>
+</div>
+
+<h4 class="docs-header docs-header-anchor"><a name="sources-tasks">Available tasks</a></h4>
+
+<div class="docs-block">
+  <p>
+    Open console/terminal, go to the <code>src</code> directory and run <code>npm run task_name</code>. To run a task
+    with specified environment just execute the task with <code>--env=environment</code>
+    option, e.g. <code>npm run build --env=production</code>.
+  </p>
+</div>
+<div class="docs-block">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>build</code></td>
+        <td>Compile sources and copy assets.</td>
+      </tr>
+      <tr>
+        <td><code>build:js</code></td>
+        <td>Compile javascript sources.</td>
+      </tr>
+      <tr>
+        <td><code>build:css</code></td>
+        <td>Compile SCSS sources.</td>
+      </tr>
+      <tr>
+        <td><code>build:fonts</code></td>
+        <td>Copy fonts that defined in the gulpfile.</td>
+      </tr>
+      <tr>
+        <td><code>build:copy</code></td>
+        <td>Copy images and other font files.</td>
+      </tr>
+      <tr>
+        <td><code>build:prod</code></td>
+        <td>Run <code>build</code> task in production environment.</td>
+      </tr>
+      <tr>
+        <td><code>build:prod:js</code></td>
+        <td>Run <code>build:js</code> task in production environment.</td>
+      </tr>
+      <tr>
+        <td><code>build:prod:css</code></td>
+        <td>Run <code>build:css</code> task in production environment.</td>
+      </tr>
+      <tr>
+        <td><code>build:prod:fonts</code></td>
+        <td>Run <code>build:fonts</code> task in production environment.</td>
+      </tr>
+      <tr>
+        <td><code>build:prod:copy</code></td>
+        <td>Run <code>build:copy</code> task in production environment.</td>
+      </tr>
+      <tr>
+        <td><code>watch</code></td>
+        <td>Watch files for changes and automatically recompile it when changed.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="docs-header docs-header-anchor"><a name="migration-guides">Migration guide</a></h2>
+
+<div class="docs-block p-3 bg-lighter mb-3">
+  <select id="migration-select" class="custom-select w-auto"></select>
+</div>
+<div class="docs-block text-danger small">
+  <i class="fas fa-exclamation-triangle mr-2"></i> Do not forget to commit changes or clone the project before performing migration steps.
+</div>
+<div class="docs-block" id="migration">
+  <div class="migration-guide" id="migration-guide-140" data-name="1.3.1 → 1.4.0">
+  <ol>
+    <li>
+      <p>Update assets.</p>
+      <ul>
+        <li>
+          <p>If you're using compiled assets:</p>
+          <p>Copy with replace the next files and directories from the <code>dist</code> directory to your <code>assets/vendor</code>:</p>
+          <pre>css/
+js/
+libs/
+fonts/fontawesome/
+fonts/fontawesome.css
+fonts/ionicons/
+fonts/ionicons.css
+fonts/linearicons/
+fonts/pe-icon-7-stroke/</pre>
+        </li>
+        <li>
+          <p>If you're using uncompiled sources:</p>
+          <ol>
+            <li>
+              <p><i class="text-muted">(Optional)</i> Upgrade Node.js to 10.16 LTS and Yarn.</p>
+            </li>
+            <li>
+              <p>Webpack config was modified to compile <code>.js</code> files, support of <code>.es6</code> extension is
+              deprecated and will be removed in the next update. Resulting this changes, you need to rename your
+              <code>*.es6</code> files to <code>*.js</code>. Also, remove the next directories from your source directory
+              and copy the corresponding ones from the release:</p>
+              <pre>js/
+libs/bootstrap-material-datetimepicker/
+libs/bootstrap-sortable/
+libs/bootstrap-table/
+libs/bootstrap-tagsinput/
+libs/dropzone/
+libs/perfect-scrollbar/
+libs/photoswipe/
+libs/popper/
+libs/quill/
+libs/sparkline/
+libs/typeahead-js/
+libs/vegas/</pre>
+            </li>
+            <li>
+              <p>Copy with replace changed files and directories:</p>
+              <pre>css/_appwork/_custom-forms.scss
+css/_appwork/_dropdown.scss
+css/_appwork/_forms.scss
+css/_appwork/_layout.scss
+css/_appwork/_mixins.scss
+css/_appwork/_nav.scss
+css/_appwork/_sidenav.scss
+css/_appwork/_tables.scss
+css/_appwork/_utilities.scss
+libs/autosize/
+libs/block-ui/
+libs/blueimp-gallery/
+libs/bootbox/
+libs/bootstrap-datepicker/
+libs/bootstrap-daterangepicker/
+libs/bootstrap-duallistbox/
+libs/bootstrap-markdown/
+libs/bootstrap-maxlength/
+libs/bootstrap-menu/
+libs/bootstrap-select/
+libs/bootstrap-slider/
+libs/c3/
+libs/chartist/
+libs/chartjs/
+libs/clipboard/
+libs/cropper/
+libs/d3/
+libs/datatables/
+libs/dragula/
+libs/eve/
+libs/flatpickr/
+libs/flot/
+libs/flow-js/
+libs/fullcalendar/
+libs/gmaps/
+libs/growl/
+libs/jstree/
+libs/knob/
+libs/ladda/
+libs/mapael/
+libs/markdown/
+libs/masonry/
+libs/minicolors/
+libs/moment/
+libs/morris/
+libs/nestable/
+libs/nouislider/
+libs/numeral/
+libs/plyr/
+libs/pwstrength-bootstrap/
+libs/raphael/
+libs/select2/
+libs/shepherd/
+libs/smartwizard/
+libs/sortablejs/
+libs/spin/
+libs/sweetalert2/
+libs/swiper/
+libs/tableexport/
+libs/timepicker/
+libs/toastr/
+libs/validate/
+libs/vanilla-text-mask/</pre>
+            </li>
+            <li>
+              <p>Remove the next directories from your source directory:</p>
+              <pre>libs/bootstrap-multiselect/
+libs/bootstrap-sweetalert/</pre>
+            </li>
+            <li>
+              <p>Update:</p>
+              <p><code>package.json</code>. <a href="diff/1_4_0/src_package-json.html" target="_blank" class="migration-diff">Diff <i class="fas fa-external-link-alt"></i></a></p>
+              <p><code>gulpfile.js</code>. <a href="diff/1_4_0/src_gulpfile-js.html" target="_blank" class="migration-diff">Diff <i class="fas fa-external-link-alt"></i></a></p>
+              <p><code>webpack.config.js</code>. <a href="diff/1_4_0/src_webpack-config-js.html" target="_blank" class="migration-diff">Diff <i class="fas fa-external-link-alt"></i></a></p>
+            </li>
+            <li>
+              <p>Execute <code>yarn install --ignore-engines</code></p>
+            </li>
+            <li>Execute <code>npm run build</code></li>
+          </ol>
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <hr  class="my-4">
+
+  <p><strong>Changes in third-party libraries:</strong></p>
+
+  <ul class="mt-3">
+    <li><code>bootstrap-multiselect</code> plugin was removed.</li>
+    <li><code>bootstrap-sweetalert</code> replaced with original <code>sweetalert2</code> plugin. API isn't changed.</li>
+    <li><code>Shepherd.js</code> changed its API. See <code>html-demo/assets/js/ui_tour.js</code> for example. <a href="https://shepherdjs.dev/docs/tutorial-02-usage.html" target="_blank">https://shepherdjs.dev/docs/tutorial-02-usage.html</a></li>
+    <li>
+      <p>Available extensions list of <code>bootstrap-table</code> package is changed (see <code>vendor/libs/bootstrap-table/extensions</code>):</p>
+      <pre>Added extensions/cell-input
+Removed extensions/group-by
+Removed extensions/multi-column-toggle
+Removed extensions/multiple-search
+Removed extensions/multiple-selection-row
+Removed extensions/select2-filter
+Removed extensions/tree-column</pre>
+    </li>
+  </ul>
+</div>
+
+  <div class="migration-guide" id="migration-guide-131" data-name="1.3.0 → 1.3.1">
+  <ul>
+    <li>
+      <p>If you're using compiled assets:</p>
+      <p>Copy with replace the next directories from the <code>dist</code> directory to your <code>assets/vendor</code>:</p>
+      <pre>libs/bootstrap-sortable/
+libs/flot/
+libs/idletimer/</pre>
+    </li>
+    <li>
+      <p>If you're using uncompiled sources:</p>
+      <ol>
+        <li>
+          <p>Copy with replace the next directories:</p>
+          <pre>libs/bootstrap-sortable/
+libs/flot/
+libs/idletimer/</pre>
+        </li>
+        <li>
+          <p>Update:</p>
+          <p><code>package.json</code>. <a href="diff/1_3_1/src_package-json.html" target="_blank" class="migration-diff">Diff <i class="fas fa-external-link-alt"></i></a></p>
+        </li>
+        <li>
+          <p>Execute <code>yarn install</code></p>
+        </li>
+        <li>Execute <code>npm run build</code></li>
+      </ol>
+    </li>
+  </ul>
+</div>
+
+  <div class="migration-guide" id="migration-guide-130" data-name="1.2.2 → 1.3.0">
+  <ul>
+    <li>
+      <p>If you're using compiled assets:</p>
+      <p>Copy with replace <code>css</code>, <code>fonts</code>, <code>js</code> and <code>libs</code> directories from
+        the
+        <code>dist</code> directory to your <code>assets/vendor</code> directory.</p>
+    </li>
+    <li>
+      <p>If you're using uncompiled sources:</p>
+      <ol>
+        <li>
+          <p><i class="text-muted">(Optional)</i> Upgrade Node.js to 10.15 LTS and Yarn</p>
+        </li>
+        <li>
+          <p>Remove excluded libraries:</p>
+          <pre>libs/bootstrap-tour/</pre>
+        </li>
+        <li>
+          <p>Copy new files and directories:</p>
+          <pre>css/migrate/
+js/polyfills.es6
+libs/flatpickr/
+libs/shepherd/
+libs/sweetalert2/</pre>
+        </li>
+        <li><p>Since some extensions were removed from the <code>bootstrap-table</code> package, remove
+          <code>libs/bootstrap-table/</code> directory
+          and copy new <code>appwork-v1_3_0/src/libs/bootstrap-table/</code></p></li>
+        <li>
+          <p>Copy with replace all SCSS files within <code>css/</code> and <code>css/rtl/</code> directories:</p>
+          <pre>css/*.scss
+css/rtl/*.scss</pre>
+        </li>
+        <li>
+          <p>Copy with replace changed files and directories:</p>
+          <pre>css/_appwork/
+css/_theme/
+css/_uikit/_social.scss
+css/pages/clients.scss
+css/pages/messages.scss
+js/_theme-settings/
+js/theme-settings.es6
+js/bootstrap.es6
+js/material-ripple.es6
+libs/bootbox/
+libs/bootstrap-daterangepicker/
+libs/bootstrap-markdown/
+libs/bootstrap-select/
+libs/bootstrap-slider/
+libs/bootstrap-sweetalert/
+libs/bootstrap-table/
+libs/bootstrap-tagsinput/
+libs/flot/
+libs/fullcalendar/
+libs/minicolors/
+libs/nouislider/
+libs/plyr/
+libs/quill/
+libs/select2/
+libs/swiper/
+gulpfile.js</pre>
+        </li>
+        <li>
+          <p>Update:</p>
+          <p><code>webpack.config.js</code>. <a href="diff/1_3_0/src_webpack-config-js.html" target="_blank" class="migration-diff">Diff <i class="fas fa-external-link-alt"></i></a></p>
+          <p><code>package.json</code>. <a href="diff/1_3_0/src_package-json.html" target="_blank" class="migration-diff">Diff <i class="fas fa-external-link-alt"></i></a></p>
+        </li>
+        <li>
+          <p>Execute <code>yarn upgrade</code></p>
+        </li>
+        <li>Execute <code>npm run build</code></li>
+      </ol>
+    </li>
+  </ul>
+
+  <hr class="my-4">
+
+  <ul>
+    <li>
+      <p>Include polyfills in the <code>&lt;head></code> block after core stylesheets (see <a target="_blank"
+          href="generators/html5-starter-generator.html">html5-starter-generator</a> for example):</p>
+      <pre class="docs-code html"><code>&lt;!-- Load polyfills -->
+&lt;script src="assets/vendor/js/polyfills.js">&lt;/script>
+&lt;script>document['documentMode']===10&&document.write('&lt;script src="//polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en">&lt;\/script>')&lt;/script></code></pre>
+    </li>
+    <li>
+      <p><strong>Bootstrap CSS:</strong></p>
+      <p>Include migration CSS file to the end of the <code>&lt;head></code> block:</p>
+      <pre class="docs-code html"><code>&lt;link rel="stylesheet" href="assets/vendor/css/migrate/appwork-130.css"></code></pre>
+      <p>
+        <div class="alert alert-info m-0 px-3 py-2">Remove this import after you correct all changed CSS classes in your HTML code.</div>
+      </p>
+      <p>
+        Changed classes:
+      </p>
+      <pre>.font-weight-thin → .font-weight-lighter
+.text-dark → .text-body
+.bg-none → .bg-transparent
+.font-sans-serif → .text-sans-serif
+.font-serif → .text-serif
+.font-monospace → .text-monospace
+.box-shadow-none → .shadow-none
+.container-m--x → .container-m-nx
+.container-m--y → .container-m-ny
+.btn-round → .rounded-pill
+
+Negative horizontal margins:
+.m{sides}--{size} → .m{sides}-n{size}
+.m{sides}-{breakpoint}--{size} → .m{sides}-{breakpoint}-n{size}</pre>
+    </li>
+    <li>
+      <p><strong>Bootstrap JS:</strong></p>
+      <p>All dropdown links must have <code>href="#"</code> attribute. Dropdown links with <code>href="javascript:void(0)"</code> will throw an error</p>
+    </li>
+    <li>
+      <p><strong>Plugin API changed:</strong></p>
+      <p><code>Flot.js</code> - See <a href="https://github.com/flot/flot/blob/master/CHANGELOG.md" target="_blank">https://github.com/flot/flot/blob/master/CHANGELOG.md</a></p>
+      <p><code>bootstrap-table</code> - see demo examples</p>
+      <p><code>Fullcalendar</code> - See <a href="https://fullcalendar.io/docs" target="_blank">https://fullcalendar.io/docs</a></p>
+      <p><code>bootstrap-sweetalert</code> is deprecated, use <code>Sweetalert2</code> instead. See - <a href="https://sweetalert2.github.io/" target="_blank">https://sweetalert2.github.io/</a></p>
+      <p><code>bootstrap-tour</code> library was removed, use "shepherd" tour library instead. See - <a href="https://shipshapecode.github.io/shepherd/" target="_blank">https://shipshapecode.github.io/shepherd/</a></p>
+    </li>
+  </ul>
+
+  <hr class="my-4">
+  <p>
+    <strong>Note:</strong> Validation icons are disabled by default. To enable it, add the next
+    variable in the <code>css/_custom-variables/_appwork.scss</code>
+    and
+    <code>css/_custom-variables/_appwork-material.scss</code>:
+  </p>
+  <pre class="docs-code scss m-0"><code>$enable-validation-icons: true;</code></pre>
+
+</div>
+
+  <ul class="migration-guide" id="migration-guide-120" data-name="1.1.0 → 1.2.0">
+  <li>
+    <p>If you're using compiled assets:</p>
+    <p>Copy with replace <code>css</code>, <code>fonts</code>, <code>js</code> and <code>libs</code> directories from the
+    <code>dist</code> directory to your <code>assets/vendor</code> directory.</p>
+  </li>
+  <li>
+  <p>If you're using uncompiled sources:</p>
+    <ol>
+      <li>
+        <p>Copy with replace changed files:</p>
+        <pre>css/_appwork/_accordion.scss
+css/_appwork/_breadcrumb.scss
+css/_appwork/_buttons.scss
+css/_appwork/_close.scss
+css/_appwork/_custom-forms.scss
+css/_appwork/_mixins.scss
+css/_appwork/_switcher.scss
+css/_appwork/_variables-material.scss
+css/_appwork/_variables.scss
+css/colors-material.scss
+fonts/fontawesome.scss
+gulpfile.js
+libs/blueimp-gallery/gallery.scss
+libs/dropzone/dropzone.scss
+libs/minicolors/minicolors.scss
+libs/spinkit/spinkit.scss
+libs/toastr/toastr.scss
+libs/typeahead-js/typeahead.scss
+package.json
+webpack.config.js</pre>
+      </li>
+      <li>Execute <code>yarn install</code></li>
+      <li>Execute <code>npm run build</code></li>
+    </ol>
+  </li>
+</ul>
+
+</div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+@function fullcalendar-event-bg($background, $opacity: .15) {
+  @return rgba($background, $opacity);
+}
+
+@mixin fullcalendar-event-variant($background) {
+  &.fc-event {
+    background: fullcalendar-event-bg($background) !important;
+  }
+
+  .fc-event-dot {
+    background: fullcalendar-event-bg($background, .4) !important;
+  }
+}
+
+@mixin fullcalendar-theme($background) {
+  .fc-event {
+    background: fullcalendar-event-bg($background) !important;
+  }
+
+  .fc-event-dot {
+    background: fullcalendar-event-bg($background, .4) !important;
+  }
+
+  .fc-highlight,
+  .fc-bgevent:not(.fc-nonbusiness) {
+    background: $background !important;
+  }
+}

@@ -1,0 +1,134 @@
+$rtl-support: true;
+
+@import "../_appwork/include";
+@import "../_theme/common";
+@import "../_theme/libs";
+@import "../_theme/uikit";
+
+$primary-color: #775cdc;
+$body-bg: #f5f5f5;
+
+body {
+  background: $body-bg;
+}
+
+.bg-body {
+  background: $body-bg !important;
+}
+
+@include appwork-common-theme($primary-color);
+@include appwork-libs-theme($primary-color);
+@include appwork-uikit-theme($primary-color);
+
+// Navbar
+
+@include appwork-navbar-variant('.bg-navbar-theme', #fff, $color: $text-muted, $active-color: $body-color);
+
+.layout-navbar {
+  box-shadow: 0 10px 30px 0 $border-color;
+}
+
+// Sidenav
+
+@include appwork-sidenav-variant('.bg-sidenav-theme', #4e54c8, $color: #fff, $menu-bg: #4b4fc1);
+
+.bg-sidenav-theme {
+  background: linear-gradient(to top, #4e54c8, #8c55e4);
+
+  .sidenav-inner > .sidenav-item > .sidenav-link .sidenav-icon,
+  .sidenav-inner > .sidenav-item > .sidenav-link:hover .sidenav-icon,
+  .sidenav-inner > .sidenav-item > .sidenav-link:focus .sidenav-icon {
+    color: rgba(255,255,255,.7);
+  }
+
+  .sidenav-item:not(.active) > .sidenav-link > div,
+  .sidenav-item > .sidenav-link.sidenav-toggle > div {
+    transition: all .2s;
+  }
+  .sidenav-item:not(.active) > .sidenav-link:hover > div,
+  .sidenav-item > .sidenav-link.sidenav-toggle:hover > div {
+    opacity: .8;
+  }
+
+  .sidenav-item.active > .sidenav-link:not(.sidenav-toggle) {
+    background: rgba(0, 0, 0, .1) !important;
+  }
+}
+
+.bg-sidenav-theme .sidenav-vertical,
+.bg-sidenav-theme.sidenav-vertical {
+  background-attachment: fixed;
+  background-size: 100% 100vh;
+
+  .sidenav-item:not(.active) > .sidenav-link:hover > div,
+  .sidenav-item > .sidenav-link.sidenav-toggle:hover > div {
+    opacity: .8;
+    transform: translateX(8px);
+  }
+}
+
+[dir=rtl] .bg-sidenav-theme .sidenav-vertical,
+[dir=rtl] .bg-sidenav-theme.sidenav-vertical {
+  .sidenav-item:not(.active) > .sidenav-link:hover > div,
+  .sidenav-item > .sidenav-link.sidenav-toggle:hover > div {
+    transform: translateX(-8px);
+  }
+}
+
+// Footer
+
+@include appwork-footer-variant('.bg-footer-theme', $body-bg, $color: $text-muted, $active-color: $body-color);
+
+.layout-footer {
+  box-shadow: 0 -1px 0 $border-color;
+}
+
+// Custom styling
+
+hr {
+  border-color: $border-color;
+}
+
+.card,
+.nav-tabs-top > .tab-content,
+.nav-tabs-right > .tab-content,
+.nav-tabs-bottom > .tab-content,
+.nav-tabs-left > .tab-content {
+  border-color: transparent;
+  box-shadow: 0 10px 30px 0 rgba($black, .04);
+}
+.ng2-archwizard-boxed-steps ul.steps-indicator,
+.form-wizard-boxed-steps .wizard-nav {
+  border-color: transparent !important;
+  box-shadow: 0 10px 30px 0 rgba($black, .04) !important;
+}
+
+.nav-tabs-top,
+.nav-tabs-right,
+.nav-tabs-bottom,
+.nav-tabs-left {
+   > .nav-tabs:not(.tabs-alt) .nav-link:not(.active),
+   > div > .nav-tabs:not(.tabs-alt) .nav-link:not(.active) {
+    border-color: transparent !important;
+  }
+
+   > .nav .nav-link.active,
+   > div > .nav .nav-link.active {
+    border-color: $nav-tabs-link-active-bg !important;
+  }
+}
+
+.nav-tabs-top > .nav-tabs:not(.tabs-alt),
+.nav-tabs-top > div > .nav-tabs:not(.tabs-alt),
+.nav-tabs-bottom > .nav-tabs:not(.tabs-alt),
+.nav-tabs-bottom > div > .nav-tabs:not(.tabs-alt) {
+  padding-right: $border-width;
+  padding-left: $border-width;
+}
+.nav-tabs-right > .nav-tabs:not(.tabs-alt),
+.nav-tabs-right > div > .nav-tabs:not(.tabs-alt),
+.nav-tabs-left > .nav-tabs:not(.tabs-alt),
+.nav-tabs-left > div > .nav-tabs:not(.tabs-alt) {
+  padding-top: $border-width;
+  padding-bottom: $border-width;
+}

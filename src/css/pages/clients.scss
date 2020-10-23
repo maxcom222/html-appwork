@@ -1,0 +1,133 @@
+@import '../_custom-variables/pages';
+
+$clients-content-bg: transparent !default;
+$clients-sidebox-width: 20rem !default;
+$clients-transition-duration: .2s !default;
+
+// Make wrapper full page height
+.clients-wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex: 1 1 100%;
+  width: 100%;
+}
+
+.clients-sidebox,
+.clients-content {
+  transition: all $clients-transition-duration;
+}
+
+.clients-content {
+  background: $clients-content-bg;
+}
+
+.clients-sidebox {
+  position: fixed;
+  top: 0;
+  right: -$clients-sidebox-width;
+  height: 100%;
+  width: $clients-sidebox-width;
+
+  [dir=rtl] & {
+    right: auto;
+    left: -$clients-sidebox-width;
+  }
+}
+
+.layout-sidenav-100vh .clients-sidebox {
+  height: 100vh;
+}
+
+.clients-sidebox-open .clients-sidebox {
+  right: 0;
+
+  [dir=rtl] & {
+    right: auto;
+    left: 0;
+  }
+}
+
+.clients-sidebox-close {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  display: block;
+  line-height: 1;
+
+  [dir=rtl] & {
+    right: 1rem;
+    left: auto;
+  }
+}
+
+.clients-table tr,
+.clients-table tr > * {
+  cursor: pointer;
+}
+
+.clients-scroll {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+}
+
+.default-style {
+  @import "../_appwork/include";
+
+  .clients-sidebox {
+    z-index: $zindex-layout-fixed + 1;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .clients-sidebox {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .clients-sidebox-open .clients-content {
+      right: $clients-sidebox-width;
+    }
+  }
+}
+
+.default-style[dir=rtl] .clients-sidebox-open .clients-content {
+  @import "../_appwork/include";
+
+  @include media-breakpoint-up(lg) {
+    right: 0;
+    left: $clients-sidebox-width;
+  }
+}
+
+.material-style {
+  @import "../_appwork/include-material";
+
+  .clients-sidebox {
+    z-index: $zindex-layout-fixed + 1;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .clients-sidebox {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .clients-sidebox-open .clients-content {
+      right: $clients-sidebox-width;
+    }
+  }
+}
+
+.material-style[dir=rtl] .clients-sidebox-open .clients-content {
+  @import "../_appwork/include-material";
+
+  @include media-breakpoint-up(lg) {
+    right: 0;
+    left: $clients-sidebox-width;
+  }
+}

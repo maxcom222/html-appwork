@@ -1,0 +1,38 @@
+@import '../_custom-variables/pages';
+
+$ticket-assignee-size: 2.5rem !default;
+$ticket-file-size: 4rem !default;
+
+.ticket-assignee,
+.ticket-assignee-add {
+  width: $ticket-assignee-size;
+  height: $ticket-assignee-size;
+  border-radius: 50%;
+}
+
+.ticket-assignee-add {
+  display: inline-block;
+  text-align: center;
+  line-height: $ticket-assignee-size;
+}
+
+.ticket-file,
+.ticket-file-img,
+.ticket-file-add {
+  display: block;
+  width: $ticket-file-size;
+  height: $ticket-file-size;
+}
+
+.ticket-file,
+.ticket-file-add {
+  display: inline-block;
+  text-align: center;
+  line-height: $ticket-file-size;
+}
+
+.ticket-file-img {
+  background-color: transparent;
+  background-position: center center;
+  background-size: cover;
+}

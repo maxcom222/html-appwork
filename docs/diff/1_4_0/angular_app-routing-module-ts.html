@@ -1,0 +1,250 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/angular-starter/src/app/app-routing.module.ts &nbsp;
+<br/>
+Right file: appwork-v1_4_0/angular-starter/src/app/app-routing.module.ts &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame">import { NgModule } from '@angular/core';</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">import { NgModule } from '@angular/core';</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">import { Routes, RouterModule } from '@angular/router';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import { Routes, RouterModule } from '@angular/router';</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">NotFoundComponent</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">from</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'./not-found/not-found.component';</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// *******************************************************************************</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// *******************************************************************************</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Layouts</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Layouts</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import { Layout1Component } from './layout/layout-1/layout-1.component';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import { Layout1Component } from './layout/layout-1/layout-1.component';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// *******************************************************************************</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// *******************************************************************************</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Pages</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Pages</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import { HomeComponent } from './home/home.component';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import { HomeComponent } from './home/home.component';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import { Page2Component } from './page-2/page-2.component';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import { Page2Component } from './page-2/page-2.component';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// *******************************************************************************</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// *******************************************************************************</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Routes</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Routes</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">const routes: Routes = [</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">const routes: Routes = [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; { path: '', component: Layout1Component, pathMatch: 'full', children: [</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; { path: '', component: Layout1Component, pathMatch: 'full', children: [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; { path: '', component: HomeComponent },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; { path: '', component: HomeComponent },</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; ]},</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; ]},</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; { path: 'page-2', component: Layout1Component, children: [</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; { path: 'page-2', component: Layout1Component, children: [</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; { path: '', component: Page2Component },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; { path: '', component: Page2Component },</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; ]}</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; ]}<span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">//</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">404</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Not</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Found</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">page</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">{</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">path:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'**',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">component:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">NotFoundComponent</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">];</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">];</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// *******************************************************************************</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// *******************************************************************************</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">//</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">//</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">@NgModule({</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">@NgModule({</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; imports: [RouterModule.forRoot(routes)],</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; imports: [RouterModule.forRoot(routes)],</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; exports: [RouterModule]</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; exports: [RouterModule]</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">})</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">})</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">export class AppRoutingModule {}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">export class AppRoutingModule {}</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

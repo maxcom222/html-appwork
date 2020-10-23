@@ -1,0 +1,549 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_2_2/laravel-starter/app/Http/Controllers/Auth/RegisterController.php &nbsp;
+<br/>
+Right file: appwork-v1_3_0/laravel-starter/app/Http/Controllers/Auth/RegisterController.php &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">&lt;?php</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">&lt;?php</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame">namespace App\Http\Controllers\Auth;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame">namespace App\Http\Controllers\Auth;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame">use App\User;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame">use App\User;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSame">use App\Http\Controllers\Controller;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSame">use App\Http\Controllers\Controller;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSame">use Illuminate\Support\Facades\Hash;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSame">use Illuminate\Support\Facades\Hash;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame">use Illuminate\Support\Facades\Validator;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame">use Illuminate\Support\Facades\Validator;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">use Illuminate\Foundation\Auth\RegistersUsers;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">use Illuminate\Foundation\Auth\RegistersUsers;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">class RegisterController extends Controller</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">class RegisterController extends Controller</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame">{</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame">{</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Register Controller</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | Register Controller</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This controller handles the registration of new users as well as their</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | This controller handles the registration of new users as well as their</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | validation and creation. By default this controller uses a trait to</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | validation and creation. By default this controller uses a trait to</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | provide this functionality without requiring any additional code.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; | provide this functionality without requiring any additional code.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; use RegistersUsers;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; use RegistersUsers;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /**</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /**</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * Where to redirect users after registration.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * Where to redirect users after registration.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; *</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; *</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @var string</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @var string</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; protected $redirectTo = '/home';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; protected $redirectTo = '/home';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /**</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /**</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * Create a new controller instance.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * Create a new controller instance.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; *</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; *</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @return void</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @return void</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; public function __construct()</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; public function __construct()</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; $this-&gt;middleware('guest');</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; $this-&gt;middleware('guest');</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /**</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /**</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * Get a validator for an incoming registration request.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * Get a validator for an incoming registration request.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; *</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; *</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @param&nbsp; array&nbsp; $data</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @param&nbsp; array&nbsp; $data</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @return \Illuminate\Contracts\Validation\Validator</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @return \Illuminate\Contracts\Validation\Validator</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; protected function validator(array $data)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; protected function validator(array $data)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; return Validator::make($data, [</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; return Validator::make($data, [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'name' =&gt; ['required', 'string', 'max:255'],</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'name' =&gt; ['required', 'string', 'max:255'],</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'email' =&gt; ['required', 'string', 'email', 'max:255', 'unique:users'],</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'email' =&gt; ['required', 'string', 'email', 'max:255', 'unique:users'],</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'password' =&gt; ['required', 'string', 'min:<span class="TextSegSigDiff">6</span>', 'confirmed'],</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'password' =&gt; ['required', 'string', 'min:<span class="TextSegSigDiff">8</span>', 'confirmed'],</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ]);</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ]);</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /**</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; /**</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * Create a new user instance after a valid registration.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * Create a new user instance after a valid registration.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; *</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; *</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @param&nbsp; array&nbsp; $data</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @param&nbsp; array&nbsp; $data</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @return \App\User</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; * @return \App\User</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; protected function create(array $data)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; protected function create(array $data)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">66</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; return User::create([</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">66</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; return User::create([</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">67</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'name' =&gt; $data['name'],</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">67</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'name' =&gt; $data['name'],</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">68</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'email' =&gt; $data['email'],</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">68</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'email' =&gt; $data['email'],</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">69</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'password' =&gt; Hash::make($data['password']),</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">69</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'password' =&gt; Hash::make($data['password']),</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">70</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ]);</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">70</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ]);</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">71</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">71</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">72</td>
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">72</td>
+<td class="TextItemSame">}</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

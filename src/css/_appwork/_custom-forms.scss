@@ -1,0 +1,370 @@
+// Custom forms
+//
+
+// *******************************************************************************
+// * Custom control
+
+.custom-control {
+  min-height: $custom-control-indicator-size;
+  margin-bottom: $label-margin-bottom;
+  cursor: default;
+
+  @include rtl-style {
+    padding-right: $custom-control-gutter + $custom-control-indicator-size;
+    padding-left: 0;
+  }
+}
+
+.custom-control-label {
+  position: static;
+  @include rtl-style {
+    &::before,
+    &::after {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  // Indicator
+  &::before {
+    top: px-to-rem(floor(rem-to-px(((($line-height-base * $font-size-base) - $custom-control-indicator-size) / 2))));
+    left: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    transition: all .2s;
+    pointer-events: auto;
+
+    @include rtl-style {
+      transform: scaleX(-1);
+    }
+
+    @if $material-style {
+      z-index: 2;
+      box-shadow: none !important;
+    }
+  }
+
+  // Material shadow
+  &::after {
+    @if not $material-style {
+      display: none;
+    } @else {
+      content: '';
+      position: absolute;
+      top: px-to-rem(floor(rem-to-px(((($line-height-base * $font-size-base) - $custom-control-indicator-size) / 2))));
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: $custom-control-indicator-size;
+      height: $custom-control-indicator-size;
+      border-radius: 50%;
+      background: rgba($black, .08);
+      opacity: 0;
+      transition: all .2s;
+      transform-origin: center;
+      transform: scale(0) translateZ(0);
+    }
+  }
+}
+
+// Checkbox indicator
+.custom-checkbox .custom-control-label::before {
+  background-size: $custom-checkbox-indicator-bg-size;
+}
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+  background-size: $custom-checkbox-indeterminate-bg-size;
+}
+
+// Radio indicator
+.custom-radio .custom-control-label::before {
+  background-size: $custom-radio-indicator-bg-size;
+}
+
+// Indicator states
+.custom-control-label::before {
+  .custom-control-input:active ~ & {
+    box-shadow: none;
+  }
+
+  .custom-control-input:not(:checked):active ~ & {
+    background-color: $custom-control-indicator-bg;
+  }
+
+  .custom-control-input:disabled ~ & {
+    border-color: $custom-control-indicator-border-color !important;
+    background-color: $custom-control-indicator-disabled-bg !important;
+  }
+
+  .custom-control.custom-checkbox .custom-control-input:disabled:indeterminate ~ & {
+    background-image: url(str-replace(str-replace($custom-checkbox-indeterminate-bg, '_COLOR_', $custom-control-label-disabled-color), "#", "%23"));
+  }
+
+  .custom-control.custom-checkbox .custom-control-input:disabled:checked ~ & {
+    background-image: url(str-replace(str-replace($custom-checkbox-indicator-bg, '_COLOR_', $custom-control-label-disabled-color), "#", "%23"));
+  }
+
+  .custom-control.custom-radio .custom-control-input:disabled:checked ~ & {
+    background-image: url(str-replace(str-replace($custom-radio-indicator-bg, '_COLOR_', $custom-control-label-disabled-color), "#", "%23"));
+  }
+}
+
+// Material states
+@if $material-style {
+  .custom-control-input[class]:active ~ .custom-control-label::before,
+  .custom-control-input[class]:not(:checked):focus ~ .custom-control-label::before {
+    border-color: $custom-control-indicator-border-color;
+  }
+
+  // Shadow
+  .custom-control-label::after {
+    .custom-control-input:focus ~ & {
+      opacity: 1;
+      transform: scale(2.25) translateZ(0);
+    }
+
+    .custom-control-input:active ~ & {
+      opacity: 0;
+      transform: scale(0) translateZ(0);
+    }
+
+    .custom-control-input:disabled ~ & {
+      display: none;
+    }
+  }
+
+  // Hide radio bullet
+  .custom-radio .custom-control-input:not(:checked) ~ .custom-control-label::before {
+    background-size: 0;
+  }
+
+  .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: $custom-control-indicator-bg;
+  }
+}
+
+.custom-controls-stacked .custom-control {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+@include rtl-only {
+  .custom-control-inline {
+    margin-right: 0;
+    margin-left: $custom-control-spacer-x;
+  }
+}
+
+// *******************************************************************************
+// * Custom select
+
+.custom-select {
+  display: block;
+  background-clip: padding-box;
+
+  @include rtl-style {
+    background-image: $custom-select-indicator-rtl;
+    padding-right: $custom-select-padding-x;
+    padding-left: $custom-select-padding-x + $custom-select-indicator-padding;
+    background-position: left $custom-select-padding-x center;
+  }
+
+  @if $material-style {
+    border-bottom-width: 1px;
+    border-radius: 0 !important;
+
+    &:disabled {
+      border-bottom: 1px dotted $material-input-disabled-border-color;
+      color: $material-input-disabled-color;
+    }
+  }
+}
+
+// Inverted
+.custom-select-inverted {
+  background-image: $custom-select-indicator-inverted;
+
+  @include rtl-style {
+    background-image: $custom-select-indicator-inverted-rtl;
+  }
+
+  &,
+  &:focus {
+    background-color: $input-inverted-bg;
+    color: $input-inverted-color;
+    border-color: $input-inverted-border-color;
+  }
+
+  &:disabled {
+    background-color: $custom-select-inverted-disabled-bg;
+    color: $custom-select-inverted-disabled-color;
+    border-color: if($material-style, $material-input-inverted-disabled-border-color, $input-inverted-disabled-bg);
+  }
+
+  &::placeholder {
+    color: $input-inverted-placeholder-color;
+  }
+
+  option {
+    color: $body-color;
+  }
+}
+
+// Sizing
+@include appwork-custom-select-size('sm', $custom-select-padding-x-sm, $line-height-sm, $custom-select-font-size-sm);
+@include appwork-custom-select-size('lg', $custom-select-padding-x-lg, $line-height-lg, $custom-select-font-size-lg);
+
+// Material style
+@if $material-style {
+  @include ltr-only {
+    :not(.input-group) > .custom-select {
+      padding-left: 0;
+      padding-right: $custom-select-padding-x;
+      background-position: right center;
+    }
+  }
+  @include rtl-only {
+    :not(.input-group) > .custom-select {
+      padding-right: 0;
+      padding-left: $custom-select-padding-x;
+      background-position: left center;
+    }
+  }
+}
+
+// Multiple select
+//
+
+@include rtl-only {
+  .custom-select[multiple],
+  .custom-select[size]:not([size="1"]) {
+    background-image: none;
+  }
+}
+
+@if not $material-style {
+  .custom-select[multiple],
+  .custom-select[size]:not([size="1"]) {
+    padding-right: $custom-select-padding-x;
+    padding-left: $custom-select-padding-x;
+  }
+
+  .custom-select-sm,
+  .input-group-sm .custom-select {
+    &[multiple],
+    &[size]:not([size="1"]) {
+      padding-right: $custom-select-padding-x-sm;
+      padding-left: $custom-select-padding-x-sm;
+    }
+  }
+
+  .custom-select-lg,
+  .input-group-lg .custom-select {
+    &[multiple],
+    &[size]:not([size="1"]) {
+      padding-right: $custom-select-padding-x-lg;
+      padding-left: $custom-select-padding-x-lg;
+    }
+  }
+} @else {
+  .custom-select[multiple],
+  .custom-select[size]:not([size="1"]) {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+// *******************************************************************************
+// * File input
+
+.custom-file {
+  display: block;
+}
+
+.custom-file-label {
+  background-clip: padding-box;
+  transition: $input-transition;
+
+  @include rtl-style {
+    &::after {
+      right: auto;
+      left: 0;
+      border-right: $custom-file-border-width solid $custom-file-border-color;
+      border-left: 0;
+
+      @include border-radius($custom-file-border-radius 0 0 $custom-file-border-radius);
+    }
+  }
+
+  @if $material-style {
+    padding-right: 0;
+    padding-left: 0;
+    border-bottom-width: 1px;
+  }
+
+  .custom-file-input:disabled ~ & {
+    background: $input-disabled-bg;
+
+    @if $material-style {
+      border-bottom: 1px dotted $material-input-disabled-border-color;
+      color: $material-input-disabled-color;
+    }
+
+    &::before {
+      opacity: .65;
+    }
+  }
+}
+
+// *******************************************************************************
+// * Range select
+
+.custom-range {
+  &::-webkit-slider-thumb {
+    box-shadow: $custom-range-thumb-box-shadow;
+    transition: transform .2s;
+    transform-origin: center;
+
+    &:active {
+      transform: scale(1.4, 1.4);
+    }
+  }
+
+  &::-moz-range-thumb {
+    box-shadow: $custom-range-thumb-box-shadow;
+    transition: transform .2s;
+    transform-origin: center;
+
+    &:active {
+      transform: scale(1.4, 1.4);
+    }
+  }
+
+  &::-ms-thumb {
+    box-shadow: $custom-range-thumb-box-shadow;
+    transition: transform .2s;
+    transform-origin: center;
+
+    &:active {
+      transform: scale(1.4, 1.4);
+    }
+  }
+
+  &:disabled {
+    &::-webkit-slider-runnable-track {
+      background-color: $custom-range-disabled-track-bg;
+    }
+    &::-moz-range-track {
+      background-color: $custom-range-disabled-track-bg;
+    }
+
+    &::-ms-fill-lower {
+      background-color: $custom-range-disabled-track-bg;
+    }
+
+    &::-ms-fill-upper {
+      background-color: $custom-range-disabled-track-bg;
+    }
+  }
+}

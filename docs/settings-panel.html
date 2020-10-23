@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style docs-page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Settings panel - Appwork v1.4.0 Docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/bootstrap.css">
+  <link rel="stylesheet" href="assets/appwork.css">
+  <link rel="stylesheet" href="assets/theme-corporate.css">
+
+  <link rel="stylesheet" href="assets/main.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/main.js"></script>
+
+</head>
+<body>
+
+  <h1 class="docs-page-header bg-dark text-white">
+    <span class="docs-page-header-path">Docs v1.4.0 &nbsp;/&nbsp;</span>
+    <span class="docs-page-header-dropdown">
+      <span class="dropdown-toggle text-white">Settings panel</span>
+      <span class="dropdown-menu mt-3">
+        <a href="html5.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">HTML5</span></a>
+        <a href="angular.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Angular</span></a>
+        <a href="vue.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Vue.js</span></a>
+        <a href="react.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">React</span></a>
+        <a href="laravel.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Laravel</span></a>
+        <a href="laravel-vue.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Laravel + Vue.js</span></a>
+        <a href="rails.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Rails</span></a>
+        <a href="rails-turbolinks.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Rails + Turbolinks</span></a>
+        <a href="aspnet-core.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET Core</span></a>
+        <a href="aspnet-core-mvc.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET Core MVC</span></a>
+        <a href="aspnet-mvc.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET MVC</span></a>
+        <a href="aspnet-mvc-webpack.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">ASP.NET MVC + Webpack</span></a>
+        <div class="dropdown-divider"></div>
+        <h6 class="dropdown-header">OTHER</h6>
+        
+        <a href="layout-helpers.html" class="dropdown-item text-big py-2"><span class="d-inline-block py-1 px-2">Layout helpers</span></a>
+      </span>
+    </span>
+  </h1>
+
+
+  <div class="docs-wrapper">
+    <div class="docs-sections bg-light">
+      <ul class="docs-sections-inner">
+
+<li><a href="#usage">Usage</a></li>
+<li><a href="#options">Options</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#generator">Configuration generator</a></li>
+      </ul>
+    </div>
+
+    <div class="docs-inner">
+<div class="docs-main-header">
+  ThemeSettings plugin allow you to dynamically configure layout options and theme appearance.
+</div>
+
+<h2 class="docs-header docs-header-anchor"><a name="usage">Usage</h2>
+<div class="docs-block">
+  <p>To use ThemeSettings plugin, first of all, you need to:</p>
+  <ol>
+    <li class="mb-2">
+      Include <code>layout-helpers.js</code> and <code>theme-settings.js</code>
+      scripts in the <code>&lt;head></code> section.
+    </li>
+    <li class="mb-2">
+      Initialize ThemeSettings plugin in the <code>&lt;script></code>
+      block in the <code>&lt;head></code> section. It's important to initialize the plugin
+      in the <code>&lt;head></code> to prevent style blinking.
+    </li>
+    <li>
+      Add <code>theme-settings-bootstrap-css</code>, <code>theme-settings-appwork-css</code>,
+      <code>theme-settings-theme-css</code> and <code>theme-settings-colors-css</code>
+      classes to <code>bootstrap</code>, <code>appwork</code>,
+      <code>theme-*</code> and <code>colors</code> stylesheets. Please
+      note that ThemeSettings plugin initialization code must be after
+      core stylesheets.
+    </li>
+  </ol>
+</div>
+<div class="docs-block">
+  <pre class="docs-code html"><code>&lt;!-- Core stylesheets -->
+&lt;link rel="stylesheet" href="path/to/css/bootstrap.css" class="theme-settings-bootstrap-css">
+&lt;link rel="stylesheet" href="assets/vendor/css/appwork.css" class="theme-settings-appwork-css">
+&lt;link rel="stylesheet" href="path/to/theme-css/theme-corporate.css" class="theme-settings-theme-css">
+&lt;link rel="stylesheet" href="path/to/css/colors.css" class="theme-settings-colors-css">
+&lt;link rel="stylesheet" href="path/to/css/uikit.css">
+
+    &lt;!-- Layout helpers -->
+&lt;script src="path/to/layout-helpers.js">&lt;/script>
+
+&lt;!-- Theme settings -->
+&lt;script src="path/to/theme-settings.js">&lt;/script>
+&lt;script>
+  window.themeSettings = new ThemeSettings({
+    cssPath: 'path/to/css/',
+    themesPath: 'path/to/theme-css/'
+  });
+&lt;/script></code></pre>
+</div>
+<div class="docs-block">
+  <pre class="docs-code javascript"><code>// Get current settings. Do not change it directly, use methods instead.
+console.log(window.themeSettings.settings);
+
+/*
+{
+  "cssPath": "path/to/css/",
+  "themesPath": "path/to/theme-css/",
+  "cssFilenamePattern": "%name%.css",
+  "navbarBgs": [ ... ],
+  "defaultNavbarBg": "navbar-theme",
+  "sidenavBgs": [ ... ],
+  "defaultSidenavBg": "sidenav-theme",
+  "footerBgs": [ ... ],
+  "defaultFooterBg": "footer-theme",
+  "availableThemes": [ ... ],
+  "defaultTheme": { ... },
+  "lang": "en",
+  "controls": [ ... ],
+  "rtl": false,
+  "material": false,
+  "layoutPosition": "static",
+  "layoutReversed": false,
+  "layoutNavbarFixed": false,
+  "layoutFooterFixed": false,
+  "navbarBg": "navbar-theme",
+  "sidenavBg": "sidenav-theme",
+  "footerBg": "footer-theme",
+  "theme": { ... }
+}
+*/</code></pre>
+</div>
+
+<h2 class="docs-header docs-header-anchor"><a name="options">Globals</h2>
+<div class="docs-block">
+  <p>
+    You can configure ThemeSettings application-wide by modifying global variables.
+  </p>
+</div>
+<div class="docs-block">
+  <pre class="docs-code javascript"><code>ThemeSettings.AVAILABLE_THEMES.push({
+  name: 'theme-name',
+  title: 'Theme title',
+  colors: {
+    primary: '#333',
+    navbar: '#666',
+    sidenav: '#999'
+  }
+});
+
+window.themeSettings = new ThemeSettings({
+  defaultTheme: 'theme-name',
+  ...
+});</code></pre>
+</div>
+<div class="docs-block">
+  <table class="table table-fixed">
+    <thead>
+      <tr>
+        <th style="width: 270px;">Variable</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="text-nowrap">ThemeSettings.AVAILABLE_THEMES</code></td>
+        <td>
+<pre class="docs-code javascript" style="width: auto; height: auto"><code>[
+  { name: 'theme-air', title: 'Air', colors: { primary: '#3c97fe', navbar: '#f8f8f8', sidenav: '#f8f8f8' } },
+  { name: 'theme-corporate', title: 'Corporate', colors: { primary: '#26B4FF', navbar: '#fff', sidenav: '#2e323a' } },
+  { name: 'theme-cotton', title: 'Сotton', colors: { primary: '#e84c64', navbar: '#ffffff', sidenav: '#ffffff' } },
+  { name: 'theme-gradient', title: 'Gradient', colors: { primary: '#775cdc', navbar: '#ffffff', sidenav: 'linear-gradient(to top, #4e54c8, #8c55e4)' } },
+  { name: 'theme-paper', title: 'Paper', colors: { primary: '#17b3a3', navbar: '#ffffff', sidenav: '#ffffff' } },
+  { name: 'theme-shadow', title: 'Shadow', colors: { primary: '#7b83ff', navbar: '#f8f8f8', sidenav: '#ececf9' } },
+  { name: 'theme-soft', title: 'Soft', colors: { primary: '#1cbb84', navbar: '#39517b', sidenav: '#ffffff' } },
+  { name: 'theme-sunrise', title: 'Sunrise', colors: { primary: '#fc5a5c', navbar: '#222222', sidenav: '#ffffff' } },
+  { name: 'theme-twitlight', title: 'Twitlight', colors: { primary: '#4c84ff', navbar: '#343c44', sidenav: '#3f4853' } },
+  { name: 'theme-vibrant', title: 'Vibrant', colors: { primary: '#fc5a5c', navbar: '#f8f8f8', sidenav: '#222222' } },
+]</code></pre>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">ThemeSettings.NAVBAR_BGS</code></td>
+        <td>
+<pre class="docs-code javascript" style="width: auto; height: auto"><code>[
+  'navbar-theme',
+  'primary',
+  'primary-dark navbar-dark',
+  'primary-darker navbar-dark',
+  'secondary',
+  'secondary-dark navbar-dark',
+  'secondary-darker navbar-dark',
+  'success',
+  'success-dark navbar-dark',
+  'success-darker navbar-dark',
+  'info',
+  'info-dark navbar-dark',
+  'info-darker navbar-dark',
+  'warning',
+  'warning-dark navbar-light',
+  'warning-darker navbar-light',
+  'danger',
+  'danger-dark navbar-dark',
+  'danger-darker navbar-dark',
+  'dark',
+  'white',
+  'light',
+  'lighter'
+]</code></pre>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">ThemeSettings.SIDENAV_BGS</code></td>
+        <td>
+<pre class="docs-code javascript" style="width: auto; height: auto"><code>[
+  'sidenav-theme',
+  'primary',
+  'primary-dark sidenav-dark',
+  'primary-darker sidenav-dark',
+  'secondary',
+  'secondary-dark sidenav-dark',
+  'secondary-darker sidenav-dark',
+  'success',
+  'success-dark sidenav-dark',
+  'success-darker sidenav-dark',
+  'info',
+  'info-dark sidenav-dark',
+  'info-darker sidenav-dark',
+  'warning',
+  'warning-dark sidenav-light',
+  'warning-darker sidenav-light',
+  'danger',
+  'danger-dark sidenav-dark',
+  'danger-darker sidenav-dark',
+  'dark',
+  'white',
+  'light',
+  'lighter'
+]</code></pre>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">ThemeSettings.FOOTER_BGS</code></td>
+        <td>
+<pre class="docs-code javascript" style="width: auto; height: auto"><code>[
+  'footer-theme',
+  'primary',
+  'primary-dark footer-dark',
+  'primary-darker footer-dark',
+  'secondary',
+  'secondary-dark footer-dark',
+  'secondary-darker footer-dark',
+  'success',
+  'success-dark footer-dark',
+  'success-darker footer-dark',
+  'info',
+  'info-dark footer-dark',
+  'info-darker footer-dark',
+  'warning',
+  'warning-dark footer-light',
+  'warning-darker footer-light',
+  'danger',
+  'danger-dark footer-dark',
+  'danger-darker footer-dark',
+  'dark',
+  'white',
+  'light',
+  'lighter'
+]</code></pre>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">ThemeSettings.LANGUAGES</code></td>
+        <td>
+<pre class="docs-code javascript" style="width: auto; height: auto"><code>{
+  en: {
+    panel_header: 'SETTINGS',
+    rtl_switcher: 'RTL direction',
+    material_switcher: 'Material style',
+    layout_header: 'LAYOUT',
+    layout_static: 'Static',
+    layout_offcanvas: 'Offcanvas',
+    layout_fixed: 'Fixed',
+    layout_fixed_offcanvas: 'Fixed offcanvas',
+    layout_navbar_swicher: 'Fixed navbar',
+    layout_footer_swicher: 'Fixed footer',
+    layout_reversed_swicher: 'Reversed',
+    navbar_bg_header: 'NAVBAR BACKGROUND',
+    sidenav_bg_header: 'SIDENAV BACKGROUND',
+    footer_bg_header: 'FOOTER BACKGROUND',
+    theme_header: 'THEME'
+  }
+}</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="docs-header docs-header-anchor"><a name="options">Internationalization</h2>
+<div class="docs-block">
+  <p>
+You can add translations by inserting a translation object into the <code>ThemeSettings.LANGUAGES</code>. Optionally, you
+can translate theme titles. Full example:
+  </p>
+</div>
+<div class="docs-block">
+<pre class="docs-code javascript"><code>ThemeSettings.LANGUAGES.en = {
+  panel_header: 'SETTINGS',
+  rtl_switcher: 'RTL direction',
+  material_switcher: 'Material style',
+  layout_header: 'LAYOUT',
+  layout_static: 'Static',
+  layout_offcanvas: 'Offcanvas',
+  layout_fixed: 'Fixed',
+  layout_fixed_offcanvas: 'Fixed offcanvas',
+  layout_navbar_swicher: 'Fixed navbar',
+  layout_footer_swicher: 'Fixed footer',
+  layout_reversed_swicher: 'Reversed',
+  navbar_bg_header: 'NAVBAR BACKGROUND',
+  sidenav_bg_header: 'SIDENAV BACKGROUND',
+  footer_bg_header: 'FOOTER BACKGROUND',
+  theme_header: 'THEME',
+  themes: { // "themes" key is optional. You can translate theme titles partially
+    'theme-air': 'Air',
+    'theme-corporate': 'Corporate',
+    'theme-cotton': 'Сotton',
+    'theme-gradient': 'Gradient',
+    'theme-paper': 'Paper',
+    'theme-shadow': 'Shadow',
+    'theme-soft': 'Soft',
+    'theme-sunrise': 'Sunrise',
+    'theme-twitlight': 'Twitlight',
+    'theme-vibrant': 'Vibrant'
+  }
+};
+
+ThemeSettings.LANGUAGES.fr = { ... };
+ThemeSettings.LANGUAGES.de = { ... };
+
+// Then initialize the plugin with the required language:
+window.themeSettings = new ThemeSettings({
+  lang: 'fr',
+  ...
+});
+
+// Or change the language at runtime:
+window.themeSettings.setLang('de');
+</code></pre>
+</div>
+
+<h2 class="docs-header docs-header-anchor"><a name="options">Options</h2>
+<div class="docs-block">
+</div>
+<div class="docs-block">
+  <table class="table table-fixed">
+    <thead>
+      <tr>
+        <th style="width: 200px;">Option</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="text-nowrap">cssPath</code></td>
+        <td>
+          Core stylesheets path. Must ends with a slash. <strong>Required</strong>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">themesPath</code></td>
+        <td>
+          Theme stylesheets path. Must ends with a slash. <strong>Required</strong>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">cssFilenamePattern</code></td>
+        <td>
+          <p>Filename pattern.</p>
+          <p><strong>Default:</strong> <code>%name%.css</code></p>
+          <p>
+            For example, if you set this option to <code>%name%.minified.css</code>,
+            the plugin will load the next paths:
+          </p>
+          <ul class="mb-0">
+            <li><code>path/to/css/bootstrap.minified.css</code></li>
+            <li><code>path/to/css/bootstrap-material.minified.css</code></li>
+            <li><code>path/to/css/appwork.minified.css</code></li>
+            <li><code>path/to/css/appwork-material.minified.css</code></li>
+            <li><code>path/to/css/colors.minified.css</code></li>
+            <li><code>path/to/css/colors-material.minified.css</code></li>
+            <li><code>path/to/theme-css/theme-corporate.minified.css</code></li>
+            <li>...</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">controls</code></td>
+        <td>
+          <p>
+            Using this option you can disable ThemeSettings controls. Just
+            pass an array of the required controls.
+          </p>
+          <p><strong>Default:</strong> <code>['rtl', 'material', 'layoutPosition', 'layoutNavbarFixed', 'layoutFooterFixed', 'layoutReversed', 'navbarBg', 'sidenavBg', 'footerBg', 'themes']</code></p>
+          For example, if you set this option to <code>['rtl', 'material']</code>,
+          ThemeSettings panel will contain only RTL and material switchers.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">sidenavBgs</code></td>
+        <td>
+          <p>
+            Available layout sidenav backgrounds.
+          </p>
+          <strong>Default:</strong> <code>['sidenav-theme', 'primary', 'primary-dark sidenav-dark', 'primary-darker sidenav-dark', 'secondary', 'secondary-dark sidenav-dark', 'secondary-darker sidenav-dark', 'success', 'success-dark sidenav-dark', 'success-darker sidenav-dark', 'info', 'info-dark sidenav-dark', 'info-darker sidenav-dark', 'warning', 'warning-dark sidenav-light', 'warning-darker sidenav-light', 'danger', 'danger-dark sidenav-dark', 'danger-darker sidenav-dark', 'dark', 'white', 'light', 'lighter']</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">defaultSidenavBg</code></td>
+        <td>
+          <p>
+            Default layout sidenav background. The plugin uses this value if
+            no sidenav background value found in the localStorage or its value is
+            incorrect.
+          </p>
+          <strong>Default:</strong> <code>sidenav-theme</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">navbarBgs</code></td>
+        <td>
+          <p>
+            Available layout navbar backgrounds.
+          </p>
+          <strong>Default:</strong> <code>['navbar-theme', 'primary', 'primary-dark navbar-dark', 'primary-darker navbar-dark', 'secondary', 'secondary-dark navbar-dark', 'secondary-darker navbar-dark', 'success', 'success-dark navbar-dark', 'success-darker navbar-dark', 'info', 'info-dark navbar-dark', 'info-darker navbar-dark', 'warning', 'warning-dark navbar-light', 'warning-darker navbar-light', 'danger', 'danger-dark navbar-dark', 'danger-darker navbar-dark', 'dark', 'white', 'light', 'lighter']</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">defaultNavbarBg</code></td>
+        <td>
+          <p>Default layout navbar background. The plugin uses this value if
+          no navbar background value found in the localStorage or its value is
+          incorrect.</p>
+          <strong>Default:</strong> <code>navbar-theme</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">footerBgs</code></td>
+        <td>
+          <p>
+            Available layout footer backgrounds.
+          </p>
+          <strong>Default:</strong> <code>['footer-theme', 'primary', 'primary-dark footer-dark', 'primary-darker footer-dark', 'secondary', 'secondary-dark footer-dark', 'secondary-darker footer-dark', 'success', 'success-dark footer-dark', 'success-darker footer-dark', 'info', 'info-dark footer-dark', 'info-darker footer-dark', 'warning', 'warning-dark footer-light', 'warning-darker footer-light', 'danger', 'danger-dark footer-dark', 'danger-darker footer-dark', 'dark', 'white', 'light', 'lighter']</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">defaultFooterBg</code></td>
+        <td>
+          <p>Default layout footer background. The plugin uses this value if
+          no footer background value found in the localStorage or its value is
+          incorrect.</p>
+          <strong>Default:</strong> <code>footer-theme</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">availableThemes</code></td>
+        <td>
+          <p>
+            Available themes. Theme item has the next structure: <br>
+          </p>
+          <pre class="docs-code javascript" style="width: auto; height: auto"><code>{
+  name: '{theme_filename_without_extension}',
+  title: '{theme_name}',
+  colors: {
+    primary: '{primary_color}',
+    navbar: '{bg_navbar_theme}',
+    sidenav: '{bg_sidenav_theme}'
+  }
+}</code></pre>
+          <p>
+            <strong>Default:</strong>
+          </p>
+          <pre class="docs-code javascript" style="width: auto; height: auto"><code>[
+  { name: 'theme-air', title: 'Air', colors: { primary: '#3c97fe', navbar: '#f8f8f8', sidenav: '#f8f8f8' } },
+  { name: 'theme-corporate', title: 'Corporate', colors: { primary: '#26B4FF', navbar: '#fff', sidenav: '#2e323a' } },
+  { name: 'theme-cotton', title: 'Сotton', colors: { primary: '#e84c64', navbar: '#ffffff', sidenav: '#ffffff' } },
+  { name: 'theme-gradient', title: 'Gradient', colors: { primary: '#775cdc', navbar: '#ffffff', sidenav: 'linear-gradient(to top, #4e54c8, #8c55e4)' } },
+  { name: 'theme-paper', title: 'Paper', colors: { primary: '#17b3a3', navbar: '#ffffff', sidenav: '#ffffff' } },
+  { name: 'theme-shadow', title: 'Shadow', colors: { primary: '#7b83ff', navbar: '#f8f8f8', sidenav: '#ececf9' } },
+  { name: 'theme-soft', title: 'Soft', colors: { primary: '#1cbb84', navbar: '#39517b', sidenav: '#ffffff' } },
+  { name: 'theme-sunrise', title: 'Sunrise', colors: { primary: '#fc5a5c', navbar: '#222222', sidenav: '#ffffff' } },
+  { name: 'theme-twitlight', title: 'Twitlight', colors: { primary: '#4c84ff', navbar: '#343c44', sidenav: '#3f4853' } },
+  { name: 'theme-vibrant', title: 'Vibrant', colors: { primary: '#fc5a5c', navbar: '#f8f8f8', sidenav: '#222222' } },
+]</code></pre>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">defaultTheme</code></td>
+        <td>
+          <p>
+            Default theme index or name. Accepts <code>number</code> or <code>string</code>. The plugin uses this value if
+            no theme value found in the localStorage or its value is
+            incorrect.
+          </p>
+          <strong>Default:</strong> <code>1</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">lang</code></td>
+        <td>
+          <p>
+            Current language. The value must be in the <code>ThemeSettings.LANGUAGES</code>, otherwise an error will be thrown.
+          </p>
+          <strong>Default:</strong> <code>en</code>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">pathResolver</code></td>
+        <td>
+          <p>
+            A callback function that lets you change the stylesheet url on the fly.
+            Accepts stylesheet url. Must return stylesheet url.
+          </p>
+          <p>
+            This function is useful when you're using hashes in filenames -
+            just load the manifest and return the correct path.
+          </p>
+          <p>Example:</p>
+          <pre class="docs-code javascript" style="width: auto; height: auto"><code>window.themeSettings = new ThemeSettings({
+  cssPath: 'css/',
+  themesPath: 'theme-css/'
+  cssFilenamePattern: '%name%',
+  pathResolver: function(path) {
+    var pathMap = {
+      'css/bootstrap': 'css/bootstrap_some-hash-1',
+      'css/bootstrap-material': 'css/bootstrap-material_some-hash-2',
+      'css/appwork': 'css/appwork_some-hash-3',
+      'css/appwork-material': 'css/appwork-material_some-hash-4',
+      'css/colors': 'css/colors_some-hash-5',
+      'css/colors-material': 'css/colors-material_some-hash-6',
+
+      'theme-css/theme-air': 'css/theme-air_some-hash-7',
+      'theme-css/theme-air-material': 'css/theme-air-material_some-hash-8',
+      ...
+    };
+
+    return 'http://example.com/assets/' + (pathMap[path] || path) + '.css';
+  },
+  ...
+});</code></pre>
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">onSettingsChange</code></td>
+        <td>
+          <p>A callback function which invoked after settings changed and stored in the localStorage.
+          Accepts <code>ThemeSettings.settings</code> object.</p>
+          <p>Example:</p>
+          <pre class="docs-code javascript" style="width: auto; height: auto"><code>window.themeSettings = new ThemeSettings({
+  ...
+
+  onSettingsChange: function(currentSettings) {
+    ...
+  },
+
+  ...
+});</code></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="docs-header docs-header-anchor"><a name="methods">Methods</h2>
+<div class="docs-block">
+</div>
+<div class="docs-block">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="text-nowrap">setRtl(rtl)</code></td>
+        <td>
+          Set to <code>true</code> to enable RTL direction, <code>false</code> to disable. Will reload page.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setMaterial(material)</code></td>
+        <td>
+          Set to <code>true</code> to enable material styling, <code>false</code> to disable. Will reload page.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setTheme(themeName, updateStorage = true, cb = null)</code></td>
+        <td>
+          Set the current theme by name, must be in the <code>settings.availableThemes</code>
+          array. The <code>cb</code> function will be invoked after the theme is loaded.
+          Set <code>updateStorage</code> to <code>false</code> to not update localStorage.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setLayoutPosition(pos, updateStorage = true)</code></td>
+        <td>
+          <p>Set layout position. Available values:
+            <ul class="mb-0">
+              <li><code>static</code></li>
+              <li><code>static-offcanvas</code></li>
+              <li><code>fixed</code></li>
+              <li><code>fixed-offcanvas</code></li>
+            </ul>
+          </p>
+          Set <code>updateStorage</code> to <code>false</code>
+          to not update localStorage.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setLayoutNavbarFixed(fixed, updateStorage = true)</code></td>
+        <td>
+          Set to <code>true</code> to make the layout navbar fixed, <code>false</code> to make it static.
+          Set <code>updateStorage</code> to <code>false</code> to not update localStorage.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setLayoutFooterFixed(fixed, updateStorage = true)</code></td>
+        <td>
+          Set to <code>true</code> to make the layout footer fixed, <code>false</code> to make it static.
+          Set <code>updateStorage</code> to <code>false</code> to not update localStorage.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setLayoutReversed(reversed, updateStorage = true)</code></td>
+        <td>
+          Set to <code>true</code> to make the layout reversed, <code>false</code> to reset.
+          Set <code>updateStorage</code> to <code>false</code> to not update localStorage.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setNavbarBg(bg, updateStorage = true)</code></td>
+        <td>
+          Set the layout navbar background. The value must be in the <code>settings.navbarBgs</code>
+          array. Set <code>updateStorage</code> to <code>false</code> to not update localStorage.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setSidenavBg(bg, updateStorage = true)</code></td>
+        <td>
+          Set the layout sidenav background. The value must be in the <code>settings.sidenavBgs</code>
+          array. Set <code>updateStorage</code> to <code>false</code> to not update localStorage.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setFooterBg(bg, updateStorage = true)</code></td>
+        <td>
+          Set the layout footer background. The value must be in the <code>settings.footerBgs</code>
+          array. Set <code>updateStorage</code> to <code>false</code> to not update localStorage.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">setLang(language)</code></td>
+        <td>
+          Set language. The value must be in the <code>ThemeSettings.LANGUAGES</code>, otherwise an error will be thrown.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">update()</code></td>
+        <td>
+          Update settings panel.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">updateNavbarBg()</code></td>
+        <td>
+          Update the layout navbar background.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">updateSidenavBg()</code></td>
+        <td>
+          Update the layout sidenav background.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">updateFooterBg()</code></td>
+        <td>
+          Update the layout footer background.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">clearLocalStorage()</code></td>
+        <td>
+          Clear localStorage values.
+        </td>
+      </tr>
+      <tr>
+        <td><code class="text-nowrap">destroy()</code></td>
+        <td>
+          Destroy ThemeSettings instance.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="docs-header docs-header-anchor"><a name="generator">Configuration generator</h2>
+  <p>
+    Use ThemeSettings configuration generator to simplify the initial setup.
+  </p>
+  <div class="text-right small font-weight-bold mb-1"><a class="text-body" target="_blank" href="generators/settings-panel-generator.html">Open in new tab <i class="fas fa-external-link-alt"></i></a></div>
+  <div class="docs-block">
+    <iframe src="generators/settings-panel-generator.html" frameborder="0" style="width: 100%;height: 600px;"></iframe>
+  </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,522 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+.TextSegElementKeyword { font-weight: bold; }
+.TextSegElementIdentifier { }
+.TextSegElementString { color: #3A7726; }
+.TextSegElementComment { color: #786A41; }
+.TextSegElementOperator { }
+</style>
+<title>Text Compare</title>
+</head>
+<body>
+<!--StartFragment-->
+Text Compare<br/>
+Produced: 25/10/2019 18:38:14<br/>
+&nbsp; &nbsp;
+<br/>
+Mode:&nbsp; All &nbsp;
+<br/>
+Left file: appwork-release/appwork-v1_3_1/rails-starter/app/assets/javascripts/main.js &nbsp;
+<br/>
+Right file: appwork-release/appwork-v1_4_0/rails-turbolinks-starter/app/javascript/source/main.js &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionAll">
+<td class="TextItemSame"><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">function</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">win</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">doc</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">$</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">function</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">win</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">doc</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">$</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">var</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">themeSettings</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">win</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">themeSettings</span><span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">var</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">layoutHelpers</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">win</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">layoutHelpers</span><span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">v</span><span class="TextSegSigDiff">a</span><span class="TextSegSigDiff">r</span> attachMaterialRipple <span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">win</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">at</span>tachMaterialRippl<span class="TextSegSigDiff">e</span><span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">const</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">themeSettings</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">layoutHelpers</span><span class="TextSegSigDiff">,</span> attachMaterialRipple<span class="TextSegSigDiff">,</span> <span class="TextSegSigDiff">de</span>tachMaterialRippl<span class="TextSegSigDiff">e</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">SideNav</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">win</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">var</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">detachMaterialRipple</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">win</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">detachMaterialRipple</span><span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">let</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">firstLoad</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">sidenavInstance</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">]</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">true</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">null</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">]</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">var</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">firstLoad</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">true</span><span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">va</span><span class="TextSegSigDiff">r</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">si</span><span class="TextSegSigDiff">denav</span> = <span class="TextSegSigDiff">null</span><span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; <span class="TextSegSigDiff">doc</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">addEventListener</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'turbolinks:before-render'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">e</span> =<span class="TextSegSigDiff">&gt;</span> <span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">if</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(!</span><span class="TextSegSigDiff">themeSettings</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">||</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">$</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'html'</span><span class="TextSegSigDiff">)[</span><span class="TextSegSigDiff">0</span><span class="TextSegSigDiff">].</span><span class="TextSegSigDiff">hasAttribute</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'data-turbolinks-preview'</span><span class="TextSegSigDiff">))</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">return</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">doc</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">addEventListener</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'turbolinks:render'</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">function</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">e</span><span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Remove unwanted merged stylesheets on each render</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Remove unwanted merged stylesheets on each render</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">if</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">themeSettings</span><span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span>$('.theme-settings-bootstrap-css').slice(1).remove()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; $('.theme-settings-bootstrap-css').slice(1).remove()</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span>$('.theme-settings-appwork-css').slice(1).remove()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; $('.theme-settings-appwork-css').slice(1).remove()</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span>$('.theme-settings-theme-css').slice(1).remove()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; $('.theme-settings-theme-css').slice(1).remove()</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span>$('.theme-settings-colors-css').slice(1).remove()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; $('.theme-settings-colors-css').slice(1).remove()</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Setup theme settings element</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Setup theme settings element</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; if (!firstLoad<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&amp;&amp;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">themeSettings</span>) {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; if (!firstLoad) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; $('.layout-wrapper', e.data.newBody).addClass('layout-sidenav-link-no-transition')<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; $('.layout-wrapper', e.data.newBody).addClass('layout-sidenav-link-no-transition')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; themeSettings.updateNavbarBg(e.data.newBody)<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; themeSettings.updateNavbarBg(e.data.newBody)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; themeSettings.updateSidenavBg(e.data.newBody)<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; themeSettings.updateSidenavBg(e.data.newBody)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">themeSettings</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">updateFooterBg</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">e</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">data</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">newBody</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; themeSettings._setup(e.data.newBody)<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; themeSettings._setup(e.data.newBody)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; setTimeout(<span class="TextSegSigDiff">function</span>() <span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; setTimeout(() <span class="TextSegSigDiff">=&gt;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; $('.layout-wrapper', e.data.newBody).removeClass('layout-sidenav-link-no-transition')<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; $('.layout-wrapper', e.data.newBody).removeClass('layout-sidenav-link-no-transition')</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegSigDiff">}</span>, 50)<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; , 50)</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; })<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; })</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; doc.addEventListener('turbolinks:load', <span class="TextSegSigDiff">function</span>() {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; doc.addEventListener('turbolinks:load', ()<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span> {</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; layoutHelpers.init()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; layoutHelpers.init()</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Update layout</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Update layout</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; layoutHelpers.update()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; layoutHelpers.update()</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Auto update layout</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Auto update layout</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; layoutHelpers.setAutoUpdate(true)<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; layoutHelpers.setAutoUpdate(true)</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Hide sidenav on small screens after page load</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Hide sidenav on small screens after page load</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">isSmallScreen</span><span class="TextSegElementOperator">())</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">isSmallScreen</span><span class="TextSegElementOperator">())</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; layoutHelpers.setCollapsed(true, true)<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; layoutHelpers.setCollapsed(true, true)</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Attach material ripple</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Attach material ripple</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; if (!firstLoad &amp;&amp; attachMaterialRipple &amp;&amp; <span class="TextSegSigDiff">doc</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">documentElement</span>.<span class="TextSegSigDiff">c</span>la<span class="TextSegSigDiff">ssList</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">contain</span>s('material-style')) {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; if (!firstLoad &amp;&amp; attachMaterialRipple &amp;&amp; <span class="TextSegSigDiff">$</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'ht</span><span class="TextSegSigDiff">m</span><span class="TextSegSigDiff">l'</span><span class="TextSegSigDiff">)</span>.<span class="TextSegSigDiff">hasC</span>la<span class="TextSegSigDiff">s</span>s('material-style')) {</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; attachMaterialRipple()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; attachMaterialRipple()</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Initialize sidenav</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Initialize sidenav</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemInsigMod">&nbsp;&nbsp;&nbsp; $('#layout-sidenav').each(function() {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp;&nbsp; $('#layout-sidenav').each(function<span class="TextSegInsigDiff"> </span>() {</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; sidenav = new <span class="TextSegSigDiff">win</span><span class="TextSegSigDiff">.</span>SideNav(this, {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; sidenav<span class="TextSegSigDiff">Instance</span> = new SideNav(this, {</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">orientation</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">$</span><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">hasClass</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'sidenav-horizontal'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">?</span> <span class="TextSegElementString">'horizontal'</span> <span class="TextSegElementOperator">:</span> <span class="TextSegElementString">'vertical'</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">orientation</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">$</span><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">hasClass</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'sidenav-horizontal'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">?</span> <span class="TextSegElementString">'horizontal'</span> <span class="TextSegElementOperator">:</span> <span class="TextSegElementString">'vertical'</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; })<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; })</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; })<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; })</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Initialize sidenav togglers</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Initialize sidenav togglers</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; $('body').on('click', '.layout-sidenav-toggle', <span class="TextSegSigDiff">function</span><span class="TextSegSigDiff">(</span>e<span class="TextSegSigDiff">)</span> {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; $('body').on('click', '.layout-sidenav-toggle', e<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span> {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; e.preventDefault()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; e.preventDefault()</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; layoutHelpers.toggleCollapsed()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; layoutHelpers.toggleCollapsed()</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; })<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; })</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Swap dropdown menus in RTL mode</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Swap dropdown menus in RTL mode</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">$</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'html'</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">attr</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'dir'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'rtl'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">$</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'html'</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">attr</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'dir'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'rtl'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; $('#layout-navbar .dropdown-menu').toggleClass('dropdown-menu-right')<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; $('#layout-navbar .dropdown-menu').toggleClass('dropdown-menu-right')</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; })<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; })</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; doc.addEventListener('turbolinks:visit', <span class="TextSegSigDiff">function</span>() {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; doc.addEventListener('turbolinks:visit', ()<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span> {</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; firstLoad = false<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; firstLoad = false</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Clean up layoutHelpers</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Clean up layoutHelpers</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; layoutHelpers.destroy()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; layoutHelpers.destroy()</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Clean up material ripple</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Clean up material ripple</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">detachMaterialRipple</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">detachMaterialRipple</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; detachMaterialRipple()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; detachMaterialRipple()</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Destroy sidenav</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Destroy sidenav</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; if (sidenav) {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; if (sidenav<span class="TextSegSigDiff">Instance</span>) {</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; sidenav.destroy()<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;&nbsp; sidenav<span class="TextSegSigDiff">Instance</span>.destroy()</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Remove sidenav toggler listeners</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Remove sidenav toggler listeners</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; $('body').off('click', '.layout-sidenav-toggle')<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; $('body').off('click', '.layout-sidenav-toggle')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp; })<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; })</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">})(window, document, jQuery)<span class="TextSegSigDiff">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">})(window, document, jQuery)</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

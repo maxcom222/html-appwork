@@ -1,0 +1,135 @@
+@import "../../node_modules/toastr/toastr.scss";
+
+#toast-container > div {
+  opacity: 1;
+  width: 20em !important;
+  padding: 15px 15px 15px 50px !important;
+
+  [dir=rtl] & {
+    background-position: center right .9375rem;
+    padding: 15px 50px 15px 15px !important;
+  }
+}
+
+.toast-progress {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  height: .1875rem;
+  opacity: .15;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15);
+      filter: alpha(opacity=15);
+
+  [dir=rtl] & {
+    right: 0;
+    left: auto;
+  }
+}
+
+.toast-close-button {
+  position: absolute;
+  top: 0;
+  color: inherit !important;
+  text-shadow: none;
+  right: .25rem !important;
+
+  [dir=rtl] & {
+    right: auto !important;
+    left: .25rem !important;
+  }
+}
+
+#toast-container > .toast {
+  background-size: 28px;
+  background-repeat: no-repeat;
+}
+#toast-container > .toast-info {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512'%3E%3Cpath fill='%23FFFFFF' d='M256 90c44.3 0 86 17.3 117.4 48.6C404.7 170 422 211.7 422 256s-17.3 86-48.6 117.4C342 404.7 300.3 422 256 422s-86-17.3-117.4-48.6C107.3 342 90 300.3 90 256s17.3-86 48.6-117.4C170 107.3 211.7 90 256 90m0-42C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48z'/%3E%3Cpath fill='%23FFFFFF' d='M277 360h-42V235h42v125zm0-166h-42v-42h42v42z'/%3E%3C/svg%3E") !important;
+}
+#toast-container > .toast-error {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512'%3E%3Cpath fill='%23FFFFFF' d='M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z'/%3E%3C/svg%3E") !important;
+}
+#toast-container > .toast-success {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512'%3E%3Cpath fill='%23FFFFFF' d='M186.301 339.893L96 249.461l-32 30.507L186.301 402 448 140.506 416 110z'/%3E%3C/svg%3E") !important;
+}
+[dir=rtl] #toast-container > .toast-success {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512'%3E%3Cpath fill='%23FFFFFF' d='M96 110l-32 30.5L325.7 402L448 280l-32-30.5l-90.3 90.4L96 110z'/%3E%3C/svg%3E") !important;
+}
+#toast-container > .toast-warning {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512'%3E%3Cpath fill='%23665720' d='M32 464h448L256 48 32 464zm248-64h-48v-48h48v48zm0-80h-48v-96h48v96z'/%3E%3C/svg%3E") !important;
+  background-size: 25px;
+}
+
+.default-style {
+  @import "../../css/_appwork/include";
+
+  #toast-container {
+    z-index: $zindex-notification;
+
+    > div {
+      border-radius: $border-radius;
+      box-shadow: $modal-content-box-shadow-xs !important;
+    }
+
+    .toast-close-button {
+      font-weight: $close-font-weight;
+    }
+
+    > .toast-success {
+      background-color: map-get($theme-colors, success);
+      color: yiq(map-get($theme-colors, success));
+    }
+
+    > .toast-error {
+      background-color: map-get($theme-colors, danger);
+      color: yiq(map-get($theme-colors, danger));
+    }
+
+    > .toast-info {
+      background-color: map-get($theme-colors, info);
+      color: yiq(map-get($theme-colors, info));
+    }
+
+    > .toast-warning {
+      background-color: map-get($theme-colors, warning);
+      color: yiq(map-get($theme-colors, warning));
+    }
+  }
+}
+
+.material-style {
+  @import "../../css/_appwork/include-material";
+
+  #toast-container {
+    z-index: $zindex-notification;
+
+    > div {
+      border-radius: $border-radius;
+      box-shadow: $modal-content-box-shadow-xs !important;
+    }
+
+    .toast-close-button {
+      font-weight: $close-font-weight;
+    }
+
+    > .toast-success {
+      background-color: map-get($theme-colors, success);
+      color: yiq(map-get($theme-colors, success));
+    }
+
+    > .toast-error {
+      background-color: map-get($theme-colors, danger);
+      color: yiq(map-get($theme-colors, danger));
+    }
+
+    > .toast-info {
+      background-color: map-get($theme-colors, info);
+      color: yiq(map-get($theme-colors, info));
+    }
+
+    > .toast-warning {
+      background-color: map-get($theme-colors, warning);
+      color: yiq(map-get($theme-colors, warning));
+    }
+  }
+}

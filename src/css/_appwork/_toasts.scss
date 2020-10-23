@@ -1,0 +1,18 @@
+// Toasts
+//
+
+.toast.bs4-toast {
+  background-color: $toast-background-color;
+  background-clip: padding-box;
+}
+
+.bs4-toast[class^="bg-"],
+.bs4-toast[class*=" bg-"] {
+  border: none;
+}
+
+@each $color, $value in $theme-colors {
+  @if $color != primary {
+    @include appwork-toast-variant('.bg-#{$color}', $value);
+  }
+}

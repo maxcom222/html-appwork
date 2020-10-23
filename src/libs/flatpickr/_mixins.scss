@@ -1,0 +1,69 @@
+@import "../../css/_appwork/functions";
+
+@mixin flatpickr-theme($background, $color: null) {
+  $color: if($color, $color, yiq($background));
+  $in-range-bg: rgba-to-hex(rgba($background, .15), #fff);
+  $in-range-color: yiq($in-range-bg);
+
+  .flatpickr-calendar .numInputWrapper span {
+    &.arrowUp:after {
+      border-bottom-color: $color;
+    }
+
+    &.arrowDown:after {
+      border-top-color: $color;
+    }
+  }
+
+  .flatpickr-month,
+  span.flatpickr-weekday {
+    background: $background;
+    color: $color;
+    fill: $color;
+  }
+
+  .flatpickr-weekdays {
+    background: $background;
+  }
+
+  .flatpickr-day {
+    &.today {
+      border-color: $background;
+    }
+
+    &.inRange,
+    &.prevMonthDay.inRange,
+    &.nextMonthDay.inRange,
+    &.today.inRange,
+    &.prevMonthDay.today.inRange,
+    &.nextMonthDay.today.inRange {
+      border-color: $in-range-bg !important;
+      background: $in-range-bg !important;
+      color: $in-range-color !important;
+    }
+
+    &.selected,
+    &.startRange,
+    &.endRange,
+    &.selected.inRange,
+    &.startRange.inRange,
+    &.endRange.inRange,
+    &.selected:focus,
+    &.startRange:focus,
+    &.endRange:focus,
+    &.selected:hover,
+    &.startRange:hover,
+    &.endRange:hover,
+    &.selected.prevMonthDay,
+    &.startRange.prevMonthDay,
+    &.endRange.prevMonthDay,
+    &.selected.nextMonthDay,
+    &.startRange.nextMonthDay,
+    &.endRange.nextMonthDay,
+    &.week.selected {
+      border-color: $background !important;
+      background: $background !important;
+      color: $color !important;
+    }
+  }
+}

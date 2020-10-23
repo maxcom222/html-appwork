@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+$shepherd-container-width: 400px !default;
+$shepherd-content-padding-x: 1.25rem !default;
+$shepherd-content-padding-y: 1.25rem !default;
+$shepherd-header-padding-x: 1.25rem !default;
+$shepherd-header-padding-y: 1rem !default;
+
+.shepherd.tippy-popper .tippy-arrow {
+  transform: none !important;
+}
+
+.shepherd.tippy-popper .tippy-tooltip {
+  max-height: 100%;
+  max-width: 100%;
+  padding: 0;
+  width: $shepherd-container-width;
+  color: inherit;
+  text-align: left;
+  font-size: inherit !important;
+
+  [dir=rtl] & {
+    text-align: right;
+  }
+}
+
+.shepherd-element .shepherd-header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  .shepherd-cancel-icon,
+  .shepherd-title {
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .shepherd-cancel-icon {
+    margin-left: auto;
+    text-decoration: none;
+    transition: color .5s ease;
+    line-height: 1;
+  }
+
+  .shepherd-title {
+    display: flex;
+    flex: 1 0 auto;
+  }
+}
+
+.shepherd-element .shepherd-footer {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+
+  button {
+    display: inline;
+    margin: 0 .5rem 0 0;
+  }
+
+  button:last-child {
+    margin: 0 !important;
+  }
+
+  [dir=rtl] & {
+    text-align: left;
+    
+    button {
+      margin-right: 0;
+      margin-left: .5rem;
+    }
+  }
+}
+
+.shepherd.tippy-popper .tippy-tooltip div.tippy-content {
+  text-align: left;
+
+  [dir=rtl] & {
+    text-align: right;
+  }
+}
+
+.shepherd-element .shepherd-text p {
+  margin-bottom: 0.75rem;
+
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+.default-style {
+  @import "../../css/_appwork/include";
+
+  $arrow-width: $popover-arrow-width + px-to-rem(2px);
+  $arrow-height: $popover-arrow-height + px-to-rem(1px);
+
+  .shepherd-modal-overlay-container {
+    fill: $modal-backdrop-bg;
+    opacity: $modal-backdrop-opacity;
+    z-index: $zindex-notification !important;
+  }
+
+  .shepherd.tippy-popper {
+    z-index: $zindex-notification + 2 !important;
+
+    .tippy-tooltip {
+      line-height: $line-height-base;
+    }
+
+    &[x-placement^=top] {
+      margin-bottom: $arrow-height;
+
+      .tippy-arrow {
+        border-width: $arrow-height ($arrow-width / 2) 0;
+        border-top-color: $modal-content-bg !important;
+        left: calc(50% - #{$arrow-width / 2}) !important;
+      }
+    }
+
+    &[x-placement^=bottom] {
+      margin-top: $arrow-height;
+      
+      .tippy-arrow {
+        border-width: 0 ($arrow-width / 2) $arrow-height ($arrow-width / 2);
+        border-bottom-color: $modal-content-bg !important;
+        left: calc(50% - #{$arrow-width / 2}) !important;
+      }
+    }
+
+    &[x-placement^=left] {
+      margin-right: $arrow-height;
+      
+      .tippy-arrow {
+        border-width: ($arrow-width / 2) 0 ($arrow-width / 2) $arrow-height;
+        border-left-color: $modal-content-bg !important;
+        top: calc(50% - #{$arrow-width / 2}) !important;
+      }
+    }
+
+    &[x-placement^=right] {
+      margin-left: $arrow-height;
+      
+      .tippy-arrow {
+        border-width: ($arrow-width / 2) $arrow-height ($arrow-width / 2) 0;
+        border-right-color: $modal-content-bg !important;
+        top: calc(50% - #{$arrow-width / 2}) !important;
+      }
+    }
+  }
+
+  .shepherd.tippy-popper .tippy-tooltip {
+    box-shadow: $modal-content-box-shadow-sm-up;
+    background: $modal-content-bg;
+    border-radius: $border-radius;
+  }
+
+  .shepherd-element .shepherd-header {
+    padding: $shepherd-header-padding-y $shepherd-header-padding-x 0 $shepherd-header-padding-x;
+
+    .shepherd-title {
+      font-size: $h5-font-size;
+      font-weight: $font-weight-semibold;
+    }
+
+    .shepherd-cancel-icon {
+      color: $close-color;
+      font-size: $close-font-size;
+      font-weight: $close-font-weight;
+      opacity: .5;
+
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+
+  .shepherd-element .shepherd-text {
+    padding: $shepherd-content-padding-y $shepherd-content-padding-x;
+  }
+
+  .shepherd-element .shepherd-footer {
+    padding: 0 $shepherd-header-padding-x $shepherd-header-padding-y $shepherd-header-padding-x;
+  }
+}
+
+.material-style {
+  @import "../../css/_appwork/include-material";
+
+  $arrow-width: $popover-arrow-width + px-to-rem(2px);
+  $arrow-height: $popover-arrow-height + px-to-rem(1px);
+
+  .shepherd-modal-overlay-container {
+    fill: $modal-backdrop-bg;
+    opacity: $modal-backdrop-opacity;
+    z-index: $zindex-notification !important;
+  }
+
+  .shepherd.tippy-popper {
+    z-index: $zindex-notification + 2 !important;
+
+    .tippy-tooltip {
+      line-height: $line-height-base;
+    }
+
+    &[x-placement^=top] {
+      margin-bottom: $arrow-height;
+
+      .tippy-arrow {
+        border-width: $arrow-height ($arrow-width / 2) 0;
+        border-top-color: $modal-content-bg !important;
+        left: calc(50% - #{$arrow-width / 2}) !important;
+      }
+    }
+
+    &[x-placement^=bottom] {
+      margin-top: $arrow-height;
+
+      .tippy-arrow {
+        border-width: 0 ($arrow-width / 2) $arrow-height ($arrow-width / 2);
+        border-bottom-color: $modal-content-bg !important;
+        left: calc(50% - #{$arrow-width / 2}) !important;
+      }
+    }
+
+    &[x-placement^=left] {
+      margin-right: $arrow-height;
+
+      .tippy-arrow {
+        border-width: ($arrow-width / 2) 0 ($arrow-width / 2) $arrow-height;
+        border-left-color: $modal-content-bg !important;
+        top: calc(50% - #{$arrow-width / 2}) !important;
+      }
+    }
+
+    &[x-placement^=right] {
+      margin-left: $arrow-height;
+
+      .tippy-arrow {
+        border-width: ($arrow-width / 2) $arrow-height ($arrow-width / 2) 0;
+        border-right-color: $modal-content-bg !important;
+        top: calc(50% - #{$arrow-width / 2}) !important;
+      }
+    }
+  }
+
+  .shepherd.tippy-popper .tippy-tooltip {
+    box-shadow: $modal-content-box-shadow-sm-up;
+    background: $modal-content-bg;
+    border-radius: $border-radius;
+  }
+
+  .shepherd-element .shepherd-header {
+    padding: $shepherd-header-padding-y $shepherd-header-padding-x 0 $shepherd-header-padding-x;
+
+    .shepherd-title {
+      font-size: $h5-font-size;
+      font-weight: $font-weight-semibold;
+    }
+
+    .shepherd-cancel-icon {
+      color: $close-color;
+      font-size: $close-font-size;
+      font-weight: $close-font-weight;
+      opacity: .5;
+
+      &:hover {
+        opacity: .75;
+      }
+    }
+  }
+
+  .shepherd-element .shepherd-text {
+    padding: $shepherd-content-padding-y $shepherd-content-padding-x;
+  }
+
+  .shepherd-element .shepherd-footer {
+    padding: 0 $shepherd-header-padding-x $shepherd-header-padding-y $shepherd-header-padding-x;
+  }
+}

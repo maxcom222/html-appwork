@@ -1,0 +1,42 @@
+.account-settings-fileinput {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.account-settings-links .list-group-item.active {
+  background: transparent !important;
+  font-weight: bold !important;
+}
+
+.account-settings-multiselect ~ .select2-container {
+  width: 100% !important;
+}
+
+.default-style {
+  @import "../_appwork/include";
+
+  .account-settings-links .list-group-item {
+    padding: .85rem $card-spacer-x;
+    border-color: $gray-50 !important;
+
+    &.active {
+      color: $body-color !important;
+    }
+  }
+}
+
+.material-style {
+  @import "../_appwork/include-material";
+
+  .account-settings-links .list-group-item {
+    padding: .85rem $card-spacer-x;
+    border-color: $gray-50 !important;
+
+    &.active {
+      color: $body-color !important;
+    }
+  }
+}

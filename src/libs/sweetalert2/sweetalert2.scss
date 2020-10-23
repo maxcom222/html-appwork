@@ -1,0 +1,312 @@
+@import '../../css/_custom-variables/libs';
+@import '../../node_modules/sweetalert2/src/sweetalert2';
+
+.swal2-modal.swal2-popup {
+  .swal2-title {
+    margin: 1.875rem 0 1rem 0;
+  }
+
+  .swal2-content {
+    margin: 0 0 1rem 0;
+  }
+
+  .swal2-actions {
+    margin-top: 1rem;
+
+    .btn {
+      align-items: center;
+    }
+  }
+
+  .swal2-actions button+button {
+    margin-left: .375rem;
+
+    [dir=rtl] & {
+      margin-right: .375rem;
+      margin-left: 0;
+    }
+  }
+
+  .swal2-input,
+  .swal2-file,
+  .swal2-textarea,
+  .swal2-select,
+  .swal2-radio,
+  .swal2-checkbox {
+    margin: 1.875rem 0;
+  }
+
+  .swal2-input,
+  .swal2-file,
+  .swal2-textarea {
+    box-shadow: none !important;
+  }
+
+  .swal2-checkbox input,
+  .swal2-radio input {
+    margin-right: .375rem;
+
+    [dir=rtl] & {
+      margin-right: 0;
+      margin-left: .375rem;
+    }
+  }
+
+  .swal2-icon {
+    margin-bottom: 0;
+
+    [dir=rtl] & {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+// IE fix 10-11
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+
+  .swal2-modal:not([style="display: none;"]),
+    .swal2-icon:not([style="display: none;"]),
+    .swal2-actions:not([style="display: none;"]),
+    .swal2-image:not([style="display: none;"]),
+    .swal2-input:not([style="display: none;"]),
+    .swal2-file:not([style="display: none;"]),
+    .swal2-range:not([style="display: none;"]),
+    .swal2-select:not([style="display: none;"]),
+    .swal2-radio:not([style="display: none;"]),
+    .swal2-checkbox:not([style="display: none;"]),
+    .swal2-textarea:not([style="display: none;"]),
+    .swal2-footer:not([style="display: none;"]) {
+    display: flex;
+  }
+}
+
+[dir="rtl"] {
+  .swal2-actions.swal2-loading :not(.swal2-styled).swal2-confirm::after {
+    margin-right: .3125rem;
+    margin-left: 0;
+  }
+
+  .swal2-close {
+    right: auto;
+    left: .5rem;
+  }
+
+  .swal2-range input {
+    float: right;
+  }
+
+  .swal2-range output {
+    float: left;
+  }
+
+  .swal2-radio label:not(:first-child) {
+    margin-right: 1.25rem;
+    margin-left: 0;
+  }
+
+  .swal2-validationerror::before {
+    margin-right: 0;
+    margin-left: .625rem;
+  }
+}
+
+.default-style {
+  @import "../../css/_appwork/include";
+
+  .swal2-container {
+    z-index: $zindex-modal-top;
+
+    .popover {
+      z-index: $zindex-modal-top + 1;
+    }
+
+    .tooltip {
+      z-index: $zindex-modal-top + 2;
+    }
+  }
+
+  .swal2-container.swal2-shown {
+    background: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
+  }
+
+  .swal2-modal.swal2-popup {
+    box-shadow: $modal-content-box-shadow-xs;
+    font-family: $font-family-base;
+
+    @include border-radius($border-radius);
+  }
+
+  .swal2-popup .swal2-title {
+    color: $body-color;
+    font-weight: $headings-font-weight;
+    font-size: $h2-font-size;
+  }
+
+  .swal2-popup .swal2-content {
+    color: $text-muted;
+    font-weight: $lead-font-weight;
+    font-size: $lead-font-size;
+    line-height: $line-height-base;
+  }
+
+  .swal2-popup .swal2-input,
+  .swal2-popup .swal2-file,
+  .swal2-popup .swal2-textarea {
+    border: $input-border-width solid $input-border-color !important;
+    color: $body-color;
+    font-size: $font-size-lg;
+
+    @include border-radius($border-radius-lg);
+  }
+
+  .swal2-popup .swal2-validationerror {
+    background: $gray-100;
+    color: $body-color;
+  }
+
+  //  Colors
+
+  .swal2-popup .swal2-icon.swal2-success {
+    border-color: map-get($theme-colors, success);
+
+    .swal2-success-ring {
+      border-color: rgba(map-get($theme-colors, success), .2);
+    }
+
+    [class^='swal2-success-line'] {
+      background-color: map-get($theme-colors, success);
+    }
+  }
+
+  .swal2-popup .swal2-icon.swal2-question {
+    border-color: rgba(map-get($theme-colors, secondary), .4);
+    color: map-get($theme-colors, secondary);
+  }
+
+  .swal2-popup .swal2-icon.swal2-info {
+    border-color: rgba(map-get($theme-colors, info), .4);
+    color: map-get($theme-colors, info);
+  }
+
+  .swal2-popup .swal2-icon.swal2-warning {
+    border-color: rgba(map-get($theme-colors, warning), .8);
+    color: map-get($theme-colors, warning);
+  }
+
+  .swal2-popup .swal2-icon.swal2-error {
+    border-color: rgba(map-get($theme-colors, danger), .6);
+
+    [class^='swal2-x-mark-line'] {
+      border-color: map-get($theme-colors, danger);
+    }
+  }
+}
+
+.swal2-popup .swal2-actions.swal2-loading :not(.swal2-styled).swal2-confirm::after {
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin-left: .5em;
+  border: .15em solid currentColor;
+  border-right-color: transparent;
+  box-shadow: none;
+
+  [dir=rtl] & {
+    margin-left: 0;
+    margin-right: .5em;
+  }
+}
+
+.material-style {
+  @import "../../css/_appwork/include-material";
+
+  .swal2-container {
+    z-index: $zindex-modal-top;
+
+    .popover {
+      z-index: $zindex-modal-top + 1;
+    }
+
+    .tooltip {
+      z-index: $zindex-modal-top + 2;
+    }
+  }
+
+  .swal2-container.swal2-shown {
+    background: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
+  }
+
+  .swal2-modal.swal2-popup {
+    border-radius: 0;
+    box-shadow: $modal-content-box-shadow-xs;
+    font-family: $font-family-base;
+  }
+
+  .swal2-popup .swal2-title {
+    color: $body-color;
+    font-weight: $headings-font-weight;
+    font-size: $h2-font-size;
+  }
+
+  .swal2-popup .swal2-content {
+    color: $text-muted;
+    font-weight: $lead-font-weight;
+    font-size: $lead-font-size;
+    line-height: $line-height-base;
+  }
+
+  .swal2-popup .swal2-input,
+  .swal2-popup .swal2-file,
+  .swal2-popup .swal2-textarea {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid $input-border-color !important;
+    border-radius: 0;
+    color: $body-color;
+    font-size: $font-size-lg;
+  }
+
+  .swal2-popup .swal2-validationerror {
+    background: $gray-100;
+    color: $body-color;
+  }
+
+  //  Colors
+
+  .swal2-popup .swal2-icon.swal2-success {
+    border-color: map-get($theme-colors, success);
+
+    .swal2-success-ring {
+      border-color: rgba(map-get($theme-colors, success), .2);
+    }
+
+    [class^='swal2-success-line'] {
+      background-color: map-get($theme-colors, success);
+    }
+  }
+
+  .swal2-popup .swal2-icon.swal2-question {
+    border-color: rgba(map-get($theme-colors, secondary), .4);
+    color: map-get($theme-colors, secondary);
+  }
+
+  .swal2-popup .swal2-icon.swal2-info {
+    border-color: rgba(map-get($theme-colors, info), .4);
+    color: map-get($theme-colors, info);
+  }
+
+  .swal2-popup .swal2-icon.swal2-warning {
+    border-color: rgba(map-get($theme-colors, warning), .8);
+    color: map-get($theme-colors, warning);
+  }
+
+  .swal2-popup .swal2-icon.swal2-error {
+    border-color: rgba(map-get($theme-colors, danger), .6);
+
+    [class^='swal2-x-mark-line'] {
+      border-color: map-get($theme-colors, danger);
+    }
+  }
+}

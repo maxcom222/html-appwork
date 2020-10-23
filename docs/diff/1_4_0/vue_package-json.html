@@ -1,0 +1,905 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/vue-starter/package.json &nbsp;
+<br/>
+Right file: appwork-v1_4_0/vue-starter/package.json &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame">{</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">{</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &quot;name&quot;: &quot;appwork-vue-starter&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;name&quot;: &quot;appwork-vue-starter&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; &quot;version&quot;: &quot;1.<span class="TextSegSigDiff">3.1</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; &quot;version&quot;: &quot;1.<span class="TextSegSigDiff">4.0</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; &quot;private&quot;: true,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; &quot;private&quot;: true,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &quot;scripts&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;scripts&quot;: {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;start&quot;: &quot;npm run serve&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;start&quot;: &quot;npm run serve&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;serve&quot;: &quot;vue-cli-service serve&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;serve&quot;: &quot;vue-cli-service serve&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;build&quot;: &quot;vue-cli-service build&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;build&quot;: &quot;vue-cli-service build&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;lint&quot;: &quot;vue-cli-service lint&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;lint&quot;: &quot;vue-cli-service lint&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;test:unit&quot;: &quot;vue-cli-service test:unit&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;test:unit&quot;: &quot;vue-cli-service test:unit&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;test:e2e&quot;: &quot;vue-cli-service test:e2e&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;test:e2e&quot;: &quot;vue-cli-service test:e2e&quot;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &quot;dependencies&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;dependencies&quot;: {</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;axios&quot;: &quot;~0.1<span class="TextSegSigDiff">8</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;axios&quot;: &quot;~0.1<span class="TextSegSigDiff">9</span>.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap&quot;: &quot;~4.3.1&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap&quot;: &quot;~4.3.1&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;bootstrap-vue&quot;: &quot;2.0.<span class="TextSegSigDiff">0-rc.16</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;bootstrap-vue&quot;: &quot;2.0.<span class="TextSegSigDiff">4</span>&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;c3&quot;: &quot;^0.<span class="TextSegSigDiff">6.7</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;c3&quot;: &quot;^0.<span class="TextSegSigDiff">7.10</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;chart.js&quot;: &quot;~2.8.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;chart.js&quot;: &quot;~2.8.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;echarts&quot;: &quot;^4.2.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;echarts&quot;: &quot;^4.2.1&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;idle-vue&quot;: &quot;~2.0.5&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;idle-vue&quot;: &quot;~2.0.5&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ladda&quot;: &quot;~2.0.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ladda&quot;: &quot;~2.0.1&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;moment&quot;: &quot;~2.24.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;moment&quot;: &quot;~2.24.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;nouislider&quot;: &quot;~1<span class="TextSegSigDiff">3.1.4</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;nouislider&quot;: &quot;~1<span class="TextSegSigDiff">4.0.2</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;numeral&quot;: &quot;~2.0.6&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;numeral&quot;: &quot;~2.0.6&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;perfect-scrollbar&quot;: &quot;~1.4.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;perfect-scrollbar&quot;: &quot;~1.4.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;plyr&quot;: &quot;~2.0.18&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;plyr&quot;: &quot;~2.0.18&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;simplemde&quot;: &quot;~1.11.2&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;simplemde&quot;: &quot;~1.11.2&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;spinkit&quot;: &quot;~1.2.5&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;spinkit&quot;: &quot;~1.2.5&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;sweet-modal-vue&quot;: &quot;~2.0.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;sweet-modal-vue&quot;: &quot;~2.0.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;text-mask-addons&quot;: &quot;~3.8.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;text-mask-addons&quot;: &quot;~3.8.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;v-img&quot;: &quot;~0.2.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;v-img&quot;: &quot;~0.2.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue&quot;: &quot;~2.6.6&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue&quot;: &quot;~2.6.6&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-awesome-swiper&quot;: &quot;~3.1.3&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-awesome-swiper&quot;: &quot;~3.1.3&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-blockui&quot;: &quot;~1.1.6&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-blockui&quot;: &quot;~1.1.6&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-c3&quot;: &quot;~1.2.9&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-c3&quot;: &quot;~1.2.9&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-chartjs&quot;: &quot;~3.4.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-chartjs&quot;: &quot;~3.4.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-clipboard2&quot;: &quot;~0.3.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-clipboard2&quot;: &quot;~0.3.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-color&quot;: &quot;~2.7.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-color&quot;: &quot;~2.7.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-context-menu&quot;: &quot;~2.0.6&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-context-menu&quot;: &quot;~2.0.6&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-cropper&quot;: &quot;~0.4.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-cropper&quot;: &quot;~0.4.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-dragula&quot;: &quot;~1.3.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-dragula&quot;: &quot;~1.3.1&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-echarts&quot;: &quot;~4.0.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-echarts&quot;: &quot;~4.0.1&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-flatpickr-component&quot;: &quot;~8.1.2&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-flatpickr-component&quot;: &quot;~8.1.2&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-form-wizard&quot;: &quot;~0.8.4&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-form-wizard&quot;: &quot;~0.8.4&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-gallery&quot;: &quot;~2.0.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-gallery&quot;: &quot;~2.0.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-input-tag&quot;: &quot;~2.0.5&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-input-tag&quot;: &quot;~2.0.5&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-jstree&quot;: &quot;~2.1.6&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-jstree&quot;: &quot;~2.1.6&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-masonry&quot;: &quot;~0.11.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-masonry&quot;: &quot;~0.11.1&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue-meta&quot;: &quot;~<span class="TextSegSigDiff">1.6.0</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue-meta&quot;: &quot;~<span class="TextSegSigDiff">2.3.1</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-multiselect&quot;: &quot;~2.1.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-multiselect&quot;: &quot;~2.1.0&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-notification&quot;: &quot;~1.3.7&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-notification&quot;: &quot;~1.3.7&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue-number-input-spinner&quot;: &quot;~2.<span class="TextSegSigDiff">1</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue-number-input-spinner&quot;: &quot;~2.<span class="TextSegSigDiff">2</span>.0&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue-password-strength-meter&quot;: &quot;~1.<span class="TextSegSigDiff">4.2</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue-password-strength-meter&quot;: &quot;~1.<span class="TextSegSigDiff">5.0</span>&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-quill-editor&quot;: &quot;~3.0.5&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-quill-editor&quot;: &quot;~3.0.5&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue-router&quot;: &quot;~3.<span class="TextSegSigDiff">0.1</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue-router&quot;: &quot;~3.<span class="TextSegSigDiff">1.3</span>&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-simple-calendar&quot;: &quot;~4.2.1&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-simple-calendar&quot;: &quot;~4.2.1&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue-simplemde&quot;: &quot;~0.<span class="TextSegSigDiff">5.1</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue-simplemde&quot;: &quot;~<span class="TextSegSigDiff">1.</span>0.<span class="TextSegSigDiff">0</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-slider-component&quot;: &quot;~3.0.16&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-slider-component&quot;: &quot;~3.0.16&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-tables-2&quot;: &quot;~1.4.50&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-tables-2&quot;: &quot;~1.4.50&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-text-mask&quot;: &quot;~6.1.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-text-mask&quot;: &quot;~6.1.1&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-toasted&quot;: &quot;~1.1.24&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-toasted&quot;: &quot;~1.1.24&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-typeahead&quot;: &quot;~2.3.2&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-typeahead&quot;: &quot;~2.3.2&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-upload-component&quot;: &quot;~2.8.3&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-upload-component&quot;: &quot;~2.8.3&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue2-dropzone&quot;: &quot;3.<span class="TextSegSigDiff">5.2</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vue2-dropzone&quot;: &quot;<span class="TextSegSigDiff">~</span>3.<span class="TextSegSigDiff">4.0</span>&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue2-google-maps&quot;: &quot;~0.10.2&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue2-google-maps&quot;: &quot;~0.10.2&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vuedraggable&quot;: &quot;2.2<span class="TextSegSigDiff">0.0</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vuedraggable&quot;: &quot;2.2<span class="TextSegSigDiff">3.2</span>&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vuejs-datepicker&quot;: &quot;~1.<span class="TextSegSigDiff">5.3</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;vuejs-datepicker&quot;: &quot;~1.<span class="TextSegSigDiff">6.2</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vuetrend&quot;: &quot;~0.3.2&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vuetrend&quot;: &quot;~0.3.2&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;zxcvbn&quot;: &quot;~4.4.2&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;zxcvbn&quot;: &quot;~4.4.2&quot;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &quot;devDependencies&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;devDependencies&quot;: {</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@vue/cli-plugin-babel&quot;: &quot;^<span class="TextSegSigDiff">3.5</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@vue/cli-plugin-babel&quot;: &quot;^<span class="TextSegSigDiff">4.0</span>.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@vue/cli-plugin-eslint&quot;: &quot;^<span class="TextSegSigDiff">3.5</span>.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@vue/cli-plugin-eslint&quot;: &quot;^<span class="TextSegSigDiff">4.0</span>.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@vue/cli-plugin-router&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^4.0.0&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@vue/cli-service&quot;: &quot;^<span class="TextSegSigDiff">3.5</span>.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@vue/cli-service&quot;: &quot;^<span class="TextSegSigDiff">4.0</span>.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@vue/eslint-config-standard&quot;: &quot;^4.0.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@vue/eslint-config-standard&quot;: &quot;^4.0.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;babel-core&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;7.0.0-bridge.0&quot;,</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;babel-eslint&quot;: &quot;^10.0.1&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;babel-eslint&quot;: &quot;^10.0.1&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;core-js&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^3.3.3&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;eslint&quot;: &quot;^5.1<span class="TextSegSigDiff">6.0</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;eslint&quot;: &quot;^<span class="TextSegSigDiff">6.</span>5.1&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;eslint-plugin-vue&quot;: &quot;^5.0.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;eslint-plugin-vue&quot;: &quot;^5.0.0&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;html-webpack-exclude-assets-plugin&quot;: &quot;^0.0.7&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;html-webpack-exclude-assets-plugin&quot;: &quot;^0.0.7&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;node-sass&quot;: &quot;~4.1<span class="TextSegSigDiff">1</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;node-sass&quot;: &quot;~4.1<span class="TextSegSigDiff">2</span>.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;rename-webpack-plugin&quot;: &quot;^2.0.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;rename-webpack-plugin&quot;: &quot;^2.0.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;sass-loader&quot;: &quot;^<span class="TextSegSigDiff">7.1</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;sass-loader&quot;: &quot;^<span class="TextSegSigDiff">8.0</span>.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;suppress-chunks-webpack-plugin&quot;: &quot;^1.0.5&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;suppress-chunks-webpack-plugin&quot;: &quot;^1.0.5&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-template-compiler&quot;: &quot;~2.6.6&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vue-template-compiler&quot;: &quot;~2.6.6&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@vue/cli-plugin-e2e-nightwatch&quot;: &quot;^<span class="TextSegSigDiff">3.5</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@vue/cli-plugin-e2e-nightwatch&quot;: &quot;^<span class="TextSegSigDiff">4.0</span>.0&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@vue/cli-plugin-unit-jest&quot;: &quot;^<span class="TextSegSigDiff">3.5</span>.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@vue/cli-plugin-unit-jest&quot;: &quot;^<span class="TextSegSigDiff">4.0</span>.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@vue/test-utils&quot;: &quot;1.0.0-beta.29&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@vue/test-utils&quot;: &quot;1.0.0-beta.29&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;chromedriver&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;77&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;<span class="TextSegSigDiff">babel-j</span><span class="TextSegSigDiff">est</span>&quot;: &quot;^<span class="TextSegSigDiff">23.</span>6.<span class="TextSegSigDiff">0</span>&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;<span class="TextSegSigDiff">g</span><span class="TextSegSigDiff">eckodriver</span>&quot;: &quot;^<span class="TextSegSigDiff">1</span><span class="TextSegSigDiff">.1</span>6.<span class="TextSegSigDiff">2</span>&quot;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &quot;resolutions&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;resolutions&quot;: {</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;sass-loader/node-sass&quot;: &quot;~4.1<span class="TextSegSigDiff">1</span>.0&quot;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;sass-loader/node-sass&quot;: &quot;~4.1<span class="TextSegSigDiff">2</span>.0&quot;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &quot;eslintConfig&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;eslintConfig&quot;: {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;root&quot;: true,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;root&quot;: true,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;env&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;env&quot;: {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &quot;node&quot;: true</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &quot;node&quot;: true</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; },</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;extends&quot;: [</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;extends&quot;: [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &quot;plugin:vue/essential&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &quot;plugin:vue/essential&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &quot;@vue/standard&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &quot;@vue/standard&quot;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; ],</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; ],</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;rules&quot;: {},</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;rules&quot;: {},</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;parserOptions&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;parserOptions&quot;: {</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &quot;parser&quot;: &quot;babel-eslint&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &quot;parser&quot;: &quot;babel-eslint&quot;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;overrides&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;files&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;**/__tests__/*.{j,t}s?(x)&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;**/tests/unit/**/*.spec.{j,t}s?(x)&quot;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">],</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;env&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;jest&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">true</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;&nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span>}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">]</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &quot;eslintIgnore&quot;: [</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;eslintIgnore&quot;: [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;/dist/&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;/dist/&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;/*.js&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;/*.js&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;/tests/unit/coverage/&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;/tests/unit/coverage/&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;src/vendor/libs/**/*.js&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;src/vendor/libs/**/*.js&quot;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; ],</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; ],</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &quot;postcss&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;postcss&quot;: {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;plugins&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;plugins&quot;: {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &quot;autoprefixer&quot;: {}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; &quot;autoprefixer&quot;: {}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &quot;browserslist&quot;: [</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;browserslist&quot;: [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;&gt;= 1%&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;&gt;= 1%&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;last 2 versions&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;last 2 versions&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;not dead&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;not dead&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Chrome &gt;= 45&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Chrome &gt;= 45&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Firefox &gt;= 38&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Firefox &gt;= 38&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Edge &gt;= 12&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Edge &gt;= 12&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Explorer &gt;= 10&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Explorer &gt;= 10&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;iOS &gt;= 9&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;iOS &gt;= 9&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Safari &gt;= 9&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Safari &gt;= 9&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Android &gt;= 4.4&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Android &gt;= 4.4&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Opera &gt;= 30&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;Opera &gt;= 30&quot;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; ],</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; ],</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &quot;jest&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;jest&quot;: {</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;moduleFileExtensions&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;js&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;jsx&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;json&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;vue&quot;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">],</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;transform&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;^.+\\.vue$&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;vue-jest&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;jest-transform-stub&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;^.+\\.jsx?$&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;babel-jest&quot;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">},</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;transformIgnorePatterns&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;/node_modules/&quot;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">],</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;moduleNameMapper&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;^@/(.*)$&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;&lt;rootDir&gt;/src/$1&quot;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">},</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;snapshotSerializers&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp;<span class="TextSegInsigDiff">&nbsp; </span>&quot;<span class="TextSegSigDiff">j</span>es<span class="TextSegSigDiff">t-s</span><span class="TextSegSigDiff">er</span><span class="TextSegSigDiff">ia</span><span class="TextSegSigDiff">l</span><span class="TextSegSigDiff">izer-vu</span><span class="TextSegSigDiff">e</span>&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;<span class="TextSegSigDiff">pr</span>es<span class="TextSegSigDiff">et&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;@vue/cli-plugin</span><span class="TextSegSigDiff">-</span><span class="TextSegSigDiff">unit-jest</span>&quot;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">],</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;testMatch&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)&quot;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">],</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;testURL&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;http://localhost/&quot;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

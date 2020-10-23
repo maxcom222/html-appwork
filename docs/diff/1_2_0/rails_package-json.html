@@ -1,0 +1,283 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_1_0/rails-starter/package.json &nbsp;
+<br/>
+Right file: appwork-v1_2_0/rails-starter/package.json &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">{</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">{</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame">&nbsp; &quot;name&quot;: &quot;appwork-rails-starter&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame">&nbsp; &quot;name&quot;: &quot;appwork-rails-starter&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSigMod">&nbsp; &quot;version&quot;: &quot;1.<span class="TextSegSigDiff">1</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSigMod">&nbsp; &quot;version&quot;: &quot;1.<span class="TextSegSigDiff">2</span>.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame">&nbsp; &quot;private&quot;: true,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame">&nbsp; &quot;private&quot;: true,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame">&nbsp; &quot;dependencies&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame">&nbsp; &quot;dependencies&quot;: {</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@claviska/jquery-minicolors&quot;: &quot;~2.2<span class="TextSegSigDiff">.6</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@claviska/jquery-minicolors&quot;: &quot;~2.<span class="TextSegSigDiff">3.</span>2&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;animate.css&quot;: &quot;~3.<span class="TextSegSigDiff">6.1</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;animate.css&quot;: &quot;~3.<span class="TextSegSigDiff">7.0</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;blueimp-gallery&quot;: &quot;~2.33.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;blueimp-gallery&quot;: &quot;~2.33.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap&quot;: &quot;~4.1.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap&quot;: &quot;~4.1.1&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-duallistbox&quot;: &quot;~3.0.6&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-duallistbox&quot;: &quot;~3.0.6&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-markdown&quot;: &quot;~2.10.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-markdown&quot;: &quot;~2.10.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-multiselect&quot;: &quot;~0.9.13-1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-multiselect&quot;: &quot;~0.9.13-1&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-select&quot;: &quot;~1.13.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-select&quot;: &quot;~1.13.1&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;bootstrap-slider&quot;: &quot;~10.<span class="TextSegSigDiff">0</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;bootstrap-slider&quot;: &quot;~10.<span class="TextSegSigDiff">2</span>.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-sortable&quot;: &quot;git+https://github.com/drvic10k/bootstrap-sortable.git&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-sortable&quot;: &quot;git+https://github.com/drvic10k/bootstrap-sortable.git&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-table&quot;: &quot;~1.12.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-table&quot;: &quot;~1.12.1&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-tour&quot;: &quot;git+https://github.com/sorich87/bootstrap-tour.git#master&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap-tour&quot;: &quot;git+https://github.com/sorich87/bootstrap-tour.git#master&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;chartist&quot;: &quot;~0.11.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;chartist&quot;: &quot;~0.11.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;cropper&quot;: &quot;~4.0.0-beta&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;cropper&quot;: &quot;~4.0.0-beta&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;datatables.net-bs4&quot;: &quot;~1.10.16&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;datatables.net-bs4&quot;: &quot;~1.10.16&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;dragula&quot;: &quot;~3.7.2&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;dragula&quot;: &quot;~3.7.2&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;jquery.growl&quot;: &quot;~1.3.5&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;jquery.growl&quot;: &quot;~1.3.5&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;jstree&quot;: &quot;~3.3.5&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;jstree&quot;: &quot;~3.3.5&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ladda&quot;: &quot;~2.0.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ladda&quot;: &quot;~2.0.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;perfect-scrollbar&quot;: &quot;~1.4.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;perfect-scrollbar&quot;: &quot;~1.4.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;photoswipe&quot;: &quot;~4.1.2&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;photoswipe&quot;: &quot;~4.1.2&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;plyr&quot;: &quot;~2.0.18&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;plyr&quot;: &quot;~2.0.18&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;select2&quot;: &quot;~4.0.6-rc.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;select2&quot;: &quot;~4.0.6-rc.1&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;spinkit&quot;: &quot;~1.2.5&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;spinkit&quot;: &quot;~1.2.5&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;swiper&quot;: &quot;~4.<span class="TextSegSigDiff">3.3</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;swiper&quot;: &quot;~4.<span class="TextSegSigDiff">4.1</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;toastr&quot;: &quot;~2.1.4&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;toastr&quot;: &quot;~2.1.4&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vegas&quot;: &quot;~2.4.0&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;vegas&quot;: &quot;~2.4.0&quot;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame">}</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

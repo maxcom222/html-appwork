@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style">
+<head>
+  <title>Portfolio - Appwork</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css">
+
+  <script src="assets/vendor/js/material-ripple.js"></script>
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Theme settings -->
+  <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
+  <script src="assets/vendor/js/theme-settings.js"></script>
+  <script>
+    window.themeSettings = new ThemeSettings({
+      cssPath: 'assets/vendor/css/rtl/',
+      themesPath: 'assets/vendor/css/rtl/'
+    });
+  </script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/js/pace.js"></script>
+
+  <!-- Page -->
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="assets/vendor/libs/swiper/swiper.css">
+</head>
+
+
+<body>
+  <!-- Pace.js loader -->
+  <div id="portfolio-page-loader" style="background-image: linear-gradient(to right, #000, #000);">
+    <div class="page-loader border-white"></div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="portfolio-navbar">
+    <div class="portfolio-navbar-inner px-4 px-md-5">
+      <div class="font-weight-bold">PORTFOLIO.</div>
+      <a href="#" class="portfolio-navbar-menu-toggle"><span></span></a>
+    </div>
+    <ul class="portfolio-navbar-menu">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">PORTFOLIO</a></li>
+      <li><a href="#">SERVICE</a></li>
+      <li><a href="#">BLOG</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+  </div>
+  <!-- / Navbar -->
+
+  <!-- Slider -->
+  <div id="portfolio-slider" class="swiper-container">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="portfolio-image" style="background-image: url(assets/img/bg/22.jpg);"></div>
+        <div class="slider-content align-items-end p-5">
+          <div class="font-secondary m-md-5 active">
+            <div class="portfolio-caption text-white font-weight-semibold">ESCAPE<br>THE ORDINARY</div>
+            <a href="#" class="portfolio-link text-primary font-weight-bold mt-4">TAKE A LOOK</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="portfolio-image" style="background-image: url(assets/img/bg/23.jpg);"></div>
+        <div class="slider-content align-items-end p-5">
+          <div class="font-secondary m-md-5">
+            <div class="portfolio-caption text-white font-weight-semibold">KNOW<br>YOURSELF,<br>KNOW YOUR<br>WORTH</div>
+            <a href="#" class="portfolio-link text-primary font-weight-bold mt-4">TAKE A LOOK</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="portfolio-image" style="background-image: url(assets/img/bg/24.jpg);"></div>
+        <div class="slider-content align-items-end p-5">
+          <div class="font-secondary m-md-5">
+            <div class="portfolio-caption text-white font-weight-semibold">YOU ONLY<br>LIVE ONCE</div>
+            <a href="#" class="portfolio-link text-primary font-weight-bold mt-4">TAKE A LOOK</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="portfolio-image" style="background-image: url(assets/img/bg/26.jpg);"></div>
+        <div class="slider-content align-items-end p-5">
+          <div class="font-secondary m-md-5">
+            <div class="portfolio-caption text-white font-weight-semibold">INVEST<br>THE NOW<br>IN TOMORROW'S<br>DREAM</div>
+            <a href="#" class="portfolio-link text-primary font-weight-bold mt-4">TAKE A LOOK</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="portfolio-image" style="background-image: url(assets/img/bg/25.jpg);"></div>
+        <div class="slider-content align-items-end p-5">
+          <div class="font-secondary m-md-5">
+            <div class="portfolio-caption text-white font-weight-semibold">IT ALWAYS SEEMS<br>IMPOSSIBLE UNTIL<br>IT'S DONE</div>
+            <a href="#" class="portfolio-link text-primary font-weight-bold mt-4">TAKE A LOOK</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a href="#" class="portfolio-slider-nav swiper-button-prev custom-icon font-secondary text-tiny">
+      <span class="d-inline-block bg-dark text-white p-2"><i class="ion ion-md-arrow-back scaleX--1-rtl"></i> <span class="d-none d-md-inline font-weight-semibold">PREV</span></span>
+    </a>
+    <a href="#" class="portfolio-slider-nav swiper-button-next custom-icon font-secondary text-tiny">
+      <span class="d-inline-block bg-dark text-white p-2"><span class="d-none d-md-inline font-weight-semibold">NEXT</span> <i class="ion ion-md-arrow-forward scaleX--1-rtl"></i></span>
+    </a>
+  </div>
+  <!-- / Slider -->
+
+  <div class="portfolio-block">
+
+    <!-- About -->
+    <div class="container portfolio-block-padding-b px-3">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-sm-10 col-md-7 col-lg-5 col-xl-4 mb-5 mb-lg-0">
+          <img src="assets/img/pages/portfolio-avatar.png" alt class="img-fluid mx-auto">
+        </div>
+        <div class="col-12 col-lg pl-lg-5">
+          <h1 class="mb-2">
+            Hello. I'm Duncan.
+          </h1>
+          <div class="text-muted text-big mb-4">
+            Photographer & Illustrator From Berlin, I Like To Capture The Perfect
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue nibh justo, non ultricies diam consequat eget. Mauris placerat blandit nunc vehicula vehicula.
+          </p>
+          <p class="mb-0">
+            Integer quis feugiat ipsum. Proin et dictum nibh. Cras vitae consectetur lacus. Nunc sit amet dignissim metus, eget tristique nisi. Vestibulum at pulvinar ligula.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- / About -->
+
+    <hr class="m-0">
+
+    <!-- Skills -->
+    <div class="container portfolio-block-padding-t px-3">
+      <h4 class="font-secondary text-center font-weight-semibold m-0">SKILLS</h4>
+
+      <div class="row">
+        <div class="col-md-6 px-md-5 mt-5">
+          <div class="small mb-2">
+            <div class="float-right">90%</div>
+            PHOTOGRAPHY
+          </div>
+          <div class="progress rounded-0" style="height: 4px;">
+            <div class="progress-bar bg-dark" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="col-md-6 px-md-5 mt-5">
+          <div class="small mb-2">
+            <div class="float-right">75%</div>
+            VIDEO
+          </div>
+          <div class="progress rounded-0" style="height: 4px;">
+            <div class="progress-bar bg-dark" style="width: 75%"></div>
+          </div>
+        </div>
+        <div class="col-md-6 px-md-5 mt-5">
+          <div class="small mb-2">
+            <div class="float-right">86%</div>
+            BRANDING
+          </div>
+          <div class="progress rounded-0" style="height: 4px;">
+            <div class="progress-bar bg-dark" style="width: 86%"></div>
+          </div>
+        </div>
+        <div class="col-md-6 px-md-5 mt-5">
+          <div class="small mb-2">
+            <div class="float-right">80%</div>
+            COMMINUCATION
+          </div>
+          <div class="progress rounded-0" style="height: 4px;">
+            <div class="progress-bar bg-dark" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="col-md-6 px-md-5 mt-5">
+          <div class="small mb-2">
+            <div class="float-right">100%</div>
+            LIFE JOYING
+          </div>
+          <div class="progress rounded-0" style="height: 4px;">
+            <div class="progress-bar bg-dark" style="width: 100%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / Skills -->
+
+  </div>
+
+  <!-- Works -->
+  <div class="portfolio-block portfolio-block-padding bg-lighter">
+    <div class="container px-3">
+      <h2 class="font-secondary text-center font-weight-semibold mb-4">MY WORKS</h2>
+
+      <ul id="portfolio-filter" class="nav nav-tabs tabs-alt justify-content-center align-items-center border-0 mb-5">
+        <li class="nav-item">
+          <a class="nav-link small px-0 pb-1 mx-3 active" href="#all">ALL</a>
+        </li>
+        <li class="text-light text-tiny">/</li>
+        <li class="nav-item">
+          <a class="nav-link small px-0 pb-1 mx-3" href="#branding">BRANDING</a>
+        </li>
+        <li class="text-light text-tiny">/</li>
+        <li class="nav-item">
+          <a class="nav-link small px-0 pb-1 mx-3" href="#photography">PHOTOGRAPHY</a>
+        </li>
+        <li class="text-light text-tiny">/</li>
+        <li class="nav-item">
+          <a class="nav-link small px-0 pb-1 mx-3" href="#video">VIDEO</a>
+        </li>
+      </ul>
+
+      <div id="portfolio-thumbnails" class="row">
+        <!-- Add this element to properly relayout grid -->
+        <div class="portfolio-thumbnails-sizer col-sm-6 col-lg-4 position-absolute mb-4"></div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="branding">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">BRANDING</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/1.jpg)"></span>
+          </a>
+        </div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="video">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">VIDEO</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/2.jpg)"></span>
+          </a>
+        </div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="photography">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">PHOTOGRAPHY</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/3.jpg)"></span>
+          </a>
+        </div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="photography">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">PHOTOGRAPHY</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/4.jpg)"></span>
+          </a>
+        </div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="video">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">VIDEO</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/5.jpg)"></span>
+          </a>
+        </div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="branding">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">BRANDING</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/6.jpg)"></span>
+          </a>
+        </div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="photography">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">PHOTOGRAPHY</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/7.jpg)"></span>
+          </a>
+        </div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="branding">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">BRANDING</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/8.jpg)"></span>
+          </a>
+        </div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="video">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">VIDEO</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/9.jpg)"></span>
+          </a>
+        </div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="photography">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">PHOTOGRAPHY</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/10.jpg)"></span>
+          </a>
+        </div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="branding">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">BRANDING</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/11.jpg)"></span>
+          </a>
+        </div>
+
+        <div class="portfolio-thumbnails-item col-sm-6 col-lg-4 mb-4" data-tag="photography">
+          <a href="#" class="portfolio-thumbnail img-thumbnail">
+            <span class="img-thumbnail-overlay bg-dark opacity-75"></span>
+            <span class="img-thumbnail-content d-flex flex-column justify-content-between text-white p-4">
+              <span class="d-block">
+                <span class="d-block text-tiny opacity-75">PHOTOGRAPHY</span>
+                <span class="text-large">Project caption</span>
+              </span>
+              <span class="d-block text-tiny">
+                22 SEP 2017
+              </span>
+            </span>
+            <span class="portfolio-thumbnail-img ui-square ui-bg-cover" style="background-image: url(assets/img/bg/12.jpg)"></span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <button type="button" class="btn btn-primary btn-lg rounded-0 font-weight-semibold">MORE WORKS</button>
+    </div>
+  </div>
+  <!-- / Works -->
+
+  <!-- Services -->
+  <div class="portfolio-block">
+    <div class="container px-3">
+      <h2 class="font-secondary text-center font-weight-semibold m-0">WHAT I DO</h2>
+
+      <div class="row portfolio-block-padding-b text-center">
+
+        <div class="portfolio-block-padding-t col-md-4">
+          <div class="display-3 text-muted mx-auto mb-4">
+            <span class="lnr lnr-camera"></span>
+          </div>
+          <h5 class="font-weight-bold">PHOTOGRAPHY</h5>
+          <div class="ui-company-text text-muted">
+            Lorem ipsum dolor sit amet, ius virtute suscipit te. Ius prima euismod consequat eu, cu quo alii scriptorem
+          </div>
+        </div>
+
+        <div class="portfolio-block-padding-t col-md-4">
+          <div class="display-3 text-muted mx-auto mb-4">
+            <span class="lnr lnr-film-play"></span>
+          </div>
+          <h5 class="font-weight-bold">VIDEO</h5>
+          <div class="ui-company-text text-muted">
+            Etiam vivendo eu sea, purto ponderum mediocritatem at pro. Ex tantas invenire dissentiunt mea.
+          </div>
+        </div>
+
+        <div class="portfolio-block-padding-t col-md-4">
+          <div class="display-3 text-muted mx-auto mb-4">
+            <span class="lnr lnr-shirt"></span>
+          </div>
+          <h5 class="font-weight-bold">BRANDING</h5>
+          <div class="ui-company-text text-muted">
+            Iuvaret deleniti vulputate nec ne, id vix lucilius legendos deseruisse, harum honestatis cum te.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Reviews -->
+    <div class="portfolio-block-padding bg-lighter">
+
+      <div class="col-md-10 col-lg-8 col-xl-7 position-relative px-5 mx-auto">
+        <div class="swiper-container w-auto text-center mx-3" id="portfolio-reviews-slider">
+          <div class="swiper-wrapper align-items-stretch">
+
+            <div class="swiper-slide h-auto">
+              <img src="assets/img/avatars/4-small.png" class="ui-w-80 rounded-circle" alt>
+              <div class="ui-customer-review my-3">
+                Lorem ipsum dolor sit amet, mel ea molestie erroribus consequuntur, munere iracundia percipitur ne usu, his saperet tractatos no.
+              </div>
+              <strong class="font-weight-semibold">Kenneth Frazier</strong>
+              <br>
+              <a href="#" class="text-muted small">example.com</a>
+            </div>
+
+            <div class="swiper-slide h-auto">
+              <img src="assets/img/avatars/5-small.png" class="ui-w-80 rounded-circle" alt>
+              <div class="ui-customer-review my-3">
+                Te nusquam erroribus mei, sensibus vulputate posidonium nam an, ad illud illum vel.
+              </div>
+              <strong class="font-weight-semibold">Nelle Maxwell</strong>
+              <br>
+              <a href="#" class="text-muted small">xyz.com</a>
+            </div>
+
+            <div class="swiper-slide h-auto">
+              <img src="assets/img/avatars/7-small.png" class="ui-w-80 rounded-circle" alt>
+              <div class="ui-customer-review my-3">
+                Mea cu quaeque debitis, ut pro graeco insolens, exerci timeam eos no. Ea eius simul placerat usu, augue delectus nec in.
+              </div>
+              <strong class="font-weight-semibold">Alice Hampton</strong>
+              <br>
+              <a href="#" class="text-muted small">Company Inc.</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="portfolio-reviews-nav swiper-button-next custom-icon">
+          <i class="lnr lnr-chevron-right text-light"></i>
+        </div>
+        <div class="portfolio-reviews-nav swiper-button-prev custom-icon">
+          <i class="lnr lnr-chevron-left text-light"></i>
+        </div>
+      </div>
+
+    </div>
+    <!-- / Reviews -->
+
+  </div>
+  <!-- / Services -->
+
+  <!-- Latest blog posts -->
+  <div class="portfolio-block">
+    <div class="container px-3">
+      <h2 class="font-secondary text-center font-weight-semibold m-0">LATEST FROM THE BLOG</h2>
+
+      <div class="row portfolio-block-padding-t">
+        <div class="col-md-6 col-lg-4 mb-5">
+
+          <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover" style="background-image: url('assets/img/bg/1.jpg');"></a>
+          <div class="border-top-0 ui-bordered p-4">
+            <div class="text-muted text-tiny mb-3">May 21, 2018</div>
+            <h4 class="text-big">
+              <a href="#" class="text-body">Using Banner Stands To Increase Trade Show Traffic</a>
+            </h4>
+            <div class="text-muted small">
+              Curabitur pulvinar felis auctor lectus tincidunt iaculis. Vivamus aliquam elementum libero.
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-sm rounded-0 font-weight-semibold mt-4">READ</button>
+          </div>
+
+        </div>
+        <div class="col-md-6 col-lg-4 mb-5">
+
+          <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover" style="background-image: url('assets/img/bg/2.jpg');"></a>
+          <div class="border-top-0 ui-bordered p-4">
+            <div class="text-muted text-tiny mb-3">Mar 4, 2018</div>
+            <h4 class="text-big">
+              <a href="#" class="text-body">What Is The Big R For Marketing Your Business</a>
+            </h4>
+            <div class="text-muted small">
+              Curabitur pulvinar felis auctor lectus tincidunt iaculis. Vivamus aliquam elementum libero.
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-sm rounded-0 font-weight-semibold mt-4">READ</button>
+          </div>
+
+        </div>
+        <div class="col-md-6 col-lg-4 mb-5">
+
+          <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover" style="background-image: url('assets/img/bg/3.jpg');"></a>
+          <div class="border-top-0 ui-bordered p-4">
+            <div class="text-muted text-tiny mb-3">Feb 26, 2018</div>
+            <h4 class="text-big">
+              <a href="#" class="text-body">A Good Autoresponder</a>
+            </h4>
+            <div class="text-muted small">
+              Curabitur pulvinar felis auctor lectus tincidunt iaculis. Vivamus aliquam elementum libero.
+            </div>
+            <button type="button" class="btn btn-outline-primary btn-sm rounded-0 font-weight-semibold mt-4">READ</button>
+          </div>
+
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="button" class="btn btn-primary btn-lg rounded-0 font-weight-semibold">MORE BLOG POSTS</button>
+      </div>
+    </div>
+  </div>
+  <!-- / Latest blog posts -->
+
+  <!-- Contact form -->
+  <div class="bg-white clearfix">
+    <hr class="m-0">
+
+    <div class="portfolio-block container px-3">
+      <h2 class="font-secondary text-center font-weight-semibold m-0">GET IN TOUCH</h2>
+
+      <form class="portfolio-block-padding-t col-lg-8 px-0 mx-auto">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label class="small font-weight-semibold">YOUR NAME</label>
+            <input type="text" class="portfolio-form-control form-control form-control-lg rounded-0">
+          </div>
+          <div class="form-group col-md-6">
+            <label class="small font-weight-semibold">E-MAIL</label>
+            <input type="email" class="portfolio-form-control form-control form-control-lg rounded-0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="small font-weight-semibold">MESSAGE</label>
+          <textarea rows="6" class="portfolio-form-control form-control form-control-lg rounded-0"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg rounded-0 font-weight-semibold">SEND A MESSAGE</button>
+      </form>
+
+    </div>
+    <hr class="m-0">
+  </div>
+  <!-- / Contact form -->
+
+  <!-- Footer -->
+  <nav class="footer footer-light small">
+    <div class="container d-flex flex-wrap justify-content-between text-center px-3 pb-4">
+
+      <div class="flex-shrink-1">
+        <a href="#" class="footer-link pt-4">HOME</a>
+        <a href="#" class="footer-link pt-4 ml-4">ABOUT</a>
+        <a href="#" class="footer-link pt-4 ml-4">PORTFOLIO</a>
+        <a href="#" class="footer-link pt-4 ml-4">SERVICE</a>
+        <a href="#" class="footer-link pt-4 ml-4">BLOG</a>
+        <a href="#" class="footer-link pt-4 ml-4">CONTACT</a>
+      </div>
+
+      <div class="pt-4">
+        <a href="#" class="footer-text font-weight-bold">PORTFOLIO.</a> ©
+      </div>
+    </div>
+  </nav>
+  <!-- / Footer -->
+
+  <!-- Core scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Add this code as early as you can -->
+  <script>
+    $('#portfolio-page-loader').one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
+
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+
+  <!-- Libs -->
+  <script src="assets/vendor/libs/swiper/swiper.js"></script>
+  <script src="assets/vendor/libs/masonry/masonry.js"></script>
+
+  <!-- Page -->
+  <script src="assets/js/portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+.TextSegElementKeyword { font-weight: bold; }
+.TextSegElementIdentifier { }
+.TextSegElementString { color: #3A7726; }
+.TextSegElementComment { color: #786A41; }
+.TextSegElementOperator { }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/laravel-vue-starter/resources/assets/src/entry-point.js &nbsp;
+<br/>
+Right file: appwork-v1_4_0/laravel-vue-starter/resources/assets/src/entry-point.js &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementComment">// Polyfills</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// Polyfills</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.array.fill'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.array.fill'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.array.iterator'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.array.iterator'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'core-js/modules/es6.array.find'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'core-js/modules/es6.array.from'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.object.assign'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.object.assign'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.object.keys'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.object.keys'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.promise'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.promise'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.string.includes'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.string.includes'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'core-js/modules/es6.string.starts-with'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.symbol'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es6.symbol'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">require</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">'core-js/modules/es6.set'</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es7.array.includes'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es7.array.includes'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es7.object.entries'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es7.object.entries'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es7.promise.finally'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es7.promise.finally'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es7.symbol.async-iterator'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'core-js/modules/es7.symbol.async-iterator'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* We'll load the axios HTTP library which allows us to easily issue requests</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* We'll load the axios HTTP library which allows us to easily issue requests</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* to our Laravel back-end. This library automatically handles sending the</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* to our Laravel back-end. This library automatically handles sending the</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* CSRF token as a header based on the value of the &quot;XSRF&quot; token cookie.</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* CSRF token as a header based on the value of the &quot;XSRF&quot; token cookie.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">axios</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'axios'</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">axios</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'axios'</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">axios</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">defaults</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">headers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">common</span><span class="TextSegElementOperator">[</span><span class="TextSegElementString">'X-Requested-With'</span><span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementString">'XMLHttpRequest'</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">axios</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">defaults</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">headers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">common</span><span class="TextSegElementOperator">[</span><span class="TextSegElementString">'X-Requested-With'</span><span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementString">'XMLHttpRequest'</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* Next we will register the CSRF Token as a common header with Axios so that</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* Next we will register the CSRF Token as a common header with Axios so that</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* all outgoing HTTP requests automatically have it attached. This is just</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* all outgoing HTTP requests automatically have it attached. This is just</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* a simple convenience so we don't have to attach every token manually.</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* a simple convenience so we don't have to attach every token manually.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">let</span> <span class="TextSegElementIdentifier">token</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">head</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">querySelector</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'meta[name=&quot;csrf-token&quot;]'</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">let</span> <span class="TextSegElementIdentifier">token</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">head</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">querySelector</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'meta[name=&quot;csrf-token&quot;]'</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">token</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">token</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">axios</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">defaults</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">headers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">common</span><span class="TextSegElementOperator">[</span><span class="TextSegElementString">'X-CSRF-TOKEN'</span><span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">token</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">content</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">axios</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">defaults</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">headers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">common</span><span class="TextSegElementOperator">[</span><span class="TextSegElementString">'X-CSRF-TOKEN'</span><span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">token</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">content</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span> <span class="TextSegElementKeyword">else</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span> <span class="TextSegElementKeyword">else</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">console</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">error</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token'</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">console</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">error</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token'</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* Echo exposes an expressive API for subscribing to channels and listening</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* Echo exposes an expressive API for subscribing to channels and listening</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* for events that are broadcast by Laravel. Echo and event broadcasting</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* for events that are broadcast by Laravel. Echo and event broadcasting</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* allows your team to easily build robust real-time web applications.</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* allows your team to easily build robust real-time web applications.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// import Echo from 'laravel-echo'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// import Echo from 'laravel-echo'</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// window.Pusher = require('pusher-js');</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// window.Pusher = require('pusher-js');</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// window.Echo = new Echo({</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// window.Echo = new Echo({</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">//&nbsp; &nbsp;&nbsp; broadcaster: 'pusher',</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">//&nbsp; &nbsp;&nbsp; broadcaster: 'pusher',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">//&nbsp; &nbsp;&nbsp; key: process.env.MIX_PUSHER_APP_KEY,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">//&nbsp; &nbsp;&nbsp; key: process.env.MIX_PUSHER_APP_KEY,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">//&nbsp; &nbsp;&nbsp; cluster: process.env.MIX_PUSHER_APP_CLUSTER,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">//&nbsp; &nbsp;&nbsp; cluster: process.env.MIX_PUSHER_APP_CLUSTER,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">//&nbsp; &nbsp;&nbsp; encrypted: true</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">//&nbsp; &nbsp;&nbsp; encrypted: true</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// });</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// });</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* Load Vue.js app</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* Load Vue.js app</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'./main.js'</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'./main.js'</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

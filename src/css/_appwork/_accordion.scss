@@ -1,0 +1,39 @@
+// Accordions
+//
+
+.collapse-icon {
+  position: relative;
+  display: block;
+  align-self: center;
+  width: .875rem;
+  height: .875rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    margin-top: -.25rem;
+    margin-left: -.25rem;
+    width: .5rem;
+    height: .5rem;
+    border-bottom: .0625rem solid $gray-400;
+    border-left: .0625rem solid $gray-400;
+    transition: all .3s;
+    transform: rotate(-45deg);
+
+    [aria-expanded="true"] & {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.accordion > .card {
+  border-radius: $border-radius !important;
+  border: $border-width solid $border-color !important;
+
+  .card-header:last-child {
+    border-bottom: 0;
+  }
+}

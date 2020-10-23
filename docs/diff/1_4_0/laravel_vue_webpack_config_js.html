@@ -1,0 +1,365 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+.TextSegElementKeyword { font-weight: bold; }
+.TextSegElementIdentifier { }
+.TextSegElementString { color: #3A7726; }
+.TextSegElementComment { color: #786A41; }
+.TextSegElementOperator { }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/laravel-vue-starter/webpack.config.js &nbsp;
+<br/>
+Right file: appwork-v1_4_0/laravel-vue-starter/webpack.config.js &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* As our first step, we'll pull in the user's webpack.mix.js</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* As our first step, we'll pull in the user's webpack.mix.js</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* file. Based on what the user requests in that file,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* file. Based on what the user requests in that file,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* a generic config object will be constructed for us.</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* a generic config object will be constructed for us.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">let</span> <span class="TextSegElementIdentifier">mix</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'laravel-mix/src/index'</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">let</span> <span class="TextSegElementIdentifier">mix</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'laravel-mix/src/index'</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">let</span> <span class="TextSegElementIdentifier">ComponentFactory</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'laravel-mix/src/components/ComponentFactory'</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">let</span> <span class="TextSegElementIdentifier">ComponentFactory</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'laravel-mix/src/components/ComponentFactory'</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">ComponentFactory</span><span class="TextSegElementOperator">().</span><span class="TextSegElementIdentifier">installAll</span><span class="TextSegElementOperator">();</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">ComponentFactory</span><span class="TextSegElementOperator">().</span><span class="TextSegElementIdentifier">installAll</span><span class="TextSegElementOperator">();</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">Mix</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">paths</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">mix</span><span class="TextSegElementOperator">());</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">Mix</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">paths</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">mix</span><span class="TextSegElementOperator">());</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* Just in case the user needs to hook into this point</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* Just in case the user needs to hook into this point</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* in the build process, we'll make an announcement.</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* in the build process, we'll make an announcement.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">Mix</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">dispatch</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'init'</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">Mix</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">Mix</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">dispatch</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'init'</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">Mix</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">/**</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* Now that we know which build tasks are required by the</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* Now that we know which build tasks are required by the</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* user, we can dynamically create a configuration object</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* user, we can dynamically create a configuration object</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* for Webpack. And that's all there is to it. Simple!</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;* for Webpack. And that's all there is to it. Simple!</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">&nbsp;*/</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">let</span> <span class="TextSegElementIdentifier">WebpackConfig</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'laravel-mix/src/builder/WebpackConfig'</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">let</span> <span class="TextSegElementIdentifier">WebpackConfig</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'laravel-mix/src/builder/WebpackConfig'</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">config</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">WebpackConfig</span><span class="TextSegElementOperator">().</span><span class="TextSegElementIdentifier">build</span><span class="TextSegElementOperator">();</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">config</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">WebpackConfig</span><span class="TextSegElementOperator">().</span><span class="TextSegElementIdentifier">build</span><span class="TextSegElementOperator">();</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// Inject sass-loader options</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// Inject sass-loader options</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">config</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">module</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">rules</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">config</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">module</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">rules</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">filter</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">rule</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">rule</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span> <span class="TextSegElementOperator">&amp;&amp;</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">rule</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'.sass'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">||</span> <span class="TextSegElementIdentifier">rule</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'.scss'</span><span class="TextSegElementOperator">)))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">filter</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">rule</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">rule</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span> <span class="TextSegElementOperator">&amp;&amp;</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">rule</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'.sass'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">||</span> <span class="TextSegElementIdentifier">rule</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">test</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'.scss'</span><span class="TextSegElementOperator">)))</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">forEach</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">rule</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">forEach</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">rule</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">sassLoader</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">rule</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">loaders</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">find</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">loader</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">loader</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">loader</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'sass-loader'</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">sassLoader</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">rule</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">loaders</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">find</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">loader</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">loader</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">loader</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'sass-loader'</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">sassLoader</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">sassLoader</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Object</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">assign</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">sassLoader</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">options</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Object</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">assign</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">sassLoader</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">options</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">precision</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">5</span><span class="TextSegSigDiff">,</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">implementation</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'node-sass'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">implementation</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">require</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'node-sass'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">});</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">});</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// Fix Hot Module Replacement bug</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// Fix Hot Module Replacement bug</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">Mix</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">isUsing</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'hmr'</span><span class="TextSegElementOperator">))</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">Mix</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">isUsing</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'hmr'</span><span class="TextSegElementOperator">))</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// Remove leading '/' from entry keys</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// Remove leading '/' from entry keys</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">config</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">entry</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">Object</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">keys</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">config</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">entry</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">config</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">entry</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">Object</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">keys</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">config</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">entry</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">reduce</span><span class="TextSegElementOperator">((</span><span class="TextSegElementIdentifier">entries</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">entry</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">reduce</span><span class="TextSegElementOperator">((</span><span class="TextSegElementIdentifier">entries</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">entry</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">entries</span><span class="TextSegElementOperator">[</span><span class="TextSegElementIdentifier">entry</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">replace</span><span class="TextSegElementOperator">(/^</span>\<span class="TextSegElementComment">//, '')] = config.entry[entry];</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">entries</span><span class="TextSegElementOperator">[</span><span class="TextSegElementIdentifier">entry</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">replace</span><span class="TextSegElementOperator">(/^</span>\<span class="TextSegElementComment">//, '')] = config.entry[entry];</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">entries</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">entries</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span> <span class="TextSegElementOperator">{});</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span> <span class="TextSegElementOperator">{});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// Remove leading '/' from ExtractTextPlugin instances</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// Remove leading '/' from ExtractTextPlugin instances</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">config</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">plugins</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">config</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">plugins</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">forEach</span><span class="TextSegElementOperator">((</span><span class="TextSegElementIdentifier">plugin</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">forEach</span><span class="TextSegElementOperator">((</span><span class="TextSegElementIdentifier">plugin</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">plugin</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">constructor</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">name</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'ExtractTextPlugin'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">plugin</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">constructor</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">name</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'ExtractTextPlugin'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">plugin</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">filename</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">plugin</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">filename</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">replace</span><span class="TextSegElementOperator">(/^</span>\<span class="TextSegElementComment">//, '');</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">plugin</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">filename</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">plugin</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">filename</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">replace</span><span class="TextSegElementOperator">(/^</span>\<span class="TextSegElementComment">//, '');</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">});</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">module</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">exports</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">config</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">module</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">exports</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">config</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

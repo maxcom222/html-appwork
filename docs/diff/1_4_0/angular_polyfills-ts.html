@@ -1,0 +1,490 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file:  appwork-v1_3_1/angular-starter/src/polyfills.ts &nbsp;
+<br/>
+Right file: appwork-v1_4_0/angular-starter/src/polyfills.ts &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">/*</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">tslint:disable</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">*/</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">/**</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">/**</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* This file includes polyfills needed by Angular and is loaded before the app.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* This file includes polyfills needed by Angular and is loaded before the app.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* You can add your own extra polyfills to this file.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* You can add your own extra polyfills to this file.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* This file is divided into 2 sections:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* This file is divided into 2 sections:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;*&nbsp;&nbsp; 1. Browser polyfills. These are applied before loading ZoneJS and are sorted by browsers.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*&nbsp;&nbsp; 1. Browser polyfills. These are applied before loading ZoneJS and are sorted by browsers.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;*&nbsp;&nbsp; 2. Application imports. Files imported after ZoneJS that should be loaded before your main</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*&nbsp;&nbsp; 2. Application imports. Files imported after ZoneJS that should be loaded before your main</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;*&nbsp; &nbsp; &nbsp; file.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*&nbsp; &nbsp; &nbsp; file.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* The current setup is for so-called &quot;evergreen&quot; browsers; the last versions of browsers that</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* The current setup is for so-called &quot;evergreen&quot; browsers; the last versions of browsers that</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* automatically update themselves. This includes Safari &gt;= 10, Chrome &gt;= 55 (including Opera),</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* automatically update themselves. This includes Safari &gt;= 10, Chrome &gt;= 55 (including Opera),</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* Edge &gt;= 13 on the desktop, and iOS 10 and Chrome on mobile.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* Edge &gt;= 13 on the desktop, and iOS 10 and Chrome on mobile.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;*</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* Learn more in https://angular.io/docs/ts/latest/guide/browser-support.html</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* Learn more in https://angular.io/docs/ts/latest/guide/browser-support.html</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;*/</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*/</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/***************************************************************************************************</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/***************************************************************************************************</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* BROWSER POLYFILLS</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* BROWSER POLYFILLS</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;*/</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*/</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/** IE9, IE10 and IE11 requires all of the following polyfills. **/</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/** IE9, IE10 and IE11 requires all of the following polyfills. **/</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/symbol';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/symbol';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/object';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/object';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/function';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/function';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/parse-int';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/parse-int';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/parse-float';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/parse-float';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/number';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/number';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/math';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/math';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/string';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/string';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/date';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/date';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/array';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/array';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/regexp';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/regexp';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/map';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/map';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/weak-map';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/weak-map';</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">import 'core-js/es6/set';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/set';</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'core-js/es7/array';</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/** IE10 and IE11 requires the following for NgClass support on SVG elements */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/** IE10 and IE11 requires the following for NgClass support on SVG elements */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'classlist.js';&nbsp; // Run `npm install --save classlist.js`.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'classlist.js';&nbsp; // Run `npm install --save classlist.js`.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/** IE10 and IE11 requires the following for the Reflect API. */</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/** IE10 and IE11 requires the following for the Reflect API. */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es6/reflect';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es6/reflect';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/** Evergreen browsers require these. **/</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/** Evergreen browsers require these. **/</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">// Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">// Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es7/reflect';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es7/reflect';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'core-js/es7/array';</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'core-js/es7/array';</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/**</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/**</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* Required to support Web Animations `@angular/platform-browser/animations`.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* Required to support Web Animations `@angular/platform-browser/animations`.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* Needed for: All but Chrome, Firefox and Opera. http://caniuse.com/#feat=web-animation</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* Needed for: All but Chrome, Firefox and Opera. http://caniuse.com/#feat=web-animation</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;**/</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;**/</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'web-animations-js';&nbsp; // Run `npm install --save web-animations-js`.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'web-animations-js';&nbsp; // Run `npm install --save web-animations-js`.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/***************************************************************************************************</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/***************************************************************************************************</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* Zone JS is required by default for Angular itself.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* Zone JS is required by default for Angular itself.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;*/</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*/</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">import 'zone.js/dist/zone';&nbsp; // Included with Angular CLI.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">import 'zone.js/dist/zone';&nbsp; // Included with Angular CLI.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/***************************************************************************************************</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/***************************************************************************************************</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* IE 11 fixes</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* IE 11 fixes</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;*/</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*/</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">if (typeof window !== 'undefined' &amp;&amp; typeof SVGElement !== 'undefined' &amp;&amp; typeof SVGElement.prototype.contains === 'undefined') {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">if (typeof window !== 'undefined' &amp;&amp; typeof SVGElement !== 'undefined' &amp;&amp; typeof SVGElement.prototype.contains === 'undefined') {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; SVGElement.prototype.contains = HTMLDivElement.prototype.contains;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; SVGElement.prototype.contains = HTMLDivElement.prototype.contains;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">if (!!window['MSInputMethodContext'] &amp;&amp; !!document['documentMode'] || document['documentMode'] &lt;= 11) {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">if (!!window['MSInputMethodContext'] &amp;&amp; !!document['documentMode'] || document['documentMode'] &lt;= 11) {</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; window['MouseEvent'] = <span class="TextSegSigDiff">function</span><span class="TextSegInsigDiff"> </span>(eventType, params) {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; window['MouseEvent'] = <span class="TextSegSigDiff">(</span>(eventType, params)<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span> {</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; params = params || { bubbles: false, cancelable: false };</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; params = params || { bubbles: false, cancelable: false };</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; const mouseEvent = document.createEvent('MouseEvent');</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; const mouseEvent = document.createEvent('MouseEvent');</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; mouseEvent.initMouseEvent(eventType, params.bubbles, params.cancelable, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; mouseEvent.initMouseEvent(eventType, params.bubbles, params.cancelable, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return mouseEvent;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; return mouseEvent;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; };</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; }<span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">as</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">any</span>;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp; window['MouseEvent'].prototype = Event.prototype;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; window['MouseEvent'].prototype = Event.prototype<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">as</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">any</span>;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">}</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/***************************************************************************************************</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/***************************************************************************************************</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* Global</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* Global</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;*/</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*/</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">(window as any).global = window;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">(window as any).global = window;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">/***************************************************************************************************</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">/***************************************************************************************************</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;* APPLICATION IMPORTS</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;* APPLICATION IMPORTS</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;*/</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;*/</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

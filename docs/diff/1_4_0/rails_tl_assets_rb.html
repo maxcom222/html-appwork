@@ -1,0 +1,250 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/rails-starter/config/initializers/assets.rb &nbsp;
+<br/>
+Right file: appwork-v1_4_0/rails-turbolinks-starter/config/initializers/assets.rb &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame"># Be sure to restart your server when you modify this file.</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"># Be sure to restart your server when you modify this file.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Version of your assets, change this if you want to expire all your assets.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Version of your assets, change this if you want to expire all your assets.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">Rails.application.config.assets.version = '1.0'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">Rails.application.config.assets.version = '1.0'</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Add</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">vendor</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">paths</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">Rails.application.config.assets.paths</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&lt;&lt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Rails.root.join('vendor',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'assets')</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Precompile</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">core</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">stylesheets</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">Rails.application.config.assets.precompile</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&quot;stylesheets/bootstrap.css&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&quot;stylesheets/appwork.css&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&quot;stylesheets/theme-corporate.css&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&quot;stylesheets/colors.css&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&quot;stylesheets/uikit.css&quot;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">]</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Precompile</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">core</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">javascripts</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">Rails.application.config.assets.precompile</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">['javascripts/*.js']</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Precompile</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">fonts</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">Rails.application.config.assets.precompile</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">['fonts/*']</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Precompile</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">libs</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">lib_files</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Dir[Rails.root.join('vendor',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'assets',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'libs',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'**',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'[^_]*.*')]</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">lib_files.map!</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">|file|</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">file.sub(%r(#{Rails.root.join('vendor',</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'assets/')}),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'')</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">lib_files.map!</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">|file|</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">file.sub(%r(\.(scss)),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'.css')</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">Rails.application.config.assets.precompile</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">lib_files</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Precompile</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">pages</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">Rails.application.config.assets.precompile</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">['stylesheets/pages/*.css']</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame"># Add additional assets to the asset load path.</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"># Add additional assets to the asset load path.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Rails.application.config.assets.paths &lt;&lt; Emoji.images_path</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Rails.application.config.assets.paths &lt;&lt; Emoji.images_path</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Add Yarn node_modules folder to the asset load path.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Add Yarn node_modules folder to the asset load path.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">Rails.application.config.assets.paths &lt;&lt; Rails.root.join('node_modules')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">Rails.application.config.assets.paths &lt;&lt; Rails.root.join('node_modules')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Precompile additional assets.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Precompile additional assets.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># application.js, application.css, and all non-JS/CSS in the app/assets</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># application.js, application.css, and all non-JS/CSS in the app/assets</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># folder are already added.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># folder are already added.</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"># Rails.application.config.assets.precompile += %w( admin.js admin.css )</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Rails.application.config.assets.precompile += %w( admin.js admin.css )</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

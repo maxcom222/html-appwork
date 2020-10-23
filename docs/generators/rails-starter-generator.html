@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style docs-generator-page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Rails Starter Template Generator - Appwork v1.4.0 Docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/bootstrap.css">
+  <link rel="stylesheet" href="../assets/appwork.css">
+  <link rel="stylesheet" href="../assets/theme-corporate.css">
+
+  <link rel="stylesheet" href="../assets/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+</head>
+<body>
+
+<div id="generator-rails">
+    <div class="docs-generator-wrapper">
+      <div class="docs-generator-settings p-4">
+        <gen-select v-model="options.style" :options="styleOptions" class="mb-2"></gen-select>
+        <gen-checkbox v-model="options.materialRipple" :disabled="options.style !== 'material' && !options.settingsPanel" class="mb-2">Material ripple</gen-checkbox>
+        
+        <gen-checkbox v-model="options.paceLoader" class="mb-2">PACE.js loader</gen-checkbox>
+        
+        <gen-checkbox v-model="options.rtlSupport" class="mb-2">RTL support</gen-checkbox>
+        <gen-checkbox v-model="options.rtlMode" :disabled="!options.rtlSupport" class="mb-2">RTL mode</gen-checkbox>
+        <gen-checkbox v-model="options.settingsPanel" class="mb-2">Theme settings panel</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">PAGE LAYOUT</div>
+
+        <gen-select v-model="options.pageLayout" :options="pageLayoutOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">LAYOUT OPTIONS</div>
+
+        <gen-select v-model="options.layoutPosition" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in layoutPositionOptions" :value="option[0]" :disabled="layoutPositionOptionDisabled(option[0])">{{option[1]}}</option>
+        </gen-select>
+        <gen-checkbox v-model="options.fixedNavbar" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">Fixed navbar</gen-checkbox>
+        <gen-checkbox v-model="options.fixedFooter" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">Fixed footer</gen-checkbox>
+        <gen-checkbox v-model="options.reversedLayout" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Reversed</gen-checkbox>
+        <gen-checkbox v-model="options.collapsedSidenav" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Collapsed sidenav</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">THEME</div>
+
+        <gen-select v-model="options.theme" :options="themeOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">NAVBAR BG</div>
+
+        <gen-select v-model="options.navbarBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">
+          <option v-for="option in navbarBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">SIDENAV BG</div>
+
+        <gen-select v-model="options.sidenavBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'blank'">
+          <option v-for="option in sidenavBgOptions" :value="option" :disabled="sidenavBgOptionDisabled(option)">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">FOOTER BG</div>
+
+        <gen-select v-model="options.footerBg" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in footerBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+      </div>
+      <div class="docs-generator-content">
+        <gen-tabs v-on:tabchange="tabChange">
+          <gen-tab title="app/views/layouts/application.html.erb"><pre v-html="tabContent['app/views/layouts/application.html.erb']"></pre></gen-tab>
+<gen-tab title="app/controllers/application_controller.rb"><pre v-html="tabContent['app/controllers/application_controller.rb']"></pre></gen-tab>
+<gen-tab title="app/views/layouts/partials/_layout-navbar.html.erb"><pre v-html="tabContent['app/views/layouts/partials/_layout-navbar.html.erb']"></pre></gen-tab>
+<gen-tab title="app/views/layouts/partials/_layout-sidenav.html.erb"><pre v-html="tabContent['app/views/layouts/partials/_layout-sidenav.html.erb']"></pre></gen-tab>
+<gen-tab title="app/views/layouts/partials/_layout-footer.html.erb"><pre v-html="tabContent['app/views/layouts/partials/_layout-footer.html.erb']"></pre></gen-tab>
+        </gen-tabs>
+      </div>
+    </div>
+
+    <gen-copy-btn :file="curTab" :text="originalContent[curTab]"></gen-copy-btn>
+  </div>
+
+
+  <textarea class="d-none" id="template__application-html">
+
+<!DOCTYPE html>
+
+<html lang="en"{% if rtlMode %} dir="rtl"{% endif %} class="{{style}}-style{% if pageLayout != 'blank' and layoutPosition %} layout-{{layoutPosition}}{% endif %}{% if reversedLayout %} layout-reversed{% endif %}{% if collapsedSidenav %} layout-collapsed{% endif %}{% if fixedNavbar %} layout-navbar-fixed{% endif %}{% if fixedFooter %} layout-footer-fixed{% endif %}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <title><%= @title ? @title + " - " : "" %>Rails Starter</title>
+
+  <!-- Main font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icons. Uncomment required icon fonts -->
+  <!-- <%= stylesheet_pack_tag 'vendor/fonts/fontawesome', media: 'all' %> -->
+  <%= stylesheet_pack_tag 'vendor/fonts/ionicons', media: 'all' %>
+  <!-- <%= stylesheet_pack_tag 'vendor/fonts/linearicons', media: 'all' %> -->
+  <!-- <%= stylesheet_pack_tag 'vendor/fonts/open-iconic', media: 'all' %> -->
+  <!-- <%= stylesheet_pack_tag 'vendor/fonts/pe-icon-7-stroke', media: 'all' %> -->
+
+  <!-- Core stylesheets -->
+  <%= stylesheet_pack_tag 'vendor/{% if rtlSupport %}rtl/{% endif %}bootstrap{% if style == 'material' %}-material{% endif %}', media: 'all'{% if settingsPanel %}, class: 'theme-settings-bootstrap-css'{% endif %} %>
+  <%= stylesheet_pack_tag 'vendor/{% if rtlSupport %}rtl/{% endif %}appwork{% if style == 'material' %}-material{% endif %}', media: 'all'{% if settingsPanel %}, class: 'theme-settings-appwork-css'{% endif %} %>
+  <%= stylesheet_pack_tag 'vendor/{% if rtlSupport %}rtl/{% endif %}theme-{{theme}}{% if style == 'material' %}-material{% endif %}', media: 'all'{% if settingsPanel %}, class: 'theme-settings-theme-css'{% endif %} %>
+  <%= stylesheet_pack_tag 'vendor/{% if rtlSupport %}rtl/{% endif %}colors{% if style == 'material' %}-material{% endif %}', media: 'all'{% if settingsPanel %}, class: 'theme-settings-colors-css'{% endif %} %>
+  <%= stylesheet_pack_tag 'vendor/{% if rtlSupport %}rtl/{% endif %}uikit', media: 'all' %>
+  <%= stylesheet_pack_tag 'application', media: 'all' %>
+
+  <!-- Load polyfills -->
+  <%= javascript_pack_tag 'vendor/polyfills' %>
+  <script>document['documentMode']===10&&document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
+
+  {% if materialRipple %}
+  <!-- Material ripple -->
+  <%= javascript_pack_tag 'vendor/material-ripple' %>
+  <%= stylesheet_pack_tag 'vendor/material-ripple', media: 'all' %>
+  {% endif %}
+  {%- if materialRipple and not settingsPanel -%}
+  <script>window.attachMaterialRippleOnLoad();</script>
+  {% endif %}
+
+  {% if pageLayout != 'blank' or settingsPanel %}
+  <!-- Layout helpers -->
+  <%= javascript_pack_tag 'vendor/layout-helpers' %>
+  {% endif %}
+
+  {% if settingsPanel %}
+  <!-- Theme settings -->
+  <%= javascript_pack_tag 'vendor/theme-settings' %>
+  <%= stylesheet_pack_tag 'vendor/theme-settings', media: 'all' %>
+  <script>
+    // Use settings panel generator to configure the plugin
+    window.themeSettings = new ThemeSettings({
+      cssPath: '',
+      themesPath: '',
+      pathResolver: function(path) {
+        var resolvedPaths = {
+          // Core stylesheets
+        <%- ['bootstrap', 'appwork', 'colors'].each do |name| %>
+          '<%= name %>.css': '<%= asset_pack_path "vendor/{% if rtlSupport %}rtl/{% endif %}#{name}.css" %>',
+          '<%= name %>-material.css': '<%= asset_pack_path "vendor/{% if rtlSupport %}rtl/{% endif %}#{name}-material.css" %>',
+        <% end %>
+
+          // UI Kit
+          'uikit.css': '<%= asset_pack_path "vendor/{% if rtlSupport %}rtl/{% endif %}uikit.css" %>',
+
+          // Themes
+        <%- ['air', 'corporate', 'cotton', 'gradient', 'paper', 'shadow', 'soft', 'sunrise', 'twitlight', 'vibrant'].each do |name| %>
+          'theme-<%= name %>.css': '<%= asset_pack_path "vendor/{% if rtlSupport %}rtl/{% endif %}theme-#{name}.css" %>',
+          'theme-<%= name %>-material.css': '<%= asset_pack_path "vendor/{% if rtlSupport %}rtl/{% endif %}theme-#{name}-material.css" %>',
+        <% end %>
+        };
+
+        return resolvedPaths[path] || path;
+      }
+    });
+  </script>
+  {% endif %}
+
+  {% if paceLoader %}
+  <!-- PACE.js loader -->
+  <%= javascript_pack_tag 'vendor/pace' %>
+  {% endif %}
+
+  {% if pageLayout != 'blank' and pageLayout != 'without-sidenav' %}
+  <!-- Libs -->
+
+  <!-- `perfect-scrollbar` library required by SideNav plugin -->
+  <%= stylesheet_pack_tag 'vendor/libs/perfect-scrollbar/perfect-scrollbar', media: 'all' %>
+  {% endif %}
+
+  <%= yield :styles %>
+</head>
+<body>
+  {% if paceLoader -%}
+  <!-- PACE.js loader -->
+  <div class="page-loader"><div class="bg-primary"></div></div>
+  {% endif %}
+
+  <%= content_for?(:content) ? yield(:content) : yield %>
+
+  <!-- Core scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <%= javascript_pack_tag 'vendor/libs/popper/popper' %>
+  <%= javascript_pack_tag 'vendor/bootstrap' %>
+  {%- if pageLayout != 'blank' and pageLayout != 'without-sidenav' %}
+  <%= javascript_pack_tag 'vendor/sidenav' %>
+  {%- endif %}
+
+  <!-- Scripts -->
+  {%- if pageLayout != 'blank' and pageLayout != 'without-sidenav' %}
+  <%= javascript_pack_tag 'vendor/libs/perfect-scrollbar/perfect-scrollbar' %>
+  {%- endif %}
+  <%= javascript_pack_tag 'application' %>
+
+  <%= yield :scripts %>
+</body>
+</html>
+
+</textarea>
+  <textarea class="d-none" id="template__application_controller-rb">
+
+class ApplicationController < ActionController::Base
+  # Default layout
+  layout 'main/layout-{{pageLayout.replace('layout-', '')}}'
+end
+
+</textarea>
+  <textarea class="d-none" id="template__layout-navbar-html">
+
+<!-- Layout navbar -->
+<nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-{{navbarBg}} container-p-x" id="layout-navbar">
+
+  <!-- Brand -->
+  <%= link_to "Rails Starter", root_path, class: "navbar-brand" %>
+
+  <% if local_assigns[:hide_toggle] != true %>
+  <!-- Sidenav toggle -->
+  <div class="layout-sidenav-toggle navbar-nav align-items-lg-center mr-auto mr-lg-4">
+    <a class="nav-item nav-link px-0 ml-2" href="javascript:void(0)">
+      <i class="ion ion-md-menu text-large align-middle"></i>
+    </a>
+  </div>
+  <% end %>
+
+  <!-- Navbar toggle -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#layout-navbar-collapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse collapse" id="layout-navbar-collapse">
+    <div class="navbar-nav align-items-lg-center">
+      <div class="nav-item"><a class="nav-link" href="#">Link 1</a></div>
+      <div class="nav-item"><a class="nav-link" href="#">Link 2</a></div>
+    </div>
+  </div>
+
+</nav>
+<!-- / Layout navbar -->
+
+</textarea>
+  <textarea class="d-none" id="template__layout-sidenav-html">
+
+<!-- Layout sidenav -->
+<div id="layout-sidenav" class="<% if local_assigns[:horizontal] == true %>layout-sidenav-horizontal sidenav-horizontal container-p-x flex-grow-0<% else %>layout-sidenav sidenav-vertical<% end %> sidenav bg-{{sidenavBg}}">
+
+  <!-- Inner -->
+  <ul class="sidenav-inner<% if local_assigns[:horizontal] != true %> py-1<% end %>">
+
+    <li class="sidenav-item<%= current_page?(root_path) ? ' active' : '' %>">
+      <%= link_to root_path, class: "sidenav-link" do %>
+        <i class="sidenav-icon ion ion-ios-contact"></i><div>Home</div>
+      <% end %>
+    </li>
+
+    <li class="sidenav-item<%= current_page?(page2_path) ? ' active' : '' %>">
+      <%= link_to page2_path, class: "sidenav-link" do %>
+        <i class="sidenav-icon ion ion-md-desktop"></i><div>Page 2</div>
+      <% end %>
+    </li>
+
+  </ul>
+</div>
+<!-- / Layout sidenav -->
+
+</textarea>
+  <textarea class="d-none" id="template__layout-footer-html">
+
+<!-- Layout footer -->
+<nav class="layout-footer footer bg-{{footerBg}}">
+  <div class="container-fluid container-p-x pb-3">
+    <a href="#" class="footer-link pt-3">Link 1</a>
+    <a href="#" class="footer-link pt-3 ml-4">Link 2</a>
+  </div>
+</nav>
+<!-- / Layout footer -->
+
+</textarea>
+
+
+  <!-- Scripts -->
+
+  <script src="../assets/generator.js"></script>
+  <script src="../assets/generator-rails-starter.js"></script>
+
+</body>
+</html>

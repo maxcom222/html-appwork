@@ -1,0 +1,178 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_2_2/aspnet-core-starter/AspnetCoreStarter/AspnetCoreStarter.csproj &nbsp;
+<br/>
+Right file: appwork-v1_3_0/aspnet-core-starter/AspnetCoreStarter/AspnetCoreStarter.csproj &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">&lt;Project Sdk=&quot;Microsoft.NET.Sdk.Web&quot;&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame">&lt;Project Sdk=&quot;Microsoft.NET.Sdk.Web&quot;&gt;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame">&nbsp; &lt;PropertyGroup&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame">&nbsp; &lt;PropertyGroup&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &lt;TargetFramework&gt;netcoreapp2.<span class="TextSegSigDiff">1</span>&lt;/TargetFramework&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &lt;TargetFramework&gt;netcoreapp2.<span class="TextSegSigDiff">2</span>&lt;/TargetFramework&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;AspNetCoreHostingModel&gt;InProcess&lt;/AspNetCoreHostingModel&gt;</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame">&nbsp; &lt;/PropertyGroup&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSame">&nbsp; &lt;/PropertyGroup&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&lt;ItemGroup&gt;</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;PackageReference</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Include=&quot;Microsoft.AspNetCore.All&quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Version=&quot;2.1.5&quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">/&gt;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSigMod">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&lt;/ItemGroup&gt;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame">&nbsp; &lt;ItemGroup&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame">&nbsp; &lt;ItemGroup&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;PackageReference</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Include=&quot;Microsoft.AspNetCore.App&quot;/&gt;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &lt;<span class="TextSegSigDiff">DotN</span><span class="TextSegSigDiff">etCliTool</span>Reference Include=&quot;Microsoft.<span class="TextSegSigDiff">VisualS</span><span class="TextSegSigDiff">tudio.Web.C</span><span class="TextSegSigDiff">o</span><span class="TextSegInsigDiff">de</span><span class="TextSegInsigDiff">G</span><span class="TextSegSigDiff">eneration.Tools</span>&quot; Version=&quot;2.0<span class="TextSegSigDiff">.2</span>&quot; /&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &lt;<span class="TextSegSigDiff">Package</span>Reference Include=&quot;Microsoft.<span class="TextSegSigDiff">A</span><span class="TextSegSigDiff">spNetC</span><span class="TextSegSigDiff">or</span><span class="TextSegSigDiff">e</span><span class="TextSegSigDiff">.Razor.</span><span class="TextSegInsigDiff">De</span><span class="TextSegSigDiff">si</span><span class="TextSegInsigDiff">g</span><span class="TextSegSigDiff">n</span>&quot; Version=&quot;<span class="TextSegSigDiff">2.</span>2.0<span class="TextSegSigDiff">&quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">PrivateAssets=&quot;All</span>&quot; /&gt;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame">&nbsp; &lt;/ItemGroup&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame">&nbsp; &lt;/ItemGroup&gt;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">&nbsp; &lt;Target Name=&quot;PreCompileTarget&quot; BeforeTargets=&quot;Build&quot;&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame">&nbsp; &lt;Target Name=&quot;PreCompileTarget&quot; BeforeTargets=&quot;Build&quot;&gt;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &lt;Exec Command=&quot;<span class="TextSegSigDiff">./node_modules/.bin/</span>gulp&quot; /&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &lt;Exec Command=&quot;<span class="TextSegSigDiff">npx</span><span class="TextSegInsigDiff"> </span>gulp&quot; /&gt;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">&nbsp; &lt;/Target&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame">&nbsp; &lt;/Target&gt;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame">&lt;/Project&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&lt;/Project&gt;</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

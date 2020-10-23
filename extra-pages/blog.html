@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style">
+
+<head>
+  <title>Blog - Appwork</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css">
+
+  <script src="assets/vendor/js/material-ripple.js"></script>
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Theme settings -->
+  <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
+  <script src="assets/vendor/js/theme-settings.js"></script>
+  <script>
+    window.themeSettings = new ThemeSettings({
+      cssPath: 'assets/vendor/css/rtl/',
+      themesPath: 'assets/vendor/css/rtl/'
+    });
+  </script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/js/pace.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Page -->
+  <link rel="stylesheet" href="assets/css/blog.css">
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="assets/vendor/libs/swiper/swiper.css">
+</head>
+
+<body>
+  <div class="page-loader">
+    <div class="bg-primary"></div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg bg-white mt-lg-3">
+    <div class="container px-3">
+
+      <a href="#" class="navbar-brand order-lg-2 flex-shrink-0 text-xlarge font-weight-bolder line-height-1 py-3 mr-0">Blog.</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".blog-nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="blog-nav navbar-collapse collapse order-lg-1 w-lg-100">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#">
+            <i class="ion ion-logo-twitter text-twitter text-big align-middle"></i>
+            <span class="d-lg-none align-middle">&nbsp; Twitter</span>
+          </a>
+          <a class="nav-item nav-link ml-lg-2" href="#">
+            <i class="ion ion-logo-facebook text-facebook text-big align-middle"></i>
+            <span class="d-lg-none align-middle">&nbsp; Facebook</span>
+          </a>
+          <a class="nav-item nav-link ml-lg-2" href="#">
+            <i class="ion ion-logo-instagram text-instagram text-big align-middle"></i>
+            <span class="d-lg-none align-middle">&nbsp; Instagram</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="blog-nav navbar-collapse collapse order-lg-3 w-lg-100">
+        <div class="nav navbar-nav align-items-lg-center ml-lg-auto">
+          <!-- Search -->
+          <label class="nav-item nav-link navbar-search-box">
+            <i class="ion ion-ios-search text-large align-middle"></i>
+            <span class="navbar-search-input">
+              <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+              <a href="#" class="navbar-search-cancel">×</a>
+            </span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+  <hr class="mt-0 mt-lg-3 mb-0">
+  <!-- / Nav -->
+
+  <!-- Subnav -->
+  <div id="blog-subnav-wrapper">
+    <nav id="blog-subnav" class="navbar navbar-expand-lg bg-white">
+      <div class="container px-3">
+        <div class="nav navbar-nav flex-shrink-1 flex-row align-items-center mx-lg-auto">
+          <a class="nav-item nav-link mr-2 ml-lg-2" href="#">
+            Lifestyle
+          </a>
+          <a class="nav-item nav-link mx-2" href="#">
+            Travel
+          </a>
+          <a class="nav-item nav-link mx-2" href="#">
+            Social
+          </a>
+          <a class="nav-item nav-link mx-2" href="#">
+            Culture
+          </a>
+          <a class="nav-item nav-link mx-2" href="#">
+            About
+          </a>
+          <a class="nav-item nav-link mx-2" href="#">
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- / Subnav -->
+
+  <!-- Slider -->
+  <div class="blog-slider-wrapper">
+    <div class="blog-slider-inner">
+      <div class="swiper-container" id="blog-slider">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide ui-bg-cover" style="background-image: url(assets/img/bg/22.jpg);">
+            <div class="blog-slider-overlay"></div>
+            <div class="blog-slider-slide">
+              <div class="blog-slider-content">
+                <div class="text-white mb-2">Travel</div>
+                <h2 class="blog-slider-caption mb-3">
+                  <a href="#" class="link-animated text-white">The Luxury Of Traveling With Yacht Charter Companies</a>
+                </h2>
+                <div class="text-white text-tiny mb-4">
+                  <a href="#" class="text-white">KENNETH FRAZIER</a> &nbsp;\&nbsp; MAY 21, 2018
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide ui-bg-cover" style="background-image: url(assets/img/bg/23.jpg);">
+            <div class="blog-slider-overlay"></div>
+            <div class="blog-slider-slide">
+              <div class="blog-slider-content">
+                <div class="text-white mb-2">Lifestyle</div>
+                <h2 class="blog-slider-caption mb-3">
+                  <a href="#" class="link-animated text-white">Travel Health Useful Medical Information For Good Health Be</a>
+                </h2>
+                <div class="text-white text-tiny mb-4">
+                  <a href="#" class="text-white">ALICE HAMPTON</a> &nbsp;\&nbsp; MAY 5, 2018
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide ui-bg-cover" style="background-image: url(assets/img/bg/24.jpg);">
+            <div class="blog-slider-overlay"></div>
+            <div class="blog-slider-slide">
+              <div class="blog-slider-content">
+                <div class="text-white mb-2">Tips & Tricks</div>
+                <h2 class="blog-slider-caption mb-3">
+                  <a href="#" class="link-animated text-white">What Makes A Hotel Boutique</a>
+                </h2>
+                <div class="text-white text-tiny mb-4">
+                  <a href="#" class="text-white">ARTHUR DUNCAN</a> &nbsp;\&nbsp; APRIL 19, 2018
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide ui-bg-cover" style="background-image: url(assets/img/bg/25.jpg);">
+            <div class="blog-slider-overlay"></div>
+            <div class="blog-slider-slide">
+              <div class="blog-slider-content">
+                <div class="text-white mb-2">Traveling</div>
+                <h2 class="blog-slider-caption mb-3">
+                  <a href="#" class="link-animated text-white">Getting Cheap Airfare For Last Minute Travel</a>
+                </h2>
+                <div class="text-white text-tiny mb-4">
+                  <a href="#" class="text-white">BELLE ROSS</a> &nbsp;\&nbsp; APRIL 9, 2018
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide ui-bg-cover" style="background-image: url(assets/img/bg/26.jpg);">
+            <div class="blog-slider-overlay"></div>
+            <div class="blog-slider-slide">
+              <div class="blog-slider-content">
+                <div class="text-white mb-2">Lifestyle</div>
+                <h2 class="blog-slider-caption mb-3">
+                  <a href="#" class="link-animated text-white">Get Around Easily With A New York Limousine Service</a>
+                </h2>
+                <div class="text-white text-tiny mb-4">
+                  <a href="#" class="text-white">MAY GIBSON</a> &nbsp;\&nbsp; MARCH 28, 2018
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination swiper-pagination-white"></div>
+      </div>
+    </div>
+    <div id="blog-slider-prev" class="display-1"><i class="lnr lnr-chevron-left scaleX--1-rtl"></i></div>
+    <div id="blog-slider-next" class="display-1"><i class="lnr lnr-chevron-right scaleX--1-rtl"></i></div>
+  </div>
+  <!-- / Slider -->
+
+  <div class="container">
+    <div class="row mt-5">
+
+      <!-- Articles -->
+      <div class="col">
+        <div class="row">
+
+          <div class="col-lg-6 pr-xl-4 mb-5">
+            <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover mb-3" style="background-image: url(assets/img/bg/1.jpg);"></a>
+            <div class="text-center text-success small font-weight-bold text-uppercase mb-2">Lifestyle</div>
+            <h4 class="text-center mb-2"><a href="#" class="link-animated text-dark">How To Meet That Special Someone</a></h4>
+            <div class="text-center text-light text-tiny mb-3"><a href="#" class="text-light">MAY GIBSON</a> &nbsp;\&nbsp; MAY 25, 2018</div>
+            <div class="font-secondary text-big">
+              Curabitur pulvinar felis auctor lectus tincidunt iaculis. Vivamus aliquam elementum libero...
+            </div>
+          </div>
+
+          <div class="col-lg-6 pl-xl-4 mb-5">
+            <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover mb-3" style="background-image: url(assets/img/bg/2.jpg);"></a>
+            <div class="text-center text-danger small font-weight-bold text-uppercase mb-2">Travel</div>
+            <h4 class="text-center mb-2"><a href="#" class="link-animated text-dark">Three Ways To Get Travel Discounts</a></h4>
+            <div class="text-center text-light text-tiny mb-3"><a href="#" class="text-light">KENNETH FRAZIER</a> &nbsp;\&nbsp; MAY 21, 2018</div>
+            <div class="font-secondary text-big">
+              Aliquam erat volutpat. Vivamus fringilla sed risus vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            </div>
+          </div>
+
+          <div class="col-lg-6 pr-xl-4 mb-5">
+            <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover mb-3" style="background-image: url(assets/img/bg/3.jpg);"></a>
+            <div class="text-center text-info small font-weight-bold text-uppercase mb-2">Social</div>
+            <h4 class="text-center mb-2"><a href="#" class="link-animated text-dark">Writing A Good Headline For Your Advertisement</a></h4>
+            <div class="text-center text-light text-tiny mb-3"><a href="#" class="text-light">ALICE HAMPTON</a> &nbsp;\&nbsp; MAY 5, 2018</div>
+            <div class="font-secondary text-big">
+              Duis libero massa, posuere vitae mi ac, finibus facilisis ex. Maecenas facilisis, enim at cursus mattis, sem dui sollicitudin eros...
+            </div>
+          </div>
+
+          <div class="col-lg-6 pl-xl-4 mb-5">
+            <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover mb-3" style="background-image: url(assets/img/bg/4.jpg);"></a>
+            <div class="text-center text-warning small font-weight-bold text-uppercase mb-2">Culture</div>
+            <h4 class="text-center mb-2"><a href="#" class="link-animated text-dark">Party Jokes Startling But Unnecessary</a></h4>
+            <div class="text-center text-light text-tiny mb-3"><a href="#" class="text-light">ARTHUR DUNCAN</a> &nbsp;\&nbsp; APRIL 19, 2018</div>
+            <div class="font-secondary text-big">
+              Praesent lacinia velit ut urna sodales, id imperdiet velit fringilla. Nulla dignissim, odio eget faucibus rutrum...
+            </div>
+          </div>
+
+          <div class="col-lg-6 pr-xl-4 mb-5">
+            <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover mb-3" style="background-image: url(assets/img/bg/5.jpg);"></a>
+            <div class="text-center text-success small font-weight-bold text-uppercase mb-2">Lifestyle</div>
+            <h4 class="text-center mb-2"><a href="#" class="link-animated text-dark">The Luxury Of Traveling With Yacht Charter Companies</a></h4>
+            <div class="text-center text-light text-tiny mb-3"><a href="#" class="text-light">BELLE ROSS</a> &nbsp;\&nbsp; APRIL 9, 2018</div>
+            <div class="font-secondary text-big">
+              Aliquam ut tortor malesuada, convallis nunc sed, pulvinar neque. Mauris feugiat molestie purus...
+            </div>
+          </div>
+
+          <div class="col-lg-6 pl-xl-4 mb-5">
+            <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover mb-3" style="background-image: url(assets/img/bg/6.jpg);"></a>
+            <div class="text-center text-danger small font-weight-bold text-uppercase mb-2">Travel</div>
+            <h4 class="text-center mb-2"><a href="#" class="link-animated text-dark">How To Maintain Your Mental Health</a></h4>
+            <div class="text-center text-light text-tiny mb-3"><a href="#" class="text-light">MAY GIBSON</a> &nbsp;\&nbsp; MARCH 28, 2018</div>
+            <div class="font-secondary text-big">
+              Quisque facilisis justo justo, id euismod risus ullamcorper mollis...
+            </div>
+          </div>
+
+          <div class="col-lg-6 pr-xl-4 mb-5">
+            <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover mb-3" style="background-image: url(assets/img/bg/7.jpg);"></a>
+            <div class="text-center text-info small font-weight-bold text-uppercase mb-2">Social</div>
+            <h4 class="text-center mb-2"><a href="#" class="link-animated text-dark">A Time Travel Postcard</a></h4>
+            <div class="text-center text-light text-tiny mb-3"><a href="#" class="text-light">KENNETH FRAZIER</a> &nbsp;\&nbsp; MARCH 19, 2018</div>
+            <div class="font-secondary text-big">
+              Vestibulum auctor eget sem sit amet elementum. Phasellus sapien ipsum, tristique nec dui id, ultricies mollis nisi...
+            </div>
+          </div>
+
+          <div class="col-lg-6 pl-xl-4 mb-5">
+            <a href="#" class="d-block ui-rect ui-rect-67 ui-bg-cover mb-3" style="background-image: url(assets/img/bg/8.jpg);"></a>
+            <div class="text-center text-warning small font-weight-bold text-uppercase mb-2">Culture</div>
+            <h4 class="text-center mb-2"><a href="#" class="link-animated text-dark">It S Hurricane Season But We Are Visiting Hilton Head Island</a></h4>
+            <div class="text-center text-light text-tiny mb-3"><a href="#" class="text-light">ALICE HAMPTON</a> &nbsp;\&nbsp; FEBRUARY 25, 2018</div>
+            <div class="font-secondary text-big">
+              Quisque enim sem, vestibulum nec porttitor sed, tempus sed tortor. Nullam ornare velit augue...
+            </div>
+          </div>
+        </div>
+
+        <ul class="pagination justify-content-center mt-4 mb-5">
+          <li class="page-item disabled">
+            <a class="page-link rounded-0" href="#">«</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link rounded-0" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link rounded-0" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link rounded-0" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link rounded-0" href="#">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link rounded-0" href="#">5</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link rounded-0" href="#">»</a>
+          </li>
+        </ul>
+      </div>
+      <!-- / Articles -->
+
+      <!-- Side content -->
+      <div class="col-lg-4 pl-xl-5">
+
+        <div class="bg-lighter p-4 mb-4">
+          <h6 class="small font-weight-bold mb-2">SUBSCRIBE</h6>
+          <hr class="blog-separator border-primary">
+          <p class="text-muted">
+            Enter your email address to subscribe to this blog and receive notifications of new posts by email.
+          </p>
+          <div class="form-group">
+            <input type="text" class="form-control rounded-0" placeholder="Enter your email address">
+          </div>
+          <button type="button" class="btn btn-primary btn-block rounded-0">Subscribe</button>
+        </div>
+
+        <div class="ui-bordered p-4 mb-4">
+          <h6 class="small font-weight-bold mb-2">POPULAR POSTS</h6>
+          <hr class="blog-separator border-primary">
+          <div class="media mb-3">
+            <div class="ui-w-40">
+              <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/9.jpg');"></div>
+            </div>
+            <div class="media-body ml-3">
+              <div class="mb-1">
+                <a href="#" class="link-animated text-dark">Comment On The Importance Of Human Life</a>
+              </div>
+              <div class="text-light text-tiny"><a href="#" class="text-light">KENNETH FRAZIER</a> &nbsp;\&nbsp; MAY 21, 2018</div>
+            </div>
+          </div>
+          <div class="media mb-3">
+            <div class="ui-w-40">
+              <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/10.jpg');"></div>
+            </div>
+            <div class="media-body ml-3">
+              <div class="mb-1">
+                <a href="#" class="link-animated text-dark">Les Houches The Hidden Gem Of The Chamonix Valley</a>
+              </div>
+              <div class="text-light text-tiny"><a href="#" class="text-light">ALICE HAMPTON</a> &nbsp;\&nbsp; MAY 5, 2018</div>
+            </div>
+          </div>
+          <div class="media mb-3">
+            <div class="ui-w-40">
+              <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/11.jpg');"></div>
+            </div>
+            <div class="media-body ml-3">
+              <div class="mb-1">
+                <a href="#" class="link-animated text-dark">Cheap Romantic Vacations</a>
+              </div>
+              <div class="text-light text-tiny"><a href="#" class="text-light">ARTHUR DUNCAN</a> &nbsp;\&nbsp; APRIL 19, 2018</div>
+            </div>
+          </div>
+          <div class="media mb-3">
+            <div class="ui-w-40">
+              <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/12.jpg');"></div>
+            </div>
+            <div class="media-body ml-3">
+              <div class="mb-1">
+                <a href="#" class="link-animated text-dark">Big Savings On Gas While You Travel</a>
+              </div>
+              <div class="text-light text-tiny"><a href="#" class="text-light">BELLE ROSS</a> &nbsp;\&nbsp; APRIL 9, 2018</div>
+            </div>
+          </div>
+          <div class="media">
+            <div class="ui-w-40">
+              <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/13.jpg');"></div>
+            </div>
+            <div class="media-body ml-3">
+              <div class="mb-1">
+                <a href="#" class="link-animated text-dark">Get Around Easily With A New York Limousine Service</a>
+              </div>
+              <div class="text-light text-tiny"><a href="#" class="text-light">MAY GIBSON</a> &nbsp;\&nbsp; MARCH 28, 2018</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-bordered p-4 mb-4">
+          <h6 class="small font-weight-bold mb-2">ARCHIVE</h6>
+          <hr class="blog-separator border-primary">
+          <div class="mb-2">
+            <a href="#" class="text-body">2018 <span class="text-muted">(10)</span></a>
+          </div>
+          <div class="mb-2">
+            <a href="#" class="text-body">2017 <span class="text-muted">(26)</span></a>
+          </div>
+          <div>
+            <a href="#" class="text-body">2016 <span class="text-muted">(7)</span></a>
+          </div>
+        </div>
+
+        <div class="ui-bordered p-4 mb-4">
+          <h6 class="small font-weight-bold mb-2">STAY CONNECTED</h6>
+          <hr class="blog-separator border-primary">
+          <div class="d-flex flex-wrap">
+            <a href="#" class="icon-btn d-block bg-twitter text-center text-white mr-1 mb-1"><i class="ion ion-logo-twitter"></i></a>
+            <a href="#" class="icon-btn d-block bg-facebook text-center text-white mr-1 mb-1"><i class="ion ion-logo-facebook"></i></a>
+            <a href="#" class="icon-btn d-block bg-instagram text-center text-white mr-1 mb-1"><i class="ion ion-logo-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <!-- / Side content -->
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <nav class="footer bg-lighter pt-2 mt-5">
+    <div class="container pt-5">
+      <div class="row">
+
+        <div class="col-lg-3 pr-lg-4 pb-5">
+          <a href="#" class="footer-text d-block text-large font-weight-bolder mb-3">Blog.</a>
+
+          <a href="#" class="footer-link d-block pb-2">Lifestyle</a>
+          <a href="#" class="footer-link d-block pb-2">Travel</a>
+          <a href="#" class="footer-link d-block pb-2">Social</a>
+          <a href="#" class="footer-link d-block pb-2">Culture</a>
+          <a href="#" class="footer-link d-block pb-2">About</a>
+          <a href="#" class="footer-link d-block pb-4">Contact Me</a>
+
+          <a class="text-twitter" href="#">
+            <i class="ion ion-logo-twitter"></i>
+          </a>
+          &nbsp; &nbsp;
+          <a class="text-facebook" href="#">
+            <i class="ion ion-logo-facebook"></i>
+          </a>
+          &nbsp; &nbsp;
+          <a class="text-instagram" href="#">
+            <i class="ion ion-logo-instagram"></i>
+          </a>
+        </div>
+
+        <div class="col-lg pb-4 pl-lg-4">
+          <div class="footer-text small font-weight-bold mb-3">LATEST IMAGES</div>
+
+          <div class="clearfix">
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/1.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/2.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/3.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/4.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/5.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/6.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/7.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/8.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/9.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/10.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/11.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/12.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/13.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/14.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/15.jpg');"></span>
+            </a>
+            <a href="#" class="d-block float-left ui-w-60 pr-2 pb-2">
+              <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/16.jpg');"></span>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="col-lg pb-4 pl-lg-4">
+          <div class="footer-text small font-weight-bold mb-3">LATEST POSTS</div>
+
+          <div class="media mb-3">
+            <div class="ui-w-40">
+              <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/5.jpg');"></div>
+            </div>
+            <div class="media-body ml-3">
+              <a href="#" class="footer-text link-animated">Comment On The Importance Of Human Life</a>
+              <div class="small">May 21, 2017</div>
+            </div>
+          </div>
+          <div class="media mb-3">
+            <div class="ui-w-40">
+              <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/6.jpg');"></div>
+            </div>
+            <div class="media-body ml-3">
+              <a href="#" class="footer-text link-animated">Enlightenment Is Not Just One State</a>
+              <div class="small">May 21, 2017</div>
+            </div>
+          </div>
+          <div class="media">
+            <div class="ui-w-40">
+              <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/7.jpg');"></div>
+            </div>
+            <div class="media-body ml-3">
+              <a href="#" class="footer-text link-animated">Always Look On The Bright Side Of Life</a>
+              <div class="small">May 21, 2017</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light mt-4">
+      <div class="container py-3">
+        <div>© 2018. All rights reserved</div>
+      </div>
+    </div>
+  </nav>
+  <!-- / Footer -->
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+
+  <!-- Libs -->
+  <script src="assets/vendor/libs/swiper/swiper.js"></script>
+
+  <!-- Page -->
+  <script src="assets/js/blog.js"></script>
+</body>
+</html>

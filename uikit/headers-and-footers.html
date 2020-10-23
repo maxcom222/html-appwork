@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style">
+
+<head>
+  <title>Headers &amp; Footers UI Kit - Appwork</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css">
+
+  <!-- Load polyfills -->
+  <script src="assets/vendor/js/polyfills.js"></script>
+  <script>document['documentMode']===10&&document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
+
+  <script src="assets/vendor/js/material-ripple.js"></script>
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Theme settings -->
+  <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
+  <script src="assets/vendor/js/theme-settings.js"></script>
+  <script>
+    window.themeSettings = new ThemeSettings({
+      cssPath: 'assets/vendor/css/rtl/',
+      themesPath: 'assets/vendor/css/rtl/'
+    });
+  </script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/js/pace.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/vendor/libs/clipboard/clipboard.js"></script>
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="assets/vendor/libs/nouislider/nouislider.css">
+  <link rel="stylesheet" href="assets/vendor/libs/bootstrap-select/bootstrap-select.css">
+  <link rel="stylesheet" href="assets/vendor/libs/datatables/datatables.css">
+  <link rel="stylesheet" href="assets/vendor/libs/plyr/plyr.css">
+  <link rel="stylesheet" href="assets/vendor/libs/swiper/swiper.css">
+  <link rel="stylesheet" href="assets/vendor/libs/blueimp-gallery/gallery.css">
+  <link rel="stylesheet" href="assets/vendor/libs/blueimp-gallery/gallery-indicator.css">
+
+  <!-- highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+  <!-- Custom styles -->
+  <style>
+    #main-header {
+      font-weight: bold;
+      font-size: 1.6875rem;
+      margin: 0 0 -.3125rem 0;
+      padding: .9375rem 3.125rem;
+      line-height: 2.5rem;
+    }
+
+    #main-header-path {
+      opacity: .4;
+    }
+
+    /* Page background */
+    .ui-block,
+    .cui-bottom-spacer {
+      background: transparent;
+    }
+
+    /* Blocks */
+    .ui-block {
+      padding: 2.5rem 0;
+      border-top: .3125rem solid rgba(49, 68, 82, .07);
+    }
+
+    /* Headings */
+    .ui-block-heading {
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      color: rgba(24, 28, 33, .4);
+      font-size: .6875rem;
+    }
+
+    /* Code examples */
+    .uikit-example {
+      position: relative;
+    }
+
+    .uikit-example-btns {
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      transition: all .2s;
+      direction: ltr !important;
+    }
+
+    [dir=rtl] .uikit-example-btns {
+      right: auto;
+      left: 0;
+    }
+
+    .uikit-example:hover .uikit-example-btns {
+      top: -17px;
+      opacity: 1;
+    }
+
+    .uikit-example-btn {
+      display: inline-block;
+      line-height: 1;
+      font-weight: 800;
+      background: #efefef;
+      direction: ltr !important;
+      color: #aaa;
+      padding: .1875rem .3125rem;
+      border-radius: .125rem;
+      white-space: nowrap;
+      font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 11px;
+      margin: 0 4px;
+    }
+
+    .uikit-example-btn.copy::before {
+      content: "COPY";
+    }
+
+    .uikit-example-btn.copied {
+      background: #000 !important;
+      color: #fff !important;
+    }
+
+    .uikit-example-btn.copied::before {
+      content: "COPIED!";
+    }
+
+    /* Modal */
+    .uikit-example-modal-opened {
+      overflow: hidden !important;
+    }
+
+    .uikit-example-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000000;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: auto;
+      background: rgba(255, 255, 255, .95);
+      animation-duration: .2s;
+      direction: ltr !important;
+      text-align: left !important;
+    }
+
+    .uikit-example-modal-opened .uikit-example-modal {
+      display: flex;
+    }
+
+    .uikit-example-modal-content {
+      max-width: 80%;
+      margin: auto;
+      padding: 30px 0;
+    }
+
+    .uikit-example-modal-copy {
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+
+    .uikit-example-modal-copy.copied::before {
+      content: "Copied to clipboard!";
+      position: absolute;
+      display: block;
+      right: 100%;
+      margin-right: 10px;
+      font-size: 14px;
+      white-space: nowrap;
+      background: #111;
+      line-height: 24px;
+      height: 24px;
+      border-radius: 3px;
+      padding: 0 6px;
+      top: 50%;
+      margin-top: -12px;
+    }
+
+    .uikit-example-modal-close {
+      display: block;
+      position: fixed;
+      top: 10px;
+      right: 30px;
+      color: #000 !important;
+      opacity: .2;
+      font-size: 3rem;
+      font-weight: 100;
+    }
+
+    .uikit-example-modal-close:hover {
+      opacity: .9;
+    }
+
+    /* Code */
+    .uikit-example-modal-content>pre {
+      overflow: auto;
+    }
+
+    .uikit-example-modal-content>pre>code {
+      padding: 0;
+      background: none;
+      font-size: 16px;
+    }
+
+    .cui-bottom-spacer {
+      height: 12rem;
+    }
+  </style>
+  <!-- / Custom styles -->
+</head>
+
+<body>
+  <div class="page-loader">
+    <div class="bg-primary"></div>
+  </div>
+
+  <div class="uikit-example-modal animated fadeIn">
+    <a href="javascript:void(0)" class="uikit-example-modal-copy btn icon-btn btn-lg btn-primary rounded-pill"><span class="ion ion-md-clipboard"></span></a>
+    <a href="javascript:void(0)" class="uikit-example-modal-close">&times;</a>
+    <div class="uikit-example-modal-content"></div>
+  </div>
+
+  <h1 id="main-header" class="bg-dark text-white">
+    <span id="main-header-path">UI Kit &nbsp;/&nbsp;</span>
+    <span class="d-inline-block position-relative">
+      <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown">Headers &amp; Footers</a>
+      <span class="dropdown-menu mt-3">
+        <a href="base.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Base</span></a>
+        <a href="company.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Company</span></a>
+        <a href="dashboard.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Dashboard</span></a>
+        <a href="e-commerce.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">E-Commerce</span></a>
+
+        <a href="magazine.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Magazine</span></a>
+        <a href="social.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Social</span></a>
+      </span>
+    </span>
+  </h1>
+
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Headers</h4>
+    </div>
+
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand w-lg-100 text-large font-weight-bolder line-height-1 py-3 mr-0">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".header-1">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="header-1 navbar-collapse collapse flex-shrink-0">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Features</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Pricing</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">About&nbsp;Us</a>
+            </div>
+          </div>
+
+          <div class="header-1 navbar-collapse collapse justify-content-lg-end w-lg-100">
+            <div class="nav navbar-nav align-items-lg-center">
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">&times;</a>
+                </span>
+              </label>
+
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-notifications-outline navbar-icon align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Notifications</span>
+              </a>
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <img src="assets/img/avatars/1.png" alt="" class="ui-w-30 rounded-circle align-middle">
+                <span class="d-lg-none align-middle">&nbsp; Mike Greene</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <script>
+        $('.header-1 .navbar-search-input > input').on('focus', function() {
+          $('.header-1 .navbar-search-box').addClass('active');
+        });
+        $('.header-1 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('.header-1 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand order-lg-2 flex-shrink-0 text-large font-weight-bolder line-height-1 py-3 mr-0">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".header-2">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="header-2 navbar-collapse collapse order-lg-1 w-lg-100">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="javascript:void(0)">
+                <i class="ion ion-logo-twitter text-twitter text-big align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Twitter</span>
+              </a>
+              <a class="nav-item nav-link ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-logo-facebook text-facebook text-big align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Facebook</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="header-2 navbar-collapse collapse order-lg-3 w-lg-100">
+            <div class="nav navbar-nav align-items-lg-center ml-lg-auto">
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">&times;</a>
+                </span>
+              </label>
+
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-notifications-outline navbar-icon align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Notifications</span>
+              </a>
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <img src="assets/img/avatars/1.png" alt="" class="ui-w-30 rounded-circle align-middle">
+                <span class="d-lg-none align-middle">&nbsp; Mike Greene</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <script>
+        $('.header-2 .navbar-search-input > input').on('focus', function() {
+          $('.header-2 .navbar-search-box').addClass('active');
+        });
+        $('.header-2 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('.header-2 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand text-large font-weight-bolder line-height-1 py-3">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-3">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="header-3">
+            <div class="navbar-nav ml-auto">
+              <a class="nav-item nav-link active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Features</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Pricing</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">About&nbsp;Us</a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand text-large font-weight-bolder line-height-1 py-3">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-4">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse collapse" id="header-4">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Features</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Pricing</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">About&nbsp;Us</a>
+            </div>
+
+            <div class="navbar-nav align-items-lg-center ml-auto">
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">&times;</a>
+                </span>
+              </label>
+
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-notifications-outline navbar-icon align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Notifications</span>
+              </a>
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <img src="assets/img/avatars/1.png" alt="" class="ui-w-30 rounded-circle align-middle">
+                <span class="d-lg-none align-middle">&nbsp; Mike Greene</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <script>
+        $('#header-4 .navbar-search-input > input').on('focus', function() {
+          $('#header-4 .navbar-search-box').addClass('active');
+        });
+        $('#header-4 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('#header-4 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container flex-lg-wrap">
+
+          <a href="javascript:void(0)" class="navbar-brand text-large font-weight-bolder line-height-1 py-3">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".header-5">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="header-5 navbar-collapse collapse col-lg-12 order-lg-2 px-0">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link pl-lg-0 active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Features</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Pricing</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">About&nbsp;Us</a>
+            </div>
+          </div>
+
+          <div class="header-5 navbar-collapse collapse order-lg-1">
+            <div class="navbar-nav align-items-lg-center order-lg-2 py-lg-1 ml-auto">
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">&times;</a>
+                </span>
+              </label>
+
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-notifications-outline navbar-icon align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Notifications</span>
+              </a>
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <img src="assets/img/avatars/1.png" alt="" class="ui-w-30 rounded-circle align-middle">
+                <span class="d-lg-none align-middle">&nbsp; Mike Greene</span>
+              </a>
+            </div>
+
+            <div class="navbar-nav order-lg-1 py-lg-1">
+              <a class="nav-item nav-link" href="javascript:void(0)">
+                <i class="ion ion-logo-twitter text-twitter text-big align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Twitter</span>
+              </a>
+              <a class="nav-item nav-link ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-logo-facebook text-facebook text-big align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Facebook</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <script>
+        $('.header-5 .navbar-search-input > input').on('focus', function() {
+          $('.header-5 .navbar-search-box').addClass('active');
+        });
+        $('.header-5 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('.header-5 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container flex-lg-wrap">
+
+          <a href="javascript:void(0)" class="navbar-brand text-large font-weight-bolder line-height-1 py-3">Brand</a>
+
+          <div class="navbar-text small pt-lg-2 pb-lg-1 pl-lg-2">
+            <strong>24/7 Support: </strong>(800) 123-4567
+          </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".header-6">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="header-6 navbar-collapse collapse col-lg-12 flex-wrap order-lg-2 px-0">
+            <hr class="d-none d-lg-block w-100 my-2">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link pl-lg-0 active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Woman</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Men</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Kids</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Sale</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Blog</a>
+            </div>
+          </div>
+
+          <div class="header-6 navbar-collapse collapse order-lg-1">
+            <div class="navbar-nav align-items-lg-center order-lg-2 py-lg-1 ml-auto">
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">&times;</a>
+                </span>
+              </label>
+
+              <a class="nav-item nav-link dropdown-toggle hide-arrow text-nowrap ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-cart navbar-icon align-middle"></i>
+                <span class="badge badge-danger indicator">5</span>
+                <span class="d-lg-none align-middle">&nbsp; Cart</span>
+              </a>
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <img src="assets/img/avatars/1.png" alt="" class="ui-w-30 rounded-circle align-middle">
+                <span class="d-lg-none align-middle">&nbsp; Mike Greene</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        $('.header-6 .navbar-search-input > input').on('focus', function() {
+          $('.header-6 .navbar-search-box').addClass('active');
+        });
+        $('.header-6 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('.header-6 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container flex-wrap">
+
+          <a href="javascript:void(0)" class="navbar-brand col-lg-4 order-lg-2 w-auto text-center text-large font-weight-bolder line-height-1 py-3 px-0 m-0">Brand</a>
+
+          <div class="navbar-text col-lg-4 order-lg-1 w-auto w-lg-100 small px-0">
+            <strong>24/7 Support: </strong>(800) 123-4567
+          </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".header-7">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="header-7 navbar-collapse collapse flex-wrap justify-content-lg-center order-lg-4 flex-basis-100 px-0">
+            <hr class="d-none d-lg-block w-100 my-2">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Woman</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Men</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Kids</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Sale</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Blog</a>
+            </div>
+          </div>
+
+          <div class="header-7 navbar-collapse collapse col-lg-4 justify-content-lg-end order-lg-3 w-auto w-lg-100 px-0">
+            <div class="navbar-nav align-items-lg-center order-lg-2 py-lg-1">
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">&times;</a>
+                </span>
+              </label>
+
+              <a class="nav-item nav-link dropdown-toggle hide-arrow text-nowrap ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-cart navbar-icon align-middle"></i>
+                <span class="badge badge-danger indicator">5</span>
+                <span class="d-lg-none align-middle">&nbsp; Cart</span>
+              </a>
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <img src="assets/img/avatars/1.png" alt="" class="ui-w-30 rounded-circle align-middle">
+                <span class="d-lg-none align-middle">&nbsp; Mike Greene</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <script>
+        $('.header-7 .navbar-search-input > input').on('focus', function() {
+          $('.header-7 .navbar-search-box').addClass('active');
+        });
+        $('.header-7 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('.header-7 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <div class="bg-light small py-2">
+        <div class="container d-flex justify-content-between">
+          <div class="text-muted"><strong>24/7 Support: </strong>(800) 123-4567</div>
+          <div>
+            <a class="dropdown-toggle text-body font-weight-semibold" href="javascript:void(0)">EN</a>
+            <a class="dropdown-toggle text-body font-weight-semibold ml-3" href="javascript:void(0)">USD</a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar navbar-expand-lg flex-column align-items-stretch bg-white">
+        <div class="container flex-lg-wrap">
+          <a href="javascript:void(0)" class="navbar-brand text-large font-weight-bolder line-height-1 py-3">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".header-8">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="header-8 navbar-collapse collapse col-lg-12 flex-wrap order-lg-2 px-0">
+            <hr class="d-none d-lg-block w-100 my-2">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link pl-lg-0 active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Woman</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Men</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Kids</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Sale</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Blog</a>
+            </div>
+          </div>
+
+          <div class="header-8 navbar-collapse collapse order-lg-1">
+            <div class="navbar-nav align-items-lg-center order-lg-2 py-lg-1 ml-auto">
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">&times;</a>
+                </span>
+              </label>
+
+              <a class="nav-item nav-link dropdown-toggle hide-arrow text-nowrap ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-cart navbar-icon align-middle"></i>
+                <span class="badge badge-danger indicator">5</span>
+                <span class="d-lg-none align-middle">&nbsp; Cart</span>
+              </a>
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <img src="assets/img/avatars/1.png" alt="" class="ui-w-30 rounded-circle align-middle">
+                <span class="d-lg-none align-middle">&nbsp; Mike Greene</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        $('.header-8 .navbar-search-input > input').on('focus', function() {
+          $('.header-8 .navbar-search-box').addClass('active');
+        });
+        $('.header-8 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('.header-8 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container flex-wrap">
+
+          <a href="javascript:void(0)" class="navbar-brand col-lg-3 order-lg-1 w-auto text-large font-weight-bolder line-height-1 py-3 px-0 m-0">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".header-9">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <form class="header-9 navbar-collapse collapse col-lg-6 order-lg-2 w-auto py-3 py-lg-0 px-0">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text ion ion-ios-search"></div>
+              </div>
+              <input type="text" class="form-control" placeholder="Search...">
+              <select class="custom-select pl-2">
+                <option>All</option>
+                <option>Shoes</option>
+                <option>Shirts</option>
+                <option>Jeans</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="header-9 navbar-collapse collapse flex-wrap order-lg-4 flex-basis-100 px-0">
+            <hr class="d-none d-lg-block w-100 my-2">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link pl-lg-0 active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Woman</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Men</a>
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">Kids</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Sale</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Blog</a>
+            </div>
+          </div>
+
+          <div class="header-9 navbar-collapse collapse col-lg-3 justify-content-lg-end order-lg-3 w-auto px-0">
+            <div class="navbar-nav align-items-lg-center order-lg-2 py-lg-1">
+              <a class="nav-item nav-link dropdown-toggle hide-arrow text-nowrap ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-cart navbar-icon align-middle"></i>
+                <span class="badge badge-danger indicator">5</span>
+                <span class="d-lg-none align-middle">&nbsp; Cart</span>
+              </a>
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <img src="assets/img/avatars/1.png" alt="" class="ui-w-30 rounded-circle align-middle">
+                <span class="d-lg-none align-middle">&nbsp; Mike Greene</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand text-large font-weight-bolder line-height-1 py-3">Brand</a>
+
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link mr-4 ml-3 ml-lg-0" href="javascript:void(0)">
+              <i class="ion ion-md-menu navbar-icon align-middle"></i>
+            </a>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-10">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse collapse" id="header-10">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Features</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Pricing</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">About&nbsp;Us</a>
+            </div>
+
+            <div class="navbar-nav align-items-lg-center ml-auto">
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">&times;</a>
+                </span>
+              </label>
+
+              <a class="nav-item nav-link dropdown-toggle text-nowrap ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-notifications-outline navbar-icon align-middle"></i>
+                <span class="badge badge-primary indicator">3</span>
+                <span class="d-lg-none align-middle">&nbsp; Notifications</span>
+              </a>
+              <a class="nav-item nav-link ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-ios-settings navbar-icon align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Settings</span>
+              </a>
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <img src="assets/img/avatars/1.png" alt="" class="ui-w-30 rounded-circle align-middle">
+                <span class="d-lg-none align-middle">&nbsp; Mike Greene</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <script>
+        $('#header-10 .navbar-search-input > input').on('focus', function() {
+          $('#header-10 .navbar-search-box').addClass('active');
+        });
+        $('#header-10 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('#header-10 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand text-large font-weight-bolder line-height-1 py-3">Brand</a>
+
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link mr-4 ml-3 ml-lg-0" href="javascript:void(0)">
+              <i class="ion ion-md-menu navbar-icon align-middle"></i>
+            </a>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-11">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse collapse" id="header-11">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Features</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Pricing</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">About&nbsp;Us</a>
+            </div>
+
+            <div class="navbar-nav align-items-lg-center ml-auto">
+              <form class="form-inline py-3 py-lg-0 mr-lg-3">
+                <div class="input-group w-100">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text ion ion-ios-search"></div>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Search...">
+                </div>
+              </form>
+
+              <a class="nav-item nav-link dropdown-toggle text-nowrap ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-notifications-outline navbar-icon align-middle"></i>
+                <span class="badge badge-primary indicator">3</span>
+                <span class="d-lg-none align-middle">&nbsp; Notifications</span>
+              </a>
+              <a class="nav-item nav-link ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-ios-settings navbar-icon align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Settings</span>
+              </a>
+              <a class="nav-item nav-link dropdown-toggle hide-arrow ml-lg-2" href="javascript:void(0)">
+                <img src="assets/img/avatars/1.png" alt="" class="ui-w-30 rounded-circle align-middle">
+                <span class="d-lg-none align-middle">&nbsp; Mike Greene</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand text-large font-weight-bolder line-height-1 py-3">Brand</a>
+
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link mr-4 ml-3 ml-lg-0" href="javascript:void(0)">
+              <i class="ion ion-md-menu navbar-icon align-middle"></i>
+            </a>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-12">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse collapse" id="header-12">
+            <div class="navbar-nav align-items-lg-center">
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">×</a>
+                </span>
+              </label>
+
+              <a class="nav-item nav-link dropdown-toggle text-nowrap ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-notifications-outline navbar-icon align-middle"></i>
+                <span class="badge badge-primary indicator">3</span>
+                <span class="d-lg-none align-middle">&nbsp; Notifications</span>
+              </a>
+              <a class="nav-item nav-link ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-ios-settings navbar-icon align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Settings</span>
+              </a>
+            </div>
+
+            <div class="navbar-nav align-items-lg-center ml-auto">
+              <a class="nav-item nav-link dropdown-toggle" href="javascript:void(0)">
+                <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
+                  <img src="assets/img/avatars/1.png" alt="" class="d-block ui-w-30 rounded-circle">
+                  <span class="px-1 mr-lg-2 ml-2 ml-lg-0">Mike Greene</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <script>
+        $('#header-12 .navbar-search-input > input').on('focus', function() {
+          $('#header-12 .navbar-search-box').addClass('active');
+        });
+        $('#header-12 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('#header-12 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand w-lg-100 text-large font-weight-bolder line-height-1 py-3 mr-0">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".header-13">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="header-13 navbar-collapse collapse flex-shrink-0">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Features</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Pricing</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">About&nbsp;Us</a>
+            </div>
+          </div>
+
+          <div class="header-13 navbar-collapse collapse justify-content-lg-end w-lg-100">
+            <div class="nav navbar-nav align-items-lg-center">
+              <a class="nav-item nav-link" href="javascript:void(0)">
+                Get in Touch
+              </a>
+              <a href="javascript:void(0)" class="btn btn-primary px-3 ml-lg-4">Join Us</a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand order-lg-2 flex-shrink-0 text-large font-weight-bolder line-height-1 py-3 mr-0">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".header-14">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="header-14 navbar-collapse collapse order-lg-1 w-lg-100">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link pl-lg-0 active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Features</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Pricing</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">About&nbsp;Us</a>
+            </div>
+          </div>
+
+          <div class="header-14 navbar-collapse collapse justify-content-lg-end order-lg-3 w-lg-100">
+            <div class="nav navbar-nav align-items-lg-center">
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box mr-lg-3">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">×</a>
+                </span>
+              </label>
+
+              <a class="nav-item nav-link" href="javascript:void(0)">
+                Login
+              </a>
+              <a class="nav-item nav-link" href="javascript:void(0)">
+                Register
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <script>
+        $('.header-14 .navbar-search-input > input').on('focus', function() {
+          $('.header-14 .navbar-search-box').addClass('active');
+        });
+        $('.header-14 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('.header-14 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand order-lg-2 flex-shrink-0 text-large font-weight-bolder line-height-1 py-3 mr-0">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".header-15">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="header-15 navbar-collapse collapse order-lg-1 w-lg-100">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link pl-lg-0 active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Features</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Pricing</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">About&nbsp;Us</a>
+            </div>
+          </div>
+
+          <div class="header-15 navbar-collapse collapse order-lg-3 w-lg-100">
+            <div class="navbar-nav align-items-lg-center ml-lg-auto">
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">×</a>
+                </span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <script>
+        $('.header-15 .navbar-search-input > input').on('focus', function() {
+          $('.header-15 .navbar-search-box').addClass('active');
+        });
+        $('.header-15 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('.header-15 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand text-large font-weight-bolder line-height-1 py-3">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-16">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse collapse" id="header-16">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="javascript:void(0)">Home</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Features</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">Pricing</a>
+              <a class="nav-item nav-link" href="javascript:void(0)">About&nbsp;Us</a>
+            </div>
+
+            <div class="navbar-nav align-items-lg-center ml-auto">
+              <a class="nav-item nav-link mr-lg-2" href="javascript:void(0)">
+                <i class="ion ion-logo-twitter text-twitter text-big align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Twitter</span>
+              </a>
+              <a class="nav-item nav-link mr-lg-4" href="javascript:void(0)">
+                <i class="ion ion-logo-facebook text-facebook text-big align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Facebook</span>
+              </a>
+
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">&times;</a>
+                </span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <script>
+        $('#header-16 .navbar-search-input > input').on('focus', function() {
+          $('#header-16 .navbar-search-box').addClass('active');
+        });
+        $('#header-16 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('#header-16 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container">
+
+          <a href="javascript:void(0)" class="navbar-brand text-large font-weight-bolder line-height-1 py-3">Brand</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-17">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse collapse" id="header-17">
+            <div class="navbar-nav">
+              <div class="btn-group ml-lg-3">
+                <a href="javascript:void(0)" class="btn btn-outline-primary rounded-pill dropdown-toggle my-3 my-lg-0">Dashboard</a>
+              </div>
+            </div>
+
+            <div class="navbar-nav align-items-lg-center ml-auto">
+              <a class="nav-item nav-link dropdown-toggle mr-lg-3" href="javascript:void(0)">
+                Hello, <strong class="text-body">Mike</strong>!
+              </a>
+
+              <!-- Search -->
+              <label class="nav-item nav-link navbar-search-box ml-lg-2">
+                <i class="ion ion-ios-search navbar-icon align-middle"></i>
+                <span class="navbar-search-input">
+                  <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                  <a href="javascript:void(0)" class="navbar-search-cancel">&times;</a>
+                </span>
+              </label>
+
+              <a class="nav-item nav-link dropdown-toggle hide-arrow text-nowrap ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-md-notifications-outline navbar-icon align-middle"></i>
+                <span class="badge badge-primary indicator">3</span>
+                <span class="d-lg-none align-middle">&nbsp; Notifications</span>
+              </a>
+              <a class="nav-item nav-link ml-lg-2" href="javascript:void(0)">
+                <i class="ion ion-ios-settings navbar-icon align-middle"></i>
+                <span class="d-lg-none align-middle">&nbsp; Settings</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <script>
+        $('#header-17 .navbar-search-input > input').on('focus', function() {
+          $('#header-17 .navbar-search-box').addClass('active');
+        });
+        $('#header-17 .navbar-search-cancel').on('click', function(e) {
+          e.preventDefault();
+          $('#header-17 .navbar-search-box').removeClass('active');
+        });
+      </script>
+
+    </div>
+
+  </div>
+
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Footers</h4>
+    </div>
+
+    <div class="uikit-example mb-4">
+
+      <nav class="footer bg-white">
+        <div class="container d-flex flex-wrap justify-content-between text-center pb-3">
+
+          <div>
+            <a href="javascript:void(0)" class="footer-link pt-3">About Us</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Help</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Contact</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Terms & Conditions</a>
+          </div>
+
+          <div class="pt-3">
+            <a href="javascript:void(0)" class="footer-text font-weight-bolder">Brand</a> &copy;
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="footer bg-white">
+        <div class="container text-center py-3">
+          <div class="pb-3">
+            <a href="javascript:void(0)" class="footer-link pt-3">About Us</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Help</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Contact</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Terms & Conditions</a>
+          </div>
+
+          <hr class="m-0">
+
+          <div class="col-md-9 col-lg-7 col-xl-6 px-0 my-4 mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            vulputate commodo justo, a malesuada magna interdum sodales.
+            Vestibulum bibendum fermentum tortor, eu blandit orci porta quis.
+          </div>
+
+          <div class="pb-3">
+            <a href="javascript:void(0)" class="footer-text font-weight-bolder">Brand</a> &copy; &nbsp; &nbsp; All rights reserved
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="footer bg-white py-2">
+        <div class="container text-center py-4">
+          <div class="pb-3">
+            <a href="javascript:void(0)" class="footer-text text-large font-weight-bolder">Brand</a> <span class="align-top">&copy;</span>
+          </div>
+          <hr class="my-1">
+          <div class="pb-3">
+            <a href="javascript:void(0)" class="footer-link pt-3">About Us</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Help</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Contact</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Terms & Conditions</a>
+          </div>
+
+          <div class="col-md-9 col-lg-7 col-xl-6 px-0 mx-auto mt-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            vulputate commodo justo, a malesuada magna interdum sodales.
+            Vestibulum bibendum fermentum tortor, eu blandit orci porta quis.
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="footer bg-white py-2">
+        <div class="container d-flex flex-wrap align-items-center text-center pb-3">
+          <div class="text-nowrap pt-3 mr-5">
+            <a href="javascript:void(0)" class="footer-text text-large font-weight-bolder">Brand</a> <span class="align-top">&copy;</span>
+          </div>
+          <div>
+            <a href="javascript:void(0)" class="footer-link pt-3">About Us</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Help</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Contact</a>
+            <a href="javascript:void(0)" class="footer-link pt-3 ml-4">Terms & Conditions</a>
+          </div>
+          <div class="pt-3 ml-md-auto">
+            <a class="text-twitter text-big" href="javascript:void(0)">
+              <i class="ion ion-logo-twitter"></i>
+            </a>
+            &nbsp; &nbsp;
+            <a class="text-facebook text-big" href="javascript:void(0)">
+              <i class="ion ion-logo-facebook"></i>
+            </a>
+            &nbsp; &nbsp;
+            <a class="text-instagram text-big" href="javascript:void(0)">
+              <i class="ion ion-logo-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="footer bg-white py-2">
+        <div class="container d-flex flex-wrap flex-lg-nowrap align-items-center pb-3">
+          <div class="order-lg-2 text-nowrap pt-3 mr-5 ml-lg-5">
+            <a href="javascript:void(0)" class="footer-text text-large font-weight-bolder">Brand</a> <span class="align-top">&copy;</span>
+          </div>
+          <div class="d-flex flex-wrap justify-content-lg-around order-lg-1 flex-basis-lg-100">
+            <a href="javascript:void(0)" class="footer-link d-block pt-3 ml-4 ml-lg-0">About Us</a>
+            <a href="javascript:void(0)" class="footer-link d-block pt-3 ml-4 ml-lg-0">Help</a>
+          </div>
+          <div class="d-flex flex-wrap justify-content-lg-around order-lg-3 flex-basis-lg-100">
+            <a href="javascript:void(0)" class="footer-link d-block pt-3 ml-4 ml-lg-0">Contact</a>
+            <a href="javascript:void(0)" class="footer-link d-block pt-3 ml-4 ml-lg-0">Terms & Conditions</a>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="footer bg-white py-2">
+        <div class="container pt-4">
+          <div class="row">
+
+            <div class="col-lg-3 pb-4">
+              <div class="d-block mb-3">
+                <a href="javascript:void(0)" class="footer-text text-large font-weight-bolder">Brand</a> <span class="align-top">©</span>
+              </div>
+              <a class="text-twitter text-big" href="javascript:void(0)">
+                <i class="ion ion-logo-twitter"></i>
+              </a>
+              &nbsp; &nbsp;
+              <a class="text-facebook text-big" href="javascript:void(0)">
+                <i class="ion ion-logo-facebook"></i>
+              </a>
+              &nbsp; &nbsp;
+              <a class="text-instagram text-big" href="javascript:void(0)">
+                <i class="ion ion-logo-instagram"></i>
+              </a>
+            </div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">ABOUT US</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">About</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Our Story</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Shipping</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Careers</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">CATEGORY</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Woman</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Man</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Kids</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Other</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">SUPPORT</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">FAQ</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Support</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Consultant</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">PARTNERS</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Wholesale</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Office solutions</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Press Resource</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">ACCOUNT</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Log In</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Create Account</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="footer bg-white pt-2">
+        <div class="container pt-4">
+          <div class="row">
+
+            <div class="col-lg-3 pr-lg-4 pb-4">
+              <a href="javascript:void(0)" class="footer-text d-block text-large font-weight-bolder mb-3">Brand</a>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                vulputate commodo justo.
+              </p>
+              <a class="text-twitter" href="javascript:void(0)">
+                <i class="ion ion-logo-twitter"></i>
+              </a>
+              &nbsp; &nbsp;
+              <a class="text-facebook" href="javascript:void(0)">
+                <i class="ion ion-logo-facebook"></i>
+              </a>
+              &nbsp; &nbsp;
+              <a class="text-instagram" href="javascript:void(0)">
+                <i class="ion ion-logo-instagram"></i>
+              </a>
+            </div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">ABOUT US</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">About</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Our Story</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Shipping</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Careers</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">CATEGORY</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Woman</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Man</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Kids</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Other</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">SUPPORT</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">FAQ</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Support</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Consultant</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">PARTNERS</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Wholesale</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Office solutions</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Press Resource</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">ACCOUNT</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Log In</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Create Account</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="m-0">
+        <div class="container py-2">
+          <div>&copy; 2018. All rights reserved</div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="footer bg-white pt-4">
+        <div class="container text-center py-4">
+          <div class="pb-3">
+            <a href="javascript:void(0)" class="footer-text text-large font-weight-bolder">Brand</a> <span class="align-top">&copy;</span>
+          </div>
+          <hr class="mb-4">
+          <div class="row">
+            <div class="col pb-4">
+              <div class="footer-text small font-weight-bold mb-3">ABOUT US</div>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">About</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Our Story</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Shipping</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Careers</a>
+            </div>
+            <div class="col pb-4">
+              <div class="footer-text small font-weight-bold mb-3">CATEGORY</div>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Woman</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Man</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Kids</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Other</a>
+            </div>
+            <div class="col pb-4">
+              <div class="footer-text small font-weight-bold mb-3">SUPPORT</div>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">FAQ</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Support</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Consultant</a>
+            </div>
+            <div class="col pb-4">
+              <div class="footer-text small font-weight-bold mb-3">PARTNERS</div>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Wholesale</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Office solutions</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Press Resource</a>
+            </div>
+            <div class="col pb-4">
+              <div class="footer-text small font-weight-bold mb-3">CONNECT</div>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2"><i class="ion ion-logo-twitter text-twitter"></i> &nbsp;Twitter</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2"><i class="ion ion-logo-facebook text-facebook"></i> &nbsp;Facebook</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2"><i class="ion ion-logo-instagram text-instagram"></i> &nbsp;Instagram</a>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="footer bg-white pt-2">
+        <div class="container pt-5">
+          <div class="row">
+
+            <div class="col-lg-3 pr-lg-4 pb-5">
+              <div class="d-block mb-3">
+                <a href="javascript:void(0)" class="footer-text text-large font-weight-bolder">Brand</a> <span class="align-top">©</span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                vulputate commodo justo.
+              </p>
+              <a class="text-twitter" href="javascript:void(0)">
+                <i class="ion ion-logo-twitter"></i>
+              </a>
+              &nbsp; &nbsp;
+              <a class="text-facebook" href="javascript:void(0)">
+                <i class="ion ion-logo-facebook"></i>
+              </a>
+              &nbsp; &nbsp;
+              <a class="text-instagram" href="javascript:void(0)">
+                <i class="ion ion-logo-instagram"></i>
+              </a>
+            </div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">ABOUT US</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">About</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Our Story</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Shipping</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Careers</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">SUPPORT</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">FAQ</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Support</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Consultant</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">PARTNERS</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Wholesale</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Office solutions</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Press Resource</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 pb-4 pl-lg-4">
+              <div class="border-light ui-bordered p-4">
+                <div class="footer-text small font-weight-bold mb-3">SUBSCRIBE</div>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="E-mail">
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-success font-weight-semibold">OK</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="footer bg-white pt-2">
+        <div class="container pt-5">
+          <div class="row">
+
+            <div class="col-lg-3 pr-lg-4 pb-5">
+              <a href="javascript:void(0)" class="footer-text d-block text-large font-weight-bolder mb-3">Brand</a>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                vulputate commodo justo.
+              </p>
+              <a class="text-twitter" href="javascript:void(0)">
+                <i class="ion ion-logo-twitter"></i>
+              </a>
+              &nbsp; &nbsp;
+              <a class="text-facebook" href="javascript:void(0)">
+                <i class="ion ion-logo-facebook"></i>
+              </a>
+              &nbsp; &nbsp;
+              <a class="text-instagram" href="javascript:void(0)">
+                <i class="ion ion-logo-instagram"></i>
+              </a>
+            </div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">ABOUT US</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">About</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Our Story</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Shipping</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Careers</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">SUPPORT</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">FAQ</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Support</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Consultant</a>
+                </div>
+                <div class="col pb-4">
+                  <div class="footer-text small font-weight-bold mb-3">PARTNERS</div>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Wholesale</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Office solutions</a>
+                  <a href="javascript:void(0)" class="footer-link d-block pb-2">Press Resource</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 pb-4 pl-lg-4">
+              <div class="footer-text small font-weight-bold mb-3">LATEST POSTS</div>
+
+              <div class="media mb-3">
+                <div class="ui-w-40">
+                  <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/5.jpg');"></div>
+                </div>
+                <div class="media-body ml-3">
+                  <h6 class="mb-2"><a href="javascript:void(0)" class="footer-text">Comment On The Importance Of Human Life</a></h6>
+                  <div class="small">May 21, 2017</div>
+                </div>
+              </div>
+              <div class="media mb-3">
+                <div class="ui-w-40">
+                  <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/6.jpg');"></div>
+                </div>
+                <div class="media-body ml-3">
+                  <h6 class="mb-2"><a href="javascript:void(0)" class="footer-text">Enlightenment Is Not Just One State</a></h6>
+                  <div class="small">May 21, 2017</div>
+                </div>
+              </div>
+              <div class="media">
+                <div class="ui-w-40">
+                  <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/7.jpg');"></div>
+                </div>
+                <div class="media-body ml-3">
+                  <h6 class="mb-2"><a href="javascript:void(0)" class="footer-text">Always Look On The Bright Side Of Life</a></h6>
+                  <div class="small">May 21, 2017</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-light mt-4">
+          <div class="container py-3">
+            <div>&copy; 2018. All rights reserved</div>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <div class="uikit-example mb-4">
+
+      <nav class="footer bg-white pt-2">
+        <div class="container pt-5">
+          <div class="row">
+
+            <div class="col-lg-3 pr-lg-4 pb-5">
+              <a href="javascript:void(0)" class="footer-text d-block text-large font-weight-bolder mb-3">Brand</a>
+
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">About Us</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Help</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2">Contact</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-4">Terms & Conditions</a>
+
+              <a class="text-twitter" href="javascript:void(0)">
+                <i class="ion ion-logo-twitter"></i>
+              </a>
+              &nbsp; &nbsp;
+              <a class="text-facebook" href="javascript:void(0)">
+                <i class="ion ion-logo-facebook"></i>
+              </a>
+              &nbsp; &nbsp;
+              <a class="text-instagram" href="javascript:void(0)">
+                <i class="ion ion-logo-instagram"></i>
+              </a>
+            </div>
+
+            <div class="col-lg pb-4 pl-lg-4">
+              <div class="footer-text small font-weight-bold mb-3">LATEST IMAGES</div>
+
+              <div class="clearfix">
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/1.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/2.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/3.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/4.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/5.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/6.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/7.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/8.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/9.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/10.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/11.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/12.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/13.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/14.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/15.jpg');"></span>
+                </a>
+                <a href="javascript:void(0)" class="d-block float-left ui-w-60 pr-2 pb-2">
+                  <span class="d-block ui-square ui-bg-cover" style="background-image: url('assets/img/bg/16.jpg');"></span>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="col-lg pb-4 pl-lg-4">
+              <div class="footer-text small font-weight-bold mb-3">LATEST POSTS</div>
+
+              <div class="media mb-3">
+                <div class="ui-w-40">
+                  <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/5.jpg');"></div>
+                </div>
+                <div class="media-body ml-3">
+                  <h6 class="mb-2"><a href="javascript:void(0)" class="footer-text">Comment On The Importance Of Human Life</a></h6>
+                  <div class="small">May 21, 2017</div>
+                </div>
+              </div>
+              <div class="media mb-3">
+                <div class="ui-w-40">
+                  <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/6.jpg');"></div>
+                </div>
+                <div class="media-body ml-3">
+                  <h6 class="mb-2"><a href="javascript:void(0)" class="footer-text">Enlightenment Is Not Just One State</a></h6>
+                  <div class="small">May 21, 2017</div>
+                </div>
+              </div>
+              <div class="media">
+                <div class="ui-w-40">
+                  <div class="ui-square ui-bg-cover" style="background-image: url('assets/img/bg/7.jpg');"></div>
+                </div>
+                <div class="media-body ml-3">
+                  <h6 class="mb-2"><a href="javascript:void(0)" class="footer-text">Always Look On The Bright Side Of Life</a></h6>
+                  <div class="small">May 21, 2017</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-light mt-4">
+          <div class="container py-3">
+            <div>&copy; 2018. All rights reserved</div>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+  </div>
+
+  <div class="cui-bottom-spacer"></div>
+
+  <script>
+  (function() {
+    function hasClass(el, cls) {
+      return el.className.split(' ').indexOf(cls) !== -1;
+    }
+
+    function sanitizeSource(source, blacklist) {
+      source = source
+        .replace(/\r/g, '')
+        .replace(/\t/g, '  ')
+        .replace(/^ *\n+/, '\n')
+        .replace(/[\s\n]+$/, '');
+
+      source = source.replace(new RegExp('\\n' + source.match(/^\n( *)/)[1], 'g'), '\n');
+
+      if (blacklist) {
+        source = source.replace(/class="([^"]+)"/g, function(m, clsStr) {
+          var clsArr = clsStr.replace(/^\s+|\s+$/, '').replace(/\s+/g, ' ').split(' ');
+
+          for (var i = 0, l = blacklist.length, clsInd; i < l; i++) {
+            if ((clsInd = clsArr.indexOf(blacklist[i])) !== -1) {
+              clsArr.splice(clsInd, 1);
+            }
+          }
+
+          return 'class="' + clsArr.join(' ') + '"';
+        });
+      }
+
+      return source
+        .replace(/\s+class=""/ig, '')
+        .replace(/([a-z]+)=""/ig, '$1')
+        .replace(/javascript:void\(0\)/g, '#')
+        .replace(/^\n/, '');
+    }
+
+    function attachClipboard(el, src) {
+      return new Clipboard(el, {
+        text: function() {
+          return src;
+        }
+      });
+    }
+
+    function openModal(src, formattedSrc) {
+      document.querySelector('.uikit-example-modal-content').innerHTML = '<pre><code class="hljs html xml">' + formattedSrc + '</code></pre>';
+
+      var copyBtn = document.querySelector('.uikit-example-modal-copy');
+      var closeBtn = document.querySelector('.uikit-example-modal-close');
+
+      var copyBtnTimeout = null;
+      var clipboard = attachClipboard(copyBtn, src);
+
+      clipboard.on('success', function(e) {
+        if (copyBtnTimeout) {
+          clearTimeout(copyBtnTimeout);
+          copyBtnTimeout = null;
+        }
+
+        copyBtn.className = copyBtn.className.replace(' copied', '');
+        copyBtn.className += ' copied';
+
+        copyBtnTimeout = setTimeout(function() {
+          copyBtn.className = copyBtn.className.replace(' copied', '');
+        }, 1000);
+      });
+
+      var closeListener = function() {
+        document.querySelector('.uikit-example-modal-content').innerHTML = '';
+        document.querySelector('.uikit-example-modal').scrollTop = 0;
+        closeBtn.removeEventListener('click', closeListener);
+        clipboard.destroy();
+        document.documentElement.className = document.documentElement.className.replace(' uikit-example-modal-opened', '');
+      };
+
+      closeBtn.addEventListener('click', closeListener);
+
+      document.documentElement.className += ' uikit-example-modal-opened';
+    }
+
+    Array.prototype.slice.call(document.querySelectorAll('.uikit-example')).forEach(function(parentEl) {
+      var btnsWrapper = document.createElement('div');
+      btnsWrapper.className = 'uikit-example-btns';
+
+      var copyBtn = document.createElement('a');
+      copyBtn.href = 'javascript:void(0)';
+      copyBtn.className = 'uikit-example-btn copy';
+
+      var sourceBtn = document.createElement('a');
+      sourceBtn.href = 'javascript:void(0)';
+      sourceBtn.className = 'uikit-example-btn';
+      sourceBtn.innerHTML = 'SOURCE'
+
+      btnsWrapper.appendChild(copyBtn);
+      btnsWrapper.appendChild(sourceBtn);
+
+      var blacklistStr = (parentEl.getAttribute('data-blacklist') || null);
+      var blacklist = (blacklistStr && blacklistStr.split(',')) || null;
+      var src = sanitizeSource(parentEl.innerHTML, blacklist);
+      var formattedSrc = hljs.highlight('html', src).value;
+
+      parentEl.appendChild(btnsWrapper);
+
+      var copyBtnTimeout = null;
+      attachClipboard(copyBtn, src).on('success', function(e) {
+        if (copyBtnTimeout) {
+          clearTimeout(copyBtnTimeout);
+          copyBtnTimeout = null;
+        }
+
+        copyBtn.className = copyBtn.className.replace(' copied', '');
+        copyBtn.className += ' copied';
+
+        copyBtnTimeout = setTimeout(function() {
+          copyBtn.className = copyBtn.className.replace(' copied', '');
+        }, 1000);
+      });
+
+      sourceBtn.addEventListener('click', function(e) {
+        openModal(src, formattedSrc);
+      });
+    });
+  })();
+
+  $(function() {
+    // Initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+
+  <!-- Libs -->
+  <script src="assets/vendor/libs/nouislider/nouislider.js"></script>
+  <script src="assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+  <script src="assets/vendor/libs/chartjs/chartjs.js"></script>
+  <script src="assets/vendor/libs/datatables/datatables.js"></script>
+  <script src="assets/vendor/libs/moment/moment.js"></script>
+  <script src="assets/vendor/libs/numeral/numeral.js"></script>
+  <script src="assets/vendor/libs/plyr/plyr.js"></script>
+  <script src="assets/vendor/libs/swiper/swiper.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery-fullscreen.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery-indicator.js"></script>
+  <!-- Google Maps -->
+  <!-- NOTE: When using Google Maps on your own site you MUST get your own API key:
+           //developers.google.com/maps/documentation/javascript/get-api-key
+           After you got the key paste it in the URL below. -->
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyCHtdj4L66c05v1UZm-nte1FzUEAN6GKBI"></script>
+  <script src="assets/vendor/libs/gmaps/gmaps.js"></script>
+  <script src="assets/vendor/libs/masonry/masonry.js"></script>
+
+</body>
+
+</html>

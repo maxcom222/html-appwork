@@ -1,0 +1,620 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/rails-starter/config/environments/production.rb &nbsp;
+<br/>
+Right file: appwork-v1_4_0/rails-turbolinks-starter/config/environments/production.rb &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame">Rails.application.configure do</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">Rails.application.configure do</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Settings specified here will take precedence over those in config/application.rb.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Settings specified here will take precedence over those in config/application.rb.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Code is not reloaded between requests.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Code is not reloaded between requests.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.cache_classes = true</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.cache_classes = true</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Eager load code on boot. This eager loads most of Rails and</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Eager load code on boot. This eager loads most of Rails and</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # your application in memory, allowing both threaded web servers</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # your application in memory, allowing both threaded web servers</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # and those relying on copy on write to perform better.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # and those relying on copy on write to perform better.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Rake tasks automatically ignore this option for performance.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Rake tasks automatically ignore this option for performance.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.eager_load = true</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.eager_load = true</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Full error reports are disabled and caching is turned on.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Full error reports are disabled and caching is turned on.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.consider_all_requests_local&nbsp; &nbsp; &nbsp;&nbsp; = false</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.consider_all_requests_local&nbsp; &nbsp; &nbsp;&nbsp; = false</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.action_controller.perform_caching = true</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.action_controller.perform_caching = true</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Ensures that a master key has been made available in either ENV[&quot;RAILS_MASTER_KEY&quot;]</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Ensures that a master key has been made available in either ENV[&quot;RAILS_MASTER_KEY&quot;]</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # config.require_master_key = true</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # config.require_master_key = true</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Disable serving static files from the `/public` folder by default since</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Disable serving static files from the `/public` folder by default since</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Apache or NGINX already handles this.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Apache or NGINX already handles this.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; # Compress <span class="TextSegSigDiff">Java</span><span class="TextSegSigDiff">Scripts</span> a<span class="TextSegSigDiff">nd</span> <span class="TextSegSigDiff">C</span><span class="TextSegInsigDiff">SS</span>.</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; # Compress <span class="TextSegSigDiff">CSS</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">us</span><span class="TextSegSigDiff">ing</span> a <span class="TextSegSigDiff">preproce</span><span class="TextSegInsigDiff">ss</span><span class="TextSegSigDiff">or</span>.</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">config.assets.js_compressor</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:uglifier</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; # config.assets.css_compressor = :sass</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; # config.assets.css_compressor = :sass</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Do not fallback to assets pipeline if a precompiled asset is missed.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Do not fallback to assets pipeline if a precompiled asset is missed.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.assets.compile = false</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.assets.compile = false</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">`config.assets.precompile`</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">and</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">`config.assets.version`</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">have</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">moved</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">config/initializers/assets.rb</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; # Enable serving of images, stylesheets, and JavaScripts from an asset server.</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; # Enable serving of images, stylesheets, and JavaScripts from an asset server.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # config.action_controller.asset_host = 'http://assets.example.com'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # config.action_controller.asset_host = 'http://assets.example.com'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Specifies the header that your server uses for sending files.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Specifies the header that your server uses for sending files.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; # Store uploaded files on the local file system (see config/storage.yml for options)</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; # Store uploaded files on the local file system (see config/storage.yml for options)<span class="TextSegSigDiff">.</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; config.active_storage.service = :local</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; config.active_storage.service = :local</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; # Mount Action Cable outside main process or domain</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; # Mount Action Cable outside main process or domain<span class="TextSegSigDiff">.</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; # config.action_cable.mount_path = nil</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; # config.action_cable.mount_path = nil</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # config.action_cable.url = 'wss://example.com/cable'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # config.action_cable.url = 'wss://example.com/cable'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # config.force_ssl = true</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # config.force_ssl = true</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Use the lowest log level to ensure availability of diagnostic information</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Use the lowest log level to ensure availability of diagnostic information</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # when problems arise.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # when problems arise.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.log_level = :debug</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.log_level = :debug</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Prepend all log lines with the following tags.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Prepend all log lines with the following tags.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.log_tags = [ :request_id ]</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.log_tags = [ :request_id ]</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Use a different cache store in production.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Use a different cache store in production.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # config.cache_store = :mem_cache_store</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # config.cache_store = :mem_cache_store</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Use a real queuing backend for Active Job (and separate queues per environment)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Use a real queuing backend for Active Job (and separate queues per environment)</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; # config.active_job.queue_adapter&nbsp; &nbsp;&nbsp; = :resque</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # config.active_job.queue_adapter&nbsp; &nbsp;&nbsp; = :resque</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; # config.active_job.queue_name_prefix = &quot;rails-starter_<span class="TextSegSigDiff">#{Ra</span><span class="TextSegSigDiff">ils.env}</span>&quot;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; # config.active_job.queue_name_prefix = &quot;rails-starter_<span class="TextSegSigDiff">p</span><span class="TextSegSigDiff">roductio</span><span class="TextSegSigDiff">n</span>&quot;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.action_mailer.perform_caching = false</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.action_mailer.perform_caching = false</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Ignore bad email addresses and do not raise email delivery errors.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Ignore bad email addresses and do not raise email delivery errors.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Set this to true and configure the email server for immediate delivery to raise delivery errors.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Set this to true and configure the email server for immediate delivery to raise delivery errors.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # config.action_mailer.raise_delivery_errors = false</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # config.action_mailer.raise_delivery_errors = false</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Enable locale fallbacks for I18n (makes lookups for any locale fall back to</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Enable locale fallbacks for I18n (makes lookups for any locale fall back to</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # the I18n.default_locale when a translation cannot be found).</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # the I18n.default_locale when a translation cannot be found).</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.i18n.fallbacks = true</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.i18n.fallbacks = true</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Send deprecation notices to registered listeners.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Send deprecation notices to registered listeners.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.active_support.deprecation = :notify</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.active_support.deprecation = :notify</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Use default logging formatter so that PID and timestamp are not suppressed.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Use default logging formatter so that PID and timestamp are not suppressed.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; config.log_formatter = ::Logger::Formatter.new</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.log_formatter = ::Logger::Formatter.new</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Use a different logger for distributed setups.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Use a different logger for distributed setups.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # require 'syslog/logger'</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # require 'syslog/logger'</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; if ENV[&quot;RAILS_LOG_TO_STDOUT&quot;].present?</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; if ENV[&quot;RAILS_LOG_TO_STDOUT&quot;].present?</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; logger&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; = ActiveSupport::Logger.new(STDOUT)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; logger&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; = ActiveSupport::Logger.new(STDOUT)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; logger.formatter = config.log_formatter</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; logger.formatter = config.log_formatter</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; config.logger&nbsp; &nbsp; = ActiveSupport::TaggedLogging.new(logger)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; config.logger&nbsp; &nbsp; = ActiveSupport::TaggedLogging.new(logger)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; end</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; end</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; # Do not dump schema after migrations.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; # Do not dump schema after migrations.</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; config.active_record.dump_schema_after_migration = false</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; config.active_record.dump_schema_after_migration = false</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Inserts</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">middleware</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">perform</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">automatic</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">connection</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">switching.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">`database_selector`</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">hash</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">is</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">used</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">pass</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">options</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">DatabaseSelector</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">middleware.</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">`delay`</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">is</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">used</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">determine</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">how</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">long</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">wait</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">after</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">a</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">write</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">send</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">a</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">subsequent</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">read</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">primary.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">`database_resolver`</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">class</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">is</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">used</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">by</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">middleware</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">determine</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">which</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">database</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">is</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">appropriate</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">use</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">based</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">on</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">time</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">delay.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">`database_resolver_context`</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">class</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">is</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">used</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">by</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">middleware</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">set</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">timestamps</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">for</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">last</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">write</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">primary.</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">resolver</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">uses</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">context</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">class</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">timestamps</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">determine</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">how</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">long</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">wait</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">before</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">reading</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">from</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">replica.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">By</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">default</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Rails</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">will</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">store</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">a</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">last</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">write</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">timestamp</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">in</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">session.</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">The</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">DatabaseSelector</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">middleware</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">is</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">designed</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">as</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">such</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">you</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">can</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">define</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">your</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">own</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">strategy</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">for</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">connection</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">switching</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">and</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">pass</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">that</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">into</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">middleware</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">through</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">these</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">configuration</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">options.</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">config.active_record.database_selector</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">delay:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">2.seconds</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">config.active_record.database_resolver</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">ActiveRecord::Middleware::DatabaseSelector::Resolver</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">config.active_record.database_resolver_context</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">ActiveRecord::Middleware::DatabaseSelector::Resolver::Session</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">end</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">end</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

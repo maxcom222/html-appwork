@@ -1,0 +1,70 @@
+.flot-overlay ~ .legend {
+   > * {
+    right: 0 !important;
+  }
+
+  .legendColorBox {
+    padding-right: 5px;
+  }
+}
+
+.flot-tick-label,
+.legendLayer text {
+  opacity: .7;
+}
+
+.legendLayer {
+  font-size: .95em;
+}
+
+.default-style {
+  @import "../../css/_appwork/include";
+
+  .flot-tick-label {
+    font-size: $font-size-sm;
+    color: $body-color;
+  }
+
+  .flotTip {
+    padding: .25rem .625rem !important;
+    border-color: $tooltip-bg !important;
+    border-radius: $border-radius !important;
+    background-color: $tooltip-bg !important;
+    color: $tooltip-color !important;
+    font-size: .6875rem !important;
+  }
+
+  .legendLayer {
+    color: $body-color;
+  }
+
+  .legendLayer .background {
+    fill: rgba-to-hex($gray-50);
+  }
+}
+
+.material-style {
+  @import "../../css/_appwork/include-material";
+
+  .flot-tick-label {
+    font-size: $font-size-sm;
+    color: $body-color;
+  }
+
+  .flotTip {
+    padding: .25rem .625rem !important;
+    border-color: $tooltip-bg !important;
+    border-radius: $border-radius !important;
+    background-color: $tooltip-bg !important;
+    color: $tooltip-color !important;
+    font-size: .6875rem !important;
+  }
+
+  .legendLayer {
+    color: $body-color;
+  }
+
+  .legendLayer .background {
+    fill: rgba-to-hex($gray-50);
+  }
+}

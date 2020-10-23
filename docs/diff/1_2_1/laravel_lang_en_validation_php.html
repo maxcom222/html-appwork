@@ -1,0 +1,1082 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+.Wrap { white-space: nowrap; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_2_0/laravel-starter/resources/lang/en/validation.php &nbsp;
+<br/>
+Right file: appwork-v1_2_1/laravel-starter/resources/lang/en/validation.php &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">1</td>
+<td class="TextItemSame Wrap">&lt;?php</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">1</td>
+<td class="TextItemSame Wrap">&lt;?php</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">2</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">2</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">3</td>
+<td class="TextItemSame Wrap">return [</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">3</td>
+<td class="TextItemSame Wrap">return [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">4</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">4</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">5</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">5</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">6</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">6</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">7</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | Validation Language Lines</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">7</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | Validation Language Lines</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">8</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">8</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">9</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">9</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">10</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | The following language lines contain the default error messages used by</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">10</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | The following language lines contain the default error messages used by</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">11</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | the validator class. Some of these rules have multiple versions such</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">11</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | the validator class. Some of these rules have multiple versions such</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">12</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | as the size rules. Feel free to tweak each of these messages here.</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">12</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | as the size rules. Feel free to tweak each of these messages here.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">13</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">13</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">14</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">14</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">15</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">15</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">16</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'accepted'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be accepted.',</td>
+<td class="AlignCenter Wrap">&lt;&gt;</td>
+<td class="TextItemNum AlignRight Wrap">16</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'accepted' =&gt; 'The :attribute must be accepted.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">17</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'active_url'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute is not a valid URL.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">17</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'active_url' =&gt; 'The :attribute is not a valid URL.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">18</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'after'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute must be a date after :date.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">18</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'after' =&gt; 'The :attribute must be a date after :date.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">19</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'after_or_equal'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be a date after or equal to :date.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">19</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'after_or_equal' =&gt; 'The :attribute must be a date after or equal to :date.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">20</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'alpha'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute may only contain letters.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">20</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'alpha' =&gt; 'The :attribute may only contain letters.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">21</td>
+<td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; 'alpha_dash'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute may only contain letters, numbers, and <span class="TextSegSigDiff">da</span><span class="TextSegSigDiff">sh</span>es.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">21</td>
+<td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; 'alpha_dash' =&gt; 'The :attribute may only contain letters, numbers, <span class="TextSegSigDiff">dashes</span><span class="TextSegInsigDiff"> </span>and <span class="TextSegSigDiff">underscor</span>es.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">22</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'alpha_num'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute may only contain letters and numbers.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">22</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'alpha_num' =&gt; 'The :attribute may only contain letters and numbers.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">23</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'array'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute must be an array.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">23</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'array' =&gt; 'The :attribute must be an array.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">24</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'before'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be a date before :date.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">24</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'before' =&gt; 'The :attribute must be a date before :date.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">25</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'before_or_equal'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute must be a date before or equal to :date.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">25</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'before_or_equal' =&gt; 'The :attribute must be a date before or equal to :date.',</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">26</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'between'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; [</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">26</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'between' =&gt; [</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight Wrap">27</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'numeric' =&gt; 'The :attribute must be between :min and :max.',</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">27</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'numeric' =&gt; 'The :attribute must be between :min and :max.',</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">28</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'file'&nbsp;<span class="TextSegInsigDiff">&nbsp;&nbsp; </span>=&gt; 'The :attribute must be between :min and :max kilobytes.',</td>
+<td class="AlignCenter Wrap">&lt;&gt;</td>
+<td class="TextItemNum AlignRight Wrap">28</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'file' =&gt; 'The :attribute must be between :min and :max kilobytes.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">29</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'string'&nbsp;<span class="TextSegInsigDiff"> </span>=&gt; 'The :attribute must be between :min and :max characters.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">29</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'string' =&gt; 'The :attribute must be between :min and :max characters.',</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">30</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'array'&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>=&gt; 'The :attribute must have between :min and :max items.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">30</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'array' =&gt; 'The :attribute must have between :min and :max items.',</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight Wrap">31</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">31</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">32</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'boolean'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute field must be true or false.',</td>
+<td class="AlignCenter Wrap">&lt;&gt;</td>
+<td class="TextItemNum AlignRight Wrap">32</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'boolean' =&gt; 'The :attribute field must be true or false.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">33</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'confirmed'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute confirmation does not match.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">33</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'confirmed' =&gt; 'The :attribute confirmation does not match.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">34</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'date'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute is not a valid date.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">34</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'date' =&gt; 'The :attribute is not a valid date.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">35</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'date_equals'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">a</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">date</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">equal</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">to</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:date.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">35</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'date_format'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute does not match the format :format.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">36</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'date_format' =&gt; 'The :attribute does not match the format :format.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">36</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'different'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute and :other must be different.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">37</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'different' =&gt; 'The :attribute and :other must be different.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">37</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'digits'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be :digits digits.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">38</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'digits' =&gt; 'The :attribute must be :digits digits.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">38</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'digits_between'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be between :min and :max digits.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">39</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'digits_between' =&gt; 'The :attribute must be between :min and :max digits.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">39</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'dimensions'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute has invalid image dimensions.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">40</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'dimensions' =&gt; 'The :attribute has invalid image dimensions.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">40</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'distinct'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute field has a duplicate value.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">41</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'distinct' =&gt; 'The :attribute field has a duplicate value.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">41</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'email'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute must be a valid email address.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">42</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'email' =&gt; 'The :attribute must be a valid email address.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">42</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'exists'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The selected :attribute is invalid.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">43</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'exists' =&gt; 'The selected :attribute is invalid.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">43</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'file'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be a file.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">44</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'file' =&gt; 'The :attribute must be a file.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">44</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'filled'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute field must have a value.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">45</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'filled' =&gt; 'The :attribute field must have a value.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">46</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'gt'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">47</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'numeric'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">greater</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">48</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'file'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">greater</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">kilobytes.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">49</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'string'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">greater</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">characters.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">50</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'array'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">have</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">more</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">items.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">51</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">],</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">52</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'gte'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">53</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'numeric'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">greater</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">or</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">equal</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">54</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'file'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">greater</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">or</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">equal</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">kilobytes.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">55</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'string'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">greater</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">or</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">equal</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">characters.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">56</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'array'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">have</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">items</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">or</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">more.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">57</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">],</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">45</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'image'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute must be an image.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">58</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'image' =&gt; 'The :attribute must be an image.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">46</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'in'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The selected :attribute is invalid.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">59</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'in' =&gt; 'The selected :attribute is invalid.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">47</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'in_array'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute field does not exist in :other.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">60</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'in_array' =&gt; 'The :attribute field does not exist in :other.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">48</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'integer'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute must be an integer.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">61</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'integer' =&gt; 'The :attribute must be an integer.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">49</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'ip'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be a valid IP address.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">62</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'ip' =&gt; 'The :attribute must be a valid IP address.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">50</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'ipv4'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be a valid IPv4 address.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">63</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'ipv4' =&gt; 'The :attribute must be a valid IPv4 address.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">51</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'ipv6'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be a valid IPv6 address.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">64</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'ipv6' =&gt; 'The :attribute must be a valid IPv6 address.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">52</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'json'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be a valid JSON string.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">65</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'json' =&gt; 'The :attribute must be a valid JSON string.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">66</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'lt'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">67</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'numeric'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">less</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">68</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'file'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">less</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">kilobytes.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">69</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'string'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">less</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">characters.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">70</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'array'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">have</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">less</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">items.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">71</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">],</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">72</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'lte'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">[</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">73</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'numeric'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">less</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">or</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">equal</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">74</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'file'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">less</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">or</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">equal</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">kilobytes.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">75</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'string'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">less</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">or</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">equal</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">characters.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">76</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">'array'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">not</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">have</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">more</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">than</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:value</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">items.',</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">77</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">],</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">53</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'max'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; [</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">78</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'max' =&gt; [</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight Wrap">54</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'numeric' =&gt; 'The :attribute may not be greater than :max.',</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">79</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'numeric' =&gt; 'The :attribute may not be greater than :max.',</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">55</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'file'&nbsp;<span class="TextSegInsigDiff">&nbsp;&nbsp; </span>=&gt; 'The :attribute may not be greater than :max kilobytes.',</td>
+<td class="AlignCenter Wrap">&lt;&gt;</td>
+<td class="TextItemNum AlignRight Wrap">80</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'file' =&gt; 'The :attribute may not be greater than :max kilobytes.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">56</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'string'&nbsp;<span class="TextSegInsigDiff"> </span>=&gt; 'The :attribute may not be greater than :max characters.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">81</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'string' =&gt; 'The :attribute may not be greater than :max characters.',</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">57</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'array'&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>=&gt; 'The :attribute may not have more than :max items.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">82</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'array' =&gt; 'The :attribute may not have more than :max items.',</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight Wrap">58</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">83</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">59</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'mimes'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute must be a file of type: :values.',</td>
+<td class="AlignCenter Wrap">&lt;&gt;</td>
+<td class="TextItemNum AlignRight Wrap">84</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'mimes' =&gt; 'The :attribute must be a file of type: :values.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">60</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'mimetypes'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute must be a file of type: :values.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">85</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'mimetypes' =&gt; 'The :attribute must be a file of type: :values.',</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">61</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'min'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; [</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">86</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'min' =&gt; [</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight Wrap">62</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'numeric' =&gt; 'The :attribute must be at least :min.',</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">87</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'numeric' =&gt; 'The :attribute must be at least :min.',</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">63</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'file'&nbsp;<span class="TextSegInsigDiff">&nbsp;&nbsp; </span>=&gt; 'The :attribute must be at least :min kilobytes.',</td>
+<td class="AlignCenter Wrap">&lt;&gt;</td>
+<td class="TextItemNum AlignRight Wrap">88</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'file' =&gt; 'The :attribute must be at least :min kilobytes.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">64</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'string'&nbsp;<span class="TextSegInsigDiff"> </span>=&gt; 'The :attribute must be at least :min characters.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">89</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'string' =&gt; 'The :attribute must be at least :min characters.',</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">65</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'array'&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>=&gt; 'The :attribute must have at least :min items.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">90</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'array' =&gt; 'The :attribute must have at least :min items.',</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight Wrap">66</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">91</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">67</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'not_in'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The selected :attribute is invalid.',</td>
+<td class="AlignCenter Wrap">&lt;&gt;</td>
+<td class="TextItemNum AlignRight Wrap">92</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'not_in' =&gt; 'The selected :attribute is invalid.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">68</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'not_regex'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute format is invalid.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">93</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'not_regex' =&gt; 'The :attribute format is invalid.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">69</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'numeric'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute must be a number.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">94</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'numeric' =&gt; 'The :attribute must be a number.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">70</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'present'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute field must be present.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">95</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'present' =&gt; 'The :attribute field must be present.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">71</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'regex'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute format is invalid.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">96</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'regex' =&gt; 'The :attribute format is invalid.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">72</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'required'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute field is required.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">97</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'required' =&gt; 'The :attribute field is required.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">73</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'required_if'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute field is required when :other is :value.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">98</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'required_if' =&gt; 'The :attribute field is required when :other is :value.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">74</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'required_unless'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute field is required unless :other is in :values.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">99</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'required_unless' =&gt; 'The :attribute field is required unless :other is in :values.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">75</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'required_with'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute field is required when :values is present.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">100</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'required_with' =&gt; 'The :attribute field is required when :values is present.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">76</td>
+<td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; 'required_with_all'&nbsp;<span class="TextSegInsigDiff">&nbsp;&nbsp; </span>=&gt; 'The :attribute field is required when :values <span class="TextSegSigDiff">is</span> present.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">101</td>
+<td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; 'required_with_all' =&gt; 'The :attribute field is required when :values <span class="TextSegSigDiff">are</span> present.',</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">77</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'required_without'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; </span>=&gt; 'The :attribute field is required when :values is not present.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">102</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'required_without' =&gt; 'The :attribute field is required when :values is not present.',</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight Wrap">78</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; 'required_without_all' =&gt; 'The :attribute field is required when none of :values are present.',</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">103</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; 'required_without_all' =&gt; 'The :attribute field is required when none of :values are present.',</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">79</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'same'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute and :other must match.',</td>
+<td class="AlignCenter Wrap">&lt;&gt;</td>
+<td class="TextItemNum AlignRight Wrap">104</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'same' =&gt; 'The :attribute and :other must match.',</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">80</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'size'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; [</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">105</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'size' =&gt; [</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight Wrap">81</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'numeric' =&gt; 'The :attribute must be :size.',</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">106</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'numeric' =&gt; 'The :attribute must be :size.',</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">82</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'file'&nbsp;<span class="TextSegInsigDiff">&nbsp;&nbsp; </span>=&gt; 'The :attribute must be :size kilobytes.',</td>
+<td class="AlignCenter Wrap">&lt;&gt;</td>
+<td class="TextItemNum AlignRight Wrap">107</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'file' =&gt; 'The :attribute must be :size kilobytes.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">83</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'string'&nbsp;<span class="TextSegInsigDiff"> </span>=&gt; 'The :attribute must be :size characters.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">108</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'string' =&gt; 'The :attribute must be :size characters.',</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">84</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'array'&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>=&gt; 'The :attribute must contain :size items.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">109</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'array' =&gt; 'The :attribute must contain :size items.',</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight Wrap">85</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">110</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">86</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'string'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be a string.',</td>
+<td class="AlignCenter Wrap">&lt;&gt;</td>
+<td class="TextItemNum AlignRight Wrap">111</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'string' =&gt; 'The :attribute must be a string.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">87</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'timezone'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute must be a valid zone.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">112</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'timezone' =&gt; 'The :attribute must be a valid zone.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">88</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'unique'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute has already been taken.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">113</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'unique' =&gt; 'The :attribute has already been taken.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">89</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'uploaded'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>=&gt; 'The :attribute failed to upload.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">114</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'uploaded' =&gt; 'The :attribute failed to upload.',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">90</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'url'&nbsp;<span class="TextSegInsigDiff">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span>=&gt; 'The :attribute format is invalid.',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">115</td>
+<td class="TextItemInsigMod Wrap">&nbsp;&nbsp;&nbsp; 'url' =&gt; 'The :attribute format is invalid.',</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">&nbsp;</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">116</td>
+<td class="TextItemSigMod Wrap"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">'uuid'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=&gt;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'The</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:attribute</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">must</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">be</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">a</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">valid</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">UUID.',</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">91</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">117</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">92</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">118</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">93</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">119</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">94</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | Custom Validation Language Lines</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">120</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | Custom Validation Language Lines</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">95</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">121</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">96</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">122</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">97</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | Here you may specify custom validation messages for attributes using the</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">123</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | Here you may specify custom validation messages for attributes using the</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">98</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | convention &quot;attribute.rule&quot; to name the lines. This makes it quick to</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">124</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | convention &quot;attribute.rule&quot; to name the lines. This makes it quick to</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">99</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | specify a specific custom language line for a given attribute rule.</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">125</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | specify a specific custom language line for a given attribute rule.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">100</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">126</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">101</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">127</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">102</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">128</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">103</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; 'custom' =&gt; [</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">129</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; 'custom' =&gt; [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">104</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'attribute-name' =&gt; [</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">130</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; 'attribute-name' =&gt; [</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">105</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'rule-name' =&gt; 'custom-message',</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">131</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 'rule-name' =&gt; 'custom-message',</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">106</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ],</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">132</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ],</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">107</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">133</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; ],</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">108</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">134</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">109</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; /*</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">135</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; /*</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">110</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">136</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">111</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | Custom Validation Attributes</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">137</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; | Custom Validation Attributes</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">112</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">138</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |--------------------------------------------------------------------------</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">113</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">139</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">114</td>
+<td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; | The following language lines are used to swap attribute place<span class="TextSegSigDiff">-</span>holder<span class="TextSegSigDiff">s</span></td>
+<td class="AlignCenter Wrap">&lt;&gt;</td>
+<td class="TextItemNum AlignRight Wrap">140</td>
+<td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; | The following language lines are used to swap <span class="TextSegSigDiff">our</span><span class="TextSegInsigDiff"> </span>attribute placeholder</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">115</td>
+<td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; | with something more reader friendly such as E-Mail Address instead</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">141</td>
+<td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; | with something more reader friendly such as <span class="TextSegSigDiff">&quot;</span>E-Mail Address<span class="TextSegSigDiff">&quot;</span> instead</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">116</td>
+<td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; | of &quot;email&quot;. This simply helps us make message<span class="TextSegSigDiff">s</span> <span class="TextSegSigDiff">a</span> <span class="TextSegSigDiff">littl</span>e<span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">clean</span><span class="TextSegSigDiff">er</span>.</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">142</td>
+<td class="TextItemSigMod Wrap">&nbsp;&nbsp;&nbsp; | of &quot;email&quot;. This simply helps us make <span class="TextSegSigDiff">our</span><span class="TextSegInsigDiff"> </span>message <span class="TextSegSigDiff">more</span> e<span class="TextSegSigDiff">xpressive</span>.</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight Wrap">117</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+<td class="AlignCenter Wrap">=</td>
+<td class="TextItemNum AlignRight Wrap">143</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; |</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">118</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; */</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">144</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; */</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">119</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">145</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">120</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; 'attributes' =&gt; [],</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">146</td>
+<td class="TextItemSame Wrap">&nbsp;&nbsp;&nbsp; 'attributes' =&gt; [],</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight Wrap">121</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">147</td>
+<td class="TextItemSame Wrap">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight Wrap">122</td>
+<td class="TextItemSame Wrap">];</td>
+<td class="AlignCenter Wrap">&nbsp;</td>
+<td class="TextItemNum AlignRight Wrap">148</td>
+<td class="TextItemSame Wrap">];</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

@@ -1,0 +1,19 @@
+@mixin bs-tagsinput-theme($border) {
+  .bootstrap-tagsinput.focus {
+    border-color: $border !important;
+  }
+}
+
+@mixin material-bs-tagsinput-theme($border) {
+  .bootstrap-tagsinput.focus {
+    border-color: $border !important;
+    box-shadow: 0 -1px 0 0 $border inset !important;
+  }
+}
+
+@mixin bg-tagsinput-validation-state($state, $border) {
+  .is-#{$state}.bootstrap-tagsinput,
+  .is-#{$state} .bootstrap-tagsinput {
+    border-color: $border;
+  }
+}

@@ -1,0 +1,406 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+.TextSegElementKeyword { font-weight: bold; }
+.TextSegElementIdentifier { }
+.TextSegElementNumber { color: #2E9269; }
+.TextSegElementString { color: #3A7726; }
+.TextSegElementComment { color: #786A41; }
+.TextSegElementOperator { }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/laravel-vue-starter/resources/assets/src/globals.js &nbsp;
+<br/>
+Right file: appwork-v1_4_0/laravel-vue-starter/resources/assets/src/globals.js &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">layoutHelpers</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'@/layout/helpers.js'</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">layoutHelpers</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'@/layout/helpers.js'</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementKeyword">export</span> <span class="TextSegElementKeyword">default</span> <span class="TextSegElementKeyword">function</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">export</span> <span class="TextSegElementKeyword">default</span> <span class="TextSegElementKeyword">function</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Public url</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Public url</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; publicUrl: <span class="TextSegSigDiff">'/'</span>,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; publicUrl: <span class="TextSegSigDiff">process</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">env</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">BASE_URL</span>,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Layout helpers</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Layout helpers</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Check for RTL layout</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Check for RTL layout</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">isRTL</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">isRTL</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">documentElement</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">getAttribute</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'dir'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'rtl'</span> <span class="TextSegElementOperator">||</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">documentElement</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">getAttribute</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'dir'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'rtl'</span> <span class="TextSegElementOperator">||</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">body</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">getAttribute</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'dir'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'rtl'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">body</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">getAttribute</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'dir'</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'rtl'</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Check if IE</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Check if IE</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">isIEMode</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">isIEMode</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementKeyword">typeof</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">[</span><span class="TextSegElementString">'documentMode'</span><span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'number'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementKeyword">typeof</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">[</span><span class="TextSegElementString">'documentMode'</span><span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementString">'number'</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Check if IE10</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Check if IE10</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">isIE10Mode</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">isIE10Mode</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">isIEMode</span> <span class="TextSegElementOperator">&amp;&amp;</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">[</span><span class="TextSegElementString">'documentMode'</span><span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementNumber">10</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">isIEMode</span> <span class="TextSegElementOperator">&amp;&amp;</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">[</span><span class="TextSegElementString">'documentMode'</span><span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementNumber">10</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Layout navbar color</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Layout navbar color</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">layoutNavbarBg</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">layoutNavbarBg</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementString">'navbar-theme'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementString">'navbar-theme'</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Layout sidenav color</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Layout sidenav color</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">layoutSidenavBg</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">layoutSidenavBg</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementString">'sidenav-theme'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementString">'sidenav-theme'</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Layout footer color</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Layout footer color</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">layoutFooterBg</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">get</span> <span class="TextSegElementIdentifier">layoutFooterBg</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementString">'footer-theme'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementString">'footer-theme'</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Animate scrollTop</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementComment">// Animate scrollTop</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">scrollTop</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">to</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">duration</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">element</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">scrollingElement</span> <span class="TextSegElementOperator">||</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">documentElement</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">scrollTop</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">to</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">duration</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">element</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">scrollingElement</span> <span class="TextSegElementOperator">||</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">documentElement</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">element</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">scrollTop</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementIdentifier">to</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementKeyword">return</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">element</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">scrollTop</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementIdentifier">to</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementKeyword">return</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">start</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">element</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">scrollTop</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">start</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">element</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">scrollTop</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">change</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">to</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementIdentifier">start</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">change</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">to</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementIdentifier">start</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">startDate</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">+</span><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Date</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">startDate</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">+</span><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Date</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// t = current time; b = start value; c = change in value; d = duration</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// t = current time; b = start value; c = change in value; d = duration</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">easeInOutQuad</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">t</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">b</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">c</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">d</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">easeInOutQuad</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">t</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">b</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">c</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">d</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">/=</span> <span class="TextSegElementIdentifier">d</span> <span class="TextSegElementOperator">/</span> <span class="TextSegElementNumber">2</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">/=</span> <span class="TextSegElementIdentifier">d</span> <span class="TextSegElementOperator">/</span> <span class="TextSegElementNumber">2</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementNumber">1</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">c</span> <span class="TextSegElementOperator">/</span> <span class="TextSegElementNumber">2</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">b</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementNumber">1</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">c</span> <span class="TextSegElementOperator">/</span> <span class="TextSegElementNumber">2</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">b</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">t</span><span class="TextSegElementOperator">--</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">t</span><span class="TextSegElementOperator">--</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementOperator">-</span><span class="TextSegElementIdentifier">c</span> <span class="TextSegElementOperator">/</span> <span class="TextSegElementNumber">2</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementNumber">2</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementNumber">1</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">b</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementOperator">-</span><span class="TextSegElementIdentifier">c</span> <span class="TextSegElementOperator">/</span> <span class="TextSegElementNumber">2</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">*</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">t</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementNumber">2</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementNumber">1</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">b</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">animateScroll</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">animateScroll</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">currentDate</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">+</span><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Date</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">currentDate</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementOperator">+</span><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Date</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">currentTime</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">currentDate</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementIdentifier">startDate</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">currentTime</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">currentDate</span> <span class="TextSegElementOperator">-</span> <span class="TextSegElementIdentifier">startDate</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">element</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">scrollTop</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">parseInt</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">easeInOutQuad</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">currentTime</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">start</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">change</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">duration</span><span class="TextSegElementOperator">))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">element</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">scrollTop</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">parseInt</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">easeInOutQuad</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">currentTime</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">start</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">change</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">duration</span><span class="TextSegElementOperator">))</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">currentTime</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementIdentifier">duration</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">currentTime</span> <span class="TextSegElementOperator">&lt;</span> <span class="TextSegElementIdentifier">duration</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">requestAnimationFrame</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">animateScroll</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">requestAnimationFrame</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">animateScroll</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span> <span class="TextSegElementKeyword">else</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span> <span class="TextSegElementKeyword">else</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">element</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">scrollTop</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">to</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">element</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">scrollTop</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">to</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">animateScroll</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">animateScroll</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

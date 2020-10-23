@@ -1,0 +1,38 @@
+@import '../_custom-variables/pages';
+
+$task-list-item-padding: .625rem 0 !default;
+
+.task-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $task-list-item-padding;
+
+  .ui-todo-item {
+    margin: 0;
+  }
+}
+
+.default-style {
+  @import "../_appwork/include";
+
+  .task-list-item {
+    background: $card-bg;
+
+    + .task-list-item {
+      border-top: 1px solid $gray-100;
+    }
+  }
+}
+
+.material-style {
+  @import "../_appwork/include-material";
+
+  .task-list-item {
+    background: $card-bg;
+
+    + .task-list-item {
+      border-top: 1px solid $gray-100;
+    }
+  }
+}

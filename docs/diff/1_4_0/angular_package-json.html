@@ -1,0 +1,640 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/angular-starter/package.json &nbsp;
+<br/>
+Right file: appwork-v1_4_0/angular-starter/package.json &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame">{</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">{</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &quot;name&quot;: &quot;appwork-angular-starter&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;name&quot;: &quot;appwork-angular-starter&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp; &quot;version&quot;: &quot;1.<span class="TextSegSigDiff">3.1</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; &quot;version&quot;: &quot;1.<span class="TextSegSigDiff">4.0</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; &quot;private&quot;: true,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; &quot;private&quot;: true,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &quot;scripts&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;scripts&quot;: {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng&quot;: &quot;ng&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng&quot;: &quot;ng&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;start&quot;: &quot;ng serve --host 0.0.0.0 --disableHostCheck=true&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;start&quot;: &quot;ng serve --host 0.0.0.0 --disableHostCheck=true&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;build&quot;: &quot;ng build --extractCss=true&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;build&quot;: &quot;ng build --extractCss=true&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;prod&quot;: &quot;ng build --prod --outputHashing=media&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;prod&quot;: &quot;ng build --prod --outputHashing=media&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;prod:hashed&quot;: &quot;ng build --prod=true&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;prod:hashed&quot;: &quot;ng build --prod=true&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;test&quot;: &quot;ng test&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;test&quot;: &quot;ng test&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;lint&quot;: &quot;ng lint&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;lint&quot;: &quot;ng lint&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;e2e&quot;: &quot;ng e2e&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;e2e&quot;: &quot;ng e2e&quot;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; &quot;dependencies&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;dependencies&quot;: {</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@agm/core&quot;: &quot;~1.0.0-beta.2&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@agm/core&quot;: &quot;~1.0.0-beta.2&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/animations&quot;: &quot;~<span class="TextSegSigDiff">7</span>.2.<span class="TextSegSigDiff">10</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/animations&quot;: &quot;~<span class="TextSegSigDiff">8</span>.2.<span class="TextSegSigDiff">8</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/cdk&quot;: &quot;~<span class="TextSegSigDiff">7.3.5</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/cdk&quot;: &quot;~<span class="TextSegSigDiff">8.2.2</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/common&quot;: &quot;~<span class="TextSegSigDiff">7</span>.2.<span class="TextSegSigDiff">10</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/common&quot;: &quot;~<span class="TextSegSigDiff">8</span>.2.<span class="TextSegSigDiff">8</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/compiler&quot;: &quot;~<span class="TextSegSigDiff">7</span>.2.<span class="TextSegSigDiff">10</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/compiler&quot;: &quot;~<span class="TextSegSigDiff">8</span>.2.<span class="TextSegSigDiff">8</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/core&quot;: &quot;~<span class="TextSegSigDiff">7</span>.2.<span class="TextSegSigDiff">10</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/core&quot;: &quot;~<span class="TextSegSigDiff">8</span>.2.<span class="TextSegSigDiff">8</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/forms&quot;: &quot;~<span class="TextSegSigDiff">7</span>.2.<span class="TextSegSigDiff">10</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/forms&quot;: &quot;~<span class="TextSegSigDiff">8</span>.2.<span class="TextSegSigDiff">8</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;@angular/http&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~7.2.10&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/platform-browser&quot;: &quot;~<span class="TextSegSigDiff">7</span>.2.<span class="TextSegSigDiff">10</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/platform-browser&quot;: &quot;~<span class="TextSegSigDiff">8</span>.2.<span class="TextSegSigDiff">8</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/platform-browser-dynamic&quot;: &quot;~<span class="TextSegSigDiff">7</span>.2.<span class="TextSegSigDiff">10</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/platform-browser-dynamic&quot;: &quot;~<span class="TextSegSigDiff">8</span>.2.<span class="TextSegSigDiff">8</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/router&quot;: &quot;~<span class="TextSegSigDiff">7</span>.2.<span class="TextSegSigDiff">10</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/router&quot;: &quot;~<span class="TextSegSigDiff">8</span>.2.<span class="TextSegSigDiff">8</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@ng-bootstrap/ng-bootstrap&quot;: &quot;~<span class="TextSegSigDiff">4</span>.1.<span class="TextSegSigDiff">0</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@ng-bootstrap/ng-bootstrap&quot;: &quot;~<span class="TextSegSigDiff">5</span>.1.<span class="TextSegSigDiff">1</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@ng-select/ng-select&quot;: &quot;~<span class="TextSegSigDiff">2.16.2</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@ng-select/ng-select&quot;: &quot;~<span class="TextSegSigDiff">3.3</span><span class="TextSegSigDiff">.0</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@sweetalert2/ngx-sweetalert2&quot;: &quot;^<span class="TextSegSigDiff">5</span>.0.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@sweetalert2/ngx-sweetalert2&quot;: &quot;^<span class="TextSegSigDiff">6</span>.0.1&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@swimlane/ngx-charts&quot;: &quot;~10.1<span class="TextSegSigDiff">.0</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@swimlane/ngx-charts&quot;: &quot;~1<span class="TextSegSigDiff">2.</span>0.1&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@swimlane/ngx-datatable&quot;: &quot;~1<span class="TextSegSigDiff">4</span>.0.<span class="TextSegSigDiff">0</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@swimlane/ngx-datatable&quot;: &quot;~1<span class="TextSegSigDiff">6</span>.0.<span class="TextSegSigDiff">2</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;angular-2-dropdown-multiselect&quot;: &quot;~1.9.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;angular-2-dropdown-multiselect&quot;: &quot;~1.9.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;angular-calendar&quot;: &quot;~0.27.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;angular-calendar&quot;: &quot;~0.27.1&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;angular-confirmation-popover&quot;: &quot;~4.2.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;angular-confirmation-popover&quot;: &quot;~4.2.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;angular-sortablejs&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~2.7.0&quot;,</span></td>
+<td class="AlignCenter">+-</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;angular2-ladda&quot;: &quot;~2.0.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;angular2-ladda&quot;: &quot;~2.0.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;angular2-text-mask&quot;: &quot;~9.0.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;angular2-text-mask&quot;: &quot;~9.0.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap&quot;: &quot;~4.3.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;bootstrap&quot;: &quot;~4.3.1&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;chart.js&quot;: &quot;^2.8.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;chart.js&quot;: &quot;^2.8.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;chartist&quot;: &quot;~0.11.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;chartist&quot;: &quot;~0.11.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;classlist.js&quot;: &quot;~1.1.20150312&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;classlist.js&quot;: &quot;~1.1.20150312&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;core-js&quot;: &quot;~2.6.5&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;core-js&quot;: &quot;~2.6.5&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;date-fns&quot;: &quot;<span class="TextSegSigDiff">^</span>1.<span class="TextSegSigDiff">29.0</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;date-fns&quot;: &quot;1.<span class="TextSegSigDiff">30.1</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;hammerjs&quot;: &quot;~2.0.8&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;hammerjs&quot;: &quot;~2.0.8&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;highlight.js&quot;: &quot;~9.15.6&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;highlight.js&quot;: &quot;~9.15.6&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;intl&quot;: &quot;~1.2.5&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;intl&quot;: &quot;~1.2.5&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;marked&quot;: &quot;~0.<span class="TextSegSigDiff">6.1</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;marked&quot;: &quot;~0.<span class="TextSegSigDiff">7.0</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;masonry-layout&quot;: &quot;~4.2.1&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;masonry-layout&quot;: &quot;~4.2.1&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;moment&quot;: &quot;~2.24.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;moment&quot;: &quot;~2.24.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng-block-ui&quot;: &quot;~2.1.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng-block-ui&quot;: &quot;~2.1.1&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng-chartist&quot;: &quot;~4.1.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng-chartist&quot;: &quot;~4.1.0&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-archwizard&quot;: &quot;~2.1.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-archwizard&quot;: &quot;~2.1.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ng2-charts&quot;: &quot;~2.<span class="TextSegSigDiff">2</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ng2-charts&quot;: &quot;~2.<span class="TextSegSigDiff">3</span>.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-color-picker&quot;: &quot;~1.3.2&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-color-picker&quot;: &quot;~1.3.2&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ng2-completer&quot;: &quot;^<span class="TextSegSigDiff">2</span>.0.<span class="TextSegSigDiff">8</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ng2-completer&quot;: &quot;^<span class="TextSegSigDiff">3</span>.0.<span class="TextSegSigDiff">2</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-dragula&quot;: &quot;~2.1.1&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-dragula&quot;: &quot;~2.1.1&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-file-upload&quot;: &quot;~1.3.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-file-upload&quot;: &quot;~1.3.0&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-img-cropper&quot;: &quot;~0.9.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-img-cropper&quot;: &quot;~0.9.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ng2-nouislider&quot;: &quot;~1.<span class="TextSegSigDiff">7.7</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ng2-nouislider&quot;: &quot;~1.<span class="TextSegSigDiff">8.2</span>&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-password-strength-bar&quot;: &quot;~1.2.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ng2-password-strength-bar&quot;: &quot;~1.2.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ng2-smart-table&quot;: &quot;~1.<span class="TextSegSigDiff">4</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ng2-smart-table&quot;: &quot;~1.<span class="TextSegSigDiff">5</span>.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-chips&quot;: &quot;~2.<span class="TextSegSigDiff">0.0-beta</span>.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-chips&quot;: &quot;~2.<span class="TextSegSigDiff">1</span>.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-clipboard&quot;: &quot;~12.<span class="TextSegSigDiff">0.0</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-clipboard&quot;: &quot;~12.<span class="TextSegSigDiff">2.1</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-color-picker&quot;: &quot;~<span class="TextSegSigDiff">7.4</span>.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-color-picker&quot;: &quot;~<span class="TextSegSigDiff">8.2</span>.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-contextmenu&quot;: &quot;~5.<span class="TextSegSigDiff">1.1</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-contextmenu&quot;: &quot;~5.<span class="TextSegSigDiff">2.0</span>&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-dropzone-wrapper&quot;: &quot;~<span class="TextSegSigDiff">7.2.1</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-dropzone-wrapper&quot;: &quot;~<span class="TextSegSigDiff">8.0.0</span>&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ngx-image-gallery&quot;: &quot;~1.3.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ngx-image-gallery&quot;: &quot;~1.3.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-markdown-editor&quot;: &quot;~1.<span class="TextSegSigDiff">2.0</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-markdown-editor&quot;: &quot;~<span class="TextSegSigDiff">2.</span>1.<span class="TextSegSigDiff">3</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-perfect-scrollbar&quot;: &quot;~<span class="TextSegSigDiff">7.2.1</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-perfect-scrollbar&quot;: &quot;~<span class="TextSegSigDiff">8.0.0</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;ngx-sortablejs&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~3.1.3&quot;,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-swiper-wrapper&quot;: &quot;~<span class="TextSegSigDiff">7</span>.2<span class="TextSegSigDiff">.1</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-swiper-wrapper&quot;: &quot;~<span class="TextSegSigDiff">8.0</span>.2&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ngx-textarea-autosize&quot;: &quot;^2.0.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ngx-textarea-autosize&quot;: &quot;^2.0.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-toastr&quot;: &quot;~1<span class="TextSegSigDiff">0</span>.0<span class="TextSegSigDiff">.2</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-toastr&quot;: &quot;~1<span class="TextSegSigDiff">1.1</span>.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;ngx-tour-core&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.0.1&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;ngx-tour-ng-bootstrap&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;~4.0.1&quot;,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-trend&quot;: &quot;~<span class="TextSegSigDiff">3.4.1</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;ngx-trend&quot;: &quot;~<span class="TextSegSigDiff">4.0.0</span>&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;nouislider&quot;: &quot;~1<span class="TextSegSigDiff">3.1.4</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;nouislider&quot;: &quot;~1<span class="TextSegSigDiff">4.0.2</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;numeral&quot;: &quot;~2.0.6&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;numeral&quot;: &quot;~2.0.6&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;plyr&quot;: &quot;~2.0.18&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;plyr&quot;: &quot;~2.0.18&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;quill&quot;: &quot;~1.3.6&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;quill&quot;: &quot;~1.3.6&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;rxjs&quot;: &quot;~6.<span class="TextSegSigDiff">4.0</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;rxjs&quot;: &quot;~6.<span class="TextSegSigDiff">5.3</span>&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;<span class="TextSegSigDiff">rx</span>js<span class="TextSegSigDiff">-compat</span>&quot;: &quot;<span class="TextSegSigDiff">^</span>6.<span class="TextSegSigDiff">4</span>.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;<span class="TextSegSigDiff">shepherd.</span>js&quot;: &quot;6.<span class="TextSegSigDiff">0</span>.0<span class="TextSegSigDiff">-beta.1</span>&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;sortablejs&quot;: &quot;~1.<span class="TextSegSigDiff">8</span><span class="TextSegSigDiff">.4</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;sortablejs&quot;: &quot;~1.<span class="TextSegSigDiff">10.1</span>&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;spinkit&quot;: &quot;~1.2.5&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;spinkit&quot;: &quot;~1.2.5&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;sweetalert2&quot;: &quot;~8.<span class="TextSegSigDiff">7</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;sweetalert2&quot;: &quot;~8.<span class="TextSegSigDiff">18</span>.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;text-mask-addons&quot;: &quot;~3.8.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;text-mask-addons&quot;: &quot;~3.8.0&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;toastr&quot;: &quot;~2.1.4&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;toastr&quot;: &quot;~2.1.4&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;tslib&quot;: &quot;^1.<span class="TextSegSigDiff">9</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;tslib&quot;: &quot;^1.<span class="TextSegSigDiff">10</span>.0&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;web-animations-js&quot;: &quot;~2.3.1&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;web-animations-js&quot;: &quot;~2.3.1&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;zone.js&quot;: &quot;~0.<span class="TextSegSigDiff">8.26</span>&quot;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;zone.js&quot;: &quot;~0.<span class="TextSegSigDiff">9.1</span>&quot;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &quot;devDependencies&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;devDependencies&quot;: {</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular-devkit/build-angular&quot;: &quot;~0.<span class="TextSegSigDiff">1</span>3.6&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular-devkit/build-angular&quot;: &quot;~0.<span class="TextSegSigDiff">80</span>3.6&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/cli&quot;: &quot;~<span class="TextSegSigDiff">7</span>.3.6&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/cli&quot;: &quot;~<span class="TextSegSigDiff">8</span>.3.6&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/compiler-cli&quot;: &quot;~<span class="TextSegSigDiff">7</span>.2.<span class="TextSegSigDiff">10</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/compiler-cli&quot;: &quot;~<span class="TextSegSigDiff">8</span>.2.<span class="TextSegSigDiff">8</span>&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/language-service&quot;: &quot;~<span class="TextSegSigDiff">7</span>.2.<span class="TextSegSigDiff">10</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular/language-service&quot;: &quot;~<span class="TextSegSigDiff">8</span>.2.<span class="TextSegSigDiff">8</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@types/chartist&quot;: &quot;~0.9.38&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@types/chartist&quot;: &quot;~0.9.38&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@types/node&quot;: &quot;~8.9.4&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@types/node&quot;: &quot;~8.9.4&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@types/numeral&quot;: &quot;~0.0.22&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@types/numeral&quot;: &quot;~0.0.22&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;codelyzer&quot;: &quot;<span class="TextSegSigDiff">~4.5</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;codelyzer&quot;: &quot;<span class="TextSegSigDiff">^5.0</span>.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&quot;node-sass&quot;:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;^4.12.0&quot;,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;tslint&quot;: &quot;~5.1<span class="TextSegSigDiff">4</span>.0&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;tslint&quot;: &quot;~5.1<span class="TextSegSigDiff">5</span>.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;typescript&quot;: &quot;~3.<span class="TextSegSigDiff">2.2</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;typescript&quot;: &quot;~3.<span class="TextSegSigDiff">5.3</span>&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@types/jasmine&quot;: &quot;~<span class="TextSegSigDiff">2.8</span>.8&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@types/jasmine&quot;: &quot;~<span class="TextSegSigDiff">3.3</span>.8&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@types/jasminewd2&quot;: &quot;~2.0.3&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;@types/jasminewd2&quot;: &quot;~2.0.3&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;jasmine-core&quot;: &quot;~<span class="TextSegSigDiff">2.99.1</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;jasmine-core&quot;: &quot;~<span class="TextSegSigDiff">3.4</span><span class="TextSegSigDiff">.0</span>&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;jasmine-spec-reporter&quot;: &quot;~4.2.1&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;jasmine-spec-reporter&quot;: &quot;~4.2.1&quot;,</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;karma&quot;: &quot;~4.<span class="TextSegSigDiff">0</span>.0&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;karma&quot;: &quot;~4.<span class="TextSegSigDiff">1</span>.0&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;karma-chrome-launcher&quot;: &quot;~2.2.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;karma-chrome-launcher&quot;: &quot;~2.2.0&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;karma-coverage-istanbul-reporter&quot;: &quot;~2.0.1&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;karma-coverage-istanbul-reporter&quot;: &quot;~2.0.1&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;karma-jasmine&quot;: &quot;~<span class="TextSegSigDiff">1</span>.1<span class="TextSegSigDiff">.2</span>&quot;,</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;karma-jasmine&quot;: &quot;~<span class="TextSegSigDiff">2.0</span>.1&quot;,</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;karma-jasmine-html-reporter&quot;: &quot;^<span class="TextSegSigDiff">0.2.2</span>&quot;,</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;karma-jasmine-html-reporter&quot;: &quot;^<span class="TextSegSigDiff">1.4.0</span>&quot;,</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;protractor&quot;: &quot;~5.4.0&quot;,</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;protractor&quot;: &quot;~5.4.0&quot;,</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ts-node&quot;: &quot;~7.0.0&quot;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; &quot;ts-node&quot;: &quot;~7.0.0&quot;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; },</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; },</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &quot;resolutions&quot;: {</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &quot;resolutions&quot;: {</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular-devkit/build-angular/node-sass&quot;: &quot;~4.1<span class="TextSegSigDiff">1</span>.0&quot;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &quot;@angular-devkit/build-angular/node-sass&quot;: &quot;~4.1<span class="TextSegSigDiff">2</span>.0&quot;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; }</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; }</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">}</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">}</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

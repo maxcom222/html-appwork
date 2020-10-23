@@ -1,0 +1,123 @@
+// Buttons
+//
+
+.btn {
+  cursor: pointer;
+
+  &.disabled,
+  &:disabled {
+    cursor: default;
+  }
+}
+
+@if $material-style {
+  .btn {
+    text-transform: uppercase;
+  }
+}
+
+// Babge within button
+.btn .badge {
+  @include transition($btn-transition);
+}
+
+label.btn {
+  margin-bottom: 0;
+}
+
+// *******************************************************************************
+// * Alternate buttons
+
+@each $color, $value in $theme-colors {
+  @if $color != primary {
+    @if $material-style {
+      @include appwork-material-button-variant('.btn-#{$color}', $value);
+      @include appwork-material-button-outline-variant('.btn-outline-#{$color}', $value);
+    } @else {
+      @include appwork-button-variant('.btn-#{$color}', $value);
+      @include appwork-button-outline-variant('.btn-outline-#{$color}', $value);
+    }
+  }
+}
+
+// Default button
+@if $material-style {
+  @include appwork-material-button-variant('.btn-default', $btn-default-bg, $btn-default-color, $btn-default-color);
+  @include appwork-material-button-outline-variant('.btn-outline-default', $btn-default-border, $btn-default-color);
+} @else {
+  @include appwork-button-variant('.btn-default', $btn-default-bg, $btn-default-color, $btn-default-border);
+  @include appwork-button-outline-variant('.btn-outline-default', $btn-default-border, $btn-default-color);
+}
+
+// *******************************************************************************
+// * Sizes
+
+.btn-xl {
+  @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-font-size-xl, $btn-line-height-xl, $btn-border-radius-xl);
+}
+
+.btn-xs {
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-line-height-xs, $btn-border-radius-xs);
+}
+
+// *******************************************************************************
+// * Link buttons
+
+.btn.btn-link {
+  font-size: inherit;
+
+  @if $material-style {
+    text-transform: none;
+
+    .waves-ripple {
+      display: none !important;
+    }
+  }
+}
+
+// *******************************************************************************
+// * Icon button
+
+.icon-btn {
+  $icon-btn-size:    ($btn-font-size    * $btn-line-height)    + ($btn-padding-y    * 2);
+  $icon-btn-size-xl: ($btn-font-size-xl * $btn-line-height-xl) + ($btn-padding-y-xl * 2);
+  $icon-btn-size-lg: ($btn-font-size-lg * $btn-line-height-lg) + ($btn-padding-y-lg * 2);
+  $icon-btn-size-sm: ($btn-font-size-sm * $btn-line-height-sm) + ($btn-padding-y-sm * 2);
+  $icon-btn-size-xs: ($btn-font-size-xs * $btn-line-height-xs) + ($btn-padding-y-xs * 2);
+  $borders-width:    $btn-border-width * 2;
+
+  width: calc(#{$icon-btn-size} + #{$borders-width});
+  padding: 0;
+  line-height: $icon-btn-size;
+
+  &.btn-xl {
+    width: calc(#{$icon-btn-size-xl} + #{$borders-width});
+    line-height: $icon-btn-size-xl;
+  }
+
+  &.btn-lg {
+    width: calc(#{$icon-btn-size-lg} + #{$borders-width});
+    line-height: $icon-btn-size-lg;
+  }
+
+  &.btn-sm {
+    width: calc(#{$icon-btn-size-sm} + #{$borders-width});
+    line-height: $icon-btn-size-sm;
+  }
+
+  &.btn-xs {
+    width: calc(#{$icon-btn-size-xs} + #{$borders-width});
+    line-height: $icon-btn-size-xs;
+  }
+}
+
+// *******************************************************************************
+// * Without border
+
+.btn.borderless {
+  &:not(.active):not(:active):not(:hover):not(:focus),
+  :not(.show) > &.dropdown-toggle:not(:hover):not(:focus) {
+    border-color: transparent;
+    box-shadow: none;
+  }
+}

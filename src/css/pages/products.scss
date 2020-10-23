@@ -1,0 +1,51 @@
+@import '../_custom-variables/pages';
+
+$product-discounts-cell-padding-y: .75rem !default;
+
+// Display slider tooltips only on hover / drag
+.product-list-slider.noUi-target,
+.product-list-slider .noUi-target {
+  .noUi-tooltip {
+    opacity: 0;
+    transition: opacity .2s;
+  }
+
+  &.noUi-state-drag .noUi-tooltip,
+  &:hover .noUi-tooltip {
+    opacity: 1;
+  }
+}
+
+.product-item-table {
+  tr:first-child td {
+    border-top: 0 !important;
+  }
+
+  tr td:first-child {
+    width: 9rem;
+  }
+}
+
+.product-item-discounts-table,
+.product-discounts-edit {
+  thead tr:first-child th {
+    border-top: 0 !important;
+  }
+
+  td,
+  th {
+    padding-top: $product-discounts-cell-padding-y;
+    padding-bottom:$product-discounts-cell-padding-y;
+    vertical-align: middle;
+  }
+}
+
+.product-discounts-edit td > .input-group,
+.product-discounts-edit td > .form-control,
+.product-discounts-edit td > .custom-select {
+  min-width: 7.5rem !important;
+}
+
+.product-image-move {
+  cursor: grab;
+}

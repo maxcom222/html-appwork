@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style docs-generator-page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Settings Panel Generator - Appwork v1.4.0 Docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/bootstrap.css">
+  <link rel="stylesheet" href="../assets/appwork.css">
+  <link rel="stylesheet" href="../assets/theme-corporate.css">
+
+  <link rel="stylesheet" href="../assets/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+</head>
+<body>
+
+
+  <div id="generator-settings-panel">
+    <div class="docs-generator-settings-panel-options p-3">
+      <div class="border p-2 mb-2 mx-n2">
+        <div class="text-tiny text-light mb-2 font-weight-bold">PATHS</div>
+        <input v-model="options.cssPath" type="text" class="form-control form-control-sm mb-2">
+        <input v-model="options.themesPath" type="text" class="form-control form-control-sm mb-2">
+        <input v-model="options.cssFilenamePattern" type="text" class="form-control form-control-sm">
+      </div>
+      <div class="border p-2 mb-2 mx-n2">
+        <div class="text-tiny text-light mb-2 font-weight-bold">COMMON</div>
+        <gen-checkbox v-model="options.rtlSwitcher" class="mb-2">RTL mode switcher</gen-checkbox>
+        <gen-checkbox v-model="options.materialSwitcher" class="mb-0">Material style switcher</gen-checkbox>
+      </div>
+      <div class="border p-2 mb-2 mx-n2">
+        <div class="text-tiny text-light mb-2 font-weight-bold">LAYOUT</div>
+        <gen-checkbox v-model="options.layoutPositionSwitcher" class="mb-2">Layout position switcher</gen-checkbox>
+        <gen-checkbox v-model="options.layoutNavbarFixedSwitcher" class="mb-2">Navbar position switcher</gen-checkbox>
+        <gen-checkbox v-model="options.layoutFooterFixedSwitcher" class="mb-2">Footer position switcher</gen-checkbox>
+        <gen-checkbox v-model="options.layoutReversedSwitcher" class="mb-0">Reversed layout switcher</gen-checkbox>
+      </div>
+      <div class="border p-2 mb-2 mx-n2">
+        <div class="text-tiny text-light mb-2 font-weight-bold">DEFAULT NAVBAR BACKGROUND</div>
+        <gen-select v-model="options.defaultNavbarBg" :disabled="!options.navbarBgSwitcher">
+          <option v-for="option in options.availableNavbarBgs" :value="option">{{option}}</option>
+        </gen-select>
+      </div>
+      <gen-multiselect class="mb-2" :class="{'border p-2 mx-n2': options.navbarBgSwitcher}"
+        v-model="options.availableNavbarBgs" :options="navbarBgs" :min="2" :disabled="!options.navbarBgSwitcher">
+        <gen-checkbox v-model="options.navbarBgSwitcher" class="mb-0">Navbar background switcher</gen-checkbox>
+      </gen-multiselect>
+      <div class="border p-2 mb-2 mx-n2">
+        <div class="text-tiny text-light mb-2 font-weight-bold">DEFAULT SIDENAV BACKGROUND</div>
+        <gen-select v-model="options.defaultSidenavBg" :disabled="!options.sidenavBgSwitcher">
+          <option v-for="option in options.availableSidenavBgs" :value="option">{{option}}</option>
+        </gen-select>
+      </div>
+      <gen-multiselect class="mb-2" :class="{'border p-2 mx-n2': options.sidenavBgSwitcher}"
+        v-model="options.availableSidenavBgs" :options="sidenavBgs" :min="2" :disabled="!options.sidenavBgSwitcher">
+        <gen-checkbox v-model="options.sidenavBgSwitcher" class="mb-0">Sidenav background switcher</gen-checkbox>
+      </gen-multiselect>
+      <div class="border p-2 mb-2 mx-n2">
+        <div class="text-tiny text-light mb-2 font-weight-bold">DEFAULT FOOTER BACKGROUND</div>
+        <gen-select v-model="options.defaultFooterBg" :disabled="!options.footerBgSwitcher">
+          <option v-for="option in options.availableFooterBgs" :value="option">{{option}}</option>
+        </gen-select>
+      </div>
+      <gen-multiselect class="mb-2" :class="{'border p-2 mx-n2': options.footerBgSwitcher}"
+        v-model="options.availableFooterBgs" :options="footerBgs" :min="2" :disabled="!options.footerBgSwitcher">
+        <gen-checkbox v-model="options.footerBgSwitcher" class="mb-0">Footer background switcher</gen-checkbox>
+      </gen-multiselect>
+      <div class="border p-2 mb-2 mx-n2">
+        <div class="text-tiny text-light mb-2 font-weight-bold">DEFAULT THEME</div>
+        <gen-select v-model="options.defaultTheme" :disabled="!options.themesSwitcher">
+          <option v-for="option in options.availableThemes" :value="option.name">{{option.title}}</option>
+        </gen-select>
+      </div>
+      <gen-multiselect :class="{'border p-2 mx-n2': options.themesSwitcher}"
+        v-model="options.availableThemes" :options="themes" :min="2" :disabled="!options.themesSwitcher" :formatter="themeOptionFormatter">
+        <gen-checkbox v-model="options.themesSwitcher" class="mb-0">Theme switcher</gen-checkbox>
+      </gen-multiselect>
+    </div>
+    <div class="docs-generator-settings-panel-content">
+      <pre v-html="highlightedContent"></pre>
+
+      <gen-copy-btn :text="originalContent"></gen-copy-btn>
+    </div>
+  </div>
+
+  <!-- Templates -->
+
+  
+  <textarea class="d-none" id="template__settings-panel">
+window.themeSettings = new ThemeSettings({
+  cssPath: '{{cssPath}}',
+  themesPath: '{{themesPath}}'
+  {%- if cssFilenamePattern %},
+  cssFilenamePattern: '{{cssFilenamePattern}}'
+  {%- endif %}
+  {%- if controls and controls.length %},
+  controls: [
+{{printArray(controls, 2) | safe}}
+  ]
+  {%- elif controls and not controls.length %},
+  controls: []
+  {%- endif %}
+  {%- if defaultNavbarBg %},
+  defaultNavbarBg: '{{defaultNavbarBg}}'
+  {%- endif %}
+  {%- if navbarBgs %},
+  navbarBgs: [
+{{printArray(navbarBgs, 2) | safe}}
+  ]
+  {%- endif %}
+  {%- if defaultSidenavBg %},
+  defaultSidenavBg: '{{defaultSidenavBg}}'
+  {%- endif %}
+  {%- if sidenavBgs %},
+  sidenavBgs: [
+{{printArray(sidenavBgs, 2) | safe}}
+  ]
+  {%- endif %}
+  {%- if defaultFooterBg %},
+  defaultFooterBg: '{{defaultFooterBg}}'
+  {%- endif %}
+  {%- if footerBgs %},
+  footerBgs: [
+{{printArray(footerBgs, 2) | safe}}
+  ]
+  {%- endif %}
+  {%- if defaultTheme or defaultTheme === 0 %},
+  defaultTheme: {{defaultTheme}}
+  {%- endif %}
+  {%- if availableThemes %},
+  availableThemes: [
+    {%- for theme in availableThemes %}
+    { name: '{{theme.name}}', title: '{{theme.title}}', colors: { primary: '{{theme.colors.primary}}', navbar: '{{theme.colors.navbar}}', sidenav: '{{theme.colors.sidenav}}' } }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+  {%- endif %}
+});
+</textarea>
+
+
+  <!-- Scripts -->
+
+  <script src="../assets/layout-helpers.js"></script>
+  <script src="../assets/theme-settings.js"></script>
+  <script src="../assets/generator.js"></script>
+  <script src="../assets/generator-settings-panel.js"></script>
+
+</body>
+</html>

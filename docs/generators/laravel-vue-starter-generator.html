@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style docs-generator-page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Laravel + Vue.js Starter Template Generator - Appwork v1.4.0 Docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/bootstrap.css">
+  <link rel="stylesheet" href="../assets/appwork.css">
+  <link rel="stylesheet" href="../assets/theme-corporate.css">
+
+  <link rel="stylesheet" href="../assets/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+</head>
+<body>
+
+<div id="generator-laravel-vue">
+    <div class="docs-generator-wrapper">
+      <div class="docs-generator-settings p-4">
+        <gen-select v-model="options.style" :options="styleOptions" class="mb-2"></gen-select>
+        <gen-checkbox v-model="options.materialRipple" :disabled="options.style !== 'material' && !options.settingsPanel" class="mb-2">Material ripple</gen-checkbox>
+        
+        <gen-checkbox v-model="options.splashScreen" class="mb-2">Splash screen</gen-checkbox>
+        
+        <gen-checkbox v-model="options.rtlSupport" class="mb-2">RTL support</gen-checkbox>
+        <gen-checkbox v-model="options.rtlMode" :disabled="!options.rtlSupport" class="mb-2">RTL mode</gen-checkbox>
+        <gen-checkbox v-model="options.settingsPanel" class="mb-2">Theme settings panel</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">PAGE LAYOUT</div>
+
+        <gen-select v-model="options.pageLayout" :options="pageLayoutOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">LAYOUT OPTIONS</div>
+
+        <gen-select v-model="options.layoutPosition" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in layoutPositionOptions" :value="option[0]" :disabled="layoutPositionOptionDisabled(option[0])">{{option[1]}}</option>
+        </gen-select>
+        <gen-checkbox v-model="options.fixedNavbar" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">Fixed navbar</gen-checkbox>
+        <gen-checkbox v-model="options.fixedFooter" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">Fixed footer</gen-checkbox>
+        <gen-checkbox v-model="options.reversedLayout" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Reversed</gen-checkbox>
+        <gen-checkbox v-model="options.collapsedSidenav" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Collapsed sidenav</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">THEME</div>
+
+        <gen-select v-model="options.theme" :options="themeOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">NAVBAR BG</div>
+
+        <gen-select v-model="options.navbarBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">
+          <option v-for="option in navbarBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">SIDENAV BG</div>
+
+        <gen-select v-model="options.sidenavBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'blank'">
+          <option v-for="option in sidenavBgOptions" :value="option" :disabled="sidenavBgOptionDisabled(option)">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">FOOTER BG</div>
+
+        <gen-select v-model="options.footerBg" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in footerBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+      </div>
+      <div class="docs-generator-content">
+        <gen-tabs v-on:tabchange="tabChange">
+          <gen-tab title="resources/views/application.blade.php"><pre v-html="tabContent['resources/views/application.blade.php']"></pre></gen-tab>
+<gen-tab title="webpack.mix.js"><pre v-html="tabContent['webpack.mix.js']"></pre></gen-tab>
+<gen-tab title="resources/assets/src/router/index.js"><pre v-html="tabContent['resources/assets/src/router/index.js']"></pre></gen-tab>
+<gen-tab title="resources/assets/src/App.vue"><pre v-html="tabContent['resources/assets/src/App.vue']"></pre></gen-tab>
+<gen-tab title="resources/assets/src/globals.js"><pre v-html="tabContent['resources/assets/src/globals.js']"></pre></gen-tab>
+        </gen-tabs>
+      </div>
+    </div>
+
+    <gen-copy-btn :file="curTab" :text="originalContent[curTab]"></gen-copy-btn>
+  </div>
+
+
+  <textarea class="d-none" id="template__application-blade-php">
+
+<!DOCTYPE html>
+
+<html lang="{% raw %}{{{% endraw %} app()->getLocale() {% raw %}}}{% endraw %}"{% if rtlMode %} dir="rtl"{% endif %} class="{{style}}-style{% if pageLayout != 'blank' and layoutPosition %} layout-{{layoutPosition}}{% endif %}{% if reversedLayout %} layout-reversed{% endif %}{% if collapsedSidenav %} layout-collapsed{% endif %}{% if fixedNavbar %} layout-navbar-fixed{% endif %}{% if fixedFooter %} layout-footer-fixed{% endif %}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="csrf-token" content="{% raw %}{{{% endraw %} csrf_token() {% raw %}}}{% endraw %}">
+
+    <title>Laravel + Vue.js Starter</title>
+
+    <!-- Main font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <!-- <link rel="stylesheet" href="{% raw %}{{{% endraw %} mix('/vendor/fonts/fontawesome.css') {% raw %}}}{% endraw %}"> -->
+    <link rel="stylesheet" href="{% raw %}{{{% endraw %} mix('/vendor/fonts/ionicons.css') {% raw %}}}{% endraw %}">
+    <!-- <link rel="stylesheet" href="{% raw %}{{{% endraw %} mix('/vendor/fonts/linearicons.css') {% raw %}}}{% endraw %}"> -->
+    <!-- <link rel="stylesheet" href="{% raw %}{{{% endraw %} mix('/vendor/fonts/open-iconic.css') {% raw %}}}{% endraw %}"> -->
+    <!-- <link rel="stylesheet" href="{% raw %}{{{% endraw %} mix('/vendor/fonts/pe-icon-7-stroke.css') {% raw %}}}{% endraw %}"> -->
+
+    {% if settingsPanel -%}
+    <!-- Core stylesheets -->
+    <link rel="stylesheet" href="{% raw %}{{{% endraw %} mix('/vendor/css/bootstrap{% if style == 'material' %}-material{% endif %}.css') {% raw %}}}{% endraw %}" class="theme-settings-bootstrap-css">
+    <link rel="stylesheet" href="{% raw %}{{{% endraw %} mix('/vendor/css/appwork{% if style == 'material' %}-material{% endif %}.css') {% raw %}}}{% endraw %}" class="theme-settings-appwork-css">
+    <link rel="stylesheet" href="{% raw %}{{{% endraw %} mix('/vendor/css/theme-{{theme}}{% if style == 'material' %}-material{% endif %}.css') {% raw %}}}{% endraw %}" class="theme-settings-theme-css">
+    <link rel="stylesheet" href="{% raw %}{{{% endraw %} mix('/vendor/css/colors{% if style == 'material' %}-material{% endif %}.css') {% raw %}}}{% endraw %}" class="theme-settings-colors-css">
+    <link rel="stylesheet" href="{% raw %}{{{% endraw %} mix('/vendor/css/uikit.css') {% raw %}}}{% endraw %}">
+    {% endif %}
+
+    {% if materialRipple %}
+    <!-- Material ripple -->
+    <script src="{% raw %}{{{% endraw %} mix('/vendor/js/material-ripple.js') {% raw %}}}{% endraw %}"></script>
+    {% endif %}
+    {%- if materialRipple and not settingsPanel -%}
+    <script>window.attachMaterialRippleOnLoad();</script>
+    {% endif %}
+
+    {% if pageLayout != 'blank' or settingsPanel %}
+    <!-- Layout helpers -->
+    <script src="{% raw %}{{{% endraw %} mix('/vendor/js/layout-helpers.js') {% raw %}}}{% endraw %}"></script>
+    {% endif %}
+
+    {% if settingsPanel %}
+    <!-- Theme settings -->
+    <script src="{% raw %}{{{% endraw %} mix('/vendor/js/theme-settings.js') {% raw %}}}{% endraw %}"></script>
+    <script>
+        // Use settings panel generator to configure the plugin
+        window.themeSettings = new ThemeSettings({
+            cssPath: '',
+            themesPath: '',
+            pathResolver: function(path) {
+                var resolvedPaths = {
+                    // Core stylesheets
+                    //
+                    @foreach (['bootstrap', 'appwork', 'colors'] as $name)
+                    '{% raw %}{{{% endraw %} $name {% raw %}}}{% endraw %}.css': '{% raw %}{{{% endraw %} mix("/vendor/css/{$name}.css") {% raw %}}}{% endraw %}',
+                    '{% raw %}{{{% endraw %} $name {% raw %}}}{% endraw %}-material.css': '{% raw %}{{{% endraw %} mix("/vendor/css/{$name}-material.css") {% raw %}}}{% endraw %}',
+                    @endforeach
+
+                    // UI Kit
+                    'uikit.css': '{% raw %}{{{% endraw %} mix("/vendor/css/uikit.css") {% raw %}}}{% endraw %}',
+
+                    // Themes
+                    //
+                    @foreach (['air', 'corporate', 'cotton', 'gradient', 'paper', 'shadow', 'soft', 'sunrise', 'twitlight', 'vibrant'] as $name)
+                    'theme-{% raw %}{{{% endraw %} $name {% raw %}}}{% endraw %}.css': '{% raw %}{{{% endraw %} mix("/vendor/css/theme-{$name}.css") {% raw %}}}{% endraw %}',
+                    'theme-{% raw %}{{{% endraw %} $name {% raw %}}}{% endraw %}-material.css': '{% raw %}{{{% endraw %} mix("/vendor/css/theme-{$name}-material.css") {% raw %}}}{% endraw %}',
+                    @endforeach
+                }
+
+                return resolvedPaths[path] || path;
+            }
+        });
+    </script>
+    {% endif %}
+</head>
+<body>
+    {% if splashScreen %}
+    <!-- Splash screen -->
+    <div class="app-splash-screen" style="background: #fff; position: fixed; z-index: 99999999; top: 0; right: 0; bottom: 0; left: 0; opacity: 1; -webkit-transition: opacity .3s; transition: opacity .3s;">
+      <div class="app-splash-screen-content" style="position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+        <span class="text-large font-weight-bolder">CompanyName</span>
+      </div>
+    </div>
+    <!-- / Splash screen -->
+    {% endif %}
+
+    <div id="app"></div>
+
+    <script src="{% raw %}{{{% endraw %} mix('/entry-point.js') {% raw %}}}{% endraw %}"></script>
+
+</body>
+</html>
+
+</textarea>
+  <textarea class="d-none" id="template__webpack-mix-js">
+
+const { EnvironmentPlugin } = require('webpack')
+const mix = require('laravel-mix')
+const glob = require('glob')
+const path = require('path')
+
+/*
+ |--------------------------------------------------------------------------
+ | Mix config
+ |--------------------------------------------------------------------------
+ */
+
+mix.options({
+    postCss: [require('autoprefixer')]
+});
+
+/*
+ |--------------------------------------------------------------------------
+ | Webpack config
+ |--------------------------------------------------------------------------
+ */
+
+mix.webpackConfig({
+    plugins: [
+        new EnvironmentPlugin({
+            // Application's public url
+            BASE_URL: '/'
+        })
+    ],
+    module: {
+        rules: [{
+            test: /node_modules(?:\/|\\).+\.js$/,
+            loader: 'babel-loader',
+            include: [
+                path.join(__dirname, 'node_modules/bootstrap-vue'),
+                path.join(__dirname, 'node_modules/vuejs-datepicker'),
+                path.join(__dirname, 'node_modules/vue-echarts'),
+                path.join(__dirname, 'node_modules/resize-detector'),
+                path.join(__dirname, 'node_modules/vue-c3'),
+                path.join(__dirname, 'node_modules/vue-masonry'),
+                path.join(__dirname, 'node_modules/vue-cropper'),
+                path.join(__dirname, 'node_modules/vuedraggable'),
+                path.join(__dirname, 'node_modules/vue-simplemde'),
+                path.join(__dirname, 'node_modules/sweet-modal-vue'),
+            ],
+            options: {
+                presets: [['@babel/preset-env', { targets: 'last 2 versions, ie >= 10' }]],
+                plugins: ['@babel/plugin-transform-destructuring', '@babel/plugin-proposal-object-rest-spread', '@babel/plugin-transform-template-literals'],
+                babelrc: false
+            }
+        }]
+    },
+    resolve: {
+        alias: {
+            '@': path.join(__dirname, 'resources/assets/src'),
+            'node_modules': path.join(__dirname, 'node_modules')
+        }
+    }
+})
+
+/*
+ |--------------------------------------------------------------------------
+ | Vendor assets
+ |--------------------------------------------------------------------------
+ */
+
+function mixAssetsDir(query, cb) {
+    (glob.sync('resources/assets/' + query) || []).forEach(f => {
+        f = f.replace(/[\\\/]+/g, '/');
+        cb(f, f.replace('resources/assets', 'public'));
+    });
+}
+
+const sassOptions = {
+    implementation: () => require('node-sass')
+};
+
+{% if settingsPanel -%}
+// Core stylesheets
+mix.sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/bootstrap.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/bootstrap-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/appwork.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/appwork-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/colors.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/colors-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/uikit.scss', 'public/vendor/css', sassOptions);
+
+// Themes
+mix.sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-air.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-air-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-corporate.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-corporate-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-cotton.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-cotton-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-gradient.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-gradient-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-paper.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-paper-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-shadow.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-shadow-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-soft.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-soft-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-sunrise.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-sunrise-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-twitlight.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-twitlight-material.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-vibrant.scss', 'public/vendor/css', sassOptions)
+   .sass('resources/assets/src/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-vibrant-material.scss', 'public/vendor/css', sassOptions);
+{%- endif %}
+
+// Core javascripts
+mixAssetsDir('vendor/js/**/*.js', (src, dest) => mix.scripts(src, dest));
+
+// Fonts
+mixAssetsDir('vendor/fonts/*.css', (src, dest) => mix.copy(src, dest));
+mixAssetsDir('vendor/fonts/*/*', (src, dest) => mix.copy(src, dest));
+
+/*
+ |--------------------------------------------------------------------------
+ | Entry point
+ |--------------------------------------------------------------------------
+ */
+
+mix.js('resources/assets/src/entry-point.js', 'public');
+
+if (Mix.isUsing('hmr')) {
+    mix.disableNotifications();
+} else {
+    mix.version();
+}
+
+</textarea>
+  <textarea class="d-none" id="template__globals-js">
+
+import layoutHelpers from '@/layout/helpers.js'
+{% if settingsPanel -%}
+import themeSettings from '@/vendor/libs/theme-settings/theme-settings.js'
+{%- endif %}
+
+export default function () {
+  return {
+    // Public url
+    publicUrl: process.env.BASE_URL,
+
+    // Layout helpers
+    layoutHelpers,
+
+    {% if settingsPanel -%}
+    // Theme settings
+    themeSettings,
+    {%- endif %}
+
+    // Check for RTL layout
+    get isRTL () {
+      return document.documentElement.getAttribute('dir') === 'rtl' ||
+             document.body.getAttribute('dir') === 'rtl'
+    },
+
+    // Check if IE
+    get isIEMode () {
+      return typeof document['documentMode'] === 'number'
+    },
+
+    // Check if IE10
+    get isIE10Mode () {
+      return this.isIEMode && document['documentMode'] === 10
+    },
+
+    // Layout navbar color
+    get layoutNavbarBg () {
+      {% if settingsPanel -%}
+      return this.themeSettings.getOption('navbarBg') || '{{navbarBg}}'
+      {%- else -%}
+      return '{{navbarBg}}'
+      {%- endif %}
+    },
+
+    // Layout sidenav color
+    get layoutSidenavBg () {
+      {% if settingsPanel -%}
+      return this.themeSettings.getOption('sidenavBg') || '{{sidenavBg}}'
+      {%- else -%}
+      return '{{sidenavBg}}'
+      {%- endif %}
+    },
+
+    // Layout footer color
+    get layoutFooterBg () {
+      {% if settingsPanel -%}
+      return this.themeSettings.getOption('footerBg') || '{{footerBg}}'
+      {%- else -%}
+      return '{{footerBg}}'
+      {%- endif %}
+    },
+
+    // Animate scrollTop
+    scrollTop (to, duration, element = document.scrollingElement || document.documentElement) {
+      if (element.scrollTop === to) return
+      const start = element.scrollTop
+      const change = to - start
+      const startDate = +new Date()
+
+      // t = current time; b = start value; c = change in value; d = duration
+      const easeInOutQuad = (t, b, c, d) => {
+        t /= d / 2
+        if (t < 1) return c / 2 * t * t + b
+        t--
+        return -c / 2 * (t * (t - 2) - 1) + b
+      }
+
+      const animateScroll = () => {
+        const currentDate = +new Date()
+        const currentTime = currentDate - startDate
+        element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration))
+        if (currentTime < duration) {
+          requestAnimationFrame(animateScroll)
+        } else {
+          element.scrollTop = to
+        }
+      }
+
+      animateScroll()
+    }
+  }
+}
+
+</textarea>
+  <textarea class="d-none" id="template__router">
+
+import Vue from 'vue'
+import Router from 'vue-router'
+import Meta from 'vue-meta'
+import NotFound from '@/components/NotFound'
+
+import globals from '@/globals'
+
+// Layouts
+import {{layoutClass(pageLayout)}} from '@/layout/{{layoutClass(pageLayout)}}'
+
+Vue.use(Router)
+Vue.use(Meta)
+
+const router = new Router({
+  base: '/',
+  mode: 'history',
+  routes: [{
+    path: '/',
+    component: {{layoutClass(pageLayout)}},
+    children: [{
+      path: '',
+      component: () => import('@/components/Home')
+    }, {
+      path: 'page-2',
+      component: () => import('@/components/Page2')
+    }]
+  }, {
+    // 404 Not Found page
+    path: '*',
+    component: NotFound
+  }]
+})
+
+router.afterEach(() => {
+  {% if splashScreen -%}
+  // Remove initial splash screen
+  const splashScreen = document.querySelector('.app-splash-screen')
+  if (splashScreen) {
+    splashScreen.style.opacity = 0
+    setTimeout(() => splashScreen && splashScreen.parentNode.removeChild(splashScreen), 300)
+  }
+
+  {% endif -%}
+
+  // On small screens collapse sidenav
+  if (window.layoutHelpers && window.layoutHelpers.isSmallScreen() && !window.layoutHelpers.isCollapsed()) {
+    setTimeout(() => window.layoutHelpers.setCollapsed(true, true), 10)
+  }
+
+  // Scroll to top of the page
+  globals().scrollTop(0, 0)
+})
+
+router.beforeEach((to, from, next) => {
+  // Set loading state
+  document.body.classList.add('app-loading')
+
+  // Add tiny timeout to finish page transition
+  setTimeout(() => next(), 10)
+})
+
+export default router
+
+</textarea>
+  <textarea class="d-none" id="template__app-vue">
+
+<template>
+  <div id="app">
+    <router-view/>
+  </div>
+</template>
+
+{% if not settingsPanel -%}
+<style src="@/vendor/styles{% if rtlSupport %}/rtl{% endif %}/bootstrap{% if style == 'material' %}-material{% endif %}.scss" lang="scss"></style>
+<style src="@/vendor/styles{% if rtlSupport %}/rtl{% endif %}/appwork{% if style == 'material' %}-material{% endif %}.scss" lang="scss"></style>
+<style src="@/vendor/styles{% if rtlSupport %}/rtl{% endif %}/theme-{{theme}}{% if style == 'material' %}-material{% endif %}.scss" lang="scss"></style>
+<style src="@/vendor/styles{% if rtlSupport %}/rtl{% endif %}/colors{% if style == 'material' %}-material{% endif %}.scss" lang="scss"></style>
+<style src="@/vendor/styles{% if rtlSupport %}/rtl{% endif %}/uikit.scss" lang="scss"></style>
+{%- endif %}
+<style src="./style.scss" lang="scss"></style>
+
+<script>
+export default {
+  name: 'app',
+  metaInfo: {
+    title: 'Index',
+    titleTemplate: '%s - Laravel + Vue.js Starter'
+  },
+  updated () {
+    // Remove loading state
+    setTimeout(() => document.body.classList.remove('app-loading'), 1)
+  }
+}
+</script>
+
+</textarea>
+
+
+  <!-- Scripts -->
+
+  <script src="../assets/generator.js"></script>
+  <script src="../assets/generator-laravel-vue-starter.js"></script>
+
+</body>
+</html>

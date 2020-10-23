@@ -1,0 +1,140 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/aspnet-core-starter/AspnetCoreStarter/AspnetCoreStarter.csproj &nbsp;
+<br/>
+Right file: appwork-v1_4_0/aspnet-core-starter/AspnetCoreStarter/AspnetCoreStarter.csproj &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame">&lt;Project Sdk=&quot;Microsoft.NET.Sdk.Web&quot;&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&lt;Project Sdk=&quot;Microsoft.NET.Sdk.Web&quot;&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp; &lt;PropertyGroup&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; &lt;PropertyGroup&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &lt;TargetFramework&gt;netcoreapp<span class="TextSegSigDiff">2.2</span>&lt;/TargetFramework&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &lt;TargetFramework&gt;netcoreapp<span class="TextSegSigDiff">3.0</span>&lt;/TargetFramework&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;AspNetCoreHostingModel&gt;InProcess&lt;/AspNetCoreHostingModel&gt;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; &lt;/PropertyGroup&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; &lt;/PropertyGroup&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemInsigMod">&nbsp;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">&lt;ItemGroup&gt;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;PackageReference</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Include=&quot;Microsoft.AspNetCore.App&quot;/&gt;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod">&nbsp;&nbsp;<span class="TextSegInsigDiff">&nbsp; </span>&lt;<span class="TextSegSigDiff">Packa</span>ge<span class="TextSegSigDiff">R</span><span class="TextSegSigDiff">ef</span><span class="TextSegSigDiff">e</span>re<span class="TextSegSigDiff">nce</span><span class="TextSegInsigDiff"> </span><span class="TextSegInsigDiff">I</span><span class="TextSegSigDiff">nclude=&quot;Microsoft.AspN</span>et<span class="TextSegSigDiff">C</span>ore<span class="TextSegSigDiff">.Razor.De</span><span class="TextSegSigDiff">s</span><span class="TextSegSigDiff">ign</span>&quot; <span class="TextSegSigDiff">Vers</span>ion=&quot;<span class="TextSegSigDiff">2.2.0&quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">P</span><span class="TextSegSigDiff">riv</span>ate<span class="TextSegInsigDiff">A</span>s<span class="TextSegSigDiff">sets=&quot;All&quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">/</span>&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;<span class="TextSegSigDiff">Tar</span>ge<span class="TextSegSigDiff">t</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Name=&quot;DebugP</span>re<span class="TextSegSigDiff">Comp</span><span class="TextSegInsigDiff">i</span><span class="TextSegSigDiff">l</span><span class="TextSegSigDiff">e</span><span class="TextSegSigDiff">T</span><span class="TextSegSigDiff">arg</span>et<span class="TextSegSigDiff">&quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Bef</span>ore<span class="TextSegSigDiff">T</span><span class="TextSegSigDiff">a</span><span class="TextSegSigDiff">rg</span><span class="TextSegSigDiff">ets=&quot;Build</span>&quot; <span class="TextSegSigDiff">Condit</span>ion=&quot;<span class="TextSegSigDiff">'$(Configur</span>at<span class="TextSegSigDiff">ion)'!='Rel</span>e<span class="TextSegInsigDiff">a</span>s<span class="TextSegSigDiff">e'</span><span class="TextSegSigDiff">&quot;</span>&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">&lt;Exec</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Command=&quot;npm</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">run</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">build&quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">/&gt;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp; &lt;/<span class="TextSegSigDiff">I</span><span class="TextSegInsigDiff">t</span><span class="TextSegSigDiff">emGroup</span>&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp; &lt;/<span class="TextSegInsigDiff">T</span><span class="TextSegSigDiff">arget</span>&gt;</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">&nbsp; &lt;Target Name=&quot;PreCompileTarget&quot; BeforeTargets=&quot;Buil<span class="TextSegSigDiff">d</span>&quot;&gt;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">&nbsp; &lt;Target Name=&quot;<span class="TextSegSigDiff">Release</span>PreCompileTarget&quot; BeforeTargets=&quot;Buil<span class="TextSegSigDiff">d&quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Condition=&quot;'$(Configuration)'=='Release'</span>&quot;&gt;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &lt;Exec Command=&quot;np<span class="TextSegSigDiff">x</span> <span class="TextSegSigDiff">gu</span><span class="TextSegSigDiff">l</span><span class="TextSegSigDiff">p</span>&quot; /&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">&nbsp;&nbsp;&nbsp; &lt;Exec Command=&quot;np<span class="TextSegSigDiff">m</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">run</span> <span class="TextSegSigDiff">build:prod</span>&quot; /&gt;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; &lt;/Target&gt;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; &lt;/Target&gt;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&lt;/Project&gt;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&lt;/Project&gt;</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

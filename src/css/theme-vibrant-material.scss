@@ -1,0 +1,68 @@
+@import "./_appwork/include-material";
+@import "./_theme/common";
+@import "./_theme/libs";
+@import "./_theme/uikit";
+
+$primary-color: #fc5a5c;
+$body-bg: #f8f8f8;
+
+body {
+  background: $body-bg;
+}
+
+.bg-body {
+  background: $body-bg !important;
+}
+
+@include appwork-common-material-theme($primary-color);
+@include appwork-libs-material-theme($primary-color);
+@include appwork-uikit-theme($primary-color);
+
+// Navbar
+
+@include appwork-navbar-variant('.bg-navbar-theme', $body-bg, $color: $text-muted, $active-color: $body-color);
+
+.layout-navbar {
+  box-shadow: 0 1px 0 $border-color;
+}
+
+// Sidenav
+
+@include appwork-sidenav-variant('.bg-sidenav-theme', #222, $color: #999, $active-color: #fff, $border: rgba(255, 255, 255, .06));
+
+.bg-sidenav-theme {
+  .sidenav-inner > .sidenav-item.active > .sidenav-link .sidenav-icon {
+    color: $primary-color !important;
+  }
+  .sidenav-item.active > .sidenav-link:not(.sidenav-toggle) {
+    background: none !important;
+  }
+  .sidenav-item.active > .sidenav-link:not(.sidenav-toggle) > div:first-of-type {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 0;
+      border-bottom: 2px solid $primary-color;
+    }
+  }
+}
+
+// Footer
+
+@include appwork-footer-variant('.bg-footer-theme', $body-bg, $color: $text-muted, $active-color: $body-color);
+
+.layout-footer {
+  box-shadow: 0 -1px 0 $border-color;
+}
+
+// Custom styling
+
+hr {
+  border-color: $border-color;
+}

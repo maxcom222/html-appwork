@@ -1,0 +1,3439 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style">
+
+<head>
+  <title>Dashboard UI Kit - Appwork</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css">
+
+  <!-- Load polyfills -->
+  <script src="assets/vendor/js/polyfills.js"></script>
+  <script>document['documentMode']===10&&document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
+
+  <script src="assets/vendor/js/material-ripple.js"></script>
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Theme settings -->
+  <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
+  <script src="assets/vendor/js/theme-settings.js"></script>
+  <script>
+    window.themeSettings = new ThemeSettings({
+      cssPath: 'assets/vendor/css/rtl/',
+      themesPath: 'assets/vendor/css/rtl/'
+    });
+  </script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/js/pace.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/vendor/libs/clipboard/clipboard.js"></script>
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="assets/vendor/libs/nouislider/nouislider.css">
+  <link rel="stylesheet" href="assets/vendor/libs/bootstrap-select/bootstrap-select.css">
+  <link rel="stylesheet" href="assets/vendor/libs/datatables/datatables.css">
+  <link rel="stylesheet" href="assets/vendor/libs/plyr/plyr.css">
+  <link rel="stylesheet" href="assets/vendor/libs/swiper/swiper.css">
+  <link rel="stylesheet" href="assets/vendor/libs/blueimp-gallery/gallery.css">
+  <link rel="stylesheet" href="assets/vendor/libs/blueimp-gallery/gallery-indicator.css">
+
+  <!-- highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+  <!-- Custom styles -->
+  <style>
+    #main-header {
+      font-weight: bold;
+      font-size: 1.6875rem;
+      margin: 0 0 -.3125rem 0;
+      padding: .9375rem 3.125rem;
+      line-height: 2.5rem;
+    }
+
+    #main-header-path {
+      opacity: .4;
+    }
+
+    /* Page background */
+    .ui-block,
+    .cui-bottom-spacer {
+      background: transparent;
+    }
+
+    /* Blocks */
+    .ui-block {
+      padding: 2.5rem 0;
+      border-top: .3125rem solid rgba(49, 68, 82, .07);
+    }
+
+    /* Headings */
+    .ui-block-heading {
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      color: rgba(24, 28, 33, .4);
+      font-size: .6875rem;
+    }
+
+    /* Code examples */
+    .uikit-example {
+      position: relative;
+    }
+
+    .uikit-example-btns {
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      transition: all .2s;
+      direction: ltr !important;
+    }
+
+    [dir=rtl] .uikit-example-btns {
+      right: auto;
+      left: 0;
+    }
+
+    .uikit-example:hover .uikit-example-btns {
+      top: -17px;
+      opacity: 1;
+    }
+
+    .uikit-example-btn {
+      display: inline-block;
+      line-height: 1;
+      font-weight: 800;
+      background: #efefef;
+      direction: ltr !important;
+      color: #aaa;
+      padding: .1875rem .3125rem;
+      border-radius: .125rem;
+      white-space: nowrap;
+      font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 11px;
+      margin: 0 4px;
+    }
+
+    .uikit-example-btn.copy::before {
+      content: "COPY";
+    }
+
+    .uikit-example-btn.copied {
+      background: #000 !important;
+      color: #fff !important;
+    }
+
+    .uikit-example-btn.copied::before {
+      content: "COPIED!";
+    }
+
+    /* Modal */
+    .uikit-example-modal-opened {
+      overflow: hidden !important;
+    }
+
+    .uikit-example-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000000;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: auto;
+      background: rgba(255, 255, 255, .95);
+      animation-duration: .2s;
+      direction: ltr !important;
+      text-align: left !important;
+    }
+
+    .uikit-example-modal-opened .uikit-example-modal {
+      display: flex;
+    }
+
+    .uikit-example-modal-content {
+      max-width: 80%;
+      margin: auto;
+      padding: 30px 0;
+    }
+
+    .uikit-example-modal-copy {
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+
+    .uikit-example-modal-copy.copied::before {
+      content: "Copied to clipboard!";
+      position: absolute;
+      display: block;
+      right: 100%;
+      margin-right: 10px;
+      font-size: 14px;
+      white-space: nowrap;
+      background: #111;
+      line-height: 24px;
+      height: 24px;
+      border-radius: 3px;
+      padding: 0 6px;
+      top: 50%;
+      margin-top: -12px;
+    }
+
+    .uikit-example-modal-close {
+      display: block;
+      position: fixed;
+      top: 10px;
+      right: 30px;
+      color: #000 !important;
+      opacity: .2;
+      font-size: 3rem;
+      font-weight: 100;
+    }
+
+    .uikit-example-modal-close:hover {
+      opacity: .9;
+    }
+
+    /* Code */
+    .uikit-example-modal-content>pre {
+      overflow: auto;
+    }
+
+    .uikit-example-modal-content>pre>code {
+      padding: 0;
+      background: none;
+      font-size: 16px;
+    }
+
+    .cui-bottom-spacer {
+      height: 12rem;
+    }
+  </style>
+  <!-- / Custom styles -->
+</head>
+
+<body>
+  <div class="page-loader">
+    <div class="bg-primary"></div>
+  </div>
+
+  <div class="uikit-example-modal animated fadeIn">
+    <a href="javascript:void(0)" class="uikit-example-modal-copy btn icon-btn btn-lg btn-primary rounded-pill"><span class="ion ion-md-clipboard"></span></a>
+    <a href="javascript:void(0)" class="uikit-example-modal-close">&times;</a>
+    <div class="uikit-example-modal-content"></div>
+  </div>
+
+  <h1 id="main-header" class="bg-dark text-white">
+    <span id="main-header-path">UI Kit &nbsp;/&nbsp;</span>
+    <span class="d-inline-block position-relative">
+      <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown">Dashboard</a>
+      <span class="dropdown-menu mt-3">
+        <a href="base.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Base</span></a>
+        <a href="company.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Company</span></a>
+
+        <a href="e-commerce.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">E-Commerce</span></a>
+        <a href="headers-and-footers.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Headers &amp; Footers</span></a>
+        <a href="magazine.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Magazine</span></a>
+        <a href="social.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Social</span></a>
+      </span>
+    </span>
+  </h1>
+
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Statistics</h4>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                Revenue
+              </div>
+              <div class="mt-4">
+                <div style="height:110px;">
+                  <canvas id="statistics-chart-1"></canvas>
+                </div>
+              </div>
+              <div class="card-footer border-0 text-center py-3">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-muted small mb-1">Target</div>
+                    <strong class="text-big">$1225</strong>
+                  </div>
+                  <div class="col">
+                    <div class="text-muted small mb-1">Current</div>
+                    <strong class="text-big">$654</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-1').getContext("2d"), {
+              type: 'line',
+              data: {
+                datasets: [{
+                  data: ['24', '92', '77', '90', '91', '78', '28', '49', '23', '81', '15', '97', '94', '16', '99', '61',
+                    '38', '34', '48', '3', '5', '21', '27', '4', '33', '40', '46', '47', '48', '18'],
+                  borderWidth: 1,
+                  backgroundColor: 'rgba(103, 58, 183, 0.2)',
+                  borderColor: '#673AB7',
+                  pointBorderColor: 'rgba(0,0,0,0)',
+                  pointRadius: 1,
+                  lineTension: 0
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header border-0 pb-0">
+                Revenue
+              </div>
+              <div class="mt-4">
+                <div style="height:110px;">
+                  <canvas id="statistics-chart-2"></canvas>
+                </div>
+              </div>
+              <div class="card-footer text-center py-3">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-muted small mb-1">Target</div>
+                    <strong class="text-big">$1225</strong>
+                  </div>
+                  <div class="col">
+                    <div class="text-muted small mb-1">Current</div>
+                    <strong class="text-big">$654</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-2').getContext("2d"), {
+              type: 'line',
+              data: {
+                datasets: [{
+                  data: [24, 92, 77, 90, 91, 78, 28, 49, 23, 81, 15, 97, 94, 16, 99, 61,
+                    38, 34, 48, 3, 5, 21, 27, 4, 33, 40, 46, 47, 48, 18],
+                  borderWidth: 1,
+                  backgroundColor: 'rgba(0,0,0,0)',
+                  borderColor: '#009688',
+                  pointBorderColor: 'rgba(0,0,0,0)',
+                  pointRadius: 1,
+                  lineTension: 0
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header bg-primary text-white">
+                Revenue
+              </div>
+              <div class="bg-primary pt-4">
+                <div style="height:110px;">
+                  <canvas id="statistics-chart-3"></canvas>
+                </div>
+              </div>
+              <div class="card-footer text-center py-3">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-muted small mb-1">Target</div>
+                    <strong class="text-big">$1225</strong>
+                  </div>
+                  <div class="col">
+                    <div class="text-muted small mb-1">Current</div>
+                    <strong class="text-big">$654</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-3').getContext("2d"), {
+              type: 'bar',
+              data: {
+                datasets: [{
+                  data: [24, 92, 77, 90, 91, 78, 28, 49, 23, 81, 15, 97, 94, 16, 99, 61,
+                    38, 34, 48, 3, 5, 21, 27, 4, 33, 40, 46, 47, 48, 18],
+                  borderWidth: 0,
+                  backgroundColor: '#fff',
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                Revenue
+              </div>
+              <div class="py-4">
+                <div style="height:90px;">
+                  <canvas id="statistics-chart-4"></canvas>
+                </div>
+              </div>
+              <div class="card-footer text-center py-3">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-muted small mb-1">Target</div>
+                    <strong class="text-big">$1225</strong>
+                  </div>
+                  <div class="col">
+                    <div class="text-muted small mb-1">Current</div>
+                    <strong class="text-big">$654</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-4').getContext("2d"), {
+              type: 'pie',
+              data: {
+                labels: ['Target', 'Current'],
+                datasets: [{
+                  data: [1225, 654],
+                  backgroundColor: ['rgba(99,125,138,0.5)', 'rgba(28,151,244,0.5)'],
+                  borderColor: ['#647c8a', '#2196f3'],
+                  borderWidth: 1
+                }]
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                Revenue
+              </div>
+              <div class="d-flex align-items-center position-relative mt-4" style="height:110px;">
+                <div class="w-100 position-absolute" style="height:110px;top:0;">
+                  <canvas id="statistics-chart-5"></canvas>
+                </div>
+                <div class="w-100 text-center text-xlarge">64</div>
+              </div>
+              <div class="text-center mt-3 mb-4">
+                Sales today
+              </div>
+
+              <div class="card-footer text-center py-3">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-muted small mb-1">Target</div>
+                    <strong class="text-big">$1225</strong>
+                  </div>
+                  <div class="col">
+                    <div class="text-muted small mb-1">Current</div>
+                    <strong class="text-big">$654</strong>
+                  </div>
+                  <div class="col">
+                    <div class="text-muted small mb-1">Last month</div>
+                    <strong class="text-big">$2000</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-5').getContext("2d"), {
+              type: 'doughnut',
+              data: {
+                datasets: [{
+                  data: [64, 36],
+                  backgroundColor: ['#4CAF50', '#f9f9f9'],
+                  hoverBackgroundColor: ['#4CAF50', '#f9f9f9'],
+                  borderWidth: 0
+                }]
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                tooltips: { enabled: false },
+                cutoutPercentage: 94,
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header border-0 pb-0">
+                Revenue
+              </div>
+              <div class="d-flex align-items-center position-relative mt-4" style="height:110px;">
+                <div class="w-100 position-absolute" style="height:110px;top:0;">
+                  <canvas id="statistics-chart-6"></canvas>
+                </div>
+                <div class="w-100 text-center text-xlarge">18</div>
+              </div>
+              <div class="text-center mt-3 mb-4">
+                Sales today
+              </div>
+
+              <div class="card-footer text-center py-3">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-muted small mb-1">Target</div>
+                    <strong class="text-big">$1225</strong>
+                  </div>
+                  <div class="col">
+                    <div class="text-muted small mb-1">Current</div>
+                    <strong class="text-big">$654</strong>
+                  </div>
+                  <div class="col">
+                    <div class="text-muted small mb-1">Last month</div>
+                    <strong class="text-big">$2000</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-6').getContext("2d"), {
+              type: 'doughnut',
+              data: {
+                datasets: [{
+                  data: [18, 82],
+                  backgroundColor: ['#673AB7', '#f9f9f9'],
+                  hoverBackgroundColor: ['#673AB7', '#f9f9f9'],
+                  borderWidth: 0
+                }]
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                tooltips: { enabled: false },
+                cutoutPercentage: 94,
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header bg-success text-white">
+                Revenue
+              </div>
+              <div class="bg-success text-white">
+                <div class="d-flex align-items-center position-relative mt-4" style="height:110px;">
+                  <div class="w-100 position-absolute" style="height:110px;top:0;">
+                    <canvas id="statistics-chart-7"></canvas>
+                  </div>
+                  <div class="w-100 text-center text-xlarge">85</div>
+                </div>
+                <div class="text-center mt-3 mb-4">
+                  Sales today
+                </div>
+              </div>
+
+              <div class="card-footer border-0 text-center py-3">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-muted small mb-1">Target</div>
+                    <strong class="text-big">$1225</strong>
+                  </div>
+                  <div class="col">
+                    <div class="text-muted small mb-1">Current</div>
+                    <strong class="text-big">$654</strong>
+                  </div>
+                  <div class="col">
+                    <div class="text-muted small mb-1">Last month</div>
+                    <strong class="text-big">$2000</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-7').getContext("2d"), {
+              type: 'doughnut',
+              data: {
+                datasets: [{
+                  data: [85, 15],
+                  backgroundColor: ['#fff', 'rgba(255,255,255,0.3)'],
+                  hoverBackgroundColor: ['#fff', 'rgba(255,255,255,0.3)'],
+                  borderWidth: 0
+                }]
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                tooltips: { enabled: false },
+                cutoutPercentage: 94,
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                Overdue tasks
+              </div>
+              <div class="card-body d-flex justify-content-between">
+                <div class="text-xlarge">5</div>
+                <div class="text-right small">
+                  10%<br>Last week: 12
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                Task to Do
+              </div>
+              <div class="card-body d-flex justify-content-between">
+                <div class="text-xlarge">14</div>
+                <div class="text-right small">
+                  10%<br>Last week: 12
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                Completed tasks
+              </div>
+              <div class="card-body d-flex justify-content-between">
+                <div class="text-xlarge">7</div>
+                <div class="text-right small">
+                  10%<br>Last week: 12
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                Total tasks
+              </div>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="text-xlarge">34</div>
+                <button type="button" class="btn btn-default btn-sm md-btn-flat">Show all</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header d-flex justify-content-between align-items-center border-0 pb-0">
+                Total revenue
+                <div class="text-info small">
+                  <small class="ion ion-md-arrow-round-up"></small> 12%
+                </div>
+              </div>
+              <div class="card-body d-flex justify-content-between align-items-center py-2">
+                <i class="ion ion-ios-stats text-info text-xlarge"></i>
+                <div class="text-xlarge">34</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                Total revenue
+                <div class="text-success small">
+                  <small class="ion ion-md-arrow-round-up"></small> 12%
+                </div>
+              </div>
+              <div class="card-body d-flex justify-content-between align-items-center py-2">
+                <div class="text-xlarge">$1,534</div>
+                <i class="ion ion-md-trending-up text-lightest text-xlarge"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card bg-primary border-0 text-white mb-4">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                Income amount
+                <div class="small">
+                  <small class="ion ion-md-arrow-round-up"></small> 12%
+                </div>
+              </div>
+              <div class="card-body d-flex justify-content-between align-items-center py-2">
+                <i class="ion ion-ios-stats text-xlarge"></i>
+                <div class="text-xlarge">34</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card bg-success border-0 text-white mb-4">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                Income amount
+                <div class="small">
+                  <small class="ion ion-md-arrow-round-up"></small> 12%
+                </div>
+              </div>
+              <div class="card-body d-flex justify-content-between align-items-center py-2">
+                <i class="ion ion-md-trending-up text-xlarge opacity-50"></i>
+                <div class="text-xlarge">$1,534</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="text-xlarge">99.9%</div>
+                  <div class="text-muted small">SERVER UP TIME</div>
+                </div>
+                <i class="ion ion-md-time text-lighter text-xlarge"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card bg-warning border-0 text-body mb-4">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="text-xlarge">99.9%</div>
+                  <div class="small opacity-50">SERVER UP TIME</div>
+                </div>
+                <i class="ion ion-md-time text-xlarge opacity-25"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="text-xlarge font-weight-bold">+39%</div>
+                  <div class="text-muted small">PAGE VIEWS</div>
+                </div>
+                <div style="height: 30px;width: 80px;">
+                  <canvas id="statistics-chart-8"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-8').getContext("2d"), {
+              type: 'line',
+              data: {
+                datasets: [{
+                  data: [24, 92, 77, 90, 91, 78, 28, 49, 23, 81, 15, 97, 94, 16, 99, 61,
+                    38, 34, 48, 3, 5, 21, 27, 4, 33, 40, 46, 47, 48, 18],
+                  borderWidth: 1,
+                  backgroundColor: 'rgba(0,0,0,0)',
+                  borderColor: '#009688',
+                  pointBorderColor: 'rgba(0,0,0,0)',
+                  pointRadius: 1,
+                  lineTension: 0
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                tooltips: { enabled: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body pb-3">
+                <strong class="text-big">2366</strong> <small class="text-muted">VIEWS</small>
+              </div>
+              <div class="px-2">
+                <div class="w-100" style="height: 50px;">
+                  <canvas id="statistics-chart-9"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-9').getContext("2d"), {
+              type: 'bar',
+              data: {
+                datasets: [{
+                  data: [24, 92, 77, 90, 91, 78, 28, 49, 23, 81, 15, 97, 94, 16, 99, 61,
+                    38, 34, 48, 3, 5, 21, 27, 4, 33, 40, 46, 47, 48, 18],
+                  borderWidth: 0,
+                  backgroundColor: '#673AB7',
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card bg-danger border-0 text-white mb-4">
+              <div class="card-body py-3">
+                <div>Total budget</div>
+                <div class="text-xlarge">$10,534</div>
+              </div>
+              <div class="card-footer small">
+                21% decrease
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-3">
+              <div class="d-flex justify-content-start align-items-center py-2 px-0">
+                <span class="ion ion-ios-mail text-lighter text-large pr-3 pl-4"></span>
+                <div><span class="text-xlarge">12</span>&nbsp; messages</div>
+              </div>
+            </div>
+
+            <div class="card bg-primary border-0 text-white mb-4">
+              <div class="d-flex justify-content-start align-items-center">
+                <span class="ion ion-ios-mail bg-light text-large py-3 px-4"></span>
+                <div class="pl-3"><span class="text-xlarge">12</span>&nbsp; messages</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Sales status</div>
+              <div class="card-body text-center text-xlarge py-3"><strong>3182</strong></div>
+              <div class="card-footer small">
+                <div class="float-right text-danger">
+                  <small class="ion ion-md-arrow-round-down"></small> 11.25%
+                </div>
+                Total sales: 13442
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header border-0 pb-0">Income status</div>
+              <div class="card-body text-center text-success text-xlarge py-3">$3182</div>
+              <div class="card-footer border-0 small pt-0">
+                <div class="float-right text-success">
+                  <small class="ion ion-md-arrow-round-up"></small> 11.25%
+                </div>
+                <span class="text-muted">Total income: $13442</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="float-right text-success">
+                  <small><small class="ion ion-md-arrow-round-up"></small></small> 12%
+                </div>
+                <div class="text-muted small">Total revenue</div>
+                <div class="text-xlarge">$1,534</div>
+              </div>
+              <div style="height: 120px;">
+                <canvas id="statistics-chart-10"></canvas>
+              </div>
+              <a href="javascript:void(0)" class="card-footer d-block text-body">
+                View details →
+              </a>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-10').getContext("2d"), {
+              type: 'line',
+              data: {
+                datasets: [{
+                  data: [24, 92, 77, 90, 91, 78, 28, 49, 23, 81, 15, 97, 94, 16, 99, 61,
+                    38, 34, 48, 3, 5, 21, 27, 4, 33, 40, 46, 47, 48, 18],
+                  borderWidth: 1,
+                  backgroundColor: 'rgba(0,0,0,0)',
+                  borderColor: '#009688',
+                  pointBorderColor: 'rgba(0,0,0,0)',
+                  pointRadius: 1,
+                  lineTension: 0
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                tooltips: { enabled: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="float-right text-success">
+                  <small><small class="ion ion-md-arrow-round-up"></small></small> 12%
+                </div>
+                <div class="text-muted small">Total revenue</div>
+                <div class="text-xlarge">$1,534</div>
+              </div>
+              <div class="px-2">
+                <div class="w-100" style="height: 120px;">
+                  <canvas id="statistics-chart-11"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-11').getContext("2d"), {
+              type: 'bar',
+              data: {
+                datasets: [{
+                  data: [24, 92, 77, 90, 91, 78, 28, 49, 23, 81, 15, 97, 94, 16, 99, 61,
+                    38, 34, 48, 3, 5, 21, 27, 4, 33, 40, 46, 47, 48, 18],
+                  borderWidth: 0,
+                  backgroundColor: '#673AB7',
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="text-muted small">Total revenue</div>
+                  <div class="text-xlarge">$1,534</div>
+                </div>
+                <div class="float-right text-success text-big">
+                  <small><small class="ion ion-md-arrow-round-up"></small></small> 12%
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body pb-0">
+                <div class="text-right small">Jul 2017 - Aug 2017</div>
+                <div class="my-3" style="height: 60px;">
+                  <canvas id="statistics-chart-12"></canvas>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-xs btn-outline-primary icon-btn float-right">
+                  <i class="ion ion-md-sync"></i>
+                </button>
+                Unique visitors
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-12').getContext("2d"), {
+              type: 'bar',
+              data: {
+                datasets: [{
+                  data: [24, 92, 77, 90, 91, 78, 28, 49, 23, 81, 15, 97, 94, 16, 99, 61,
+                    38, 34, 48, 3, 5, 21, 27, 4, 33, 40, 46, 47, 48, 18],
+                  borderWidth: 0,
+                  backgroundColor: '#cddc39',
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body d-flex align-items-center">
+                <span class="ui-icon ui-statistics-icon ion ion-md-cart text-primary"></span>
+                <div class="ml-3">
+                  <div class="text-xlarge">10332</div>
+                  <div class="text-muted small">Total sales</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card bg-primary border-0 text-white mb-4">
+              <div class="card-body d-flex align-items-center">
+                <span class="ui-icon ui-statistics-icon ion ion-md-cart"></span>
+                <div class="ml-3">
+                  <div class="text-xlarge">10332</div>
+                  <div class="small opacity-75">Total sales</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card bg-primary border-0 text-white mb-4">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="ml-3">
+                  <div class="text-xlarge">10332</div>
+                  <div class="small opacity-75">Total sales</div>
+                </div>
+                <span class="ui-icon ui-statistics-icon ion ion-md-cart bg-white border-0 text-primary"></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="ml-3">
+                  <div class="text-xlarge">10332</div>
+                  <div class="text-muted small">Total sales</div>
+                </div>
+                <span class="ui-icon ui-statistics-icon ion ion-md-cart bg-primary text-white"></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <span class="ui-icon ui-statistics-icon ion ion-md-cart text-primary"></span>
+                  <div class="ml-3">
+                    <div class="text-xlarge">10332</div>
+                    <div class="text-muted small">Total sales</div>
+                  </div>
+                </div>
+                <div style="height: 30px;width: 80px;">
+                  <canvas id="statistics-chart-13"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-13').getContext("2d"), {
+              type: 'line',
+              data: {
+                datasets: [{
+                  data: [24, 92, 77, 90, 91, 78, 28, 49, 23, 81, 15, 97, 94, 16, 99, 61,
+                    38, 34, 48, 3, 5, 21, 27, 4, 33, 40, 46, 47, 48, 18],
+                  borderWidth: 1,
+                  backgroundColor: 'rgba(0,0,0,0)',
+                  borderColor: '#009688',
+                  pointBorderColor: 'rgba(0,0,0,0)',
+                  pointRadius: 1,
+                  lineTension: 0
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                tooltips: { enabled: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <span class="ui-icon ui-statistics-icon ion ion-md-cart bg-primary text-white"></span>
+                  <div class="ml-3">
+                    <div class="text-xlarge">10332</div>
+                    <div class="text-muted small">Total sales</div>
+                  </div>
+                </div>
+                <div style="height: 30px;width: 80px;">
+                  <canvas id="statistics-chart-14"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-14').getContext("2d"), {
+              type: 'line',
+              data: {
+                datasets: [{
+                  data: ['24', '92', '77', '90', '91', '78', '28', '49', '23', '81', '15', '97', '94', '16', '99', '61',
+                    '38', '34', '48', '3', '5', '21', '27', '4', '33', '40', '46', '47', '48', '18'],
+                  borderWidth: 1,
+                  backgroundColor: 'rgba(206, 221, 54, 0.2)',
+                  borderColor: '#cedd36',
+                  pointBorderColor: 'rgba(0,0,0,0)',
+                  pointRadius: 1,
+                  lineTension: 0
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                tooltips: { enabled: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card bg-primary border-0 text-white mb-4">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <span class="ui-icon ui-statistics-icon ion ion-md-cart bg-white border-0 text-primary"></span>
+                  <div class="ml-3">
+                    <div class="text-xlarge">10332</div>
+                    <div class="small opacity-75">Total sales</div>
+                  </div>
+                </div>
+                <div style="height: 30px;width: 80px;">
+                  <canvas id="statistics-chart-15"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-15').getContext("2d"), {
+              type: 'bar',
+              data: {
+                datasets: [{
+                  data: [24, 92, 77, 90, 91, 78, 28, 49, 23, 81, 15, 97, 94, 16, 99],
+                  borderWidth: 0,
+                  backgroundColor: '#fff',
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                tooltips: { enabled: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="row no-gutters row-bordered">
+                <div class="col-md-6 col-lg-3">
+
+                  <div class="card-body d-flex align-items-center">
+                    <span class="ui-icon ui-statistics-icon ion ion-md-cart text-primary"></span>
+                    <div class="ml-3">
+                      <div class="text-xlarge">10332</div>
+                      <div class="text-muted small">Total sales</div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-6 col-lg-3">
+
+                  <div class="card-body d-flex align-items-center">
+                    <span class="ui-icon ui-statistics-icon ion ion-md-cash text-success"></span>
+                    <div class="ml-3">
+                      <div class="text-xlarge">$1,534</div>
+                      <div class="text-muted small">Income status</div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-6 col-lg-3">
+
+                  <div class="card-body d-flex align-items-center">
+                    <span class="ui-icon ui-statistics-icon ion ion-md-people text-info"></span>
+                    <div class="ml-3">
+                      <div class="text-xlarge">5,486</div>
+                      <div class="text-muted small">Total users</div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-6 col-lg-3">
+
+                  <div class="card-body d-flex align-items-center">
+                    <span class="ui-icon ui-statistics-icon ion ion-md-eye text-danger"></span>
+                    <div class="ml-3">
+                      <div class="text-xlarge">521,332</div>
+                      <div class="text-muted small">Total visits</div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-4 col-xl-3">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Market DOW</div>
+              <div class="card-body d-flex justify-content-start align-items-center">
+                <span class="ion ion-md-arrow-round-up text-success"></span>
+                <div class="text-xlarge ml-3">32,332.98</div>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col small">
+                    AAPL<br>
+                    <span class="text-success text-nowrap">+ 14.33%</span>
+                  </div>
+                  <div class="col small">
+                    FB<br>
+                    <span class="text-danger text-nowrap">- 12.11%</span>
+                  </div>
+                  <div class="col small">
+                    GOOG<br>
+                    <span class="text-danger text-nowrap">- 5.3%</span>
+                  </div>
+                </div>
+              </div>
+              <hr class="mt-0 mb-3">
+              <div style="height: 80px;">
+                <canvas id="statistics-chart-16"></canvas>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-16').getContext("2d"), {
+              type: 'line',
+              data: {
+                datasets: [{
+                  data: ['24', '92', '77', '90', '91', '78', '28', '49', '23', '81', '15', '97', '94', '16', '99', '61',
+                    '38', '34', '48', '3', '5', '21', '27', '4', '33', '40', '46', '47', '48', '18'],
+                  borderWidth: 1,
+                  backgroundColor: 'rgba(206, 221, 54, 0.2)',
+                  borderColor: '#cedd36',
+                  pointBorderColor: 'rgba(0,0,0,0)',
+                  pointRadius: 1,
+                  lineTension: 0
+                }],
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              },
+
+              options: {
+                scales: { xAxes: [{ display: false, }], yAxes: [{ display: false }] },
+                legend: { display: false },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-lg-8 col-xl-9">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="row no-gutters row-bordered">
+                <div class="col-lg-4">
+
+                  <div class="row no-gutters row-bordered">
+                    <div class="col-12 py-4 px-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="text-big">S&amp;P 500</div>
+                        <div>
+                          <span class="ion ion-md-arrow-round-up text-success"></span> <span class="text-muted">SPY</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 py-2 px-4">
+                      <div class="d-flex justify-content-between small">
+                        <div class="text-success">+&nbsp;14.33%</div>
+                        <div class="text-success">1.25</div>
+                        <div>254</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-lg-4">
+
+                  <div class="row no-gutters row-bordered">
+                    <div class="col-12 py-4 px-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="text-big">Dow Jones</div>
+                        <div>
+                          <span class="ion ion-md-arrow-round-down text-danger"></span> <span class="text-muted">DIA</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 py-2 px-4">
+                      <div class="d-flex justify-content-between small">
+                        <div class="text-danger">-&nbsp;5.3%</div>
+                        <div class="text-danger">4.22</div>
+                        <div>321</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-lg-4">
+
+                  <div class="row no-gutters row-bordered">
+                    <div class="col-12 py-4 px-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="text-big">Nasdaq</div>
+                        <div>
+                          <span class="ion ion-md-arrow-round-up text-success"></span> <span class="text-muted">QQQ</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 py-2 px-4">
+                      <div class="d-flex justify-content-between small">
+                        <div class="text-success">+&nbsp;5.3%</div>
+                        <div class="text-success">4.22</div>
+                        <div>321</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="row no-gutters row-bordered">
+                <div class="col-lg-4">
+
+                  <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>S&amp;P 500</div>
+                    <div class="text-success text-big">+&nbsp;14.33%</div>
+                  </div>
+
+                </div>
+                <div class="col-lg-4">
+
+                  <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>Dow Jones</div>
+                    <div class="text-danger text-big">-&nbsp;5.3%</div>
+                  </div>
+
+                </div>
+                <div class="col-lg-4">
+
+                  <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>Nasdaq</div>
+                    <div class="text-success text-big">+&nbsp;5.3%</div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="row no-gutters row-bordered">
+                <div class="col-lg-4">
+
+                  <div class="card-body">
+                    <div class="text-muted small">Sales status</div>
+                    <div class="text-xlarge">
+                      3182 <small><sup class="text-success">+11.25%</sup></small>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-lg-4">
+
+                  <div class="card-body">
+                    <div class="text-muted small">Income status</div>
+                    <div class="text-xlarge">
+                      $1,534 <small><sup class="text-danger">-11.25%</sup></small>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-lg-4">
+
+                  <div class="card-body">
+                    <div class="text-muted small">Views</div>
+                    <div class="text-xlarge">
+                      2366 <small><sup class="text-success">+11.25%</sup></small>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Statistics</div>
+              <div class="row no-gutters row-bordered">
+                <div class="col-lg-8">
+                  <div class="card-body">
+                    <div style="height: 210px;">
+                      <canvas id="statistics-chart-17"></canvas>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6 col-xl-5 text-muted mb-3">Total sales</div>
+                      <div class="col-6 col-xl-7 mb-3">
+                        <span class="text-big">10,332</span>
+                        <sup class="text-success">+12%</sup>
+                      </div>
+                      <div class="col-6 col-xl-5 text-muted mb-3">Income amount</div>
+                      <div class="col-6 col-xl-7 mb-3">
+                        <span class="text-big">$1,534</span>
+                        <sup class="text-danger">-5%</sup>
+                      </div>
+                      <div class="col-6 col-xl-5 text-muted mb-3">Total budget</div>
+                      <div class="col-6 col-xl-7 mb-3">
+                        <span class="text-big">$10,534</span>
+                        <sup class="text-success">+12%</sup>
+                      </div>
+                      <div class="col-6 col-xl-5 text-muted mb-3">Page views</div>
+                      <div class="col-6 col-xl-7 mb-3">
+                        <span class="text-big">21,332</span>
+                        <sup class="text-danger">-12%</sup>
+                      </div>
+                      <div class="col-6 col-xl-5 text-muted mb-3">Completed tasks</div>
+                      <div class="col-6 col-xl-7 mb-3">
+                        <span class="text-big">12</span>
+                        <sup class="text-success">+12%</sup>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-17').getContext("2d"), {
+              type: 'line',
+              data: {
+                labels: ['2016-10', '2016-11', '2016-12', '2017-01', '2017-02', '2017-03', '2017-04', '2017-05'],
+                datasets: [{
+                  label:           'Visits',
+                  data:            [93, 25, 95, 59, 46, 68, 4, 41],
+                  borderWidth:     1,
+                  backgroundColor: 'rgba(38, 180, 255, 0.1)',
+                  borderColor:     '#26B4FF',
+                  fill: false
+                }, {
+                  label:           'Returns',
+                  data:            [83, 1, 43, 28, 56, 82, 80, 66],
+                  borderWidth:     1,
+                  borderDash:      [5, 5],
+                  backgroundColor: 'rgba(136, 151, 170, 0.1)',
+                  borderColor:     '#8897aa'
+                }],
+              },
+              options: {
+                scales: {
+                  xAxes: [{ gridLines: {display: false}, ticks: {fontColor: '#888'}  }],
+                  yAxes: [{ gridLines: {display: false}, ticks: {fontColor: '#888'}  }]
+                },
+
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Statistics</div>
+              <div class="row no-gutters row-bordered">
+                <div class="col-lg-4 col-xl-3">
+                  <div class="card-body">
+                    <div class="text-muted small">Total sales</div>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <span class="text-big font-weight-semibold">10,332</span>
+                      <span class="text-muted">56%</span>
+                    </div>
+                    <div class="progress mt-1 mb-4" style="height: 4px;">
+                      <div class="progress-bar" style="width: 56%"></div>
+                    </div>
+
+                    <div class="text-muted small">Income amount</div>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <span class="text-big font-weight-semibold">$1,534</span>
+                      <span class="text-muted">28%</span>
+                    </div>
+                    <div class="progress mt-1 mb-4" style="height: 4px;">
+                      <div class="progress-bar" style="width: 28%"></div>
+                    </div>
+
+                    <div class="text-muted small">Total budget</div>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <span class="text-big font-weight-semibold">$10,534</span>
+                      <span class="text-muted">71%</span>
+                    </div>
+                    <div class="progress mt-1" style="height: 4px;">
+                      <div class="progress-bar" style="width: 71%"></div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="col-lg-8 col-xl-9">
+                  <div class="card-body">
+                    <div style="height: 210px;">
+                      <canvas id="statistics-chart-18"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+          $(function() {
+            var chart = new Chart(document.getElementById('statistics-chart-18').getContext("2d"), {
+              type: 'bar',
+              data: {
+                labels: ['2016-10', '2016-11', '2016-12', '2017-01', '2017-02', '2017-03', '2017-04', '2017-05'],
+                datasets: [{
+                  label:           'Visits',
+                  data:            [93, 25, 95, 59, 46, 68, 4, 41],
+                  borderWidth:     1,
+                  backgroundColor: 'rgba(38, 180, 255, 0.2)',
+                  borderColor:     '#26B4FF',
+                  fill: false
+                }, {
+                  label:           'Returns',
+                  data:            [83, 1, 43, 28, 56, 82, 80, 66],
+                  borderWidth:     1,
+                  borderDash:      [5, 5],
+                  backgroundColor: 'rgba(136, 151, 170, 0.2)',
+                  borderColor:     '#8897aa'
+                }],
+              },
+              options: {
+                scales: {
+                  xAxes: [{ gridLines: {display: false}, ticks: {fontColor: '#888'}  }],
+                  yAxes: [{ gridLines: {display: false}, ticks: {fontColor: '#888'}  }]
+                },
+
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            // In RTL mode charts aren't resized properly
+            //
+
+            if ($('html').attr('dir') === 'rtl') {
+              window.addEventListener('resize', function() {
+                chart.resize();
+              });
+            }
+          });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Top 5 referrers</div>
+              <div class="list-group list-group-flush">
+                <div class="list-group-item border-top-0">
+                  <a href="http://www.google.com" class="text-body">www.google.com</a>
+                  <div class="float-right">
+                    12,543 &nbsp;&nbsp; <span class="text-muted">29.77%</span>
+                  </div>
+                  <div class="progress mt-2 mb-1" style="height:4px;">
+                    <div class="progress-bar" style="width: 29.77%;"></div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <a href="http://www.google.de" class="text-body">www.google.de</a>
+                  <div class="float-right">
+                    11,963 &nbsp;&nbsp; <span class="text-muted">28.39%</span>
+                  </div>
+                  <div class="progress mt-2 mb-1" style="height:4px;">
+                    <div class="progress-bar" style="width: 28.39%;"></div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <a href="http://www.twitter.com" class="text-body">www.twitter.com</a>
+                  <div class="float-right">
+                    9,965 &nbsp;&nbsp; <span class="text-muted">23.65%</span>
+                  </div>
+                  <div class="progress mt-2 mb-1" style="height:4px;">
+                    <div class="progress-bar" style="width: 23.65%;"></div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <a href="http://www.facebook.com" class="text-body">www.facebook.com</a>
+                  <div class="float-right">
+                    4,223 &nbsp;&nbsp; <span class="text-muted">10.02%</span>
+                  </div>
+                  <div class="progress mt-2 mb-1" style="height:4px;">
+                    <div class="progress-bar" style="width: 10.02%;"></div>
+                  </div>
+                </div>
+                <div class="list-group-item">
+                  <a href="http://www.yahoo.com" class="text-body">www.yahoo.com</a>
+                  <div class="float-right">
+                    3,437 &nbsp;&nbsp; <span class="text-muted">8.15%</span>
+                  </div>
+                  <div class="progress mt-2 mb-1" style="height:4px;">
+                    <div class="progress-bar" style="width: 8.15%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Top 5 referrers</div>
+              <div class="table-responsive">
+                <table class="table card-table m-0">
+                  <tbody>
+                    <tr>
+                      <td class="border-top-0 text-nowrap align-middle">
+                        <a href="http://www.google.com" class="text-body">www.google.com</a>
+                      </td>
+                      <td class="w-100 border-top-0 align-middle">
+                        <div class="progress" style="height: 4px;">
+                          <div class="progress-bar" style="width: 29.77%;"></div>
+                        </div>
+                      </td>
+                      <td class="border-top-0 text-nowrap align-middle">
+                        11,963&nbsp; <span class="text-muted small">28.39%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap align-middle">
+                        <a href="http://www.google.de" class="text-body">www.google.de</a>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress" style="height: 4px;">
+                          <div class="progress-bar bg-success" style="width: 28.39%;"></div>
+                        </div>
+                      </td>
+                      <td class="text-nowrap align-middle">
+                        11,963&nbsp; <span class="text-muted small">28.39%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap align-middle">
+                        <a href="http://www.twitter.com" class="text-body">www.twitter.com</a>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress" style="height: 4px;">
+                          <div class="progress-bar bg-info" style="width: 23.65%;"></div>
+                        </div>
+                      </td>
+                      <td class="text-nowrap align-middle">
+                        9,965&nbsp; <span class="text-muted small">23.65%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap align-middle">
+                        <a href="http://www.facebook.com" class="text-body">www.facebook.com</a>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress" style="height: 4px;">
+                          <div class="progress-bar bg-warning" style="width: 10.02%;"></div>
+                        </div>
+                      </td>
+                      <td class="text-nowrap align-middle">
+                        4,223&nbsp; <span class="text-muted small">10.02%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap align-middle">
+                        <a href="http://www.yahoo.com" class="text-body">www.yahoo.com</a>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress" style="height: 4px;">
+                          <div class="progress-bar bg-danger" style="width: 8.15%;"></div>
+                        </div>
+                      </td>
+                      <td class="text-nowrap align-middle">
+                        3,437&nbsp; <span class="text-muted small">8.15%</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Lists</h4>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                Site stats
+              </div>
+              <div class="card-datatable table-responsive">
+                <table id="lists-table-1" class="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Unique visits</th>
+                      <th>Views</th>
+                      <th>Failure</th>
+                      <th>Avg. view depth</th>
+                      <th>Avg. time on site</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>05/21/2017</td>
+                      <td>3,654</td>
+                      <td>9,423</td>
+                      <td>5.32%</td>
+                      <td>4.23</td>
+                      <td>5:32</td>
+                    </tr>
+                    <tr>
+                      <td>05/20/2017</td>
+                      <td>4,235</td>
+                      <td>12,442</td>
+                      <td>3.24%</td>
+                      <td>5.66</td>
+                      <td>4:11</td>
+                    </tr>
+                    <tr>
+                      <td>05/19/2017</td>
+                      <td>2,115</td>
+                      <td>5,702</td>
+                      <td>4.33%</td>
+                      <td>4.12</td>
+                      <td>6:23</td>
+                    </tr>
+                    <tr>
+                      <td>05/18/2017</td>
+                      <td>2,316</td>
+                      <td>4,999</td>
+                      <td>6.78%</td>
+                      <td>8.30</td>
+                      <td>3:15</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr class="active">
+                      <th class="font-weight-normal">Total / Avg.</th>
+                      <th class="font-weight-normal"></th>
+                      <th class="font-weight-normal"></th>
+                      <th class="font-weight-normal"></th>
+                      <th class="font-weight-normal"></th>
+                      <th class="font-weight-normal"></th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+
+            <script>
+            $(function() {
+              $('#lists-table-1').dataTable({
+                footerCallback: function (row, data, start, end, display) {
+                  var api = this.api(), data;
+
+                  function getSummary(colIndex, tmpl, avg, percents) {
+                    var len = 0;
+                    var sum = api.column(colIndex).data()
+                      .reduce(function (a, b) {
+                        len++;
+                        return a + (numeral(b).value() * (percents ? 100 : 1));
+                      }, 0);
+
+                    var result = sum / (avg ? len : 1);
+
+                    if (percents) { result = result / 100; }
+
+                    $(api.column(colIndex).footer()).html(numeral(result).format(tmpl));
+                  }
+
+                  getSummary(1, '0,0'); // Unique visits
+                  getSummary(2, '0,0'); // Views
+                  getSummary(3, '0.00%', true, true); // Failure
+                  getSummary(4, '0.00', true); // Avg. view depth
+
+                  // Get average time on site
+                  avgTimeLen = 0;
+                  var totalSeconds = api.column(5).data()
+                    .reduce(function (a, b) {
+                      var seconds = moment(b, 'm:s').unix() - moment('0:0', 'm:s').unix();
+
+                      avgTimeLen++;
+                      return a + seconds;
+                    }, 0);
+                  var avgTime = Math.floor(totalSeconds / avgTimeLen);
+                  var avgMinutes = Math.floor(avgTime / 60);
+                  var avgSeconds = avgTime - (avgMinutes * 60);
+
+                  $(api.column(5).footer()).html(avgMinutes + ':' + avgSeconds);
+                }
+              });
+            });
+          </script>
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                Sale stats
+              </div>
+              <div class="table-responsive">
+                <table class="table card-table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Sales</th>
+                      <th>Cancelled</th>
+                      <th>Delivered</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>05/21/2017</td>
+                      <td>12</td>
+                      <td>1</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>05/20/2017</td>
+                      <td>16</td>
+                      <td>2</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>05/19/2017</td>
+                      <td>5</td>
+                      <td>0</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>05/18/2017</td>
+                      <td>21</td>
+                      <td>1</td>
+                      <td>10</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                Earnings
+              </div>
+              <div class="card-body pb-0">
+                <div class="row">
+                  <div class="col-md-4 pb-4">
+                    <div class="text-muted small">Earned today</div>
+                    <div class="text-large font-weight-semibold">$321.45</div>
+                  </div>
+                  <div class="col-md-4 pb-4">
+                    <div class="text-muted small">This month</div>
+                    <div class="text-large font-weight-semibold">$5,324.32</div>
+                  </div>
+                  <div class="col-md-4 pb-4">
+                    <div class="text-muted small">Total</div>
+                    <div class="text-large font-weight-semibold">$32,223.44</div>
+                  </div>
+                </div>
+              </div>
+              <hr class="m-0">
+              <div class="table-responsive">
+                <table class="table card-table">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Product</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="py-3"><a href="javascript:void(0)" class="text-body">3245734</a></td>
+                      <td class="py-3">
+                        <a href="javascript:void(0)" class="text-body">Nike Men Black Liteforce III Sneakers</a>
+                      </td>
+                      <td class="py-3">$57.55</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3"><a href="javascript:void(0)" class="text-body">3245735</a></td>
+                      <td class="py-3">
+                        <a href="javascript:void(0)" class="text-body">Wireless headphones</a>
+                      </td>
+                      <td class="py-3">$235.55</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3"><a href="javascript:void(0)" class="text-body">3245736</a></td>
+                      <td class="py-3">
+                        <a href="javascript:void(0)" class="text-body">HERO ATHLETES BAG</a>
+                      </td>
+                      <td class="py-3">$160.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Product stats</div>
+              <div class="table-responsive">
+                <table class="table card-table">
+                  <thead>
+                    <tr>
+                      <th colspan="2">Product</th>
+                      <th>Price</th>
+                      <th>Sales</th>
+                      <th>Views</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/ps4.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">PlayStation 4 1TB (Jet Black)</a></td>
+                      <td class="align-middle">$480.00</td>
+                      <td class="align-middle">123</td>
+                      <td class="align-middle">3,432</td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/nike-1.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">Nike Men Black Liteforce III Sneakers</a></td>
+                      <td class="align-middle">$57.55</td>
+                      <td class="align-middle">222</td>
+                      <td class="align-middle">7,231</td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/headphones.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">Wireless headphones</a></td>
+                      <td class="align-middle">$235.55</td>
+                      <td class="align-middle">43</td>
+                      <td class="align-middle">3,572</td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/backpack.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">HERO ATHLETES BAG</a></td>
+                      <td class="align-middle">$160.00</td>
+                      <td class="align-middle">38</td>
+                      <td class="align-middle">3,111</td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/chair-1.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">POÄNG</a></td>
+                      <td class="align-middle">$159.00</td>
+                      <td class="align-middle">34</td>
+                      <td class="align-middle">5,489</td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/iwatch.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">Apple iWatch (black)</a></td>
+                      <td class="align-middle">$399.00</td>
+                      <td class="align-middle">22</td>
+                      <td class="align-middle">4,123</td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/sunglasses.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">WALKING 400 BLUE CAT3</a></td>
+                      <td class="align-middle">$20.55</td>
+                      <td class="align-middle">16</td>
+                      <td class="align-middle">12,231</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th class="text-center" colspan="5"><a href="javascript:void(0)" class="font-weight-normal">View all</a></th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Products</div>
+              <div class="table-responsive">
+                <table class="table card-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 40px;">
+                        <label class="custom-control custom-checkbox m-0">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-label"></span>
+                        </label>
+                      </th>
+                      <th colspan="2">Product</th>
+                      <th>ID</th>
+                      <th>In stock</th>
+                      <th>Price</th>
+                      <th>Sales</th>
+                      <th>Views</th>
+                      <th style="width: 130px;"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="align-middle">
+                        <label class="custom-control custom-checkbox m-0">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-label"></span>
+                        </label>
+                      </td>
+                      <td class="align-middle" style="width: 62px;"><img class="ui-w-40" src="assets/img/uikit/ps4.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">PlayStation 4 1TB (Jet Black)</a></td>
+                      <td class="align-middle">3455632</td>
+                      <td class="align-middle">52</td>
+                      <td class="align-middle">$480.00</td>
+                      <td class="align-middle">123</td>
+                      <td class="align-middle">3,432</td>
+                      <td class="align-middle">
+                        <button type="button" class="btn btn-sm btn-default md-btn-flat">View</button>
+                        <button type="button" class="btn icon-btn btn-sm btn-default md-btn-flat"><span class="ion ion-md-close"></span></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <label class="custom-control custom-checkbox m-0">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-label"></span>
+                        </label>
+                      </td>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/nike-1.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">Nike Men Black Liteforce III Sneakers</a></td>
+                      <td class="align-middle">3455631</td>
+                      <td class="align-middle">34</td>
+                      <td class="align-middle">$57.55</td>
+                      <td class="align-middle">222</td>
+                      <td class="align-middle">7,231</td>
+                      <td class="align-middle">
+                        <button type="button" class="btn btn-sm btn-default md-btn-flat">View</button>
+                        <button type="button" class="btn icon-btn btn-sm btn-default md-btn-flat"><span class="ion ion-md-close"></span></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <label class="custom-control custom-checkbox m-0">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-label"></span>
+                        </label>
+                      </td>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/headphones.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">Wireless headphones</a></td>
+                      <td class="align-middle">3455632</td>
+                      <td class="align-middle">41</td>
+                      <td class="align-middle">$235.55</td>
+                      <td class="align-middle">43</td>
+                      <td class="align-middle">3,572</td>
+                      <td class="align-middle">
+                        <button type="button" class="btn btn-sm btn-default md-btn-flat">View</button>
+                        <button type="button" class="btn icon-btn btn-sm btn-default md-btn-flat"><span class="ion ion-md-close"></span></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <label class="custom-control custom-checkbox m-0">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-label"></span>
+                        </label>
+                      </td>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/backpack.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">HERO ATHLETES BAG</a></td>
+                      <td class="align-middle">3455630</td>
+                      <td class="align-middle">11</td>
+                      <td class="align-middle">$160.00</td>
+                      <td class="align-middle">38</td>
+                      <td class="align-middle">3,111</td>
+                      <td class="align-middle">
+                        <button type="button" class="btn btn-sm btn-default md-btn-flat">View</button>
+                        <button type="button" class="btn icon-btn btn-sm btn-default md-btn-flat"><span class="ion ion-md-close"></span></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <label class="custom-control custom-checkbox m-0">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-label"></span>
+                        </label>
+                      </td>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/chair-1.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">POÄNG</a></td>
+                      <td class="align-middle">3455629</td>
+                      <td class="align-middle">70</td>
+                      <td class="align-middle">$159.00</td>
+                      <td class="align-middle">34</td>
+                      <td class="align-middle">5,489</td>
+                      <td class="align-middle">
+                        <button type="button" class="btn btn-sm btn-default md-btn-flat">View</button>
+                        <button type="button" class="btn icon-btn btn-sm btn-default md-btn-flat"><span class="ion ion-md-close"></span></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <label class="custom-control custom-checkbox m-0">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-label"></span>
+                        </label>
+                      </td>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/iwatch.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">Apple iWatch (black)</a></td>
+                      <td class="align-middle">3455628</td>
+                      <td class="align-middle">9</td>
+                      <td class="align-middle">$399.00</td>
+                      <td class="align-middle">22</td>
+                      <td class="align-middle">4,123</td>
+                      <td class="align-middle">
+                        <button type="button" class="btn btn-sm btn-default md-btn-flat">View</button>
+                        <button type="button" class="btn icon-btn btn-sm btn-default md-btn-flat"><span class="ion ion-md-close"></span></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="align-middle">
+                        <label class="custom-control custom-checkbox m-0">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-label"></span>
+                        </label>
+                      </td>
+                      <td class="align-middle"><img class="ui-w-40" src="assets/img/uikit/sunglasses.jpg" alt=""></td>
+                      <td class="align-middle"><a href="javascript:void(0)" class="text-body">WALKING 400 BLUE CAT3</a></td>
+                      <td class="align-middle">3455627</td>
+                      <td class="align-middle">20</td>
+                      <td class="align-middle">$20.55</td>
+                      <td class="align-middle">24</td>
+                      <td class="align-middle">12,231</td>
+                      <td class="align-middle">
+                        <button type="button" class="btn btn-sm btn-default md-btn-flat">View</button>
+                        <button type="button" class="btn icon-btn btn-sm btn-default md-btn-flat"><span class="ion ion-md-close"></span></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Tasks</div>
+              <div class="card-body">
+                <p class="text-muted small">Today</p>
+                <div class="custom-controls-stacked">
+                  <label class="ui-todo-item custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Buy products</span>
+                    <span class="ui-todo-badge badge badge-outline-default font-weight-normal ml-2">58 mins left</span>
+                  </label>
+                  <label class="ui-todo-item custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Reply to emails</span>
+                  </label>
+                  <label class="ui-todo-item custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Write blog post</span>
+                    <span class="ui-todo-badge badge badge-outline-default font-weight-normal ml-2">20 hours left</span>
+                  </label>
+                  <label class="ui-todo-item custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" checked="">
+                    <span class="custom-control-label">Wash my car</span>
+                  </label>
+                </div>
+              </div>
+              <hr class="m-0">
+              <div class="card-body">
+                <p class="text-muted small">Tomorrow</p>
+                <div class="custom-controls-stacked">
+                  <label class="ui-todo-item custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Buy antivirus</span>
+                  </label>
+                  <label class="ui-todo-item custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Jane's Happy Birthday</span>
+                  </label>
+                  <label class="ui-todo-item custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Call mom</span>
+                  </label>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Type your task">
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-primary">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Chat</div>
+              <div class="card-body">
+
+                <div class="media mb-3">
+                  <div>
+                    <img src="assets/img/avatars/1-small.png" class="ui-w-40 rounded-circle" alt="">
+                    <div class="text-muted small text-nowrap mt-2">2:33 am</div>
+                  </div>
+                  <div class="media-body bg-lighter rounded py-2 px-3 ml-3">
+                    <div class="font-weight-semibold mb-1">Mike Greene</div>
+                    Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te vix.
+                  </div>
+                </div>
+
+                <div class="media mb-3">
+                  <div class="media-body bg-lighter rounded py-2 px-3 mr-3">
+                    <div class="font-weight-semibold mb-1">Nelle Maxwell</div>
+                    Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+                  </div>
+                  <div>
+                    <img src="assets/img/avatars/5-small.png" class="ui-w-40 rounded-circle" alt="">
+                    <div class="text-muted small text-nowrap mt-2">2:34 am</div>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <div>
+                    <img src="assets/img/avatars/1-small.png" class="ui-w-40 rounded-circle" alt="">
+                    <div class="text-muted small text-nowrap mt-2">2:38 am</div>
+                  </div>
+                  <div class="media-body bg-lighter rounded py-2 px-3 ml-3">
+                    <div class="font-weight-semibold mb-1">Mike Greene</div>
+                    Cum ea graeci tractatos.
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-footer">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Type your message">
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-primary">Send</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Messages</div>
+              <div class="card-body">
+
+                <div class="media pb-1 mb-3">
+                  <img src="assets/img/avatars/6-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <div class="mb-1">
+                      <strong class="font-weight-semibold">Mae Gibson</strong>
+                      &nbsp;
+                      <small class="text-muted">58m ago</small>
+                    </div>
+                    <a href="javascript:void(0)" class="text-body">Sit meis deleniti eu, pri vidit meliore docendi ut.</a>
+                  </div>
+                </div>
+
+                <div class="media pb-1 mb-3">
+                  <img src="assets/img/avatars/4-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <div class="mb-1">
+                      <strong class="font-weight-semibold">Kenneth Frazier</strong>
+                      &nbsp;
+                      <small class="text-muted">1h ago</small>
+                    </div>
+                    <a href="javascript:void(0)" class="text-body">Mea et legere fuisset, ius amet purto luptatum te.</a>
+                  </div>
+                </div>
+
+                <div class="media pb-1 mb-3">
+                  <img src="assets/img/avatars/5-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <div class="mb-1">
+                      <strong class="font-weight-semibold">Nelle Maxwell</strong>
+                      &nbsp;
+                      <small class="text-muted">2h ago</small>
+                    </div>
+                    <a href="javascript:void(0)" class="text-body">Sit meis deleniti eu, pri vidit meliore docendi ut.</a>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <img src="assets/img/avatars/1-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <div class="mb-1">
+                      <strong class="font-weight-semibold">Mike Greene</strong>
+                      &nbsp;
+                      <small class="text-muted">1d ago</small>
+                    </div>
+                    <a href="javascript:void(0)" class="text-body">Lorem ipsum dolor sit amet, vis erat denique in.</a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-default btn-block md-btn-flat">Show all</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                <div class="title-text">Team TODO</div>
+              </div>
+              <div class="card-body">
+
+                <div class="rounded ui-bordered p-3 mb-3">
+                  Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te vix.
+                  <div class="media align-items-center mt-3">
+                    <img src="assets/img/avatars/12-small.png" class="d-block ui-w-30 rounded-circle" alt="">
+                    <div class="media-body ml-2">Arthur Duncan</div>
+                    <div class="text-muted small text-nowrap">05/21/2017</div>
+                  </div>
+                </div>
+
+                <div class="rounded ui-bordered p-3 mb-3">
+                  Sit meis deleniti eu, pri vidit meliore docendi ut.
+                  <div class="media align-items-center mt-3">
+                    <img src="assets/img/avatars/11-small.png" class="d-block ui-w-30 rounded-circle" alt="">
+                    <div class="media-body ml-2">Belle Ross</div>
+                    <div class="text-muted small text-nowrap">05/19/2017</div>
+                  </div>
+                </div>
+
+                <div class="rounded ui-bordered p-3">
+                  Cum ea graeci tractatos.
+                  <div class="media align-items-center mt-3">
+                    <img src="assets/img/avatars/10-small.png" class="d-block ui-w-30 rounded-circle" alt="">
+                    <div class="media-body ml-2">Wayne Morgan</div>
+                    <div class="text-muted small text-nowrap">05/15/2017</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Followers</div>
+              <div class="card-body">
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/1-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body pl-3">
+                    <a href="javascript:void(0)" class="text-body">Mike Greene</a>
+                    <div class="text-muted small">@mgreene</div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-default md-btn-flat d-block">Follow</button>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/2-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body pl-3">
+                    <a href="javascript:void(0)" class="text-body">Leon Wilson</a>
+                    <div class="text-muted small">@lwilson</div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-success d-block"><i class="ion ion-md-checkmark"></i> Following</button>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/3-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body pl-3">
+                    <a href="javascript:void(0)" class="text-body">Allie Rodriguez</a>
+                    <div class="text-muted small">@arodriguez</div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-default md-btn-flat d-block">Follow</button>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/4-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body pl-3">
+                    <a href="javascript:void(0)" class="text-body">Kenneth Frazier</a>
+                    <div class="text-muted small">@kfrazier</div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-default md-btn-flat d-block">Follow</button>
+                </div>
+
+                <div class="media align-items-center pb-1 mb-3">
+                  <img src="assets/img/avatars/5-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body pl-3">
+                    <a href="javascript:void(0)" class="text-body">Nellie Maxwell</a>
+                    <div class="text-muted small">@nmaxwell</div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-default md-btn-flat d-block">Follow</button>
+                </div>
+
+                <div class="media align-items-center">
+                  <img src="assets/img/avatars/6-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body pl-3">
+                    <a href="javascript:void(0)" class="text-body">Mae Gibson</a>
+                    <div class="text-muted small">@mgibson</div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-default md-btn-flat d-block">Follow</button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Feed</div>
+              <div class="card-body">
+
+                <div class="media pb-1 mb-3">
+                  <div class="ui-feed-icon-container">
+                    <span class="ui-icon ui-feed-icon ion ion-ios-thumbs-up bg-success text-white"></span>
+                    <img src="assets/img/avatars/7-small.png" class="ui-w-40 rounded-circle" alt="">
+                  </div>
+                  <div class="media-body align-self-center ml-3">
+                    <a href="javascript:void(0)">Alice Hampton</a> liked <a href="javascript:void(0)">Article Name</a>
+                    <div class="text-muted small">2 hours ago</div>
+                  </div>
+                </div>
+
+                <div class="media pb-1 mb-3">
+                  <div class="ui-feed-icon-container">
+                    <span class="ui-icon ui-feed-icon ion ion-ios-text bg-secondary text-white"></span>
+                    <img src="assets/img/avatars/8-small.png" class="ui-w-40 rounded-circle" alt="">
+                  </div>
+                  <div class="media-body align-self-center ml-3">
+                    <a href="javascript:void(0)">Hallie Lewis</a> commented on <a href="javascript:void(0)">Article Name</a>
+                    <div class="my-1">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+                    </div>
+                    <div class="text-muted small">2 hours ago</div>
+                  </div>
+                </div>
+
+                <div class="media pb-1 mb-3">
+                  <div class="ui-feed-icon-container">
+                    <span class="ui-icon ui-feed-icon ion ion-ios-thumbs-down bg-danger text-white"></span>
+                    <img src="assets/img/avatars/9-small.png" class="ui-w-40 rounded-circle" alt="">
+                  </div>
+                  <div class="media-body align-self-center ml-3">
+                    <a href="javascript:void(0)">Amanda Warner</a> disliked <a href="javascript:void(0)">Article Name</a>
+                    <div class="text-muted small">2 hours ago</div>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <div class="ui-feed-icon-container">
+                    <span class="ui-icon ui-feed-icon ion ion-md-checkmark bg-primary text-white"></span>
+                    <img src="assets/img/avatars/11-small.png" class="ui-w-40 rounded-circle" alt="">
+                  </div>
+                  <div class="media-body align-self-center ml-3">
+                    <a href="javascript:void(0)">Belle Ross</a> followed <a href="javascript:void(0)">Nelle Maxwell</a>
+                    <div class="text-muted small">2 hours ago</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Support tickets</div>
+              <div class="card-body">
+
+                <div class="pb-1 mb-3">
+                  <div class="badge badge-outline-warning float-right">Feature</div>
+                  <a href="javascript:void(0)">Lorem ipsum dolor sit amet, vis erat denique in.</a>&nbsp; <span class="text-muted">#34563</span><br>
+                  <small class="text-muted">Created by <a href="javascript:void(0)" class="text-body">Mike Greene</a> &nbsp;·&nbsp; 1 day ago</small>
+                </div>
+
+                <div class="pb-1 mb-3">
+                  <div class="badge badge-outline-danger float-right">Bug</div>
+                  <a href="javascript:void(0)">Dicunt prodesset te vix.</a>&nbsp; <span class="text-muted">#34524</span><br>
+                  <small class="text-muted">Created by <a href="javascript:void(0)" class="text-body">Leon Wilson</a> &nbsp;·&nbsp; 1 day ago</small>
+                </div>
+
+                <div class="pb-1 mb-3">
+                  <div class="badge badge-outline-success float-right">Question</div>
+                  <a href="javascript:void(0)">Sit meis deleniti eu, pri vidit meliore docendi ut?</a>&nbsp; <span class="text-muted">#34563</span><br>
+                  <small class="text-muted">Created by <a href="javascript:void(0)" class="text-body">Allie Rodriguez</a> &nbsp;·&nbsp; 1 day ago</small>
+                </div>
+
+                <div>
+                  <div class="badge badge-outline-secondary float-right">Enhancement</div>
+                  <a href="javascript:void(0)">Eu tantas offendit mnesarchum sit, vide novum ad pri.</a>&nbsp; <span class="text-muted">#34563</span><br>
+                  <small class="text-muted">Created by <a href="javascript:void(0)" class="text-body"> Kenneth Frazier</a> &nbsp;·&nbsp; 1 day ago</small>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Threads</div>
+              <div class="card-body">
+
+                <div class="media pb-1 mb-3">
+                  <div class="text-center">
+                    <img src="assets/img/avatars/1-small.png" class="ui-w-30 rounded-circle" alt="">
+                    <div class="text-muted small mt-1">1h</div>
+                  </div>
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)">Lorem ipsum dolor sit amet, vis erat denique in.</a><br>
+                    <small class="text-muted">Started by <a href="javascript:void(0)" class="text-body">Mike Greene</a> in <a href="javascript:void(0)" class="text-body">Forum name</a></small>
+                  </div>
+                </div>
+
+                <div class="media pb-1 mb-3">
+                  <div class="text-center">
+                    <img src="assets/img/avatars/2-small.png" class="ui-w-30 rounded-circle" alt="">
+                    <div class="text-muted small mt-1">2h</div>
+                  </div>
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)">Id pro enim error animal, cu hinc fugit.</a><br>
+                    <small class="text-muted">Started by <a href="javascript:void(0)" class="text-body">Leon Wilson</a> in <a href="javascript:void(0)" class="text-body">Forum name</a></small>
+                  </div>
+                </div>
+
+                <div class="media pb-1 mb-3">
+                  <div class="text-center">
+                    <img src="assets/img/avatars/3-small.png" class="ui-w-30 rounded-circle" alt="">
+                    <div class="text-muted small mt-1">3h</div>
+                  </div>
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)">At vix luptatum lucilius. At nec deseruisse vituperatoribus.</a><br>
+                    <small class="text-muted">Started by <a href="javascript:void(0)" class="text-body">Allie Rodriguez</a> in <a href="javascript:void(0)" class="text-body">Forum name</a></small>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <div class="text-center">
+                    <img src="assets/img/avatars/4-small.png" class="ui-w-30 rounded-circle" alt="">
+                    <div class="text-muted small mt-1">4h</div>
+                  </div>
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)">Mei no amet dico consequuntur, sed at habeo concludaturque.</a><br>
+                    <small class="text-muted">Started by <a href="javascript:void(0)" class="text-body">Kenneth Frazier</a> in <a href="javascript:void(0)" class="text-body">Forum name</a></small>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Latest activity</div>
+              <div class="card-body">
+
+                <div class="media pb-1 mb-3">
+                  <div class="ui-icon ui-activity-icon ion ion-md-home text-danger"></div>
+                  <div class="media-body ml-3">
+                    Login from 192.168.1.1
+                    <div class="text-muted small">12 hours ago</div>
+                  </div>
+                </div>
+
+                <div class="media pb-1 mb-3">
+                  <div class="ui-icon ui-activity-icon ion ion-ios-text text-secondary"></div>
+                  <div class="media-body ml-3">
+                    Commented on <a href="javascript:void(0)">Article Name</a>
+                    <div class="my-1">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+                    </div>
+                    <div class="text-muted small">12 hours ago</div>
+                  </div>
+                </div>
+
+                <div class="media pb-1 mb-3">
+                  <div class="ui-icon ui-activity-icon ion ion-ios-thumbs-up text-success"></div>
+                  <div class="media-body ml-3">
+                    Liked <a href="javascript:void(0)">Article Name</a>
+                    <div class="text-muted small">12 hours ago</div>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <div class="ui-icon ui-activity-icon ion ion-md-checkmark text-primary"></div>
+                  <div class="media-body ml-3">
+                    Followed <a href="javascript:void(0)">Nelle Maxwell</a>
+                    <div class="text-muted small">12 hours ago</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                <div class="title-text">Comments</div>
+              </div>
+              <div class="card-body">
+
+                <div class="media pb-1 mb-3">
+                  <img src="assets/img/avatars/9-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)">Amanda Warner</a>
+                    <span class="text-muted">commented on</span>
+                    <a href="javascript:void(0)">Article Name</a>
+                    <p class="my-1">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+                    <div class="clearfix">
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-down"></span></a>
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-up mr-2"></span></a>
+                      <span class="float-left text-muted small">2 hours ago</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="media pb-1 mb-3">
+                  <img src="assets/img/avatars/8-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)">Hallie Lewis</a>
+                    <span class="text-muted">commented on</span>
+                    <a href="javascript:void(0)">Article Name</a>
+                    <p class="my-1">Vivendum torquatos ut nec, sit audiam deterruisset ei, cu sed nibh autem scriptorem. Ea quo vidit deleniti constituto, ex qui malis mollis iudicabit, viris fabellas id has.</p>
+                    <div class="clearfix">
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-down"></span></a>
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-up mr-2"></span></a>
+                      <span class="float-left text-muted small">2 hours ago</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="media pb-1 mb-3">
+                  <img src="assets/img/avatars/7-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)">Alice Hampton</a>
+                    <span class="text-muted">commented on</span>
+                    <a href="javascript:void(0)">Article Name</a>
+                    <p class="my-1">Eam facilis laboramus reprehendunt ei, ex esse fastidii per.</p>
+                    <div class="clearfix">
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-down"></span></a>
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-up mr-2"></span></a>
+                      <span class="float-left text-muted small">2 hours ago</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <img src="assets/img/avatars/6-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)">Mae Gibson</a>
+                    <span class="text-muted">commented on</span>
+                    <a href="javascript:void(0)">Article Name</a>
+                    <p class="my-1">Ea inani epicurei mea. No docendi antiopam quo, ad dicant viderer cotidieque vix. Ea mea dicat ludus, utroque explicari conclusionemque ius eu, in scaevola tractatos persecuti per.</p>
+                    <div class="clearfix">
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-down"></span></a>
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-up mr-2"></span></a>
+                      <span class="float-left text-muted small">2 hours ago</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">
+                <div class="title-text">Tree comments</div>
+              </div>
+              <div class="card-body">
+
+                <div class="media pb-1 mb-3">
+                  <img src="assets/img/avatars/9-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)">Amanda Warner</a>
+                    <span class="text-muted">commented on</span>
+                    <a href="javascript:void(0)">Article Name</a>
+                    <p class="my-1">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+                    <div class="clearfix">
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-down"></span></a>
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-up mr-2"></span></a>
+                      <span class="float-left text-muted small">2 hours ago</span>
+                    </div>
+
+                    <div class="media pt-1 mt-3">
+                      <img src="assets/img/avatars/8-small.png" class="d-block ui-w-30 rounded-circle" alt="">
+                      <div class="media-body ml-3">
+                        <a href="javascript:void(0)">Hallie Lewis</a>
+                        <span class="text-muted">commented on</span>
+                        <a href="javascript:void(0)">Article Name</a>
+                        <p class="my-1">Vivendum torquatos ut nec, sit audiam deterruisset ei, cu sed nibh autem scriptorem. Ea quo vidit deleniti constituto, ex qui malis mollis iudicabit, viris fabellas id has.</p>
+                        <div class="clearfix">
+                          <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-down"></span></a>
+                          <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-up mr-2"></span></a>
+                          <span class="float-left text-muted small">2 hours ago</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="media pt-1 mt-3">
+                      <img src="assets/img/avatars/7-small.png" class="d-block ui-w-30 rounded-circle" alt="">
+                      <div class="media-body ml-3">
+                        <a href="javascript:void(0)">Alice Hampton</a>
+                        <span class="text-muted">commented on</span>
+                        <a href="javascript:void(0)">Article Name</a>
+                        <p class="my-1">Eam facilis laboramus reprehendunt ei, ex esse fastidii per.</p>
+                        <div class="clearfix">
+                          <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-down"></span></a>
+                          <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-up mr-2"></span></a>
+                          <span class="float-left text-muted small">2 hours ago</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="media">
+                  <img src="assets/img/avatars/6-small.png" class="d-block ui-w-40 rounded-circle" alt="">
+                  <div class="media-body ml-3">
+                    <a href="javascript:void(0)">Mae Gibson</a>
+                    <span class="text-muted">commented on</span>
+                    <a href="javascript:void(0)">Article Name</a>
+                    <p class="my-1">Ea inani epicurei mea. No docendi antiopam quo, ad dicant viderer cotidieque vix. Ea mea dicat ludus, utroque explicari conclusionemque ius eu, in scaevola tractatos persecuti per.</p>
+                    <div class="clearfix">
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-down"></span></a>
+                      <a href="javascript:void(0)" class="float-right text-lightest small"><span class="ion ion-ios-thumbs-up mr-2"></span></a>
+                      <span class="float-left text-muted small">2 hours ago</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <div class="container">
+      <h4 class="ui-block-heading">Misk</h4>
+
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="uikit-example">
+
+            <div class="card mb-4">
+              <div class="card-header">Weather</div>
+              <div class="row no-gutters row-bordered text-center">
+
+                <div class="col-lg-3">
+                  <div class="py-2">Sunday</div>
+                  <hr class="m-0">
+                  <div class="py-4">
+                    <div class="ion ion-md-sunny display-3 text-warning mb-3"></div>
+                    <div class="text-xlarge mb-3">+20°</div>
+                    <div class="text-muted">Sunny day</div>
+                  </div>
+                  <hr class="m-0">
+                  <div class="text-muted py-2">
+                    May 21
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="py-2">Monday</div>
+                  <hr class="m-0">
+                  <div class="py-4">
+                    <div class="ion ion-md-rainy display-3 text-info mb-3"></div>
+                    <div class="text-xlarge mb-3">+15°</div>
+                    <div class="text-muted">Rainy day</div>
+                  </div>
+                  <hr class="m-0">
+                  <div class="text-muted py-2">
+                    May 22
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="py-2">Tuesday</div>
+                  <hr class="m-0">
+                  <div class="py-4">
+                    <div class="ion ion-md-partly-sunny display-3 text-secondary mb-3"></div>
+                    <div class="text-xlarge mb-3">+18°</div>
+                    <div class="text-muted">Cloudy day</div>
+                  </div>
+                  <hr class="m-0">
+                  <div class="text-muted py-2">
+                    May 23
+                  </div>
+                </div>
+
+                <div class="col-lg-3">
+                  <div class="py-2">Wednesday</div>
+                  <hr class="m-0">
+                  <div class="py-4">
+                    <div class="ion ion-md-rainy display-3 text-info mb-3"></div>
+                    <div class="text-xlarge mb-3">+17°</div>
+                    <div class="text-muted">Rainy day</div>
+                  </div>
+                  <hr class="m-0">
+                  <div class="text-muted py-2">
+                    May 24
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="uikit-example">
+
+            <div class="card ui-bg-cover border-0 text-center text-white mb-4" style="background-image: url('assets/img/uikit/rainy.jpg');">
+              <div class="card-header">Weather</div>
+              <div class="card-body">
+                <div class="text-big mb-4">Rainy</div>
+                <div class="mb-4">
+                  <span class="ion ion-md-rainy display-3 align-middle"></span> &nbsp;
+                  <span class="text-xlarge align-middle"><strong>+15°</strong></span>
+                </div>
+                <div>May 23</div>
+              </div>
+              <div class="card-footer clearfix">
+                <a href="javascript:void(0)" class="float-left text-white"><u>°C</u></a>
+                <a href="javascript:void(0)" class="float-right text-white">°F</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cui-bottom-spacer"></div>
+
+  <script>
+  (function() {
+    function hasClass(el, cls) {
+      return el.className.split(' ').indexOf(cls) !== -1;
+    }
+
+    function sanitizeSource(source, blacklist) {
+      source = source
+        .replace(/\r/g, '')
+        .replace(/\t/g, '  ')
+        .replace(/^ *\n+/, '\n')
+        .replace(/[\s\n]+$/, '');
+
+      source = source.replace(new RegExp('\\n' + source.match(/^\n( *)/)[1], 'g'), '\n');
+
+      if (blacklist) {
+        source = source.replace(/class="([^"]+)"/g, function(m, clsStr) {
+          var clsArr = clsStr.replace(/^\s+|\s+$/, '').replace(/\s+/g, ' ').split(' ');
+
+          for (var i = 0, l = blacklist.length, clsInd; i < l; i++) {
+            if ((clsInd = clsArr.indexOf(blacklist[i])) !== -1) {
+              clsArr.splice(clsInd, 1);
+            }
+          }
+
+          return 'class="' + clsArr.join(' ') + '"';
+        });
+      }
+
+      return source
+        .replace(/\s+class=""/ig, '')
+        .replace(/([a-z]+)=""/ig, '$1')
+        .replace(/javascript:void\(0\)/g, '#')
+        .replace(/^\n/, '');
+    }
+
+    function attachClipboard(el, src) {
+      return new Clipboard(el, {
+        text: function() {
+          return src;
+        }
+      });
+    }
+
+    function openModal(src, formattedSrc) {
+      document.querySelector('.uikit-example-modal-content').innerHTML = '<pre><code class="hljs html xml">' + formattedSrc + '</code></pre>';
+
+      var copyBtn = document.querySelector('.uikit-example-modal-copy');
+      var closeBtn = document.querySelector('.uikit-example-modal-close');
+
+      var copyBtnTimeout = null;
+      var clipboard = attachClipboard(copyBtn, src);
+
+      clipboard.on('success', function(e) {
+        if (copyBtnTimeout) {
+          clearTimeout(copyBtnTimeout);
+          copyBtnTimeout = null;
+        }
+
+        copyBtn.className = copyBtn.className.replace(' copied', '');
+        copyBtn.className += ' copied';
+
+        copyBtnTimeout = setTimeout(function() {
+          copyBtn.className = copyBtn.className.replace(' copied', '');
+        }, 1000);
+      });
+
+      var closeListener = function() {
+        document.querySelector('.uikit-example-modal-content').innerHTML = '';
+        document.querySelector('.uikit-example-modal').scrollTop = 0;
+        closeBtn.removeEventListener('click', closeListener);
+        clipboard.destroy();
+        document.documentElement.className = document.documentElement.className.replace(' uikit-example-modal-opened', '');
+      };
+
+      closeBtn.addEventListener('click', closeListener);
+
+      document.documentElement.className += ' uikit-example-modal-opened';
+    }
+
+    Array.prototype.slice.call(document.querySelectorAll('.uikit-example')).forEach(function(parentEl) {
+      var btnsWrapper = document.createElement('div');
+      btnsWrapper.className = 'uikit-example-btns';
+
+      var copyBtn = document.createElement('a');
+      copyBtn.href = 'javascript:void(0)';
+      copyBtn.className = 'uikit-example-btn copy';
+
+      var sourceBtn = document.createElement('a');
+      sourceBtn.href = 'javascript:void(0)';
+      sourceBtn.className = 'uikit-example-btn';
+      sourceBtn.innerHTML = 'SOURCE'
+
+      btnsWrapper.appendChild(copyBtn);
+      btnsWrapper.appendChild(sourceBtn);
+
+      var blacklistStr = (parentEl.getAttribute('data-blacklist') || null);
+      var blacklist = (blacklistStr && blacklistStr.split(',')) || null;
+      var src = sanitizeSource(parentEl.innerHTML, blacklist);
+      var formattedSrc = hljs.highlight('html', src).value;
+
+      parentEl.appendChild(btnsWrapper);
+
+      var copyBtnTimeout = null;
+      attachClipboard(copyBtn, src).on('success', function(e) {
+        if (copyBtnTimeout) {
+          clearTimeout(copyBtnTimeout);
+          copyBtnTimeout = null;
+        }
+
+        copyBtn.className = copyBtn.className.replace(' copied', '');
+        copyBtn.className += ' copied';
+
+        copyBtnTimeout = setTimeout(function() {
+          copyBtn.className = copyBtn.className.replace(' copied', '');
+        }, 1000);
+      });
+
+      sourceBtn.addEventListener('click', function(e) {
+        openModal(src, formattedSrc);
+      });
+    });
+  })();
+
+  $(function() {
+    // Initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+
+  <!-- Libs -->
+  <script src="assets/vendor/libs/nouislider/nouislider.js"></script>
+  <script src="assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+  <script src="assets/vendor/libs/chartjs/chartjs.js"></script>
+  <script src="assets/vendor/libs/datatables/datatables.js"></script>
+  <script src="assets/vendor/libs/moment/moment.js"></script>
+  <script src="assets/vendor/libs/numeral/numeral.js"></script>
+  <script src="assets/vendor/libs/plyr/plyr.js"></script>
+  <script src="assets/vendor/libs/swiper/swiper.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery-fullscreen.js"></script>
+  <script src="assets/vendor/libs/blueimp-gallery/gallery-indicator.js"></script>
+  <!-- Google Maps -->
+  <!-- NOTE: When using Google Maps on your own site you MUST get your own API key:
+           //developers.google.com/maps/documentation/javascript/get-api-key
+           After you got the key paste it in the URL below. -->
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyCHtdj4L66c05v1UZm-nte1FzUEAN6GKBI"></script>
+  <script src="assets/vendor/libs/gmaps/gmaps.js"></script>
+  <script src="assets/vendor/libs/masonry/masonry.js"></script>
+
+</body>
+
+</html>

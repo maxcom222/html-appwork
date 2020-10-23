@@ -1,0 +1,223 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+.TextSegElementKeyword { font-weight: bold; }
+.TextSegElementIdentifier { }
+.TextSegElementOperator { }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/vue-starter/tests/e2e/custom-assertions/elementCount.js &nbsp;
+<br/>
+Right file: appwork-v1_4_0/vue-starter/tests/e2e/custom-assertions/elementCount.js &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemInsigMod">/<span class="TextSegInsigDiff">/ A custom Nightwatch assertion.</span></td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod">/<span class="TextSegInsigDiff">**</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">//</span> The assertion name is the filename.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;* A custom Nightwatch assertion.</span> The assertion name is the filename.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;*</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">//</span> Example usage:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;*</span> Example usage:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">//</span>&nbsp;&nbsp; browser.assert.elementCount(selector, count)</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;*</span>&nbsp;&nbsp; browser.assert.elementCount(selector, count)</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;*</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">//</span> For more information on custom assertions see:</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;*</span> For more information on custom assertions see:</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSigMod"><span class="TextSegSigDiff">//</span><span class="TextSegSigDiff"> http</span><span class="TextSegSigDiff">://nightwatchjs.org</span><span class="TextSegSigDiff">/g</span><span class="TextSegSigDiff">uide</span><span class="TextSegSigDiff">#</span><span class="TextSegSigDiff">writing</span><span class="TextSegSigDiff">-</span><span class="TextSegSigDiff">custom</span><span class="TextSegSigDiff">-</span><span class="TextSegSigDiff">assertions</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;*&nbsp;&nbsp; https://nightwatchjs.org/guide/extending-nightwatch/</span><span class="TextSegInsigDiff">#writing-custom-assertions</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;*</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;*</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;* @param {string|object} selectorOrObject</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;* @param {number} count</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;*/</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">exports.assertion = function elementCount (selector, count) {</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod">exports.assertion = function elementCount (selector<span class="TextSegSigDiff">OrObject</span>, count) {</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">let</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">selector</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegInsigDiff">// when called from a page object element or section</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">if</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">typeof</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">selectorOrObject</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">===</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'object'</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&amp;&amp;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">selectorOrObject</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">selector</span><span class="TextSegSigDiff">)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegInsigDiff">// eslint-disable-next-line prefer-destructuring</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">selector</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">selectorOrObject</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">selector</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">else</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">selector</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">selectorOrObject</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">message</span> <span class="TextSegElementOperator">=</span> `<span class="TextSegElementIdentifier">Testing</span> <span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">element</span> <span class="TextSegElementOperator">&lt;</span><span class="TextSegElementIdentifier">$</span><span class="TextSegElementOperator">{</span><span class="TextSegElementIdentifier">selector</span><span class="TextSegElementOperator">}&gt;</span> <span class="TextSegElementIdentifier">has</span> <span class="TextSegElementIdentifier">count</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">$</span><span class="TextSegElementOperator">{</span><span class="TextSegElementIdentifier">count</span><span class="TextSegElementOperator">}</span>`</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">message</span> <span class="TextSegElementOperator">=</span> `<span class="TextSegElementIdentifier">Testing</span> <span class="TextSegElementKeyword">if</span> <span class="TextSegElementIdentifier">element</span> <span class="TextSegElementOperator">&lt;</span><span class="TextSegElementIdentifier">$</span><span class="TextSegElementOperator">{</span><span class="TextSegElementIdentifier">selector</span><span class="TextSegElementOperator">}&gt;</span> <span class="TextSegElementIdentifier">has</span> <span class="TextSegElementIdentifier">count</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">$</span><span class="TextSegElementOperator">{</span><span class="TextSegElementIdentifier">count</span><span class="TextSegElementOperator">}</span>`</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">expected</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">count</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">expected</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">count</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">pass</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">val</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">val</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementIdentifier">count</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">pass</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">val</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">val</span> <span class="TextSegElementOperator">===</span> <span class="TextSegElementIdentifier">count</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">value</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">res</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">res</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">value</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">value</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">res</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">res</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">value</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">function</span> <span class="TextSegElementIdentifier">evaluator</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">_selector</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">function</span> <span class="TextSegElementIdentifier">evaluator</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">_selector</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">querySelectorAll</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">_selector</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">length</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">querySelectorAll</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">_selector</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">length</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">command</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">cb</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">api</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">execute</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">evaluator</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementOperator">[</span><span class="TextSegElementIdentifier">selector</span><span class="TextSegElementOperator">],</span> <span class="TextSegElementIdentifier">cb</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">command</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">cb</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementKeyword">this</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">api</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">execute</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">evaluator</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementOperator">[</span><span class="TextSegElementIdentifier">selector</span><span class="TextSegElementOperator">],</span> <span class="TextSegElementIdentifier">cb</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

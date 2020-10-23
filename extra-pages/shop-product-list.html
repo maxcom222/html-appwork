@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style">
+<head>
+  <title>Product list - Shop - Appwork</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Use Ubuntu font instead of Roboto -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css">
+
+  <script src="assets/vendor/js/material-ripple.js"></script>
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Theme settings -->
+  <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
+  <script src="assets/vendor/js/theme-settings.js"></script>
+  <script>
+    window.themeSettings = new ThemeSettings({
+      cssPath: 'assets/vendor/css/rtl/',
+      themesPath: 'assets/vendor/css/rtl/'
+    });
+  </script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/js/pace.js"></script>
+
+  <!-- Page -->
+  <link rel="stylesheet" href="assets/css/shop.css">
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="assets/vendor/libs/swiper/swiper.css">
+  <link rel="stylesheet" href="assets/vendor/libs/nouislider/nouislider.css">
+</head>
+<body>
+  <!-- Pace.js loader -->
+  <div class="page-loader"><div class="bg-primary"></div></div>
+
+  <!-- Top block -->
+  <div class="bg-lighter small py-2">
+    <div class="container d-flex justify-content-between px-3">
+      <div class="text-muted">
+        <strong>24/7 Support: </strong>(800) 123-4567</div>
+      <div>
+        <div class="dropdown d-inline-block">
+          <a class="dropdown-toggle text-body font-weight-semibold" href="#" data-toggle="dropdown">EN</a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">French</a>
+            <a class="dropdown-item" href="#">German</a>
+          </div>
+        </div>
+        <div class="dropdown d-inline-block">
+          <a class="dropdown-toggle text-body font-weight-semibold ml-3" href="#" data-toggle="dropdown">USD</a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="#">USD</a>
+            <a class="dropdown-item" href="#">EUR</a>
+            <a class="dropdown-item" href="#">USD</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / Top block -->
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white px-0">
+    <div class="container flex-lg-wrap px-3">
+      <a href="#" class="navbar-brand text-large font-weight-bolder line-height-1 py-3">Brand</a>
+
+      <div class="navbar-text py-lg-3 pl-3 mr-auto">
+        <a href="#"><i class="ion ion-logo-twitter text-twitter align-middle"></i></a>
+        <a class="ml-3" href="#"><i class="ion ion-logo-facebook text-facebook align-middle"></i></a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".shop-header">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="shop-header navbar-collapse collapse col-lg-12 flex-wrap order-lg-2 px-0">
+        <hr class="d-none d-lg-block w-100 my-2">
+        <ul class="navbar-nav">
+
+          <!-- Women categories -->
+          <li class="nav-item mega-dropdown">
+            <a class="nav-link dropdown-toggle small text-expanded pr-lg-3 pl-lg-0" href="#" data-toggle="mega-dropdown" data-trigger="hover">WOMEN</a>
+            <div class="dropdown-menu p-0 mt-2 overflow-hidden">
+              <div class="row no-gutters row-bordered">
+                <div class="col-12 col-lg-5 p-4">
+                  <h6 class="small font-weight-bold text-expanded">CLOTHING</h6>
+                  <div class="row">
+                    <div class="col">
+                      <a href="#" class="mega-link d-block text-body small mb-2">New In</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Dresses</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Party Dresses</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Bridesmaid Dresses</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Little Black Dresses</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Little Red Dresses</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Maxi Dresses</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Tops</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Coats & Jackets</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Knitwear</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Skirts</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Bodysuits</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Shirts & Blouses</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Jumpsuits & Playsuits</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Trousers & Leggings</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Co-ord Sets</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Lingerie</a>
+                    </div>
+                    <div class="col">
+                      <a href="#" class="mega-link d-block text-body small mb-2">Onesies & Nightwear</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Loungewear</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Swimwear & Beachwear</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Jeans</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Sportswear</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Tracksuits & Sweats</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Suits & Separates</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Shorts</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Denim</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Plus Size & Curve</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Petite</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Tall</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Maternity</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Style Steals</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                  <div class="row no-gutters row-bordered">
+                    <div class="col-6 col-lg-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">SHOES</h6>
+                      <a href="#" class="mega-link d-block text-body small mb-2">All Shoes</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Boots</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">High Heels</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Over the Knee Boots</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Flats</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Trainers</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Sandals</a>
+                    </div>
+                    <div class="col-6 col-lg-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">ACCESSORIES</h6>
+                      <a href="#" class="mega-link d-block text-body small mb-2">All Accessories</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Bags</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Jewellery</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Scarves, Hats & Gloves</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Sunglasses</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Cosmetics</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Hair Accessories</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Presentation block -->
+                <div class="d-flex col-lg-4 align-items-stretch p-0">
+                  <div class="d-flex flex-column justify-content-center align-items-center w-100 ui-bg-cover text-center text-white py-5" style="background-image: url('assets/img/uikit/presentation-jeans.jpg');">
+                    <div class="text-big font-weight-bold mt-5 mb-2">
+                      LIMITED TIME ONLY!
+                    </div>
+                    <div class="display-3 font-weight-bolder mb-2">
+                      25% OFF
+                    </div>
+                    <div class="mb-5">
+                      USE CODE: <span class="font-weight-bold">SPRING</span>
+                    </div>
+                    <a href="#" class="btn btn-outline-white btn-lg d-block text-expanded">
+                      SHOP NOW <i class="ion ion-ios-arrow-forward"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- / Presentation block -->
+
+              </div>
+            </div>
+          </li>
+          <!-- / Women categories -->
+
+          <!-- Men categories -->
+          <li class="nav-item mega-dropdown" id="shop-men-dropdown">
+            <a class="nav-link dropdown-toggle small text-expanded px-lg-3" href="#" data-toggle="mega-dropdown" data-trigger="hover">MEN</a>
+            <div class="dropdown-menu p-0 mt-2">
+              <div class="row no-gutters row-bordered">
+                <div class="col-6 col-lg-3 p-4">
+                  <h6 class="small font-weight-bold text-expanded">CLOTHING</h6>
+                  <a href="#" class="mega-link d-block text-body small mb-2">New In</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Coats & Jackets</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">T-Shirts & Vests</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Hoodies & Sweatshirts</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Jeans</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Shirts</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Jumpers & Cardigans</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Joggers & Tracksuits</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Big & Tall</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Trousers</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Suits</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Activewear</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Shorts & Swim Shorts</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Polo Shirts</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Onesies & Loungewear</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Style Steals</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Back In Stock</a>
+                  <a href="#" class="mega-link d-block text-body small mb-2">Multi Packs</a>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <div class="row no-gutters row-bordered">
+                    <div class="col-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">SHOES</h6>
+                      <a href="#" class="mega-link d-block text-body small mb-2">View All</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Trainers</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Boots</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Smart Shoes</a>
+                    </div>
+                    <div class="col-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">ACCESSORIES</h6>
+                      <a href="#" class="mega-link d-block text-body small mb-2">View All</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Bags & Wallets</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Belts</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Gifts & Novelty</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Gloves, Hats & Scarves</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Jewellery</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Hats</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Underwear & Socks</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="row no-gutters row-bordered">
+
+                    <!-- Special deals -->
+                    <div class="col-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">SPECIAL DEALS</h6>
+                      <div class="w-100">
+                        <div class="swiper-container" id="shop-men-special-deals">
+                          <div class="swiper-wrapper">
+                            <a href="#" class="swiper-slide d-block ui-bordered text-center text-body p-4">
+                              <div class="shop-special-deal-label badge badge-success font-weight-bold">15% OFF</div>
+                              <img src="assets/img/uikit/nike-1.jpg" class="mb-2" alt="" style="max-width: 75%; max-height: 200px">
+                              <div><strike class="text-light">$57.55</strike>&nbsp; <strong>$48.92</strong></div>
+                            </a>
+                            <a href="#" class="swiper-slide d-block ui-bordered text-center text-body p-4">
+                              <div class="shop-special-deal-label badge badge-success font-weight-bold">10% OFF</div>
+                              <img src="assets/img/uikit/sunglasses.jpg" class="mb-2" alt="" style="max-width: 75%; max-height: 200px">
+                              <div><strike class="text-light">$20.55</strike>&nbsp; <strong>$18.50</strong></div>
+                            </a>
+                            <a href="#" class="swiper-slide d-block ui-bordered text-center text-body p-4">
+                              <div class="shop-special-deal-label badge badge-success font-weight-bold">15% OFF</div>
+                              <img src="assets/img/uikit/adidas.jpg" class="mb-2" alt="" style="max-width: 75%; max-height: 200px">
+                              <div><strike class="text-light">$57.55</strike>&nbsp; <strong>$48.92</strong></div>
+                            </a>
+                            <a href="#" class="swiper-slide d-block ui-bordered text-center text-body p-4">
+                              <div class="shop-special-deal-label badge badge-success font-weight-bold">20% OFF</div>
+                              <img src="assets/img/uikit/backpack.jpg" class="mb-2" alt="" style="max-width: 75%; max-height: 200px">
+                              <div><strike class="text-light">$160.00</strike>&nbsp; <strong>$128.00</strong></div>
+                            </a>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- / Special deals -->
+
+                    <div class="col-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">POPULAR BRANDS</h6>
+                      <a href="#"><img src="assets/img/uikit/logo-1.png" class="hoverable ui-w-80 ui-img-grayscale" alt=""></a>
+                      <a href="#"><img src="assets/img/uikit/logo-2.png" class="hoverable ui-w-80 ui-img-grayscale" alt=""></a>
+                      <a href="#"><img src="assets/img/uikit/logo-3.png" class="hoverable ui-w-80 ui-img-grayscale" alt=""></a>
+                      <a href="#"><img src="assets/img/uikit/logo-4.png" class="hoverable ui-w-80 ui-img-grayscale" alt=""></a>
+                      <a href="#"><img src="assets/img/uikit/logo-5.png" class="hoverable ui-w-80 ui-img-grayscale" alt=""></a>
+                      <a href="#"><img src="assets/img/uikit/logo-6.png" class="hoverable ui-w-80 ui-img-grayscale" alt=""></a>
+                      <a href="#"><img src="assets/img/uikit/logo-7.png" class="hoverable ui-w-80 ui-img-grayscale" alt=""></a>
+                      <a href="#"><img src="assets/img/uikit/logo-8.png" class="hoverable ui-w-80 ui-img-grayscale" alt=""></a>
+                      <a href="#"><img src="assets/img/uikit/logo-9.png" class="hoverable ui-w-80 ui-img-grayscale" alt=""></a>
+                      <a href="#"><img src="assets/img/uikit/logo-10.png" class="hoverable ui-w-80 ui-img-grayscale" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- Men categories -->
+
+          <!-- Electronics categories -->
+          <li class="nav-item mega-dropdown">
+            <a class="nav-link dropdown-toggle small text-expanded px-lg-3" href="#" data-toggle="mega-dropdown" data-trigger="hover">ELECTORNICS</a>
+            <div class="dropdown-menu p-0 mt-2">
+              <div class="row no-gutters row-bordered">
+
+                <!-- Popular categories -->
+                <div class="col-sm-6 col-lg-3 p-4">
+                  <h6 class="small font-weight-bold text-expanded">POPULAR CATEGORIES</h6>
+                  <a href="#" class="media align-items-center ui-bordered text-body py-2 px-3 mb-2">
+                    <img src="assets/img/uikit/ps4.jpg" alt="" class="d-block ui-w-40">
+                    <span class="media-body small font-weight-semibold ml-2">GAMING</span>
+                  </a>
+                  <a href="#" class="media align-items-center ui-bordered text-body py-2 px-3 mb-2">
+                    <img src="assets/img/uikit/s7edge-1.jpg" alt="" class="d-block ui-w-40">
+                    <span class="media-body small font-weight-semibold ml-2">MOBILE PHONES</span>
+                  </a>
+                  <a href="#" class="media align-items-center ui-bordered text-body py-2 px-3 mb-2">
+                    <img src="assets/img/uikit/iwatch.jpg" alt="" class="d-block ui-w-40">
+                    <span class="media-body small font-weight-semibold ml-2">SMART WATCHES</span>
+                  </a>
+                  <a href="#" class="media align-items-center ui-bordered text-body py-2 px-3 mb-2">
+                    <img src="assets/img/uikit/headphones.jpg" alt="" class="d-block ui-w-40">
+                    <span class="media-body small font-weight-semibold ml-2">HEADPHONES</span>
+                  </a>
+                </div>
+                <!-- / Popular categories -->
+
+                <div class="col-6 col-lg-3">
+                  <div class="row no-gutters row-bordered">
+                    <div class="col-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">MOBILE PHONES</h6>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Octa Core</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Deca Core</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Single SIM Card</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Dual SIM Card</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">4GB RAM</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">5.5-inch Display</a>
+                    </div>
+                    <div class="col-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">MOBILE PHONES ACCESSORIES</h6>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Mobile Phone Accessories</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Power Bank</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Screen Protectors</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Mobile Phone Cables</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Mobile Phone Chargers</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Holders & Stands</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Mobile Phone Lenses</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <div class="row no-gutters row-bordered">
+                    <div class="col-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">LAPTOP & TABLETS</h6>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Laptops</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Gaming Laptops</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Tablets</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">2 in 1 Tablets</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Phone Call Tablets</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">iPad</a>
+                    </div>
+                    <div class="col-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">LAPTOP & TABLETS ACCESSORIES</h6>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Laptop Bags & Cases</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Laptop Batteries</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Tablet Accessories</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Tablet LCD Screens</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Tablet Cases</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                  <div class="row no-gutters row-bordered">
+                    <div class="col-6 col-sm-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">CAMERA & PHOTO</h6>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Camera & Photo</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Digital Cameras</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Camcorders</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Camera Drones</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Action Cameras</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Photo Studio</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Camera & Photo Accessories</a>
+                    </div>
+                    <div class="col-6 col-sm-12 p-4">
+                      <h6 class="small font-weight-bold text-expanded">NETWORKING</h6>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Wireless Routers</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Network Cards</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">3G Modems</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Modem-Router Combos</a>
+                      <a href="#" class="mega-link d-block text-body small mb-2">Networking Tools</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- / Electronics categories -->
+
+          <li class="nav-item"><a class="nav-link small text-expanded px-lg-3" href="#">SALE</a></li>
+          <li class="nav-item"><a class="nav-link small text-expanded px-lg-3" href="#">BLOG</a></li>
+        </ul>
+      </div>
+      <!-- / Menu -->
+
+      <div class="shop-header navbar-collapse collapse order-lg-1">
+        <div class="navbar-nav align-items-lg-center order-lg-2 py-lg-1 ml-auto">
+          <!-- Search -->
+          <li class="nav-item">
+            <label class="nav-link navbar-search-box">
+              <i class="ion ion-ios-search navbar-icon align-middle"></i>
+              <span class="navbar-search-input">
+                <input type="text" class="form-control mx-2" placeholder="Search..." style="width:140px">
+                <a href="#" class="navbar-search-cancel">×</a>
+              </span>
+            </label>
+          </li>
+
+          <li class="shop-cart-dropdown nav-item dropdown">
+            <a class="nav-link dropdown-toggle hide-arrow text-nowrap ml-lg-2" href="#" data-toggle="dropdown">
+              <i class="ion ion-md-basket navbar-icon align-middle"></i>
+              <span class="badge badge-danger indicator">3</span>
+              <span class="d-lg-none align-middle">&nbsp; Cart</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+
+              <div class="media align-items-center p-3">
+                <img src="assets/img/uikit/iwatch.jpg" class="d-block ui-w-40" alt="">
+                <div class="media-body small mx-3">
+                  <a href="#" class="text-body font-weight-semibold">Apple iWatch (black)</a>
+                  <div class="text-muted">$399.00 &times; 1</div>
+                </div>
+                <a href="#" class="text-danger text-xlarge font-weight-light">
+                  &times;
+                </a>
+              </div>
+              <hr class="m-0">
+
+              <div class="media align-items-center p-3">
+                <img src="assets/img/uikit/backpack.jpg" class="d-block ui-w-40" alt="">
+                <div class="media-body small mx-3">
+                  <a href="#" class="text-body font-weight-semibold">HERO ATHLETES BAG</a>
+                  <div class="text-muted">$160.00 &times; 1</div>
+                </div>
+                <a href="#" class="text-danger text-xlarge font-weight-light">
+                  &times;
+                </a>
+              </div>
+              <hr class="m-0">
+
+              <div class="media align-items-center p-3">
+                <img src="assets/img/uikit/sunglasses.jpg" class="d-block ui-w-40" alt="">
+                <div class="media-body small mx-3">
+                  <a href="#" class="text-body font-weight-semibold">WALKING 400 BLUE CAT3</a>
+                  <div class="text-muted">$20.55 &times; 2</div>
+                </div>
+                <a href="#" class="text-danger text-xlarge font-weight-light">
+                  &times;
+                </a>
+              </div>
+              <hr class="m-0">
+
+              <div class="d-flex justify-content-between align-items-center p-3">
+                <div>
+                  <span class="text-muted">Total:</span>&nbsp;
+                  <span class="font-weight-bold">$600.10</span>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-default btn-sm md-btn-flat text-expanded">CART</button>
+                  <button type="button" class="btn btn-primary btn-sm md-btn-flat text-expanded ml-1">CHECKOUT</button>
+                </div>
+              </div>
+
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle hide-arrow ml-lg-2" href="#" data-toggle="dropdown">
+              <img src="assets/img/avatars/1.png" alt class="ui-w-30 rounded-circle align-middle">
+              <span class="d-lg-none align-middle">&nbsp; Mike Greene</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">Account</a>
+              <a class="dropdown-item" href="#">Order list</a>
+              <a class="dropdown-item" href="#">Wishlist</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Logout</a>
+            </div>
+          </li>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- / Navbar -->
+
+  <!-- Path -->
+  <div class="bg-light">
+    <div class="container py-4 px-3">
+      <ol class="breadcrumb text-big m-0">
+        <li class="breadcrumb-item">
+          <a href="#">Categories</a>
+        </li>
+        <li class="breadcrumb-item active">Mobile phones</li>
+      </ol>
+    </div>
+  </div>
+  <!-- / Path -->
+
+  <div class="container px-3 my-4">
+
+    <!-- Filter controls -->
+    <div class="d-lg-none d-flex flex-wrap justify-content-md-between align-items-center border-bottom-0 ui-bordered p-4">
+      <div class="flex-shrink-1">
+        <div class="small font-weight-bold mb-1">Current filters:</div>
+        <span class="text-big">
+          <span class="badge badge-outline-default font-weight-normal mr-1">Apple</span>
+          <span class="badge badge-outline-default font-weight-normal mr-1">LG</span>
+          <span class="badge badge-outline-default font-weight-normal mr-1">Flash-card slot</span>
+          <span class="badge badge-outline-default font-weight-normal mr-1">White</span>
+          <span class="badge badge-outline-default font-weight-normal mr-1">Silver</span>
+          <span class="badge badge-outline-default font-weight-normal mr-1">Black</span>
+          <span class="badge badge-outline-default font-weight-normal mr-1">Red</span>
+        </span>
+      </div>
+      <button id="shop-filters-toggle" type="button" class="btn btn-primary d-block w-100 w-md-auto text-expanded mt-3 mt-md-0 ml-md-3">
+        <span class="small">
+          <i id="shop-filters-toggle-open-icon" class="ion ion-ios-funnel"></i><i id="shop-filters-toggle-close-icon" class="ion ion-md-close d-none"></i>&nbsp; FILTERS
+        </span>
+      </button>
+    </div>
+    <!-- / Filter controls -->
+
+    <div class="row">
+      <div class="col order-2 order-lg-1">
+
+        <!-- Nav -->
+        <div class="d-flex flex-sm-row flex-wrap justify-content-between align-items-sm-center border-bottom-0 ui-bordered">
+          <ul class="nav nav-tabs tabs-alt flex-shrink-1 order-3 order-sm-1 border-0 px-4">
+            <li class="nav-item">
+              <a class="nav-link small font-weight-normal text-expanded py-4 active" href="#">BEST MATCH</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link small font-weight-normal text-expanded py-4" href="#">POPULAR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link small font-weight-normal text-expanded py-4" href="#">NEWEST</a>
+            </li>
+          </ul>
+
+          <hr class="d-sm-none order-2 w-100 m-0">
+
+          <div class="order-1 order-sm-2 px-4">
+            <button type="button" class="btn icon-btn btn-outline-default borderless my-2">
+              <span class="ion ion-md-apps"></span>
+            </button>
+            <button type="button" class="btn icon-btn btn-outline-primary borderless my-2">
+              <span class="ion ion-md-list"></span>
+            </button>
+          </div>
+        </div>
+        <!-- / Nav -->
+
+        <!-- Products -->
+        <div class="ui-bordered">
+
+          <div class="shop-list-row row row-bordered no-gutters">
+            <a href="#" class="d-block col-md-3 col-xl-2 text-center p-4 pr-md-0">
+              <img src="assets/img/uikit/ps4.jpg" alt class="img-fluid" style="max-height: 190px">
+            </a>
+            <div class="shop-list-content col-md-6 col-xl-7 py-md-4 px-4 pb-2">
+              <div class="d-flex justify-content-start mb-1">
+                <h5 class="flex-shrink-1 m-0">
+                  <a href="#" class="text-body">PlayStation 4 1TB (Jet Black)</a>
+                </h5>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-4" title="Share"><i class="ion ion-md-share"></i></a>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-3" title="Add to wishlist"><i class="ion ion-ios-heart"></i></a>
+              </div>
+              <div class="mb-2">
+                <div class="ui-stars">
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star half-filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                </div>
+                &nbsp;
+                <a href="#" class="text-muted small">23</a>
+              </div>
+              <div class="small"><span class="text-muted">CPU:</span>&nbsp; x86-64 AMD “Jaguar”, 8 cores</div>
+              <div class="small"><span class="text-muted">GPU:</span>&nbsp; 1.84 TFLOPS, AMD Radeon™ based graphics engine</div>
+              <div class="small"><span class="text-muted">Memory:</span>&nbsp; GDDR5 8GB</div>
+              <div class="small"><span class="text-muted">Storage size:</span>&nbsp; 1TB</div>
+            </div>
+            <div class="d-flex col-md-3 col-xl-3 flex-md-column flex-wrap justify-content-md-center align-items-center px-3 px-md-0 pt-md-4 pb-4">
+              <div class="text-big m-2"><strong>$480.00</strong></div>
+              <a href="#" class="btn btn-outline-primary btn-sm text-expanded my-1 mx-2">TO CART</a>
+              <div class="text-muted small m-2"> 7 items available</div>
+            </div>
+          </div>
+          <hr class="m-0">
+
+          <div class="shop-list-row row row-bordered no-gutters">
+            <a href="#" class="d-block col-md-3 col-xl-2 text-center p-4 pr-md-0">
+              <img src="assets/img/uikit/backpack.jpg" alt class="img-fluid" style="max-height: 190px">
+            </a>
+            <div class="shop-list-content col-md-6 col-xl-7 py-md-4 px-4 pb-2">
+              <div class="d-flex justify-content-start mb-1">
+                <h5 class="flex-shrink-1 m-0">
+                  <a href="#" class="text-body">HERO ATHLETES BAG</a>
+                </h5>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-4" title="Share"><i class="ion ion-md-share"></i></a>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-3" title="Add to wishlist"><i class="ion ion-ios-heart"></i></a>
+              </div>
+              <div class="mb-2">
+                <div class="ui-stars">
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star half-filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                </div>
+                &nbsp;
+                <a href="#" class="text-muted small">23</a>
+              </div>
+              <div class="small"><span class="text-muted">Weight:</span>&nbsp; 2kg</div>
+              <div class="small"><span class="text-muted">Dimension:</span>&nbsp; L490 x W280 x H700mm</div>
+              <div class="small"><span class="text-muted">Fabrics:</span>&nbsp; POLYESTER 600D RIPSTOP</div>
+            </div>
+            <div class="d-flex col-md-3 col-xl-3 flex-md-column flex-wrap justify-content-md-center align-items-center px-3 px-md-0 pt-md-4 pb-4">
+              <div class="text-big m-2"><strong>$160.00</strong></div>
+              <a href="#" class="btn btn-outline-primary btn-sm text-expanded my-1 mx-2">TO CART</a>
+              <div class="text-muted small m-2"> 7 items available</div>
+            </div>
+          </div>
+          <hr class="m-0">
+
+          <div class="shop-list-row row row-bordered no-gutters">
+            <a href="#" class="d-block col-md-3 col-xl-2 text-center p-4 pr-md-0">
+              <img src="assets/img/uikit/iwatch.jpg" alt class="img-fluid" style="max-height: 190px">
+            </a>
+            <div class="shop-list-content col-md-6 col-xl-7 py-md-4 px-4 pb-2">
+              <div class="d-flex justify-content-start mb-1">
+                <h5 class="flex-shrink-1 m-0">
+                  <a href="#" class="text-body">Apple iWatch (black)</a>
+                </h5>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-4" title="Share"><i class="ion ion-md-share"></i></a>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-3" title="Add to wishlist"><i class="ion ion-ios-heart"></i></a>
+              </div>
+              <div class="mb-2">
+                <div class="ui-stars">
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star half-filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                </div>
+                &nbsp;
+                <a href="#" class="text-muted small">23</a>
+              </div>
+              <div class="small"><span class="text-muted">Storage Capacity:</span>&nbsp; 8GB</div>
+              <div class="small"><span class="text-muted">Screen Size:</span>&nbsp; 1.65"</div>
+              <div class="small"><span class="text-muted">Connections:</span>&nbsp; USB, Wi-Fi, Bluetooth 4.0</div>
+              <div class="small"><span class="text-muted">Sensors:</span>&nbsp; Accelerometer, Ambient light sensor, Gyroscope, Heart rate sensor</div>
+            </div>
+            <div class="d-flex col-md-3 col-xl-3 flex-md-column flex-wrap justify-content-md-center align-items-center px-3 px-md-0 pt-md-4 pb-4">
+              <div class="text-big m-2"><strong>$399.00</strong></div>
+              <a href="#" class="btn btn-outline-primary btn-sm text-expanded my-1 mx-2">TO CART</a>
+              <div class="text-muted small m-2"> 7 items available</div>
+            </div>
+          </div>
+          <hr class="m-0">
+
+          <div class="shop-list-row row row-bordered no-gutters">
+            <a href="#" class="d-block col-md-3 col-xl-2 text-center p-4 pr-md-0">
+              <img src="assets/img/uikit/s7edge-1.jpg" alt class="img-fluid" style="max-height: 190px">
+            </a>
+            <div class="shop-list-content col-md-6 col-xl-7 py-md-4 px-4 pb-2">
+              <div class="d-flex justify-content-start mb-1">
+                <h5 class="flex-shrink-1 m-0">
+                  <a href="#" class="text-body">Samsung Galaxy S7 Edge</a>
+                </h5>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-4" title="Share"><i class="ion ion-md-share"></i></a>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-3" title="Add to wishlist"><i class="ion ion-ios-heart"></i></a>
+              </div>
+              <div class="mb-2">
+                <div class="ui-stars">
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star half-filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                </div>
+                &nbsp;
+                <a href="#" class="text-muted small">23</a>
+              </div>
+              <div class="small"><span class="text-muted">Processor Speed, Type:</span>&nbsp; 2.15GHz, 1.6GHz, Quad-Core</div>
+              <div class="small"><span class="text-muted">Internal Memory:</span>&nbsp; 32GB</div>
+              <div class="small"><span class="text-muted">Main Display Size:</span>&nbsp; 5.5” (139.5mm)</div>
+              <div class="small"><span class="text-muted">Camera Resolution (Rear):</span>&nbsp; Dual Pixel 12.0 MP</div>
+            </div>
+            <div class="d-flex col-md-3 col-xl-3 flex-md-column flex-wrap justify-content-md-center align-items-center px-3 px-md-0 pt-md-4 pb-4">
+              <div class="text-big m-2"><strong>$1049.00</strong></div>
+              <a href="#" class="btn btn-outline-primary btn-sm text-expanded my-1 mx-2">TO CART</a>
+              <div class="text-muted small m-2"> 7 items available</div>
+            </div>
+          </div>
+          <hr class="m-0">
+
+          <div class="shop-list-row row row-bordered no-gutters">
+            <a href="#" class="d-block col-md-3 col-xl-2 text-center p-4 pr-md-0">
+              <img src="assets/img/uikit/sunglasses.jpg" alt class="img-fluid" style="max-height: 190px">
+            </a>
+            <div class="shop-list-content col-md-6 col-xl-7 py-md-4 px-4 pb-2">
+              <div class="d-flex justify-content-start mb-1">
+                <h5 class="flex-shrink-1 m-0">
+                  <a href="#" class="text-body">WALKING 400 BLUE CAT3</a>
+                </h5>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-4" title="Share"><i class="ion ion-md-share"></i></a>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-3" title="Add to wishlist"><i class="ion ion-ios-heart"></i></a>
+              </div>
+              <div class="mb-2">
+                <div class="ui-stars">
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star half-filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                </div>
+                &nbsp;
+                <a href="#" class="text-muted small">23</a>
+              </div>
+              <div class="small"><span class="text-muted">Category 3:</span>&nbsp; lets through 8% to 18% of light (protection in sunny weather – Standard: ISO 12312-1)</div>
+              <div class="small"><span class="text-muted">Material:</span>&nbsp; impact resistant polycarbonate</div>
+              <div class="small"><span class="text-muted">Geometry:</span>&nbsp; spherical – 6-base</div>
+              <div class="small"><span class="text-muted">Available with polarised lenses:</span>&nbsp; 95% polarisation for maximal reflection suppression</div>
+            </div>
+            <div class="d-flex col-md-3 col-xl-3 flex-md-column flex-wrap justify-content-md-center align-items-center px-3 px-md-0 pt-md-4 pb-4">
+              <div class="text-big m-2"><strong>$20.55</strong></div>
+              <a href="#" class="btn btn-outline-primary btn-sm text-expanded my-1 mx-2">TO CART</a>
+              <div class="text-muted small m-2"> 7 items available</div>
+            </div>
+          </div>
+          <hr class="m-0">
+
+          <div class="shop-list-row row row-bordered no-gutters">
+            <a href="#" class="d-block col-md-3 col-xl-2 text-center p-4 pr-md-0">
+              <img src="assets/img/uikit/adidas.jpg" alt class="img-fluid" style="max-height: 190px">
+            </a>
+            <div class="shop-list-content col-md-6 col-xl-7 py-md-4 px-4 pb-2">
+              <div class="d-flex justify-content-start mb-1">
+                <h5 class="flex-shrink-1 m-0">
+                  <a href="#" class="text-body">Adidas Sneakers Originals</a>
+                </h5>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-4" title="Share"><i class="ion ion-md-share"></i></a>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-3" title="Add to wishlist"><i class="ion ion-ios-heart"></i></a>
+              </div>
+              <div class="mb-2">
+                <div class="ui-stars">
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star half-filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                </div>
+                &nbsp;
+                <a href="#" class="text-muted small">23</a>
+              </div>
+              <div class="small">White leather signature three-stripe side panels</div>
+              <div class="small">White and black logo-print heel tab</div>
+              <div class="small">White rubber midsole and sole</div>
+            </div>
+            <div class="d-flex col-md-3 col-xl-3 flex-md-column flex-wrap justify-content-md-center align-items-center px-3 px-md-0 pt-md-4 pb-4">
+              <div class="text-big m-2"><strong>$57.55</strong></div>
+              <a href="#" class="btn btn-outline-primary btn-sm text-expanded my-1 mx-2">TO CART</a>
+              <div class="text-muted small m-2"> 7 items available</div>
+            </div>
+          </div>
+          <hr class="m-0">
+
+          <div class="shop-list-row row row-bordered no-gutters">
+            <a href="#" class="d-block col-md-3 col-xl-2 text-center p-4 pr-md-0">
+              <img src="assets/img/uikit/nike-1.jpg" alt class="img-fluid" style="max-height: 190px">
+            </a>
+            <div class="shop-list-content col-md-6 col-xl-7 py-md-4 px-4 pb-2">
+              <div class="d-flex justify-content-start mb-1">
+                <h5 class="flex-shrink-1 m-0">
+                  <a href="#" class="text-body">Nike Men Black Liteforce III Sneakers</a>
+                </h5>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-4" title="Share"><i class="ion ion-md-share"></i></a>
+                <a href="#" class="shop-tooltip d-inline-block text-lightest small ml-3" title="Add to wishlist"><i class="ion ion-ios-heart"></i></a>
+              </div>
+              <div class="mb-2">
+                <div class="ui-stars">
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                  <div class="ui-star half-filled">
+                    <i class="ion ion-md-star"></i>
+                    <i class="ion ion-md-star"></i>
+                  </div>
+                </div>
+                &nbsp;
+                <a href="#" class="text-muted small">23</a>
+              </div>
+              <div class="small">A pair of black sneakers, has mid-top styling and central lace-ups</div>
+              <div class="small">Canvas and synthetic upper</div>
+              <div class="small">Cushioned footbed</div>
+              <div class="small">Textured and patterned outsole</div>
+            </div>
+            <div class="d-flex col-md-3 col-xl-3 flex-md-column flex-wrap justify-content-md-center align-items-center px-3 px-md-0 pt-md-4 pb-4">
+              <div class="text-big m-2"><strong>$57.55</strong></div>
+              <a href="#" class="btn btn-outline-primary btn-sm text-expanded my-1 mx-2">TO CART</a>
+              <div class="text-muted small m-2"> 7 items available</div>
+            </div>
+          </div>
+
+        </div>
+        <!-- / Products -->
+
+        <!-- Pagination -->
+        <nav class="mt-4">
+          <ul class="pagination flex-wrap justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#">«</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">4</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">5</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">»</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- / Pagination -->
+
+      </div>
+
+      <!-- Filters -->
+      <div id="shop-filters-block" class="d-none d-lg-block col-lg-4 col-xl-3 order-1 order-lg-2 mb-4">
+        <div class="row no-gutters row-bordered ui-bordered">
+
+          <div class="col-12">
+            <a class="d-flex justify-content-between text-body py-3 px-4" data-toggle="collapse" href="#shop-filters-1" aria-expanded="true">
+              Price
+              <div class="collapse-icon"></div>
+            </a>
+            <div class="collapse show" id="shop-filters-1">
+              <div class="px-4 pb-3">
+                <div id="shop-price-slider" class="shop-filters-slider noUi-primary mt-2 mb-4"></div>
+
+                <div class="input-group input-group-sm mt-3">
+                  <input id="shop-price-slider-start" type="text" class="form-control rounded-0 text-center">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text bg-transparent border-0">–</div>
+                  </div>
+                  <input id="shop-price-slider-end" type="text" class="form-control rounded-0 text-center">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <a class="d-flex justify-content-between text-body py-3 px-4" data-toggle="collapse" href="#shop-filters-2" aria-expanded="true">
+              Brand
+              <div class="collapse-icon"></div>
+            </a>
+            <div class="collapse show" id="shop-filters-2">
+              <div class="px-4 pb-3">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control form-control-sm" placeholder="Search">
+                  <span class="input-group-append">
+                    <button type="button" class="btn btn-sm btn-secondary icon-btn md-btn-flat">
+                      <span class="ion ion-ios-search"></span>
+                    </button>
+                  </span>
+                </div>
+
+                <div class="custom-controls-stacked">
+                  <label class="custom-control custom-checkbox justify-content-between mr-0">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Apple</span>
+                    <span class="float-right text-muted">5</span>
+                  </label>
+                  <label class="custom-control custom-checkbox justify-content-between mr-0">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Asus</span>
+                    <span class="float-right text-muted">12</span>
+                  </label>
+                  <label class="custom-control custom-checkbox justify-content-between mr-0">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Sony</span>
+                    <span class="float-right text-muted">8</span>
+                  </label>
+                  <label class="custom-control custom-checkbox justify-content-between mr-0">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">LG</span>
+                    <span class="float-right text-muted">10</span>
+                  </label>
+                  <label class="custom-control custom-checkbox justify-content-between mr-0">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Lenovo</span>
+                    <span class="float-right text-muted">14</span>
+                  </label>
+                  <label class="custom-control custom-checkbox justify-content-between mr-0">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Xiaomi</span>
+                    <span class="float-right text-muted">3</span>
+                  </label>
+                  <label class="custom-control custom-checkbox justify-content-between mr-0">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">HTC</span>
+                    <span class="float-right text-muted">2</span>
+                  </label>
+                  <label class="custom-control custom-checkbox justify-content-between mr-0">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-label">Meizu</span>
+                    <span class="float-right text-muted">7</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 py-3 px-4">
+            <label class="custom-control custom-checkbox m-0">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-label">Flash-card slot</span>
+            </label>
+          </div>
+
+          <div class="col-12">
+            <a class="d-flex justify-content-between text-body py-3 px-4" data-toggle="collapse" href="#shop-filters-3" aria-expanded="true">
+              Colors
+              <div class="collapse-icon"></div>
+            </a>
+            <div class="collapse show" id="shop-filters-3">
+              <div class="custom-controls-stacked px-4 pb-3">
+                <label class="custom-control custom-checkbox custom-control-black">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label">Black</span>
+                </label>
+                <label class="custom-control custom-checkbox custom-control-white">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label">White</span>
+                </label>
+                <label class="custom-control custom-checkbox custom-control-silver">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label">Silver</span>
+                </label>
+                <label class="custom-control custom-checkbox custom-control-gray">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label">Gray</span>
+                </label>
+                <label class="custom-control custom-checkbox custom-control-gold">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label">Gold</span>
+                </label>
+                <label class="custom-control custom-checkbox custom-control-pink">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label">Pink</span>
+                </label>
+                <label class="custom-control custom-checkbox custom-control-red">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-label">Red</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <a class="d-flex justify-content-between text-body py-3 px-4" data-toggle="collapse" href="#shop-filters-4" aria-expanded="true">
+              Warranty
+              <div class="collapse-icon"></div>
+            </a>
+            <div class="collapse show" id="shop-filters-4">
+              <div class="custom-controls-stacked px-4 pb-3">
+                <label class="custom-control custom-radio">
+                  <input type="radio" name="filters-warranty" class="custom-control-input">
+                  <span class="custom-control-label">Standard</span>
+                </label>
+                <label class="custom-control custom-radio">
+                  <input type="radio" name="filters-warranty" class="custom-control-input">
+                  <span class="custom-control-label">Extended</span>
+                </label>
+                <label class="custom-control custom-radio">
+                  <input type="radio" name="filters-warranty" class="custom-control-input" checked>
+                  <span class="custom-control-label">Any</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 py-3 px-4">
+            <button type="button" class="btn btn-primary btn-block text-expanded"><span class="small">SHOW</span></button>
+          </div>
+
+        </div>
+      </div>
+      <!-- / Filters -->
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <nav class="footer bp-3 bg-lighter pt-4">
+    <div class="container px-3 pt-4">
+      <div class="row">
+        <div class="col-lg-3 pr-lg-4 pb-4">
+          <a href="#" class="footer-text d-block text-large font-weight-bolder mb-3">Brand</a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate commodo justo.
+          </p>
+          <a class="text-twitter" href="#">
+            <i class="ion ion-logo-twitter"></i>
+          </a>
+          &nbsp; &nbsp;
+          <a class="text-facebook" href="#">
+            <i class="ion ion-logo-facebook"></i>
+          </a>
+        </div>
+
+        <div class="col">
+          <div class="row">
+            <div class="col-4 col-sm-3 col-md pb-4">
+              <div class="footer-text small font-weight-bold mb-3">ABOUT US</div>
+              <a href="#" class="footer-link d-block pb-2">About</a>
+              <a href="#" class="footer-link d-block pb-2">Our Story</a>
+              <a href="#" class="footer-link d-block pb-2">Shipping</a>
+              <a href="#" class="footer-link d-block pb-2">Careers</a>
+            </div>
+            <div class="col-4 col-sm-3 col-md pb-4">
+              <div class="footer-text small font-weight-bold mb-3">CATEGORY</div>
+              <a href="#" class="footer-link d-block pb-2">Women</a>
+              <a href="#" class="footer-link d-block pb-2">Man</a>
+              <a href="#" class="footer-link d-block pb-2">Electronics</a>
+              <a href="#" class="footer-link d-block pb-2">Other</a>
+            </div>
+            <div class="col-4 col-sm-3 col-md pb-4">
+              <div class="footer-text small font-weight-bold mb-3">SUPPORT</div>
+              <a href="#" class="footer-link d-block pb-2">FAQ</a>
+              <a href="#" class="footer-link d-block pb-2">Support</a>
+              <a href="#" class="footer-link d-block pb-2">Consultant</a>
+            </div>
+            <div class="col-4 col-sm-3 col-md pb-4">
+              <div class="footer-text small font-weight-bold mb-3">PARTNERS</div>
+              <a href="#" class="footer-link d-block pb-2">Wholesale</a>
+              <a href="#" class="footer-link d-block pb-2">Office solutions</a>
+              <a href="#" class="footer-link d-block pb-2">Press Resource</a>
+            </div>
+            <div class="col-4 col-sm-3 col-md pb-4">
+              <div class="footer-text small font-weight-bold mb-3">ACCOUNT</div>
+              <a href="#" class="footer-link d-block pb-2">Log In</a>
+              <a href="#" class="footer-link d-block pb-2">Create Account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="m-0">
+    <div class="container py-4 px-3">
+      <div>© 2018. All rights reserved</div>
+    </div>
+  </nav>
+  <!-- / Footer -->
+
+  <!-- Core scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+
+  <!-- Libs -->
+  <script src="assets/vendor/js/mega-dropdown.js"></script></body>
+  <script src="assets/vendor/libs/swiper/swiper.js"></script>
+  <script src="assets/vendor/libs/numeral/numeral.js"></script>
+  <script src="assets/vendor/libs/nouislider/nouislider.js"></script>
+
+  <!-- Page -->
+  <script src="assets/js/shop.js"></script>
+</html>

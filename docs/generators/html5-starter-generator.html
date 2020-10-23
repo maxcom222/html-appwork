@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style docs-generator-page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>HTML Starter Template Generator - Appwork v1.4.0 Docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/bootstrap.css">
+  <link rel="stylesheet" href="../assets/appwork.css">
+  <link rel="stylesheet" href="../assets/theme-corporate.css">
+
+  <link rel="stylesheet" href="../assets/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/typescript.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+</head>
+<body>
+
+<div id="generator-html">
+    <div class="docs-generator-wrapper">
+      <div class="docs-generator-settings p-4">
+        <gen-select v-model="options.style" :options="styleOptions" class="mb-2"></gen-select>
+        <gen-checkbox v-model="options.materialRipple" :disabled="options.style !== 'material' && !options.settingsPanel" class="mb-2">Material ripple</gen-checkbox>
+        
+        <gen-checkbox v-model="options.paceLoader" class="mb-2">PACE.js loader</gen-checkbox>
+        
+        <gen-checkbox v-model="options.rtlSupport" class="mb-2">RTL support</gen-checkbox>
+        <gen-checkbox v-model="options.rtlMode" :disabled="!options.rtlSupport" class="mb-2">RTL mode</gen-checkbox>
+        <gen-checkbox v-model="options.settingsPanel" class="mb-2">Theme settings panel</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">PAGE LAYOUT</div>
+
+        <gen-select v-model="options.pageLayout" :options="pageLayoutOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">LAYOUT OPTIONS</div>
+
+        <gen-select v-model="options.layoutPosition" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in layoutPositionOptions" :value="option[0]" :disabled="layoutPositionOptionDisabled(option[0])">{{option[1]}}</option>
+        </gen-select>
+        <gen-checkbox v-model="options.fixedNavbar" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">Fixed navbar</gen-checkbox>
+        <gen-checkbox v-model="options.fixedFooter" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">Fixed footer</gen-checkbox>
+        <gen-checkbox v-model="options.reversedLayout" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Reversed</gen-checkbox>
+        <gen-checkbox v-model="options.collapsedSidenav" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'horizontal-sidenav' || options.pageLayout === 'blank'">Collapsed sidenav</gen-checkbox>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">THEME</div>
+
+        <gen-select v-model="options.theme" :options="themeOptions" class="mb-2"></gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">NAVBAR BG</div>
+
+        <gen-select v-model="options.navbarBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-navbar' || options.pageLayout === 'without-navbar-flex' || options.pageLayout === 'blank'">
+          <option v-for="option in navbarBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">SIDENAV BG</div>
+
+        <gen-select v-model="options.sidenavBg" class="mb-2"
+          :disabled="options.pageLayout === 'without-sidenav' || options.pageLayout === 'blank'">
+          <option v-for="option in sidenavBgOptions" :value="option" :disabled="sidenavBgOptionDisabled(option)">{{option}}</option>
+        </gen-select>
+
+        <hr class="mb-2">
+        <div class="text-tiny font-weight-bold mb-2">FOOTER BG</div>
+
+        <gen-select v-model="options.footerBg" class="mb-2"
+          :disabled="options.pageLayout === 'blank'">
+          <option v-for="option in footerBgOptions" :value="option">{{option}}</option>
+        </gen-select>
+
+      </div>
+      <div class="docs-generator-content">
+        <gen-tabs v-on:tabchange="tabChange">
+          <gen-tab title="index.html"><pre v-html="tabContent['index.html']"></pre></gen-tab>
+<gen-tab title="page-2.html"><pre v-html="tabContent['page-2.html']"></pre></gen-tab>
+        </gen-tabs>
+      </div>
+    </div>
+
+    <gen-copy-btn :file="curTab" :text="originalContent[curTab]"></gen-copy-btn>
+  </div>
+
+
+  <textarea class="d-none" id="template__html">
+
+<!DOCTYPE html>
+
+<html lang="en"{% if rtlMode %} dir="rtl"{% endif %} class="{{style}}-style{% if pageLayout != 'blank' and layoutPosition %} layout-{{layoutPosition}}{% endif %}{% if reversedLayout %} layout-reversed{% endif %}{% if collapsedSidenav %} layout-collapsed{% endif %}{% if fixedNavbar %} layout-navbar-fixed{% endif %}{% if fixedFooter %} layout-footer-fixed{% endif %}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>{{pageTitle}} - HTML Starter</title>
+
+  <!-- Main font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icons. Uncomment required icon fonts -->
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css"> -->
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css"> -->
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/open-iconic.css"> -->
+  <!-- <link rel="stylesheet" href="assets/vendor/fonts/pe-icon-7-stroke.css"> -->
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css{% if rtlSupport %}/rtl{% endif %}/bootstrap{% if style == 'material' %}-material{% endif %}.css"{% if settingsPanel %} class="theme-settings-bootstrap-css"{% endif %}>
+  <link rel="stylesheet" href="assets/vendor/css{% if rtlSupport %}/rtl{% endif %}/appwork{% if style == 'material' %}-material{% endif %}.css"{% if settingsPanel %} class="theme-settings-appwork-css"{% endif %}>
+  <link rel="stylesheet" href="assets/vendor/css{% if rtlSupport %}/rtl{% endif %}/theme-{{theme}}{% if style == 'material' %}-material{% endif %}.css"{% if settingsPanel %} class="theme-settings-theme-css"{% endif %}>
+  <link rel="stylesheet" href="assets/vendor/css{% if rtlSupport %}/rtl{% endif %}/colors{% if style == 'material' %}-material{% endif %}.css"{% if settingsPanel %} class="theme-settings-colors-css"{% endif %}>
+  <link rel="stylesheet" href="assets/vendor/css{% if rtlSupport %}/rtl{% endif %}/uikit.css">
+
+  <!-- Load polyfills -->
+  <script src="assets/vendor/js/polyfills.js"></script>
+  <script>document['documentMode']===10&&document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
+
+  {% if materialRipple %}
+  <!-- Material ripple -->
+  <script src="assets/vendor/js/material-ripple.js"></script>
+  {% endif %}
+  {%- if materialRipple and not settingsPanel -%}
+  <script>window.attachMaterialRippleOnLoad();</script>
+  {% endif %}
+
+  {% if pageLayout != 'blank' or settingsPanel %}
+  <!-- Layout helpers -->
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+  {% endif %}
+
+  {% if settingsPanel %}
+  <!-- Theme settings -->
+  <script src="assets/vendor/js/theme-settings.js"></script>
+  <script>
+    // Use settings panel generator to configure the plugin
+    window.themeSettings = new ThemeSettings({
+      cssPath: 'assets/vendor/css{% if rtlSupport %}/rtl{% endif %}/',
+      themesPath: 'assets/vendor/css{% if rtlSupport %}/rtl{% endif %}/'
+    });
+  </script>
+  {% endif %}
+
+  {% if paceLoader %}
+  <!-- PACE.js loader -->
+  <script src="assets/vendor/js/pace.js"></script>
+  {% endif %}
+
+  {% if pageLayout != 'blank' and pageLayout != 'without-sidenav' %}
+  <!-- Libs -->
+
+  <!-- `perfect-scrollbar` library required by SideNav plugin -->
+  <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
+  {% endif %}
+
+</head>
+<body>
+  {% if paceLoader %}
+  <!-- PACE.js loader -->
+  <div class="page-loader"><div class="bg-primary"></div></div>
+  {% endif %}
+
+  {% macro layoutNavbar(tabsCount) %}{% set tabs = '  '.repeat(tabsCount) %}
+{{ tabs }}<!-- Layout navbar -->
+{{ tabs }}<nav class="layout-navbar navbar navbar-expand-lg align-items-lg-center bg-{{navbarBg}} container-p-x" id="layout-navbar">
+{{ tabs }}  <a href="index.html" class="navbar-brand">HTML Starter</a>
+
+{% if pageLayout != 'horizontal-sidenav' and pageLayout != 'without-sidenav' -%}
+{{ tabs }}  <!-- Sidenav toggle -->
+{{ tabs }}  <div class="layout-sidenav-toggle navbar-nav align-items-lg-center mr-auto mr-lg-4">
+{{ tabs }}    <a class="nav-item nav-link px-0 ml-2" href="javascript:void(0)">
+{{ tabs }}      <i class="ion ion-md-menu text-large align-middle"></i>
+{{ tabs }}    </a>
+{{ tabs }}  </div>
+{%- endif %}
+
+{{ tabs }}  <!-- Navbar toggle -->
+{{ tabs }}  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#layout-navbar-collapse">
+{{ tabs }}    <span class="navbar-toggler-icon"></span>
+{{ tabs }}  </button>
+{{ tabs }}
+{{ tabs }}  <div class="navbar-collapse collapse" id="layout-navbar-collapse">
+{{ tabs }}    <div class="navbar-nav align-items-lg-center">
+{{ tabs }}      <div class="nav-item"><a class="nav-link" href="#">Link 1</a></div>
+{{ tabs }}      <div class="nav-item"><a class="nav-link" href="#">Link 2</a></div>
+{{ tabs }}    </div>
+{{ tabs }}  </div>
+{{ tabs }}</nav>
+{{ tabs }}<!-- / Layout navbar -->
+  {% endmacro %}
+
+  {% macro layoutSidenav(tabsCount) %}{% set tabs = '  '.repeat(tabsCount) %}
+{{ tabs }}<!-- Layout sidenav -->
+{{ tabs }}<div id="layout-sidenav" class="layout-sidenav{% if sidenavHorizontal %}-horizontal{% endif %} sidenav sidenav-{% if sidenavHorizontal %}horizontal{% else %}vertical{% endif %} bg-{{sidenavBg}}{% if sidenavHorizontal %} container-p-x flex-grow-0{% endif %}">
+{{ tabs }}  <ul class="sidenav-inner{% if not sidenavHorizontal %} py-1{% endif %}">
+{{ tabs }}    <li class="sidenav-item{% if templateName === 'index.html' %} active{% endif %}">
+{{ tabs }}      <a href="index.html" class="sidenav-link"><i class="sidenav-icon ion ion-ios-contact"></i><div>Page 1</div></a>
+{{ tabs }}    </li>
+{{ tabs }}    <li class="sidenav-item{% if templateName === 'page-2.html' %} active{% endif %}">
+{{ tabs }}      <a href="page-2.html" class="sidenav-link"><i class="sidenav-icon ion ion-md-desktop"></i><div>Page 2</div></a>
+{{ tabs }}    </li>
+{{ tabs }}  </ul>
+{{ tabs }}</div>
+{{ tabs }}<!-- / Layout sidenav -->
+  {% endmacro %}
+
+  {% macro pageContent(tabsCount) -%}{% set tabs = '  '.repeat(tabsCount) %}
+{% if pageLayout == 'layout-1-flex' or pageLayout == 'layout-2-flex' or pageLayout == 'without-navbar-flex' -%}
+{{ tabs }}<div class="flex-shrink-1 flex-grow-0 w-25 bg-light container-p-x container-p-y">
+{{ tabs }}  Side box
+{{ tabs }}</div>
+{{ tabs }}<div class="flex-shrink-1 flex-grow-1 container-p-x container-p-y">
+{% if pageLayout == 'without-navbar-flex' -%}
+{{ tabs }}  <h4 class="font-weight-bold py-3 mb-4">
+{{ tabs }}    {{pageTitle}}
+{{ tabs }}    <a href="#" class="layout-sidenav-toggle d-inline-block text-muted align-middle ml-3" style="font-size: 14px"><i class="ion ion-md-menu text-large align-middle"></i></a>
+{{ tabs }}  </h4>
+{%- else -%}
+{{ tabs }}  <h4 class="font-weight-bold py-3 mb-4">{{pageTitle}}</h4>
+{%- endif %}
+{{ tabs }}  <p>Page content.</p>
+{{ tabs }}  <p><button class="btn btn-primary btn-lg">Button</button></p>
+{{ tabs }}</div>
+{%- else -%}
+{% if pageLayout == 'without-navbar' -%}
+{{ tabs }}<h4 class="font-weight-bold py-3 mb-4">
+{{ tabs }}  {{pageTitle}}
+{{ tabs }}  <a href="#" class="layout-sidenav-toggle d-inline-block text-muted align-middle ml-3" style="font-size: 14px"><i class="ion ion-md-menu text-large align-middle"></i></a>
+{{ tabs }}</h4>
+{%- else -%}
+{{ tabs }}<h4 class="font-weight-bold py-3 mb-4">{{pageTitle}}</h4>
+{%- endif %}
+{{ tabs }}<p>Page content.</p>
+{{ tabs }}<p><button class="btn btn-primary btn-lg">Button</button></p>
+{%- endif -%}
+  {%- endmacro %}
+
+
+  {% set sidenavHorizontal = pageLayout == 'horizontal-sidenav' %}
+  {% set isLayout1 = pageLayout == 'layout-1' or pageLayout == 'layout-1-flex' or pageLayout == 'horizontal-sidenav' or pageLayout == 'without-navbar' or pageLayout == 'without-navbar-flex' or pageLayout == 'without-sidenav' %}
+  {% set isLayout2 = pageLayout == 'layout-2' or pageLayout == 'layout-2-flex' %}
+
+  {% if pageLayout != 'blank' %}
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-{% if isLayout1 %}1{% elif isLayout2 %}2{% endif %}{% if pageLayout == 'horizontal-sidenav' or pageLayout == 'without-sidenav' %} layout-without-sidenav{% endif %}">
+    <!-- Layout inner -->
+    <div class="layout-inner">
+
+      {% if isLayout1 and pageLayout != 'without-navbar' and pageLayout != 'without-navbar-flex' %}{{ layoutNavbar(3) }}{% elif isLayout2 %}{{ layoutSidenav(3) }}{% endif %}
+
+      <div class="layout-container">
+        {% if isLayout1 and pageLayout != 'horizontal-sidenav' and pageLayout != 'without-sidenav' %}{{ layoutSidenav(4) }}{% elif isLayout2 %}{{ layoutNavbar(4) }}{% endif %}
+
+        <div class="layout-content">
+          {% if pageLayout == 'horizontal-sidenav' %}{{ layoutSidenav(5) }}{% endif %}
+
+          <!-- Page content -->
+          <div class="container-fluid flex-grow-1 {% if pageLayout == 'layout-1-flex' or pageLayout == 'layout-2-flex' or pageLayout == 'without-navbar-flex' %}d-flex align-items-stretch p-0{% else %}container-p-y{% endif %}">
+            {{- pageContent(6) }}
+          </div>
+          <!-- / Page content -->
+
+          <!-- Layout footer -->
+          <nav class="layout-footer footer bg-{{footerBg}}">
+            <div class="container-fluid container-p-x pb-3">
+              <a href="#" class="footer-link pt-3">Link 1</a>
+              <a href="#" class="footer-link pt-3 ml-4">Link 2</a>
+            </div>
+          </nav>
+          <!-- / Layout footer -->
+
+        </div>
+      </div>
+
+    </div>
+    <!-- Layout inner -->
+
+    {%- if pageLayout != 'horizontal-sidenav' and pageLayout != 'without-sidenav' %}
+
+    <div class="layout-overlay layout-sidenav-toggle"></div>
+    {%- endif %}
+  </div>
+  <!-- / Layout wrapper -->
+  {% else %}
+  <!-- Page content -->
+  {{- pageContent(1) }}
+  <!-- / Page content -->
+  {% endif %}
+
+  <!-- Core scripts -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+  {%- if pageLayout != 'blank' and pageLayout != 'without-sidenav' %}
+  <script src="assets/vendor/js/sidenav.js"></script>
+  {% endif %}
+
+  {% if pageLayout != 'blank' and pageLayout != 'without-sidenav' %}
+  <!-- Libs -->
+
+  <!-- `perfect-scrollbar` library required by SideNav plugin -->
+  <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  {% endif %}
+
+  <!-- Main script -->
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
+
+</textarea>
+
+
+  <!-- Scripts -->
+
+  <script src="../assets/generator.js"></script>
+  <script src="../assets/generator-html-starter.js"></script>
+
+</body>
+</html>

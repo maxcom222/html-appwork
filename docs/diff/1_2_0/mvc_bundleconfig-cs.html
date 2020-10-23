@@ -1,0 +1,1164 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+.TextSegElementKeyword { font-weight: bold; }
+.TextSegElementIdentifier { }
+.TextSegElementNumber { color: #2E9269; }
+.TextSegElementString { color: #3A7726; }
+.TextSegElementComment { color: #786A41; }
+.TextSegElementOperator { }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_1_0/aspnet-mvc-starter/AspnetMvcStarter/App_Start/BundleConfig.cs &nbsp;
+<br/>
+Right file: appwork-v1_2_0/aspnet-mvc-starter/AspnetMvcStarter/App_Start/BundleConfig.cs &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">System</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Web</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Optimization</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">1</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">System</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Web</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Optimization</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">System</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">2</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">System</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">System</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Collections</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Generic</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">3</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">System</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Collections</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Generic</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">System</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">IO</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">4</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">System</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">IO</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">System</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Text</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">RegularExpressions</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">5</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">System</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Text</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">RegularExpressions</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSigMod">using Glob;</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">6</td>
+<td class="TextItemSigMod">using Glob<span class="TextSegSigDiff">Expressions</span>;</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">BundleTransformer</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Core</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Bundles</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">7</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">BundleTransformer</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Core</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Bundles</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">BundleTransformer</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Core</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Orderers</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">8</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">BundleTransformer</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Core</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Orderers</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">BundleTransformer</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Core</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Resolvers</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">9</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">using</span> <span class="TextSegElementIdentifier">BundleTransformer</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Core</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Resolvers</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">using</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">System</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">Web</span><span class="TextSegSigDiff">;</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">10</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">11</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">namespace</span> <span class="TextSegElementIdentifier">AspnetMvcStarter</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">namespace</span> <span class="TextSegElementIdentifier">AspnetMvcStarter</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">12</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">public</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">class</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">CssRewriteUrlTransformWrapper</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">IItemTransform</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">public</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">string</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Process</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">string</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">includedVirtualPath</span><span class="TextSegSigDiff">,</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">string</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">input</span><span class="TextSegSigDiff">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">return</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">new</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">CssRewriteUrlTransform</span><span class="TextSegSigDiff">().</span><span class="TextSegSigDiff">Process</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">&quot;~&quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">+</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">VirtualPathUtility</span><span class="TextSegSigDiff">.</span><span class="TextSegSigDiff">ToAbsolute</span><span class="TextSegSigDiff">(</span><span class="TextSegSigDiff">includedVirtualPath</span><span class="TextSegSigDiff">),</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">input</span><span class="TextSegSigDiff">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">13</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">14</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">public</span> <span class="TextSegElementKeyword">class</span> <span class="TextSegElementIdentifier">BundleConfig</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementKeyword">public</span> <span class="TextSegElementKeyword">class</span> <span class="TextSegElementIdentifier">BundleConfig</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">15</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">16</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">17</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">public</span> <span class="TextSegElementKeyword">static</span> <span class="TextSegElementKeyword">void</span> <span class="TextSegElementIdentifier">RegisterBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">BundleCollection</span> <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">public</span> <span class="TextSegElementKeyword">static</span> <span class="TextSegElementKeyword">void</span> <span class="TextSegElementIdentifier">RegisterBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">BundleCollection</span> <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">18</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">19</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// bundles.UseCdn = true;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// bundles.UseCdn = true;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">20</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// BundleTable.EnableOptimizations = true;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// BundleTable.EnableOptimizations = true;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">21</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">22</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Replace a default bundle resolver in order to the debugging HTTP handler</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Replace a default bundle resolver in order to the debugging HTTP handler</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">23</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// can use transformations of the corresponding bundle</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// can use transformations of the corresponding bundle</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">24</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">BundleResolver</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Current</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">CustomBundleResolver</span><span class="TextSegElementOperator">();</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">BundleResolver</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Current</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">CustomBundleResolver</span><span class="TextSegElementOperator">();</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">25</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">26</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">27</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Application assets</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Application assets</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">28</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">29</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">30</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/css/main&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Content/main.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/css/main&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Content/main.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">31</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">ScriptBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/js/main&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Scripts/main.js&quot;</span><span class="TextSegElementOperator">));</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">ScriptBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/js/main&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Scripts/main.js&quot;</span><span class="TextSegElementOperator">));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">32</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">33</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle jquery-validation-unobtrusive package</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle jquery-validation-unobtrusive package</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">34</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">ScriptBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/js/jquery-validation-unobtrusive/jquery-validation-unobtrusive&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">ScriptBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/js/jquery-validation-unobtrusive/jquery-validation-unobtrusive&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">35</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js&quot;</span><span class="TextSegElementOperator">));</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js&quot;</span><span class="TextSegElementOperator">));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">36</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">37</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">38</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Core stylesheets</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Core stylesheets</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">39</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">40</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">41</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/css/bootstrap&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Vendor/css/bootstrap.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/css/bootstrap&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Vendor/css/bootstrap.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">42</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/css/appwork&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Vendor/css/appwork.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/css/appwork&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Vendor/css/appwork.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">43</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/css/theme-corporate&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Vendor/css/theme-corporate.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/css/theme-corporate&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Vendor/css/theme-corporate.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">44</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/css/colors&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Vendor/css/colors.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/css/colors&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Vendor/css/colors.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">45</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/css/uikit&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Vendor/css/uikit.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/bundle/vendor/css/uikit&quot;</span><span class="TextSegElementOperator">).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;~/Vendor/css/uikit.scss&quot;</span><span class="TextSegElementOperator">));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">46</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">47</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">48</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Automatically bundle ~/Vendor/js directory</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Automatically bundle ~/Vendor/js directory</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">49</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">50</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">51</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle path: ~/bundle/vendor/js/{filename}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle path: ~/bundle/vendor/js/{filename}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">52</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementIdentifier">bundleFile</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;js&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;js&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;**/*&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;js&quot;</span><span class="TextSegElementOperator">))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementIdentifier">bundleFile</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;js&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;js&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;**/*&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;js&quot;</span><span class="TextSegElementOperator">))</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">53</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">54</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; bundles.Add(new <span class="TextSegSigDiff">Script</span>Bundle(bundleFile[0]).Include(bundleFile[1]));</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; bundles.Add(new Bundle(bundleFile[0]).Include(bundleFile[1]));</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">55</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">56</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">57</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">58</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Automatically bundle ~/Vendor/css/pages directory</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">66</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Automatically bundle ~/Vendor/css/pages directory</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">59</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">67</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">60</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">68</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">61</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle path: ~/bundle/vendor/css/pages/{filename}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">69</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle path: ~/bundle/vendor/css/pages/{filename}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">62</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementIdentifier">bundleFile</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;css\\pages&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;css/pages&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;**/*&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;scss&quot;</span><span class="TextSegElementOperator">))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">70</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementIdentifier">bundleFile</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;css\\pages&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;css/pages&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;**/*&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;scss&quot;</span><span class="TextSegElementOperator">))</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">63</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">71</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">64</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">bundleFile</span><span class="TextSegElementOperator">[</span><span class="TextSegElementNumber">0</span><span class="TextSegElementOperator">]).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">bundleFile</span><span class="TextSegElementOperator">[</span><span class="TextSegElementNumber">1</span><span class="TextSegElementOperator">]));</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">72</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">bundleFile</span><span class="TextSegElementOperator">[</span><span class="TextSegElementNumber">0</span><span class="TextSegElementOperator">]).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">bundleFile</span><span class="TextSegElementOperator">[</span><span class="TextSegElementNumber">1</span><span class="TextSegElementOperator">]));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">65</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">73</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">66</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">74</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">67</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">75</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">68</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Automatically bundle ~/Vendor/fonts directory</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">76</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Automatically bundle ~/Vendor/fonts directory</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">69</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">77</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">70</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">78</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">71</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle path: ~/bundle/vendor/fonts/{filename}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">79</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle path: ~/bundle/vendor/fonts/{filename}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">72</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementIdentifier">bundleFile</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;fonts&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;fonts&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;*&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;css&quot;</span><span class="TextSegElementOperator">))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">80</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementIdentifier">bundleFile</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;fonts&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;fonts&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;*&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;css&quot;</span><span class="TextSegElementOperator">))</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">73</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">81</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">74</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; bundles.Add(new <span class="TextSegSigDiff">Style</span>Bundle(bundleFile[0]).Include(bundleFile[1], new CssRewriteUrlTransform()));</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">82</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; bundles.Add(new Bundle(bundleFile[0]).Include(bundleFile[1], new CssRewriteUrlTransform<span class="TextSegSigDiff">Wrapper</span>()));</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">75</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">83</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">76</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">84</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">77</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">85</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// ------------------------------------------------------------------------------------</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">78</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Automatically bundle ~/Vendor/libs directory</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">86</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Automatically bundle ~/Vendor/libs directory</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">79</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">87</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">80</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">88</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">81</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle path: ~/bundle/vendor/css/{libdir}/{filename}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">89</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle path: ~/bundle/vendor/css/{libdir}/{filename}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">82</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementIdentifier">bundleFile</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;libs&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;css&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;**/*&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;scss&quot;</span><span class="TextSegElementOperator">))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">90</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementIdentifier">bundleFile</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;libs&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;css&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;**/*&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;scss&quot;</span><span class="TextSegElementOperator">))</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">83</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">91</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">84</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">bundleFile</span><span class="TextSegElementOperator">[</span><span class="TextSegElementNumber">2</span><span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementString">&quot;true&quot;</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">92</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">bundleFile</span><span class="TextSegElementOperator">[</span><span class="TextSegElementNumber">2</span><span class="TextSegElementOperator">]</span> <span class="TextSegElementOperator">==</span> <span class="TextSegElementString">&quot;true&quot;</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">85</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">93</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">86</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; bundles.Add(SassBundle(bundleFile[0]).Include(bundleFile[1], new CssRewriteUrlTransform()));</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">94</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; bundles.Add(SassBundle(bundleFile[0]).Include(bundleFile[1], new CssRewriteUrlTransform<span class="TextSegSigDiff">Wrapper</span>()));</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">87</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">95</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">88</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">else</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">96</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">else</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">89</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">97</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">90</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">bundleFile</span><span class="TextSegElementOperator">[</span><span class="TextSegElementNumber">0</span><span class="TextSegElementOperator">]).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">bundleFile</span><span class="TextSegElementOperator">[</span><span class="TextSegElementNumber">1</span><span class="TextSegElementOperator">]));</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">98</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">bundleFile</span><span class="TextSegElementOperator">[</span><span class="TextSegElementNumber">0</span><span class="TextSegElementOperator">]).</span><span class="TextSegElementIdentifier">Include</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">bundleFile</span><span class="TextSegElementOperator">[</span><span class="TextSegElementNumber">1</span><span class="TextSegElementOperator">]));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">91</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">99</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">92</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">100</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">93</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">101</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">94</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle path: ~/bundle/vendor/js/{libdir}/{filename}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">102</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Bundle path: ~/bundle/vendor/js/{libdir}/{filename}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">95</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementIdentifier">bundleFile</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;libs&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;js&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;**/*&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;js&quot;</span><span class="TextSegElementOperator">))</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">103</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementIdentifier">bundleFile</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;libs&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;js&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;**/*&quot;</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;js&quot;</span><span class="TextSegElementOperator">))</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">96</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">104</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemNum AlignRight">97</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; bundles.Add(new <span class="TextSegSigDiff">Script</span>Bundle(bundleFile[0]).Include(bundleFile[1]));</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemNum AlignRight">105</td>
+<td class="TextItemSigMod">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; bundles.Add(new Bundle(bundleFile[0]).Include(bundleFile[1]));</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemNum AlignRight">98</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemNum AlignRight">106</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">99</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">107</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">100</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">108</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">101</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">109</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">102</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">private</span> <span class="TextSegElementKeyword">static</span> <span class="TextSegElementIdentifier">Bundle</span> <span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">path</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">110</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">private</span> <span class="TextSegElementKeyword">static</span> <span class="TextSegElementIdentifier">Bundle</span> <span class="TextSegElementIdentifier">SassBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">path</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">103</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">111</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">104</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">CustomStyleBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">path</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">112</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">CustomStyleBundle</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">path</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">105</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">113</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">106</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Orderer</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">NullOrderer</span><span class="TextSegElementOperator">()</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">114</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Orderer</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">NullOrderer</span><span class="TextSegElementOperator">()</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">107</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">};</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">115</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">};</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">108</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">116</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">109</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">117</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">110</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">private</span> <span class="TextSegElementKeyword">static</span> <span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[][]</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">sourcePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">bundlePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">globPattern</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">ext</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">118</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">private</span> <span class="TextSegElementKeyword">static</span> <span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[][]</span> <span class="TextSegElementIdentifier">GetVendorBundles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">sourcePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">bundlePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">globPattern</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">ext</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">111</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">119</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">112</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Application root directory path</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">120</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">// Application root directory path</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">113</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">APP_PATH</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">AppDomain</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">CurrentDomain</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">BaseDirectory</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">121</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">APP_PATH</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">AppDomain</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">CurrentDomain</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">BaseDirectory</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">114</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">122</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementComment">//</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">115</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">123</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">116</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">DirectoryInfo</span> <span class="TextSegElementIdentifier">dirInfo</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">DirectoryInfo</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">APP_PATH</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;\\Vendor\\&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">sourcePath</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">124</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">DirectoryInfo</span> <span class="TextSegElementIdentifier">dirInfo</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">DirectoryInfo</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">APP_PATH</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;\\Vendor\\&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">sourcePath</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">117</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">IEnumerable</span><span class="TextSegElementOperator">&lt;</span><span class="TextSegElementIdentifier">FileInfo</span><span class="TextSegElementOperator">&gt;</span> <span class="TextSegElementIdentifier">contents</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">dirInfo</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">GlobFiles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">globPattern</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;.&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">ext</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">125</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">IEnumerable</span><span class="TextSegElementOperator">&lt;</span><span class="TextSegElementIdentifier">FileInfo</span><span class="TextSegElementOperator">&gt;</span> <span class="TextSegElementIdentifier">contents</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">dirInfo</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">GlobFiles</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">globPattern</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;.&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">ext</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">118</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">126</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">119</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">List</span><span class="TextSegElementOperator">&lt;</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]&gt;</span> <span class="TextSegElementIdentifier">bundles</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">List</span><span class="TextSegElementOperator">&lt;</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]&gt;();</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">127</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">List</span><span class="TextSegElementOperator">&lt;</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]&gt;</span> <span class="TextSegElementIdentifier">bundles</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">List</span><span class="TextSegElementOperator">&lt;</span><span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]&gt;();</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">120</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">128</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">121</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Regex</span> <span class="TextSegElementIdentifier">normalizeRegex</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;\\\\&quot;</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">129</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Regex</span> <span class="TextSegElementIdentifier">normalizeRegex</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;\\\\&quot;</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">122</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">130</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">123</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">sourcePath</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">normalizeRegex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Replace</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">sourcePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;/&quot;</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;/&quot;</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">131</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">sourcePath</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">normalizeRegex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Replace</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">sourcePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;/&quot;</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;/&quot;</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">124</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">132</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">125</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Regex</span> <span class="TextSegElementIdentifier">pathRegex</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;.*?&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Escape</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;/Vendor/&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">sourcePath</span><span class="TextSegElementOperator">));</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">133</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Regex</span> <span class="TextSegElementIdentifier">pathRegex</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;.*?&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Escape</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;/Vendor/&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">sourcePath</span><span class="TextSegElementOperator">));</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">126</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Regex</span> <span class="TextSegElementIdentifier">nameRegex</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;\\.&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Escape</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">ext</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;$&quot;</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">134</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Regex</span> <span class="TextSegElementIdentifier">nameRegex</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;\\.&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Escape</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">ext</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;$&quot;</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">127</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">135</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">128</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Regex</span> <span class="TextSegElementIdentifier">urlRewriteTestRegex</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;/(&quot;</span> <span class="TextSegElementOperator">+</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">136</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">Regex</span> <span class="TextSegElementIdentifier">urlRewriteTestRegex</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Regex</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">&quot;/(&quot;</span> <span class="TextSegElementOperator">+</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">129</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;minicolors/minicolors&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;|&quot;</span> <span class="TextSegElementOperator">+</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">137</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;minicolors/minicolors&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;|&quot;</span> <span class="TextSegElementOperator">+</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">130</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;blueimp-gallery/gallery-video&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;|&quot;</span> <span class="TextSegElementOperator">+</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">138</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;blueimp-gallery/gallery-video&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;|&quot;</span> <span class="TextSegElementOperator">+</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">131</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;blueimp-gallery/gallery&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;|&quot;</span> <span class="TextSegElementOperator">+</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">139</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;blueimp-gallery/gallery&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;|&quot;</span> <span class="TextSegElementOperator">+</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">132</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;jstree/themes/default/style&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;|&quot;</span> <span class="TextSegElementOperator">+</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">140</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;jstree/themes/default/style&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;|&quot;</span> <span class="TextSegElementOperator">+</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">133</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;jstree/themes/default-dark/style&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;|&quot;</span> <span class="TextSegElementOperator">+</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">141</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;jstree/themes/default-dark/style&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;|&quot;</span> <span class="TextSegElementOperator">+</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">134</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;photoswipe/photoswipe&quot;</span> <span class="TextSegElementOperator">+</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">142</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;photoswipe/photoswipe&quot;</span> <span class="TextSegElementOperator">+</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">135</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;)\\.scss$&quot;</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">143</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementString">&quot;)\\.scss$&quot;</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">136</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">144</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">137</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">FileInfo</span> <span class="TextSegElementIdentifier">file</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">contents</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">145</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">foreach</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">FileInfo</span> <span class="TextSegElementIdentifier">file</span> <span class="TextSegElementKeyword">in</span> <span class="TextSegElementIdentifier">contents</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">138</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">146</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">139</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">filePath</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">pathRegex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Replace</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">normalizeRegex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Replace</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">file</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">FullName</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;/&quot;</span><span class="TextSegElementOperator">),</span> <span class="TextSegElementString">&quot;&quot;</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">147</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">filePath</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">pathRegex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Replace</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">normalizeRegex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Replace</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">file</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">FullName</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;/&quot;</span><span class="TextSegElementOperator">),</span> <span class="TextSegElementString">&quot;&quot;</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">140</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">relativeBundlePath</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementString">&quot;~/bundle/vendor/&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">bundlePath</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;/&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">nameRegex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Replace</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">filePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;&quot;</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">148</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">relativeBundlePath</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementString">&quot;~/bundle/vendor/&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">bundlePath</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementString">&quot;/&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">nameRegex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Replace</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">filePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementString">&quot;&quot;</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">141</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">relativeSourcePath</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementString">&quot;~/Vendor/&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">sourcePath</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">filePath</span><span class="TextSegElementOperator">;</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">149</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">string</span> <span class="TextSegElementIdentifier">relativeSourcePath</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementString">&quot;~/Vendor/&quot;</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">sourcePath</span> <span class="TextSegElementOperator">+</span> <span class="TextSegElementIdentifier">filePath</span><span class="TextSegElementOperator">;</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">142</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">bool</span> <span class="TextSegElementIdentifier">urlRewrite</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">urlRewriteTestRegex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">IsMatch</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">relativeSourcePath</span><span class="TextSegElementOperator">);</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">150</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">bool</span> <span class="TextSegElementIdentifier">urlRewrite</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementIdentifier">urlRewriteTestRegex</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">IsMatch</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">relativeSourcePath</span><span class="TextSegElementOperator">);</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">143</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">151</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">144</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementOperator">{</span> <span class="TextSegElementIdentifier">relativeBundlePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">relativeSourcePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">urlRewrite</span> <span class="TextSegElementOperator">?</span> <span class="TextSegElementString">&quot;true&quot;</span> <span class="TextSegElementOperator">:</span> <span class="TextSegElementString">&quot;false&quot;</span> <span class="TextSegElementOperator">});</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">152</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">Add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">string</span><span class="TextSegElementOperator">[]</span> <span class="TextSegElementOperator">{</span> <span class="TextSegElementIdentifier">relativeBundlePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">relativeSourcePath</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">urlRewrite</span> <span class="TextSegElementOperator">?</span> <span class="TextSegElementString">&quot;true&quot;</span> <span class="TextSegElementOperator">:</span> <span class="TextSegElementString">&quot;false&quot;</span> <span class="TextSegElementOperator">});</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">145</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">153</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">146</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">154</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">147</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">ToArray</span><span class="TextSegElementOperator">();</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">155</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementKeyword">return</span> <span class="TextSegElementIdentifier">bundles</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">ToArray</span><span class="TextSegElementOperator">();</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">148</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">156</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">149</td>
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">157</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemNum AlignRight">150</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">158</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemNum AlignRight">151</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemNum AlignRight">159</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">}</span></td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

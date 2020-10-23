@@ -1,0 +1,311 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+.TextSegElementKeyword { font-weight: bold; }
+.TextSegElementIdentifier { }
+.TextSegElementNumber { color: #2E9269; }
+.TextSegElementString { color: #3A7726; }
+.TextSegElementComment { color: #786A41; }
+.TextSegElementOperator { }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/vue-starter/src/router/index.js &nbsp;
+<br/>
+Right file: appwork-v1_4_0/vue-starter/src/router/index.js &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Vue</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'vue'</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Vue</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'vue'</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Router</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'vue-router'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Router</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'vue-router'</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Meta</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'vue-meta'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Meta</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'vue-meta'</span></td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">import</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">NotFound</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">from</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'@/components/NotFound'</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">globals</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'@/globals'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">globals</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'@/globals'</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementComment">// Layouts</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementComment">// Layouts</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Layout1</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'@/layout/Layout1'</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">import</span> <span class="TextSegElementIdentifier">Layout1</span> <span class="TextSegElementIdentifier">from</span> <span class="TextSegElementString">'@/layout/Layout1'</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">Vue</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">use</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">Router</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">Vue</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">use</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">Router</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">Vue</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">use</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">Meta</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">Vue</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">use</span><span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">Meta</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">router</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Router</span><span class="TextSegElementOperator">({</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">const</span> <span class="TextSegElementIdentifier">router</span> <span class="TextSegElementOperator">=</span> <span class="TextSegElementKeyword">new</span> <span class="TextSegElementIdentifier">Router</span><span class="TextSegElementOperator">({</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">base</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementString">'/'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">base</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementString">'/'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">mode</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementString">'history'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">mode</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementString">'history'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">routes</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementOperator">[{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">routes</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementOperator">[{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">path</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementString">'/'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">path</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementString">'/'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">component</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">Layout1</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">component</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementIdentifier">Layout1</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">children</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementOperator">[{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">children</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementOperator">[{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">path</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementString">''</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">path</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementString">''</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">component</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementKeyword">import</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'@/components/Home'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">component</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementKeyword">import</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'@/components/Home'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">},</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">path</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementString">'page-2'</span><span class="TextSegElementOperator">,</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">path</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementString">'page-2'</span><span class="TextSegElementOperator">,</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">component</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementKeyword">import</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'@/components/Page2'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp; &nbsp;&nbsp; <span class="TextSegElementIdentifier">component</span><span class="TextSegElementOperator">:</span> <span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementKeyword">import</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'@/components/Page2'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}]</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementOperator">}]</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp; </span><span class="TextSegSigDiff">},</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemInsigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegInsigDiff">// 404 Not Found page</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">path</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">'*'</span><span class="TextSegSigDiff">,</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegInsigDiff">&nbsp;&nbsp;&nbsp; </span><span class="TextSegSigDiff">component</span><span class="TextSegSigDiff">:</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">NotFound</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">}]</span></td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">}]</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementOperator">})</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">})</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">router</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">afterEach</span><span class="TextSegElementOperator">(()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">router</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">afterEach</span><span class="TextSegElementOperator">(()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// On small screens collapse sidenav</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// On small screens collapse sidenav</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">layoutHelpers</span> <span class="TextSegElementOperator">&amp;&amp;</span> <span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">isSmallScreen</span><span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">&amp;&amp;</span> <span class="TextSegElementOperator">!</span><span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">isCollapsed</span><span class="TextSegElementOperator">())</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementKeyword">if</span> <span class="TextSegElementOperator">(</span><span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">layoutHelpers</span> <span class="TextSegElementOperator">&amp;&amp;</span> <span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">isSmallScreen</span><span class="TextSegElementOperator">()</span> <span class="TextSegElementOperator">&amp;&amp;</span> <span class="TextSegElementOperator">!</span><span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">isCollapsed</span><span class="TextSegElementOperator">())</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">setTimeout</span><span class="TextSegElementOperator">(()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">setCollapsed</span><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">true</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementKeyword">true</span><span class="TextSegElementOperator">),</span> <span class="TextSegElementNumber">10</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;&nbsp;&nbsp; <span class="TextSegElementIdentifier">setTimeout</span><span class="TextSegElementOperator">(()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">window</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">layoutHelpers</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">setCollapsed</span><span class="TextSegElementOperator">(</span><span class="TextSegElementKeyword">true</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementKeyword">true</span><span class="TextSegElementOperator">),</span> <span class="TextSegElementNumber">10</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">}</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementOperator">}</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// Scroll to top of the page</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// Scroll to top of the page</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">globals</span><span class="TextSegElementOperator">().</span><span class="TextSegElementIdentifier">scrollTop</span><span class="TextSegElementOperator">(</span><span class="TextSegElementNumber">0</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementNumber">0</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">globals</span><span class="TextSegElementOperator">().</span><span class="TextSegElementIdentifier">scrollTop</span><span class="TextSegElementOperator">(</span><span class="TextSegElementNumber">0</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementNumber">0</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementOperator">})</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">})</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementIdentifier">router</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">beforeEach</span><span class="TextSegElementOperator">((</span><span class="TextSegElementIdentifier">to</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">from</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">next</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementIdentifier">router</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">beforeEach</span><span class="TextSegElementOperator">((</span><span class="TextSegElementIdentifier">to</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">from</span><span class="TextSegElementOperator">,</span> <span class="TextSegElementIdentifier">next</span><span class="TextSegElementOperator">)</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementOperator">{</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// Set loading state</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// Set loading state</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">body</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">classList</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'app-loading'</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">document</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">body</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">classList</span><span class="TextSegElementOperator">.</span><span class="TextSegElementIdentifier">add</span><span class="TextSegElementOperator">(</span><span class="TextSegElementString">'app-loading'</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// Add tiny timeout to finish page transition</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementComment">// Add tiny timeout to finish page transition</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">setTimeout</span><span class="TextSegElementOperator">(()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">next</span><span class="TextSegElementOperator">(),</span> <span class="TextSegElementNumber">10</span><span class="TextSegElementOperator">)</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp; <span class="TextSegElementIdentifier">setTimeout</span><span class="TextSegElementOperator">(()</span> <span class="TextSegElementOperator">=&gt;</span> <span class="TextSegElementIdentifier">next</span><span class="TextSegElementOperator">(),</span> <span class="TextSegElementNumber">10</span><span class="TextSegElementOperator">)</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"><span class="TextSegElementOperator">})</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementOperator">})</span></td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"><span class="TextSegElementKeyword">export</span> <span class="TextSegElementKeyword">default</span> <span class="TextSegElementIdentifier">router</span></td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"><span class="TextSegElementKeyword">export</span> <span class="TextSegElementKeyword">default</span> <span class="TextSegElementIdentifier">router</span></td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>

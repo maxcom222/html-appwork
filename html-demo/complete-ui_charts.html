@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+
+<html lang="en" class="default-style">
+
+<head>
+  <title>Charts - HTML Complete UI - Appwork</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+  <!-- Icon fonts -->
+  <link rel="stylesheet" href="assets/vendor/fonts/fontawesome.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/ionicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/linearicons.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/open-iconic.css">
+  <link rel="stylesheet" href="assets/vendor/fonts/pe-icon-7-stroke.css">
+
+  <!-- Core stylesheets -->
+  <link rel="stylesheet" href="assets/vendor/css/rtl/bootstrap.css" class="theme-settings-bootstrap-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/appwork.css" class="theme-settings-appwork-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/theme-corporate.css" class="theme-settings-theme-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/colors.css" class="theme-settings-colors-css">
+  <link rel="stylesheet" href="assets/vendor/css/rtl/uikit.css">
+
+  <!-- Load polyfills -->
+  <script src="assets/vendor/js/polyfills.js"></script>
+  <script>document['documentMode']===10&&document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl.~locale.en"><\/script>')</script>
+
+  <script src="assets/vendor/js/material-ripple.js"></script>
+  <script src="assets/vendor/js/layout-helpers.js"></script>
+
+  <!-- Theme settings -->
+  <!-- This file MUST be included after core stylesheets and layout-helpers.js in the <head> section -->
+  <script src="assets/vendor/js/theme-settings.js"></script>
+  <script>
+    window.themeSettings = new ThemeSettings({
+      cssPath: 'assets/vendor/css/rtl/',
+      themesPath: 'assets/vendor/css/rtl/'
+    });
+  </script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/js/pace.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/vendor/libs/clipboard/clipboard.js"></script>
+
+  <!-- Libs -->
+  <link rel="stylesheet" href="assets/vendor/libs/flot/flot.css">
+  <link rel="stylesheet" href="assets/vendor/libs/c3/c3.css">
+  <link rel="stylesheet" href="assets/vendor/libs/chartist/chartist.css">
+  <link rel="stylesheet" href="assets/vendor/libs/morris/morris.css">
+
+  <!-- highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+  <!-- Custom styles -->
+  <style>
+    #main-header {
+      font-weight: bold;
+      font-size: 1.6875rem;
+      margin: 0 0 -.3125rem 0;
+      padding: .9375rem 3.125rem;
+      line-height: 2.5rem;
+    }
+
+    #main-header-path {
+      opacity: .4;
+    }
+
+    .no-ie10,
+    .no-ie11 {
+      display: block;
+      background: #fff9e5;
+      color: #66645c;
+      border-left: 4px solid #e6d292;
+      padding: 10px;
+      margin: 24px 0;
+      direction: ltr !important;
+    }
+
+    .no-ie10:before,
+    .no-ie11:before {
+      content: attr(data-name);
+      font-weight: bold;
+    }
+
+    .no-ie10:after {
+      content: " doesn't support Internet Explorer 10 and below.";
+    }
+
+    .no-ie11:after {
+      content: " doesn't support Internet Explorer 11 and below.";
+    }
+
+    .no-ie10.no-message:after,
+    .no-ie11.no-message:after {
+      display: none;
+    }
+
+    /* Page background */
+    .ui-block,
+    .cui-bottom-spacer {
+      background: transparent;
+    }
+
+    /* Blocks */
+    .ui-block {
+      padding: 1.875rem 3.125rem;
+      border-top: .3125rem solid rgba(49, 68, 82, .07);
+    }
+
+    /* Headings */
+    .ui-block-heading {
+      margin: 0 -3.125rem;
+      padding: 0 3.125rem;
+    }
+
+    h3.ui-block-heading {
+      font-size: 1.25rem;
+    }
+
+    h4.ui-block-heading {
+      margin-top: 1.875rem;
+      padding-top: 1.875rem;
+      padding-bottom: 1.875rem;
+      text-transform: uppercase;
+      color: rgba(24, 28, 33, .4);
+      border-top: .0625rem solid rgba(49, 68, 82, .05);
+      font-size: .6875rem;
+    }
+
+    h4.ui-block-heading:first-of-type {
+      margin-top: 0;
+      border: 0;
+    }
+
+    /* Description */
+    .ui-block-description {
+      display: block;
+      font-size: .9375rem;
+      color: rgba(0, 0, 0, .3);
+      margin: .5rem 0 0 0;
+    }
+
+    .ui-block-description[href]:after {
+      content: " →";
+    }
+
+    /* Material-only elements */
+    html:not(.material-style) .material-style-only {
+      display: none !important;
+    }
+
+    /* Code examples */
+    .cui-example-code,
+    .cui-example-code-static {
+      display: none;
+      direction: ltr !important;
+      text-align: left !important;
+    }
+
+    .cui-example-code-static {
+      display: block;
+    }
+
+    .cui-example-code.active {
+      display: block;
+    }
+
+    .cui-example-code pre,
+    .cui-example-code-static pre {
+      max-height: 37.5rem;
+      border: .1875rem solid rgba(49, 68, 82, .04);
+      margin-bottom: 1.875rem;
+    }
+
+    .cui-example-code code,
+    .cui-example-code-static code {
+      margin: 0;
+      max-height: calc(37.5rem - .375rem);
+      overflow: auto;
+      padding: 1.25rem 1.875rem;
+      background: rgba(49, 68, 82, .04);
+    }
+
+    .cui-example-code-toggle {
+      display: block;
+      line-height: 1.25;
+      font-weight: 800;
+      background: rgba(49, 68, 82, .05);
+      direction: ltr !important;
+      color: #aaa;
+      padding: .1875rem .3125rem;
+      border-radius: .125rem;
+      white-space: nowrap;
+      font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: .9em;
+    }
+
+    .cui-example-code-toggle:hover,
+    .cui-example-code-toggle.active {
+      color: #fff;
+      background: #333;
+    }
+
+    .cui-example-code-toggle::after {
+      vertical-align: middle;
+      display: none;
+      padding-left: .375rem;
+    }
+
+    .cui-example-code-toggle:hover::after,
+    .cui-example-code-toggle.active::after {
+      display: inline-block;
+    }
+
+    .cui-example-code-toggle::after {
+      content: 'SHOW CODE';
+    }
+
+    .cui-example-code-toggle.active::after {
+      content: 'HIDE CODE';
+    }
+
+    .cui-example-code-static pre {
+      margin: 1.875rem 0 0 0;
+    }
+
+    /* Spacing */
+    .cui-bottom-spacer {
+      height: 12rem;
+    }
+
+    .cui-example-vertical-spacing>*+* {
+      margin-top: 1.875rem !important;
+      margin-bottom: 0 !important;
+    }
+
+    .cui-example-vertical-spacing-sm>*+* {
+      margin-top: .9375rem !important;
+      margin-bottom: 0 !important;
+    }
+
+    .cui-example-vertical-spacing-lg>*+* {
+      margin-top: 5rem !important;
+      margin-bottom: 0 !important;
+    }
+
+    .cui-example-inline-spacing>*,
+    .cui-example-paragraph-spacing>p>* {
+      margin: 0 .375rem .9375rem 0;
+    }
+
+    .cui-example-paragraph-spacing>p {
+      margin: 0;
+    }
+
+    /* Extras */
+    .cui-utils-example-border-color>* {
+      display: inline-block;
+      width: 5rem;
+      height: 5rem;
+      margin: 0 .625rem .625rem 0;
+      border: .1875rem solid;
+    }
+
+    .cui-utils-example-bg-color .col-sm {
+      padding: .9375rem 1.25rem;
+      margin-bottom: .9375rem;
+    }
+
+    /* RTL */
+    [dir=rtl] .cui-example-inline-spacing>*,
+    [dir=rtl] .cui-example-paragraph-spacing>p>* {
+      margin-right: 0;
+      margin-left: .375rem;
+    }
+
+    [dir=rtl] .cui-utils-example-border-color>* {
+      margin-right: 0;
+      margin-left: .625rem;
+    }
+
+    .rtl-only {
+      display: none !important;
+      direction: ltr !important;
+      text-align: left !important;
+    }
+
+    [dir=rtl] .rtl-only {
+      display: block !important;
+    }
+  </style>
+  <!-- / Custom styles -->
+</head>
+
+<body>
+  <div class="page-loader">
+    <div class="bg-primary"></div>
+  </div>
+
+  <h1 id="main-header" class="bg-dark text-white">
+    <span id="main-header-path">HTML Complete UI &nbsp;/&nbsp;</span>
+    <div class="d-inline-block position-relative">
+      <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown">Charts</a>
+      <div class="dropdown-menu mt-3">
+        <a href="complete-ui_base.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Base</span></a>
+        <a href="complete-ui_plugins.html" class="dropdown-item text-big py-2 px-4"><span class="d-inline-block py-1 px-2">Plugins</span></a>
+
+      </div>
+    </div>
+  </h1>
+
+  <div class="ui-block">
+    <h3 class="ui-block-heading">GMaps</h3>
+    <a target="_blank" href="https://github.com/hpneo/gmaps" class="ui-block-description">https://github.com/hpneo/gmaps</a>
+
+    <samp class="cui-example-code-static">
+      &lt;script src="https://maps.google.com/maps/api/js?key=YOUR_API_KEY"&gt;&lt;/script&gt;
+      &lt;script src="assets/vendor/libs/gmaps/gmaps.js"&gt;&lt;/script&gt;
+    </samp>
+
+    <h4 class="ui-block-heading">Examples</h4>
+
+    <div class="cui-example">
+      <div id="gmaps-example" style="height: 400px; width: 100%;"></div>
+
+      <!-- Javascript -->
+      <script>
+        $(function() {
+          var map = new GMaps({
+            el: '#gmaps-example',
+            lat: -12.043333,
+            lng: -77.028333
+          });
+        });
+      </script>
+      <!-- / Javascript -->
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <h3 class="ui-block-heading">Mapael</h3>
+    <a target="_blank" href="https://www.npmjs.com/package/jquery-mapael" class="ui-block-description">https://www.npmjs.com/package/jquery-mapael</a>
+
+    <samp class="cui-example-code-static">
+      &lt;script src="assets/vendor/libs/mapael/mapael.js"&gt;&lt;/script&gt;
+      &lt;script src="assets/vendor/libs/mapael/maps/*.js"&gt;&lt;/script&gt;
+
+      <!-- Dependencies: -->
+      &lt;script src="assets/vendor/libs/eve/eve.js"&gt;&lt;/script&gt;
+      &lt;script src="assets/vendor/libs/raphael/raphael.js"&gt;&lt;/script&gt;
+    </samp>
+
+    <h4 class="ui-block-heading">Examples</h4>
+
+    <div class="cui-example">
+      <div id="mapael-example">
+        <div class="map">Alternative content</div>
+      </div>
+
+      <!-- Javascript -->
+      <script>
+        $(function() {
+          $('#mapael-example').mapael({
+            map: {
+              name: 'world_countries',
+              defaultArea: {
+                attrs: {
+                  fill: '#f4f4e8',
+                  stroke: '#ced8d0'
+                },
+                attrsHover: {
+                  fill: '#a4e100'
+                }
+              }
+            }
+          });
+        });
+      </script>
+      <!-- / Javascript -->
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <h3 class="ui-block-heading">Flot</h3>
+    <a target="_blank" href="http://www.flotcharts.org" class="ui-block-description">http://www.flotcharts.org</a>
+
+    <samp class="cui-example-code-static">
+      &lt;link rel="stylesheet" href="assets/vendor/libs/flot/flot.css"&gt;
+      &lt;script src="assets/vendor/libs/flot/flot.js"&gt;&lt;/script&gt;
+    </samp>
+
+    <h4 class="ui-block-heading">Examples</h4>
+
+    <div class="cui-example cui-example-vertical-spacing-lg">
+      <div id="flot-graph" style="height: 250px"></div>
+      <div id="flot-bars" style="height: 250px"></div>
+      <div id="flot-categories" style="height: 250px"></div>
+      <div id="flot-pie" style="height: 250px"></div>
+
+      <!-- Javascript -->
+      <script>
+        $(function() {
+          var gridColor = '#aaaaaa';
+          var gridBorder = '#eeeeee';
+
+          $.plot($('#flot-graph'), [
+            {
+              label: 'Visits',
+              data: [
+                [ 6, 196 ], [ 7, 175 ], [ 8, 212 ], [ 9, 247 ], [ 10, 152 ], [ 11, 225 ], [ 12, 155 ], [ 13, 203 ], [ 14, 166 ], [ 15, 151 ]
+              ]
+            },
+            {
+              label: 'Returning visits',
+              data: [
+                [ 6, 49 ], [ 7, 56 ], [ 8, 30 ], [ 9, 29 ], [ 10, 66 ], [ 11, 2 ], [ 12, 2 ], [ 13, 8 ], [ 14, 34 ], [ 15, 63 ]
+              ]
+            }
+          ], {
+            series: {
+              lines: {
+                show: true,
+                lineWidth: 2
+              },
+              points: {
+                show: true,
+                radius: 4
+              }
+            },
+
+            grid: {
+              color: gridColor,
+              borderColor: gridBorder,
+              borderWidth: 1,
+              hoverable: true,
+              clickable: true
+            },
+
+            xaxis: { tickColor: gridBorder, },
+            yaxis: { tickColor: gridBorder, },
+            legend: {
+              show: true,
+              position: 'ne'
+            },
+            tooltip: { show: true },
+            colors: ["#607D8B", "#4CAF50"]
+          });
+
+          $.plot($('#flot-bars'), [
+            {
+              label: 'Visits',
+              data: [
+                [ 6, 156 ], [ 7, 195 ], [ 8, 171 ], [ 9, 211 ], [ 10, 150 ], [ 11, 169 ], [ 12, 173 ], [ 13, 200 ], [ 14, 233 ], [ 15, 161 ]
+              ]
+            },
+            {
+              label: 'Returning visits',
+              data: [
+                [ 6, 24 ], [ 7, 20 ], [ 8, 31 ], [ 9, 4 ], [ 10, 92 ], [ 11, 87 ], [ 12, 28 ], [ 13, 21 ], [ 14, 80 ], [ 15, 76 ]
+              ]
+            }
+          ], {
+            series: {
+              bars: {
+                show: true,
+                barWidth: .6,
+                align: 'center',
+                lineWidth: 1,
+                fill: 0.25
+              }
+            },
+
+            grid: {
+              color: gridColor,
+              borderColor: gridBorder,
+              borderWidth: 1,
+              hoverable: true,
+              clickable: true
+            },
+
+            xaxis: { tickDecimals: 2, tickColor: gridBorder },
+            yaxis: { tickColor: gridBorder },
+            legend: {
+              show: true,
+              position: 'ne'
+            },
+
+            tooltip: { show: true },
+            colors: ['#FF5722', '#0288D1']
+          });
+
+          $.plot($('#flot-categories'), [
+            {
+              label: 'iPhone',
+              data: [
+                [ "2010.Q1", 35 ], [ '2010.Q2', 67 ], [ '2010.Q3', 13 ], [ '2010.Q4', 75 ]
+              ]
+            },
+            {
+              label: 'iPad',
+              data: [
+                [ "2010.Q1", 18 ], [ '2010.Q2', 80 ], [ '2010.Q3', 72 ], [ '2010.Q4', 33 ]
+              ]
+            },
+            {
+              label: 'iTouch',
+              data: [
+                [ '2010.Q1', 32 ], [ '2010.Q2', 49 ], [ '2010.Q3', 25 ], [ '2010.Q4', 87 ]
+              ]
+            }
+          ], {
+            series: {
+              lines: {
+                show: true,
+                fill: 0.1,
+                lineWidth: 1
+              }
+            },
+
+            grid: {
+              color: gridColor,
+              borderColor: gridBorder,
+              borderWidth: 1,
+              hoverable: true,
+              clickable: true
+            },
+
+            xaxis: { mode: 'categories', tickColor: gridBorder },
+            yaxis: { tickColor: gridBorder },
+            legend: {
+              show: true,
+              position: 'ne'
+            },
+
+            tooltip: {
+              show: true,
+              content: '%s: %y'
+            },
+
+            colors: ['#E040FB', '#E91E63', '#00BCD4']
+          });
+
+          $.plot($('#flot-pie'), [
+            { label: 'Series1', data: 77 },
+            { label: 'Series2', data: 81 },
+            { label: 'Series3', data: 46 },
+            { label: 'Series4', data: 35 },
+            { label: 'Series5', data: 79 },
+            { label: 'Series6', data: 84 },
+            { label: 'Series7', data: 51 }
+          ], {
+            series: {
+              pie: {
+                show: true,
+                radius: 1,
+                innerRadius: 0.5,
+
+                label: {
+                  show: true,
+                  radius: 3 / 4,
+                  background: { opacity: 0 },
+
+                  formatter: function(label, series) {
+                    return '<div style="font-size:11px;text-align:center;color:white;">' + Math.round(series.percent) + '%</div>';
+                  }
+                }
+              }
+            },
+
+            grid: {
+              color: gridColor,
+              borderColor: gridBorder,
+              borderWidth: 1,
+              hoverable: true,
+              clickable: true
+            },
+
+            xaxis: { tickColor: gridBorder },
+            yaxis: { tickColor: gridBorder },
+            colors: ['#4CAF50', '#FF5722', '#607D8B', '#009688', '#E91E63', '#795548', '#0288D1']
+          });
+        });
+      </script>
+      <!-- / Javascript -->
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <h3 class="ui-block-heading">C3 Charts</h3>
+    <a target="_blank" href="http://c3js.org" class="ui-block-description">http://c3js.org</a>
+
+    <samp class="cui-example-code-static">
+      &lt;script src="assets/vendor/libs/d3/d3.js"&gt;&lt;/script&gt;
+      &lt;link rel="stylesheet" href="assets/vendor/libs/c3/c3.css"&gt;
+      &lt;script src="assets/vendor/libs/c3/c3.js"&gt;&lt;/script&gt;
+    </samp>
+
+    <h4 class="ui-block-heading">Examples</h4>
+
+    <div class="cui-example cui-example-vertical-spacing-lg">
+      <div id="c3-graph" style="height: 250px"></div>
+      <div id="c3-spline" style="height: 250px"></div>
+      <div id="c3-area" style="height: 250px"></div>
+      <div id="c3-bar" style="height: 250px"></div>
+      <div id="c3-scatter" style="height: 250px"></div>
+      <div id="c3-donut" style="height: 250px"></div>
+      <div id="c3-gauge" style="height: 250px"></div>
+
+      <!-- Javascript -->
+      <script>
+        $(function() {
+          c3.generate({
+            bindto: '#c3-graph',
+            color: { pattern: [ '#00BCD4', '#607D8B' ] },
+            data: {
+              columns: [
+                [ 'data1', 70, 48, 42, 2, 81, 35 ],
+                [ 'data2', 61, 61, 51, 94, 52, 55 ]
+              ],
+            }
+          });
+
+          c3.generate({
+            bindto: '#c3-spline',
+            color: { pattern: [ '#FF4081', '#795548' ] },
+            data: {
+              type: 'spline',
+              columns: [
+                [ 'data1', 93, 70, 98, 44, 42, 84 ],
+                [ 'data2', 39, 18, 90, 4, 61, 38 ]
+              ],
+            }
+          });
+
+          c3.generate({
+            bindto: '#c3-area',
+            color: { pattern: [ '#E040FB', '#9E9E9E' ] },
+            data: {
+              columns: [
+                [ 'data1', 313, 396, 125, 0, 0, 0 ],
+                [ 'data2', 125, 446, 370, 169, 248, 434 ]
+              ],
+              types: {
+                data1: 'area',
+                data2: 'area-spline',
+              },
+            }
+          });
+
+          c3.generate({
+            bindto: '#c3-bar',
+            color: { pattern: [ '#FF5722', '#4CAF50' ] },
+            data: {
+              columns: [
+                [ 'data1', 492, 118, 124, 332, 262, 182 ],
+                [ 'data2', 205, 138, 164, 474, 244, 216 ]
+              ],
+              type: 'bar',
+            },
+            bar: {
+              width: { ratio: 0.5 },
+            },
+          });
+
+          c3.generate({
+            bindto: '#c3-scatter',
+            color: { pattern: [ '#E91E63', '#009688' ] },
+            data: {
+              xs: {
+                setosa: 'setosa_x',
+                versicolor: 'versicolor_x',
+              },
+              columns: [
+                [ 'setosa_x', 26, 9, 95, 48, 0, 27, 73, 57, 53, 27, 35, 5, 25, 84, 45, 92, 80, 57, 27, 83, 62, 33, 91, 48, 71, 12, 80, 62, 30, 27, 82, 96, 71, 43, 0, 38, 36, 23, 9, 32, 40, 0, 53, 97, 9, 12, 22, 43, 88, 54 ],
+                [ 'versicolor_x', 53, 73, 36, 57, 30, 5, 83, 70, 27, 43, 70, 21, 68, 17, 86, 75, 91, 83, 49, 51, 60, 98, 20, 5, 93, 96, 44, 86, 20, 39, 25, 7, 1, 91, 18, 85, 11, 9, 3, 85, 42, 16, 95, 38, 17, 56, 65, 79, 70, 8 ],
+                [ 'setosa', 15, 47, 36, 78, 81, 6, 96, 73, 53, 72, 94, 92, 5, 75, 11, 91, 13, 10, 76, 77, 93, 97, 36, 72, 45, 48, 10, 98, 7, 35, 69, 50, 38, 46, 83, 65, 33, 86, 40, 27, 94, 97, 66, 65, 54, 29, 27, 11, 58, 21 ],
+                [ 'versicolor', 92, 66, 38, 43, 30, 69, 97, 7, 49, 13, 36, 31, 40, 74, 33, 10, 9, 84, 58, 15, 72, 56, 32, 95, 50, 31, 75, 72, 74, 68, 7, 49, 25, 70, 16, 11, 76, 58, 21, 34, 30, 85, 44, 17, 6, 85, 77, 57, 88, 3 ]
+              ],
+              type: 'scatter'
+            },
+            axis: {
+              x: {
+                label: 'Sepal.Width',
+                tick: { fit: false },
+              },
+              y: { label: 'Petal.Width' },
+            },
+          });
+
+          c3.generate({
+            bindto: '#c3-donut',
+            color: { pattern: [ '#673AB7', '#E040FB', '#D32F2F', '#9E9E9E', '#0288D1' ] },
+            data: {
+              columns: [
+                [ 'data1', 79 ],
+                [ 'data2', 91 ],
+                [ 'data3', 71 ],
+                [ 'data4', 85 ],
+                [ 'data5', 57 ]
+              ],
+              type : 'donut',
+            },
+            donut: { title: 'Some title' },
+          });
+
+          c3.generate({
+            bindto: '#c3-gauge',
+            data: {
+              columns: [
+                ['data', 67]
+              ],
+              type: 'gauge'
+            },
+            color: {
+              pattern: ['#FF0000', '#F97600', '#F6C600', '#60B044'],
+              threshold: {
+                values: [30, 60, 90, 100]
+              }
+            },
+            size: {
+              height: 180
+            }
+          });
+        });
+      </script>
+      <!-- / Javascript -->
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <h3 class="ui-block-heading">Chartist</h3>
+    <a target="_blank" href="https://gionkunz.github.io/chartist-js" class="ui-block-description">https://gionkunz.github.io/chartist-js</a>
+
+    <samp class="cui-example-code-static">
+      &lt;link rel="stylesheet" href="assets/vendor/libs/chartist/chartist.css"&gt;
+      &lt;script src="assets/vendor/libs/chartist/chartist.js"&gt;&lt;/script&gt;
+    </samp>
+
+    <h4 class="ui-block-heading">Examples</h4>
+
+    <div class="cui-example cui-example-vertical-spacing-lg">
+      <div id="chartist-graph" style="height: 250px"></div>
+      <div id="chartist-bi-polar" style="height: 250px"></div>
+      <div id="chartist-bars" style="height: 250px"></div>
+      <div id="chartist-h-bars" style="height: 250px"></div>
+      <div id="chartist-pie" class="ct-negative-labels" style="height: 250px"></div>
+      <div id="chartist-gauge" style="height: 250px"></div>
+
+      <!-- Javascript -->
+      <script>
+        $(function() {
+          new Chartist.Line('#chartist-graph', {
+            labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            series: [
+              [ 8, 14, 5, 13, 12 ],
+              [ 7, 8, 1, 3, 1 ],
+              [ 5, 12, 1, 9, 7 ]
+            ],
+          }, {
+            fullWidth: true,
+            chartPadding: {
+              right: 40
+            }
+          });
+
+          new Chartist.Line('#chartist-bi-polar', {
+            labels: [1, 2, 3, 4, 5, 6, 7, 8],
+            series: [
+              [ 1, -1, -2, 0, 2, -1, -2, -1 ],
+              [ -2, -1, 0, -3, -2, 1, -3, 2 ],
+              [ 2, -1, -1, -3, -2, 0, -1, 1 ],
+              [ 1, -3, 2, -3, -3, 2, -2, -3 ] ]
+          }, {
+            high: 3,
+            low: -3,
+            showArea:  true,
+            showLine:  false,
+            showPoint: false,
+            fullWidth: true,
+            axisX: {
+              showLabel: false,
+              showGrid:  false
+            }
+          });
+
+          new Chartist.Bar('#chartist-bars', {
+            labels: ['First quarter of the year', 'Second quarter of the year', 'Third quarter of the year', 'Fourth quarter of the year'],
+            series: [
+              [ 75177, 30327, 33902, 45922 ],
+              [ 67592, 31235, 64863, 78175 ],
+              [ 1978, 1951, 8121, 8132 ] ]
+          }, {
+            seriesBarDistance: 10,
+            axisX: { offset: 60 },
+            axisY: {
+              offset:        80,
+              scaleMinSpace: 15,
+
+              labelInterpolationFnc: function(value) {
+                return value + ' CHF';
+              },
+            },
+          });
+
+          new Chartist.Bar('#chartist-h-bars', {
+            labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+            series: [
+              [ 8, 2, 8, 2, 1, 4, 5 ],
+              [ 5, 1, 7, 4, 6, 5, 6 ] ]
+          }, {
+            seriesBarDistance: 10,
+            reverseData:       true,
+            horizontalBars:    true,
+            axisY:             { offset: 70 }
+          });
+
+          function sum(a, b) {
+            return a + b;
+          }
+          var pieData = {
+            series: [ 3, 5, 7 ],
+          };
+          new Chartist.Pie('#chartist-pie', pieData, {
+            labelInterpolationFnc: function(value) {
+              return Math.round(value / pieData.series.reduce(sum) * 100) + '%';
+            }
+          });
+
+          new Chartist.Pie('#chartist-gauge', {
+            series: [20, 10, 30, 40],
+          }, {
+            donut:      true,
+            donutWidth: 60,
+            startAngle: 270,
+            total:      200,
+            showLabel:  false
+          });
+        });
+      </script>
+      <!-- / Javascript -->
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <h3 class="ui-block-heading">Chart.js</h3>
+    <a target="_blank" href="http://www.chartjs.org" class="ui-block-description">http://www.chartjs.org</a>
+
+    <samp class="cui-example-code-static">
+      &lt;script src="assets/vendor/libs/chartjs/chartjs.js"&gt;&lt;/script&gt;
+    </samp>
+
+    <h4 class="ui-block-heading">Examples</h4>
+
+    <div class="cui-example cui-example-vertical-spacing-lg">
+      <canvas id="chart-graph" height="250" class="chartjs-demo"></canvas>
+      <canvas id="chart-bars" height="250" class="chartjs-demo"></canvas>
+      <canvas id="chart-radar" height="250" class="chartjs-demo"></canvas>
+      <canvas id="chart-polar-area" height="250" class="chartjs-demo"></canvas>
+      <canvas id="chart-pie" height="250" class="chartjs-demo"></canvas>
+      <canvas id="chart-doughnut" height="250" class="chartjs-demo"></canvas>
+
+      <!-- Javascript -->
+      <script>
+        $(function() {
+          // Wrap charts
+          $('.chartjs-demo').each(function() {
+            $(this).wrap($('<div style="height:' + this.getAttribute('height') + 'px"></div>'));
+          });
+
+
+          var graphChart = new Chart(document.getElementById('chart-graph').getContext("2d"), {
+            type: 'line',
+            data: {
+              labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+              datasets: [{
+                label:           'My First dataset',
+                data:            [43, 91, 89, 16, 21, 79, 28],
+                borderWidth:     1,
+                backgroundColor: 'rgba(255, 193, 7, 0.3)',
+                borderColor:     '#FFC107',
+                borderDash:      [5, 5],
+                fill: false
+              }, {
+                label:           'My Second dataset',
+                data:            [24, 63, 29, 75, 28, 54, 38],
+                borderWidth:     1,
+                backgroundColor: 'rgba(233, 30, 99, 0.3)',
+                borderColor:     '#E91E63',
+              }],
+            },
+
+            // Demo
+            options: {
+              responsive: true,
+              maintainAspectRatio: false
+            }
+          });
+
+          var barsChart = new Chart(document.getElementById('chart-bars').getContext("2d"), {
+            type: 'bar',
+            data: {
+              labels: ['Italy', 'UK', 'USA', 'Germany', 'France', 'Japan'],
+              datasets: [{
+                label: '2010 customers #',
+                data: [53, 99, 14, 10, 43, 27],
+                borderWidth: 1,
+                backgroundColor: 'rgba(205, 220, 57, 0.3)',
+                borderColor: '#CDDC39'
+              }, {
+                label: '2014 customers #',
+                data: [55, 74, 20, 90, 67, 97],
+                borderWidth: 1,
+                backgroundColor: 'rgba(103, 58, 183, 0.3)',
+                borderColor: '#673AB7'
+              }]
+            },
+
+            // Demo
+            options: {
+              responsive: true,
+              maintainAspectRatio: false
+            }
+          });
+
+          var radarChart = new Chart(document.getElementById('chart-radar').getContext("2d"), {
+            type: 'radar',
+            data: {
+              labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+              datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgba(76, 175, 80, 0.3)',
+                borderColor: '#4CAF50',
+                pointBackgroundColor: '#4CAF50',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: '#4CAF50',
+                data: [39, 99, 77, 38, 52, 24, 89],
+                borderWidth: 1
+              }, {
+                label: 'My Second dataset',
+                backgroundColor: 'rgba(0, 150, 136, 0.3)',
+                borderColor: '#009688',
+                pointBackgroundColor: '#009688',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: '#009688',
+                data: [6, 33, 14, 70, 58, 90, 26],
+                borderWidth: 1
+              }]
+            },
+
+            // Demo
+            options: {
+              responsive: true,
+              maintainAspectRatio: false
+            }
+          });
+
+          var polarAreaChart = new Chart(document.getElementById('chart-polar-area').getContext("2d"), {
+            type: 'polarArea',
+            data: {
+              datasets: [{
+                data: [ 12, 10, 14, 6, 15 ],
+                backgroundColor: [ '#FF6384', '#4BC0C0', '#FFCE56', '#E7E9ED', '#36A2EB' ],
+                label: 'My dataset'
+              }],
+              labels: [ 'Red', 'Green', 'Yellow', 'Grey', 'Blue' ]
+            },
+
+            // Demo
+            options: {
+              responsive: true,
+              maintainAspectRatio: false
+            }
+          });
+
+          var pieChart = new Chart(document.getElementById('chart-pie').getContext("2d"), {
+            type: 'pie',
+            data: {
+              labels: [ 'Red', 'Blue', 'Yellow' ],
+              datasets: [{
+                data: [ 180, 272, 100 ],
+                backgroundColor: [ '#FF6384', '#36A2EB', '#FFCE56' ],
+                hoverBackgroundColor: [ '#FF6384', '#36A2EB', '#FFCE56' ]
+              }]
+            },
+
+            // Demo
+            options: {
+              responsive: true,
+              maintainAspectRatio: false
+            }
+          });
+
+          var doughnutChart = new Chart(document.getElementById('chart-doughnut').getContext("2d"), {
+            type: 'doughnut',
+            data: {
+              labels: [ 'Red', 'Blue', 'Yellow' ],
+              datasets: [{
+                data: [ 137, 296, 213 ],
+                backgroundColor: [ '#FF6384', '#36A2EB', '#FFCE56' ],
+                hoverBackgroundColor: [ '#FF6384', '#36A2EB', '#FFCE56' ]
+              }]
+            },
+
+            // Demo
+            options: {
+              responsive: true,
+              maintainAspectRatio: false
+            }
+          });
+
+          // Resize charts on layout toggle
+          //
+
+          window.addEventListener('layouttoggle', function() {
+            graphChart.resize();
+            barsChart.resize();
+            radarChart.resize();
+            polarAreaChart.resize();
+            pieChart.resize();
+            doughnutChart.resize();
+          });
+
+        });
+      </script>
+      <!-- / Javascript -->
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <h3 class="ui-block-heading">Morris</h3>
+    <a target="_blank" href="http://morrisjs.github.io/morris.js" class="ui-block-description">http://morrisjs.github.io/morris.js</a>
+
+    <samp class="cui-example-code-static">
+      &lt;link rel="stylesheet" href="assets/vendor/libs/morris/morris.css"&gt;
+      &lt;script src="assets/vendor/libs/morris/morris.js"&gt;&lt;/script&gt;
+
+      &lt;!-- Dependencies: --&gt;
+      &lt;script src="assets/vendor/libs/eve/eve.js"&gt;&lt;/script&gt;
+      &lt;script src="assets/vendor/libs/raphael/raphael.js"&gt;&lt;/script&gt;
+    </samp>
+
+    <h4 class="ui-block-heading">Examples</h4>
+
+    <div class="cui-example cui-example-vertical-spacing-lg">
+      <div id="morrisjs-graph" style="height: 250px"></div>
+      <div id="morrisjs-bars" style="height: 250px"></div>
+      <div id="morrisjs-area" style="height: 250px"></div>
+      <div id="morrisjs-donut" style="height: 250px"></div>
+
+      <!-- Javascript -->
+      <script>
+        $(function() {
+          var gridBorder = '#eeeeee';
+
+          new Morris.Line({
+            element: 'morrisjs-graph',
+            data: [
+              { period: '2011 Q3', licensed: 71, sorned: 41 },
+              { period: '2011 Q2', licensed: 24, sorned: 80 },
+              { period: '2011 Q1', licensed: 39, sorned: 28 },
+              { period: '2010 Q4', licensed: 34, sorned: 38 },
+              { period: '2009 Q4', licensed: 51, sorned: 11 },
+              { period: '2008 Q4', licensed: 68, sorned: 67 },
+              { period: '2007 Q4', licensed: 85, sorned: 6 },
+              { period: '2006 Q4', licensed: 21, sorned: 87 },
+              { period: '2005 Q4', licensed: 38, sorned: 94 }
+            ],
+            xkey: 'period',
+            ykeys: ['licensed', 'sorned'],
+            labels: ['Licensed', 'Off the road'],
+            lineColors: ['#FFC107', '#E91E63'],
+            lineWidth: 1,
+            pointSize: 4,
+            gridLineColor: gridBorder,
+            resize: true
+          });
+
+          new Morris.Bar({
+            element: 'morrisjs-bars',
+            data: [
+              { device: 'iPhone',     geekbench: 58 },
+              { device: 'iPhone 3G',  geekbench: 39 },
+              { device: 'iPhone 3GS', geekbench: 83 },
+              { device: 'iPhone 4',   geekbench: 50 },
+              { device: 'iPhone 4S',  geekbench: 92 },
+              { device: 'iPhone 5',   geekbench: 32 }
+            ],
+            xkey: 'device',
+            ykeys: ['geekbench'],
+            labels: ['Geekbench'],
+            barRatio: 0.4,
+            xLabelAngle: 35,
+            hideHover: 'auto',
+            barColors: ['#CDDC39'],
+            gridLineColor: gridBorder,
+            resize: true
+          });
+
+          new Morris.Area({
+            element: 'morrisjs-area',
+            data: [
+              { period: '2010 Q1', iphone: 7, ipad: 25, itouch: 12 },
+              { period: '2010 Q2', iphone: 14, ipad: 47, itouch: 46 },
+              { period: '2010 Q3', iphone: 93, ipad: 83, itouch: 66 },
+              { period: '2010 Q4', iphone: 25, ipad: 1, itouch: 39 },
+              { period: '2011 Q1', iphone: 95, ipad: 43, itouch: 39 },
+              { period: '2011 Q2', iphone: 59, ipad: 28, itouch: 15 },
+              { period: '2011 Q3', iphone: 46, ipad: 56, itouch: 60 },
+              { period: '2011 Q4', iphone: 68, ipad: 82, itouch: 30 },
+              { period: '2012 Q1', iphone: 4, ipad: 80, itouch: 82 },
+              { period: '2012 Q2', iphone: 41, ipad: 66, itouch: 84 }
+            ],
+            xkey: 'period',
+            ykeys: ['iphone', 'ipad', 'itouch'],
+            labels: ['iPhone', 'iPad', 'iPod Touch'],
+            hideHover: 'auto',
+            lineColors: ['#673AB7', '#0288D1', '#9E9E9E'],
+            fillOpacity: 0.1,
+            behaveLikeLine: true,
+            lineWidth: 1,
+            pointSize: 4,
+            gridLineColor: gridBorder,
+            resize: true
+          });
+
+          new Morris.Donut({
+            element: 'morrisjs-donut',
+            data: [
+              { label: 'Jam',     value: 25 },
+              { label: 'Frosted', value: 40 },
+              { label: 'Custard', value: 25 },
+              { label: 'Sugar',   value: 10 }
+            ],
+            colors: ['#009688', '#4CAF50', '#D32F2F', '#795548'],
+            resize: true,
+            labelColor: '#888',
+            formatter: function (y) { return y + "%" }
+          });
+        });
+      </script>
+      <!-- / Javascript -->
+    </div>
+  </div>
+
+  <div class="ui-block">
+    <h3 class="ui-block-heading">Sparkline</h3>
+    <a target="_blank" href="http://omnipotent.net/jquery.sparkline/#s-about" class="ui-block-description">http://omnipotent.net/jquery.sparkline/#s-about</a>
+
+    <samp class="cui-example-code-static">
+      &lt;!--
+        $(...).sparkline(...) - Sparkline charts
+        $(...).sparkline2(...) - Responsive sparkline charts (extension)
+      --&gt;
+
+      &lt;script src="assets/vendor/libs/sparkline/sparkline.js"&gt;&lt;/script&gt;
+    </samp>
+
+    <h4 class="ui-block-heading">Examples</h4>
+
+    <div class="cui-example cui-example-vertical-spacing-lg">
+      <div id="sparkline-lines"></div>
+      <div id="sparkline-bars" class="sparkline"></div>
+      <div id="sparkline-tristate"></div>
+      <div id="sparkline-discrete"></div>
+      <div id="sparkline-bullet"></div>
+      <div id="sparkline-pie"></div>
+      <div id="sparkline-box"></div>
+
+      <!-- Javascript -->
+      <script>
+        $(function() {
+          $('#sparkline-lines').sparkline2([24, 92, 77, 90, 91, 78, 28, 49, 23, 81, 15, 97, 94, 16, 99, 61, 38, 34, 48, 3, 5, 21, 27, 4, 33, 40, 46, 47, 48, 18], {
+            height: '100px',
+            width: '100%',
+            lineColor: '#673AB7',
+            fillColor: 'rgba(103, 58, 183, 0.2)',
+            spotRadius: 3,
+            spotColor: '#FFC107',
+            minSpotColor: '#E040FB',
+            maxSpotColor: '#607D8B',
+            highlightSpotColor: '#FF4081',
+            highlightLineColor: '#795548',
+          });
+
+          $('#sparkline-bars').sparkline2([-58, -68, -51, -91, -26, 75, 13, 82, -95, -94, -35, -94, -87, -71, 1, 47, -91, -65, -7, -90, -7, 42, -96, -21, 7, 64, -71, -43, 67, 26], {
+            height: '100px',
+            width: '100%',
+            type: 'bar',
+            barColor: '#673AB7',
+            negBarColor: '#00BCD4',
+          });
+
+          $('#sparkline-tristate').sparkline2([-8, -92, -73, -29, -54, -84, -3, 70, 16, 6, 1, 81, -39, 61, -78, 35, 61, 28, 65, 43, -7, 20, -73, -70, 53, 26, 63, -41, 31, 33], {
+            height: '100px',
+            width: '100%',
+            type: 'tristate',
+            posBarColor: '#607D8B',
+            negBarColor: '#E040FB',
+            zeroBarColor: '#E91E63',
+          });
+
+          $('#sparkline-discrete').sparkline2([67, 20, 1, 22, 23, 67, 31, 10, 47, 68, 24, 79, 93, 56, 38, 15, 9, 15, 1, 89, 72, 52, 79, 29, 38, 2, 71, 50, 63, 69], {
+            height: '100px',
+            width: '100%',
+            type: 'discrete',
+            lineColor: '#0288D1',
+          });
+
+          $('#sparkline-bullet').sparkline2([10, 12, 12, 9, 7], {
+            height: '100px',
+            width: '100%',
+            type: 'bullet',
+            targetColor: '#0288D1',
+            performanceColor: '#009688',
+            rangeColors: [ '#E040FB', '#9E9E9E', '#673AB7' ],
+          });
+
+          $('#sparkline-pie').sparkline2([17, 64, 12, 77], {
+            height: '100px',
+            width: '100px',
+            type: 'pie',
+            sliceColors: [ '#FF4081', '#00BCD4', '#E91E63', '#795548' ],
+          });
+
+          $('#sparkline-box').sparkline2([4, 27, 34, 52, 54, 59, 61, 68, 78, 82, 85, 87, 91, 93, 100], {
+            height: '100px',
+            width: '100%',
+            type: 'box',
+            boxLineColor: "#4CAF50",
+            boxFillColor: "#FFC107",
+            whiskerColor: "#FF4081",
+            outlierLineColor: "#795548",
+            outlierFillColor: "#607D8B",
+            medianColor: "#00BCD4",
+            targetColor: "#E91E63"
+          });
+
+        });
+      </script>
+      <!-- / Javascript -->
+    </div>
+  </div>
+
+  <div class="cui-bottom-spacer"></div>
+
+  <script>
+    (function() {
+      var MATERIAL_STYLE = document.documentElement.className.indexOf('material-style') !== -1;
+      var CLASS_BLACKLIST = ['cui-example-vertical-spacing', 'cui-example-vertical-spacing-sm', 'material-style-only'];
+
+      function hasClass(el, cls) {
+        return el.className.split(' ').indexOf(cls) !== -1;
+      }
+
+      function sanitizeSource(source, blacklist) {
+        source = source
+          .replace(/\r/g, '')
+          .replace(/\t/g, '  ')
+          .replace(/^ *\n/, '\n')
+          .replace(/[\s\n]+$/, '')
+          .replace(new RegExp('\\n' + source.match(/^\n( *)/)[1], 'g'), '\n');
+
+        blacklist = (blacklist || []).concat(CLASS_BLACKLIST);
+
+        if (blacklist) {
+          source = source.replace(/class="([^"]+)"/g, function(m, clsStr) {
+            var clsArr = clsStr.replace(/^\s+|\s+$/, '').replace(/\s+/g, ' ').split(' ');
+
+            for (var i = 0, l = blacklist.length, clsInd; i < l; i++) {
+              if ((clsInd = clsArr.indexOf(blacklist[i])) !== -1) {
+                clsArr.splice(clsInd, 1);
+              }
+            }
+
+            return 'class="' + clsArr.join(' ') + '"';
+          });
+        }
+
+        // Remove material-only code
+        if (!MATERIAL_STYLE) {
+          source = source.replace(/\n\s+<!-- MATERIAL_ONLY -->[\s\S]+?<!-- \/MATERIAL_ONLY -->/g, '');
+        }
+
+        return source
+          .replace(/\s+class=""/ig, '')
+          .replace(/([a-z]+)=""/ig, '$1')
+          .replace(/javascript:void\(0\)/g, '#')
+          .replace(/data-src="holder\.js.+?"/g, 'src="..."')
+          .replace(/\n[ ]*?<!-- MATERIAL_ONLY -->/g, '')
+          .replace(/\n[ ]*?<!-- \/MATERIAL_ONLY -->/g, '')
+          .replace(/^\n/, '');
+      }
+
+      Array.prototype.slice.call(document.querySelectorAll('.cui-example-code-static')).forEach(function(parentEl) {
+        var preEl = document.createElement('pre');
+        var codeEl = document.createElement('code');
+        var lang = parentEl.getAttribute('data-lang') || 'html';
+
+        codeEl.className = 'hljs ' + lang + ' xml';
+
+        preEl.appendChild(codeEl);
+
+        var blacklistStr = (parentEl.getAttribute('data-blacklist') || null);
+        var blacklist = (blacklistStr && blacklistStr.split(',')) || null;
+
+        codeEl.innerHTML = hljs.highlight(lang, sanitizeSource(parentEl.innerHTML.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>'), blacklist)).value;
+        parentEl.innerHTML = '';
+
+        parentEl.appendChild(preEl);
+      });
+
+      Array.prototype.slice.call(document.querySelectorAll('.cui-example')).forEach(function(parentEl) {
+        var wrapperEl = document.createElement('div');
+        var preEl = document.createElement('pre');
+        var codeEl = document.createElement('code');
+
+        var materialOnly = hasClass(parentEl, 'material-style-only');
+
+        wrapperEl.className = 'cui-example-code' + (materialOnly ? ' material-style-only' : '');
+        codeEl.className = 'hljs html xml';
+
+        preEl.appendChild(codeEl);
+        wrapperEl.appendChild(preEl);
+
+        var blacklistStr = (parentEl.getAttribute('data-blacklist') || null);
+        var blacklist = (blacklistStr && blacklistStr.split(',')) || null;
+
+        codeEl.innerHTML = hljs.highlight('html', sanitizeSource(parentEl.innerHTML, blacklist)).value;
+
+        parentEl.parentNode.insertBefore(wrapperEl, parentEl);
+
+        // Get .ui-block-heading element
+        var heading = wrapperEl.previousElementSibling;
+
+        while (heading && !hasClass(heading, 'ui-block-heading')) {
+          heading = heading.previousElementSibling;
+        }
+
+        var toggler = document.createElement('a');
+
+        if (heading) {
+          toggler.className = 'cui-example-code-toggle float-right' + (materialOnly ? ' material-style-only' : '');
+          toggler.innerHTML = '&lt;/&gt';
+          toggler.setAttribute('href', '#');
+
+          heading.appendChild(toggler);
+
+          toggler.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            if (hasClass(toggler, 'active')) {
+              toggler.className = toggler.className.replace(' active', '');
+              wrapperEl.className = wrapperEl.className.replace(' active', '');
+            } else {
+              toggler.className += ' active';
+              wrapperEl.className += ' active';
+            }
+
+            return false;
+          });
+        }
+      });
+    })();
+  </script>
+
+  <!-- Core scripts -->
+  <script src="assets/vendor/libs/popper/popper.js"></script>
+  <script src="assets/vendor/js/bootstrap.js"></script>
+
+  <!-- Libs -->
+  <!-- NOTE: When using Google Maps on your own site you MUST get your own API key:
+           https://developers.google.com/maps/documentation/javascript/get-api-key
+           After you got the key paste it in the URL below. -->
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyCHtdj4L66c05v1UZm-nte1FzUEAN6GKBI"></script>
+  <script src="assets/vendor/libs/gmaps/gmaps.js"></script>
+  <script src="assets/vendor/libs/eve/eve.js"></script>
+  <script src="assets/vendor/libs/raphael/raphael.js"></script>
+  <script src="assets/vendor/libs/mapael/mapael.js"></script>
+  <script src="assets/vendor/libs/mapael/maps/world_countries.js"></script>
+  <script src="assets/vendor/libs/flot/flot.js"></script>
+  <script src="assets/vendor/libs/d3/d3.js"></script>
+  <script src="assets/vendor/libs/c3/c3.js"></script>
+  <script src="assets/vendor/libs/chartist/chartist.js"></script>
+  <script src="assets/vendor/libs/chartjs/chartjs.js"></script>
+  <script src="assets/vendor/libs/morris/morris.js"></script>
+  <script src="assets/vendor/libs/sparkline/sparkline.js"></script>
+</body>
+
+</html>

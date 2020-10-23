@@ -1,0 +1,235 @@
+<html>
+<head>
+<style>
+.AlignLeft { text-align: left; }
+.AlignCenter { text-align: center; }
+.AlignRight { text-align: right; }
+body { font-family: sans-serif; font-size: 11pt; }
+img.AutoScale { max-width: 100%; max-height: 100%; }
+td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
+
+tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
+table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
+td.TextItemInsigMod { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigOrphan { color: #000000; background-color: #FAEEFF; }
+td.TextItemNum { color: #696969; background-color: #F0F0F0; }
+td.TextItemSame { color: #000000; background-color: #FFFFFF; }
+td.TextItemSigMod { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigOrphan { color: #000000; background-color: #F1E3FF; }
+.TextSegInsigDiff { color: #0000FF; }
+.TextSegReplacedDiff { color: #0000FF; font-style: italic; }
+.TextSegSigDiff { color: #FF0000; }
+td.TextItemInsigAdd { color: #000000; background-color: #EEEEFF; }
+td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
+td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
+td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+</style>
+
+</head>
+<body>
+Left file: appwork-v1_3_1/rails-starter/config/puma.rb &nbsp;
+<br/>
+Right file: appwork-v1_4_0/rails-turbolinks-starter/config/puma.rb &nbsp;
+<br/>
+<table class="fc" cellspacing="0" cellpadding="0">
+<tr class="SectionBegin">
+<td class="TextItemSame"># Puma can serve each request in a thread from an internal thread pool.</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"># Puma can serve each request in a thread from an internal thread pool.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># The `threads` method setting takes two numbers: a minimum and maximum.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># The `threads` method setting takes two numbers: a minimum and maximum.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Any libraries that use thread pools should be configured to match</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Any libraries that use thread pools should be configured to match</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># the maximum value specified for Puma. Default is set to 5 threads for minimum</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># the maximum value specified for Puma. Default is set to 5 threads for minimum</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># and maximum; this matches the default thread size of Active Record.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># and maximum; this matches the default thread size of Active Record.</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSigMod">threads_count = ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) { 5 }</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">max_</span>threads_count = ENV.fetch(&quot;RAILS_MAX_THREADS&quot;) { 5 }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">min_threads_count</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">=</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">ENV.fetch(&quot;RAILS_MIN_THREADS&quot;)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">max_threads_count</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSigMod">threads threads_count, threads_count</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod">threads <span class="TextSegSigDiff">min_</span>threads_count, <span class="TextSegSigDiff">max_</span>threads_count</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Specifies the `port` that Puma will listen on to receive requests; default is 3000.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Specifies the `port` that Puma will listen on to receive requests; default is 3000.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">port&nbsp; &nbsp; &nbsp; &nbsp; ENV.fetch(&quot;PORT&quot;) { 3000 }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">port&nbsp; &nbsp; &nbsp; &nbsp; ENV.fetch(&quot;PORT&quot;) { 3000 }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Specifies the `environment` that Puma will run in.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Specifies the `environment` that Puma will run in.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">environment ENV.fetch(&quot;RAILS_ENV&quot;) { &quot;development&quot; }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">environment ENV.fetch(&quot;RAILS_ENV&quot;) { &quot;development&quot; }</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">-+</td>
+<td class="TextItemInsigMod">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">#</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Specifies</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">the</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">`pidfile`</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">that</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">Puma</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">will</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">use.</span></td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSigMod"><span class="TextSegSigDiff">pidfile</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">ENV.fetch(&quot;PIDFILE&quot;)</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">{</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">&quot;tmp/pids/server.pid&quot;</span><span class="TextSegInsigDiff"> </span><span class="TextSegSigDiff">}</span></td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame"># Specifies the number of `workers` to boot in clustered mode.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Specifies the number of `workers` to boot in clustered mode.</td>
+</tr>
+<tr class="SectionAll">
+<td class="TextItemInsigMod"># Workers are forked webserver processes. If using threads and workers together</td>
+<td class="AlignCenter">&lt;&gt;</td>
+<td class="TextItemInsigMod"># Workers are forked web<span class="TextSegInsigDiff"> </span>server processes. If using threads and workers together</td>
+</tr>
+<tr class="SectionBegin">
+<td class="TextItemSame"># the concurrency of the application would be max `threads` * `workers`.</td>
+<td class="AlignCenter">=</td>
+<td class="TextItemSame"># the concurrency of the application would be max `threads` * `workers`.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Workers do not work on JRuby or Windows (both of which do not support</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Workers do not work on JRuby or Windows (both of which do not support</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># processes).</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># processes).</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># workers ENV.fetch(&quot;WEB_CONCURRENCY&quot;) { 2 }</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># workers ENV.fetch(&quot;WEB_CONCURRENCY&quot;) { 2 }</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Use the `preload_app!` method when specifying a `workers` number.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Use the `preload_app!` method when specifying a `workers` number.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># This directive tells Puma to first boot the application and load code</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># This directive tells Puma to first boot the application and load code</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># before forking the application. This takes advantage of Copy On Write</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># before forking the application. This takes advantage of Copy On Write</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># process behavior so workers use less memory.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># process behavior so workers use less memory.</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">#</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">#</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># preload_app!</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># preload_app!</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame">&nbsp;</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">&nbsp;</td>
+</tr>
+<tr class="SectionMiddle">
+<td class="TextItemSame"># Allow puma to be restarted by `rails restart` command.</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame"># Allow puma to be restarted by `rails restart` command.</td>
+</tr>
+<tr class="SectionEnd">
+<td class="TextItemSame">plugin :tmp_restart</td>
+<td class="AlignCenter">&nbsp;</td>
+<td class="TextItemSame">plugin :tmp_restart</td>
+</tr>
+</table>
+<br/>
+<!--EndFragment-->
+</body>
+</html>
